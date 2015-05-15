@@ -16,4 +16,4 @@ var { createIconSetFromFontello } = require('react-native-vector-icons');
 var Icon = createIconSetFromFontello(fontelloConfig);
 
 <Icon name="facebook" size={30} style={{ padding: 5, color: '#fff', backgroundColor: '#3b5998' }} />
-´´´
+```

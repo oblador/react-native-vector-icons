@@ -8,14 +8,34 @@
   },
   "keywords": [
     "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ui",
     "icon",
     "icons",
     "vector",
+    "retina",
     "font"
   ],
-  "author": "Joel Arvidsson <joel@oblador.se>",
+  "author": {
+    "name": "Joel Arvidsson",
+    "email": "joel@oblador.se"
+  },
+  "homepage": "https://github.com/oblador/react-native-vector-icons",
+  "bugs": {
+    "url": "https://github.com/oblador/react-native-vector-icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oblador/react-native-vector-icons.git"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.4.0"
+  },
+  "dependencies": {
+    "lodash": "^3.8.0"
   }
 }

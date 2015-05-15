@@ -63,7 +63,7 @@ function createIconSet(glyphMap, fontFamily) {
   });
 };
 
-function createIconFromFontello(config, fontFamily) {
+function createIconSetFromFontello(config, fontFamily) {
   var glyphMap = {};
   config.glyphs.forEach(function (glyph) {
     glyphMap[glyph.css] = String.fromCharCode(glyph.code);
