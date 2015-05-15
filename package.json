@@ -1,0 +1,21 @@
+{
+  "name": "react-native-vector-icons",
+  "version": "0.1.0",
+  "description": "Vector Icons for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "icon",
+    "icons",
+    "vector",
+    "font"
+  ],
+  "author": "Joel Arvidsson <joel@oblador.se>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": "^0.4.0"
+  }
+}
