@@ -1,7 +1,7 @@
 'use strict';
 
 var createIconSet = require('./').createIconSet;
-var glyphMap = require('./glyph-maps/{fontFamily}.json');
+var glyphMap = require('./glyph-maps/{componentName}.json');
 
 var {componentName} = createIconSet(glyphMap, '{fontFamily}');
 

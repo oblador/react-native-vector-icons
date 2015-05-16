@@ -51,13 +51,13 @@ function generateIconSet(componentName, cssFiles, fontFile, fontFamily, selector
   var glyphMap = extractGlyphMapFromCss(cssFiles, selectorPattern);
   // Save glypMap as JSON for use in the component
   fs.writeFileSync(
-    path.join(glyphMapDestination, fontFamily + '.json'),
+    path.join(glyphMapDestination, componentName + '.json'),
     JSON.stringify(glyphMap, null, '  ')
   );
 
   // Copy font file for easy access
   fs.createReadStream(fontFile)
-    .pipe(fs.createWriteStream(path.join(fontDestination, fontFamily + '.ttf')));
+    .pipe(fs.createWriteStream(path.join(fontDestination, componentName + '.ttf')));
 
   // Generate component from our simple template
   var template = fs.readFileSync('./iconSetTemplate.js', { encoding: 'utf8' });
@@ -71,4 +71,11 @@ generateIconSet(
   'node_modules/font-awesome/fonts/fontawesome-webfont.ttf',
   'FontAwesome',
   '\.fa-([a-z0-9-]+):before'
+);
+generateIconSet(
+  'MaterialDesign',
+  'bower_components/material-design-iconic-font/css/material-design-iconic-font.css',
+  'bower_components/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf',
+  'Material-Design-Iconic-Font',
+  '\.md-([a-z0-9-]+):before'
 );
