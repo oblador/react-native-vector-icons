@@ -26,5 +26,12 @@
     "fontFile": "bower_components/css-social-buttons/css/zocial.ttf",
     "fontFamily": "zocial",
     "selectorPattern": "\\.zocial\\.([a-z0-9-]+):before"
+  },
+  {
+    "componentName": "Foundation",
+    "cssFiles": "bower_components/foundation-icon-fonts/foundation-icons.css",
+    "fontFile": "bower_components/foundation-icon-fonts/foundation-icons.ttf",
+    "fontFamily": "fontcustom",
+    "selectorPattern": "\\.fi-([a-z0-9-]+):before"
   }
 ]
