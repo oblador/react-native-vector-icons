@@ -12,5 +12,12 @@
     "fontFile": "bower_components/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf",
     "fontFamily": "Material-Design-Iconic-Font",
     "selectorPattern": "\\.md-([a-z0-9-]+):before"
+  },
+  {
+    "componentName": "Ionicons",
+    "cssFiles": "bower_components/ionicons/css/ionicons.css",
+    "fontFile": "bower_components/ionicons/fonts/ionicons.ttf",
+    "fontFamily": "Ionicons",
+    "selectorPattern": "\\.ion-([a-z0-9-]+):before"
   }
 ]
