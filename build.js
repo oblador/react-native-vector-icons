@@ -38,7 +38,7 @@ function extractGlyphMapFromCss(files, selectorPattern, nameIndex) {
         if(selectors) {
           selectors.forEach(function(selector) {
             var name = selector.match(singleSelector)[nameIndex];
-            glyphMap[name] = String.fromCharCode(charCode);
+            glyphMap[name] = charCode;
           });
         }
       });

@@ -41,6 +41,9 @@ function createIconSet(glyphMap, fontFamily) {
 
       var name = this.props.name;
       var glyph = glyphMap[name] || '?';
+      if(typeof glyph === 'number') {
+        glyph = String.fromCharCode(glyph);
+      }
 
       var containerStyle = _.pick(flattenStyle([styles.container, this.props.style]), Object.keys(ViewStylePropTypes));
 
@@ -71,7 +74,7 @@ function createIconSet(glyphMap, fontFamily) {
 function createIconSetFromFontello(config, fontFamily) {
   var glyphMap = {};
   config.glyphs.forEach(function (glyph) {
-    glyphMap[glyph.css] = String.fromCharCode(glyph.code);
+    glyphMap[glyph.css] = glyph.code;
   });
   return createIconSet(glyphMap, fontFamily || config.name)
 };
