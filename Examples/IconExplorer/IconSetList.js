@@ -41,9 +41,9 @@ var ICON_SETS = [
   },
 ].map(function(iconSet) {
   // Some icons have multiple names, so group them by glyph
-  iconSet.glyphs = _.groupBy(Object.keys(iconSet.glyphs), function(name) {
+  iconSet.glyphs = _.values(_.groupBy(Object.keys(iconSet.glyphs), function(name) {
     return iconSet.glyphs[name];
-  });
+  }));
   return iconSet;
 });
 
