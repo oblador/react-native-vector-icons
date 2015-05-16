@@ -31,6 +31,7 @@ function createIconSet(glyphMap, fontFamily) {
     propTypes:{
       name: React.PropTypes.oneOf(Object.keys(glyphMap)).isRequired,
       size: React.PropTypes.number,
+      color: React.PropTypes.string,
       style: React.PropTypes.oneOfType([
         React.PropTypes.number, // References to style sheets are numbers
         React.PropTypes.object  // Inline style declaration
@@ -52,6 +53,10 @@ function createIconSet(glyphMap, fontFamily) {
       textStyle.fontSize    = size;
       textStyle.lineHeight  = size;
       textStyle.height      = size;
+
+      if(this.props.color) {
+        textStyle.color = this.props.color;
+      }
 
       return (
         <View {...this.props} style={[containerStyle]}>
