@@ -19,5 +19,12 @@
     "fontFile": "bower_components/ionicons/fonts/ionicons.ttf",
     "fontFamily": "Ionicons",
     "selectorPattern": "\\.ion-([a-z0-9-]+):before"
+  },
+  {
+    "componentName": "Zocial",
+    "cssFiles": "bower_components/css-social-buttons/css/zocial.css",
+    "fontFile": "bower_components/css-social-buttons/css/zocial.ttf",
+    "fontFamily": "zocial",
+    "selectorPattern": "\\.zocial\\.([a-z0-9-]+):before"
   }
 ]
