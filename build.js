@@ -60,7 +60,7 @@ function generateIconSet(componentName, cssFiles, fontFile, fontFamily, selector
     .pipe(fs.createWriteStream(path.join(fontDestination, componentName + '.ttf')));
 
   // Generate component from our simple template
-  var template = fs.readFileSync('./iconSetTemplate.js', { encoding: 'utf8' });
+  var template = fs.readFileSync('./iconSet.tpl', { encoding: 'utf8' });
   var component = template.replace(/\{componentName\}/g, componentName).replace(/\{fontFamily\}/g, fontFamily);
   fs.writeFileSync(path.join(__dirname, componentName + '.js'), component);
 };

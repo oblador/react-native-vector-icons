@@ -28,7 +28,7 @@ You can either use one of the bundled icons or roll your own custom font. Curren
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **42** icons)
 
 ```js
-var Icon = require('react-native-vector-icons/FontAwesome');
+var Icon = require('FontAwesome');
 var myIcon = (<Icon name="rocket" size={30} color="#900" style={styles.icon} />)
 ```
 
@@ -37,7 +37,7 @@ var myIcon = (<Icon name="rocket" size={30} color="#900" style={styles.icon} />)
 Either use the `size` attribute or a style with `fontSize`, defaults to 12. Sets the height of the icon, width depends on the icon aspect ratio, but will most likely be the same. 
 
 ### Color
-Either use the `color` attribute or a style with `color`, defaults to (limited) inherit/black. 
+Either use the `color` attribute or a style with `color`, defaults to black. 
 
 ### Style
 Most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
@@ -93,22 +93,22 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 ### Basic Example
 ```js
 var React = require('react-native');
-var Icon = require('react-native-vector-icons/FontAwesome');
+var Icon = require('Ionicons');
 
 var ExampleView = React.createClass({
   render: function() {
-    return <Icon name="rocket" size={30} color="#900" />;
+    return <Icon name="person" size={30} color="#4F8EF7" />;
   }
 };
 ```
 
 ### Button
-By nesting a `<Text>` element and assigning padding and background color you can achieve a button like appearance. To register taps, just wrap it with one a [`Touchable*`](http://facebook.github.io/react-native/docs/touchableopacity.html) component. 
+By nesting a `<Text>` element and assigning padding and background color you can achieve a button like appearance. To register taps, just wrap it with a [`Touchable*`](http://facebook.github.io/react-native/docs/touchableopacity.html) component. 
 
 ![buttons](https://cloud.githubusercontent.com/assets/378279/7667568/2e9021b2-fc0d-11e4-8e68-cf91c329a6f4.png)
 
 ```js
-var Icon = require('react-native-vector-icons/FontAwesome')
+var Icon = require('FontAwesome')
 
 var styles = StyleSheet.create({
   icon: {

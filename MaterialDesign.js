@@ -1,3 +1,9 @@
+/**
+ * MaterialDesign icon set component.
+ * Usage: <MaterialDesign name="icon-name" size={20} color="#4F8EF7" />
+ *
+ * @providesModule MaterialDesign
+ */
 'use strict';
 
 var createIconSet = require('./').createIconSet;
