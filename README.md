@@ -1,6 +1,6 @@
 # Vector Icons for React Native
 
-**Choose from thousands of icons or use your own. **
+**Choose from 2322 icons or use your own.**
 
 100% JavaScript == easy integrate into your project.
 
@@ -86,6 +86,9 @@ var Icon = createIconSetFromFontello(fontelloConfig);
 
 ### IconExplorer
 Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can also search for any icon. 
+
+![Screenshot of IconExplorer](https://cloud.githubusercontent.com/assets/378279/7667689/8b3d91a6-fc12-11e4-96a8-a18d6b97a3f5.png)
+
 
 ### Basic Example
 ```js
