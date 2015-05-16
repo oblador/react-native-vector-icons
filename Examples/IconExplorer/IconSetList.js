@@ -12,6 +12,7 @@ var {
 var _ = require('lodash');
 
 var IconList = require('./IconList');
+var SocialButton = require('./SocialButton');
 
 var ICON_SETS = [
   {
@@ -47,11 +48,36 @@ var ICON_SETS = [
   return iconSet;
 });
 
+var BUTTONS = [
+  {
+    text: 'Login with Facebook',
+    icon: 'facebook',
+    background: '#3b5998',
+  },
+  {
+    text: 'Follow me on Twitter',
+    icon: 'twitter',
+    background: '#55acee',
+  },
+  {
+    text: 'Fork on GitHub',
+    icon: 'code-fork',
+    background: '#ccc',
+    color: '#000',
+  }
+];
+
 var IconSetsList = React.createClass({
   getInitialState: function() {
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    var ds = new ListView.DataSource({
+      sectionHeaderHasChanged: (h1, h2) => h1 !== h2,
+      rowHasChanged: (r1, r2) => r1 !== r2
+    });
     return {
-      dataSource: ds.cloneWithRows(ICON_SETS),
+      dataSource: ds.cloneWithRowsAndSections({
+        iconSets: ICON_SETS,
+        buttons: BUTTONS,
+      }),
     };
   },
 
@@ -59,24 +85,47 @@ var IconSetsList = React.createClass({
     return (
       <ListView
         dataSource={this.state.dataSource}
+        renderSectionHeader={this._renderSectionHeader}
         renderRow={this._renderRow}
       />
     );
   },
 
-  _renderRow: function(rowData: string, sectionID: number, rowID: number) {
+  _renderSectionHeader(data, section) {
     return (
-      <TouchableHighlight onPress={() => this._pressRow(rowID)} underlayColor="#eee">
-        <View>
-          <View style={styles.row}>
-            <Text style={styles.text}>
-              {rowData.name}
-            </Text>
-          </View>
-          <View style={styles.separator} />
-        </View>
-      </TouchableHighlight>
+      <View style={styles.sectionHeader}>
+        <Text style={styles.sectionHeaderTitle}>
+          {section.toUpperCase()}
+        </Text>
+      </View>
     );
+  },
+
+  _renderRow: function(rowData: string, sectionID: number, rowID: number) {
+    switch(sectionID) {
+      case 'iconSets':
+        return (
+          <TouchableHighlight onPress={() => this._pressRow(rowID)} underlayColor="#eee">
+            <View>
+              <View style={styles.row}>
+                <Text style={styles.text}>
+                  {rowData.name}
+                </Text>
+              </View>
+              <View style={styles.separator} />
+            </View>
+          </TouchableHighlight>
+        );
+      case 'buttons':
+        return (
+          <View>
+            <View style={styles.row}>
+              <SocialButton name={rowData.icon} background={rowData.background} color={rowData.color}>{rowData.text}</SocialButton>
+            </View>
+            <View style={styles.separator} />
+          </View>
+        );
+    };
   },
 
   _pressRow: function(rowID: number) {
@@ -90,6 +139,15 @@ var IconSetsList = React.createClass({
 });
 
 var styles = StyleSheet.create({
+  sectionHeader: {
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    backgroundColor: '#eee'
+  },
+  sectionHeaderTitle: {
+    fontWeight: '500',
+    fontSize: 11,
+  },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -97,11 +155,7 @@ var styles = StyleSheet.create({
   },
   separator: {
     height: 0.5,
-    backgroundColor: '#CCCCCC',
-  },
-  thumb: {
-    width: 64,
-    height: 64,
+    backgroundColor: '#ccc',
   },
   text: {
     flex: 1,
