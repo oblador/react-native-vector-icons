@@ -64,3 +64,11 @@ function generateIconSet(componentName, cssFiles, fontFile, fontFamily, selector
   var component = template.replace(/\{componentName\}/g, componentName).replace(/\{fontFamily\}/g, fontFamily);
   fs.writeFileSync(path.join(__dirname, componentName + '.js'), component);
 };
+
+generateIconSet(
+  'FontAwesome',
+  'node_modules/font-awesome/css/font-awesome.css',
+  'node_modules/font-awesome/fonts/fontawesome-webfont.ttf',
+  'FontAwesome',
+  '\.fa-([a-z0-9-]+):before'
+);
