@@ -17,6 +17,11 @@ var Icon = require('react-native-vector-icons/FontAwesome');
 
 var ICON_SETS = [
   {
+    name: 'Entypo',
+    component: require('react-native-vector-icons/Entypo'),
+    glyphs: require('react-native-vector-icons/glyph-maps/Entypo.json')
+  },
+  {
     name: 'FontAwesome',
     component: require('react-native-vector-icons/FontAwesome'),
     glyphs: require('react-native-vector-icons/glyph-maps/FontAwesome.json')

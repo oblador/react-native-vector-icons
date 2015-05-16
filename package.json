@@ -4,7 +4,9 @@
   "description": "Vector Icons for React Native",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "build-entypo": "rm -rf tmp && mkdir tmp && cd tmp && curl https://dl.dropboxusercontent.com/u/4339492/entypo.zip > entypo.zip && unzip -j entypo.zip *.svg -x __MACOSX/* -d svg && fontcustom compile svg -o . -n Entypo -t css -h"
   },
   "keywords": [
     "react-native",

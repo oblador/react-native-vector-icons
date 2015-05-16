@@ -28,6 +28,7 @@
 		5DAFCEA01B077B8A00012939 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFCE9B1B077B8A00012939 /* Ionicons.ttf */; };
 		5DAFCEA11B077B8A00012939 /* MaterialDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFCE9C1B077B8A00012939 /* MaterialDesign.ttf */; };
 		5DAFCEA21B077B8A00012939 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFCE9D1B077B8A00012939 /* Zocial.ttf */; };
+		5DAFCEB41B08016000012939 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFCEB31B08016000012939 /* Entypo.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		5DAFCE9B1B077B8A00012939 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
 		5DAFCE9C1B077B8A00012939 /* MaterialDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialDesign.ttf; sourceTree = "<group>"; };
 		5DAFCE9D1B077B8A00012939 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		5DAFCEB31B08016000012939 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,6 +285,7 @@
 		5DAFCE981B077B8A00012939 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				5DAFCEB31B08016000012939 /* Entypo.ttf */,
 				5DAFCE991B077B8A00012939 /* FontAwesome.ttf */,
 				5DAFCE9A1B077B8A00012939 /* Foundation.ttf */,
 				5DAFCE9B1B077B8A00012939 /* Ionicons.ttf */,
@@ -566,6 +569,7 @@
 				5DAFCEA01B077B8A00012939 /* Ionicons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				5DAFCEB41B08016000012939 /* Entypo.ttf in Resources */,
 				5DAFCE9E1B077B8A00012939 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

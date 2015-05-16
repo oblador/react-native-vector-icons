@@ -33,5 +33,12 @@
     "fontFile": "bower_components/foundation-icon-fonts/foundation-icons.ttf",
     "fontFamily": "fontcustom",
     "selectorPattern": "\\.fi-([a-z0-9-]+):before"
+  },
+  {
+    "componentName": "Entypo",
+    "cssFiles": "tmp/Entypo.css",
+    "fontFile": "tmp/Entypo.ttf",
+    "fontFamily": "Entypo",
+    "selectorPattern": "\\.icon-([a-z0-9-]+):before"
   }
 ]
