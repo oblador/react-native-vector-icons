@@ -13,6 +13,7 @@ var _ = require('lodash');
 
 var IconList = require('./IconList');
 var SocialButton = require('./SocialButton');
+var Icon = require('react-native-vector-icons/FontAwesome');
 
 var ICON_SETS = [
   {
@@ -67,6 +68,33 @@ var BUTTONS = [
   }
 ];
 
+var STYLING = [
+  { name: 'github', size: 40, color: '#333' },
+  { name: 'heart', size: 30, style: {
+      color: 'white',
+      backgroundColor: '#e0284f',
+      borderRadius: 23,
+      paddingHorizontal: 8,
+      paddingTop: 9,
+      paddingBottom: 7,
+  } },
+  { name: 'star', style: {
+      fontSize: 20,
+      color: '#FF0000',
+      borderRadius: 20,
+      padding: 5,
+      borderWidth: 3,
+      backgroundColor: '#FFDD00',
+      borderColor: '#165E00',
+  } },
+  { name: 'font', size: 20, style: {
+      color: 'white',
+      borderRadius: 5,
+      padding: 5,
+      backgroundColor: '#47678e',
+  } }
+];
+
 var IconSetsList = React.createClass({
   getInitialState: function() {
     var ds = new ListView.DataSource({
@@ -77,6 +105,7 @@ var IconSetsList = React.createClass({
       dataSource: ds.cloneWithRowsAndSections({
         iconSets: ICON_SETS,
         buttons: BUTTONS,
+        styling: STYLING,
       }),
     };
   },
@@ -121,6 +150,15 @@ var IconSetsList = React.createClass({
           <View>
             <View style={styles.row}>
               <SocialButton name={rowData.icon} background={rowData.background} color={rowData.color}>{rowData.text}</SocialButton>
+            </View>
+            <View style={styles.separator} />
+          </View>
+        );
+      case 'styling':
+        return (
+          <View>
+            <View style={styles.row}>
+              <Icon {...rowData} />
             </View>
             <View style={styles.separator} />
           </View>
