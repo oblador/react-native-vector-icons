@@ -65,17 +65,13 @@ function generateIconSet(componentName, cssFiles, fontFile, fontFamily, selector
   fs.writeFileSync(path.join(__dirname, componentName + '.js'), component);
 };
 
-generateIconSet(
-  'FontAwesome',
-  'node_modules/font-awesome/css/font-awesome.css',
-  'node_modules/font-awesome/fonts/fontawesome-webfont.ttf',
-  'FontAwesome',
-  '\.fa-([a-z0-9-]+):before'
-);
-generateIconSet(
-  'MaterialDesign',
-  'bower_components/material-design-iconic-font/css/material-design-iconic-font.css',
-  'bower_components/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf',
-  'Material-Design-Iconic-Font',
-  '\.md-([a-z0-9-]+):before'
-);
+var sources = require('./build-sources.json');
+sources.forEach(function(options) {
+  generateIconSet(
+    options.componentName,
+    options.cssFiles,
+    options.fontFile,
+    options.fontFamily,
+    options.selectorPattern
+  );
+});

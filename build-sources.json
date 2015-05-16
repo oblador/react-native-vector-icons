@@ -1,0 +1,16 @@
+[
+  {
+    "componentName": "FontAwesome",
+    "cssFiles": "node_modules/font-awesome/css/font-awesome.css",
+    "fontFile": "node_modules/font-awesome/fonts/fontawesome-webfont.ttf",
+    "fontFamily": "FontAwesome",
+    "selectorPattern": "\\.fa-([a-z0-9-]+):before"
+  },
+  {
+    "componentName": "MaterialDesign",
+    "cssFiles": "bower_components/material-design-iconic-font/css/material-design-iconic-font.css",
+    "fontFile": "bower_components/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf",
+    "fontFamily": "Material-Design-Iconic-Font",
+    "selectorPattern": "\\.md-([a-z0-9-]+):before"
+  }
+]
