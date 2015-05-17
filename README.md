@@ -1,6 +1,6 @@
 # Vector Icons for React Native
 
-**Choose from 2733 icons or use your own.**
+**Choose from 2801 icons or use your own.**
 
 100% JavaScript == easy integrate into your project.
 
@@ -22,6 +22,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 You can either use one of the bundled icons or roll your own custom font. Currently available options for bundled icon sets are:
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
+* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (**68** icons) 
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.3, **519** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **734** icons)
@@ -88,7 +89,7 @@ var Icon = createIconSetFromFontello(fontelloConfig);
 ### IconExplorer
 Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can also search for any icon. 
 
-![Screenshot of IconExplorer](https://cloud.githubusercontent.com/assets/378279/7667689/8b3d91a6-fc12-11e4-96a8-a18d6b97a3f5.png)
+![Screenshot of IconExplorer](https://cloud.githubusercontent.com/assets/378279/7668482/06d4487c-fc3c-11e4-899c-041789a32362.png)
 
 
 ### Basic Example

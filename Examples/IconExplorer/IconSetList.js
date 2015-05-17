@@ -14,38 +14,27 @@ var _ = require('lodash');
 var IconList = require('./IconList');
 var SocialButton = require('./SocialButton');
 var Entypo = require('react-native-vector-icons/Entypo');
+var EvilIcons = require('react-native-vector-icons/EvilIcons');
 var FontAwesome = require('react-native-vector-icons/FontAwesome');
 var Foundation = require('react-native-vector-icons/Foundation');
 var Ionicons = require('react-native-vector-icons/Ionicons');
 var MaterialDesign = require('react-native-vector-icons/MaterialDesign');
 var Zocial = require('react-native-vector-icons/Zocial');
 
-var ICON_SETS = [
-  {
-    name: 'Entypo',
-    component: Entypo,
-  },
-  {
-    name: 'FontAwesome',
-    component: FontAwesome,
-  },
-  {
-    name: 'Foundation',
-    component: Foundation
-  },
-  {
-    name: 'Ionicons',
-    component: Ionicons
-  },
-  {
-    name: 'MaterialDesign',
-    component: MaterialDesign
-  },
-  {
-    name: 'Zocial',
-    component: Zocial
-  },
-].map(function(iconSet) {
+var ICON_SETS = _.map({
+  Entypo,
+  EvilIcons,
+  FontAwesome,
+  Foundation,
+  Ionicons,
+  MaterialDesign,
+  Zocial,
+}, function(component, name) {
+  return {
+    name: name,
+    component: component,
+  };
+}).map(function(iconSet) {
   // Some icons have multiple names, so group them by glyph
   var glyphMap = iconSet.component.glyphMap;
   iconSet.glyphs = _.values(_.groupBy(Object.keys(glyphMap), function(name) {
@@ -145,6 +134,9 @@ var IconSetsList = React.createClass({
                 <Text style={styles.text}>
                   {rowData.name}
                 </Text>
+                <Text style={styles.glyphCount}>
+                  {rowData.glyphs.length}
+                </Text>
               </View>
               <View style={styles.separator} />
             </View>
@@ -201,7 +193,13 @@ var styles = StyleSheet.create({
     backgroundColor: '#ccc',
   },
   text: {
+    flex: 6,
+  },
+  glyphCount: {
     flex: 1,
+    fontSize: 11,
+    fontWeight: '500',
+    textAlign: 'right',
   },
 });
 
