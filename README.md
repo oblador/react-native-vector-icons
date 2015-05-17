@@ -2,7 +2,7 @@
 
 **Choose from 2801 icons or use your own.**
 
-100% JavaScript == easy integrate into your project.
+100% JavaScript = easy to extend, style and integrate into your project.
 
 ## Installation
 

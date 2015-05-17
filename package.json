@@ -45,11 +45,11 @@
     "react-native": "^0.4.0"
   },
   "dependencies": {
-    "lodash": "^3.8.0"
+    "lodash": "^3.8.0",
+    "yargs": "^3.9.0"
   },
   "devDependencies": {
     "evil-icons": "^1.7.6",
-    "font-awesome": "^4.3.0",
-    "yargs": "^3.9.0"
+    "font-awesome": "^4.3.0"
   }
 }
