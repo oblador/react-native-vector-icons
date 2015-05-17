@@ -1,14 +1,15 @@
 /**
- * {componentName} icon set component.
- * Usage: <{componentName} name="icon-name" size={20} color="#4F8EF7" />
+ * ${componentName} icon set component.
+ * Usage: <${componentName} name="icon-name" size={20} color="#4F8EF7" />
  *
- * @providesModule {componentName}
+ * @providesModule ${componentName}
  */
 'use strict';
 
 var createIconSet = require('./').createIconSet;
-var glyphMap = require('./glyph-maps/{componentName}.json');
+var glyphMap = ${glyphMap};
 
-var {componentName} = createIconSet(glyphMap, '{fontFamily}');
+var ${componentName} = createIconSet(glyphMap, '${fontFamily}');
 
-module.exports = {componentName};
+module.exports = ${componentName};
+module.exports.glyphMap = glyphMap;

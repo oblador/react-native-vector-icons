@@ -13,43 +13,43 @@ var _ = require('lodash');
 
 var IconList = require('./IconList');
 var SocialButton = require('./SocialButton');
-var Icon = require('react-native-vector-icons/FontAwesome');
+var Entypo = require('react-native-vector-icons/Entypo');
+var FontAwesome = require('react-native-vector-icons/FontAwesome');
+var Foundation = require('react-native-vector-icons/Foundation');
+var Ionicons = require('react-native-vector-icons/Ionicons');
+var MaterialDesign = require('react-native-vector-icons/MaterialDesign');
+var Zocial = require('react-native-vector-icons/Zocial');
 
 var ICON_SETS = [
   {
     name: 'Entypo',
-    component: require('react-native-vector-icons/Entypo'),
-    glyphs: require('react-native-vector-icons/glyph-maps/Entypo.json')
+    component: Entypo,
   },
   {
     name: 'FontAwesome',
-    component: require('react-native-vector-icons/FontAwesome'),
-    glyphs: require('react-native-vector-icons/glyph-maps/FontAwesome.json')
+    component: FontAwesome,
   },
   {
     name: 'Foundation',
-    component: require('react-native-vector-icons/Foundation'),
-    glyphs: require('react-native-vector-icons/glyph-maps/Foundation.json')
+    component: Foundation
   },
   {
     name: 'Ionicons',
-    component: require('react-native-vector-icons/Ionicons'),
-    glyphs: require('react-native-vector-icons/glyph-maps/Ionicons.json')
+    component: Ionicons
   },
   {
     name: 'MaterialDesign',
-    component: require('react-native-vector-icons/MaterialDesign'),
-    glyphs: require('react-native-vector-icons/glyph-maps/MaterialDesign.json')
+    component: MaterialDesign
   },
   {
     name: 'Zocial',
-    component: require('react-native-vector-icons/Zocial'),
-    glyphs: require('react-native-vector-icons/glyph-maps/Zocial.json')
+    component: Zocial
   },
 ].map(function(iconSet) {
   // Some icons have multiple names, so group them by glyph
-  iconSet.glyphs = _.values(_.groupBy(Object.keys(iconSet.glyphs), function(name) {
-    return iconSet.glyphs[name];
+  var glyphMap = iconSet.component.glyphMap;
+  iconSet.glyphs = _.values(_.groupBy(Object.keys(glyphMap), function(name) {
+    return glyphMap[name];
   }));
   return iconSet;
 });
@@ -163,7 +163,7 @@ var IconSetsList = React.createClass({
         return (
           <View>
             <View style={styles.row}>
-              <Icon {...rowData} />
+              <FontAwesome {...rowData} />
             </View>
             <View style={styles.separator} />
           </View>

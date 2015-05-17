@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js",
-    "build-entypo": "rm -rf tmp && mkdir tmp && cd tmp && curl https://dl.dropboxusercontent.com/u/4339492/entypo.zip > entypo.zip && unzip -j entypo.zip *.svg -x __MACOSX/* -d svg && fontcustom compile svg -o . -n Entypo -t css -h"
+    "build": "rm -rf {Fonts,Entypo.js,FontAwesome.js,Foundation.js,Ionicons.js,MaterialDesign.js,Zocial.js} && mkdir Fonts && npm run build-entypo && npm run build-evil && npm run build-fontawesome && npm run build-foundation && npm run build-ionicons && npm run build-materialdesign && npm run build-zocial",
+    "build-entypo": "mkdir tmp && curl https://dl.dropboxusercontent.com/u/4339492/entypo.zip > tmp/entypo.zip && unzip -j tmp/entypo.zip *.svg -x __MACOSX/* -d tmp/svg && fontcustom compile tmp/svg -o tmp -n Entypo -t css -h && node generate-icon tmp/Entypo.css --componentName=Entypo --fontFamily=Entypo > Entypo.js && cp tmp/Entypo.ttf fonts && rm -rf {tmp,.fontcustom-manifest.json}",
+    "build-fontawesome": "node generate-icon node_modules/font-awesome/css/font-awesome.css --prefix=.fa- --componentName=FontAwesome --fontFamily=FontAwesome > FontAwesome.js && cp node_modules/font-awesome/fonts/fontawesome-webfont.ttf fonts/FontAwesome.ttf",
+    "build-foundation": "node generate-icon bower_components/foundation-icon-fonts/foundation-icons.css --prefix=.fi- --componentName=Foundation --fontFamily=fontcustom > Foundation.js && cp bower_components/foundation-icon-fonts/foundation-icons.ttf fonts/Foundation.ttf",
+    "build-ionicons": "node generate-icon bower_components/ionicons/css/ionicons.css --prefix=.ion- --componentName=Ionicons --fontFamily=Ionicons > Ionicons.js && cp bower_components/ionicons/fonts/ionicons.ttf fonts/Ionicons.ttf",
+    "build-materialdesign": "node generate-icon bower_components/material-design-iconic-font/css/material-design-iconic-font.css --prefix=.md- --componentName=MaterialDesign --fontFamily=Material-Design-Iconic-Font > MaterialDesign.js && cp bower_components/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf fonts/MaterialDesign.ttf",
+    "build-zocial": "node generate-icon bower_components/css-social-buttons/css/zocial.css --prefix=.zocial. --componentName=Zocial --fontFamily=zocial > Zocial.js && cp bower_components/css-social-buttons/css/zocial.ttf fonts/Zocial.ttf"
   },
   "keywords": [
     "react-native",
@@ -41,6 +46,7 @@
     "lodash": "^3.8.0"
   },
   "devDependencies": {
-    "font-awesome": "^4.3.0"
+    "font-awesome": "^4.3.0",
+    "yargs": "^3.9.0"
   }
 }
