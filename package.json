@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "description": "Vector Icons for React Native",
   "main": "index.js",
+  "bin" : { "generate-icon" : "./generate-icon.js" },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf {Fonts,Entypo.js,FontAwesome.js,Foundation.js,Ionicons.js,MaterialDesign.js,Zocial.js} && mkdir Fonts && npm run build-entypo && npm run build-evil && npm run build-fontawesome && npm run build-foundation && npm run build-ionicons && npm run build-materialdesign && npm run build-zocial",

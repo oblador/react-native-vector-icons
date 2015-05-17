@@ -134,6 +134,31 @@ var button = (
 );
 ```
 
+## Generating your own icon set from a CSS file
+
+If you already have a icon font with associated CSS file then you can easily generate a icon set with the `generate-icon` script. 
+
+### Example usage: 
+
+```
+./node_modules/.bin/generate-icon path/to/styles.css --componentName=MyIcon --fontFamily=myicon > Components/MyIcon.js
+```
+
+### Options
+
+Any flags not listed below, like `--componentName` and `--fontFamily`, will be passed on to the template. 
+
+#### `-p`, `--prefix`
+CSS selector prefix [default: ".icon-"]
+
+#### `-t`, `--template`
+Template in lodash format [default: "./template/iconSet.tpl"]
+
+For default template please provide `--componentName` and `--fontFamily`.
+
+#### `-o`, `--output`
+Save output to file, defaults to STDOUT
+
 ## License
 
 This project is licenced under the [MIT License](http://opensource.org/licenses/mit-license.html).
