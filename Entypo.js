@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var createIconSet = require('./').createIconSet;
+var createIconSet = require('createIconSet');
 var glyphMap = {
   "500px": 61696,
   "500px-with-circle": 61697,

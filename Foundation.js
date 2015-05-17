@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var createIconSet = require('./').createIconSet;
+var createIconSet = require('createIconSet');
 var glyphMap = {
   "address-book": 61696,
   "alert": 61697,

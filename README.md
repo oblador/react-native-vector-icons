@@ -22,7 +22,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 You can either use one of the bundled icons or roll your own custom font. Currently available options for bundled icon sets are:
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
-* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (**68** icons) 
+* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.7.6, **68** icons) 
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.3, **519** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **734** icons)
@@ -70,7 +70,7 @@ It's possible to nest the icons, any child content will appear after the icon, s
 Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name.
 
 ```js
-var { createIconSet } = require('react-native-vector-icons');
+var createIconSet = require('createIconSet');
 var glyphMap = { 'icon-name': 1234, test: '∆' };
 var Icon = createIconSet(glyphMap, 'FontName');
 ```
@@ -79,7 +79,7 @@ var Icon = createIconSet(glyphMap, 'FontName');
 Convenience method to create a custom font based on a [fontello](http://fontello.com) config file. Don't forget to import the font as described above and drop the `config.json` somewhere convenient in your project. 
 
 ```js
-var { createIconSetFromFontello } = require('react-native-vector-icons');
+var require('createIconSetFromFontello');
 var fontelloConfig = require('./config.json');
 var Icon = createIconSetFromFontello(fontelloConfig);
 ```

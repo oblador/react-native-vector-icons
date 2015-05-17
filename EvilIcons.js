@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var createIconSet = require('./').createIconSet;
+var createIconSet = require('createIconSet');
 var glyphMap = {
   "ei-archive": 61696,
   "ei-arrow-down": 61697,

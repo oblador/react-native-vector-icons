@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var createIconSet = require('./').createIconSet;
+var createIconSet = require('createIconSet');
 var glyphMap = {
   "acrobat": 61696,
   "amazon": 61697,
