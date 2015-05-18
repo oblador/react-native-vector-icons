@@ -1,6 +1,6 @@
 # Vector Icons for React Native
 
-**Choose from 2801 icons or use your own.**
+**Choose from 2800 icons or use your own.**
 
 100% JavaScript = easy to extend, style and integrate into your project.
 
@@ -26,7 +26,7 @@ You can either use one of the bundled icons or roll your own custom font. Curren
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.3, **519** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **734** icons)
-* [`MaterialDesign`](http://zavoloklom.github.io/material-design-iconic-font/icons.html) by Google, Inc. & Sergey Kupletsky (v1.1.1, **744** icons)
+* [`MaterialDesign`](http://google.github.io/material-design-icons/) by Google, Inc. (v1.0.1, **742** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **42** icons)
 
 ```js
