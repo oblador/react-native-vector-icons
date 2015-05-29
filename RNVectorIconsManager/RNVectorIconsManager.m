@@ -40,7 +40,10 @@ RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph
     UIGraphicsEndImageContext();
   
     NSData *imageData = UIImagePNGRepresentation(iconImage);
-    [imageData writeToFile:filePath atomically:YES];
+    BOOL success = [imageData writeToFile:filePath atomically:YES];
+    if(!success) {
+      return callback(@[@"Failed to write rendered icon image"]);
+    }
   }
   callback(@[[NSNull null], filePath]);
 
