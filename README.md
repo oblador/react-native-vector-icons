@@ -2,7 +2,7 @@
 
 **Choose from 2800 icons or use your own.**
 
-100% JavaScript = easy to extend, style and integrate into your project.
+Perfect for buttons, logos and tab bars. Easy to extend, style and integrate into your project.
 
 ## Installation
 
@@ -18,6 +18,8 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 *Note: you need to recompile your project after adding new fonts.*
 
+If you want to use the TabBar integration, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries.html).
+
 ## Usage
 You can either use one of the bundled icons or roll your own custom font. Currently available options for bundled icon sets are:
 
@@ -25,9 +27,9 @@ You can either use one of the bundled icons or roll your own custom font. Curren
 * [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.7.6, **68** icons) 
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.3, **519** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-* [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **734** icons)
+* [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **733** icons)
 * [`MaterialDesign`](http://google.github.io/material-design-icons/) by Google, Inc. (v1.0.1, **742** icons)
-* [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **42** icons)
+* [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 
 ```js
 var Icon = require('FontAwesome');
@@ -63,6 +65,16 @@ By combining some of these you can create for example:
 
 ### Nesting
 It's possible to nest the icons, any child content will appear after the icon, see the button example below. 
+
+### Usage with TabBarIOS
+
+Simply use `Icon.TabBarItem` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties: 
+
+* `iconName` name of the default icon (similar to `TabBarIOS.Item` `icon`).
+* `selectedIconName` name of the default icon (similar to `TabBarIOS.Item` `selectedIcon`). Optional.
+* `iconSize` size of the icon, defaults to 30. Optional.
+
+For example usage see `Examples/TabBarExample` or the examples section below. Don't forget to import and link to this project as described above if you are going to use the TabBar integration. 
 
 ### Custom Fonts
 
@@ -100,6 +112,35 @@ var Icon = require('Ionicons');
 var ExampleView = React.createClass({
   render: function() {
     return <Icon name="person" size={30} color="#4F8EF7" />;
+  }
+};
+```
+
+### TabBar
+Full example in `TabBarExample` project in `Examples/TabBarExample` folder. 
+
+```js
+var React = require('react-native');
+var {
+  View, 
+  Text, 
+  TabBarIOS,
+} = React;
+var Icon = require('Ionicons');
+
+var TabBarView = React.createClass({
+  render: function() {
+    return (
+      <TabBarIOS>
+        <Icon.TabBarItem
+          title="Home"
+          iconName="ios-home-outline"
+          selectedIconName="ios-home"
+          }}>
+          <View style={styles.tabContent}><Text>Home Tab</Text></View>
+        </Icon.TabBarItem>
+      </TabBarIOS>
+    );
   }
 };
 ```
