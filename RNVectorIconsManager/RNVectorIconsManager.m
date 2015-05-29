@@ -18,7 +18,8 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph withFontSize:(CGFloat)fontSize callback:(RCTResponseSenderBlock)callback){
   CGFloat screenScale = RCTScreenScale();
-  NSString *filePath = [NSHomeDirectory() stringByAppendingFormat:@"/RNVectorIcons_%@_%@_%.f@%.fx.png", fontName, glyph, fontSize, screenScale];
+  NSString *fileName = [NSString stringWithFormat:@"Documents/RNVectorIcons_%@_%hu_%.f@%.fx.png", fontName, [glyph characterAtIndex:0], fontSize, screenScale];
+  NSString *filePath = [NSHomeDirectory() stringByAppendingPathComponent:fileName];
 
   if(![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
     // No cached icon exists, we need to create it and persist to disk
