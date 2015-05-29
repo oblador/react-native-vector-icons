@@ -17,26 +17,31 @@
 RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph withFontSize:(CGFloat)fontSize callback:(RCTResponseSenderBlock)callback){
+  CGFloat screenScale = RCTScreenScale();
+  NSString *filePath = [NSHomeDirectory() stringByAppendingFormat:@"/RNVectorIcons_%@_%@_%.f@%.fx.png", fontName, glyph, fontSize, screenScale];
 
-  UIFont *font = [UIFont fontWithName:fontName size:fontSize];
-  NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:glyph attributes:@{NSFontAttributeName: font}];
+  if(![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+    // No cached icon exists, we need to create it and persist to disk
 
-  CGSize iconSize = [attributedString size];
+    UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:glyph attributes:@{NSFontAttributeName: font}];
 
-  CGSize imageSize = CGSizeMake(fontSize, fontSize);
-  UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
+    CGSize iconSize = [attributedString size];
+
+    CGSize imageSize = CGSizeMake(fontSize, fontSize);
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
   
-  //Center in case height doesn't equal fontSize
-  CGRect centeredRect = CGRectMake((imageSize.width - iconSize.width) / 2.0, (imageSize.height - iconSize.height) / 2.0, iconSize.width, iconSize.height);
-  [attributedString drawInRect:centeredRect];
+    //Center in case height doesn't equal fontSize
+    CGRect centeredRect = CGRectMake((imageSize.width - iconSize.width) / 2.0, (imageSize.height - iconSize.height) / 2.0, iconSize.width, iconSize.height);
+    [attributedString drawInRect:centeredRect];
   
-  UIImage *iconImage = UIGraphicsGetImageFromCurrentImageContext();
-  UIGraphicsEndImageContext();
+    UIImage *iconImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
   
-  //Encode as base64 to be able to use it with React
-  NSData *imageData = UIImagePNGRepresentation(iconImage);
-  NSString *imageDataBase64encodedString = [imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
-  callback(@[[NSNull null], [NSString stringWithFormat:@"data:image/png;base64,%@", imageDataBase64encodedString]]);
-  
+    NSData *imageData = UIImagePNGRepresentation(iconImage);
+    [imageData writeToFile:filePath atomically:YES];
+  }
+  callback(@[[NSNull null], filePath]);
+
 }
 @end
