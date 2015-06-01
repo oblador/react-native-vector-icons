@@ -45,7 +45,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.4.0"
+    "react-native": ">=0.4.0"
   },
   "dependencies": {
     "lodash": "^3.8.0",
