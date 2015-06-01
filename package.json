@@ -8,13 +8,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf {Fonts,Entypo.js,EvilIcons.js,FontAwesome.js,Foundation.js,Ionicons.js,MaterialDesign.js,Zocial.js} && mkdir Fonts && npm run build-entypo && npm run build-evil && npm run build-fontawesome && npm run build-foundation && npm run build-ionicons && npm run build-materialdesign && npm run build-zocial",
+    "build": "rm -rf {Fonts,Entypo.js,EvilIcons.js,FontAwesome.js,Foundation.js,Ionicons.js,MaterialIcons.js,Zocial.js} && mkdir Fonts && npm run build-entypo && npm run build-evil && npm run build-fontawesome && npm run build-foundation && npm run build-ionicons && npm run build-materialicons && npm run build-zocial",
     "build-entypo": "mkdir -p tmp/svg && curl https://dl.dropboxusercontent.com/u/4339492/entypo.zip > tmp/entypo.zip && unzip -j tmp/entypo.zip *.svg -x __MACOSX/* -d tmp/svg && fontcustom compile tmp/svg -o tmp -n Entypo -t css -h && node generate-icon tmp/Entypo.css --componentName=Entypo --fontFamily=Entypo > Entypo.js && cp tmp/Entypo.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-evil": "fontcustom compile node_modules/evil-icons/assets/icons -o tmp -n EvilIcons -t css -h && node generate-icon tmp/EvilIcons.css --componentName=EvilIcons --fontFamily=EvilIcons > EvilIcons.js && cp tmp/EvilIcons.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-fontawesome": "node generate-icon node_modules/font-awesome/css/font-awesome.css --prefix=.fa- --componentName=FontAwesome --fontFamily=FontAwesome > FontAwesome.js && cp node_modules/font-awesome/fonts/fontawesome-webfont.ttf Fonts/FontAwesome.ttf",
     "build-foundation": "node generate-icon bower_components/foundation-icon-fonts/foundation-icons.css --prefix=.fi- --componentName=Foundation --fontFamily=fontcustom > Foundation.js && cp bower_components/foundation-icon-fonts/foundation-icons.ttf Fonts/Foundation.ttf",
     "build-ionicons": "node generate-icon bower_components/ionicons/css/ionicons.css --prefix=.ion- --componentName=Ionicons --fontFamily=Ionicons > Ionicons.js && cp bower_components/ionicons/fonts/ionicons.ttf Fonts/Ionicons.ttf",
-    "build-materialdesign": "mkdir -p tmp/svg && for f in ./node_modules/material-design-icons/*/svg/production/*_48px.svg; do t=${f/*\\/ic_/}; t=${t/_48px/}; cp \"$f\" \"./tmp/svg/${t//_/-}\"; done && fontcustom compile tmp/svg -o tmp -n MaterialDesign -t css -h && node generate-icon tmp/MaterialDesign.css --componentName=MaterialDesign --fontFamily=MaterialDesign > MaterialDesign.js && cp tmp/MaterialDesign.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
+    "build-materialicons": "mkdir -p tmp/svg && for f in ./node_modules/material-design-icons/*/svg/production/ic_*_48px.svg; do t=${f/*\\/ic_/}; t=${t/_48px/}; cp \"$f\" \"./tmp/svg/${t//_/-}\"; done && fontcustom compile tmp/svg -o tmp -n MaterialIcons -t css -h && node generate-icon tmp/MaterialIcons.css --componentName=MaterialIcons --fontFamily=MaterialIcons > MaterialIcons.js && cp tmp/MaterialIcons.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-zocial": "node generate-icon bower_components/css-social-buttons/css/zocial.css --prefix=.zocial. --componentName=Zocial --fontFamily=zocial > Zocial.js && cp bower_components/css-social-buttons/css/zocial.ttf Fonts/Zocial.ttf"
   },
   "keywords": [
@@ -54,6 +54,6 @@
   "devDependencies": {
     "evil-icons": "^1.7.6",
     "font-awesome": "^4.3.0",
-    "material-design-icons": "^1.0.1"
+    "material-design-icons": "^2.0"
   }
 }

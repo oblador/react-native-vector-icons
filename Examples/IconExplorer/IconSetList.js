@@ -18,7 +18,7 @@ var EvilIcons = require('react-native-vector-icons/EvilIcons');
 var FontAwesome = require('react-native-vector-icons/FontAwesome');
 var Foundation = require('react-native-vector-icons/Foundation');
 var Ionicons = require('react-native-vector-icons/Ionicons');
-var MaterialDesign = require('react-native-vector-icons/MaterialDesign');
+var MaterialIcons = require('react-native-vector-icons/MaterialIcons');
 var Zocial = require('react-native-vector-icons/Zocial');
 
 var ICON_SETS = _.map({
@@ -27,7 +27,7 @@ var ICON_SETS = _.map({
   FontAwesome,
   Foundation,
   Ionicons,
-  MaterialDesign,
+  MaterialIcons,
   Zocial,
 }, function(component, name) {
   return {

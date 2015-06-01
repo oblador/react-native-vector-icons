@@ -28,7 +28,7 @@ You can either use one of the bundled icons or roll your own custom font. Curren
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.3, **519** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **733** icons)
-* [`MaterialDesign`](http://google.github.io/material-design-icons/) by Google, Inc. (v1.0.1, **742** icons)
+* [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v2.0, **796** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 
 ```js
