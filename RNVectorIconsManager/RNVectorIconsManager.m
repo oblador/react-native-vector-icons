@@ -16,16 +16,33 @@
 @synthesize bridge = _bridge;
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph withFontSize:(CGFloat)fontSize callback:(RCTResponseSenderBlock)callback){
+- (NSString *)hexStringFromColor:(UIColor *)color {
+  const CGFloat *components = CGColorGetComponents(color.CGColor);
+
+  CGFloat r = components[0];
+  CGFloat g = components[1];
+  CGFloat b = components[2];
+
+  return [NSString stringWithFormat:@"#%02lX%02lX%02lX",
+          lroundf(r * 255),
+          lroundf(g * 255),
+          lroundf(b * 255)];
+}
+
+
+RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph withFontSize:(CGFloat)fontSize withColor:(UIColor *)color callback:(RCTResponseSenderBlock)callback){
   CGFloat screenScale = RCTScreenScale();
-  NSString *fileName = [NSString stringWithFormat:@"Documents/RNVectorIcons_%@_%hu_%.f@%.fx.png", fontName, [glyph characterAtIndex:0], fontSize, screenScale];
+
+  NSString *hexColor = [self hexStringFromColor:color];
+
+  NSString *fileName = [NSString stringWithFormat:@"Documents/RNVectorIcons_%@_%hu_%.f%@@%.fx.png", fontName, [glyph characterAtIndex:0], fontSize, hexColor, screenScale];
   NSString *filePath = [NSHomeDirectory() stringByAppendingPathComponent:fileName];
 
   if(![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
     // No cached icon exists, we need to create it and persist to disk
 
     UIFont *font = [UIFont fontWithName:fontName size:fontSize];
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:glyph attributes:@{NSFontAttributeName: font}];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:glyph attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: color}];
 
     CGSize iconSize = [attributedString size];
 

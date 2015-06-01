@@ -68,10 +68,10 @@ It's possible to nest the icons, any child content will appear after the icon, s
 
 ### Usage as PNG image/source object
 
-Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name` and `size` as described above.
+Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
 
 ```
-Icon.getImageSource('user', 20).then((source) => this.setState({ userIcon: source }));
+Icon.getImageSource('user', 20, 'red').then((source) => this.setState({ userIcon: source }));
 ```
 
 For a complete example check out the `TabBarExample` project.
