@@ -66,6 +66,14 @@ By combining some of these you can create for example:
 ### Nesting
 It's possible to nest the icons, any child content will appear after the icon, see the button example below. 
 
+### Usage as PNG image/source object
+
+Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name` and `size` as described above.
+
+```
+Icon.getImageSource('user', 20).then((source) => this.setState({ userIcon: source }));
+```
+
 ### Usage with TabBarIOS
 
 Simply use `Icon.TabBarItem` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties: 
