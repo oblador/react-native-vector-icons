@@ -8,9 +8,36 @@ var {
   View,
   Image,
   TabBarIOS,
+  NavigatorIOS,
+  TouchableOpacity,
 } = React;
 
 var Icon = require('Ionicons');
+
+var ColoredView = React.createClass({
+  componentWillMount: function() {
+    Icon.getImageSource('android-arrow-back', 30).then((source) => this.setState({ backIcon: source }));
+  },
+  _navigateToSubview: function() {
+    this.props.navigator.push({
+      component: ColoredView,
+      title: this.props.pageText,
+      leftButtonIcon: this.state.backIcon,
+      onLeftButtonPress: () => this.props.navigator.pop(),
+      passProps: this.props,
+    });
+  },
+  render: function() {
+    return (
+      <View style={[styles.tabContent, {backgroundColor: this.props.color}]}>
+        <Text style={styles.tabText}>{this.props.pageText}</Text>
+        <TouchableOpacity onPress={this._navigateToSubview}>
+          <View style={styles.button}><Text style={styles.buttonText}>Tap Me</Text></View>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+});
 
 var TabBarExample = React.createClass({
   getInitialState: function() {
@@ -19,11 +46,23 @@ var TabBarExample = React.createClass({
     };
   },
 
+  componentWillMount: function() {
+    // https://github.com/facebook/react-native/issues/1403 prevents this to work for initial load
+    Icon.getImageSource('ios-gear', 30).then((source) => this.setState({ gearIcon: source }));
+  },
+
   _renderContent: function(color: string, pageText: string) {
+    var props = { color, pageText };
     return (
-      <View style={[styles.tabContent, {backgroundColor: color}]}>
-        <Text style={styles.tabText}>{pageText}</Text>
-      </View>
+      <NavigatorIOS
+        style={styles.navigator}
+        initialRoute={{
+          component: ColoredView,
+          passProps: props,
+          title: pageText,
+          rightButtonIcon: this.state.gearIcon,
+        }}
+      />
     );
   },
 
@@ -86,6 +125,9 @@ var TabBarExample = React.createClass({
 });
 
 var styles = StyleSheet.create({
+  navigator: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -95,10 +137,16 @@ var styles = StyleSheet.create({
   tabContent: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   tabText: {
     color: 'white',
-    margin: 50,
+  },
+  button: {
+    marginTop: 20,
+    padding: 8,
+    backgroundColor: 'white',
+    borderRadius: 4,
   },
 });
 

@@ -74,6 +74,8 @@ Convenient way to plug this in into other components that rely on bitmap images 
 Icon.getImageSource('user', 20).then((source) => this.setState({ userIcon: source }));
 ```
 
+For a complete example check out the `TabBarExample` project.
+
 ### Usage with TabBarIOS
 
 Simply use `Icon.TabBarItem` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties: 
