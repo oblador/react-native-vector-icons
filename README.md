@@ -2,7 +2,7 @@
 
 **Choose from 2800 icons or use your own.**
 
-Perfect for buttons, logos and tab bars. Easy to extend, style and integrate into your project.
+Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project.
 
 ## Installation
 
@@ -76,7 +76,7 @@ Icon.getImageSource('user', 20, 'red').then((source) => this.setState({ userIcon
 
 For a complete example check out the `TabBarExample` project.
 
-### Usage with TabBarIOS
+### Usage with [TabBarIOS](http://facebook.github.io/react-native/docs/tabbarios.html)
 
 Simply use `Icon.TabBarItem` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties: 
 
@@ -85,6 +85,12 @@ Simply use `Icon.TabBarItem` instead of `TabBarIOS.Item`. This is an extended co
 * `iconSize` size of the icon, defaults to 30. Optional.
 
 For example usage see `Examples/TabBarExample` or the examples section below. Don't forget to import and link to this project as described above if you are going to use the TabBar integration. 
+
+### Usage with [NavBarIOS](http://facebook.github.io/react-native/docs/navigatorios.html)
+
+Use `Icon.getImageSource` to get an image source object and pass it as you would with `backButtonIcon`, `leftButtonIcon` or `rightButtonIcon`. 
+
+Note: Since [`NavBarIOS` doesn't rerender with new state](https://github.com/facebook/react-native/issues/1403) and the async nature of `getImageSource` it's not possible to use it in `initialRoute`, but any view added by `push` should be fine.  
 
 ### Custom Fonts
 
