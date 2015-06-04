@@ -1,6 +1,6 @@
 {
   "name": "react-native-vector-icons",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Vector Icons for React Native",
   "main": "index.js",
   "bin": {
