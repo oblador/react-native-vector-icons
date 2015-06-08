@@ -35,7 +35,7 @@ RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph
 
   NSString *hexColor = [self hexStringFromColor:color];
 
-  NSString *fileName = [NSString stringWithFormat:@"Documents/RNVectorIcons_%@_%hu_%.f%@@%.fx.png", fontName, [glyph characterAtIndex:0], fontSize, hexColor, screenScale];
+  NSString *fileName = [NSString stringWithFormat:@"tmp/RNVectorIcons_%@_%hu_%.f%@@%.fx.png", fontName, [glyph characterAtIndex:0], fontSize, hexColor, screenScale];
   NSString *filePath = [NSHomeDirectory() stringByAppendingPathComponent:fileName];
 
   if(![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
