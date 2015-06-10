@@ -117,7 +117,7 @@ var Icon = createIconSetFromFontello(fontelloConfig);
 ### IconExplorer
 Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can also search for any icon. 
 
-![Screenshot of IconExplorer](https://cloud.githubusercontent.com/assets/378279/7668482/06d4487c-fc3c-11e4-899c-041789a32362.png)
+![Screenshot of IconExplorer](https://cloud.githubusercontent.com/assets/378279/8094980/d4b969ce-0fca-11e5-9b0b-520e7ed1740b.png)
 
 
 ### Basic Example
