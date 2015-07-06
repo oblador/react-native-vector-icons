@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "lodash": "^3.8.0",
-    "react-native": "^0.5.0",
+    "react-native": "^0.7.0-rc.2",
     "react-native-vector-icons": "file:../../"
   }
 }

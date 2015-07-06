@@ -12,7 +12,7 @@ var {
   TouchableOpacity,
 } = React;
 
-var Icon = require('Ionicons');
+var Icon = require('react-native-vector-icons/Ionicons');
 
 var ColoredView = React.createClass({
   componentWillMount: function() {

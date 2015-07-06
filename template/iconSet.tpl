@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var createIconSet = require('createIconSet');
+var createIconSet = require('./lib/create-icon-set');
 var glyphMap = ${glyphMap};
 
 var ${componentName} = createIconSet(glyphMap, '${fontFamily}');

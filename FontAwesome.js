@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var createIconSet = require('createIconSet');
+var createIconSet = require('./lib/create-icon-set');
 var glyphMap = {
   "glass": 61440,
   "music": 61441,

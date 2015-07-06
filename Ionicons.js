@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var createIconSet = require('createIconSet');
+var createIconSet = require('./lib/create-icon-set');
 var glyphMap = {
   "alert": 61697,
   "alert-circled": 61696,

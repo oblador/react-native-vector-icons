@@ -6,7 +6,7 @@
  */
 'use strict';
 
-var createIconSet = require('createIconSet');
+var createIconSet = require('./lib/create-icon-set');
 var glyphMap = {
   "3d-rotation": 61696,
   "access-alarm": 61697,

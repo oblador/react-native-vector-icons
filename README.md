@@ -32,7 +32,7 @@ You can either use one of the bundled icons or roll your own custom font. Curren
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 
 ```js
-var Icon = require('FontAwesome');
+var Icon = require('react-native-vector-icons/FontAwesome');
 var myIcon = (<Icon name="rocket" size={30} color="#900" style={styles.icon} />)
 ```
 
@@ -98,7 +98,7 @@ Note: Since [`NavBarIOS` doesn't rerender with new state](https://github.com/fac
 Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name.
 
 ```js
-var createIconSet = require('createIconSet');
+var { createIconSet } = require('react-native-vector-icons');
 var glyphMap = { 'icon-name': 1234, test: '∆' };
 var Icon = createIconSet(glyphMap, 'FontName');
 ```
@@ -107,7 +107,7 @@ var Icon = createIconSet(glyphMap, 'FontName');
 Convenience method to create a custom font based on a [fontello](http://fontello.com) config file. Don't forget to import the font as described above and drop the `config.json` somewhere convenient in your project. 
 
 ```js
-var require('createIconSetFromFontello');
+var { createIconSetFromFontello } = require('react-native-vector-icons');
 var fontelloConfig = require('./config.json');
 var Icon = createIconSetFromFontello(fontelloConfig);
 ```
@@ -123,7 +123,7 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 ### Basic Example
 ```js
 var React = require('react-native');
-var Icon = require('Ionicons');
+var Icon = require('react-native-vector-icons/Ionicons');
 
 var ExampleView = React.createClass({
   render: function() {
@@ -142,7 +142,7 @@ var {
   Text, 
   TabBarIOS,
 } = React;
-var Icon = require('Ionicons');
+var Icon = require('react-native-vector-icons/Ionicons');
 
 var TabBarView = React.createClass({
   render: function() {
@@ -167,7 +167,7 @@ By nesting a `<Text>` element and assigning padding and background color you can
 ![buttons](https://cloud.githubusercontent.com/assets/378279/7667568/2e9021b2-fc0d-11e4-8e68-cf91c329a6f4.png)
 
 ```js
-var Icon = require('FontAwesome')
+var Icon = require('react-native-vector-icons/FontAwesome')
 
 var styles = StyleSheet.create({
   icon: {
