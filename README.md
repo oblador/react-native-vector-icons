@@ -16,7 +16,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/7667535/0e1fd13a-fc0c-11e4-9220-18d5c095a7be.png)
 
-*Note: you need to recompile your project after adding new fonts.*
+*Note: you need to recompile your project after adding new fonts, also ensure that they also appear under __Copy Bundle Resources__ in __Build Phases__.*
 
 If you want to use the TabBar integration, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries.html).
 
