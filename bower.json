@@ -17,6 +17,7 @@
   "devDependencies": {
     "ionicons": "~2.0.1",
     "css-social-buttons": "~1.0.0",
-    "foundation-icon-fonts": "*"
+    "foundation-icon-fonts": "*",
+    "octicons": "~2.4.1"
   }
 }
