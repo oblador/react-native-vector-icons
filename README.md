@@ -1,6 +1,6 @@
 # Vector Icons for React Native
 
-**Choose from 2800 icons or use your own.**
+**Choose from 3000+ icons or use your own.**
 
 Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project.
 
@@ -10,8 +10,8 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 If you want to use any of the bundled icons, you need to add the icon fonts to your XCode project. Just follow these steps:
 
-* Right click on you project in XCode and select **Add files to xxx**. 
-* Browse to `node_modules/react-native-vector-icons` and select the folder `Fonts` (or just the ones you want). 
+* Right click on you project in XCode and select **Add files to "_NameOfYourProject_"**. 
+* Browse to `node_modules/react-native-vector-icons` and select the folder `Fonts` (or just the ones you want). **Make sure your app is checked under "Add to targets"**.
 * Edit `Info.plist` and add a property called **Fonts provided by application** (if you haven't added one already) and type in the files you just added. It will look something like this:
 
 ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/7667535/0e1fd13a-fc0c-11e4-9220-18d5c095a7be.png)
@@ -29,6 +29,7 @@ You can either use one of the bundled icons or roll your own custom font. Curren
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **733** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v2.0, **796** icons)
+* [`Octicons`](http://octicons.github.com) by Github, Inc. (v2.4.1, **178** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 
 ```js
@@ -86,11 +87,16 @@ Simply use `Icon.TabBarItem` instead of `TabBarIOS.Item`. This is an extended co
 
 For example usage see `Examples/TabBarExample` or the examples section below. Don't forget to import and link to this project as described above if you are going to use the TabBar integration. 
 
-### Usage with [NavBarIOS](http://facebook.github.io/react-native/docs/navigatorios.html)
+### Usage with [NavigatorIOS](http://facebook.github.io/react-native/docs/navigatorios.html)
 
 Use `Icon.getImageSource` to get an image source object and pass it as you would with `backButtonIcon`, `leftButtonIcon` or `rightButtonIcon`. 
 
-Note: Since [`NavBarIOS` doesn't rerender with new state](https://github.com/facebook/react-native/issues/1403) and the async nature of `getImageSource` it's not possible to use it in `initialRoute`, but any view added by `push` should be fine.  
+Note: Since [`NavigatorIOS` doesn't rerender with new state](https://github.com/facebook/react-native/issues/1403) and the async nature of `getImageSource` it's not possible to use it in `initialRoute`, but any view added by `push` should be fine. 
+
+[Facebook writes](http://facebook.github.io/react-native/docs/navigator-comparison.html#navigatorios): 
+> Development belongs to open-source community - not used by the React Native team on their apps. A result of this is that there is currently a backlog of unresolved bugs, nobody who uses this has stepped up to take ownership for it yet.
+
+You are probably better off with [`Navigator.NavigationBar`](http://facebook.github.io/react-native/docs/navigator.html) or [`react-native-navbar`](https://github.com/Kureev/react-native-navbar).
 
 ### Custom Fonts
 
@@ -117,7 +123,7 @@ var Icon = createIconSetFromFontello(fontelloConfig);
 ### IconExplorer
 Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can also search for any icon. 
 
-![Screenshot of IconExplorer](https://cloud.githubusercontent.com/assets/378279/8094980/d4b969ce-0fca-11e5-9b0b-520e7ed1740b.png)
+![Screenshot of IconExplorer](https://cloud.githubusercontent.com/assets/378279/8903470/a9fe6b46-3458-11e5-901f-98b7b676d0d3.png)
 
 
 ### Basic Example

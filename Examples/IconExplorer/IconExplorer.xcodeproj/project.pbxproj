@@ -23,6 +23,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		5D629AF21B65AE2000E6A8C2 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D629AE61B65AE1200E6A8C2 /* Octicons.ttf */; };
 		5D8123AC1B1C609700DF5088 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DBEB1BF1B19B9B100B34395 /* MaterialIcons.ttf */; };
 		5DAFCED51B0815FB00012939 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFCECE1B0815FB00012939 /* Entypo.ttf */; };
 		5DAFCED61B0815FB00012939 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFCECF1B0815FB00012939 /* EvilIcons.ttf */; };
@@ -141,6 +142,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iOS/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		5D629AE61B65AE1200E6A8C2 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		5DAFCECE1B0815FB00012939 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
 		5DAFCECF1B0815FB00012939 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		5DAFCED01B0815FB00012939 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				5DAFCED11B0815FB00012939 /* Foundation.ttf */,
 				5DAFCED21B0815FB00012939 /* Ionicons.ttf */,
 				5DBEB1BF1B19B9B100B34395 /* MaterialIcons.ttf */,
+				5D629AE61B65AE1200E6A8C2 /* Octicons.ttf */,
 				5DAFCED41B0815FB00012939 /* Zocial.ttf */,
 			);
 			name = Fonts;
@@ -565,6 +568,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D629AF21B65AE2000E6A8C2 /* Octicons.ttf in Resources */,
 				5D8123AC1B1C609700DF5088 /* MaterialIcons.ttf in Resources */,
 				008F07F31AC5B25A0029DE68 /* main.jsbundle in Resources */,
 				5DAFCED81B0815FB00012939 /* Foundation.ttf in Resources */,
