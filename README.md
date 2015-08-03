@@ -25,7 +25,7 @@ You can either use one of the bundled icons or roll your own custom font. Curren
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
 * [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.7.6, **68** icons) 
-* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.3, **519** icons) 
+* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.4, **585** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **733** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v2.0, **796** icons)
