@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "evil-icons": "^1.7.6",
-    "font-awesome": "^4.3.0",
+    "font-awesome": "^4.4.0",
     "material-design-icons": "^2.0"
   }
 }
