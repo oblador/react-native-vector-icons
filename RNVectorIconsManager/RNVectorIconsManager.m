@@ -45,14 +45,9 @@ RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:glyph attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: color}];
 
     CGSize iconSize = [attributedString size];
-
-    CGSize imageSize = CGSizeMake(fontSize, fontSize);
-    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0);
-  
-    //Center in case height doesn't equal fontSize
-    CGRect centeredRect = CGRectMake((imageSize.width - iconSize.width) / 2.0, (imageSize.height - iconSize.height) / 2.0, iconSize.width, iconSize.height);
-    [attributedString drawInRect:centeredRect];
-  
+    UIGraphicsBeginImageContextWithOptions(iconSize, NO, 0.0);
+    [attributedString drawAtPoint:CGPointMake(0, 0)];
+    
     UIImage *iconImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
   
