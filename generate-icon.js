@@ -27,7 +27,9 @@ var data = _.omit(argv, '_ $0 o output p prefix t template'.split(' '));
 
 
 var content = generateIconSetFromCss(argv._, argv.prefix, template, data);
+var outputFile;
 if(argv.output) {
+  outputFile = argv.output;
   fs.writeFileSync(
     outputFile,
     content
