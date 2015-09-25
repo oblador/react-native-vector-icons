@@ -20,12 +20,7 @@ var IconExplorer = React.createClass({
         style={styles.container}
         initialRoute={{
           title: 'IconExplorer',
-          component: IconSetList,
-          passProps: {
-            onExternalExampleRequested: (example) => {
-              this.setState({ openExternalExample: example, });
-            },
-          }
+          component: IconSetList
         }}
         itemWrapperStyle={styles.itemWrapper}
       />
