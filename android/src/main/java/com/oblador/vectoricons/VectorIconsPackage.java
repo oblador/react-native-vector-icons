@@ -18,7 +18,9 @@ public class VectorIconsPackage implements ReactPackage {
   @Override
   public List<NativeModule> createNativeModules(
       ReactApplicationContext reactContext) {
-    return new ArrayList<>();
+    List<NativeModule> modules = new ArrayList<>();
+    modules.add(new VectorIconsModule(reactContext));
+    return modules;
   }
 
   @Override
