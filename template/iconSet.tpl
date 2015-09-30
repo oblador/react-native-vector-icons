@@ -9,7 +9,7 @@
 var createIconSet = require('./lib/create-icon-set');
 var glyphMap = ${glyphMap};
 
-var ${componentName} = createIconSet(glyphMap, '${fontFamily}');
+var ${componentName} = createIconSet(glyphMap, '${fontFamily}', 'Fonts/${componentName}.ttf');
 
 module.exports = ${componentName};
 module.exports.glyphMap = glyphMap;

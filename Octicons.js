@@ -215,7 +215,7 @@ var glyphMap = {
   "x": 61569
 };
 
-var Octicons = createIconSet(glyphMap, 'octicons');
+var Octicons = createIconSet(glyphMap, 'octicons', 'Fonts/Octicons.ttf');
 
 module.exports = Octicons;
 module.exports.glyphMap = glyphMap;

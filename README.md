@@ -8,6 +8,8 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 `$ npm install react-native-vector-icons --save`
 
+### iOS 
+
 If you want to use any of the bundled icons, you need to add the icon fonts to your XCode project. Just follow these steps:
 
 * Right click on you project in XCode and select **Add files to "_NameOfYourProject_"**. 
@@ -19,6 +21,18 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 *Note: you need to recompile your project after adding new fonts, also ensure that they also appear under __Copy Bundle Resources__ in __Build Phases__.*
 
 If you want to use the TabBar integration, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
+
+### Android (experimental)
+
+* Copy the whole `Fonts` folder to `android/app/src/main/assets`. 
+* Add the following to the end of `android/settings.gradle`:
+  ```
+  include ':react-native-vector-icons'
+  project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+  ```
+* Add `compile project(':react-native-vector-icons')` to the `dependencies` section of `android/app/build.gradle`
+* In your `MainActivity.java` (deep in `android/app/src/main/java/...`), add `import com.oblador.vectoricons.VectorIconsPackage;` on the second line and `.addPackage(new VectorIconsPackage())` after the `.addPackage(new MainReactPackage())` line. 
+
 
 ## Usage
 You can either use one of the bundled icons or roll your own custom font. Currently available options for bundled icon sets are:

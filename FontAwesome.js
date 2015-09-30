@@ -684,7 +684,7 @@ var glyphMap = {
   "fonticons": 62080
 };
 
-var FontAwesome = createIconSet(glyphMap, 'FontAwesome');
+var FontAwesome = createIconSet(glyphMap, 'FontAwesome', 'Fonts/FontAwesome.ttf');
 
 module.exports = FontAwesome;
 module.exports.glyphMap = glyphMap;
