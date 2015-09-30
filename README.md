@@ -2,7 +2,17 @@
 
 **Choose from 3000+ icons or use your own.**
 
-Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project.
+Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project. 
+
+## Main advantages over `react-native-icons`
+
+* You can use your own custom icon sets. Supports SVG via [Fontello](http://fontello.com) or regular icon fonts. 
+* You can use *native* `TabBarIOS`.
+* You can nest elements within the `Icon` component to create buttons. 
+* You can use the icon as an image if a native component requires it (such as `NavigatorIOS`). 
+* Most common use cases is JavaScript only and thus enables wider possibilities of styling (and is easier to integrate with your project). 
+* No need to define `width` and `height` styles.
+* Presentational stuff like size and color can be defined in your stylesheet instead of via a property (if you want to).
 
 ## Installation
 
