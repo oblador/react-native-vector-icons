@@ -8,7 +8,11 @@ var {
   StyleSheet,
   Text,
   View,
+  Platform,
 } = React;
+
+var dismissKeyboard = require('dismissKeyboard');
+
 var _ = require('lodash');
 
 var IconList = require('./IconList');
@@ -112,6 +116,7 @@ var IconSetsList = React.createClass({
         dataSource={this.state.dataSource}
         renderSectionHeader={this._renderSectionHeader}
         renderRow={this._renderRow}
+        initialListSize={15}
       />
     );
   },
@@ -166,12 +171,21 @@ var IconSetsList = React.createClass({
   },
 
   _pressRow: function(rowID: number) {
-    var rowData = ICON_SETS[rowID];
-    this.props.navigator.push({
-      title: rowData.name,
-      component: IconList,
-      passProps: { iconSet: rowData },
-    });
+    var iconSet = ICON_SETS[rowID];
+    if (Platform.OS === 'ios') {
+      this.props.navigator.push({
+        title: iconSet.name,
+        component: IconList,
+        passProps: {iconSet},
+      });
+    } else {
+      dismissKeyboard();
+      this.props.navigator.push({
+        title: iconSet.name,
+        name: 'iconSet',
+        iconSet,
+      });
+    }
   },
 });
 

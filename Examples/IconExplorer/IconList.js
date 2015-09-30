@@ -7,6 +7,7 @@ var {
   Text,
   View,
   TextInput,
+  Platform,
 } = React;
 
 var IconList = React.createClass({
@@ -45,9 +46,12 @@ var IconList = React.createClass({
           <TextInput
             autoCapitalize="none"
             autoCorrect={false}
+            autoFocus={true}
             onChange={this.handleSearchChange}
             placeholder="Search an icon..."
             style={styles.searchBarInput}
+            onFocus={() =>
+              this.refs.listview && this.refs.listview.getScrollResponder().scrollTo(0, 0)}
           />
         </View>
         <View style={styles.separator} />
@@ -85,7 +89,7 @@ var styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   searchBar: {
-    marginTop: 64,
+    marginTop: (Platform.OS === 'android' ? 0 : 64),
     padding: 3,
     paddingLeft: 8,
     flexDirection: 'row',
@@ -94,7 +98,7 @@ var styles = StyleSheet.create({
   searchBarInput: {
     fontSize: 15,
     flex: 1,
-    height: 30,
+    height: (Platform.OS === 'android' ? 45 : 30),
   },
   row: {
     flexDirection: 'row',
