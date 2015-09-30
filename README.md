@@ -26,6 +26,7 @@ If you want to use the TabBar integration, then you need to add `RNVectorIcons.x
 
 * Copy the whole `Fonts` folder to `android/app/src/main/assets`. 
 * Add the following to the end of `android/settings.gradle`:
+
   ```
   include ':react-native-vector-icons'
   project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
