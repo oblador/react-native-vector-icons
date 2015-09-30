@@ -52,6 +52,9 @@ var TabBarExample = React.createClass({
   },
 
   _renderContent: function(color: string, pageText: string) {
+    if(!this.state.gearIcon) {
+      return false;
+    }
     var props = { color, pageText };
     return (
       <NavigatorIOS
