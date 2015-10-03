@@ -34,16 +34,99 @@ If you want to use the TabBar integration, then you need to add `RNVectorIcons.x
 
 ### Android (experimental)
 
+*Note: Android support requires React Native 0.12 or later*
+
 * Copy the whole `Fonts` folder to `android/app/src/main/assets`. 
-* Add the following to the end of `android/settings.gradle`:
+* Edit `android/settings.gradle` to look like this:
 
   ```
+  rootProject.name = 'MyApp'
+
+  include ':app'
+
+  //Add the following two lines:
   include ':react-native-vector-icons'
   project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
   ```
-* Add `compile project(':react-native-vector-icons')` to the `dependencies` section of `android/app/build.gradle`
-* In your `MainActivity.java` (deep in `android/app/src/main/java/...`), add `import com.oblador.vectoricons.VectorIconsPackage;` on the second line and `.addPackage(new VectorIconsPackage())` after the `.addPackage(new MainReactPackage())` line. 
 
+* Edit `android/app/build.gradle` (note: **app** folder) to look like this: 
+
+  ```
+  apply plugin: 'com.android.application'
+
+  android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+      applicationId "com.myapp"
+      minSdkVersion 16
+      targetSdkVersion 22
+      versionCode 1
+      versionName "1.0"
+      ndk {
+        abiFilters "armeabi-v7a", "x86"
+      }
+    }
+    buildTypes {
+      release {
+        minifyEnabled false
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      }
+    }
+  }
+
+  dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.facebook.react:react-native:0.12.+'
+
+    // Add this line:
+    compile project(':react-native-vector-icons')
+  }
+  ```
+
+* Edit your `MainActivity.java` (deep in `android/app/src/main/java/...`) to look like this:
+
+  ```
+  package com.myapp;
+
+  // Add this line:
+  import com.oblador.vectoricons.VectorIconsPackage;
+
+  import android.app.Activity;
+  ....
+
+  public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
+
+    private ReactInstanceManager mReactInstanceManager;
+    private ReactRootView mReactRootView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      mReactRootView = new ReactRootView(this);
+
+      mReactInstanceManager = ReactInstanceManager.builder()
+        .setApplication(getApplication())
+        .setBundleAssetName("index.android.bundle")
+        .setJSMainModuleName("index.android")
+        .addPackage(new MainReactPackage())
+
+        // and this line:
+        .addPackage(new VectorIconsPackage())
+
+        .setUseDeveloperSupport(BuildConfig.DEBUG)
+        .setInitialLifecycleState(LifecycleState.RESUMED)
+        .build();
+
+      mReactRootView.startReactApplication(mReactInstanceManager, "MyApp", null);
+
+      setContentView(mReactRootView);
+    }
+    ...
+  }
+  ```
 
 ## Usage
 You can either use one of the bundled icons or roll your own custom font. Currently available options for bundled icon sets are:
