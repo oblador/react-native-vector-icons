@@ -134,8 +134,8 @@ You are probably better off with [`Navigator.NavigationBar`](http://facebook.git
 
 ### Custom Fonts
 
-#### `createIconSet(glyphMap, fontFamily)`
-Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name.
+#### `createIconSet(glyphMap, fontFamily[, fontFile])`
+Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be a path to the font file in you asset folder. 
 
 ```js
 var { createIconSet } = require('react-native-vector-icons');
@@ -143,7 +143,7 @@ var glyphMap = { 'icon-name': 1234, test: '∆' };
 var Icon = createIconSet(glyphMap, 'FontName');
 ```
 
-#### `createIconSetFromFontello(config[, fontFamily])`
+#### `createIconSetFromFontello(config[, fontFamily[, fontFile]])`
 Convenience method to create a custom font based on a [fontello](http://fontello.com) config file. Don't forget to import the font as described above and drop the `config.json` somewhere convenient in your project. 
 
 ```js
