@@ -16,7 +16,6 @@ var dismissKeyboard = require('dismissKeyboard');
 var _ = require('lodash');
 
 var IconList = require('./IconList');
-var SocialButton = require('./SocialButton');
 var Entypo = require('react-native-vector-icons/Entypo');
 var EvilIcons = require('react-native-vector-icons/EvilIcons');
 var FontAwesome = require('react-native-vector-icons/FontAwesome');
@@ -53,46 +52,47 @@ var BUTTONS = [
   {
     text: 'Login with Facebook',
     icon: 'facebook',
-    background: '#3b5998',
+    backgroundColor: '#3b5998',
   },
   {
     text: 'Follow me on Twitter',
     icon: 'twitter',
-    background: '#55acee',
+    backgroundColor: '#55acee',
   },
   {
     text: 'Fork on GitHub',
     icon: 'code-fork',
-    background: '#ccc',
+    backgroundColor: '#ccc',
     color: '#000',
   }
 ];
 
 var STYLING = [
   { name: 'github', size: 40, color: '#333' },
-  { name: 'heart', size: 30, style: {
-      color: 'white',
+  { name: 'heart', size: 30, color: 'white', containerStyle: {
       backgroundColor: '#e0284f',
       borderRadius: 23,
       paddingHorizontal: 8,
       paddingTop: 9,
       paddingBottom: 7,
   } },
-  { name: 'star', style: {
-      fontSize: 20,
-      color: '#FF0000',
+  { name: 'star', size: 20, color: '#FF0000',
+    containerStyle: {
       borderRadius: 20,
-      padding: 5,
+      padding: 7,
       borderWidth: 3,
       backgroundColor: '#FFDD00',
       borderColor: '#165E00',
   } },
-  { name: 'font', size: 20, style: {
-      color: 'white',
+  { name: 'font', size: 20, color: 'white', containerStyle: {
       borderRadius: 5,
       padding: 5,
       backgroundColor: '#47678e',
   } }
+];
+
+var INLINE = [
+  (<Text>This text has <FontAwesome name="rocket" /> inline <FontAwesome name="hand-peace-o" /> icons!</Text>)
 ];
 
 var IconSetsList = React.createClass({
@@ -105,6 +105,7 @@ var IconSetsList = React.createClass({
       dataSource: ds.cloneWithRowsAndSections({
         iconSets: ICON_SETS,
         buttons: BUTTONS,
+        inline: INLINE,
         styling: STYLING,
       }),
     };
@@ -153,7 +154,7 @@ var IconSetsList = React.createClass({
         return (
           <View>
             <View style={styles.row}>
-              <SocialButton name={rowData.icon} background={rowData.background} color={rowData.color}>{rowData.text}</SocialButton>
+              <FontAwesome.Button name={rowData.icon} backgroundColor={rowData.backgroundColor} color={rowData.color} onPress={() => alert('You pressed "' + rowData.text + '"')}>{rowData.text}</FontAwesome.Button>
             </View>
             <View style={styles.separator} />
           </View>
@@ -162,7 +163,18 @@ var IconSetsList = React.createClass({
         return (
           <View>
             <View style={styles.row}>
-              <FontAwesome {...rowData} />
+              <View style={rowData.containerStyle}>
+                <FontAwesome {...rowData} />
+              </View>
+            </View>
+            <View style={styles.separator} />
+          </View>
+        );
+      case 'inline':
+        return (
+          <View>
+            <View style={styles.row}>
+              {rowData}
             </View>
             <View style={styles.separator} />
           </View>
