@@ -62,6 +62,7 @@ var IconList = React.createClass({
           keyboardDismissMode="on-drag"
           keyboardShouldPersistTaps={true}
           showsVerticalScrollIndicator={false}
+          initialListSize={20}
         />
       </View>
     );
@@ -72,7 +73,7 @@ var IconList = React.createClass({
     return (
       <View>
         <View style={styles.row}>
-          <Icon name={rowData[0]} style={styles.icon} />
+          <Icon name={rowData[0]} size={20} style={styles.icon} />
           <Text style={styles.text}>
             {rowData.join(', ')}
           </Text>
@@ -110,10 +111,9 @@ var styles = StyleSheet.create({
     backgroundColor: '#CCCCCC',
   },
   icon: {
-    justifyContent: 'center',
-    fontSize: 20,
-    width: 20,
+    textAlign: 'center',
     marginRight: 10,
+    width: 20,
   },
   text: {
     flex: 1,
