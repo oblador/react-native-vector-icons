@@ -14,7 +14,6 @@
 .*/node_modules/react-tools/src/renderers/shared/event/eventPlugins/ResponderEventPlugin.js
 .*/node_modules/react-tools/src/shared/vendor/core/ExecutionEnvironment.js
 
-
 # Ignore commoner tests
 .*/node_modules/commoner/test/.*
 
@@ -22,7 +21,10 @@
 .*/react-tools/node_modules/commoner/lib/reader.js
 
 # Ignore jest
-.*/react-native/node_modules/jest-cli/.*
+.*/node_modules/jest-cli/.*
+
+# Ignore Website
+.*/website/.*
 
 [include]
 
@@ -34,13 +36,16 @@ module.system=haste
 
 munge_underscores=true
 
+module.name_mapper='^image![a-zA-Z0-9$_-]+$' -> 'GlobalImageStub'
+module.name_mapper='^[./a-zA-Z0-9$_-]+\.png$' -> 'RelativeImageStub'
+
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
 suppress_type=$FixMe
 
-suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(>=0\\.\\(1[0-4]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)
-suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(>=0\\.\\(1[0-4]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)? #[0-9]+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(>=0\\.\\(1[0-6]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(>=0\\.\\(1[0-6]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)? #[0-9]+
 suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 
 [version]
-0.14.0
+0.16.0

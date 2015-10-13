@@ -13,19 +13,6 @@
 		<string>Octicons.ttf</string>
 		<string>Zocial.ttf</string>
 	</array>
-  <key>NSAppTransportSecurity</key>
-  <dict>
-    <key>NSExceptionDomains</key>
-    <dict>
-      <key>localhost</key>
-      <dict>
-        <key>NSExceptionAllowsInsecureHTTPLoads</key>
-        <true/>
-        <key>NSIncludesSubdomains</key>
-        <true/>
-      </dict>
-    </dict>
-  </dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -62,5 +49,11 @@
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<!--See http://ste.vn/2015/06/10/configuring-app-transport-security-ios-9-osx-10-11/-->
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
