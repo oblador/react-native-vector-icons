@@ -92,7 +92,7 @@ var STYLING = [
 ];
 
 var INLINE = [
-  (<Text>This text has <FontAwesome name="rocket" /> inline <FontAwesome name="hand-peace-o" /> icons!</Text>)
+  (<Text>This text has <FontAwesome name="rocket" /> inline <FontAwesome name="hand-peace-o"> icons!</FontAwesome></Text>)
 ];
 
 var IconSetsList = React.createClass({
