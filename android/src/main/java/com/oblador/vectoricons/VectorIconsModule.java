@@ -45,10 +45,11 @@ public class VectorIconsModule extends ReactContextBaseJavaModule {
     String cacheFolderPath = cacheFolder.getAbsolutePath() + "/";
 
     float scale = context.getResources().getDisplayMetrics().density;
+    String scaleSuffix = "@" + (scale == (int) scale ? Integer.toString((int) scale) : Float.toString(scale)) + "x";
     int size = Math.round(fontSize*scale);
     String cacheKey = fontFile + ":" + glyph + ":" + color;
     String hash = Integer.toString(cacheKey.hashCode(), 32);
-    String cacheFilePath = cacheFolderPath + hash + "_" + Integer.toString(size) + ".png";
+    String cacheFilePath = cacheFolderPath + hash + "_" + Integer.toString(fontSize) + scaleSuffix + ".png";
     String cacheFileUrl = "file://" + cacheFilePath;
     File cacheFile = new File(cacheFilePath);
 
