@@ -143,7 +143,7 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 |---|---|---|
 |**`size`**|Size of the icon, can also be passed as `fontSize` in the style object. |`12`|
 |**`name`**|What icon to show, see Icon Explorer app or one of the links above. |*None*|
-|**`color`**|Color of the icon. |`black`|
+|**`color`**|Color of the icon. |*Inherited*|
 
 ### Styling
 Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
