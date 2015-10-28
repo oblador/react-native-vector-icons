@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name           = "RNVectorIcons"
-  s.version        = "0.8.3"
+  s.version        = "0.8.4"
   s.summary        = "Customizable Icons for React Native with support for NavBar/TabBar, image source and full styling."
   s.homepage       = "https://github.com/oblador/react-native-vector-icons"
   s.license        = "MIT"
