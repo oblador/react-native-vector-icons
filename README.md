@@ -54,7 +54,7 @@ Add the following to your `Podfile` and run `pod update`:
 pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
 ```
 
-Edit `Info.plist` and **Link Binary With Libraries** as described above. 
+Edit `Info.plist` as described above. 
 
 ### Android (experimental)
 
