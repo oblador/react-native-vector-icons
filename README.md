@@ -32,6 +32,8 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ### iOS 
 
+#### Option: Manually
+
 If you want to use any of the bundled icons, you need to add the icon fonts to your XCode project. Just follow these steps:
 
 * Right click on you project in XCode and select **Add files to "_NameOfYourProject_"**. 
@@ -43,6 +45,16 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 *Note: you need to recompile your project after adding new fonts, also ensure that they also appear under __Copy Bundle Resources__ in __Build Phases__.*
 
 If you want to use the TabBar integration, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
+
+#### Option: With [CocoaPods](https://cocoapods.org/)
+
+Add the following to your `Podfile` and run `pod update`:
+
+```
+pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
+```
+
+Edit `Info.plist` and **Link Binary With Libraries** as described above. 
 
 ### Android (experimental)
 
