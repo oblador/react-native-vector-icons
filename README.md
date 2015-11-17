@@ -56,7 +56,7 @@ pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
 
 Edit `Info.plist` as described above. 
 
-### Android (experimental)
+### Android
 
 *Note: Android support requires React Native 0.12 or later*
 
@@ -92,7 +92,7 @@ Edit `Info.plist` as described above.
   }
   ```
 
-* Edit your `MainActivity.java` (deep in `android/app/src/main/java/...`) to look like this:
+* Edit your `MainActivity.java` (deep in `android/app/src/main/java/...`) to look like this (note **two** places to edit):
 
   ```
   package com.myapp;
@@ -139,6 +139,8 @@ Edit `Info.plist` as described above.
 * Size can only be passed as a property, not with a stylesheet
 * Icons have a fixed width causing some icons to be clipped or have whitespace. Adjust with `style={{width: xx}}` for now. 
 * Icons cannot be nested within a `Text` component.
+
+*Custom font support has been merged into React Native Master which will fix these problems, but has yet to make it into a public release.*
 
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
