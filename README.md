@@ -91,7 +91,7 @@ Edit `Info.plist` as described above.
 
 * Edit your `MainActivity.java` (deep in `android/app/src/main/java/...`) to look like this (note **two** places to edit):
 
-  ```
+  ```diff
   package com.myapp;
 
   + import com.oblador.vectoricons.VectorIconsPackage;
