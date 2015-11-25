@@ -58,9 +58,14 @@ Edit `Info.plist` as described above.
 
 ### Android
 
-*Note: Android support requires React Native 0.12 or later*
+*Note: Android support requires React Native 0.16 or later, use [0.8.5](https://github.com/oblador/react-native-vector-icons/releases/tag/v0.8.5) for earlier versions*
 
-* Copy the whole `Fonts` folder to `android/app/src/main/assets`. 
+* Copy the contents in the `Fonts` folder to `android/app/src/main/assets/fonts` (*note lowercase font folder*). 
+
+#### Integrating library for `getImageSource` support
+
+These steps are optional and only needed if you want to use the `Icon.getImageSource` function. 
+
 * Edit `android/settings.gradle` to look like this (without the +):
 
   ```diff
@@ -84,7 +89,7 @@ Edit `Info.plist` as described above.
   dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.0.0'
-    compile 'com.facebook.react:react-native:0.12.+'
+    compile 'com.facebook.react:react-native:0.16.+'
   + compile project(':react-native-vector-icons')
   }
   ```
@@ -96,7 +101,6 @@ Edit `Info.plist` as described above.
 
   + import com.oblador.vectoricons.VectorIconsPackage;
 
-  import android.app.Activity;
   ....
 
   public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
@@ -127,13 +131,6 @@ Edit `Info.plist` as described above.
   }
   ```
 
-### Known issues on android
-
-* Size can only be passed as a property, not with a stylesheet
-* Icons have a fixed width causing some icons to be clipped or have whitespace. Adjust with `style={{width: xx}}` for now. 
-* Icons cannot be nested within a `Text` component.
-
-*Custom font support has been merged into React Native Master which will fix these problems, but has yet to make it into a public release.*
 
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
