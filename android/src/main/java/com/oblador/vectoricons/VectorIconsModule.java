@@ -15,6 +15,7 @@ import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.views.text.ReactFontManager;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -39,7 +40,7 @@ public class VectorIconsModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void getImageForFont(String fontFile, String glyph, Integer fontSize, Integer color, Callback callback) {
+  public void getImageForFont(String fontFamily, String glyph, Integer fontSize, Integer color, Callback callback) {
     Context context = getReactApplicationContext();
     File cacheFolder = context.getCacheDir();
     String cacheFolderPath = cacheFolder.getAbsolutePath() + "/";
@@ -47,7 +48,7 @@ public class VectorIconsModule extends ReactContextBaseJavaModule {
     float scale = context.getResources().getDisplayMetrics().density;
     String scaleSuffix = "@" + (scale == (int) scale ? Integer.toString((int) scale) : Float.toString(scale)) + "x";
     int size = Math.round(fontSize*scale);
-    String cacheKey = fontFile + ":" + glyph + ":" + color;
+    String cacheKey = fontFamily + ":" + glyph + ":" + color;
     String hash = Integer.toString(cacheKey.hashCode(), 32);
     String cacheFilePath = cacheFolderPath + hash + "_" + Integer.toString(fontSize) + scaleSuffix + ".png";
     String cacheFileUrl = "file://" + cacheFilePath;
@@ -57,7 +58,7 @@ public class VectorIconsModule extends ReactContextBaseJavaModule {
       callback.invoke(null, cacheFileUrl);
     } else {
       FileOutputStream fos = null;
-      Typeface typeface = this.getOrCreateTypeface(fontFile, context);
+      Typeface typeface = ReactFontManager.getInstance().getTypeface(fontFamily, 0, context.getAssets());
       Paint paint = new Paint();
       paint.setTypeface(typeface);
       paint.setColor(color);
@@ -95,21 +96,6 @@ public class VectorIconsModule extends ReactContextBaseJavaModule {
         }
       }
     }
-  }
-
-  public static Typeface getOrCreateTypeface(String fontFile, Context context) {
-    if (sTypefaceCache.get(fontFile) != null) {
-      return sTypefaceCache.get(fontFile);
-    }
-
-    try {
-      Typeface typeface = Typeface.createFromAsset(context.getAssets(), fontFile);
-      sTypefaceCache.put(fontFile, typeface);
-      return typeface;
-    } catch (Exception ex) {
-      Log.e(REACT_CLASS, "Error: " + ex.toString());
-    }
-    return null;
   }
 
 }
