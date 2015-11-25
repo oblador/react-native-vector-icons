@@ -743,7 +743,7 @@ var glyphMap = {
   "xbox": 62220
 };
 
-var Ionicons = createIconSet(glyphMap, 'Ionicons', 'Fonts/Ionicons.ttf');
+var Ionicons = createIconSet(glyphMap, 'Ionicons', 'Ionicons.ttf');
 
 module.exports = Ionicons;
 module.exports.glyphMap = glyphMap;

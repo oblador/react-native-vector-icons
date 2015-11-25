@@ -79,7 +79,7 @@ var glyphMap = {
   "user": 61764
 };
 
-var EvilIcons = createIconSet(glyphMap, 'EvilIcons', 'Fonts/EvilIcons.ttf');
+var EvilIcons = createIconSet(glyphMap, 'EvilIcons', 'EvilIcons.ttf');
 
 module.exports = EvilIcons;
 module.exports.glyphMap = glyphMap;

@@ -806,7 +806,7 @@ var glyphMap = {
   "youtube-searched-for": 62491
 };
 
-var MaterialIcons = createIconSet(glyphMap, 'MaterialIcons', 'Fonts/MaterialIcons.ttf');
+var MaterialIcons = createIconSet(glyphMap, 'MaterialIcons', 'MaterialIcons.ttf');
 
 module.exports = MaterialIcons;
 module.exports.glyphMap = glyphMap;

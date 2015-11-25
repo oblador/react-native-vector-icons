@@ -110,7 +110,7 @@ var glyphMap = {
   "youtube": 61795
 };
 
-var Zocial = createIconSet(glyphMap, 'zocial', 'Fonts/Zocial.ttf');
+var Zocial = createIconSet(glyphMap, 'zocial', 'Zocial.ttf');
 
 module.exports = Zocial;
 module.exports.glyphMap = glyphMap;

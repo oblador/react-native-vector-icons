@@ -421,7 +421,7 @@ var glyphMap = {
   "youtube-with-circle": 62106
 };
 
-var Entypo = createIconSet(glyphMap, 'Entypo', 'Fonts/Entypo.ttf');
+var Entypo = createIconSet(glyphMap, 'Entypo', 'Entypo.ttf');
 
 module.exports = Entypo;
 module.exports.glyphMap = glyphMap;

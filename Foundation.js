@@ -293,7 +293,7 @@ var glyphMap = {
   "zoom-out": 61978
 };
 
-var Foundation = createIconSet(glyphMap, 'fontcustom', 'Fonts/Foundation.ttf');
+var Foundation = createIconSet(glyphMap, 'fontcustom', 'Foundation.ttf');
 
 module.exports = Foundation;
 module.exports.glyphMap = glyphMap;
