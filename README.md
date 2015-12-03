@@ -44,7 +44,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 *Note: you need to recompile your project after adding new fonts, also ensure that they also appear under __Copy Bundle Resources__ in __Build Phases__.*
 
-If you want to use the TabBar integration, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
+If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
 
 #### Option: With [CocoaPods](https://cocoapods.org/)
 
@@ -206,7 +206,7 @@ Convenient way to plug this in into other components that rely on bitmap images 
 Icon.getImageSource('user', 20, 'red').then((source) => this.setState({ userIcon: source }));
 ```
 
-For a complete example check out the `TabBarExample` project.
+For a complete example check out the `TabBarExample` project. 
 
 ## Usage with [TabBarIOS](http://facebook.github.io/react-native/docs/tabbarios.html)
 
