@@ -354,6 +354,19 @@ Save output to file, defaults to STDOUT
 
 ## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
 
+## Troubleshooting
+
+#### The icons show up as a crossed out box on Android
+* Make sure you've copied the font to `android/app/src/main/assets/fonts`.
+* Delete the `android/app/build` folder. 
+* Recompile the project.
+
+#### Red screen with "Unrecognized font family" error on iOS
+* Make sure you've added the fonts to your XCode project.
+* Check that the font you are trying to use appears in `Info.plist`, if you've added the whole folder and it's blue in color, then you need to add it to the path. 
+* Check that the font is copied in the *Copy Bundle Resources in Build Phases*.
+* Recompile the project.
+
 ## License
 
 This project is licenced under the [MIT License](http://opensource.org/licenses/mit-license.html).
