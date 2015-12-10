@@ -30,6 +30,10 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 `$ npm install react-native-vector-icons --save`
 
+if you're using rnpm, you can link all native dependencies automatically:
+
+`$ rnpm link`
+
 ### iOS 
 
 #### Option: Manually
