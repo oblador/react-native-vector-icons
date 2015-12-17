@@ -74,6 +74,6 @@ android {
 dependencies {
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:0.16.+"
+    compile "com.facebook.react:react-native:0.17.+"
     compile project(':react-native-vector-icons')
 }
