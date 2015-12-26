@@ -51,11 +51,11 @@
   },
   "dependencies": {
     "lodash": "^3.8.0",
-    "yargs": "^3.30.0"
+    "yargs": "^3.31.0"
   },
   "devDependencies": {
     "evil-icons": "^1.7.6",
-    "font-awesome": "^4.4.0",
+    "font-awesome": "^4.5.0",
     "material-design-icons": "^2.1.1"
   }
 }

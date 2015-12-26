@@ -681,7 +681,27 @@ var glyphMap = {
   "houzz": 62076,
   "vimeo": 62077,
   "black-tie": 62078,
-  "fonticons": 62080
+  "fonticons": 62080,
+  "reddit-alien": 62081,
+  "edge": 62082,
+  "credit-card-alt": 62083,
+  "codiepie": 62084,
+  "modx": 62085,
+  "fort-awesome": 62086,
+  "usb": 62087,
+  "product-hunt": 62088,
+  "mixcloud": 62089,
+  "scribd": 62090,
+  "pause-circle": 62091,
+  "pause-circle-o": 62092,
+  "stop-circle": 62093,
+  "stop-circle-o": 62094,
+  "shopping-bag": 62096,
+  "shopping-basket": 62097,
+  "hashtag": 62098,
+  "bluetooth": 62099,
+  "bluetooth-b": 62100,
+  "percent": 62101
 };
 
 var FontAwesome = createIconSet(glyphMap, 'FontAwesome', 'FontAwesome.ttf');
