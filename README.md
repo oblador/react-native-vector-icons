@@ -262,6 +262,14 @@ var fontelloConfig = require('./config.json');
 var Icon = createIconSetFromFontello(fontelloConfig);
 ```
 
+### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
+```js
+var { createIconSetFromIcoMoon } = require('react-native-vector-icons');
+var icoMoonConfig = require('./config.json');
+var Icon = createIconSetFromIcoMoon(icoMoonConfig);
+```
+
+
 ## Examples
 
 ### IconExplorer
