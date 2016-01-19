@@ -168,6 +168,36 @@ By combining some of these you can create for example:
 ![type](https://cloud.githubusercontent.com/assets/378279/7667570/33817554-fc0d-11e4-9ad7-4eb60139cfb7.png)
 ![star](https://cloud.githubusercontent.com/assets/378279/7667569/3010dd7e-fc0d-11e4-9696-cb721fe8e98d.png)
 
+
+## Font-mapper
+If you want to use same component for iOS & android (this is useful if you use single components for both platforms), it's possible to create a mapping between font-name and font-family depending on platform.
+
+```js
+let { FontMapper } = require('react-native-vector-icons')
+let AndroidFont = require('react-native-vector-icons/MaterialIcons')
+let iOSFont = require('react-native-vector-icons/EvilIcons')
+
+let androidToIOSMap = {
+  "arrow-back": "arrow-left",
+}
+
+let IconFont = React.createClass({
+  render() {
+    return (
+      <FontMapper
+        iOSFont={iOSFont}
+        androidFont={AndroidFont}
+        androidToIOSMap={androidToIOSMap} />
+    )
+  }
+})
+```
+
+After that, will be possible to use `<IconFont color='white' name="arrow-back" size={35} />` (master-name will be android in this case) and it will choose MaterialDesign or EvilIcons depending on platform.
+
+Note that you could also do the mapping on inverse way (from iOS -> android) usign `iOSToAndroidMap` prop.
+
+
 ## `Icon.Button` Component
 A convenience component for creating buttons with an icon on the left side. 
 
