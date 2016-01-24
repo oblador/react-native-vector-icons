@@ -105,34 +105,18 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
   ....
 
-  public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
-
-    private ReactInstanceManager mReactInstanceManager;
-    private ReactRootView mReactRootView;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      mReactRootView = new ReactRootView(this);
-
-      mReactInstanceManager = ReactInstanceManager.builder()
-        .setApplication(getApplication())
-        .setBundleAssetName("index.android.bundle")
-        .setJSMainModuleName("index.android")
-        .addPackage(new MainReactPackage())
-  +     .addPackage(new VectorIconsPackage())
-        .setUseDeveloperSupport(BuildConfig.DEBUG)
-        .setInitialLifecycleState(LifecycleState.RESUMED)
-        .build();
-
-      mReactRootView.startReactApplication(mReactInstanceManager, "MyApp", null);
-
-      setContentView(mReactRootView);
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+        new MainReactPackage()
+  +   , new VectorIconsPackage()
+      );
     }
-    ...
+
   }
   ```
 
+*Note: If you're using React Native (Android) <= 0.17, [follow this instructions](https://github.com/oblador/react-native-vector-icons/blob/2fe5b97afa849652215e3258189e8ca3ea775c53/README.md#integrating-library-for-getimagesource-support)*
 
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
