@@ -569,7 +569,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D3537C41BCD4FB700E5538E /* Octicons.ttf in Resources */,
-				008F07F31AC5B25A0029DE68 /* main.jsbundle in Resources */,
 				5D3537C11BCD4FB700E5538E /* Foundation.ttf in Resources */,
 				5D3537C21BCD4FB700E5538E /* Ionicons.ttf in Resources */,
 				5D3537BE1BCD4FB700E5538E /* Entypo.ttf in Resources */,
@@ -583,6 +582,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "../node_modules/react-native/packager/react-native-xcode.sh";
+			showEnvVarsInLog = 1;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00E356EA1AD99517003FC87E /* Sources */ = {

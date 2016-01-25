@@ -6,8 +6,8 @@
     "start": "node_modules/react-native/packager/packager.sh"
   },
   "dependencies": {
-    "lodash": "^3.10.1",
-    "react-native": "^0.17.0-rc",
+    "lodash": "^4.0.0",
+    "react-native": "^0.18.1",
     "react-native-vector-icons": "file:../../"
   }
 }
