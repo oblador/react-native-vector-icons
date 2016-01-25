@@ -50,7 +50,7 @@
     "assets": ["Fonts"]
   },
   "dependencies": {
-    "lodash": "^3.8.0",
+    "lodash": "^4.0.0",
     "yargs": "^3.31.0"
   },
   "devDependencies": {
