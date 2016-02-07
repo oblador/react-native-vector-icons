@@ -253,6 +253,9 @@ var icoMoonConfig = require('./config.json');
 var Icon = createIconSetFromIcoMoon(icoMoonConfig);
 ```
 
+## Animation
+
+React Native comes with an amazing animation library called [`Animated`](http://facebook.github.io/react-native/docs/animated.html). To use it with an icon, simply create an animated component with this line: `var AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
 
 ## Examples
 
