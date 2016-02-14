@@ -23,7 +23,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **733** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v2.1.1, **893** icons)
-* [`Octicons`](http://octicons.github.com) by Github, Inc. (v2.4.1, **178** icons)
+* [`Octicons`](http://octicons.github.com) by Github, Inc. (v3.5.0, **196** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 
 ## Installation

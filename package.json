@@ -15,7 +15,7 @@
     "build-foundation": "node generate-icon bower_components/foundation-icon-fonts/foundation-icons.css --prefix=.fi- --componentName=Foundation --fontFamily=fontcustom > Foundation.js && cp bower_components/foundation-icon-fonts/foundation-icons.ttf Fonts/Foundation.ttf",
     "build-ionicons": "node generate-icon bower_components/ionicons/css/ionicons.css --prefix=.ion- --componentName=Ionicons --fontFamily=Ionicons > Ionicons.js && cp bower_components/ionicons/fonts/ionicons.ttf Fonts/Ionicons.ttf",
     "build-materialicons": "node generate-material-icons node_modules/material-design-icons/iconfont/codepoints --componentName=MaterialIcons --fontFamily='Material Icons' > MaterialIcons.js && cp node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf Fonts/MaterialIcons.ttf",
-    "build-octicons": "node generate-icon bower_components/octicons/octicons/octicons.css --prefix=.octicon- --componentName=Octicons --fontFamily=octicons > Octicons.js && cp bower_components/octicons/octicons/octicons.ttf Fonts/Octicons.ttf",
+    "build-octicons": "node generate-icon node_modules/octicons/octicons/octicons.css --prefix=.octicon- --componentName=Octicons --fontFamily=octicons > Octicons.js && cp node_modules/octicons/octicons/octicons.ttf Fonts/Octicons.ttf",
     "build-zocial": "node generate-icon bower_components/css-social-buttons/css/zocial.css --prefix=.zocial. --componentName=Zocial --fontFamily=zocial > Zocial.js && cp bower_components/css-social-buttons/css/zocial.ttf Fonts/Zocial.ttf"
   },
   "keywords": [
@@ -47,7 +47,9 @@
   },
   "license": "MIT",
   "rnpm": {
-    "assets": ["Fonts"]
+    "assets": [
+      "Fonts"
+    ]
   },
   "dependencies": {
     "lodash": "^4.0.0",
@@ -56,6 +58,7 @@
   "devDependencies": {
     "evil-icons": "^1.8.0",
     "font-awesome": "^4.5.0",
-    "material-design-icons": "^2.1.1"
+    "material-design-icons": "^2.1.1",
+    "octicons": "^3.5.0"
   }
 }
