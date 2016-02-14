@@ -13,6 +13,8 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * Presentational stuff like size and color can be defined in your stylesheet instead of via a property (if you want to).
 * Icons scale with accessibility settings (unless disabled).
 
+*Pst! Migrating from `react-native-icons`? Scroll down for more information.*
+
 ## Bundled Icon Sets
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
@@ -350,6 +352,16 @@ For default template please provide `--componentName` and `--fontFamily`.
 Save output to file, defaults to STDOUT
 
 ## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
+
+## Migrating from `react-native-icons`
+
+**NOTE:** This approach is unsupported and new apps / views should NOT use this component. 
+
+With `react-native-icons` recently being discontinued, users switching to this library might not want to rewrite all their code. For that use case I've written a drop in replacement component that uses the same icon name syntax. It might break some layouts since the underlying component is different. To use this, simply replace your `react-native-icons` require statement with this:
+
+```js
+var Icon = require('react-native-vector-icons/RNIMigration')
+```
 
 ## Troubleshooting
 
