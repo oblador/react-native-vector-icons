@@ -30,11 +30,11 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 `$ npm install react-native-vector-icons --save`
 
-if you're using rnpm, you can link all native dependencies automatically:
+### iOS 
+
+#### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
 
 `$ rnpm link`
-
-### iOS 
 
 #### Option: Manually
 
@@ -62,11 +62,15 @@ Edit `Info.plist` as described above.
 
 ### Android
 
-*Note: Android support requires React Native 0.16 or later, use [0.8.5](https://github.com/oblador/react-native-vector-icons/releases/tag/v0.8.5) for earlier versions*
+#### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
+
+`$ rnpm link`
+
+#### Option: Manually
 
 * Copy the contents in the `Fonts` folder to `android/app/src/main/assets/fonts` (*note lowercase font folder*). 
 
-#### Integrating library for `getImageSource` support
+##### Integrating library for `getImageSource` support
 
 These steps are optional and only needed if you want to use the `Icon.getImageSource` function. 
 
