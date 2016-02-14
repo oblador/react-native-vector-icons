@@ -18,7 +18,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 ## Bundled Icon Sets
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
-* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.7.8, **70** icons) 
+* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **71** icons) 
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.5, **605** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **733** icons)
