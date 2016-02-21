@@ -303,7 +303,7 @@ var TabBarView = React.createClass({
           title="Home"
           iconName="ios-home-outline"
           selectedIconName="ios-home"
-          }}>
+          >
           <View style={styles.tabContent}><Text>Home Tab</Text></View>
         </Icon.TabBarItem>
       </TabBarIOS>
