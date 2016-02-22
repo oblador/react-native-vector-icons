@@ -42,7 +42,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 * Right click on you project in XCode and select **Add files to "_NameOfYourProject_"**. 
 * Browse to `node_modules/react-native-vector-icons` and select the folder `Fonts` (or just the ones you want). **Make sure your app is checked under "Add to targets" and that "Create groups" is checked if you add the whole folder**.
-* Edit `Info.plist` and add a property called **Fonts provided by application** (if you haven't added one already) and type in the files you just added. It will look something like this:
+* Edit `Info.plist` and add a property called **Fonts provided by application** (or `UIAppFonts` if Xcode won't autocomplete/not using Xcode) and type in the files you just added. It will look something like this:
 
 ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
 
