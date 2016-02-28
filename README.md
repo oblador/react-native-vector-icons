@@ -153,7 +153,9 @@ Since `Icon` builds on top of the `Text` component, most [style properties](htt
 * `color`
 * `fontSize`
 
-By combining some of these you can create for example: 
+NOTE: On android `Text` doesn't currently support `border*` styles, to circumvent this simply wrap your `Icon` with a `View`.  
+
+By combining some of these you can create for example : 
 
 ![type](https://cloud.githubusercontent.com/assets/378279/7667570/33817554-fc0d-11e4-9ad7-4eb60139cfb7.png)
 ![star](https://cloud.githubusercontent.com/assets/378279/7667569/3010dd7e-fc0d-11e4-9696-cb721fe8e98d.png)
