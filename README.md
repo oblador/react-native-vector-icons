@@ -70,9 +70,9 @@ Edit `Info.plist` as described above.
 
 * Copy the contents in the `Fonts` folder to `android/app/src/main/assets/fonts` (*note lowercase font folder*). 
 
-##### Integrating library for `getImageSource` support
+##### Integrating library for `getImageSource` and `ToolbarAndroid` support
 
-These steps are optional and only needed if you want to use the `Icon.getImageSource` function. 
+These steps are optional and only needed if you want to use the `Icon.getImageSource` function or using custom icons in the `Icon.ToolbarAndroid` component. 
 
 * Edit `android/settings.gradle` to look like this (without the +):
 
@@ -96,8 +96,8 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
   dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.0.0'
-    compile 'com.facebook.react:react-native:0.16.+'
+    compile "com.android.support:appcompat-v7:23.0.1"
+    compile "com.facebook.react:react-native:+"  // From node_modules
   + compile project(':react-native-vector-icons')
   }
   ```
@@ -204,7 +204,7 @@ For a complete example check out the `TabBarExample` project.
 
 ## Usage with [TabBarIOS](http://facebook.github.io/react-native/docs/tabbarios.html)
 
-Simply use `Icon.TabBarItem` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties: 
+Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties: 
 
 | Prop | Description | Default |
 |---|---|---|
@@ -233,6 +233,33 @@ Note: Since [`NavigatorIOS` doesn't rerender with new state](https://github.com/
 > Development belongs to open-source community - not used by the React Native team on their apps. A result of this is that there is currently a backlog of unresolved bugs, nobody who uses this has stepped up to take ownership for it yet.
 
 You are probably better off with [`Navigator.NavigationBar`](http://facebook.github.io/react-native/docs/navigator.html) or [`react-native-navbar`](https://github.com/Kureev/react-native-navbar).
+
+## Usage with [ToolbarAndroid](http://facebook.github.io/react-native/docs/toolbarandroid.html)
+
+Simply use `Icon.ToolbarAndroid` instead of `React.ToolbarAndroid`, this is composition of the underlying `ToolbarAndroid` component that works the same but any `*icon` property also takes `*iconName`: 
+
+      navIconName: IconNamePropType,
+      overflowIconName: IconNamePropType,
+      actions: React.PropTypes.arrayOf(React.PropTypes.shape({
+        title: React.PropTypes.string.isRequired,
+        iconName: IconNamePropType,
+        iconSize: React.PropTypes.number,
+        iconColor: React.PropTypes.string,
+        show: React.PropTypes.oneOf(['always', 'ifRoom', 'never']),
+        showWithText: React.PropTypes.bool
+      })),
+      iconSize: React.PropTypes.number,
+      iconColor: React.PropTypes.string,
+
+| Prop | Description | Default |
+|---|---|---|
+|**`navIconName`**|Name of the navigation icon (similar to `ToolbarAndroid` `navIcon`)|*None*|
+|**`overflowIconName`**|Name of the overflow icon (similar to `ToolbarAndroid` `overflowIcon`). |*none*|
+|**`actions`**|Possible actions on the toolbar as part of the action menu, takes the additional arguments `iconName`, `iconColor` and `iconSize`. |*none*|
+|**`iconSize`**|Size of the icons. |`24`|
+|**`iconColor`**|Color of the icons. |`black`|
+
+For example usage see `Examples/IconExplorer/index.android.js`or the examples section below. Don't forget to import and link to this project as described above if you are going to use the ToolbarAndroid integration. 
 
 ## Custom Fonts
 
@@ -285,7 +312,7 @@ var ExampleView = React.createClass({
 };
 ```
 
-### TabBar
+### TabBarIOS
 Full example in `TabBarExample` project in `Examples/TabBarExample` folder. 
 
 ```js
@@ -309,6 +336,36 @@ var TabBarView = React.createClass({
           <View style={styles.tabContent}><Text>Home Tab</Text></View>
         </Icon.TabBarItem>
       </TabBarIOS>
+    );
+  }
+};
+```
+
+### ToolbarAndroid
+
+```js
+var React = require('react-native');
+var {
+  View, 
+  Text, 
+  TabBarIOS,
+} = React;
+var Icon = require('react-native-vector-icons/Ionicons');
+
+var ToolbarView = React.createClass({
+  render: function() {
+    return (
+      <Icon.ToolbarAndroid>
+        title="Home"
+        titleColor="white"
+        navIconName="android-arrow-back"
+        onIconClicked={this.props.navigator.pop}
+        actions={[
+          { title: 'Settings', iconName: 'gear-a', iconSize: 30, show: 'always' },
+          { title: 'Follow me on Twitter', iconName: 'social-twitter', iconColor: "#4099FF", show: 'ifRoom' },
+        ]}
+        overflowIconName="more"
+      />
     );
   }
 };
