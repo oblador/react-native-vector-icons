@@ -74,7 +74,7 @@ var TabBarExample = React.createClass({
       <TabBarIOS
         tintColor="black"
         barTintColor="#3abeff">
-        <Icon.TabBarItem
+        <Icon.TabBarItemIOS
           title="Home"
           iconName="ios-home-outline"
           selectedIconName="ios-home"
@@ -85,8 +85,8 @@ var TabBarExample = React.createClass({
             });
           }}>
           {this._renderContent('#414A8C', 'Home')}
-        </Icon.TabBarItem>
-        <Icon.TabBarItem
+        </Icon.TabBarItemIOS>
+        <Icon.TabBarItemIOS
           title="Profile"
           iconName="ios-person-outline"
           selectedIconName="ios-person"
@@ -97,8 +97,8 @@ var TabBarExample = React.createClass({
             });
           }}>
           {this._renderContent('#090', 'Profile')}
-        </Icon.TabBarItem>
-        <Icon.TabBarItem
+        </Icon.TabBarItemIOS>
+        <Icon.TabBarItemIOS
           title="Starred"
           iconName="ios-star-outline"
           selectedIconName="ios-star"
@@ -109,8 +109,8 @@ var TabBarExample = React.createClass({
             });
           }}>
           {this._renderContent('#900', 'Starred')}
-        </Icon.TabBarItem>
-        <Icon.TabBarItem
+        </Icon.TabBarItemIOS>
+        <Icon.TabBarItemIOS
           title="Settings"
           iconName="ios-gear-outline"
           selectedIconName="ios-gear"
@@ -121,7 +121,7 @@ var TabBarExample = React.createClass({
             });
           }}>
           {this._renderContent('#009', 'Settings')}
-        </Icon.TabBarItem>
+        </Icon.TabBarItemIOS>
       </TabBarIOS>
     );
   }

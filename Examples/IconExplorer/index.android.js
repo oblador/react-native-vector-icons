@@ -14,6 +14,7 @@ var {
   ToolbarAndroid,
 } = React;
 
+var Ionicons = require('react-native-vector-icons/Ionicons');
 var IconSetList = require('./IconSetList');
 var IconList = require('./IconList');
 
@@ -31,7 +32,7 @@ var RouteMapper = function(route, navigationOperations, onComponentRef) {
   if (route.name === 'list') {
     return (
       <View style={{flex: 1}}>
-        <ToolbarAndroid
+        <Ionicons.ToolbarAndroid
           style={styles.toolbar}
           titleColor="white"
           title={route.title} />
@@ -41,9 +42,9 @@ var RouteMapper = function(route, navigationOperations, onComponentRef) {
   } else if (route.name === 'iconSet') {
     return (
       <View style={{flex: 1}}>
-        <ToolbarAndroid
+        <Ionicons.ToolbarAndroid
           actions={[]}
-          navIcon={require('image!android_back_white')}
+          navIconName="android-arrow-back"
           onIconClicked={navigationOperations.pop}
           style={styles.toolbar}
           titleColor="white"
