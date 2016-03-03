@@ -3,7 +3,8 @@ apply plugin: "com.android.application"
 import com.android.build.OutputFile
 
 /**
- * The react.gradle file registers two tasks: bundleDebugJsAndAssets and bundleReleaseJsAndAssets.
+ * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
+ * and bundleReleaseJsAndAssets).
  * These basically call `react-native bundle` with the correct arguments during the Android build
  * cycle. By default, bundleDebugJsAndAssets is skipped, as in debug/dev mode we prefer to load the
  * bundle directly from the development server. Below you can see all the possible configurations
@@ -22,6 +23,15 @@ import com.android.build.OutputFile
  *
  *   // whether to bundle JS and assets in release mode
  *   bundleInRelease: true,
+ *
+ *   // whether to bundle JS and assets in another build variant (if configured).
+ *   // See http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Variants
+ *   // The configuration property can be in the following formats
+ *   //         'bundleIn${productFlavor}${buildType}'
+ *   //         'bundleIn${buildType}'
+ *   // bundleInFreeDebug: true,
+ *   // bundleInPaidRelease: true,
+ *   // bundleInBeta: true,
  *
  *   // the root of your project, i.e. where "package.json" lives
  *   root: "../../",
@@ -52,8 +62,7 @@ import com.android.build.OutputFile
 apply from: "react.gradle"
 
 /**
- * Set this to true to create three separate APKs instead of one:
- *   - A universal APK that works on all devices
+ * Set this to true to create two separate APKs instead of one:
  *   - An APK that only works on ARM devices
  *   - An APK that only works on x86 devices
  * The advantage is the size of the APK is reduced by about 4MB.
@@ -83,9 +92,9 @@ android {
     }
     splits {
         abi {
-            enable enableSeparateBuildPerCPUArchitecture
-            universalApk true
             reset()
+            enable enableSeparateBuildPerCPUArchitecture
+            universalApk false  // If true, also generate a universal APK
             include "armeabi-v7a", "x86"
         }
     }
@@ -113,6 +122,6 @@ android {
 dependencies {
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:0.18.+"
+    compile "com.facebook.react:react-native:+"  // From node_modules
     compile project(':react-native-vector-icons')
 }
