@@ -238,19 +238,6 @@ You are probably better off with [`Navigator.NavigationBar`](http://facebook.git
 
 Simply use `Icon.ToolbarAndroid` instead of `React.ToolbarAndroid`, this is composition of the underlying `ToolbarAndroid` component that works the same but any `*icon` property also takes `*iconName`: 
 
-      navIconName: IconNamePropType,
-      overflowIconName: IconNamePropType,
-      actions: React.PropTypes.arrayOf(React.PropTypes.shape({
-        title: React.PropTypes.string.isRequired,
-        iconName: IconNamePropType,
-        iconSize: React.PropTypes.number,
-        iconColor: React.PropTypes.string,
-        show: React.PropTypes.oneOf(['always', 'ifRoom', 'never']),
-        showWithText: React.PropTypes.bool
-      })),
-      iconSize: React.PropTypes.number,
-      iconColor: React.PropTypes.string,
-
 | Prop | Description | Default |
 |---|---|---|
 |**`navIconName`**|Name of the navigation icon (similar to `ToolbarAndroid` `navIcon`)|*None*|
@@ -345,11 +332,6 @@ var TabBarView = React.createClass({
 
 ```js
 var React = require('react-native');
-var {
-  View, 
-  Text, 
-  TabBarIOS,
-} = React;
 var Icon = require('react-native-vector-icons/Ionicons');
 
 var ToolbarView = React.createClass({
