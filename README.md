@@ -38,9 +38,9 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 #### Option: Manually
 
-If you want to use any of the bundled icons, you need to add the icon fonts to your XCode project. Just follow these steps:
+If you want to use any of the bundled icons, you need to add the icon fonts to your Xcode project. Just follow these steps:
 
-* Right click on you project in XCode and select **Add files to "_NameOfYourProject_"**. 
+* Right click on you project in Xcode and select **Add files to "_NameOfYourProject_"**. 
 * Browse to `node_modules/react-native-vector-icons` and select the folder `Fonts` (or just the ones you want). **Make sure your app is checked under "Add to targets" and that "Create groups" is checked if you add the whole folder**.
 * Edit `Info.plist` and add a property called **Fonts provided by application** (or `UIAppFonts` if Xcode won't autocomplete/not using Xcode) and type in the files you just added. It will look something like this:
 
