@@ -405,7 +405,10 @@ Save output to file, defaults to STDOUT
 With `react-native-icons` recently being discontinued, users switching to this library might not want to rewrite all their code. For that use case I've written a drop in replacement component that uses the same icon name syntax. It might break some layouts since the underlying component is different. To use this, simply replace your `react-native-icons` require statement with this:
 
 ```js
+// ES 5
 var Icon = require('react-native-vector-icons/RNIMigration')
+// ES 2015 with module imports
+import Icon from 'react-native-vector-icons/RNIMigration'
 ```
 
 ## Troubleshooting
