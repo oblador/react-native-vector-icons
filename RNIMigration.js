@@ -44,7 +44,7 @@ var Icon = React.createClass({
     if(!IconSet) {
       throw new Error('Invalid icon set "' + setName + '"');
     }
-    return (<IconSet {...props} />);
+    return (<IconSet allowFontScaling={false} {...props} />);
   }
 });
 
