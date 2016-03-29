@@ -66,6 +66,24 @@ Edit `Info.plist` as described above.
 
 `$ rnpm link`
 
+#### Option: With Gradle
+
+Edit `android/app/build.gradle` and add the following:
+
+```gradle
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+```
+
+To customize the files being copied, add the following instead:
+
+```gradle
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Name of the font files you want to copy
+]
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+```
+
 #### Option: Manually
 
 * Copy the contents in the `Fonts` folder to `android/app/src/main/assets/fonts` (*note lowercase font folder*). 
@@ -142,7 +160,7 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 |**`color`**|Color of the icon. |*Inherited*|
 
 ### Styling
-Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
+Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
 
 * `backgroundColor`
 * `borderWidth`
@@ -426,3 +444,4 @@ var Icon = require('react-native-vector-icons/RNIMigration')
 This project is licenced under the [MIT License](http://opensource.org/licenses/mit-license.html).
 
 Any bundled fonts are copyright to their respective authors and mostly under MIT or [SIL OFL](http://scripts.sil.org/OFL).
+

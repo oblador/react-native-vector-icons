@@ -1,0 +1,53 @@
+/**
+ * Task to copy icon font files
+ */
+
+def config = project.hasProperty("vectoricons") ? project.vectoricons : [];
+
+def iconFontsDir = config.iconFontsDir ?: "../../node_modules/react-native-vector-icons/Fonts";
+def iconFontNames = config.iconFontNames ?: [ "*.ttf" ];
+
+gradle.projectsEvaluated {
+    // Grab all build types and product flavors
+    def buildTypes = android.buildTypes.collect { type -> type.name }
+    def productFlavors = android.productFlavors.collect { flavor -> flavor.name }
+
+    // When no product flavors defined, use empty
+    if (!productFlavors) productFlavors.add("")
+
+    productFlavors.each { productFlavorName ->
+        buildTypes.each { buildTypeName ->
+            // Create variant and target names
+            def targetName = "${productFlavorName.capitalize()}${buildTypeName.capitalize()}"
+            def targetPath = productFlavorName ?
+                    "${productFlavorName}/${buildTypeName}" :
+                    "${buildTypeName}"
+
+            // Create task for copying fonts
+            def currentFontTask = tasks.create(
+                    name: "copy${targetName}IconFonts",
+                    type: Copy) {
+                iconFontNames.each { name ->
+                    from(iconFontsDir)
+                    include(name)
+                    into("${buildDir}/intermediates/assets/${targetPath}/fonts/")
+                }
+            }
+
+            currentFontTask.dependsOn("merge${targetName}Resources")
+
+            [
+                "processArmeabi-v7a${targetName}Resources",
+                "processX86${targetName}Resources",
+                "processUniversal${targetName}Resources",
+                "process${targetName}Resources"
+            ].each { name ->
+                Task dependentTask = tasks.findByPath(name);
+
+                if (dependentTask != null) {
+                    dependentTask.dependsOn(currentFontTask)
+                }
+            }
+        }
+    }
+}
