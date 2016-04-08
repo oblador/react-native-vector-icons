@@ -355,7 +355,7 @@ var Icon = require('react-native-vector-icons/Ionicons');
 var ToolbarView = React.createClass({
   render: function() {
     return (
-      <Icon.ToolbarAndroid>
+      <Icon.ToolbarAndroid
         title="Home"
         titleColor="white"
         navIconName="android-arrow-back"
