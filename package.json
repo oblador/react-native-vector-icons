@@ -25,6 +25,8 @@
     "react",
     "mobile",
     "ios",
+    "osx",
+    "macos",
     "android",
     "ui",
     "icon",

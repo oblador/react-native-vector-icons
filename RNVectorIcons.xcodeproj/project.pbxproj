@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03E97EFF1CC27F1C00671308 /* RNVectorIconsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */; };
 		5DBEB17C1B18CFF400B34395 /* RNVectorIconsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		03E97F011CC27F1C00671308 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DBEB14E1B18CEA900B34395 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -23,12 +33,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03E97F051CC27F1C00671308 /* libRNVectorIcons_OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNVectorIcons_OSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBEB1501B18CEA900B34395 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNVectorIcons.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBEB16B1B18CF1500B34395 /* RNVectorIconsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNVectorIconsManager.h; sourceTree = "<group>"; };
 		5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNVectorIconsManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		03E97F001CC27F1C00671308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DBEB14D1B18CEA900B34395 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5DBEB1501B18CEA900B34395 /* libRNVectorIcons.a */,
+				03E97F051CC27F1C00671308 /* libRNVectorIcons_OSX.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +86,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		03E97EFD1CC27F1C00671308 /* RNVectorIcons_OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03E97F021CC27F1C00671308 /* Build configuration list for PBXNativeTarget "RNVectorIcons_OSX" */;
+			buildPhases = (
+				03E97EFE1CC27F1C00671308 /* Sources */,
+				03E97F001CC27F1C00671308 /* Frameworks */,
+				03E97F011CC27F1C00671308 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNVectorIcons_OSX;
+			productName = RNVectorIcons;
+			productReference = 03E97F051CC27F1C00671308 /* libRNVectorIcons_OSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		5DBEB14F1B18CEA900B34395 /* RNVectorIcons */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DBEB1641B18CEA900B34395 /* Build configuration list for PBXNativeTarget "RNVectorIcons" */;
@@ -111,11 +147,20 @@
 			projectRoot = "";
 			targets = (
 				5DBEB14F1B18CEA900B34395 /* RNVectorIcons */,
+				03E97EFD1CC27F1C00671308 /* RNVectorIcons_OSX */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		03E97EFE1CC27F1C00671308 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03E97EFF1CC27F1C00671308 /* RNVectorIconsManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DBEB14C1B18CEA900B34395 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +172,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		03E97F031CC27F1C00671308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../react-native-desktop/React/**",
+					"$(SRCROOT)/node_modules/react-native-desktop/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		03E97F041CC27F1C00671308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../react-native-desktop/React/**",
+					"$(SRCROOT)/node_modules/react-native-desktop/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		5DBEB1621B18CEA900B34395 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -165,7 +242,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx10.11;
 			};
 			name = Debug;
 		};
@@ -200,7 +277,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx10.11;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -240,6 +317,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		03E97F021CC27F1C00671308 /* Build configuration list for PBXNativeTarget "RNVectorIcons_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03E97F031CC27F1C00671308 /* Debug */,
+				03E97F041CC27F1C00671308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5DBEB14B1B18CEA900B34395 /* Build configuration list for PBXProject "RNVectorIcons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
