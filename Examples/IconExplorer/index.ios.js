@@ -4,12 +4,12 @@
  */
 'use strict';
 
-var React = require('react-native');
+var React = require('react');
 var {
   AppRegistry,
   StyleSheet,
   NavigatorIOS,
-} = React;
+} = require('react-native');
 
 var IconSetList = require('./IconSetList');
 

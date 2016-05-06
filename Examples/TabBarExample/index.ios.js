@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+var React = require('react');
 var {
   AppRegistry,
   StyleSheet,
@@ -10,7 +10,7 @@ var {
   TabBarIOS,
   NavigatorIOS,
   TouchableOpacity,
-} = React;
+} = require('react-native');
 
 var Icon = require('react-native-vector-icons/Ionicons');
 
