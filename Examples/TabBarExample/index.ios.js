@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 
 class ColoredView extends Component {
   componentWillMount() {
-    Icon.getImageSource('android-arrow-back', 30).then((source) => this.setState({ backIcon: source }));
+    Icon.getImageSource('md-arrow-back', 30).then((source) => this.setState({ backIcon: source }));
   }
 
   _navigateToSubview() {
@@ -76,7 +76,7 @@ class TabBarExample extends Component {
 
   componentWillMount() {
     // https://github.com/facebook/react-native/issues/1403 prevents this to work for initial load
-    Icon.getImageSource('ios-gear', 30).then((source) => this.setState({ gearIcon: source }));
+    Icon.getImageSource('ios-settings', 30).then((source) => this.setState({ gearIcon: source }));
   }
 
   _renderContent(color, pageText) {
@@ -140,8 +140,8 @@ class TabBarExample extends Component {
         </Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
           title="Settings"
-          iconName="ios-gear-outline"
-          selectedIconName="ios-gear"
+          iconName="ios-settings-outline"
+          selectedIconName="ios-settings"
           selected={this.state.selectedTab === 'settings'}
           onPress={() => {
             this.setState({
