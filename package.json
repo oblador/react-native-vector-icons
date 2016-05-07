@@ -7,7 +7,7 @@
     "generate-icon": "./generate-icon.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint index.js lib/{create-icon-set-from-fontello,create-icon-set-from-icomoon,create-icon-set,icon-button,tab-bar-item-ios,toolbar-android}.js",
     "build": "rm -rf {Fonts,Entypo.js,EvilIcons.js,FontAwesome.js,Foundation.js,Ionicons.js,MaterialIcons.js,Octicons.js,Zocial.js} && mkdir Fonts && npm run build-entypo && npm run build-evilicons && npm run build-fontawesome && npm run build-foundation && npm run build-ionicons && npm run build-materialicons && npm run build-octicons && npm run build-zocial",
     "build-entypo": "mkdir -p tmp/svg && curl https://dl.dropboxusercontent.com/u/4339492/entypo.zip > tmp/entypo.zip && unzip -j tmp/entypo.zip *.svg -x __MACOSX/* -d tmp/svg && fontcustom compile tmp/svg -o tmp -n Entypo -t css -h && node generate-icon tmp/Entypo.css --componentName=Entypo --fontFamily=Entypo > Entypo.js && cp tmp/Entypo.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-evilicons": "fontcustom compile node_modules/evil-icons/assets/icons -o tmp -n EvilIcons -t css -h && node generate-icon tmp/EvilIcons.css --prefix=.icon-ei- --componentName=EvilIcons --fontFamily=EvilIcons > EvilIcons.js && cp tmp/EvilIcons.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
@@ -56,7 +56,11 @@
     "yargs": "^3.31.0"
   },
   "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-eslint": "^6.0.4",
     "evil-icons": "^1.8.0",
+    "eslint": "^2.9.0",
+    "eslint-plugin-react": "^5.0.1",
     "font-awesome": "^4.6.0",
     "ionicons": "^2.0.1",
     "material-design-icons": "^2.2.0",
