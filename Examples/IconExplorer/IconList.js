@@ -1,90 +1,14 @@
-'use strict';
-
-var React = require('react-native');
-var {
+import React, { Component } from 'react';
+import {
   ListView,
+  Platform,
   StyleSheet,
   Text,
-  View,
   TextInput,
-  Platform,
-} = React;
+  View,
+} from 'react-native';
 
-var IconList = React.createClass({
-  getInitialState: function() {
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    return {
-      filter: '',
-      dataSource: ds.cloneWithRows(this.props.iconSet.glyphs),
-    };
-  },
-
-  searchIcons(query) {
-    var glyphs = this.props.iconSet.glyphs.filter(function(glyph) {
-      for (var i = 0; i < glyph.length; i++) {
-        if(glyph[i].indexOf(query) !== -1) {
-          return true;
-        }
-      };
-      return false;
-    });
-    this.setState({
-      filter: query,
-      dataSource: this.state.dataSource.cloneWithRows(glyphs),
-    });
-  },
-
-  handleSearchChange(event) {
-    var filter = event.nativeEvent.text.toLowerCase();
-    this.searchIcons(filter);
-  },
-
-  render: function() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.searchBar}>
-          <TextInput
-            autoCapitalize="none"
-            autoCorrect={false}
-            autoFocus={true}
-            onChange={this.handleSearchChange}
-            placeholder="Search an icon..."
-            style={styles.searchBarInput}
-            onFocus={() =>
-              this.refs.listview && this.refs.listview.getScrollResponder().scrollTo(0, 0)}
-          />
-        </View>
-        <View style={styles.separator} />
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={this._renderRow}
-          automaticallyAdjustContentInsets={false}
-          keyboardDismissMode="on-drag"
-          keyboardShouldPersistTaps={true}
-          showsVerticalScrollIndicator={false}
-          initialListSize={20}
-        />
-      </View>
-    );
-  },
-
-  _renderRow: function(rowData: string, sectionID: number, rowID: number) {
-    var Icon = this.props.iconSet.component;
-    return (
-      <View>
-        <View style={styles.row}>
-          <Icon name={rowData[0]} size={20} style={styles.icon} />
-          <Text style={styles.text}>
-            {rowData.join(', ')}
-          </Text>
-        </View>
-        <View style={styles.separator} />
-      </View>
-    );
-  },
-});
-
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
@@ -105,6 +29,7 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     padding: 10,
+    overflow: 'hidden',
   },
   separator: {
     height: 0.5,
@@ -120,4 +45,79 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = IconList;
+export default class ColoredView extends Component {
+  constructor(props) {
+    super(props);
+
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    this.state = {
+      filter: '',
+      dataSource: ds.cloneWithRows(this.props.iconSet.glyphs),
+    };
+  }
+
+  searchIcons(query) {
+    const glyphs = this.props.iconSet.glyphs.filter(glyph => {
+      for (let i = 0; i < glyph.length; i++) {
+        if (glyph[i].indexOf(query) !== -1) {
+          return true;
+        }
+      }
+      return false;
+    });
+
+    this.setState({
+      filter: query,
+      dataSource: this.state.dataSource.cloneWithRows(glyphs),
+    });
+  }
+
+  handleSearchChange(event) {
+    const filter = event.nativeEvent.text.toLowerCase();
+    this.searchIcons(filter);
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.searchBar}>
+          <TextInput
+            autoCapitalize="none"
+            autoCorrect={false}
+            autoFocus={true}
+            onChange={event => this.handleSearchChange(event)}
+            placeholder="Search an icon..."
+            style={styles.searchBarInput}
+            onFocus={() =>
+              this.refs.listview && this.refs.listview.getScrollResponder().scrollTo(0, 0)}
+          />
+        </View>
+        <View style={styles.separator} />
+        <ListView
+          dataSource={this.state.dataSource}
+          renderRow={(rowData, sectionID, rowID) => this._renderRow(rowData, sectionID, rowID)}
+          automaticallyAdjustContentInsets={false}
+          keyboardDismissMode="on-drag"
+          keyboardShouldPersistTaps={true}
+          showsVerticalScrollIndicator={false}
+          initialListSize={20}
+        />
+      </View>
+    );
+  }
+
+  _renderRow(rowData, sectionID, rowID) {
+    const Icon = this.props.iconSet.component;
+    return (
+      <View>
+        <View style={styles.row}>
+          <Icon name={rowData[0]} size={20} style={styles.icon} />
+          <Text style={styles.text}>
+            {rowData.join(', ')}
+          </Text>
+        </View>
+        <View style={styles.separator} />
+      </View>
+    );
+  }
+}

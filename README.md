@@ -146,8 +146,8 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 You can either use one of the bundled icons above or roll your own custom font. 
 
 ```js
-var Icon = require('react-native-vector-icons/FontAwesome');
-var myIcon = (<Icon name="rocket" size={30} color="#900" />)
+import Icon from 'react-native-vector-icons/FontAwesome';
+const myIcon = (<Icon name="rocket" size={30} color="#900" />)
 ```
 
 ### Properties
@@ -182,14 +182,14 @@ By combining some of these you can create for example :
 A convenience component for creating buttons with an icon on the left side. 
 
 ```js
-var Icon = require('react-native-vector-icons/FontAwesome')
-var myButton = (
+import Icon from 'react-native-vector-icons/FontAwesome';
+const myButton = (
   <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={this.loginWithFacebook}>
     Login with Facebook
   </Icon.Button>
 );
 
-var customTextButton = (
+const customTextButton = (
   <Icon.Button name="facebook" backgroundColor="#3b5998">
     <Text style={{fontFamily: 'Arial', fontSize: 15}}>Login with Facebook</Text>
   </Icon.Button>
@@ -239,8 +239,8 @@ Use `Icon.getImageSource` to get an image source object and pass it as you would
 Note: Since [`NavigatorIOS` doesn't rerender with new state](https://github.com/facebook/react-native/issues/1403) and the async nature of `getImageSource` you must not use it with `initialRoute` until the icon is rendered, but any view added by `push` should be fine. Easiest way is to simple add an `if` statment at the beginning of you render method like this: 
 
 ```
-  render: function() {
-    if(!this.state.myIcon) {
+  render() {
+    if (!this.state.myIcon) {
       return false;
     }
     return (<NavigatorIOS ... />);
@@ -272,30 +272,30 @@ For example usage see `Examples/IconExplorer/index.android.js`or the examples se
 Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be a path to the font file in you asset folder. 
 
 ```js
-var { createIconSet } = require('react-native-vector-icons');
-var glyphMap = { 'icon-name': 1234, test: '∆' };
-var Icon = createIconSet(glyphMap, 'FontName');
+import { createIconSet } from 'react-native-vector-icons';
+const glyphMap = { 'icon-name': 1234, test: '∆' };
+const Icon = createIconSet(glyphMap, 'FontName');
 ```
 
 ### `createIconSetFromFontello(config[, fontFamily[, fontFile]])`
 Convenience method to create a custom font based on a [fontello](http://fontello.com) config file. Don't forget to import the font as described above and drop the `config.json` somewhere convenient in your project. 
 
 ```js
-var { createIconSetFromFontello } = require('react-native-vector-icons');
-var fontelloConfig = require('./config.json');
-var Icon = createIconSetFromFontello(fontelloConfig);
+import { createIconSetFromFontello } from 'react-native-vector-icons';
+import fontelloConfig from './config.json';
+const Icon = createIconSetFromFontello(fontelloConfig);
 ```
 
 ### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
 ```js
-var { createIconSetFromIcoMoon } = require('react-native-vector-icons');
-var icoMoonConfig = require('./config.json');
-var Icon = createIconSetFromIcoMoon(icoMoonConfig);
+import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
+import icoMoonConfig from './config.json';
+const Icon = createIconSetFromIcoMoon(icoMoonConfig);
 ```
 
 ## Animation
 
-React Native comes with an amazing animation library called [`Animated`](http://facebook.github.io/react-native/docs/animated.html). To use it with an icon, simply create an animated component with this line: `var AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
+React Native comes with an amazing animation library called [`Animated`](http://facebook.github.io/react-native/docs/animated.html). To use it with an icon, simply create an animated component with this line: `const AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
 
 ## Examples
 
@@ -307,80 +307,65 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 
 ### Basic Example
 ```js
-var React = require('react-native');
-var Icon = require('react-native-vector-icons/Ionicons');
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var ExampleView = React.createClass({
-  render: function() {
-    return <Icon name="person" size={30} color="#4F8EF7" />;
-  }
-};
+function ExampleView(props) {
+  return (<Icon name="person" size={30} color="#4F8EF7" />);
+}
 ```
 
 ### TabBarIOS
 Full example in `TabBarExample` project in `Examples/TabBarExample` folder. 
 
 ```js
-var React = require('react-native');
-var {
-  View, 
-  Text, 
-  TabBarIOS,
-} = React;
-var Icon = require('react-native-vector-icons/Ionicons');
+import { View, Text, TabBarIOS } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var TabBarView = React.createClass({
-  render: function() {
-    return (
-      <TabBarIOS>
-        <Icon.TabBarItem
-          title="Home"
-          iconName="ios-home-outline"
-          selectedIconName="ios-home"
-          >
-          <View style={styles.tabContent}><Text>Home Tab</Text></View>
-        </Icon.TabBarItem>
-      </TabBarIOS>
-    );
-  }
-};
+function TabBarView(props) {
+  return (
+    <TabBarIOS>
+      <Icon.TabBarItem
+        title="Home"
+        iconName="ios-home-outline"
+        selectedIconName="ios-home"
+        >
+        <View style={styles.tabContent}><Text>Home Tab</Text></View>
+      </Icon.TabBarItem>
+    </TabBarIOS>
+  );
+}
 ```
 
 ### ToolbarAndroid
 
 ```js
-var React = require('react-native');
-var Icon = require('react-native-vector-icons/Ionicons');
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var ToolbarView = React.createClass({
-  render: function() {
-    return (
-      <Icon.ToolbarAndroid
-        title="Home"
-        titleColor="white"
-        navIconName="android-arrow-back"
-        onIconClicked={this.props.navigator.pop}
-        actions={[
-          { title: 'Settings', iconName: 'gear-a', iconSize: 30, show: 'always' },
-          { title: 'Follow me on Twitter', iconName: 'social-twitter', iconColor: "#4099FF", show: 'ifRoom' },
-        ]}
-        overflowIconName="more"
-      />
-    );
-  }
-};
+function ToolbarView(props) {
+  return (
+    <Icon.ToolbarAndroid
+      title="Home"
+      titleColor="white"
+      navIconName="android-arrow-back"
+      onIconClicked={props.navigator.pop}
+      actions={[
+        { title: 'Settings', iconName: 'gear-a', iconSize: 30, show: 'always' },
+        { title: 'Follow me on Twitter', iconName: 'social-twitter', iconColor: "#4099FF", show: 'ifRoom' },
+      ]}
+      overflowIconName="more"
+    />
+  );
+}
 ```
 
 ### Inline Icons
 ```js
-var React = require('react-native');
-var Icon = require('react-native-vector-icons/Ionicons');
+import { Text } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var ExampleView = React.createClass({
-  render: function() {
-    return (<Text>Lorem <Icon name="ios-book" color="#4F8EF7" /> Ipsum</Text>);
-  }
-};
+function ExampleView(props) {
+  return (<Text>Lorem <Icon name="ios-book" color="#4F8EF7" /> Ipsum</Text>);
+}
 ```
 
 ### Community examples
@@ -420,10 +405,10 @@ Save output to file, defaults to STDOUT
 
 **NOTE:** This approach is unsupported and new apps / views should NOT use this component. 
 
-With `react-native-icons` recently being discontinued, users switching to this library might not want to rewrite all their code. For that use case I've written a drop in replacement component that uses the same icon name syntax. It might break some layouts since the underlying component is different. To use this, simply replace your `react-native-icons` require statement with this:
+With `react-native-icons` recently being discontinued, users switching to this library might not want to rewrite all their code. For that use case I've written a drop in replacement component that uses the same icon name syntax. It might break some layouts since the underlying component is different. To use this, simply replace your `react-native-icons` import statement with this:
 
 ```js
-var Icon = require('react-native-vector-icons/RNIMigration')
+import Icon from 'react-native-vector-icons/RNIMigration';
 ```
 
 ## Troubleshooting

@@ -1,37 +1,29 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
-'use strict';
-
-var React = require('react-native');
-var {
+import React, { Component } from 'react';
+import {
   AppRegistry,
-  StyleSheet,
   NavigatorIOS,
-} = React;
+  StyleSheet,
+} from 'react-native';
 
-var IconSetList = require('./IconSetList');
+import IconSetList from './IconSetList';
 
-var IconExplorer = React.createClass({
-  render: function() {
-    return (
-      <NavigatorIOS
-        style={styles.container}
-        initialRoute={{
-          title: 'IconExplorer',
-          component: IconSetList
-        }}
-        itemWrapperStyle={styles.itemWrapper}
-      />
-    );
-  }
-});
-
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
 });
+
+export default function IconExplorer(props) {
+  return (
+    <NavigatorIOS
+      style={styles.container}
+      initialRoute={{
+        title: 'IconExplorer',
+        component: IconSetList,
+      }}
+      itemWrapperStyle={styles.itemWrapper}
+    />
+  );
+}
 
 AppRegistry.registerComponent('IconExplorer', () => IconExplorer);

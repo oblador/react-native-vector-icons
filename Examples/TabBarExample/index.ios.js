@@ -1,7 +1,5 @@
-'use strict';
-
-var React = require('react-native');
-var {
+import React, { Component } from 'react';
+import {
   AppRegistry,
   StyleSheet,
   Text,
@@ -10,15 +8,42 @@ var {
   TabBarIOS,
   NavigatorIOS,
   TouchableOpacity,
-} = React;
+} from 'react-native';
 
-var Icon = require('react-native-vector-icons/Ionicons');
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var ColoredView = React.createClass({
-  componentWillMount: function() {
-    Icon.getImageSource('android-arrow-back', 30).then((source) => this.setState({ backIcon: source }));
+const styles = StyleSheet.create({
+  navigator: {
+    flex: 1,
   },
-  _navigateToSubview: function() {
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  tabContent: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tabText: {
+    color: 'white',
+  },
+  button: {
+    marginTop: 20,
+    padding: 8,
+    backgroundColor: 'white',
+    borderRadius: 4,
+  },
+});
+
+class ColoredView extends Component {
+  componentWillMount() {
+    Icon.getImageSource('android-arrow-back', 30).then((source) => this.setState({ backIcon: source }));
+  }
+
+  _navigateToSubview() {
     this.props.navigator.push({
       component: ColoredView,
       title: this.props.pageText,
@@ -26,36 +51,39 @@ var ColoredView = React.createClass({
       onLeftButtonPress: () => this.props.navigator.pop(),
       passProps: this.props,
     });
-  },
-  render: function() {
+  }
+
+  render() {
     return (
       <View style={[styles.tabContent, {backgroundColor: this.props.color}]}>
         <Text style={styles.tabText}>{this.props.pageText}</Text>
-        <TouchableOpacity onPress={this._navigateToSubview}>
+        <TouchableOpacity onPress={() => this._navigateToSubview()}>
           <View style={styles.button}><Text style={styles.buttonText}>Tap Me</Text></View>
         </TouchableOpacity>
       </View>
     );
   }
-});
+}
 
-var TabBarExample = React.createClass({
-  getInitialState: function() {
-    return {
+class TabBarExample extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       selectedTab: 'home',
     };
-  },
+  }
 
-  componentWillMount: function() {
+  componentWillMount() {
     // https://github.com/facebook/react-native/issues/1403 prevents this to work for initial load
     Icon.getImageSource('ios-gear', 30).then((source) => this.setState({ gearIcon: source }));
-  },
+  }
 
-  _renderContent: function(color: string, pageText: string) {
-    if(!this.state.gearIcon) {
+  _renderContent(color, pageText) {
+    if (!this.state.gearIcon) {
       return false;
     }
-    var props = { color, pageText };
+    const props = { color, pageText };
     return (
       <NavigatorIOS
         style={styles.navigator}
@@ -67,9 +95,9 @@ var TabBarExample = React.createClass({
         }}
       />
     );
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <TabBarIOS
         tintColor="black"
@@ -125,32 +153,6 @@ var TabBarExample = React.createClass({
       </TabBarIOS>
     );
   }
-});
-
-var styles = StyleSheet.create({
-  navigator: {
-    flex: 1,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  tabContent: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tabText: {
-    color: 'white',
-  },
-  button: {
-    marginTop: 20,
-    padding: 8,
-    backgroundColor: 'white',
-    borderRadius: 4,
-  },
-});
+}
 
 AppRegistry.registerComponent('TabBarExample', () => TabBarExample);
