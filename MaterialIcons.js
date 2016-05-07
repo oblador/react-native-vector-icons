@@ -1,13 +1,10 @@
 /**
  * MaterialIcons icon set component.
  * Usage: <MaterialIcons name="icon-name" size={20} color="#4F8EF7" />
- *
- * @providesModule MaterialIcons
  */
-'use strict';
 
-var createIconSet = require('./lib/create-icon-set');
-var glyphMap = {
+import createIconSet from './lib/create-icon-set';
+const glyphMap = {
   "3d-rotation": 59469,
   "ac-unit": 60219,
   "access-alarm": 57744,
@@ -942,7 +939,7 @@ var glyphMap = {
   "zoom-out-map": 58731
 };
 
-var MaterialIcons = createIconSet(glyphMap, 'Material Icons', 'MaterialIcons.ttf');
+let MaterialIcons = createIconSet(glyphMap, 'Material Icons', 'MaterialIcons.ttf');
 
 module.exports = MaterialIcons;
 module.exports.glyphMap = glyphMap;

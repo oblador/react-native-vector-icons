@@ -1,13 +1,10 @@
 /**
  * Ionicons icon set component.
  * Usage: <Ionicons name="icon-name" size={20} color="#4F8EF7" />
- *
- * @providesModule Ionicons
  */
-'use strict';
 
-var createIconSet = require('./lib/create-icon-set');
-var glyphMap = {
+import createIconSet from './lib/create-icon-set';
+const glyphMap = {
   "alert": 61697,
   "alert-circled": 61696,
   "android-add": 62151,
@@ -743,7 +740,7 @@ var glyphMap = {
   "xbox": 62220
 };
 
-var Ionicons = createIconSet(glyphMap, 'Ionicons', 'Ionicons.ttf');
+let Ionicons = createIconSet(glyphMap, 'Ionicons', 'Ionicons.ttf');
 
 module.exports = Ionicons;
 module.exports.glyphMap = glyphMap;

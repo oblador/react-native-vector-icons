@@ -1,13 +1,10 @@
 /**
  * FontAwesome icon set component.
  * Usage: <FontAwesome name="icon-name" size={20} color="#4F8EF7" />
- *
- * @providesModule FontAwesome
  */
-'use strict';
 
-var createIconSet = require('./lib/create-icon-set');
-var glyphMap = {
+import createIconSet from './lib/create-icon-set';
+const glyphMap = {
   "glass": 61440,
   "music": 61441,
   "search": 61442,
@@ -731,7 +728,7 @@ var glyphMap = {
   "snapchat-square": 62125
 };
 
-var FontAwesome = createIconSet(glyphMap, 'FontAwesome', 'FontAwesome.ttf');
+let FontAwesome = createIconSet(glyphMap, 'FontAwesome', 'FontAwesome.ttf');
 
 module.exports = FontAwesome;
 module.exports.glyphMap = glyphMap;

@@ -1,13 +1,10 @@
 /**
  * EvilIcons icon set component.
  * Usage: <EvilIcons name="icon-name" size={20} color="#4F8EF7" />
- *
- * @providesModule EvilIcons
  */
-'use strict';
 
-var createIconSet = require('./lib/create-icon-set');
-var glyphMap = {
+import createIconSet from './lib/create-icon-set';
+const glyphMap = {
   "archive": 61696,
   "arrow-down": 61697,
   "arrow-left": 61698,
@@ -80,7 +77,7 @@ var glyphMap = {
   "user": 61765
 };
 
-var EvilIcons = createIconSet(glyphMap, 'EvilIcons', 'EvilIcons.ttf');
+let EvilIcons = createIconSet(glyphMap, 'EvilIcons', 'EvilIcons.ttf');
 
 module.exports = EvilIcons;
 module.exports.glyphMap = glyphMap;

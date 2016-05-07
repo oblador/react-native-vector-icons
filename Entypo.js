@@ -1,13 +1,10 @@
 /**
  * Entypo icon set component.
  * Usage: <Entypo name="icon-name" size={20} color="#4F8EF7" />
- *
- * @providesModule Entypo
  */
-'use strict';
 
-var createIconSet = require('./lib/create-icon-set');
-var glyphMap = {
+import createIconSet from './lib/create-icon-set';
+const glyphMap = {
   "500px": 61696,
   "500px-with-circle": 61697,
   "add-to-list": 61698,
@@ -421,7 +418,7 @@ var glyphMap = {
   "youtube-with-circle": 62106
 };
 
-var Entypo = createIconSet(glyphMap, 'Entypo', 'Entypo.ttf');
+let Entypo = createIconSet(glyphMap, 'Entypo', 'Entypo.ttf');
 
 module.exports = Entypo;
 module.exports.glyphMap = glyphMap;

@@ -1,13 +1,10 @@
 /**
  * Octicons icon set component.
  * Usage: <Octicons name="icon-name" size={20} color="#4F8EF7" />
- *
- * @providesModule Octicons
  */
-'use strict';
 
-var createIconSet = require('./lib/create-icon-set');
-var glyphMap = {
+import createIconSet from './lib/create-icon-set';
+const glyphMap = {
   "alert": 61485,
   "arrow-down": 61503,
   "arrow-left": 61504,
@@ -205,7 +202,7 @@ var glyphMap = {
   "x": 61569
 };
 
-var Octicons = createIconSet(glyphMap, 'octicons', 'Octicons.ttf');
+let Octicons = createIconSet(glyphMap, 'octicons', 'Octicons.ttf');
 
 module.exports = Octicons;
 module.exports.glyphMap = glyphMap;
