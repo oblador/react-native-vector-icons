@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "lodash": "^4.0.0",
-    "yargs": "^3.31.0"
+    "yargs": "^4.7.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
