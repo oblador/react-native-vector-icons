@@ -40,8 +40,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 If you want to use any of the bundled icons, you need to add the icon fonts to your Xcode project. Just follow these steps:
 
-* Right click on you project in Xcode and select **Add files to "_NameOfYourProject_"**. 
-* Browse to `node_modules/react-native-vector-icons` and select the folder `Fonts` (or just the ones you want). **Make sure your app is checked under "Add to targets" and that "Create groups" is checked if you add the whole folder**.
+* Browse to `node_modules/react-native-vector-icons` and drag the folder `Fonts` (or just the ones you want) to your project in Xcode. **Make sure your app is checked under "Add to targets" and that "Create groups" is checked if you add the whole folder**.
 * Edit `Info.plist` and add a property called **Fonts provided by application** (or `UIAppFonts` if Xcode won't autocomplete/not using Xcode) and type in the files you just added. It will look something like this:
 
 ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
@@ -141,6 +140,13 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   ```
 
 *Note: If you're using React Native (Android) <= 0.17, [follow this instructions](https://github.com/oblador/react-native-vector-icons/blob/2fe5b97afa849652215e3258189e8ca3ea775c53/README.md#integrating-library-for-getimagesource-support)*
+
+### OSX via [`react-native-desktop`](https://github.com/ptmt/react-native-desktop)
+
+* Browse to `node_modules/react-native-vector-icons` and drag the folder `Fonts` to your project in Xcode. **Make sure your app is checked under "Add to targets" and that "Create folder references" is checked**.
+* Edit `Info.plist` and add a property called **Application fonts resource path** (or `ATSApplicationFontsPath` if Xcode won't autocomplete/not using Xcode) and type `Fonts` as the value.
+
+*Note: you need to recompile your project after adding new fonts, also ensure that the `Fonts` folder also appear under __Copy Bundle Resources__ in __Build Phases__.*
 
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
