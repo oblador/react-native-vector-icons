@@ -8,7 +8,7 @@ import {
   Text,
   TouchableHighlight,
   View,
-} from 'react-native';
+} from './react-native';
 
 import dismissKeyboard from 'dismissKeyboard';
 

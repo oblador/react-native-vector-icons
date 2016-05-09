@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {
+  DeviceEventEmitter,
   ListView,
   Platform,
   StyleSheet,
   Text,
   TextInput,
   View,
-} from 'react-native';
+} from './react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class ColoredView extends Component {
+export default class IconList extends Component {
   constructor(props) {
     super(props);
 
@@ -56,8 +57,30 @@ export default class ColoredView extends Component {
     };
   }
 
-  searchIcons(query) {
-    const glyphs = this.props.iconSet.glyphs.filter(glyph => {
+  componentDidMount() {
+    if (Platform.OS === 'osx') {
+      this._searchListner =  DeviceEventEmitter.addListener('onSearchIcons',
+        (e) => this.searchIcons(e.query.toLowerCase())
+      );
+      console.log({_searchListner: this._searchListner})
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._searchListner) {
+      this._searchListner.remove();
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const glyphs = this.getFilteredGlyphs(nextProps.iconSet, this.state.filter);
+    this.setState({
+      dataSource: this.state.dataSource.cloneWithRows(glyphs),
+    });
+  }
+
+  getFilteredGlyphs(iconSet, query) {
+    return iconSet.glyphs.filter(glyph => {
       for (let i = 0; i < glyph.length; i++) {
         if (glyph[i].indexOf(query) !== -1) {
           return true;
@@ -65,6 +88,10 @@ export default class ColoredView extends Component {
       }
       return false;
     });
+  }
+
+  searchIcons(query) {
+    const glyphs = this.getFilteredGlyphs(this.props.iconSet, query);
 
     this.setState({
       filter: query,
@@ -80,18 +107,20 @@ export default class ColoredView extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.searchBar}>
-          <TextInput
-            autoCapitalize="none"
-            autoCorrect={false}
-            autoFocus={true}
-            onChange={event => this.handleSearchChange(event)}
-            placeholder="Search an icon..."
-            style={styles.searchBarInput}
-            onFocus={() =>
-              this.refs.listview && this.refs.listview.getScrollResponder().scrollTo(0, 0)}
-          />
-        </View>
+        {Platform.OS !== 'osx' && (
+          <View style={styles.searchBar}>
+            <TextInput
+              autoCapitalize="none"
+              autoCorrect={false}
+              autoFocus={true}
+              onChange={event => this.handleSearchChange(event)}
+              placeholder="Search an icon..."
+              style={styles.searchBarInput}
+              onFocus={() =>
+                this.refs.listview && this.refs.listview.getScrollResponder().scrollTo(0, 0)}
+            />
+          </View>
+          )}
         <View style={styles.separator} />
         <ListView
           dataSource={this.state.dataSource}
