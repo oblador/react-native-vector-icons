@@ -352,7 +352,7 @@ function ToolbarView(props) {
     <Icon.ToolbarAndroid
       title="Home"
       titleColor="white"
-      navIconName="android-arrow-back"
+      navIconName="md-arrow-back"
       onIconClicked={props.navigator.pop}
       actions={[
         { title: 'Settings', iconName: 'gear-a', iconSize: 30, show: 'always' },
