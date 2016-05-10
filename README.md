@@ -355,10 +355,10 @@ function ToolbarView(props) {
       navIconName="md-arrow-back"
       onIconClicked={props.navigator.pop}
       actions={[
-        { title: 'Settings', iconName: 'gear-a', iconSize: 30, show: 'always' },
-        { title: 'Follow me on Twitter', iconName: 'social-twitter', iconColor: "#4099FF", show: 'ifRoom' },
+        { title: 'Settings', iconName: 'md-settings', iconSize: 30, show: 'always' },
+        { title: 'Follow me on Twitter', iconName: 'logo-twitter', iconColor: "#4099FF", show: 'ifRoom' },
       ]}
-      overflowIconName="more"
+      overflowIconName="md-more"
     />
   );
 }
