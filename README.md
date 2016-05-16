@@ -316,7 +316,7 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 import Icon from 'react-native-vector-icons/Ionicons';
 
 function ExampleView(props) {
-  return (<Icon name="person" size={30} color="#4F8EF7" />);
+  return (<Icon name="ios-person" size={30} color="#4F8EF7" />);
 }
 ```
 
