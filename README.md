@@ -21,7 +21,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **70** icons) 
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.6.1, **628** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-* [`Ionicons`](http://ionicons.com/) by Ben Sperry (v3.0.0, **859** icons)
+* [`Ionicons`](http://ionicframework.com/docs/v2/ionicons/) by Ben Sperry (v3.0.0, **859** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v2.2.3, **932** icons)
 * [`Octicons`](http://octicons.github.com) by Github, Inc. (v3.5.0, **166** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
