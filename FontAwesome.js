@@ -442,7 +442,7 @@ const glyphMap = {
   "stumbleupon": 61860,
   "delicious": 61861,
   "digg": 61862,
-  "pied-piper": 61863,
+  "pied-piper-pp": 61863,
   "pied-piper-alt": 61864,
   "drupal": 61865,
   "joomla": 61866,
@@ -492,6 +492,7 @@ const glyphMap = {
   "life-ring": 61901,
   "circle-o-notch": 61902,
   "ra": 61904,
+  "resistance": 61904,
   "rebel": 61904,
   "ge": 61905,
   "empire": 61905,
@@ -725,7 +726,15 @@ const glyphMap = {
   "viadeo-square": 62122,
   "snapchat": 62123,
   "snapchat-ghost": 62124,
-  "snapchat-square": 62125
+  "snapchat-square": 62125,
+  "pied-piper": 62126,
+  "first-order": 62128,
+  "yoast": 62129,
+  "themeisle": 62130,
+  "google-plus-circle": 62131,
+  "google-plus-official": 62131,
+  "fa": 62132,
+  "font-awesome": 62132
 };
 
 let FontAwesome = createIconSet(glyphMap, 'FontAwesome', 'FontAwesome.ttf');
