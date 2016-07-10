@@ -119,7 +119,7 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   }
   ```
 
-* Edit your `MainActivity.java` (deep in `android/app/src/main/java/...`) to look like this (note **two** places to edit):
+* Edit your `MainApplication.java` (deep in `android/app/src/main/java/...`) to look like this (note **two** places to edit):
 
   ```diff
   package com.myapp;
