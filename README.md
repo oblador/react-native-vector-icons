@@ -299,6 +299,8 @@ import icoMoonConfig from './config.json';
 const Icon = createIconSetFromIcoMoon(icoMoonConfig);
 ```
 
+Make sure you're using the _Download_ option in IcoMoon, and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
+
 ## Animation
 
 React Native comes with an amazing animation library called [`Animated`](http://facebook.github.io/react-native/docs/animated.html). To use it with an icon, simply create an animated component with this line: `const AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
