@@ -32,10 +32,6 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ### iOS 
 
-#### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
-
-`$ rnpm link`
-
 #### Option: Manually
 
 If you want to use any of the bundled icons, you need to add the icon fonts to your Xcode project. Just follow these steps:
@@ -59,13 +55,17 @@ pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
 
 Edit `Info.plist` as described above. 
 
-### Android
-
 #### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
 
 `$ rnpm link`
 
-#### Option: With Gradle
+*Note: Some users are having trouble using this method, try one of the others if you are too.*
+
+### Android
+
+#### Option: With Gradle (recommended)
+
+This method has the advantage of fonts being copied from this module at build time so that the fonts and JS are always in sync, making upgrades painless.
 
 Edit `android/app/build.gradle` and add the following:
 
@@ -140,6 +140,12 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   ```
 
 *Note: If you're using React Native (Android) <= 0.17, [follow this instructions](https://github.com/oblador/react-native-vector-icons/blob/2fe5b97afa849652215e3258189e8ca3ea775c53/README.md#integrating-library-for-getimagesource-support)*
+
+#### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
+
+`$ rnpm link`
+
+*Note: Some users are having trouble using this method, try one of the others if you are too.*
 
 ### OSX via [`react-native-desktop`](https://github.com/ptmt/react-native-desktop)
 
