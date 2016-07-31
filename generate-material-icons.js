@@ -1,20 +1,30 @@
 #!/usr/bin/env node
 'use strict';
 
+// Example usage:
+//
+// node generate-material-icons.js \
+//   --componentName=MaterialIcons \
+//   --fontFamily='Material Icons' \
+//   --output=.                    \
+//   /Users/brent/coding/material-design-icons/iconfont/codepoints
+
 var argv = require('yargs')
   .usage('Usage: $0 [options] path/to/codepoints \nFor default template please provide --componentName and --fontFamily')
   .demand(1)
-  .default('t', __dirname + '/template/iconSet.tpl')
-  .describe('t', 'Template in lodash format')
-  .alias('t', 'template')
-  .describe('o', 'Save output to file, defaults to STDOUT')
+  .default('t', __dirname + '/templates')
+  .describe('t', 'Template path with iconSet.tpl and glyphMap.tpl in lodash format')
+  .alias('t', 'templates')
+  .describe('o', 'Save output to given path, defaults to STDOUT. Within path, files will be ${ComponentName}.js and glyph-maps/${ComponentName}.js')
   .alias('o', 'output')
   .argv;
 
 var _ = require('lodash');
 var fs = require('fs');
+var path = require('path');
+var generateIconSetFromCss = require('./lib/generate-icon-set-from-css');
 
-var extractGlyphMapFromCodepoints = function(fileName) {
+function extractGlyphMapFromCodepoints(fileName) {
   var codepoints = fs.readFileSync(fileName, { encoding: 'utf8' }).split('\n');
   var glyphMap = {};
   codepoints.forEach(function(point) {
@@ -27,27 +37,43 @@ var extractGlyphMapFromCodepoints = function(fileName) {
   return glyphMap;
 };
 
-var template;
-if(argv.template) {
-  template = fs.readFileSync(argv.template, { encoding: 'utf8' });
+let iconTemplate, glyphMapTemplate;
+if (argv.templates) {
+  const readTemplate = (name) => {
+    let templatePath = path.resolve(argv.templates, name);
+    return fs.readFileSync(templatePath, { encoding: 'utf8' });
+  }
+
+  iconTemplate = readTemplate('iconSet.tpl');
+  glyphMapTemplate = readTemplate('glyphMap.tpl');
 }
 
-var data = _.omit(argv, '_ $0 o output t template'.split(' '));
-var glyphMap = extractGlyphMapFromCodepoints(argv._[0]);
+const data = _.omit(argv, '_ $0 o output p prefix t template'.split(' '));
 
-var content = JSON.stringify(glyphMap, null, '  ');
-if(template) {
-  var compiled = _.template(template);
-  data = data || {};
-  data.glyphMap = content;
-  content = compiled(data);
-}
+const {
+  iconComponent,
+  glyphMap,
+} = generateIconSetFromCss(argv._, argv.prefix, iconTemplate, glyphMapTemplate, data, extractGlyphMapFromCodepoints);
 
-if(argv.output) {
+if (argv.output) {
+  const glyphMapDir = path.resolve(argv.output, `glyph-maps`);
+  const glyphMapPath = path.resolve(glyphMapDir, `${argv.componentName}.js`);
+  const iconComponentPath = path.resolve(argv.output, `${argv.componentName}.js`);
+
+  if (!fs.statSync(glyphMapDir)) {
+    fs.mkdirSync(glyphMapDir);
+  }
+
   fs.writeFileSync(
-    argv.output,
-    content
+    glyphMapPath,
+    glyphMap
+  );
+
+  fs.writeFileSync(
+    iconComponentPath,
+    iconComponent
   );
 } else {
-  console.log(content);
+  console.log(iconComponent);
+  console.log(glyphMap);
 }

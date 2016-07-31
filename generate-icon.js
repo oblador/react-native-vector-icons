@@ -1,6 +1,15 @@
 #!/usr/bin/env node
 'use strict';
 
+// Example usage:
+//
+// node generate-icon.js      \
+//   --prefix=.octicon-       \
+//   --componentName=Octicons \
+//   --fontFamily=octicons    \
+//   --output=.               \
+//   /Users/brent/Downloads/octicons-4.3.0/build/font/octicons.css
+
 var argv = require('yargs')
   .usage('Usage: $0 [options] path/to/styles.css \nFor default template please provide --componentName and --fontFamily')
   .demand(1)
@@ -10,7 +19,7 @@ var argv = require('yargs')
   .default('t', __dirname + '/templates')
   .describe('t', 'Template path with iconSet.tpl and glyphMap.tpl in lodash format')
   .alias('t', 'templates')
-  .describe('o', 'Save output to given path, defaults to STDOUT. Within path, files will be ${FontFamily}.js and glyph-maps/${FontFamily}.js')
+  .describe('o', 'Save output to given path, defaults to STDOUT. Within path, files will be ${ComponentName}.js and glyph-maps/${ComponentName}.js')
   .alias('o', 'output')
   .argv;
 
@@ -39,8 +48,8 @@ const {
 
 if (argv.output) {
   const glyphMapDir = path.resolve(argv.output, `glyph-maps`);
-  const glyphMapPath = path.resolve(glyphMapDir, `${argv.fontFamily}.js`);
-  const iconComponentPath = path.resolve(argv.output, `${argv.fontFamily}.js`);
+  const glyphMapPath = path.resolve(glyphMapDir, `${argv.componentName}.js`);
+  const iconComponentPath = path.resolve(argv.output, `${argv.componentName}.js`);
 
   if (!fs.statSync(glyphMapDir)) {
     fs.mkdirSync(glyphMapDir);
