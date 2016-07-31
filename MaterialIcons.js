@@ -4,7 +4,7 @@
  */
 
 import createIconSet from './lib/create-icon-set';
-import glyphMap from './glyph-maps/material-icons';
+import glyphMap from './glyph-maps/MaterialIcons';
 let MaterialIcons = createIconSet(glyphMap, 'Material Icons', 'MaterialIcons.ttf');
 
 module.exports = MaterialIcons;

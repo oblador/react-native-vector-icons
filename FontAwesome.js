@@ -4,7 +4,7 @@
  */
 
 import createIconSet from './lib/create-icon-set';
-import glyphMap from './glyph-maps/font-awesome';
+import glyphMap from './glyph-maps/FontAwesome';
 let FontAwesome = createIconSet(glyphMap, 'FontAwesome', 'FontAwesome.ttf');
 
 module.exports = FontAwesome;

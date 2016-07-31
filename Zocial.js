@@ -4,7 +4,7 @@
  */
 
 import createIconSet from './lib/create-icon-set';
-import glyphMap from './glyph-maps/zocial';
+import glyphMap from './glyph-maps/Zocial';
 let Zocial = createIconSet(glyphMap, 'zocial', 'Zocial.ttf');
 
 module.exports = Zocial;

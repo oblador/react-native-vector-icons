@@ -4,7 +4,7 @@
  */
 
 import createIconSet from './lib/create-icon-set';
-import glyphMap from './glyph-maps/entypo';
+import glyphMap from './glyph-maps/Entypo';
 let Entypo = createIconSet(glyphMap, 'Entypo', 'Entypo.ttf');
 
 module.exports = Entypo;

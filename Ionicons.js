@@ -4,7 +4,7 @@
  */
 
 import createIconSet from './lib/create-icon-set';
-import glyphMap from './glyph-maps/ionicons';
+import glyphMap from './glyph-maps/Ionicons';
 let Ionicons = createIconSet(glyphMap, 'Ionicons', 'Ionicons.ttf');
 
 module.exports = Ionicons;

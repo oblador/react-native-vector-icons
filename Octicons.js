@@ -4,9 +4,9 @@
  */
 
 import createIconSet from './lib/create-icon-set';
-import glyphMap from './glyph-maps/octicons';
+import glyphMap from './glyph-maps/Octicons';
+
 let Octicons = createIconSet(glyphMap, 'octicons', 'Octicons.ttf');
 
 module.exports = Octicons;
 module.exports.glyphMap = glyphMap;
-

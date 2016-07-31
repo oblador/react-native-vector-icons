@@ -4,7 +4,7 @@
  */
 
 import createIconSet from './lib/create-icon-set';
-import glyphMap from './glyph-maps/foundation';
+import glyphMap from './glyph-maps/Foundation';
 let Foundation = createIconSet(glyphMap, 'fontcustom', 'Foundation.ttf');
 
 module.exports = Foundation;
