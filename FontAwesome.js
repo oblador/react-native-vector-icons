@@ -1,13 +1,10 @@
 /**
  * FontAwesome icon set component.
  * Usage: <FontAwesome name="icon-name" size={20} color="#4F8EF7" />
- *
- * @providesModule FontAwesome
  */
-'use strict';
 
-var createIconSet = require('./lib/create-icon-set');
-var glyphMap = {
+import createIconSet from './lib/create-icon-set';
+const glyphMap = {
   "glass": 61440,
   "music": 61441,
   "search": 61442,
@@ -445,7 +442,7 @@ var glyphMap = {
   "stumbleupon": 61860,
   "delicious": 61861,
   "digg": 61862,
-  "pied-piper": 61863,
+  "pied-piper-pp": 61863,
   "pied-piper-alt": 61864,
   "drupal": 61865,
   "joomla": 61866,
@@ -495,6 +492,7 @@ var glyphMap = {
   "life-ring": 61901,
   "circle-o-notch": 61902,
   "ra": 61904,
+  "resistance": 61904,
   "rebel": 61904,
   "ge": 61905,
   "empire": 61905,
@@ -701,10 +699,45 @@ var glyphMap = {
   "hashtag": 62098,
   "bluetooth": 62099,
   "bluetooth-b": 62100,
-  "percent": 62101
+  "percent": 62101,
+  "gitlab": 62102,
+  "wpbeginner": 62103,
+  "wpforms": 62104,
+  "envira": 62105,
+  "universal-access": 62106,
+  "wheelchair-alt": 62107,
+  "question-circle-o": 62108,
+  "blind": 62109,
+  "audio-description": 62110,
+  "volume-control-phone": 62112,
+  "braille": 62113,
+  "assistive-listening-systems": 62114,
+  "asl-interpreting": 62115,
+  "american-sign-language-interpreting": 62115,
+  "deafness": 62116,
+  "hard-of-hearing": 62116,
+  "deaf": 62116,
+  "glide": 62117,
+  "glide-g": 62118,
+  "signing": 62119,
+  "sign-language": 62119,
+  "low-vision": 62120,
+  "viadeo": 62121,
+  "viadeo-square": 62122,
+  "snapchat": 62123,
+  "snapchat-ghost": 62124,
+  "snapchat-square": 62125,
+  "pied-piper": 62126,
+  "first-order": 62128,
+  "yoast": 62129,
+  "themeisle": 62130,
+  "google-plus-circle": 62131,
+  "google-plus-official": 62131,
+  "fa": 62132,
+  "font-awesome": 62132
 };
 
-var FontAwesome = createIconSet(glyphMap, 'FontAwesome', 'FontAwesome.ttf');
+let FontAwesome = createIconSet(glyphMap, 'FontAwesome', 'FontAwesome.ttf');
 
 module.exports = FontAwesome;
 module.exports.glyphMap = glyphMap;

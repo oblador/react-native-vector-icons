@@ -1,13 +1,10 @@
 /**
  * Foundation icon set component.
  * Usage: <Foundation name="icon-name" size={20} color="#4F8EF7" />
- *
- * @providesModule Foundation
  */
-'use strict';
 
-var createIconSet = require('./lib/create-icon-set');
-var glyphMap = {
+import createIconSet from './lib/create-icon-set';
+const glyphMap = {
   "address-book": 61696,
   "alert": 61697,
   "align-center": 61698,
@@ -293,7 +290,7 @@ var glyphMap = {
   "zoom-out": 61978
 };
 
-var Foundation = createIconSet(glyphMap, 'fontcustom', 'Foundation.ttf');
+let Foundation = createIconSet(glyphMap, 'fontcustom', 'Foundation.ttf');
 
 module.exports = Foundation;
 module.exports.glyphMap = glyphMap;

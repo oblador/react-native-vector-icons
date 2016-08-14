@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+var React = require('react');
 var FontAwesome = require('react-native-vector-icons/FontAwesome');
 var Foundation = require('react-native-vector-icons/Foundation');
 var Ionicons = require('react-native-vector-icons/Ionicons');

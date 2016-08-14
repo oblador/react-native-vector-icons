@@ -1,24 +1,29 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
-'use strict';
-
-var React = require('react-native');
-var {
+import React, { Component } from 'react';
+import {
   AppRegistry,
-  StyleSheet,
-  View,
   BackAndroid,
   Navigator,
+  StyleSheet,
   ToolbarAndroid,
-} = React;
+  View,
+} from 'react-native';
 
-var Ionicons = require('react-native-vector-icons/Ionicons');
-var IconSetList = require('./IconSetList');
-var IconList = require('./IconList');
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import IconSetList from './IconSetList';
+import IconList from './IconList';
 
-var _navigator;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
+  toolbar: {
+    backgroundColor: '#a9a9a9',
+    height: 56,
+  },
+});
+
+let _navigator;
 BackAndroid.addEventListener('hardwareBackPress', () => {
   if (_navigator && _navigator.getCurrentRoutes().length > 1) {
     _navigator.pop();
@@ -27,7 +32,7 @@ BackAndroid.addEventListener('hardwareBackPress', () => {
   return false;
 });
 
-var RouteMapper = function(route, navigationOperations, onComponentRef) {
+function RouteMapper(route, navigationOperations, onComponentRef) {
   _navigator = navigationOperations;
   if (route.name === 'list') {
     return (
@@ -44,7 +49,7 @@ var RouteMapper = function(route, navigationOperations, onComponentRef) {
       <View style={{flex: 1}}>
         <Ionicons.ToolbarAndroid
           actions={[]}
-          navIconName="android-arrow-back"
+          navIconName="md-arrow-back"
           onIconClicked={navigationOperations.pop}
           style={styles.toolbar}
           titleColor="white"
@@ -57,33 +62,22 @@ var RouteMapper = function(route, navigationOperations, onComponentRef) {
       </View>
     );
   }
-};
-var IconExplorer = React.createClass({
-  render: function() {
-    var initialRoute = {
-      title: 'IconExplorer',
-      name: 'list'
-    };
-    return (
-      <Navigator
-        style={styles.container}
-        initialRoute={initialRoute}
-        configureScene={() => Navigator.SceneConfigs.FadeAndroid}
-        renderScene={RouteMapper}
-      />
-    );
-  }
-});
+}
 
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-  toolbar: {
-    backgroundColor: '#a9a9a9',
-    height: 56,
-  },
-});
+function IconExplorer(props) {
+  const initialRoute = {
+    title: 'IconExplorer',
+    name: 'list',
+  };
+
+  return (
+    <Navigator
+      style={styles.container}
+      initialRoute={initialRoute}
+      configureScene={() => Navigator.SceneConfigs.FadeAndroid}
+      renderScene={RouteMapper}
+    />
+  );
+}
 
 AppRegistry.registerComponent('IconExplorer', () => IconExplorer);

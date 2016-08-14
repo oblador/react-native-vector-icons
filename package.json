@@ -1,19 +1,19 @@
 {
   "name": "react-native-vector-icons",
-  "version": "1.3.4",
+  "version": "2.0.3",
   "description": "Customizable Icons for React Native with support for NavBar/TabBar, image source and full styling. Choose from 3000+ bundled icons or use your own.",
   "main": "index.js",
   "bin": {
     "generate-icon": "./generate-icon.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint index.js lib/{create-icon-set-from-fontello,create-icon-set-from-icomoon,create-icon-set,icon-button,tab-bar-item-ios,toolbar-android}.js",
     "build": "rm -rf {Fonts,Entypo.js,EvilIcons.js,FontAwesome.js,Foundation.js,Ionicons.js,MaterialIcons.js,Octicons.js,Zocial.js} && mkdir Fonts && npm run build-entypo && npm run build-evilicons && npm run build-fontawesome && npm run build-foundation && npm run build-ionicons && npm run build-materialicons && npm run build-octicons && npm run build-zocial",
     "build-entypo": "mkdir -p tmp/svg && curl https://dl.dropboxusercontent.com/u/4339492/entypo.zip > tmp/entypo.zip && unzip -j tmp/entypo.zip *.svg -x __MACOSX/* -d tmp/svg && fontcustom compile tmp/svg -o tmp -n Entypo -t css -h && node generate-icon tmp/Entypo.css --componentName=Entypo --fontFamily=Entypo > Entypo.js && cp tmp/Entypo.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-evilicons": "fontcustom compile node_modules/evil-icons/assets/icons -o tmp -n EvilIcons -t css -h && node generate-icon tmp/EvilIcons.css --prefix=.icon-ei- --componentName=EvilIcons --fontFamily=EvilIcons > EvilIcons.js && cp tmp/EvilIcons.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-fontawesome": "node generate-icon node_modules/font-awesome/css/font-awesome.css --prefix=.fa- --componentName=FontAwesome --fontFamily=FontAwesome > FontAwesome.js && cp node_modules/font-awesome/fonts/fontawesome-webfont.ttf Fonts/FontAwesome.ttf",
     "build-foundation": "node generate-icon bower_components/foundation-icon-fonts/foundation-icons.css --prefix=.fi- --componentName=Foundation --fontFamily=fontcustom > Foundation.js && cp bower_components/foundation-icon-fonts/foundation-icons.ttf Fonts/Foundation.ttf",
-    "build-ionicons": "node generate-icon node_modules/ionicons/css/ionicons.css --prefix=.ion- --componentName=Ionicons --fontFamily=Ionicons > Ionicons.js && cp node_modules/ionicons/fonts/ionicons.ttf Fonts/Ionicons.ttf",
+    "build-ionicons": "node generate-icon node_modules/ionicons/dist/css/ionicons.css --prefix=.ion- --componentName=Ionicons --fontFamily=Ionicons > Ionicons.js && cp node_modules/ionicons/dist/fonts/ionicons.ttf Fonts/Ionicons.ttf",
     "build-materialicons": "node generate-material-icons node_modules/material-design-icons/iconfont/codepoints --componentName=MaterialIcons --fontFamily='Material Icons' > MaterialIcons.js && cp node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf Fonts/MaterialIcons.ttf",
     "build-octicons": "node generate-icon node_modules/octicons/octicons/octicons.css --prefix=.octicon- --componentName=Octicons --fontFamily=octicons > Octicons.js && cp node_modules/octicons/octicons/octicons.ttf Fonts/Octicons.ttf",
     "build-zocial": "node generate-icon bower_components/css-social-buttons/css/zocial.css --prefix=.zocial. --componentName=Zocial --fontFamily=zocial > Zocial.js && cp bower_components/css-social-buttons/css/zocial.ttf Fonts/Zocial.ttf"
@@ -28,6 +28,8 @@
     "osx",
     "macos",
     "android",
+    "osx",
+    "macos",
     "ui",
     "icon",
     "icons",
@@ -55,12 +57,16 @@
   },
   "dependencies": {
     "lodash": "^4.0.0",
-    "yargs": "^3.31.0"
+    "yargs": "^4.7.0"
   },
   "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-eslint": "^6.0.4",
     "evil-icons": "^1.8.0",
-    "font-awesome": "^4.5.0",
-    "ionicons": "^2.0.1",
+    "eslint": "^2.9.0",
+    "eslint-plugin-react": "^5.0.1",
+    "font-awesome": "^4.6.3",
+    "ionicons": "^3.0.0",
     "material-design-icons": "^2.2.0",
     "octicons": "^3.5.0"
   }

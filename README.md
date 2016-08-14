@@ -18,12 +18,12 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 ## Bundled Icon Sets
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
-* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **71** icons) 
-* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.5, **605** icons) 
+* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **70** icons) 
+* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.6.3, **634** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-* [`Ionicons`](http://ionicons.com/) by Ben Sperry (v2.0.1, **733** icons)
-* [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v2.1.1, **893** icons)
-* [`Octicons`](http://octicons.github.com) by Github, Inc. (v3.5.0, **196** icons)
+* [`Ionicons`](http://ionicframework.com/docs/v2/ionicons/) by Ben Sperry (v3.0.0, **859** icons)
+* [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v2.2.3, **932** icons)
+* [`Octicons`](http://octicons.github.com) by Github, Inc. (v3.5.0, **166** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 
 ## Installation
@@ -32,16 +32,11 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ### iOS 
 
-#### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
-
-`$ rnpm link`
-
 #### Option: Manually
 
 If you want to use any of the bundled icons, you need to add the icon fonts to your Xcode project. Just follow these steps:
 
-* Right click on you project in Xcode and select **Add files to "_NameOfYourProject_"**. 
-* Browse to `node_modules/react-native-vector-icons` and select the folder `Fonts` (or just the ones you want). **Make sure your app is checked under "Add to targets" and that "Create groups" is checked if you add the whole folder**.
+* Browse to `node_modules/react-native-vector-icons` and drag the folder `Fonts` (or just the ones you want) to your project in Xcode. **Make sure your app is checked under "Add to targets" and that "Create groups" is checked if you add the whole folder**.
 * Edit `Info.plist` and add a property called **Fonts provided by application** (or `UIAppFonts` if Xcode won't autocomplete/not using Xcode) and type in the files you just added. It will look something like this:
 
 ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
@@ -60,13 +55,17 @@ pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
 
 Edit `Info.plist` as described above. 
 
-### Android
-
 #### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
 
 `$ rnpm link`
 
-#### Option: With Gradle
+*Note: Some users are having trouble using this method, try one of the others if you are too.*
+
+### Android
+
+#### Option: With Gradle (recommended)
+
+This method has the advantage of fonts being copied from this module at build time so that the fonts and JS are always in sync, making upgrades painless.
 
 Edit `android/app/build.gradle` and add the following:
 
@@ -120,7 +119,7 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   }
   ```
 
-* Edit your `MainActivity.java` (deep in `android/app/src/main/java/...`) to look like this (note **two** places to edit):
+* Edit your `MainApplication.java` (deep in `android/app/src/main/java/...`) to look like this (note **two** places to edit):
 
   ```diff
   package com.myapp;
@@ -142,12 +141,25 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
 *Note: If you're using React Native (Android) <= 0.17, [follow this instructions](https://github.com/oblador/react-native-vector-icons/blob/2fe5b97afa849652215e3258189e8ca3ea775c53/README.md#integrating-library-for-getimagesource-support)*
 
+#### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
+
+`$ rnpm link`
+
+*Note: Some users are having trouble using this method, try one of the others if you are too.*
+
+### OSX via [`react-native-desktop`](https://github.com/ptmt/react-native-desktop)
+
+* Browse to `node_modules/react-native-vector-icons` and drag the folder `Fonts` to your project in Xcode. **Make sure your app is checked under "Add to targets" and that "Create folder references" is checked**.
+* Edit `Info.plist` and add a property called **Application fonts resource path** (or `ATSApplicationFontsPath` if Xcode won't autocomplete/not using Xcode) and type `Fonts` as the value.
+
+*Note: you need to recompile your project after adding new fonts, also ensure that the `Fonts` folder also appear under __Copy Bundle Resources__ in __Build Phases__.*
+
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
 
 ```js
-var Icon = require('react-native-vector-icons/FontAwesome');
-var myIcon = (<Icon name="rocket" size={30} color="#900" />)
+import Icon from 'react-native-vector-icons/FontAwesome';
+const myIcon = (<Icon name="rocket" size={30} color="#900" />)
 ```
 
 ### Properties
@@ -182,14 +194,14 @@ By combining some of these you can create for example :
 A convenience component for creating buttons with an icon on the left side. 
 
 ```js
-var Icon = require('react-native-vector-icons/FontAwesome')
-var myButton = (
+import Icon from 'react-native-vector-icons/FontAwesome';
+const myButton = (
   <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={this.loginWithFacebook}>
     Login with Facebook
   </Icon.Button>
 );
 
-var customTextButton = (
+const customTextButton = (
   <Icon.Button name="facebook" backgroundColor="#3b5998">
     <Text style={{fontFamily: 'Arial', fontSize: 15}}>Login with Facebook</Text>
   </Icon.Button>
@@ -239,8 +251,8 @@ Use `Icon.getImageSource` to get an image source object and pass it as you would
 Note: Since [`NavigatorIOS` doesn't rerender with new state](https://github.com/facebook/react-native/issues/1403) and the async nature of `getImageSource` you must not use it with `initialRoute` until the icon is rendered, but any view added by `push` should be fine. Easiest way is to simple add an `if` statment at the beginning of you render method like this: 
 
 ```
-  render: function() {
-    if(!this.state.myIcon) {
+  render() {
+    if (!this.state.myIcon) {
       return false;
     }
     return (<NavigatorIOS ... />);
@@ -272,30 +284,32 @@ For example usage see `Examples/IconExplorer/index.android.js`or the examples se
 Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be a path to the font file in you asset folder. 
 
 ```js
-var { createIconSet } = require('react-native-vector-icons');
-var glyphMap = { 'icon-name': 1234, test: '∆' };
-var Icon = createIconSet(glyphMap, 'FontName');
+import { createIconSet } from 'react-native-vector-icons';
+const glyphMap = { 'icon-name': 1234, test: '∆' };
+const Icon = createIconSet(glyphMap, 'FontName');
 ```
 
 ### `createIconSetFromFontello(config[, fontFamily[, fontFile]])`
 Convenience method to create a custom font based on a [fontello](http://fontello.com) config file. Don't forget to import the font as described above and drop the `config.json` somewhere convenient in your project. 
 
 ```js
-var { createIconSetFromFontello } = require('react-native-vector-icons');
-var fontelloConfig = require('./config.json');
-var Icon = createIconSetFromFontello(fontelloConfig);
+import { createIconSetFromFontello } from 'react-native-vector-icons';
+import fontelloConfig from './config.json';
+const Icon = createIconSetFromFontello(fontelloConfig);
 ```
 
 ### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
 ```js
-var { createIconSetFromIcoMoon } = require('react-native-vector-icons');
-var icoMoonConfig = require('./config.json');
-var Icon = createIconSetFromIcoMoon(icoMoonConfig);
+import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
+import icoMoonConfig from './config.json';
+const Icon = createIconSetFromIcoMoon(icoMoonConfig);
 ```
+
+Make sure you're using the _Download_ option in IcoMoon, and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
 
 ## Animation
 
-React Native comes with an amazing animation library called [`Animated`](http://facebook.github.io/react-native/docs/animated.html). To use it with an icon, simply create an animated component with this line: `var AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
+React Native comes with an amazing animation library called [`Animated`](http://facebook.github.io/react-native/docs/animated.html). To use it with an icon, simply create an animated component with this line: `const AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
 
 ## Examples
 
@@ -307,80 +321,65 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 
 ### Basic Example
 ```js
-var React = require('react-native');
-var Icon = require('react-native-vector-icons/Ionicons');
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var ExampleView = React.createClass({
-  render: function() {
-    return <Icon name="person" size={30} color="#4F8EF7" />;
-  }
-};
+function ExampleView(props) {
+  return (<Icon name="ios-person" size={30} color="#4F8EF7" />);
+}
 ```
 
 ### TabBarIOS
 Full example in `TabBarExample` project in `Examples/TabBarExample` folder. 
 
 ```js
-var React = require('react-native');
-var {
-  View, 
-  Text, 
-  TabBarIOS,
-} = React;
-var Icon = require('react-native-vector-icons/Ionicons');
+import { View, Text, TabBarIOS } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var TabBarView = React.createClass({
-  render: function() {
-    return (
-      <TabBarIOS>
-        <Icon.TabBarItem
-          title="Home"
-          iconName="ios-home-outline"
-          selectedIconName="ios-home"
-          >
-          <View style={styles.tabContent}><Text>Home Tab</Text></View>
-        </Icon.TabBarItem>
-      </TabBarIOS>
-    );
-  }
-};
+function TabBarView(props) {
+  return (
+    <TabBarIOS>
+      <Icon.TabBarItem
+        title="Home"
+        iconName="ios-home-outline"
+        selectedIconName="ios-home"
+        >
+        <View style={styles.tabContent}><Text>Home Tab</Text></View>
+      </Icon.TabBarItem>
+    </TabBarIOS>
+  );
+}
 ```
 
 ### ToolbarAndroid
 
 ```js
-var React = require('react-native');
-var Icon = require('react-native-vector-icons/Ionicons');
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var ToolbarView = React.createClass({
-  render: function() {
-    return (
-      <Icon.ToolbarAndroid
-        title="Home"
-        titleColor="white"
-        navIconName="android-arrow-back"
-        onIconClicked={this.props.navigator.pop}
-        actions={[
-          { title: 'Settings', iconName: 'gear-a', iconSize: 30, show: 'always' },
-          { title: 'Follow me on Twitter', iconName: 'social-twitter', iconColor: "#4099FF", show: 'ifRoom' },
-        ]}
-        overflowIconName="more"
-      />
-    );
-  }
-};
+function ToolbarView(props) {
+  return (
+    <Icon.ToolbarAndroid
+      title="Home"
+      titleColor="white"
+      navIconName="md-arrow-back"
+      onIconClicked={props.navigator.pop}
+      actions={[
+        { title: 'Settings', iconName: 'md-settings', iconSize: 30, show: 'always' },
+        { title: 'Follow me on Twitter', iconName: 'logo-twitter', iconColor: "#4099FF", show: 'ifRoom' },
+      ]}
+      overflowIconName="md-more"
+    />
+  );
+}
 ```
 
 ### Inline Icons
 ```js
-var React = require('react-native');
-var Icon = require('react-native-vector-icons/Ionicons');
+import { Text } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-var ExampleView = React.createClass({
-  render: function() {
-    return (<Text>Lorem <Icon name="ios-book" color="#4F8EF7" /> Ipsum</Text>);
-  }
-};
+function ExampleView(props) {
+  return (<Text>Lorem <Icon name="ios-book" color="#4F8EF7" /> Ipsum</Text>);
+}
 ```
 
 ### Community examples
@@ -420,10 +419,10 @@ Save output to file, defaults to STDOUT
 
 **NOTE:** This approach is unsupported and new apps / views should NOT use this component. 
 
-With `react-native-icons` recently being discontinued, users switching to this library might not want to rewrite all their code. For that use case I've written a drop in replacement component that uses the same icon name syntax. It might break some layouts since the underlying component is different. To use this, simply replace your `react-native-icons` require statement with this:
+With `react-native-icons` recently being discontinued, users switching to this library might not want to rewrite all their code. For that use case I've written a drop in replacement component that uses the same icon name syntax. It might break some layouts since the underlying component is different. To use this, simply replace your `react-native-icons` import statement with this:
 
 ```js
-var Icon = require('react-native-vector-icons/RNIMigration')
+import Icon from 'react-native-vector-icons/RNIMigration';
 ```
 
 ## Troubleshooting
@@ -438,6 +437,10 @@ var Icon = require('react-native-vector-icons/RNIMigration')
 * Check that the font you are trying to use appears in `Info.plist`, if you've added the whole folder and it's blue in color, then you need to add it to the path. 
 * Check that the font is copied in the *Copy Bundle Resources in Build Phases*.
 * Recompile the project.
+
+#### Android build fails on Windows for no good reason
+
+Both npm and android file hierarchies tend to get very deep and even worse when you combine them. Since Windows file system has a max length, long file name addresses will result in numerous errors including `Execution failed for task ':react-native-vector-icons:processReleaseResources'`. So try to keep the path to your project folder as short as possible. 
 
 ## License
 

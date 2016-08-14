@@ -1,13 +1,10 @@
 /**
  * Zocial icon set component.
  * Usage: <Zocial name="icon-name" size={20} color="#4F8EF7" />
- *
- * @providesModule Zocial
  */
-'use strict';
 
-var createIconSet = require('./lib/create-icon-set');
-var glyphMap = {
+import createIconSet from './lib/create-icon-set';
+const glyphMap = {
   "acrobat": 61696,
   "amazon": 61697,
   "android": 61698,
@@ -110,7 +107,7 @@ var glyphMap = {
   "youtube": 61795
 };
 
-var Zocial = createIconSet(glyphMap, 'zocial', 'Zocial.ttf');
+let Zocial = createIconSet(glyphMap, 'zocial', 'Zocial.ttf');
 
 module.exports = Zocial;
 module.exports.glyphMap = glyphMap;

@@ -18,7 +18,9 @@ gradle.projectsEvaluated {
     productFlavors.each { productFlavorName ->
         buildTypes.each { buildTypeName ->
             // Create variant and target names
-            def targetName = "${productFlavorName.capitalize()}${buildTypeName.capitalize()}"
+            def flavorNameCapitalized = "${productFlavorName.capitalize()}"
+            def buildNameCapitalized = "${buildTypeName.capitalize()}"
+            def targetName = "${flavorNameCapitalized}${buildNameCapitalized}"
             def targetPath = productFlavorName ?
                     "${productFlavorName}/${buildTypeName}" :
                     "${buildTypeName}"
@@ -35,10 +37,11 @@ gradle.projectsEvaluated {
             }
 
             currentFontTask.dependsOn("merge${targetName}Resources")
+            currentFontTask.dependsOn("merge${targetName}Assets")
 
             [
-                "processArmeabi-v7a${targetName}Resources",
-                "processX86${targetName}Resources",
+                "process${flavorNameCapitalized}Armeabi-v7a${buildNameCapitalized}Resources",
+                "process${flavorNameCapitalized}X86${buildNameCapitalized}Resources",
                 "processUniversal${targetName}Resources",
                 "process${targetName}Resources"
             ].each { name ->
