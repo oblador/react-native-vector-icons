@@ -67,7 +67,7 @@ Edit `Info.plist` as described above.
 
 This method has the advantage of fonts being copied from this module at build time so that the fonts and JS are always in sync, making upgrades painless.
 
-Edit `android/app/build.gradle` and add the following:
+Edit `android/app/build.gradle` ( NOT `android/build.gradle` ) and add the following:
 
 ```gradle
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
