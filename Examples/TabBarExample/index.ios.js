@@ -142,6 +142,8 @@ class TabBarExample extends Component {
           title="Settings"
           iconName="ios-settings-outline"
           selectedIconName="ios-settings"
+          iconColor="#ffffff"
+          selectedIconColor="#000099"
           selected={this.state.selectedTab === 'settings'}
           onPress={() => {
             this.setState({
