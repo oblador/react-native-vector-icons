@@ -145,6 +145,7 @@ class TabBarExample extends Component {
           iconColor="#ffffff"
           selectedIconColor="#000099"
           selected={this.state.selectedTab === 'settings'}
+          renderAsOriginal={true}
           onPress={() => {
             this.setState({
               selectedTab: 'settings',
