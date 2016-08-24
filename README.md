@@ -241,8 +241,12 @@ Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended
 |**`iconName`**|Name of the default icon (similar to `TabBarIOS.Item` `icon`)|*None*|
 |**`selectedIconName`**|Name of the selected icon (similar to `TabBarIOS.Item` `selectedIcon`). |*`iconName`*|
 |**`iconSize`**|Size of the icon. |`30`|
+|**`iconColor`**|Color of the icon. |*None*|
+|**`selectedIconColor`**|Color of the selected icon. |*`iconColor`*|
 
 For example usage see `Examples/TabBarExample` or the examples section below. Don't forget to import and link to this project as described above if you are going to use the TabBar integration. 
+
+**Note:** using `iconColor` and `selectedIconColor` requires the attribute [renderAsOriginal](https://facebook.github.io/react-native/docs/tabbarios-item.html#renderasoriginal) to be set to `true` on `Icon.TabBarItemIOS`.
 
 ## Usage with [NavigatorIOS](http://facebook.github.io/react-native/docs/navigatorios.html)
 
