@@ -311,6 +311,8 @@ const Icon = createIconSetFromIcoMoon(icoMoonConfig);
 ```
 
 Make sure you're using the _Download_ option in IcoMoon, and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
+#### iOS 
+You have to manually make a reference of your `.ttf` on your xcodeproj `Resources` folder.
 
 ## Animation
 
@@ -438,7 +440,7 @@ import Icon from 'react-native-vector-icons/RNIMigration';
 * Recompile the project.
 
 #### Red screen with "Unrecognized font family" error on iOS
-* Make sure you've added the fonts to your XCode project.
+* Make sure you've added manually the reference of your `.ttf` on your xcodeproj `Resources` folder.
 * Check that the font you are trying to use appears in `Info.plist`, if you've added the whole folder and it's blue in color, then you need to add it to the path. 
 * Check that the font is copied in the *Copy Bundle Resources in Build Phases*.
 * Recompile the project.
