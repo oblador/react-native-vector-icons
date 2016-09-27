@@ -1,37 +1,70 @@
 #!/usr/bin/env node
 'use strict';
 
+// Example usage:
+//
+// node generate-icon.js      \
+//   --prefix=.octicon-       \
+//   --componentName=Octicons \
+//   --fontFamily=octicons    \
+//   --output=.               \
+//   /Users/brent/Downloads/octicons-4.3.0/build/font/octicons.css
+
 var argv = require('yargs')
   .usage('Usage: $0 [options] path/to/styles.css \nFor default template please provide --componentName and --fontFamily')
   .demand(1)
   .default('p', '.icon-')
   .describe('p', 'CSS selector prefix')
   .alias('p', 'prefix')
-  .default('t', __dirname + '/template/iconSet.tpl')
-  .describe('t', 'Template in lodash format')
-  .alias('t', 'template')
-  .describe('o', 'Save output to file, defaults to STDOUT')
+  .default('t', __dirname + '/templates')
+  .describe('t', 'Template path with iconSet.tpl and glyphMap.tpl in lodash format')
+  .alias('t', 'templates')
+  .describe('o', 'Save output to given path, defaults to STDOUT. Within path, files will be ${ComponentName}.js and glyph-maps/${ComponentName}.js')
   .alias('o', 'output')
   .argv;
 
 var _ = require('lodash');
 var fs = require('fs');
+var path = require('path');
 var generateIconSetFromCss = require('./lib/generate-icon-set-from-css');
 
-var template;
-if(argv.template) {
-  template = fs.readFileSync(argv.template, { encoding: 'utf8' });
+let iconTemplate, glyphMapTemplate;
+if (argv.templates) {
+  const readTemplate = (name) => {
+    let templatePath = path.resolve(argv.templates, name);
+    return fs.readFileSync(templatePath, { encoding: 'utf8' });
+  }
+
+  iconTemplate = readTemplate('iconSet.tpl');
+  glyphMapTemplate = readTemplate('glyphMap.tpl');
 }
 
-var data = _.omit(argv, '_ $0 o output p prefix t template'.split(' '));
+const data = _.omit(argv, '_ $0 o output p prefix t template'.split(' '));
 
+const {
+  iconComponent,
+  glyphMap,
+} = generateIconSetFromCss(argv._, argv.prefix, iconTemplate, glyphMapTemplate, data);
 
-var content = generateIconSetFromCss(argv._, argv.prefix, template, data);
-if(argv.output) {
+if (argv.output) {
+  const glyphMapDir = path.resolve(argv.output, `glyph-maps`);
+  const glyphMapPath = path.resolve(glyphMapDir, `${argv.componentName}.js`);
+  const iconComponentPath = path.resolve(argv.output, `${argv.componentName}.js`);
+
+  if (!fs.statSync(glyphMapDir)) {
+    fs.mkdirSync(glyphMapDir);
+  }
+
   fs.writeFileSync(
-    argv.output,
-    content
+    glyphMapPath,
+    glyphMap
+  );
+
+  fs.writeFileSync(
+    iconComponentPath,
+    iconComponent
   );
 } else {
-  console.log(content);
+  console.log(iconComponent);
+  console.log(glyphMap);
 }

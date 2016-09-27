@@ -4,7 +4,7 @@
  */
 
 import createIconSet from './lib/create-icon-set';
-const glyphMap = ${glyphMap};
+import glyphMap from './glyph-maps/${componentName}';
 
 let ${componentName} = createIconSet(glyphMap, '${fontFamily}', '${componentName}.ttf');
 
