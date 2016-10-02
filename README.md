@@ -161,7 +161,7 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 * Open your solution in Visual Studio, and include the font files you just copied to Assets in your project. 
 * Set "Copy To Output Directory" property of each font file to "Copy if newer"
 
-*Note: you need to recompile your project after adding new fonts.
+*Note: you need to recompile your project after adding new fonts.*
 
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
