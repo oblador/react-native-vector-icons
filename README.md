@@ -155,6 +155,13 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
 *Note: you need to recompile your project after adding new fonts, also ensure that the `Fonts` folder also appear under __Copy Bundle Resources__ in __Build Phases__.*
 
+### Windows via [`react-native-windows`](https://github.com/ReactWindows/react-native-windows)
+
+* Browse to `node_modules/react-native-vector-icons` and copy the font files *.ttf to the `Assets` folder in your project in Visual Studio. 
+* Set Copy To Output Directory property of each font file to "Copy if newer"
+
+*Note: you need to recompile your project after adding new fonts, also ensure that the `Fonts` folder also appear under __Copy Bundle Resources__ in __Build Phases__.*
+
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
 
