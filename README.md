@@ -157,9 +157,10 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
 ### Windows via [`react-native-windows`](https://github.com/ReactWindows/react-native-windows)
 
-* Browse to `node_modules/react-native-vector-icons` and copy the font files *.ttf to the `Assets` folder in your project. For AwesomeProject, that is AwesomeProject\windows\AwesomeProject\Assets
-* Open your solution in Visual Studio, and include the font files you just copied to Assets in your project. 
-* Set "Copy To Output Directory" property of each font file to "Copy if newer"
+* Open your solution in Visual Studio, right click the Assets folder in your solution, click **Add Existing**.
+* Browse to the `node_modules\react-native-vector-icons\Fonts` folder, select the required font files
+* Click the **Add** drop-down and select **Add as Link**.
+* Set **Copy To Output Directory** property of each font file to **Copy if newer**
 
 *Note: you need to recompile your project after adding new fonts.*
 
