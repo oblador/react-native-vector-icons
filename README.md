@@ -29,7 +29,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 ## Installation
 
 1. Run: `$ npm install react-native-vector-icons --save`
-2. For each platform (iOS/Android) you plan to use, follow one of the options for the corresponding platform.
+2. For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
 
 ### iOS 
 
