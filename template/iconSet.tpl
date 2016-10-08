@@ -3,7 +3,7 @@
  * Usage: <${componentName} name="icon-name" size={20} color="#4F8EF7" />
  */
 
-import createIconSet from './lib/create-icon-set';
+import createIconSet from 'react-native-vector-icons/lib/create-icon-set';
 const glyphMap = ${glyphMap};
 
 let ${componentName} = createIconSet(glyphMap, '${fontFamily}', '${componentName}.ttf');
