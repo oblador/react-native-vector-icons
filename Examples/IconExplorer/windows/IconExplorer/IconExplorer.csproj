@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{629fc918-a999-4b23-9731-fbc00118fba3}</ProjectGuid>
+    <ProjectGuid>{629FC918-A999-4B23-9731-FBC00118FBA3}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IconExplorer</RootNamespace>
@@ -170,6 +170,38 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\Entypo.ttf">
+      <Link>Assets\Entypo.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\EvilIcons.ttf">
+      <Link>Assets\EvilIcons.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\FontAwesome.ttf">
+      <Link>Assets\FontAwesome.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\Foundation.ttf">
+      <Link>Assets\Foundation.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\Ionicons.ttf">
+      <Link>Assets\Ionicons.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\MaterialIcons.ttf">
+      <Link>Assets\MaterialIcons.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\Octicons.ttf">
+      <Link>Assets\Octicons.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\Zocial.ttf">
+      <Link>Assets\Zocial.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>

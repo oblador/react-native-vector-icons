@@ -9,45 +9,76 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Dimensions,
 } from 'react-native';
 
-class IconExplorer extends Component {
+import Icon from 'react-native-vector-icons/Ionicons';
+import IconSetList from './IconSetList';
+import IconList from './IconList';
+
+const LEFT_PANEL_WIDTH = 300;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  leftPanel: {
+    width: LEFT_PANEL_WIDTH,
+  },
+  rightPanel: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  welcomeWrapper: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  welcomeText: {
+    color: '#999',
+    fontSize: 20,
+  },
+});
+
+class Welcome extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.windows.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Ctrl+R to reload,{'\n'}
-          Shift+F10 or shake for dev menu
-        </Text>
+      <View style={styles.welcomeWrapper}>
+        <Text style={styles.welcomeText}>Choose an icon set on the left side</Text>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+class IconExplorer extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      iconSet: null,
+      layout: Dimensions.get('window'),
+    };
+  }
+
+  render() {
+    const { iconSet, iconSetTitle, layout } = this.state;
+
+    return (
+      <View style={styles.container} onLayout={(e) => this.setState({layout: e.nativeEvent.layout})}>
+        <View style={styles.leftPanel}>
+          <IconSetList navigator={{ push: (route) => this.setState({ iconSet: route.iconSet }) }}/>
+        </View>
+        <View style={[styles.rightPanel, { width: layout.width - LEFT_PANEL_WIDTH }]}>
+          {(iconSet
+            ? (<IconList iconSet={iconSet} />)
+            : (<Welcome />)
+          )}
+        </View>
+      </View>
+    );
+  }
+}
 
 AppRegistry.registerComponent('IconExplorer', () => IconExplorer);
