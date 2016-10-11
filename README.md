@@ -25,6 +25,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v2.2.3, **932** icons)
 * [`Octicons`](http://octicons.github.com) by Github, Inc. (v3.5.0, **166** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
+* [`SimpleLineIcons`](http://simplelineicons.com/) by Sabbir & Contributors (v2.4.1, **189** icons)
 
 ## Installation
 
