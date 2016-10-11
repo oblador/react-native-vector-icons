@@ -6,13 +6,15 @@ var Foundation = require('react-native-vector-icons/Foundation');
 var Ionicons = require('react-native-vector-icons/Ionicons');
 var MaterialIcons = require('react-native-vector-icons/MaterialIcons');
 var Zocial = require('react-native-vector-icons/Zocial');
+var SimpleLineIcons = require('react-native-vector-icons/SimpleLineIcons');
 
 var iconSetMap = {
   fontawesome: FontAwesome,
   foundation: Foundation,
   ion: Ionicons,
   material: MaterialIcons,
-  zocial: Zocial
+  zocial: Zocial,
+  simpleline: SimpleLineIcons
 };
 
 // This is a composition is a drop in replacement for users migrating from the
