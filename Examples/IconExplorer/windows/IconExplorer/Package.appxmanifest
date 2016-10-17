@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="d8324826-40d2-4fde-bf42-98dbeba1b5bb"
+    Name="1ed57905-3a11-4ee4-b25a-b68ac2d0dadc"
     Publisher="CN=publisher"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="d8324826-40d2-4fde-bf42-98dbeba1b5bb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="1ed57905-3a11-4ee4-b25a-b68ac2d0dadc" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>IconExplorer</DisplayName>
