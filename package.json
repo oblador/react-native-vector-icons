@@ -15,7 +15,7 @@
     "build-foundation": "node generate-icon bower_components/foundation-icon-fonts/foundation-icons.css --prefix=.fi- --componentName=Foundation --fontFamily=fontcustom --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Foundation.json > Foundation.js && cp bower_components/foundation-icon-fonts/foundation-icons.ttf Fonts/Foundation.ttf",
     "build-ionicons": "node generate-icon node_modules/ionicons/dist/css/ionicons.css --prefix=.ion- --componentName=Ionicons --fontFamily=Ionicons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Ionicons.json > Ionicons.js && cp node_modules/ionicons/dist/fonts/ionicons.ttf Fonts/Ionicons.ttf",
     "build-materialicons": "node generate-material-icons node_modules/material-design-icons/iconfont/codepoints --componentName=MaterialIcons --fontFamily='Material Icons' --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/MaterialIcons.json > MaterialIcons.js && cp node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf Fonts/MaterialIcons.ttf",
-    "build-octicons": "node generate-icon node_modules/octicons/octicons/octicons.css --prefix=.octicon- --componentName=Octicons --fontFamily=octicons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Octicons.json > Octicons.js && cp node_modules/octicons/octicons/octicons.ttf Fonts/Octicons.ttf",
+    "build-octicons": "node generate-icon node_modules/octicons/build/font/octicons.css --prefix=.octicon- --componentName=Octicons --fontFamily=octicons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Octicons.json > Octicons.js && cp node_modules/octicons/build/font/octicons.ttf Fonts/Octicons.ttf",
     "build-zocial": "node generate-icon bower_components/css-social-buttons/css/zocial.css --prefix=.zocial. --componentName=Zocial --fontFamily=zocial --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Zocial.json > Zocial.js && cp bower_components/css-social-buttons/css/zocial.ttf Fonts/Zocial.ttf",
     "build-simplelineicons": "node generate-icon bower_components/simple-line-icons/css/simple-line-icons.css --prefix=.icon- --componentName=SimpleLineIcons --fontFamily=simple-line-icons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/SimpleLineIcons.json > SimpleLineIcons.js && cp bower_components/simple-line-icons/fonts/Simple-Line-Icons.ttf Fonts/SimpleLineIcons.ttf"
   },
@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "lodash": "^4.0.0",
-    "yargs": "^4.7.0"
+    "yargs": "^6.3.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -70,7 +70,7 @@
     "evil-icons": "^1.8.0",
     "font-awesome": "^4.6.3",
     "ionicons": "^3.0.0",
-    "material-design-icons": "^2.2.0",
-    "octicons": "^3.5.0"
+    "material-design-icons": "^3.0.1",
+    "octicons": "^4.4.0"
   }
 }
