@@ -23,6 +23,25 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Zocial from 'react-native-vector-icons/Zocial';
+import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo';
+import EvilIconsGlyphs from 'react-native-vector-icons/glyphmaps/EvilIcons';
+import FontAwesomeGlyphs from 'react-native-vector-icons/glyphmaps/FontAwesome';
+import FoundationGlyphs from 'react-native-vector-icons/glyphmaps/Foundation';
+import IoniconsGlyphs from 'react-native-vector-icons/glyphmaps/Ionicons';
+import MaterialIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialIcons';
+import OcticonsGlyphs from 'react-native-vector-icons/glyphmaps/Octicons';
+import ZocialGlyphs from 'react-native-vector-icons/glyphmaps/Zocial';
+
+const GLYPH_MAPS = {
+  Entypo: EntypoGlyphs,
+  EvilIcons: EvilIconsGlyphs,
+  FontAwesome: FontAwesomeGlyphs,
+  Foundation: FoundationGlyphs,
+  Ionicons: IoniconsGlyphs,
+  MaterialIcons: MaterialIconsGlyphs,
+  Octicons: OcticonsGlyphs,
+  Zocial: ZocialGlyphs,
+};
 
 const ICON_SETS = _.map({
   Entypo,
@@ -36,7 +55,7 @@ const ICON_SETS = _.map({
 }, (component, name) => ({ name, component }))
 .map(iconSet => {
   // Some icons have multiple names, so group them by glyph
-  const glyphMap = iconSet.component.glyphMap;
+  const glyphMap = GLYPH_MAPS[iconSet.name];
   iconSet.glyphs = _.values(_.groupBy(Object.keys(glyphMap), name => glyphMap[name]));
   return iconSet;
 });
