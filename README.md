@@ -30,7 +30,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 ## Installation
 
 1. Run: `$ npm install react-native-vector-icons --save`
-2. For each platform (iOS/Android) you plan to use, follow one of the options for the corresponding platform.
+2. For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
 
 ### iOS 
 
@@ -155,6 +155,15 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 * Edit `Info.plist` and add a property called **Application fonts resource path** (or `ATSApplicationFontsPath` if Xcode won't autocomplete/not using Xcode) and type `Fonts` as the value.
 
 *Note: you need to recompile your project after adding new fonts, also ensure that the `Fonts` folder also appear under __Copy Bundle Resources__ in __Build Phases__.*
+
+### Windows via [`react-native-windows`](https://github.com/ReactWindows/react-native-windows)
+
+* Open your solution in Visual Studio, right click the Assets folder in your solution, click **Add Existing**.
+* Browse to the `node_modules\react-native-vector-icons\Fonts` folder, select the required font files
+* Click the **Add** drop-down and select **Add as Link**.
+* Set **Copy To Output Directory** property of each font file to **Copy if newer**
+
+*Note: you need to recompile your project after adding new fonts.*
 
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 

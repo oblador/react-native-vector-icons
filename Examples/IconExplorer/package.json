@@ -9,6 +9,10 @@
     "lodash": "^4.0.0",
     "react": "15.3.2",
     "react-native": "0.35.0",
-    "react-native-vector-icons": "file:../../"
+    "react-native-vector-icons": "file:../../",
+    "react-native-windows": "^0.35.0"
+  },
+  "devDependencies": {
+    "rnpm-plugin-windows": "^0.2.0"
   }
 }
