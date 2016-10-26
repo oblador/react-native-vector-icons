@@ -6,7 +6,4 @@
 import createIconSet from 'react-native-vector-icons/lib/create-icon-set';
 const glyphMap = ${glyphMap};
 
-let ${componentName} = createIconSet(glyphMap, '${fontFamily}', '${componentName}.ttf');
-
-module.exports = ${componentName};
-module.exports.glyphMap = glyphMap;
+export default createIconSet(glyphMap, '${fontFamily}', '${componentName}.ttf');

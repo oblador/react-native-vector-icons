@@ -4,11 +4,13 @@
 var argv = require('yargs')
   .usage('Usage: $0 [options] path/to/codepoints \nFor default template please provide --componentName and --fontFamily')
   .demand(1)
-  .default('t', __dirname + '/template/iconSet.tpl')
+  .default('t', __dirname + '/templates/bundled-icon-set.tpl')
   .describe('t', 'Template in lodash format')
   .alias('t', 'template')
   .describe('o', 'Save output to file, defaults to STDOUT')
   .alias('o', 'output')
+  .describe('g', 'Save glyphmap JSON to file')
+  .alias('g', 'glyphmap')
   .argv;
 
 var _ = require('lodash');
@@ -32,7 +34,7 @@ if(argv.template) {
   template = fs.readFileSync(argv.template, { encoding: 'utf8' });
 }
 
-var data = _.omit(argv, '_ $0 o output t template'.split(' '));
+var data = _.omit(argv, '_ $0 o output t template g glyphmap'.split(' '));
 var glyphMap = extractGlyphMapFromCodepoints(argv._[0]);
 
 var content = JSON.stringify(glyphMap, null, '  ');
@@ -50,4 +52,11 @@ if(argv.output) {
   );
 } else {
   console.log(content);
+}
+
+if (argv.glyphmap) {
+  fs.writeFileSync(
+    argv.glyphmap,
+    JSON.stringify(glyphMap, null, '  ')
+  );
 }
