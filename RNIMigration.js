@@ -1,53 +1,58 @@
-'use strict';
+import React from 'react';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Foundation from 'react-native-vector-icons/Foundation';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Zocial from 'react-native-vector-icons/Zocial';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
-var React = require('react');
-var FontAwesome = require('react-native-vector-icons/FontAwesome');
-var Foundation = require('react-native-vector-icons/Foundation');
-var Ionicons = require('react-native-vector-icons/Ionicons');
-var MaterialIcons = require('react-native-vector-icons/MaterialIcons');
-var Zocial = require('react-native-vector-icons/Zocial');
-var SimpleLineIcons = require('react-native-vector-icons/SimpleLineIcons');
-
-var iconSetMap = {
+const ICON_SET_MAP = {
   fontawesome: FontAwesome,
   foundation: Foundation,
   ion: Ionicons,
   material: MaterialIcons,
   zocial: Zocial,
-  simpleline: SimpleLineIcons
+  simpleline: SimpleLineIcons,
 };
 
 // This is a composition is a drop in replacement for users migrating from the
 // react-native-icons module. Please don't use this component for new apps/views.
-var Icon = React.createClass({
-  propTypes: {
+export default class Icon extends React.Component {
+  static propTypes = {
     name: React.PropTypes.string.isRequired,
     size: React.PropTypes.number,
     color: React.PropTypes.string,
-  },
-  _root: (null:?Object),
+  };
 
-  setNativeProps: function(nativeProps) {
-    if (this._root == null) {
-      throw new Error("Ref must have been set before calling setNativeProps");
+  setNativeProps(nativeProps) {
+    if (this.iconRef) {
+      this.iconRef.setNativeProps(nativeProps);
     }
-    this._root.setNativeProps(nativeProps);
-  },
-
-  render: function() {
-    var { name, ...props } = this.props;
-
-    var nameParts = name.split('|');
-    var setName = nameParts[0];
-    props.name = nameParts[1];
-    props.ref = (component) => this._root = component;
-
-    var IconSet = iconSetMap[setName];
-    if(!IconSet) {
-      throw new Error('Invalid icon set "' + setName + '"');
-    }
-    return (<IconSet allowFontScaling={false} {...props} />);
   }
-});
 
-module.exports = Icon;
+  iconRef = null;
+
+  handleComponentRef = (ref) => {
+    this.iconRef = ref;
+  };
+
+  render() {
+    const nameParts = this.props.name.split('|');
+    const setName = nameParts[0];
+    const name = nameParts[1];
+
+    const IconSet = ICON_SET_MAP[setName];
+    if (!IconSet) {
+      throw new Error(`Invalid icon set "${setName}"`);
+    }
+
+    return (
+      <IconSet
+        allowFontScaling={false}
+        ref={this.handleComponentRef}
+        {...this.props}
+        name={name}
+      />
+    );
+  }
+}
