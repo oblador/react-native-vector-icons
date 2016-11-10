@@ -165,6 +165,38 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
 *Note: you need to recompile your project after adding new fonts.*
 
+### Web (with [webpack](https://webpack.js.org/))
+
+In your webpack configuration file, add a section to handle ttf files using url-loader (or file-loader)
+
+```js
+        {
+          test: /\.ttf$/,
+          loader: "url-loader", // or directly file-loader
+          include: path.resolve(__dirname, "node_modules/react-native-vector-icons"),
+        },
+```
+
+Then consume those files in your JavaScript entry point to get the bundled url and inject a style tag in your page:
+
+```js
+// generate required css
+import fontAwesome from "react-native-vector-icons/Fonts/FontAwesome.ttf"
+const reactNativeVectorIconsRequiredStyles = "@font-face { src:url("+fontAwesome+");font-family: FontAwesome; }"
+
+// create stylesheet
+const style = document.createElement('style');
+style.type = 'text/css';
+if (style.styleSheet){
+  style.styleSheet.cssText = reactNativeVectorIconsRequiredStyles;
+} else {
+  style.appendChild(document.createTextNode(reactNativeVectorIconsRequiredStyles));
+}
+
+// inject stylesheet
+document.head.appendChild(style);
+```
+
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
 
