@@ -6,4 +6,12 @@
 import createIconSet from 'react-native-vector-icons/lib/create-icon-set';
 const glyphMap = ${glyphMap};
 
-export default createIconSet(glyphMap, '${fontFamily}', '${componentName}.ttf');
+const iconSet = createIconSet(glyphMap, '${fontFamily}', '${componentName}.ttf');
+
+export default iconSet;
+
+export const Button = iconSet.Button;
+export const TabBarItem = iconSet.TabBarItem;
+export const TabBarItemIOS = iconSet.TabBarItemIOS;
+export const ToolbarAndroid = iconSet.ToolbarAndroid;
+export const getImageSource = iconSet.getImageSource;
