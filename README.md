@@ -57,9 +57,9 @@ pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
 
 Edit `Info.plist` as described above. 
 
-#### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
+#### Option: With `rnpm`
 
-`$ rnpm link`
+`$ react-native link`
 
 *Note: Some users are having trouble using this method, try one of the others if you are too.*
 
@@ -143,9 +143,9 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
 *Note: If you're using React Native (Android) <= 0.17, [follow this instructions](https://github.com/oblador/react-native-vector-icons/blob/2fe5b97afa849652215e3258189e8ca3ea775c53/README.md#integrating-library-for-getimagesource-support)*
 
-#### Option: With [`rnpm`](https://github.com/rnpm/rnpm)
+#### Option: With `rnpm`
 
-`$ rnpm link`
+`$ react-native link`
 
 *Note: Some users are having trouble using this method, try one of the others if you are too.*
 
