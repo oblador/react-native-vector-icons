@@ -167,7 +167,9 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
 ### Web (with [webpack](https://webpack.js.org/))
 
-In your webpack configuration file, add a section to handle ttf files using url-loader (or file-loader)
+First, you will need to add ``node_modules/react-native-vector-icons`` in your ``babel-loader`` ``include`` definition.
+
+Then, in your webpack configuration file, add a section to handle ttf files using url-loader (or file-loader)
 
 ```js
         {
