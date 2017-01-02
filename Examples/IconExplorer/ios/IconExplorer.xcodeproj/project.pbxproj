@@ -30,6 +30,7 @@
 		5DE0E9261DAF5D9400617733 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DE0E91E1DAF5D9400617733 /* MaterialIcons.ttf */; };
 		5DE0E9271DAF5D9400617733 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DE0E91F1DAF5D9400617733 /* Octicons.ttf */; };
 		5DE0E9281DAF5D9400617733 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DE0E9201DAF5D9400617733 /* Zocial.ttf */; };
+		65FBD4341E1AB83F0050E8B9 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65FBD4331E1AB83F0050E8B9 /* MaterialCommunityIcons.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +144,7 @@
 		5DE0E91E1DAF5D9400617733 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		5DE0E91F1DAF5D9400617733 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		5DE0E9201DAF5D9400617733 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		65FBD4331E1AB83F0050E8B9 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 		5DE0E9181DAF5D9400617733 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				65FBD4331E1AB83F0050E8B9 /* MaterialCommunityIcons.ttf */,
 				5DE0E9191DAF5D9400617733 /* Entypo.ttf */,
 				5DE0E91A1DAF5D9400617733 /* EvilIcons.ttf */,
 				5DE0E91B1DAF5D9400617733 /* FontAwesome.ttf */,
@@ -541,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE0E9261DAF5D9400617733 /* MaterialIcons.ttf in Resources */,
+				65FBD4341E1AB83F0050E8B9 /* MaterialCommunityIcons.ttf in Resources */,
 				5DE0E9271DAF5D9400617733 /* Octicons.ttf in Resources */,
 				5DE0E9281DAF5D9400617733 /* Zocial.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,

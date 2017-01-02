@@ -21,6 +21,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Foundation from 'react-native-vector-icons/Foundation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo';
@@ -29,6 +30,7 @@ import FontAwesomeGlyphs from 'react-native-vector-icons/glyphmaps/FontAwesome';
 import FoundationGlyphs from 'react-native-vector-icons/glyphmaps/Foundation';
 import IoniconsGlyphs from 'react-native-vector-icons/glyphmaps/Ionicons';
 import MaterialIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialIcons';
+import MaterialCommunityIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialCommunityIcons';
 import OcticonsGlyphs from 'react-native-vector-icons/glyphmaps/Octicons';
 import ZocialGlyphs from 'react-native-vector-icons/glyphmaps/Zocial';
 
@@ -39,6 +41,7 @@ const GLYPH_MAPS = {
   Foundation: FoundationGlyphs,
   Ionicons: IoniconsGlyphs,
   MaterialIcons: MaterialIconsGlyphs,
+  MaterialCommunityIcons: MaterialCommunityIconsGlyphs,
   Octicons: OcticonsGlyphs,
   Zocial: ZocialGlyphs,
 };
@@ -50,6 +53,7 @@ const ICON_SETS = _.map({
   Foundation,
   Ionicons,
   MaterialIcons,
+  MaterialCommunityIcons,
   Octicons,
   Zocial,
 }, (component, name) => ({ name, component }))
