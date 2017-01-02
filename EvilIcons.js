@@ -6,5 +6,13 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/EvilIcons.json';
 
-export default createIconSet(glyphMap, 'EvilIcons', 'EvilIcons.ttf');
+const iconSet = createIconSet(glyphMap, 'EvilIcons', 'EvilIcons.ttf');
+
+export default iconSet;
+
+export const Button = iconSet.Button;
+export const TabBarItem = iconSet.TabBarItem;
+export const TabBarItemIOS = iconSet.TabBarItemIOS;
+export const ToolbarAndroid = iconSet.ToolbarAndroid;
+export const getImageSource = iconSet.getImageSource;
 
