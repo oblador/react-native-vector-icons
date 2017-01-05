@@ -127,7 +127,7 @@ export default class IconList extends Component {
           renderRow={(rowData, sectionID, rowID) => this._renderRow(rowData, sectionID, rowID)}
           automaticallyAdjustContentInsets={false}
           keyboardDismissMode="on-drag"
-          keyboardShouldPersistTaps={true}
+          keyboardShouldPersistTaps="always"
           showsVerticalScrollIndicator={false}
           initialListSize={20}
         />
