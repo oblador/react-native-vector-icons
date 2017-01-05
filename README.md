@@ -17,6 +17,8 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ## Bundled Icon Sets
 
+[Browse all](https://oblador.github.io/react-native-vector-icons/).
+
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
 * [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **70** icons) 
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons) 

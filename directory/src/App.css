@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Entypo';
+  src: url('../../Fonts/Entypo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'EvilIcons';
+  src: url('../../Fonts/EvilIcons.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../../Fonts/FontAwesome.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Foundation';
+  src: url('../../Fonts/Foundation.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ionicons';
+  src: url('../../Fonts/Ionicons.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaterialCommunityIcons';
+  src: url('../../Fonts/MaterialCommunityIcons.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MaterialIcons';
+  src: url('../../Fonts/MaterialIcons.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Octicons';
+  src: url('../../Fonts/Octicons.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SimpleLineIcons';
+  src: url('../../Fonts/SimpleLineIcons.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Zocial';
+  src: url('../../Fonts/Zocial.ttf') format('truetype');
+}
+
+.App {
+  width: 100%;
+}
+
+.Header-Container {
+  background-color: #23527C;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+}
+
+.Header-Content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0px 10px;
+}
+
+.Header-Title {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.Search-Container {
+  background-color: #3E3E3E;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+}
+
+.Search-Content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0px 10px;
+  position: relative;
+}
+
+.Search-Icon-Container {
+
+}
+
+.Search-Icon {
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.7;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.Search-Input {
+  background-color: transparent;
+  width: 100%;
+  font-size: 16px;
+  margin-left: 25px;
+  border: 0;
+  padding: 10px 5px;
+  color: #fff;
+}
+
+.Search-Input:focus {
+  outline: none;
+}
+
+.Result-Title {
+  font-weight: normal;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.Result-Row {
+  margin-top: 20px;
+}
+
+.Result-Icon-Container {
+  vertical-align: top;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  background-color: rgba(0,0,0,0.02);
+  border-radius: 3px;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+.Result-Icon {
+  font-size: 35px;
+}
+
+.Result-Icon-Name {
+  font-size: 14px;
+  font-weight: normal;
+  opacity: 0.8;
+  margin: 10px 0 0 0;
+}
+
+.Container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px 30px 30px 30px;
+}
