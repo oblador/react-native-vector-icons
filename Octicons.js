@@ -6,7 +6,7 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/Octicons.json';
 
-const iconSet = createIconSet(glyphMap, 'octicons', 'Octicons.ttf');
+const iconSet = createIconSet(glyphMap, 'Octicons', 'Octicons.ttf');
 
 export default iconSet;
 
