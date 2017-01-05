@@ -320,6 +320,7 @@ Simply use `Icon.ToolbarAndroid` instead of `React.ToolbarAndroid`, this is comp
 
 | Prop | Description | Default |
 |---|---|---|
+|**`logoName`**|Name of the navigation logo icon (similar to `ToolbarAndroid` `logo`)|*None*|
 |**`navIconName`**|Name of the navigation icon (similar to `ToolbarAndroid` `navIcon`)|*None*|
 |**`overflowIconName`**|Name of the overflow icon (similar to `ToolbarAndroid` `overflowIcon`). |*none*|
 |**`actions`**|Possible actions on the toolbar as part of the action menu, takes the additional arguments `iconName`, `iconColor` and `iconSize`. |*none*|
