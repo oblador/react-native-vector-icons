@@ -1,5 +1,6 @@
 /**
  * Dogz icon set component.
+ * Created by: http://www.flaticon.com/authors/freepik
  * Usage: <Dogz name="icon-name" size={20} color="#4F8EF7" />
  */
 
