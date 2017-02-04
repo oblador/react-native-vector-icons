@@ -31,9 +31,12 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`SimpleLineIcons`](http://simplelineicons.com/) by Sabbir & Contributors (v2.4.1, **189** icons)
 
 ## Installation
-
-1. Run: `$ npm install react-native-vector-icons --save`
-2. For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
+- if on react-native < 0.40 ([issue reference](https://github.com/oblador/react-native-vector-icons/issues/396)):
+  - Run: `$ npm install react-native-vector-icons@3.0 --save`
+- else if on react-native >= 0.40
+  - Run: `$ npm install react-native-vector-icons --save`
+  
+- For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
 
 ### iOS 
 
