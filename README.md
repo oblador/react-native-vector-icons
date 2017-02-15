@@ -216,7 +216,7 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 | Prop | Description | Default |
 |---|---|---|
 |**`size`**|Size of the icon, can also be passed as `fontSize` in the style object. |`12`|
-|**`name`**|What icon to show, see Icon Explorer app or one of the links above. |*None*|
+|**`name`**|What icon to show, see Icon Explorer app or one of the links above. [Rare case] Alternatively, you may want only an empty icon (e.g. as a placeholder), to do this you can set this property to `Icon.EMPTY_ICON_NAME`. |*None*|
 |**`color`**|Color of the icon. |*Inherited*|
 
 ### Styling
