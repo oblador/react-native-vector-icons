@@ -58,7 +58,6 @@
     ]
   },
   "dependencies": {
-    "babel-preset-react-native": "^1.9.1",
     "lodash": "^4.0.0",
     "yargs": "^6.3.0"
   },
@@ -66,6 +65,7 @@
     "babel": "^6.5.2",
     "babel-cli": "^6.23.0",
     "babel-eslint": "^7.0.0",
+    "babel-preset-react-native": "^1.9.1",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
