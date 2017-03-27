@@ -10,8 +10,16 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+#if __has_include(<React/RCTLog.h>)
 #import <React/RCTLog.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTLog.h"
+#endif
+#if __has_include(<React/RCTRootView.h>)
 #import <React/RCTRootView.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTRootView.h"
+#endif
 
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React Native!"

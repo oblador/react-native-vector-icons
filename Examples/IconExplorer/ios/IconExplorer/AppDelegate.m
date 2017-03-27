@@ -9,8 +9,16 @@
 
 #import "AppDelegate.h"
 
+#if __has_include(<React/RCTBundleURLProvider.h>)
 #import <React/RCTBundleURLProvider.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTBundleURLProvider.h"
+#endif
+#if __has_include(<React/RCTRootView.h>)
 #import <React/RCTRootView.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTRootView.h"
+#endif
 
 @implementation AppDelegate
 
