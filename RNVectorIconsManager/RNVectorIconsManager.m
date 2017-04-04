@@ -7,9 +7,21 @@
 //
 
 #import "RNVectorIconsManager.h"
+#if __has_include(<React/RCTConvert.h>)
 #import <React/RCTConvert.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTConvert.h"
+#endif
+#if __has_include(<React/RCTBridge.h>)
 #import <React/RCTBridge.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTBridge.h"
+#endif
+#if __has_include(<React/RCTUtils.h>)
 #import <React/RCTUtils.h>
+#else // Compatibility for RN version < 0.40
+#import "RCTUtils.h"
+#endif
 
 @implementation RNVectorIconsManager
 
