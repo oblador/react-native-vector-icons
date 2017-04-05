@@ -28,6 +28,8 @@
     "react",
     "mobile",
     "ios",
+    "osx",
+    "macos",
     "android",
     "osx",
     "windows",

@@ -17,6 +17,23 @@
 #import "RCTLog.h"
 #endif
 
+#import <TargetConditionals.h>
+
+#if TARGET_OS_IPHONE
+
+// iOS
+
+#else
+
+// Mac OS
+#import "UIImageUtils.h"
+
+typedef NSImage UIImage;
+typedef NSColor UIColor;
+typedef NSFont UIFont;
+
+#endif
+
 @interface RNVectorIconsManager : NSObject <RCTBridgeModule>
 
 @end
