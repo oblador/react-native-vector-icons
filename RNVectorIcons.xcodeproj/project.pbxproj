@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5DBEB17C1B18CFF400B34395 /* RNVectorIconsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */; };
+		A39873C81EA65EE60051E01A /* RNVectorIconsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5DBEB14E1B18CEA900B34395 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39873CA1EA65EE60051E01A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -26,10 +36,18 @@
 		5DBEB1501B18CEA900B34395 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNVectorIcons.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBEB16B1B18CF1500B34395 /* RNVectorIconsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNVectorIconsManager.h; sourceTree = "<group>"; };
 		5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNVectorIconsManager.m; sourceTree = "<group>"; };
+		A39873CE1EA65EE60051E01A /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRNVectorIcons-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5DBEB14D1B18CEA900B34395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39873C91EA65EE60051E01A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5DBEB1501B18CEA900B34395 /* libRNVectorIcons.a */,
+				A39873CE1EA65EE60051E01A /* libRNVectorIcons-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +103,23 @@
 			productReference = 5DBEB1501B18CEA900B34395 /* libRNVectorIcons.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		A39873C61EA65EE60051E01A /* RNVectorIcons-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A39873CB1EA65EE60051E01A /* Build configuration list for PBXNativeTarget "RNVectorIcons-tvOS" */;
+			buildPhases = (
+				A39873C71EA65EE60051E01A /* Sources */,
+				A39873C91EA65EE60051E01A /* Frameworks */,
+				A39873CA1EA65EE60051E01A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RNVectorIcons-tvOS";
+			productName = RNVectorIcons;
+			productReference = A39873CE1EA65EE60051E01A /* libRNVectorIcons-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +147,7 @@
 			projectRoot = "";
 			targets = (
 				5DBEB14F1B18CEA900B34395 /* RNVectorIcons */,
+				A39873C61EA65EE60051E01A /* RNVectorIcons-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +158,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DBEB17C1B18CFF400B34395 /* RNVectorIconsManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A39873C71EA65EE60051E01A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A39873C81EA65EE60051E01A /* RNVectorIconsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +282,40 @@
 			};
 			name = Release;
 		};
+		A39873CC1EA65EE60051E01A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A39873CD1EA65EE60051E01A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -254,6 +333,15 @@
 			buildConfigurations = (
 				5DBEB1651B18CEA900B34395 /* Debug */,
 				5DBEB1661B18CEA900B34395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A39873CB1EA65EE60051E01A /* Build configuration list for PBXNativeTarget "RNVectorIcons-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A39873CC1EA65EE60051E01A /* Debug */,
+				A39873CD1EA65EE60051E01A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
