@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Foundation from 'react-native-vector-icons/Foundation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -19,9 +20,9 @@ const ICON_SET_MAP = {
 // react-native-icons module. Please don't use this component for new apps/views.
 export default class Icon extends React.Component {
   static propTypes = {
-    name: React.PropTypes.string.isRequired,
-    size: React.PropTypes.number,
-    color: React.PropTypes.string,
+    name: PropTypes.string.isRequired,
+    size: PropTypes.number,
+    color: PropTypes.string,
   };
 
   setNativeProps(nativeProps) {

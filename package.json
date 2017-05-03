@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "lodash": "^4.0.0",
+    "prop-types": "^15.5.8",
     "yargs": "^6.3.0"
   },
   "devDependencies": {
