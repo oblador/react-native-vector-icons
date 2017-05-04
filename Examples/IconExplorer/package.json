@@ -8,11 +8,7 @@
   "dependencies": {
     "lodash": "^4.0.0",
     "react": "16.0.0-alpha.6",
-    "react-native": "0.43.0",
-    "react-native-vector-icons": "file:../../",
-    "react-native-windows": "^0.35.0"
-  },
-  "devDependencies": {
-    "rnpm-plugin-windows": "^0.2.0"
+    "react-native": "0.44.0",
+    "react-native-vector-icons": "file:../../"
   }
 }
