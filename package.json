@@ -1,6 +1,6 @@
 {
   "name": "react-native-vector-icons",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.",
   "main": "index.js",
   "bin": {
