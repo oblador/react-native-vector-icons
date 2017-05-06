@@ -7,6 +7,7 @@
 //
 
 #import "RNVectorIconsManager.h"
+#import <CoreText/CoreText.h>
 #if __has_include(<React/RCTConvert.h>)
 #import <React/RCTConvert.h>
 #else // Compatibility for RN version < 0.40
@@ -70,6 +71,38 @@ RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph
     }
   }
   callback(@[[NSNull null], filePath]);
-
 }
+
+RCT_EXPORT_METHOD(loadFontWithFileName:(NSString *)fontFileName
+                  extension:(NSString *)extension
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject)
+{
+  NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+  NSURL *fontURL = [bundle URLForResource:fontFileName withExtension:extension];
+  NSData *fontData = [NSData dataWithContentsOfURL:fontURL];
+
+  CGDataProviderRef provider = CGDataProviderCreateWithCFData((CFDataRef)fontData);
+  CGFontRef font = CGFontCreateWithDataProvider(provider);
+
+  if (font) {
+    CFErrorRef errorRef = NULL;
+    if (CTFontManagerRegisterGraphicsFont(font, &errorRef) == NO) {
+      NSError *error = (__bridge NSError *)errorRef;
+      if (error.code == kCTFontManagerErrorAlreadyRegistered) {
+        resolve(nil);
+      } else {
+        reject(@"font_load_failed", @"Font failed to load", error);
+      }
+    } else {
+      resolve(nil);
+    }
+
+    CFRelease(font);
+  }
+  if (provider) {
+    CFRelease(provider);
+  }
+}
+
 @end
