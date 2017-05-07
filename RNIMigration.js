@@ -33,7 +33,7 @@ export default class Icon extends React.Component {
 
   iconRef = null;
 
-  handleComponentRef = (ref) => {
+  handleComponentRef = ref => {
     this.iconRef = ref;
   };
 

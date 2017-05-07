@@ -19,7 +19,8 @@
     "build-octicons": "node generate-icon node_modules/octicons/build/font/octicons.css --prefix=.octicon- --componentName=Octicons --fontFamily=octicons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Octicons.json > Octicons.js && cp node_modules/octicons/build/font/octicons.ttf Fonts/Octicons.ttf",
     "build-octicons": "fontcustom compile node_modules/octicons/build/svg -o tmp -n Octicons -t css -h && node generate-icon tmp/Octicons.css --prefix=.icon- --componentName=Octicons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Octicons.json --fontFamily=Octicons > Octicons.js && cp tmp/Octicons.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-zocial": "node generate-icon bower_components/css-social-buttons/css/zocial.css --prefix=.zocial. --componentName=Zocial --fontFamily=zocial --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Zocial.json > Zocial.js && cp bower_components/css-social-buttons/css/zocial.ttf Fonts/Zocial.ttf",
-    "build-simplelineicons": "node generate-icon bower_components/simple-line-icons/css/simple-line-icons.css --prefix=.icon- --componentName=SimpleLineIcons --fontFamily=simple-line-icons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/SimpleLineIcons.json > SimpleLineIcons.js && cp bower_components/simple-line-icons/fonts/Simple-Line-Icons.ttf Fonts/SimpleLineIcons.ttf"
+    "build-simplelineicons": "node generate-icon bower_components/simple-line-icons/css/simple-line-icons.css --prefix=.icon- --componentName=SimpleLineIcons --fontFamily=simple-line-icons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/SimpleLineIcons.json > SimpleLineIcons.js && cp bower_components/simple-line-icons/fonts/Simple-Line-Icons.ttf Fonts/SimpleLineIcons.ttf",
+    "format": "./node_modules/.bin/prettier --single-quote --trailing-comma es5 --write {lib/*,index,RNIMigration,generate-icon,generate-material-icons}.js"
   },
   "keywords": [
     "react-native",
@@ -75,6 +76,7 @@
     "ionicons": "^3.0.0",
     "material-design-icons": "^3.0.1",
     "mdi": "1.9.33",
-    "octicons": "^5.0.1"
+    "octicons": "^5.0.1",
+    "prettier": "^1.3.1"
   }
 }
