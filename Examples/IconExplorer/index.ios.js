@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   NavigatorIOS,
-  StyleSheet,
 } from 'react-native';
 
 import IconSetList from './IconSetList';
 
-const styles = StyleSheet.create({
+const styles = ({
   container: {
     flex: 1,
   },

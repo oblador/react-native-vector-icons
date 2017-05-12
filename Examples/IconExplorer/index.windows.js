@@ -7,7 +7,6 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
   Text,
   View,
   Dimensions,
@@ -19,7 +18,7 @@ import IconList from './IconList';
 
 const LEFT_PANEL_WIDTH = 300;
 
-const styles = StyleSheet.create({
+const styles = ({
   container: {
     flex: 1,
     flexDirection: 'row',

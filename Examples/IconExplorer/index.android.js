@@ -3,7 +3,6 @@ import {
   AppRegistry,
   BackAndroid,
   Navigator,
-  StyleSheet,
   ToolbarAndroid,
   View,
 } from 'react-native';
@@ -12,7 +11,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import IconSetList from './IconSetList';
 import IconList from './IconList';
 
-const styles = StyleSheet.create({
+const styles = ({
   container: {
     flex: 1,
     backgroundColor: 'white',
