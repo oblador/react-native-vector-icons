@@ -442,6 +442,7 @@ function ExampleView(props) {
 * [react-native-dribbble-app](https://github.com/catalinmiron/react-native-dribbble-app)
 * [voximplant react-native-demo](https://github.com/voximplant/react-native-demo)
 * [product-kitty](https://github.com/rkho/product-kitty) ([blog post](http://richardkho.com/persisting-tabbars-in-react-native/))
+* [react-native-netflix](https://github.com/mariodev12/react-native-netflix)
 
 ## Generating your own icon set from a CSS file
 
