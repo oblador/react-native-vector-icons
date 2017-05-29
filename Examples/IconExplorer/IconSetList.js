@@ -4,7 +4,6 @@ import {
   Image,
   ListView,
   Platform,
-  StyleSheet,
   Text,
   TouchableHighlight,
   View,
@@ -110,7 +109,7 @@ const INLINE = [
   (<Text>This text has <FontAwesome name="rocket" /> inline <FontAwesome name="hand-peace-o"> icons!</FontAwesome></Text>),
 ];
 
-const styles = StyleSheet.create({
+const styles = ({
   sectionHeader: {
     paddingVertical: 5,
     paddingHorizontal: 10,

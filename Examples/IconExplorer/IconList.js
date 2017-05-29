@@ -3,13 +3,12 @@ import {
   DeviceEventEmitter,
   ListView,
   Platform,
-  StyleSheet,
   Text,
   TextInput,
   View,
 } from './react-native';
 
-const styles = StyleSheet.create({
+const styles = ({
   container: {
     flex: 1,
     backgroundColor: 'white',

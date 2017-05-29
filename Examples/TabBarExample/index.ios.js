@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
   Text,
   View,
   Image,
@@ -12,7 +11,7 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const styles = StyleSheet.create({
+const styles = ({
   navigator: {
     flex: 1,
   },

@@ -3,7 +3,6 @@ import {
   AppRegistry,
   Dimensions,
   Image,
-  StyleSheet,
   Text,
   View,
 } from 'react-native-desktop';
@@ -14,7 +13,7 @@ import IconList from './IconList';
 
 const LEFT_PANEL_WIDTH = 300;
 
-const styles = StyleSheet.create({
+const styles = ({
   container: {
     flex: 1,
     flexDirection: 'row',
