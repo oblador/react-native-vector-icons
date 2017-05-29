@@ -60,6 +60,8 @@ pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
 
 Edit `Info.plist` as described above. 
 
+If you are using `use_frameworks!` in your `Podfile` you instead need to dynamically load the icon font by doing `Icon.loadFont()` when boostrapping your application.
+
 #### Option: With `rnpm`
 
 `$ react-native link`
