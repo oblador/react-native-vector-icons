@@ -55,7 +55,7 @@ If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`, 
 Add the following to your `Podfile` and run `pod update`:
 
 ```
-pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 ```
 
 Edit `Info.plist` as described above. 
