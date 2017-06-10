@@ -9,7 +9,8 @@ declare module 'react-native-vector-icons/*' {
     ViewStyle,
     TextProperties,
     TouchableHighlightProperties,
-    TouchableNativeFeedbackProperties
+    TouchableNativeFeedbackProperties,
+    TabBarIOSProperties
   } from 'react-native'
 
   interface IconProps extends TextProperties {
@@ -42,17 +43,109 @@ declare module 'react-native-vector-icons/*' {
   }
 
   interface IconButtonProps extends IconProps, TouchableHighlightProperties, TouchableNativeFeedbackProperties {
+    /**
+     * Text and icon color
+     * Use iconStyle or nest a Text component if you need different colors.
+     *
+     * @default 'white'
+     * @type {string}
+     * @memberof IconButtonProps
+     */
+    color?: string
+
+    /**
+     * Border radius of the button
+     * Set to 0 to disable.
+     *
+     * @default 5
+     * @type {number}
+     * @memberof IconButtonProps
+     */
     borderRadius?: number
+
+    /**
+     * Styles applied to the icon only
+     * Good for setting margins or a different color.
+     *
+     * @default {marginRight: 10}
+     * @type {ViewStyle}
+     * @memberof IconButtonProps
+     */
     iconStyle?: ViewStyle
+
+    /**
+     * Style prop inherited from TextProperties and TouchableWithoutFeedbackProperties
+     * Only exist here so we can have ViewStyle or TextStyle
+     *
+     * @type {(ViewStyle | TextStyle)}
+     * @memberof IconButtonProps
+     */
     style?: ViewStyle | TextStyle
+
+    /**
+     * Background color of the button
+     *
+     * @default '#007AFF'
+     * @type {string}
+     * @memberof IconButtonProps
+     */
     backgroundColor?: string
+  }
+
+  type ImageSource = any
+
+  interface TabBarIOSProps extends TabBarIOSProperties {
+    /**
+     * Name of the default icon (similar to TabBarIOS.Item icon)
+     *
+     * @type {string}
+     * @memberof TabBarIOSProps
+     */
+    iconName: string
+
+    /**
+     * Name of the selected icon (similar to TabBarIOS.Item selectedIcon).
+     *
+     * @default iconName
+     * @type {string}
+     * @memberof TabBarIOSProps
+     */
+    selectedIconName: string
+
+    /**
+     * Size of the icon.
+     *
+     * @default 30
+     * @type {number}
+     * @memberof TabBarIOSProps
+     */
+    iconSize: number
+
+    /**
+     * Color of the icon
+     *
+     * @type {string}
+     * @memberof TabBarIOSProps
+     */
+    iconColor: string
+
+    /**
+     * Color of the selected icon.
+     *
+     * @default iconColor
+     * @type {string}
+     * @memberof TabBarIOSProps
+     */
+    selectedIconColor: string
   }
 
   class Icon extends React.Component<IconProps, any> { }
 
   namespace Icon {
     export class Icon {
+      static getImageSource(name: string, size: number, color: string): Promise<ImageSource>
       static Button: React.Component<IconButtonProps, any>
+      static TabBarIOS: React.Component<TabBarIOSProps, any>
     }
     export class Button extends React.Component<IconButtonProps, any> {}
   }
