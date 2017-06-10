@@ -20,7 +20,6 @@ declare module 'react-native-vector-icons/*' {
     borderRadius?: number
     iconStyle?: ViewStyle
     backgroundColor?: string
-    onPress(): void
   }
 
   class Icon extends React.Component<IconProps, any> { }
