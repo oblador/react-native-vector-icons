@@ -238,13 +238,13 @@ declare module 'react-native-vector-icons' {
   export function createIconSetFromIcoMoon(config: {}): Icon
 
   namespace Icon {
-    export class Icon {
+    export default class Icon {
       static getImageSource(name: string, size: number, color: string): Promise<ImageSource>
-      static Button: React.Component<IconButtonProps, any>
-      static TabBarIOS: React.Component<TabBarIOSProps, any>
-      static ToolbarAndroid: React.Component<ToolbarAndroidProps, any>
     }
-    export class Button extends React.Component<IconButtonProps, any> {}
+
+    export class ToolbarAndroid extends React.Component<ToolbarAndroidProps, any> { }
+    export class TabBarIOS extends React.Component<TabBarIOSProps, any> { }
+    export class Button extends React.Component<IconButtonProps, any> { }
   }
 
   export default Icon
