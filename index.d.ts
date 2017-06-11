@@ -230,6 +230,7 @@ declare module 'react-native-vector-icons' {
    * import icoMoonConfig from './config.json';
    * const Icon = createIconSetFromIcoMoon(icoMoonConfig);
    *
+   * @see https://icomoon.io/app
    * @export
    * @param {{}} config
    * @returns {Icon}
