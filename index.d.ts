@@ -10,7 +10,8 @@ declare module 'react-native-vector-icons/*' {
     TextProperties,
     TouchableHighlightProperties,
     TouchableNativeFeedbackProperties,
-    TabBarIOSProperties
+    TabBarIOSProperties,
+    ToolbarAndroidProperties
   } from 'react-native'
 
   interface IconProps extends TextProperties {
@@ -139,6 +140,53 @@ declare module 'react-native-vector-icons/*' {
     selectedIconColor: string
   }
 
+  interface ToolbarAndroidProps extends ToolbarAndroidProperties {
+    /**
+     * Name of the navigation logo icon
+     * (similar to ToolbarAndroid logo)
+     *
+     * @type {string}
+     * @memberof ToolbarAndroidProps
+     */
+    logoName: string
+
+    /**
+     * Name of the navigation icon
+     * (similar to ToolbarAndroid navIcon)
+     *
+     * @type {string}
+     * @memberof ToolbarAndroidProps
+     */
+    navIconName: string
+
+    /**
+     * Name of the overflow icon
+     * (similar to ToolbarAndroid overflowIcon)
+     *
+     * @type {string}
+     * @memberof ToolbarAndroidProps
+     */
+    overflowIconName: string
+
+    /**
+     * Size of the icons
+     *
+     * @default 24
+     * @type {number}
+     * @memberof ToolbarAndroidProps
+     */
+    iconSize: number
+
+    /**
+     * Color of the icons
+     *
+     * @default 'black'
+     * @type {string}
+     * @memberof ToolbarAndroidProps
+     */
+    iconColor: string
+  }
+
   class Icon extends React.Component<IconProps, any> { }
 
   namespace Icon {
@@ -146,6 +194,7 @@ declare module 'react-native-vector-icons/*' {
       static getImageSource(name: string, size: number, color: string): Promise<ImageSource>
       static Button: React.Component<IconButtonProps, any>
       static TabBarIOS: React.Component<TabBarIOSProps, any>
+      static ToolbarAndroid: React.Component<ToolbarAndroidProps, any>
     }
     export class Button extends React.Component<IconButtonProps, any> {}
   }
