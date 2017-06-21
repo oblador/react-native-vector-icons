@@ -6,7 +6,7 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/SC-font.json';
 
-const iconSet = createIconSet(glyphMap, 'SC-font', 'SC_font.ttf');
+const iconSet = createIconSet(glyphMap, 'SC-font', 'SC-font.ttf');
 
 export default iconSet;
 
