@@ -6,13 +6,7 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/SC-font.json';
 
-const iconSet = createIconSet(glyphMap, 'SC-font', 'SC-font.ttf');
+const iconSet = createIconSet(glyphMap, 'sc-font', 'sc-font.ttf');
 
 export default iconSet;
-
-export const Button = iconSet.Button;
-export const TabBarItem = iconSet.TabBarItem;
-export const TabBarItemIOS = iconSet.TabBarItemIOS;
-export const ToolbarAndroid = iconSet.ToolbarAndroid;
-export const getImageSource = iconSet.getImageSource;
 
