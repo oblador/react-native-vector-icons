@@ -187,10 +187,19 @@ interface ToolbarAndroidProps extends ToolbarAndroidProperties {
   iconColor: string
 }
 
-export class Icon extends React.Component<IconProps, any> {
+declare class Icon extends React.Component<IconProps, any> {
   static getImageSource(
     name: string,
     size: number,
     color: string,
   ): Promise<ImageSource>
+}
+
+declare namespace Icon {
+  export class ToolbarAndroid extends React.Component<
+    ToolbarAndroidProps,
+    any
+  > {}
+  export class TabBarIOS extends React.Component<TabBarIOSProps, any> {}
+  export class Button extends React.Component<IconButtonProps, any> {}
 }
