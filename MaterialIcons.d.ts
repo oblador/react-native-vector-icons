@@ -7,7 +7,7 @@ import {
   IconButtonProps,
 } from './Icon'
 
-declare module 'react-native-vector-icons/MaterialIcons' {
+declare module 'react-native-vector-icons/Entypo' {
   class Icon extends React.Component<IconProps, any> {
     static getImageSource(
       name: string,
@@ -26,4 +26,4 @@ declare module 'react-native-vector-icons/MaterialIcons' {
   }
 }
 
-export as namespace Icon
+export default Icon
