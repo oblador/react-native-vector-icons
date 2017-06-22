@@ -2,19 +2,6 @@
 
 Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project. 
 
-## Main advantages over `react-native-icons`
-
-* You can use your own custom icon sets. Supports SVG via [Fontello](http://fontello.com) or regular icon fonts. 
-* You can use *native* `TabBarIOS`.
-* You can use icons inline with `Text` components as emojis or to create buttons. 
-* You can use the icon as an image if a native component requires it (such as `NavigatorIOS`). 
-* Most common use cases is JavaScript only and thus enables wider possibilities of styling (and is easier to integrate with your project). 
-* No need to define `width` and `height` styles.
-* Presentational stuff like size and color can be defined in your stylesheet instead of via a property (if you want to).
-* Icons scale with accessibility settings (unless disabled).
-
-*Pst! Migrating from `react-native-icons`? Scroll down for more information.*
-
 ## Bundled Icon Sets
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
@@ -474,6 +461,19 @@ Save output to file, defaults to STDOUT
 ## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
 
 ## Migrating from `react-native-icons`
+
+### Main advantages over `react-native-icons`
+
+* You can use your own custom icon sets. Supports SVG via [Fontello](http://fontello.com) or regular icon fonts. 
+* You can use *native* `TabBarIOS`.
+* You can use icons inline with `Text` components as emojis or to create buttons. 
+* You can use the icon as an image if a native component requires it (such as `NavigatorIOS`). 
+* Most common use cases is JavaScript only and thus enables wider possibilities of styling (and is easier to integrate with your project). 
+* No need to define `width` and `height` styles.
+* Presentational stuff like size and color can be defined in your stylesheet instead of via a property (if you want to).
+* Icons scale with accessibility settings (unless disabled).
+
+*Pst! Migrating from `react-native-icons`? Scroll down for more information.*
 
 **NOTE:** This approach is unsupported and new apps / views should NOT use this component. 
 
