@@ -458,8 +458,6 @@ For default template please provide `--componentName` and `--fontFamily`.
 #### `-o`, `--output`
 Save output to file, defaults to STDOUT
 
-## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
-
 ## Migrating from `react-native-icons`
 
 ### Main advantages over `react-native-icons`
@@ -499,6 +497,8 @@ import Icon from 'react-native-vector-icons/RNIMigration';
 #### Android build fails on Windows for no good reason
 
 Both npm and android file hierarchies tend to get very deep and even worse when you combine them. Since Windows file system has a max length, long file name addresses will result in numerous errors including `Execution failed for task ':react-native-vector-icons:processReleaseResources'`. So try to keep the path to your project folder as short as possible. 
+
+## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
 
 ## License
 
