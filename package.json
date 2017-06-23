@@ -3,6 +3,7 @@
   "version": "4.2.0",
   "description": "Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.",
   "main": "index.js",
+  "types": "index.d.ts",
   "bin": {
     "generate-icon": "./generate-icon.js"
   },
