@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   BackAndroid,
-  Navigator,
   StyleSheet,
   ToolbarAndroid,
   View,
 } from 'react-native';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Navigator } from 'react-native-deprecated-custom-components';
 import IconSetList from './IconSetList';
 import IconList from './IconList';
 
