@@ -15,6 +15,10 @@ public class VectorIconsPackage implements ReactPackage {
 
   public VectorIconsPackage() {}
 
+  public List<Class<? extends JavaScriptModule>> createJSModules() {
+    return Collections.emptyList();
+  }
+  
   @Override
   public List<NativeModule> createNativeModules(
       ReactApplicationContext reactContext) {
