@@ -470,7 +470,7 @@ Save output to file, defaults to STDOUT
 #### Red screen with "Unrecognized font family" error on iOS
 * Make sure you've added manually the reference of your `.ttf` on your xcodeproj `Resources` folder.
 * Check that the font you are trying to use appears in `Info.plist`, if you've added the whole folder and it's blue in color, then you need to add it to the path. 
-* Check that the font is copied in the *Copy Bundle Resources in Build Phases*.
+* Check that the font is copied in the *Copy Bundle Resources* in *Build Phases*.
 * Recompile the project.
 
 #### Android build fails on Windows for no good reason
