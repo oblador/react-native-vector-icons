@@ -159,35 +159,39 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
 ### Web (with [webpack](https://webpack.js.org/))
 
-First, you will need to add ``node_modules/react-native-vector-icons`` in your ``babel-loader`` ``include`` definition.
-
-Then, in your webpack configuration file, add a section to handle ttf files using url-loader (or file-loader)
+In your webpack configuration file, add a section to handle ttf files using url-loader (or file-loader)
 
 ```js
-        {
-          test: /\.ttf$/,
-          loader: "url-loader", // or directly file-loader
-          include: path.resolve(__dirname, "node_modules/react-native-vector-icons"),
-        },
+{
+  test: /\.ttf$/,
+  loader: "url-loader", // or directly file-loader
+  include: path.resolve(__dirname, "node_modules/react-native-vector-icons"),
+},
 ```
 
 Then consume those files in your JavaScript entry point to get the bundled url and inject a style tag in your page:
 
 ```js
-// generate required css
-import fontAwesome from "react-native-vector-icons/Fonts/FontAwesome.ttf"
-const reactNativeVectorIconsRequiredStyles = "@font-face { src:url("+fontAwesome+");font-family: FontAwesome; }"
+// Use prebuilt version of RNVI in dist folder
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
-// create stylesheet
+// Generate required css
+import iconFont from 'react-native-vector-icons/Fonts/FontAwesome.ttf';
+const iconFontStyles = `@font-face {
+  src: url(${iconFont});
+  font-family: FontAwesome;
+}`;
+
+// Create stylesheet
 const style = document.createElement('style');
 style.type = 'text/css';
-if (style.styleSheet){
-  style.styleSheet.cssText = reactNativeVectorIconsRequiredStyles;
+if (style.styleSheet) {
+  style.styleSheet.cssText = iconFontStyles;
 } else {
-  style.appendChild(document.createTextNode(reactNativeVectorIconsRequiredStyles));
+  style.appendChild(document.createTextNode(iconFontStyles));
 }
 
-// inject stylesheet
+// Inject stylesheet
 document.head.appendChild(style);
 ```
 
