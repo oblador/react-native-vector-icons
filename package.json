@@ -2,13 +2,14 @@
   "name": "react-native-vector-icons",
   "version": "4.2.0",
   "description": "Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "generate-icon": "./bin/generate-icon.js"
   },
   "scripts": {
     "test": "eslint index.js {bin,lib}/*.js",
     "build": "rm -rf {Fonts,Entypo.js,EvilIcons.js,FontAwesome.js,Foundation.js,Ionicons.js,MaterialIcons.js,MaterialCommunityIcons.js,Octicons.js,Zocial.js,SimpleLineIcons.js,glyphmaps} && mkdir Fonts glyphmaps && npm run build-entypo && npm run build-evilicons && npm run build-fontawesome && npm run build-foundation && npm run build-ionicons && npm run build-materialicons && npm run build-materialcommunityicons && npm run build-octicons && npm run build-zocial && npm run build-simplelineicons",
+    "build-web": "babel ./ --out-dir ./web --ignore ./node_modules,./examples,./web && cp -R ./glyphmaps ./web/glyphmaps",
     "build-entypo": "mkdir -p tmp/svg && curl https://dl.dropboxusercontent.com/u/4339492/entypo.zip > tmp/entypo.zip && unzip -j tmp/entypo.zip *.svg -x __MACOSX/* -d tmp/svg && fontcustom compile tmp/svg -o tmp -n Entypo -t css -h && node bin/generate-icon tmp/Entypo.css --componentName=Entypo --fontFamily=Entypo --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Entypo.json > Entypo.js && cp tmp/Entypo.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-evilicons": "fontcustom compile node_modules/evil-icons/assets/icons -o tmp -n EvilIcons -t css -h && node bin/generate-icon tmp/EvilIcons.css --prefix=.icon-ei- --componentName=EvilIcons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/EvilIcons.json --fontFamily=EvilIcons > EvilIcons.js && cp tmp/EvilIcons.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-fontawesome": "node bin/generate-icon node_modules/font-awesome/css/font-awesome.css --prefix=.fa- --componentName=FontAwesome --fontFamily=FontAwesome --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/FontAwesome.json > FontAwesome.js && cp node_modules/font-awesome/fonts/fontawesome-webfont.ttf Fonts/FontAwesome.ttf",
@@ -62,7 +63,9 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^7.0.0",
+    "babel-preset-react-native": "^2.1.0",
     "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.3.0",
