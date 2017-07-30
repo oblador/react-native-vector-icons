@@ -58,19 +58,18 @@
   },
   "dependencies": {
     "lodash": "^4.0.0",
-    "prop-types": "^15.5.8",
-    "yargs": "^6.3.0"
+    "prop-types": "^15.5.10",
+    "yargs": "^8.0.2"
   },
   "devDependencies": {
-    "babel": "^6.5.2",
     "babel-eslint": "^7.0.0",
-    "eslint": "^3.7.1",
-    "eslint-config-airbnb": "^13.0.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.1.2",
-    "eslint-plugin-react": "^6.4.1",
+    "eslint-plugin-react": "^7.1.0",
     "evil-icons": "^1.8.0",
     "font-awesome": "^4.6.3",
     "ionicons": "^3.0.0",
