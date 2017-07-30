@@ -2,7 +2,7 @@
   "name": "react-native-vector-icons",
   "version": "4.2.0",
   "description": "Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
     "generate-icon": "./bin/generate-icon.js"
   },
@@ -63,8 +63,9 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.23.0",
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^7.0.0",
+    "babel-preset-react-native": "^2.1.0",
     "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.3.0",
