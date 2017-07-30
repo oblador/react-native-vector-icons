@@ -2,19 +2,6 @@
 
 Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project. 
 
-## Main advantages over `react-native-icons`
-
-* You can use your own custom icon sets. Supports SVG via [Fontello](http://fontello.com) or regular icon fonts. 
-* You can use *native* `TabBarIOS`.
-* You can use icons inline with `Text` components as emojis or to create buttons. 
-* You can use the icon as an image if a native component requires it (such as `NavigatorIOS`). 
-* Most common use cases is JavaScript only and thus enables wider possibilities of styling (and is easier to integrate with your project). 
-* No need to define `width` and `height` styles.
-* Presentational stuff like size and color can be defined in your stylesheet instead of via a property (if you want to).
-* Icons scale with accessibility settings (unless disabled).
-
-*Pst! Migrating from `react-native-icons`? Scroll down for more information.*
-
 ## Bundled Icon Sets
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
@@ -25,7 +12,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicframework.com/docs/v2/ionicons/) by Ben Sperry (v3.0.0, **859** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
-* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v1.7.22, **1722** icons)
+* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.0.46, **2046** icons)
 * [`Octicons`](http://octicons.github.com) by Github, Inc. (v5.0.1, **176** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 * [`SimpleLineIcons`](http://simplelineicons.com/) by Sabbir & Contributors (v2.4.1, **189** icons)
@@ -59,6 +46,8 @@ pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
 ```
 
 Edit `Info.plist` as described above. 
+
+If you are using `use_frameworks!` in your `Podfile` you instead need to dynamically load the icon font by doing `Icon.loadFont()` when boostrapping your application.
 
 #### Option: With `rnpm`
 
@@ -442,6 +431,7 @@ function ExampleView(props) {
 * [react-native-dribbble-app](https://github.com/catalinmiron/react-native-dribbble-app)
 * [voximplant react-native-demo](https://github.com/voximplant/react-native-demo)
 * [product-kitty](https://github.com/rkho/product-kitty) ([blog post](http://richardkho.com/persisting-tabbars-in-react-native/))
+* [react-native-netflix](https://github.com/mariodev12/react-native-netflix)
 
 ## Generating your own icon set from a CSS file
 
@@ -470,16 +460,6 @@ Save output to file, defaults to STDOUT
 
 ## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
 
-## Migrating from `react-native-icons`
-
-**NOTE:** This approach is unsupported and new apps / views should NOT use this component. 
-
-With `react-native-icons` recently being discontinued, users switching to this library might not want to rewrite all their code. For that use case I've written a drop in replacement component that uses the same icon name syntax. It might break some layouts since the underlying component is different. To use this, simply replace your `react-native-icons` import statement with this:
-
-```js
-import Icon from 'react-native-vector-icons/RNIMigration';
-```
-
 ## Troubleshooting
 
 #### The icons show up as a crossed out box on Android
@@ -490,7 +470,7 @@ import Icon from 'react-native-vector-icons/RNIMigration';
 #### Red screen with "Unrecognized font family" error on iOS
 * Make sure you've added manually the reference of your `.ttf` on your xcodeproj `Resources` folder.
 * Check that the font you are trying to use appears in `Info.plist`, if you've added the whole folder and it's blue in color, then you need to add it to the path. 
-* Check that the font is copied in the *Copy Bundle Resources in Build Phases*.
+* Check that the font is copied in the *Copy Bundle Resources* in *Build Phases*.
 * Recompile the project.
 
 #### Android build fails on Windows for no good reason
