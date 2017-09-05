@@ -11,6 +11,7 @@ import MaterialIcons from '../../glyphmaps/MaterialIcons.json';
 import SimpleLineIcons from '../../glyphmaps/SimpleLineIcons.json';
 import Octicons from '../../glyphmaps/Octicons.json';
 import Zocial from '../../glyphmaps/Zocial.json';
+import Feather from '../../glyphmaps/Feather.json';
 
 const IconFamilies = {
   Entypo,
@@ -23,6 +24,7 @@ const IconFamilies = {
   SimpleLineIcons,
   Octicons,
   Zocial,
+  Feather,
 };
 
 class Icon extends Component {
