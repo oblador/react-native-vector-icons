@@ -75,6 +75,7 @@
     "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "^7.1.0",
     "evil-icons": "^1.8.0",
+    "feather-icons": "^3.2.2",
     "font-awesome": "^4.6.3",
     "ionicons": "^3.0.0",
     "material-design-icons": "^3.0.1",
