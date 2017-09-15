@@ -22,7 +22,8 @@ public class VectorIconsPackage implements ReactPackage {
     modules.add(new VectorIconsModule(reactContext));
     return modules;
   }
-
+  
+  // Deprecated RN 0.47
   public List<Class<? extends JavaScriptModule>> createJSModules() {
     return Collections.emptyList();
   }
