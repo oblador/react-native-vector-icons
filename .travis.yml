@@ -3,9 +3,10 @@ node_js:
 - '8'
 script:
 - yarn test
-before_deploy: "cd directory && yarn && yarn build"
+before_deploy: "cd directory && yarn && yarn build && cd .."
 deploy:
 - provider: npm
+  skip_cleanup: true
   email: joel@oblador.se
   api_key:
     secure: hFfEJOuoV0yToV7SyS+ioEj1ZWRmiua0XLLclLQnnNBUV9Cs5iPvuzmP0311/BbbWMEkbDfg2VUHWn81khSrcKcqKGLlib1Pvvd5JldnlZ2PYGp6BEkqlLcp1Bvsmz5Bd+z5UwuOZQNxplfke9zLh1ciX7lhE85tzK0smckwUBn4oYtWwvDp/DtmA7Fcu0fSx28LlhTiwPxRCEnQJN/aIpU1MYnp3biChlIwWbutdnhddL/jbDjFOlnCpwaNGfVQESQvfVbUogGhdDV578u8JypA2d9zhRAcAmVNoSMTs2UgVO0G0T6cFC/nvqG/C8emrlMM7Gd/DOZkRQIF4wH3Qo1bC9C2qN9aGQGr6mVwu1rvjA8NuY5DSKQNiXywiRmvJka0a89Yq8ya7WITOPtxiMxmtz0i1Q8G3HFQlwZPK/4yI9biR6z36+W27+Z4sgfYx9kdchO/APl/kwLcgqaYxyl3QAgoAGJfoB1br/ncwxwPLoXMT4Xo4DuW/dR4SgZAmI7X1eM1ENvI3oq3bN/fq+dGunNAW4/7kKKYLYXBSok3r8jDyP0Bl3Q2w3Vjun3tc9GHkqzYQ2BMXMJ09MDSmKbfLP28LhFToVTD2T0baVbKafuMcwWN6cxOvxcAg2TMdEn1rUaSKG/HrANS1mh8JFq0X76byLiPgxRSShDNAHQ=
