@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: 'Feather';
+  src: url('../../Fonts/Feather.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'FontAwesome';
   src: url('../../Fonts/FontAwesome.ttf') format('truetype');
 }
