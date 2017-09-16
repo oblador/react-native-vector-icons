@@ -66,8 +66,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.0.0",
-    "babel-preset-react-native": "^2.1.0",
+    "babel-eslint": "^8.0.0",
+    "babel-preset-react-native": "^4.0.0",
     "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.3.0",
