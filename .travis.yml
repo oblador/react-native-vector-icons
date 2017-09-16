@@ -1,5 +1,24 @@
 language: node_js
 node_js:
-  - "7"
+- '8'
 script:
-  - npm test
+- yarn test
+before_deploy: "cd directory && yarn && yarn build"
+deploy:
+- provider: npm
+  email: joel@oblador.se
+  api_key:
+    secure: hFfEJOuoV0yToV7SyS+ioEj1ZWRmiua0XLLclLQnnNBUV9Cs5iPvuzmP0311/BbbWMEkbDfg2VUHWn81khSrcKcqKGLlib1Pvvd5JldnlZ2PYGp6BEkqlLcp1Bvsmz5Bd+z5UwuOZQNxplfke9zLh1ciX7lhE85tzK0smckwUBn4oYtWwvDp/DtmA7Fcu0fSx28LlhTiwPxRCEnQJN/aIpU1MYnp3biChlIwWbutdnhddL/jbDjFOlnCpwaNGfVQESQvfVbUogGhdDV578u8JypA2d9zhRAcAmVNoSMTs2UgVO0G0T6cFC/nvqG/C8emrlMM7Gd/DOZkRQIF4wH3Qo1bC9C2qN9aGQGr6mVwu1rvjA8NuY5DSKQNiXywiRmvJka0a89Yq8ya7WITOPtxiMxmtz0i1Q8G3HFQlwZPK/4yI9biR6z36+W27+Z4sgfYx9kdchO/APl/kwLcgqaYxyl3QAgoAGJfoB1br/ncwxwPLoXMT4Xo4DuW/dR4SgZAmI7X1eM1ENvI3oq3bN/fq+dGunNAW4/7kKKYLYXBSok3r8jDyP0Bl3Q2w3Vjun3tc9GHkqzYQ2BMXMJ09MDSmKbfLP28LhFToVTD2T0baVbKafuMcwWN6cxOvxcAg2TMdEn1rUaSKG/HrANS1mh8JFq0X76byLiPgxRSShDNAHQ=
+  on:
+    tags: true
+    repo: oblador/react-native-vector-icons
+    condition: "$TRAVIS_TAG =~ ^v[0-9]+\\.[0-9]+\\.[0-9]+.*$"
+- provider: pages
+  skip_cleanup: true
+  local_dir: "directory/build"
+  github_token:
+    secure: "NILrfGIHnp8p2cunceKlWV5pdgItD7c/BiNtD4S+BnV5UyyBG9fQph5xcKoh/vwlAepMOuEpFvzBc5iVrlXZB40aXJa5iXqqADJrV6Kwc1dlvV3/emR4Yfhb3qQDzebdpMamy8F3ScgdovOl48GvBwnM0PCTCR3PnHNqeqp3Up+0nwSmxJTh06kcv7uoFsKjW09kIsE4+E60xi0KZr12JBpAaz6rQ/Wz0zEPE1Aa0lPyD4eAwNSUOlS1HuozOZt03ly3c24IZs2hzrpC9jJj5hGzkqGcnxFESCjoNtat1fNeASODzQZbLY+p5blBkYN1icCRkX4GdXzFpg/wMNcyazJMf8eybJTNVOZ4FIIIzR0zKEu/cGTV6xFxvkr7EpBGlX/H5YcIaZrw9Mhix8ww9tcoviTJicaahM+sNKV3IppssSMSNjM7BG+JXSGvOwkDyAHgT64zoShKJ/G02wKpJpXH1deh/k0XztmkJlac05O8es8HXa7RUF9H8+07ZfETjOz7mh+JCSattMqVkquooFwcW8tbhI0x9N5qJhzR45KnSpupyi0Cp7j3MB6sZ6UmcN0C8om+wwtrVGqubMdwgNYNPQdQDf4uPBzHhn5BwBRNLSXVpn0lR7awZ6ef0OmRX2OkoFT+iPxYUbuIEB2LM2iNTE+O6fcvcf7Isk7d8L4="
+  on:
+    tags: true
+    repo: oblador/react-native-vector-icons
+    condition: "$TRAVIS_TAG =~ ^v[0-9]+\\.[0-9]+\\.[0-9]+.*$"
