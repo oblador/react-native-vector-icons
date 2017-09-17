@@ -17,6 +17,7 @@ import _ from 'lodash';
 import IconList from './IconList';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Foundation from 'react-native-vector-icons/Foundation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -26,6 +27,7 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo';
 import EvilIconsGlyphs from 'react-native-vector-icons/glyphmaps/EvilIcons';
+import FeatherGlyphs from 'react-native-vector-icons/glyphmaps/Feather';
 import FontAwesomeGlyphs from 'react-native-vector-icons/glyphmaps/FontAwesome';
 import FoundationGlyphs from 'react-native-vector-icons/glyphmaps/Foundation';
 import IoniconsGlyphs from 'react-native-vector-icons/glyphmaps/Ionicons';
@@ -37,6 +39,7 @@ import ZocialGlyphs from 'react-native-vector-icons/glyphmaps/Zocial';
 const GLYPH_MAPS = {
   Entypo: EntypoGlyphs,
   EvilIcons: EvilIconsGlyphs,
+  Feather: FeatherGlyphs,
   FontAwesome: FontAwesomeGlyphs,
   Foundation: FoundationGlyphs,
   Ionicons: IoniconsGlyphs,
@@ -49,6 +52,7 @@ const GLYPH_MAPS = {
 const ICON_SETS = _.map({
   Entypo,
   EvilIcons,
+  Feather,
   FontAwesome,
   Foundation,
   Ionicons,
