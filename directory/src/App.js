@@ -166,6 +166,14 @@ class App extends Component {
     );
   }
 
+  renderNotFound () {
+    return (
+      <div className="Result-Row">
+        <h2 className="Result-Title">Icon not found.</h2>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="App">
@@ -173,6 +181,7 @@ class App extends Component {
         <SearchBar onSubmit={this.handleSubmit} />
         <div className="Container">
           {this.state.matches.map(this.renderMatch)}
+          {this.state.matches.length === 0 && this.renderNotFound()}
         </div>
       </div>
     );
