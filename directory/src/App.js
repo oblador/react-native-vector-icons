@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
+
+import React, { Component } from 'react';
+
 import Entypo from '../../glyphmaps/Entypo.json';
 import EvilIcons from '../../glyphmaps/EvilIcons.json';
 import Feather from '../../glyphmaps/Feather.json';
@@ -9,8 +10,9 @@ import Foundation from '../../glyphmaps/Foundation.json';
 import Ionicons from '../../glyphmaps/Ionicons.json';
 import MaterialCommunityIcons from '../../glyphmaps/MaterialCommunityIcons.json';
 import MaterialIcons from '../../glyphmaps/MaterialIcons.json';
-import SimpleLineIcons from '../../glyphmaps/SimpleLineIcons.json';
 import Octicons from '../../glyphmaps/Octicons.json';
+import PropTypes from 'prop-types';
+import SimpleLineIcons from '../../glyphmaps/SimpleLineIcons.json';
 import Zocial from '../../glyphmaps/Zocial.json';
 
 const IconFamilies = {
@@ -26,6 +28,8 @@ const IconFamilies = {
   Octicons,
   Zocial,
 };
+
+const WAITING_INTERVAL = 500;
 
 class Icon extends Component {
   static propTypes = {
@@ -55,9 +59,27 @@ const HeaderBar = (props) => {
 };
 
 class SearchBar extends Component {
+  timer = null;
+
+  state = {
+    keyword: ''
+  };
+  
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.inputRef.value);
+  };
+
+  handleChange = (e) => {
+    e.preventDefault();
+    clearInterval(this.timer);
+    
+    this.setState({ keyword: this.inputRef.value });
+
+    this.timer = setTimeout(
+      () => this.props.onSubmit(this.state.keyword),
+      WAITING_INTERVAL
+    );
   };
 
   render() {
@@ -68,9 +90,11 @@ class SearchBar extends Component {
             <Icon family="FontAwesome" name="search" className="Search-Icon" />
             <input
               ref={ref => this.inputRef = ref}
+              onChange={this.handleChange}
               placeholder="Search for an icon"
               type="text"
-              className="Search-Input" />
+              className="Search-Input"
+            />
           </form>
         </div>
       </div>
