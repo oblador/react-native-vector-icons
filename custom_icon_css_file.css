@@ -1,0 +1,358 @@
+/*--------------------------------
+
+myicons Web Font - built using nucleoapp.com
+License - nucleoapp.com/license/
+
+-------------------------------- */
+@font-face {
+  font-family: 'myicons';
+  src: url('../fonts/myicons.eot');
+  src: url('../fonts/myicons.eot') format('embedded-opentype'), url('../fonts/myicons.woff2') format('woff2'), url('../fonts/myicons.woff') format('woff'), url('../fonts/myicons.ttf') format('truetype'), url('../fonts/myicons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------------
+	base class definition
+-------------------------*/
+.nc-icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 'myicons';
+  font-size: inherit;
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*------------------------
+  change icon size
+-------------------------*/
+.nc-icon.lg {
+  font-size: 1.33333333em;
+  vertical-align: -16%;
+}
+.nc-icon.x2 {
+  font-size: 2em;
+}
+.nc-icon.x3 {
+  font-size: 3em;
+}
+/*----------------------------------
+  add a square/circle background
+-----------------------------------*/
+.nc-icon.square,
+.nc-icon.circle {
+  padding: 0.33333333em;
+  vertical-align: -16%;
+  background-color: #eee;
+}
+.nc-icon.circle {
+  border-radius: 50%;
+}
+/*------------------------
+  list icons
+-------------------------*/
+.nc-icon-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+.nc-icon-ul > li {
+  position: relative;
+}
+.nc-icon-ul > li > .nc-icon {
+  position: absolute;
+  left: -1.57142857em;
+  top: 0.14285714em;
+  text-align: center;
+}
+.nc-icon-ul > li > .nc-icon.lg {
+  top: 0;
+  left: -1.35714286em;
+}
+.nc-icon-ul > li > .nc-icon.circle,
+.nc-icon-ul > li > .nc-icon.square {
+  top: -0.19047619em;
+  left: -1.9047619em;
+}
+/*------------------------
+  spinning icons
+-------------------------*/
+.nc-icon.spin {
+  -webkit-animation: nc-icon-spin 2s infinite linear;
+  -moz-animation: nc-icon-spin 2s infinite linear;
+  animation: nc-icon-spin 2s infinite linear;
+}
+@-webkit-keyframes nc-icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes nc-icon-spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes nc-icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*------------------------
+  rotated/flipped icons
+-------------------------*/
+.nc-icon.rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.nc-icon.rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.nc-icon.rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.nc-icon.flip-y {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.nc-icon.flip-x {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+/*------------------------
+	font icons
+-------------------------*/
+
+.nc-circle-add::before {
+    content: "\ea02";
+}
+
+.nc-tail-left::before {
+    content: "\ea04";
+}
+
+.nc-building-2::before {
+    content: "\ea09";
+}
+
+.nc-camera-18::before {
+    content: "\ea0a";
+}
+
+.nc-check-2::before {
+    content: "\ea0b";
+}
+
+.nc-check-square-09::before {
+    content: "\ea0c";
+}
+
+.nc-stre-right::before {
+    content: "\ea0d";
+}
+
+.nc-simple-remove::before {
+    content: "\ea0e";
+}
+
+.nc-badge-13::before {
+    content: "\ea0f";
+}
+
+.nc-b-meeting::before {
+    content: "\ea10";
+}
+
+.nc-single-folded::before {
+    content: "\ea11";
+}
+
+.nc-single-paragraph::before {
+    content: "\ea12";
+}
+
+.nc-round-dollar::before {
+    content: "\ea13";
+}
+
+.nc-folder-18::before {
+    content: "\ea14";
+}
+
+.nc-funnel-41::before {
+    content: "\ea15";
+}
+
+.nc-simple-add::before {
+    content: "\ea16";
+}
+
+.nc-handshake::before {
+    content: "\ea17";
+}
+
+.nc-alert-circle-que::before {
+    content: "\ea18";
+}
+
+.nc-alert-circle-i::before {
+    content: "\ea19";
+}
+
+.nc-lamp-2::before {
+    content: "\ea1a";
+}
+
+.nc-pin-3::before {
+    content: "\ea1b";
+}
+
+.nc-email-83::before {
+    content: "\ea1c";
+}
+
+.nc-edit-76::before {
+    content: "\ea1d";
+}
+
+.nc-todo::before {
+    content: "\ea1e";
+}
+
+.nc-menu-dots::before {
+    content: "\ea1f";
+}
+
+.nc-send::before {
+    content: "\ea20";
+}
+
+.nc-payment::before {
+    content: "\ea21";
+}
+
+.nc-a-check::before {
+    content: "\ea22";
+}
+
+.nc-single-04::before {
+    content: "\ea23";
+}
+
+.nc-phone-2::before {
+    content: "\ea24";
+}
+
+.nc-rotate::before {
+    content: "\ea25";
+}
+
+.nc-circle-delete::before {
+    content: "\ea27";
+}
+
+.nc-scan::before {
+    content: "\ea28";
+}
+
+.nc-zoom-2::before {
+    content: "\ea29";
+}
+
+.nc-share-66::before {
+    content: "\ea2a";
+}
+
+.nc-security::before {
+    content: "\ea2b";
+}
+
+.nc-chat-round::before {
+    content: "\ea2c";
+}
+
+.nc-headphones-mic::before {
+    content: "\ea2d";
+}
+
+.nc-tag::before {
+    content: "\ea2e";
+}
+
+.nc-countdown-34::before {
+    content: "\ea2f";
+}
+
+.nc-move-up::before {
+    content: "\ea30";
+}
+
+.nc-alert-circle-exc::before {
+    content: "\ea31";
+}
+
+.nc-single-content-03::before {
+    content: "\ea32";
+}
+
+.nc-grammar-check::before {
+    content: "\ea33";
+}
+
+.nc-refresh-68::before {
+    content: "\ea34";
+}
+
+.nc-circle-add-2::before {
+    content: "\ea35";
+}
+
+.nc-badge-13-2::before {
+    content: "\ea36";
+}
+
+.nc-shape-rectangle::before {
+    content: "\ea37";
+}
+
+
+/* all icon font classes list here */
