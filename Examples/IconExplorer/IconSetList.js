@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   Alert,
   Image,
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class IconSetsList extends Component {
+export default class IconSetsList extends PureComponent {
   constructor(props) {
     super(props);
 

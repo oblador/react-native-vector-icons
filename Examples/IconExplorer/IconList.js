@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   DeviceEventEmitter,
   ListView,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class IconList extends Component {
+export default class IconList extends PureComponent {
   constructor(props) {
     super(props);
 
