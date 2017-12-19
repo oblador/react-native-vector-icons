@@ -7,9 +7,9 @@
   },
   "dependencies": {
     "lodash": "^4.0.0",
-    "react": "16.0.0-alpha.6",
-    "react-native": "0.44.0",
-    "react-native-vector-icons": "file:../../",
-    "react-native-deprecated-custom-components": "^0.1.0"
+    "react": "^16.0.0",
+    "react-native": "0.51.0",
+    "react-native-deprecated-custom-components": "github:facebookarchive/react-native-custom-components#83c4fa19ccc9b6cd48ff80e457c493332819b486",
+    "react-native-vector-icons": "*"
   }
 }
