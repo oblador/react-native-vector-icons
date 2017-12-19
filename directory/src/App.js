@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './App.css';
 import Entypo from '../../glyphmaps/Entypo.json';
@@ -27,7 +27,7 @@ const IconFamilies = {
   Zocial,
 };
 
-class Icon extends Component {
+class Icon extends PureComponent {
   static propTypes = {
     family: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -54,7 +54,7 @@ const HeaderBar = (props) => {
   );
 };
 
-class SearchBar extends Component {
+class SearchBar extends PureComponent {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.inputRef.value);
@@ -78,7 +78,7 @@ class SearchBar extends Component {
   }
 }
 
-class App extends Component {
+class App extends PureComponent {
   constructor() {
     super();
     this.state = {
