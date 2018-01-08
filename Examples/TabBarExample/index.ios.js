@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
 });
 
-class ColoredView extends Component {
+class ColoredView extends PureComponent {
   componentWillMount() {
     Icon.getImageSource('md-arrow-back', 30).then((source) => this.setState({ backIcon: source }));
   }
@@ -65,7 +65,7 @@ class ColoredView extends Component {
   }
 }
 
-class TabBarExample extends Component {
+class TabBarExample extends PureComponent {
   constructor(props) {
     super(props);
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import {
   AppRegistry,
   Dimensions,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
 });
 
-class Welcome extends Component {
+class Welcome extends PureComponent {
   render() {
     return (
       <View style={styles.welcomeWrapper}>
@@ -47,7 +47,7 @@ class Welcome extends Component {
   }
 }
 
-class IconExplorer extends Component {
+class IconExplorer extends PureComponent {
 
   constructor() {
     super();

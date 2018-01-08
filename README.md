@@ -15,7 +15,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](http://ionicframework.com/docs/v2/ionicons/) by Ben Sperry (v3.0.0, **859** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
-* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.0.46, **2046** icons)
+* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.1.19, **2120** icons)
 * [`Octicons`](http://octicons.github.com) by Github, Inc. (v6.0.1, **177** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 * [`SimpleLineIcons`](http://simplelineicons.com/) by Sabbir & Contributors (v2.4.1, **189** icons)
@@ -261,7 +261,7 @@ Any [`Text`](http://facebook.github.io/react-native/docs/text.html), [`Touchable
 |---|---|---|
 |**`color`**|Text and icon color, use `iconStyle` or nest a `Text` component if you need different colors.|`white`|
 |**`size`**|Icon size.|`20`|
-|**`iconStyle`**|Styles applied to the icon only, good for setting margins or a different color.|`{marginRight: 10}`|
+|**`iconStyle`**|Styles applied to the icon only, good for setting margins or a different color. *Note: use `iconStyle` for margins or expect unstable behaviour.*|`{marginRight: 10}`|
 |**`backgroundColor`**|Background color of the button.|`#007AFF`|
 |**`borderRadius`**|Border radius of the button, set to `0` to disable. |`5`|
 |**`onPress`**|A function called when the button is pressed. |*None*|

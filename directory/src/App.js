@@ -1,6 +1,7 @@
-import './App.css';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
-import React, { Component } from 'react';
+import './App.css';
 
 import Entypo from '../../glyphmaps/Entypo.json';
 import EvilIcons from '../../glyphmaps/EvilIcons.json';
@@ -11,7 +12,6 @@ import Ionicons from '../../glyphmaps/Ionicons.json';
 import MaterialCommunityIcons from '../../glyphmaps/MaterialCommunityIcons.json';
 import MaterialIcons from '../../glyphmaps/MaterialIcons.json';
 import Octicons from '../../glyphmaps/Octicons.json';
-import PropTypes from 'prop-types';
 import SimpleLineIcons from '../../glyphmaps/SimpleLineIcons.json';
 import Zocial from '../../glyphmaps/Zocial.json';
 
@@ -29,9 +29,9 @@ const IconFamilies = {
   Zocial,
 };
 
-const WAITING_INTERVAL = 500;
+const WAITING_INTERVAL = 300;
 
-class Icon extends Component {
+class Icon extends PureComponent {
   static propTypes = {
     family: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -58,7 +58,7 @@ const HeaderBar = (props) => {
   );
 };
 
-class SearchBar extends Component {
+class SearchBar extends PureComponent {
   timer = null;
 
   state = {
@@ -102,7 +102,7 @@ class SearchBar extends Component {
   }
 }
 
-class App extends Component {
+class App extends PureComponent {
   constructor() {
     super();
     this.state = {
