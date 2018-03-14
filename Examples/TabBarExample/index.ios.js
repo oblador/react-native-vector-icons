@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 });
 
 class ColoredView extends PureComponent {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     Icon.getImageSource('md-arrow-back', 30).then((source) => this.setState({ backIcon: source }));
   }
 
@@ -74,7 +74,7 @@ class TabBarExample extends PureComponent {
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     // https://github.com/facebook/react-native/issues/1403 prevents this to work for initial load
     Icon.getImageSource('ios-settings', 30).then((source) => this.setState({ gearIcon: source }));
   }
