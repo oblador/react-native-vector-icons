@@ -40,23 +40,23 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
 
+#### Option: With `react-native link`
+
+`$ react-native link`
+
+*Note: Some users are having trouble using this method, try one of the others if you are too.*
+
 #### Option: With [CocoaPods](https://cocoapods.org/)
 
 Add the following to your `Podfile` and run `pod update`:
 
 ```
-pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 ```
 
 Edit `Info.plist` as described above. 
 
 If you are using `use_frameworks!` in your `Podfile` you instead need to dynamically load the icon font by doing `Icon.loadFont()` when boostrapping your application.
-
-#### Option: With `rnpm`
-
-`$ react-native link`
-
-*Note: Some users are having trouble using this method, try one of the others if you are too.*
 
 ### Android
 
