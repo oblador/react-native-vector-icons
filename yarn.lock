@@ -2061,9 +2061,9 @@ object.omit@^2.0.0:
     for-own "^0.1.4"
     is-extendable "^0.1.1"
 
-octicons@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/octicons/-/octicons-6.0.1.tgz#481f4947780c495e42eef113e5b764075e226b84"
+octicons@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/octicons/-/octicons-7.2.0.tgz#a721635f73c774d7ffda56a83a29dbde03fc4b53"
   dependencies:
     object-assign "^4.1.1"
 
