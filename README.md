@@ -472,13 +472,14 @@ Save output to file, defaults to STDOUT
 
 #### The icons show up as a crossed out box on Android
 * Make sure you've copied the font to `android/app/src/main/assets/fonts`.
-* Delete the `android/app/build` folder. 
+* Delete the build folder with `rm -rf android/app/build`. 
 * Recompile the project.
 
 #### Red screen with "Unrecognized font family" error on iOS
 * Make sure you've added manually the reference of your `.ttf` on your xcodeproj `Resources` folder.
 * Check that the font you are trying to use appears in `Info.plist`, if you've added the whole folder and it's blue in color, then you need to add it to the path. 
 * Check that the font is copied in the *Copy Bundle Resources* in *Build Phases*.
+* Delete the build folder with `rm -rf ios/build`
 * Recompile the project.
 
 #### Android build fails on Windows for no good reason
