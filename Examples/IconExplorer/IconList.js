@@ -72,7 +72,7 @@ export default class IconList extends PureComponent {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const glyphs = this.getFilteredGlyphs(nextProps.iconSet, this.state.filter);
     this.setState({
       dataSource: this.state.dataSource.cloneWithRows(glyphs),
