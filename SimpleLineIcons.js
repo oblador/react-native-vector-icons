@@ -6,7 +6,7 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/SimpleLineIcons.json';
 
-const iconSet = createIconSet(glyphMap, 'simple-line-icons', 'SimpleLineIcons.ttf');
+const iconSet = createIconSet(glyphMap, 'SimpleLineIcons', 'SimpleLineIcons.ttf');
 
 export default iconSet;
 
