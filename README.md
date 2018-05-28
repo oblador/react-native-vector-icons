@@ -352,7 +352,7 @@ const Icon = createIconSetFromFontello(fontelloConfig);
 ### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
 ```js
 import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
-import icoMoonConfig from './config.json';
+import icoMoonConfig from './selection.json';
 const Icon = createIconSetFromIcoMoon(icoMoonConfig);
 ```
 
