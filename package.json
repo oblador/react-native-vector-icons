@@ -18,7 +18,7 @@
     "build-foundation": "node bin/generate-icon bower_components/foundation-icon-fonts/foundation-icons.css --prefix=.fi- --componentName=Foundation --fontFamily=fontcustom --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Foundation.json > Foundation.js && cp bower_components/foundation-icon-fonts/foundation-icons.ttf Fonts/Foundation.ttf",
     "build-ionicons": "node bin/generate-icon node_modules/ionicons/dist/css/ionicons.css --prefix=.ion- --componentName=Ionicons --fontFamily=Ionicons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Ionicons.json > Ionicons.js && cp node_modules/ionicons/dist/fonts/ionicons.ttf Fonts/Ionicons.ttf",
     "build-materialicons": "node bin/generate-material-icons node_modules/material-design-icons/iconfont/codepoints --componentName=MaterialIcons --fontFamily='Material Icons' --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/MaterialIcons.json > MaterialIcons.js && cp node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf Fonts/MaterialIcons.ttf",
-    "build-materialcommunityicons": "node bin/generate-icon node_modules/mdi/css/materialdesignicons.css --prefix=.mdi- --componentName=MaterialCommunityIcons --fontFamily='Material Design Icons' --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/MaterialCommunityIcons.json > MaterialCommunityIcons.js && cp node_modules/mdi/fonts/materialdesignicons-webfont.ttf Fonts/MaterialCommunityIcons.ttf",
+    "build-materialcommunityicons": "node bin/generate-icon node_modules/@mdi/font/css/materialdesignicons.css --prefix=.mdi- --componentName=MaterialCommunityIcons --fontFamily='Material Design Icons' --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/MaterialCommunityIcons.json > MaterialCommunityIcons.js && cp node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf Fonts/MaterialCommunityIcons.ttf",
     "build-octicons": "fontcustom compile node_modules/octicons/build/svg -o tmp -n Octicons -t css -h && node bin/generate-icon tmp/Octicons.css --prefix=.icon- --componentName=Octicons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Octicons.json --fontFamily=Octicons > Octicons.js && cp tmp/Octicons.ttf Fonts && rm -rf {tmp,.fontcustom-manifest.json}",
     "build-zocial": "node bin/generate-icon bower_components/css-social-buttons/css/zocial.css --prefix=.zocial. --componentName=Zocial --fontFamily=zocial --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/Zocial.json > Zocial.js && cp bower_components/css-social-buttons/css/zocial.ttf Fonts/Zocial.ttf",
     "build-simplelineicons": "node bin/generate-icon bower_components/simple-line-icons/css/simple-line-icons.css --prefix=.icon- --componentName=SimpleLineIcons --fontFamily=simple-line-icons --template=templates/separated-icon-set.tpl --glyphmap=glyphmaps/SimpleLineIcons.json > SimpleLineIcons.js && cp bower_components/simple-line-icons/fonts/Simple-Line-Icons.ttf Fonts/SimpleLineIcons.ttf"
@@ -79,7 +79,7 @@
     "font-awesome": "^4.6.3",
     "ionicons": "^3.0.0",
     "material-design-icons": "^3.0.1",
-    "mdi": "^2.2.43",
+    "@mdi/font": "^2.4.85",
     "octicons": "^7.2.0",
     "prettier": "^1.5.3"
   }
