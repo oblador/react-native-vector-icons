@@ -1,93 +1,33 @@
 import React, { PureComponent } from 'react';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {
   Alert,
-  Image,
-  ListView,
+  dismissKeyboard,
   Platform,
+  SectionList,
   StyleSheet,
   Text,
   TouchableHighlight,
   View,
 } from './react-native';
 
-import dismissKeyboard from 'dismissKeyboard';
-
-import _ from 'lodash';
-
 import IconList from './IconList';
-import Entypo from 'react-native-vector-icons/Entypo';
-import EvilIcons from 'react-native-vector-icons/EvilIcons';
-import Feather from 'react-native-vector-icons/Feather';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Foundation from 'react-native-vector-icons/Foundation';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Octicons from 'react-native-vector-icons/Octicons';
-import Zocial from 'react-native-vector-icons/Zocial';
-import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo';
-import EvilIconsGlyphs from 'react-native-vector-icons/glyphmaps/EvilIcons';
-import FeatherGlyphs from 'react-native-vector-icons/glyphmaps/Feather';
-import FontAwesomeGlyphs from 'react-native-vector-icons/glyphmaps/FontAwesome';
-import FoundationGlyphs from 'react-native-vector-icons/glyphmaps/Foundation';
-import IoniconsGlyphs from 'react-native-vector-icons/glyphmaps/Ionicons';
-import MaterialIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialIcons';
-import MaterialCommunityIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialCommunityIcons';
-import OcticonsGlyphs from 'react-native-vector-icons/glyphmaps/Octicons';
-import ZocialGlyphs from 'react-native-vector-icons/glyphmaps/Zocial';
-
-const GLYPH_MAPS = {
-  Entypo: EntypoGlyphs,
-  EvilIcons: EvilIconsGlyphs,
-  Feather: FeatherGlyphs,
-  FontAwesome: FontAwesomeGlyphs,
-  Foundation: FoundationGlyphs,
-  Ionicons: IoniconsGlyphs,
-  MaterialIcons: MaterialIconsGlyphs,
-  MaterialCommunityIcons: MaterialCommunityIconsGlyphs,
-  Octicons: OcticonsGlyphs,
-  Zocial: ZocialGlyphs,
-};
-
-const ICON_SETS = _
-  .map(
-    {
-      Entypo,
-      EvilIcons,
-      Feather,
-      FontAwesome,
-      Foundation,
-      Ionicons,
-      MaterialIcons,
-      MaterialCommunityIcons,
-      Octicons,
-      Zocial,
-    },
-    (component, name) => ({ name, component })
-  )
-  .map(iconSet => {
-    // Some icons have multiple names, so group them by glyph
-    const glyphMap = GLYPH_MAPS[iconSet.name];
-    iconSet.glyphs = _.values(
-      _.groupBy(Object.keys(glyphMap), name => glyphMap[name])
-    );
-    return iconSet;
-  });
+import ICON_SETS from './icon-sets';
 
 const BUTTONS = [
   {
     text: 'Login with Facebook',
-    icon: 'facebook',
+    name: 'facebook',
     backgroundColor: '#3b5998',
   },
   {
     text: 'Follow me on Twitter',
-    icon: 'twitter',
+    name: 'twitter',
     backgroundColor: '#55acee',
   },
   {
     text: 'Fork on GitHub',
-    icon: 'code-fork',
+    name: 'code-fork',
     backgroundColor: '#ccc',
     color: '#000',
   },
@@ -132,10 +72,15 @@ const STYLING = [
 ];
 
 const INLINE = [
-  <Text>
-    This text has <FontAwesome name="rocket" /> inline{' '}
-    <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
-  </Text>,
+  {
+    name: 'inline',
+    children: (
+      <Text>
+        This text has <FontAwesome name="rocket" /> inline{' '}
+        <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
+      </Text>
+    ),
+  },
 ];
 
 const styles = StyleSheet.create({
@@ -154,7 +99,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   separator: {
-    height: 0.5,
+    height: StyleSheet.hairlineWidth,
     backgroundColor: '#ccc',
   },
   text: {
@@ -168,107 +113,52 @@ const styles = StyleSheet.create({
   },
 });
 
+const keyExtractor = item => item.name;
+
+const ItemSeparator = () => <View style={styles.separator} />;
+
+const renderSectionHeader = ({ section }) => (
+  <View style={styles.sectionHeader}>
+    <Text style={styles.sectionHeaderTitle}>{section.title}</Text>
+  </View>
+);
+
+const renderButton = ({ item }) => (
+  <View style={styles.row}>
+    <FontAwesome.Button
+      name={item.name}
+      backgroundColor={item.backgroundColor}
+      color={item.color}
+      onPress={() => Alert.alert('You pressed "' + item.text + '"')}
+    >
+      {item.text}
+    </FontAwesome.Button>
+  </View>
+);
+
+const renderInline = ({ item }) => (
+  <View style={styles.row}>{item.children}</View>
+);
+
+const renderStyling = ({ item }) => (
+  <View style={styles.row}>
+    <View style={item.containerStyle}>
+      <FontAwesome {...item} />
+    </View>
+  </View>
+);
+
 export default class IconSetsList extends PureComponent {
-  constructor(props) {
-    super(props);
+  state = {
+    sections: [
+      { title: 'ICON SETS', data: ICON_SETS },
+      { title: 'BUTTONS', data: BUTTONS, renderItem: renderButton },
+      { title: 'INLINE', data: INLINE, renderItem: renderInline },
+      { title: 'STYLING', data: STYLING, renderItem: renderStyling },
+    ],
+  };
 
-    const ds = new ListView.DataSource({
-      sectionHeaderHasChanged: (h1, h2) => h1 !== h2,
-      rowHasChanged: (r1, r2) => r1 !== r2,
-    });
-    this.state = {
-      dataSource: ds.cloneWithRowsAndSections({
-        iconSets: ICON_SETS,
-        buttons: BUTTONS,
-        inline: INLINE,
-        styling: STYLING,
-      }),
-    };
-  }
-
-  render() {
-    return (
-      <ListView
-        dataSource={this.state.dataSource}
-        renderSectionHeader={(data, section) =>
-          this._renderSectionHeader(data, section)
-        }
-        renderRow={(rowData, sectionID, rowID) =>
-          this._renderRow(rowData, sectionID, rowID)
-        }
-        initialListSize={15}
-      />
-    );
-  }
-
-  _renderSectionHeader(data, section) {
-    return (
-      <View style={styles.sectionHeader}>
-        <Text style={styles.sectionHeaderTitle}>{section.toUpperCase()}</Text>
-      </View>
-    );
-  }
-
-  _renderRow(rowData, sectionID, rowID) {
-    switch (sectionID) {
-      case 'iconSets':
-        return (
-          <TouchableHighlight
-            onPress={() => this._pressRow(rowID)}
-            underlayColor="#eee"
-          >
-            <View>
-              <View style={styles.row}>
-                <Text style={styles.text}>{rowData.name}</Text>
-                <Text style={styles.glyphCount}>{rowData.glyphs.length}</Text>
-              </View>
-              <View style={styles.separator} />
-            </View>
-          </TouchableHighlight>
-        );
-      case 'buttons':
-        return (
-          <View>
-            <View style={styles.row}>
-              <FontAwesome.Button
-                name={rowData.icon}
-                backgroundColor={rowData.backgroundColor}
-                color={rowData.color}
-                onPress={() =>
-                  Alert.alert('You pressed "' + rowData.text + '"')
-                }
-              >
-                {rowData.text}
-              </FontAwesome.Button>
-            </View>
-            <View style={styles.separator} />
-          </View>
-        );
-      case 'styling':
-        return (
-          <View>
-            <View style={styles.row}>
-              <View style={rowData.containerStyle}>
-                <FontAwesome {...rowData} />
-              </View>
-            </View>
-            <View style={styles.separator} />
-          </View>
-        );
-      case 'inline':
-        return (
-          <View>
-            <View style={styles.row}>{rowData}</View>
-            <View style={styles.separator} />
-          </View>
-        );
-      default:
-        return false;
-    }
-  }
-
-  _pressRow(rowID) {
-    const iconSet = ICON_SETS[rowID];
+  navigateToIconSet(iconSet) {
     if (Platform.OS === 'ios') {
       this.props.navigator.push({
         title: iconSet.name,
@@ -283,5 +173,30 @@ export default class IconSetsList extends PureComponent {
         iconSet,
       });
     }
+  }
+
+  renderIconSet = ({ item }) => (
+    <TouchableHighlight
+      onPress={() => this.navigateToIconSet(item)}
+      underlayColor="#eee"
+    >
+      <View style={styles.row}>
+        <Text style={styles.text}>{item.name}</Text>
+        <Text style={styles.glyphCount}>{item.glyphNames.length}</Text>
+      </View>
+    </TouchableHighlight>
+  );
+
+  render() {
+    return (
+      <SectionList
+        sections={this.state.sections}
+        renderSectionHeader={renderSectionHeader}
+        renderItem={this.renderIconSet}
+        ItemSeparatorComponent={ItemSeparator}
+        initialNumToRender={15}
+        keyExtractor={keyExtractor}
+      />
+    );
   }
 }

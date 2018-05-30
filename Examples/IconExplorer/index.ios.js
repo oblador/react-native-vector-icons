@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { AppRegistry, NavigatorIOS, StyleSheet } from 'react-native';
 
 import IconSetList from './IconSetList';
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function IconExplorer(props) {
+export default function IconExplorer() {
   return (
     <NavigatorIOS
       style={styles.container}

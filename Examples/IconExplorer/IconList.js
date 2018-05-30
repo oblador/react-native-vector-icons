@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import {
   DeviceEventEmitter,
-  ListView,
+  FlatList,
   Platform,
   StyleSheet,
   Text,
@@ -20,21 +20,24 @@ const styles = StyleSheet.create({
     paddingLeft: 8,
     flexDirection: 'row',
     alignItems: 'center',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: '#ccc',
   },
   searchBarInput: {
     fontSize: 15,
     flex: 1,
     height: Platform.OS === 'android' ? 45 : 30,
   },
+  list: {
+    flex: 1,
+  },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
     padding: 10,
     overflow: 'hidden',
-  },
-  separator: {
-    height: 0.5,
-    backgroundColor: '#CCCCCC',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: '#ccc',
   },
   icon: {
     textAlign: 'center',
@@ -46,67 +49,59 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class IconList extends PureComponent {
-  constructor(props) {
-    super(props);
+const getFilteredGlyphNames = (iconSet, query) =>
+  iconSet.glyphNames.filter(glyphNames =>
+    glyphNames.find(glyphName => glyphName.indexOf(query) !== -1)
+  );
 
-    const ds = new ListView.DataSource({
-      rowHasChanged: (r1, r2) => r1 !== r2,
-    });
-    this.state = {
-      filter: '',
-      dataSource: ds.cloneWithRows(this.props.iconSet.glyphs),
-    };
-  }
+const keyExtractor = item => item[0];
+
+export default class IconList extends PureComponent {
+  state = {
+    filter: '',
+  };
 
   componentDidMount() {
     if (Platform.OS === 'osx') {
-      this._searchListner = DeviceEventEmitter.addListener('onSearchIcons', e =>
-        this.searchIcons(e.query.toLowerCase())
+      this.searchListner = DeviceEventEmitter.addListener('onSearchIcons', e =>
+        this.setFilter(e.query)
       );
-      console.log({ _searchListner: this._searchListner });
     }
   }
 
   componentWillUnmount() {
-    if (this._searchListner) {
-      this._searchListner.remove();
+    if (this.searchListner) {
+      this.searchListner.remove();
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    const glyphs = this.getFilteredGlyphs(nextProps.iconSet, this.state.filter);
+  setFilter(filter) {
     this.setState({
-      dataSource: this.state.dataSource.cloneWithRows(glyphs),
+      filter: filter.toLowerCase(),
     });
   }
 
-  getFilteredGlyphs(iconSet, query) {
-    return iconSet.glyphs.filter(glyph => {
-      for (let i = 0; i < glyph.length; i++) {
-        if (glyph[i].indexOf(query) !== -1) {
-          return true;
-        }
-      }
-      return false;
-    });
-  }
-
-  searchIcons(query) {
-    const glyphs = this.getFilteredGlyphs(this.props.iconSet, query);
-
-    this.setState({
-      filter: query,
-      dataSource: this.state.dataSource.cloneWithRows(glyphs),
-    });
-  }
-
-  handleSearchChange(event) {
+  handleSearchChange = event => {
     const filter = event.nativeEvent.text.toLowerCase();
-    this.searchIcons(filter);
-  }
+    this.setFilter(filter);
+  };
+
+  renderListItem = ({ item }) => {
+    const Icon = this.props.iconSet.component;
+    return (
+      <View style={styles.row}>
+        <Icon name={item[0]} size={20} style={styles.icon} />
+        <Text style={styles.text}>{item.join(', ')}</Text>
+      </View>
+    );
+  };
 
   render() {
+    const glyphNames = getFilteredGlyphNames(
+      this.props.iconSet,
+      this.state.filter
+    );
+
     return (
       <View style={styles.container}>
         {Platform.OS !== 'osx' && (
@@ -114,42 +109,24 @@ export default class IconList extends PureComponent {
             <TextInput
               autoCapitalize="none"
               autoCorrect={false}
-              autoFocus={true}
-              onChange={event => this.handleSearchChange(event)}
+              autoFocus
+              onChange={this.handleSearchChange}
               placeholder="Search an icon..."
               style={styles.searchBarInput}
-              onFocus={() =>
-                this.refs.listview &&
-                this.refs.listview.getScrollResponder().scrollTo(0, 0)
-              }
             />
           </View>
         )}
-        <View style={styles.separator} />
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={(rowData, sectionID, rowID) =>
-            this._renderRow(rowData, sectionID, rowID)
-          }
+        <FlatList
+          data={glyphNames}
+          style={styles.list}
+          renderItem={this.renderListItem}
           automaticallyAdjustContentInsets={false}
           keyboardDismissMode="on-drag"
           keyboardShouldPersistTaps="always"
           showsVerticalScrollIndicator={false}
-          initialListSize={20}
+          initialNumToRender={20}
+          keyExtractor={keyExtractor}
         />
-      </View>
-    );
-  }
-
-  _renderRow(rowData, sectionID, rowID) {
-    const Icon = this.props.iconSet.component;
-    return (
-      <View>
-        <View style={styles.row}>
-          <Icon name={rowData[0]} size={20} style={styles.icon} />
-          <Text style={styles.text}>{rowData.join(', ')}</Text>
-        </View>
-        <View style={styles.separator} />
       </View>
     );
   }
