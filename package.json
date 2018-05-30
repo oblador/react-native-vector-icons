@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "eslint index.js {bin,lib}/*.js",
+    "format": "prettier index.js {bin,lib,Examples/*}/*.js --write",
     "prepublish": "npm run build-web",
     "build": "rm -rf {Fonts,Entypo.js,EvilIcons.js,FontAwesome.js,Foundation.js,Ionicons.js,MaterialIcons.js,MaterialCommunityIcons.js,Octicons.js,Zocial.js,SimpleLineIcons.js,glyphmaps} && mkdir Fonts glyphmaps && npm run build-entypo && npm run build-evilicons && npm run build-fontawesome && npm run build-foundation && npm run build-ionicons && npm run build-materialicons && npm run build-materialcommunityicons && npm run build-octicons && npm run build-zocial && npm run build-simplelineicons",
     "build-web": "rm -rf ./dist && babel ./{,lib}/*.js --out-dir ./dist && cp -R ./glyphmaps ./dist/glyphmaps",
@@ -81,6 +82,6 @@
     "material-design-icons": "^3.0.1",
     "mdi": "^2.2.43",
     "octicons": "^7.2.0",
-    "prettier": "^1.5.3"
+    "prettier": "^1.13.3"
   }
 }

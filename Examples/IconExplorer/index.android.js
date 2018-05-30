@@ -36,26 +36,28 @@ function RouteMapper(route, navigationOperations, onComponentRef) {
   _navigator = navigationOperations;
   if (route.name === 'list') {
     return (
-      <View style={{flex: 1}}>
+      <View style={{ flex: 1 }}>
         <Ionicons.ToolbarAndroid
           style={styles.toolbar}
           titleColor="white"
-          title={route.title} />
+          title={route.title}
+        />
         <IconSetList navigator={navigationOperations} />
       </View>
     );
   } else if (route.name === 'iconSet') {
     return (
-      <View style={{flex: 1}}>
+      <View style={{ flex: 1 }}>
         <Ionicons.ToolbarAndroid
           actions={[]}
           navIconName="md-arrow-back"
           onIconClicked={navigationOperations.pop}
           style={styles.toolbar}
           titleColor="white"
-          title={route.title} />
+          title={route.title}
+        />
         <IconList
-          style={{flex: 1}}
+          style={{ flex: 1 }}
           navigator={navigationOperations}
           iconSet={route.iconSet}
         />

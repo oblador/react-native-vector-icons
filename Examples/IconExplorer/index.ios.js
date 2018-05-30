@@ -1,9 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-  AppRegistry,
-  NavigatorIOS,
-  StyleSheet,
-} from 'react-native';
+import { AppRegistry, NavigatorIOS, StyleSheet } from 'react-native';
 
 import IconSetList from './IconSetList';
 

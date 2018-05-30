@@ -49,24 +49,30 @@ const GLYPH_MAPS = {
   Zocial: ZocialGlyphs,
 };
 
-const ICON_SETS = _.map({
-  Entypo,
-  EvilIcons,
-  Feather,
-  FontAwesome,
-  Foundation,
-  Ionicons,
-  MaterialIcons,
-  MaterialCommunityIcons,
-  Octicons,
-  Zocial,
-}, (component, name) => ({ name, component }))
-.map(iconSet => {
-  // Some icons have multiple names, so group them by glyph
-  const glyphMap = GLYPH_MAPS[iconSet.name];
-  iconSet.glyphs = _.values(_.groupBy(Object.keys(glyphMap), name => glyphMap[name]));
-  return iconSet;
-});
+const ICON_SETS = _
+  .map(
+    {
+      Entypo,
+      EvilIcons,
+      Feather,
+      FontAwesome,
+      Foundation,
+      Ionicons,
+      MaterialIcons,
+      MaterialCommunityIcons,
+      Octicons,
+      Zocial,
+    },
+    (component, name) => ({ name, component })
+  )
+  .map(iconSet => {
+    // Some icons have multiple names, so group them by glyph
+    const glyphMap = GLYPH_MAPS[iconSet.name];
+    iconSet.glyphs = _.values(
+      _.groupBy(Object.keys(glyphMap), name => glyphMap[name])
+    );
+    return iconSet;
+  });
 
 const BUTTONS = [
   {
@@ -89,29 +95,47 @@ const BUTTONS = [
 
 const STYLING = [
   { name: 'github', size: 40, color: '#333' },
-  { name: 'heart', size: 30, color: 'white', containerStyle: {
-    backgroundColor: '#e0284f',
-    borderRadius: 23,
-    paddingHorizontal: 8,
-    paddingTop: 9,
-    paddingBottom: 7,
-  } },
-  { name: 'star', size: 20, color: '#FF0000', containerStyle: {
-    borderRadius: 20,
-    padding: 7,
-    borderWidth: 3,
-    backgroundColor: '#FFDD00',
-    borderColor: '#165E00',
-  } },
-  { name: 'font', size: 20, color: 'white', containerStyle: {
-    borderRadius: 5,
-    padding: 5,
-    backgroundColor: '#47678e',
-  } },
+  {
+    name: 'heart',
+    size: 30,
+    color: 'white',
+    containerStyle: {
+      backgroundColor: '#e0284f',
+      borderRadius: 23,
+      paddingHorizontal: 8,
+      paddingTop: 9,
+      paddingBottom: 7,
+    },
+  },
+  {
+    name: 'star',
+    size: 20,
+    color: '#FF0000',
+    containerStyle: {
+      borderRadius: 20,
+      padding: 7,
+      borderWidth: 3,
+      backgroundColor: '#FFDD00',
+      borderColor: '#165E00',
+    },
+  },
+  {
+    name: 'font',
+    size: 20,
+    color: 'white',
+    containerStyle: {
+      borderRadius: 5,
+      padding: 5,
+      backgroundColor: '#47678e',
+    },
+  },
 ];
 
 const INLINE = [
-  (<Text>This text has <FontAwesome name="rocket" /> inline <FontAwesome name="hand-peace-o"> icons!</FontAwesome></Text>),
+  <Text>
+    This text has <FontAwesome name="rocket" /> inline{' '}
+    <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
+  </Text>,
 ];
 
 const styles = StyleSheet.create({
@@ -166,8 +190,12 @@ export default class IconSetsList extends PureComponent {
     return (
       <ListView
         dataSource={this.state.dataSource}
-        renderSectionHeader={(data, section) => this._renderSectionHeader(data, section)}
-        renderRow={(rowData, sectionID, rowID) => this._renderRow(rowData, sectionID, rowID)}
+        renderSectionHeader={(data, section) =>
+          this._renderSectionHeader(data, section)
+        }
+        renderRow={(rowData, sectionID, rowID) =>
+          this._renderRow(rowData, sectionID, rowID)
+        }
         initialListSize={15}
       />
     );
@@ -176,38 +204,46 @@ export default class IconSetsList extends PureComponent {
   _renderSectionHeader(data, section) {
     return (
       <View style={styles.sectionHeader}>
-        <Text style={styles.sectionHeaderTitle}>
-          {section.toUpperCase()}
-        </Text>
+        <Text style={styles.sectionHeaderTitle}>{section.toUpperCase()}</Text>
       </View>
     );
   }
 
   _renderRow(rowData, sectionID, rowID) {
     switch (sectionID) {
-      case 'iconSets': return (
-        <TouchableHighlight onPress={() => this._pressRow(rowID)} underlayColor="#eee">
+      case 'iconSets':
+        return (
+          <TouchableHighlight
+            onPress={() => this._pressRow(rowID)}
+            underlayColor="#eee"
+          >
+            <View>
+              <View style={styles.row}>
+                <Text style={styles.text}>{rowData.name}</Text>
+                <Text style={styles.glyphCount}>{rowData.glyphs.length}</Text>
+              </View>
+              <View style={styles.separator} />
+            </View>
+          </TouchableHighlight>
+        );
+      case 'buttons':
+        return (
           <View>
             <View style={styles.row}>
-              <Text style={styles.text}>
-                {rowData.name}
-              </Text>
-              <Text style={styles.glyphCount}>
-                {rowData.glyphs.length}
-              </Text>
+              <FontAwesome.Button
+                name={rowData.icon}
+                backgroundColor={rowData.backgroundColor}
+                color={rowData.color}
+                onPress={() =>
+                  Alert.alert('You pressed "' + rowData.text + '"')
+                }
+              >
+                {rowData.text}
+              </FontAwesome.Button>
             </View>
             <View style={styles.separator} />
           </View>
-        </TouchableHighlight>
-      );
-      case 'buttons': return (
-        <View>
-          <View style={styles.row}>
-            <FontAwesome.Button name={rowData.icon} backgroundColor={rowData.backgroundColor} color={rowData.color} onPress={() => Alert.alert('You pressed "' + rowData.text + '"')}>{rowData.text}</FontAwesome.Button>
-          </View>
-          <View style={styles.separator} />
-        </View>
-      );
+        );
       case 'styling':
         return (
           <View>
@@ -222,13 +258,12 @@ export default class IconSetsList extends PureComponent {
       case 'inline':
         return (
           <View>
-            <View style={styles.row}>
-              {rowData}
-            </View>
+            <View style={styles.row}>{rowData}</View>
             <View style={styles.separator} />
           </View>
         );
-      default: return false;
+      default:
+        return false;
     }
   }
 

@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   searchBar: {
-    marginTop: (Platform.OS === 'android' ? 0 : 64),
+    marginTop: Platform.OS === 'android' ? 0 : 64,
     padding: 3,
     paddingLeft: 8,
     flexDirection: 'row',
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   searchBarInput: {
     fontSize: 15,
     flex: 1,
-    height: (Platform.OS === 'android' ? 45 : 30),
+    height: Platform.OS === 'android' ? 45 : 30,
   },
   row: {
     flexDirection: 'row',
@@ -50,7 +50,9 @@ export default class IconList extends PureComponent {
   constructor(props) {
     super(props);
 
-    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    const ds = new ListView.DataSource({
+      rowHasChanged: (r1, r2) => r1 !== r2,
+    });
     this.state = {
       filter: '',
       dataSource: ds.cloneWithRows(this.props.iconSet.glyphs),
@@ -59,10 +61,10 @@ export default class IconList extends PureComponent {
 
   componentDidMount() {
     if (Platform.OS === 'osx') {
-      this._searchListner =  DeviceEventEmitter.addListener('onSearchIcons',
-        (e) => this.searchIcons(e.query.toLowerCase())
+      this._searchListner = DeviceEventEmitter.addListener('onSearchIcons', e =>
+        this.searchIcons(e.query.toLowerCase())
       );
-      console.log({_searchListner: this._searchListner})
+      console.log({ _searchListner: this._searchListner });
     }
   }
 
@@ -117,14 +119,18 @@ export default class IconList extends PureComponent {
               placeholder="Search an icon..."
               style={styles.searchBarInput}
               onFocus={() =>
-                this.refs.listview && this.refs.listview.getScrollResponder().scrollTo(0, 0)}
+                this.refs.listview &&
+                this.refs.listview.getScrollResponder().scrollTo(0, 0)
+              }
             />
           </View>
-          )}
+        )}
         <View style={styles.separator} />
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={(rowData, sectionID, rowID) => this._renderRow(rowData, sectionID, rowID)}
+          renderRow={(rowData, sectionID, rowID) =>
+            this._renderRow(rowData, sectionID, rowID)
+          }
           automaticallyAdjustContentInsets={false}
           keyboardDismissMode="on-drag"
           keyboardShouldPersistTaps="always"
@@ -141,9 +147,7 @@ export default class IconList extends PureComponent {
       <View>
         <View style={styles.row}>
           <Icon name={rowData[0]} size={20} style={styles.icon} />
-          <Text style={styles.text}>
-            {rowData.join(', ')}
-          </Text>
+          <Text style={styles.text}>{rowData.join(', ')}</Text>
         </View>
         <View style={styles.separator} />
       </View>
