@@ -13,7 +13,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons) 
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons) 
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-* [`Ionicons`](http://ionicframework.com/docs/v2/ionicons/) by Ben Sperry (v3.0.0, **859** icons)
+* [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
 * [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.2.43, **2244** icons)
 * [`Octicons`](http://octicons.github.com) by Github, Inc. (v7.2.0, **176** icons)

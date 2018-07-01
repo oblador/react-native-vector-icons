@@ -1588,9 +1588,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ionicons@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-3.0.0.tgz#40b8daf4fd7a31150bd002160f66496e22a98c3c"
+ionicons@^4.0.0:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-4.2.4.tgz#f09a921f47f82f9bf51287f41cd9f4ce43c10a66"
 
 is-arrayish@^0.2.1:
   version "0.2.1"
