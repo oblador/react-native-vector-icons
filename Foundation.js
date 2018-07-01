@@ -6,7 +6,7 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/Foundation.json';
 
-const iconSet = createIconSet(glyphMap, 'fontcustom', 'Foundation.ttf');
+const iconSet = createIconSet(glyphMap, 'Foundation', 'Foundation.ttf');
 
 export default iconSet;
 

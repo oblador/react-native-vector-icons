@@ -6,7 +6,7 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/Zocial.json';
 
-const iconSet = createIconSet(glyphMap, 'zocial', 'Zocial.ttf');
+const iconSet = createIconSet(glyphMap, 'Zocial', 'Zocial.ttf');
 
 export default iconSet;
 
