@@ -15,14 +15,14 @@
     "build-entypo": "./scripts/entypo.sh",
     "build-evilicons": "./scripts/evilicons.sh",
     "build-fontawesome": "./scripts/fontawesome.sh",
-    "build-feather": "./scripts/feather",
-    "build-foundation": "./scripts/foundation",
-    "build-ionicons": "./scripts/ionicons",
-    "build-materialicons": "./scripts/materialicons",
-    "build-materialcommunityicons": "./scripts/materialcommunityicons",
-    "build-octicons": "./scripts/octicons",
-    "build-zocial": "./scripts/zocial",
-    "build-simplelineicons": "./scripts/simplelineicons"
+    "build-feather": "./scripts/feather.sh",
+    "build-foundation": "./scripts/foundation.sh",
+    "build-ionicons": "./scripts/ionicons.sh",
+    "build-materialicons": "./scripts/materialicons.sh",
+    "build-materialcommunityicons": "./scripts/materialcommunityicons.sh",
+    "build-octicons": "./scripts/octicons.sh",
+    "build-zocial": "./scripts/zocial.sh",
+    "build-simplelineicons": "./scripts/simplelineicons.sh"
   },
   "keywords": [
     "react-native",
