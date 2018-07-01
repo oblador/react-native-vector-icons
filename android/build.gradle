@@ -12,19 +12,19 @@ apply plugin: 'com.android.library'
 
 def ext = rootProject.ext
 
-def reactNativeVersion = ext.has('reactNative') ? ext.reactNative : '+'
-def _compileSdkVersion = ext.has('compileSdkVersion') ? ext.compileSdkVersion : 27
-def _buildToolsVersion = ext.has('buildToolsVersion') ? ext.buildToolsVersion : '27.0.3'
-def _minSdkVersion = ext.has('minSdkVersion') ? ext.minSdkVersion : 16
-def _targetSdkVersion = ext.has('targetSdkVersion') ? ext.targetSdkVersion : 27
+def projectReactNativeVersion = ext.has('reactNativeVersion') ? ext.reactNativeVersion : '+'
+def projectCompileSdkVersion = ext.has('compileSdkVersion') ? ext.compileSdkVersion : 27
+def projectBuildToolsVersion = ext.has('buildToolsVersion') ? ext.buildToolsVersion : '27.0.3'
+def projectMinSdkVersion = ext.has('minSdkVersion') ? ext.minSdkVersion : 16
+def projectTargetSdkVersion = ext.has('targetSdkVersion') ? ext.targetSdkVersion : 27
 
 android {
-  compileSdkVersion _compileSdkVersion
-  buildToolsVersion _buildToolsVersion
+  compileSdkVersion projectCompileSdkVersion
+  buildToolsVersion projectBuildToolsVersion
 
   defaultConfig {
-    minSdkVersion _minSdkVersion
-    targetSdkVersion _targetSdkVersion
+    minSdkVersion projectMinSdkVersion
+    targetSdkVersion projectTargetSdkVersion
     versionCode 1
     versionName "1.0"
   }
@@ -38,5 +38,5 @@ repositories {
 }
 
 dependencies {
-  compile "com.facebook.react:react-native:${reactNativeVersion}"
+  compile "com.facebook.react:react-native:${projectReactNativeVersion}"
 }
