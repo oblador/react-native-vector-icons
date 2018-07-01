@@ -58,6 +58,8 @@ Edit `Info.plist` as described above.
 
 If you are using `use_frameworks!` in your `Podfile` you instead need to dynamically load the icon font by doing `Icon.loadFont()` when boostrapping your application.
 
+*Note: You must be consuming React itself via CocoaPods for this to work, see [React Native documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps) on how to set that up.*
+
 ### Android
 
 #### Option: With Gradle (recommended)
