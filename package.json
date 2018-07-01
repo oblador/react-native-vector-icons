@@ -80,7 +80,7 @@
     "font-awesome": "^4.6.3",
     "ionicons": "^4.0.0",
     "material-design-icons": "^3.0.1",
-    "mdi": "^2.2.43",
+    "@mdi/font": "^2.4.85",
     "octicons": "^7.2.0",
     "prettier": "^1.13.3"
   }
