@@ -3,10 +3,10 @@
  * Usage: <AntDesign name="icon-name" size={20} color="#4F8EF7" />
  */
 
-import createIconSet from 'react-native-vector-icons/lib/create-icon-set';
+import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/AntDesign.json';
 
-const iconSet = createIconSet(glyphMap, 'Ant Design', 'AntDesign.ttf');
+const iconSet = createIconSet(glyphMap, 'AntDesign', 'AntDesign.ttf');
 
 export default iconSet;
 
