@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import './App.css';
 
+import AntD from '../../glyphmaps/AntD.json';
 import Entypo from '../../glyphmaps/Entypo.json';
 import EvilIcons from '../../glyphmaps/EvilIcons.json';
 import Feather from '../../glyphmaps/Feather.json';
@@ -16,6 +17,7 @@ import SimpleLineIcons from '../../glyphmaps/SimpleLineIcons.json';
 import Zocial from '../../glyphmaps/Zocial.json';
 
 const IconFamilies = {
+  AntD,
   Entypo,
   EvilIcons,
   Feather,
@@ -64,7 +66,7 @@ class SearchBar extends PureComponent {
   state = {
     keyword: ''
   };
-  
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.inputRef.value);
@@ -73,7 +75,7 @@ class SearchBar extends PureComponent {
   handleChange = (e) => {
     e.preventDefault();
     clearInterval(this.timer);
-    
+
     this.setState({ keyword: this.inputRef.value });
 
     this.timer = setTimeout(

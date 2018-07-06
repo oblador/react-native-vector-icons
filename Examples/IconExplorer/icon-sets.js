@@ -1,4 +1,5 @@
 import { pipe, toPairs, groupBy, map } from 'ramda';
+import AntD from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Feather from 'react-native-vector-icons/Feather';
@@ -9,6 +10,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import Zocial from 'react-native-vector-icons/Zocial';
+import AntDGlyphs from 'react-native-vector-icons/glyphmaps/AntDesign.json';
 import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo.json';
 import EvilIconsGlyphs from 'react-native-vector-icons/glyphmaps/EvilIcons.json';
 import FeatherGlyphs from 'react-native-vector-icons/glyphmaps/Feather.json';
@@ -21,6 +23,7 @@ import OcticonsGlyphs from 'react-native-vector-icons/glyphmaps/Octicons.json';
 import ZocialGlyphs from 'react-native-vector-icons/glyphmaps/Zocial.json';
 
 const GLYPH_MAPS = {
+  AntD: AntDGlyphs,
   Entypo: EntypoGlyphs,
   EvilIcons: EvilIconsGlyphs,
   Feather: FeatherGlyphs,
@@ -34,6 +37,7 @@ const GLYPH_MAPS = {
 };
 
 const ICON_SETS = {
+  AntD,
   Entypo,
   EvilIcons,
   Feather,
