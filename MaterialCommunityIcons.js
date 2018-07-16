@@ -6,7 +6,7 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/MaterialCommunityIcons.json';
 
-const iconSet = createIconSet(glyphMap, 'Material Design Icons', 'MaterialCommunityIcons.ttf');
+const iconSet = createIconSet(glyphMap, 'MaterialCommunityIcons', 'MaterialCommunityIcons.ttf');
 
 export default iconSet;
 

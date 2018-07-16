@@ -15,3 +15,6 @@ bower_components
 # Xcode
 
 xcuserdata
+
+# Webstorm
+.idea
