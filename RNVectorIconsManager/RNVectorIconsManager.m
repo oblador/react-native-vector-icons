@@ -105,4 +105,28 @@ RCT_EXPORT_METHOD(loadFontWithFileName:(NSString *)fontFileName
   }
 }
 
++ (void)setupFontAwesome5
+{
+  for (NSString *family in [UIFont familyNames]) {
+    if ([family hasPrefix:@"Font Awesome 5"]) {
+      for (NSString *fontName in [UIFont fontNamesForFamilyName:family]) {
+        UIFont *font = [UIFont fontWithName:fontName size:12];
+        NSDictionary *traits = [font.fontDescriptor objectForKey:UIFontDescriptorTraitsAttribute];
+        
+        if ([fontName hasSuffix:@"Light"]) {
+          [traits setValue:[NSNumber numberWithDouble:UIFontWeightUltraLight] forKey:UIFontWeightTrait];
+        } else if ([fontName hasSuffix:@"Regular"]) {
+          if ([fontName hasSuffix:@"BrandsRegular"]) {
+            [traits setValue:[NSNumber numberWithDouble:UIFontWeightMedium] forKey:UIFontWeightTrait];
+          } else {
+            [traits setValue:[NSNumber numberWithDouble:UIFontWeightLight] forKey:UIFontWeightTrait];
+          }
+        } else if ([fontName hasSuffix:@"Solid"]) {
+          [traits setValue:[NSNumber numberWithDouble:UIFontWeightBold] forKey:UIFontWeightTrait];
+        }
+      }
+    }
+  }
+}
+
 @end
