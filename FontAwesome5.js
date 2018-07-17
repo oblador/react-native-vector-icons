@@ -5,10 +5,7 @@
 
 import React, {PureComponent} from 'react';
 
-import {
-  Platform,
-  Text
-} from 'react-native';
+import {Platform} from 'react-native';
 
 import PropTypes from 'prop-types';
 
@@ -136,5 +133,4 @@ export function FA5iconSet(pro_version = false) {
 }
 
 const iconSet = FA5iconSet(false);
-
 export default iconSet;
