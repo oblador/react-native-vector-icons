@@ -35,27 +35,30 @@ export function FA5iconSet(pro_version = false) {
   const BrandsSet = createIconSet(
     glyphs,
     'Font Awesome 5 Brands',
-    'FontAwesome5_Brands.otf'
+    'FontAwesome5_Brands.ttf'
   );
 
   const RegularSet = createIconSet(
     glyphs,
     familyName,
-    'FontAwesome5_Regular.otf'
+    'FontAwesome5_Regular.ttf',
+    {fontWeight: Platform.OS === 'ios' ? '400' : undefined}
   );
 
   const LightSet = pro_version
     ? createIconSet(
       glyphs,
       familyName,
-      'FontAwesome5_Light.otf'
+      'FontAwesome5_Light.ttf',
+      {fontWeight: Platform.OS === 'ios' ? '100' : undefined}
     )
     : RegularSet;
 
   const SolidSet = createIconSet(
     glyphs,
     familyName,
-    'FontAwesome5_Solid.otf'
+    'FontAwesome5_Solid.ttf',
+    {fontWeight: Platform.OS === 'ios' ? '700' : undefined}
   );
 
   class FA5icon extends PureComponent {
@@ -87,7 +90,6 @@ export function FA5iconSet(pro_version = false) {
     static Solid = SolidSet;
 
     render() {
-      var weight;
       var IconSet;
 
       var type = this.props.type;
@@ -105,27 +107,21 @@ export function FA5iconSet(pro_version = false) {
 
       switch (type) {
         case FA5Types.brand:
-          weight = '500';
           IconSet = BrandsSet;
           break;
         case FA5Types.light:
-          weight = '200';
           IconSet = LightSet;
           break;
         case FA5Types.solid:
-          weight = '700';
           IconSet = SolidSet;
           break;
         default:
-          weight = '400';
           IconSet = RegularSet;
           break;
       }
 
       return (
-        <IconSet {...this.props} extraStyle={{
-          fontWeight: Platform.OS === 'ios' ? weight : 'normal'
-        }} />
+        <IconSet {...this.props} />
       );
     }
   }

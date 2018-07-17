@@ -77,9 +77,7 @@ No specified type indicates Regular font.
 
 So just using icons works pretty much like normal. However, access to the
 Button, TabBarItem etc. must be accessed in a certain way due to the split
-icon files and it **only works on Android for now** (iOS defaults to
-Regular font).
-The icon set must be specified:
+icon files. The icon set must be specified:
 
 ```javascript
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -95,7 +93,25 @@ account and then access the ```Services``` tab.
 
 Run ```npm run fa5upgrade``` in the ```node_modules/react-native-vector-icons```
 folder and enter the token when asked to in order to
-upgrade to the Pro version. Note that you need to rebuild the app after this.
+upgrade to the Pro version. Note that you need to link and rebuild the app
+after this.
+
+## Manually
+
+If the shell script does not work you can install the Pro version manually
+by replacing the font files in ```Fonts/```. First you need to download the
+Pro pack from the FontAwesome website (use the web version). Then rename
+the font files in the ```webfonts/``` folder like this:
+
+* fa-brands-400.ttf > FontAwesome5_Brands.ttf
+* fa-light-300.ttf > FontAwesome5_Light.ttf
+* fa-regular-400.ttf > FontAwesome5_Regular.ttf
+* fa-solid-900.ttf > FontAwesome5_Solid.ttf
+
+Place these in the ```Fonts/``` folder and replace the Free font files in the
+process.
+
+Link and rebuild the project.
 
 ## Using the Pro version
 
