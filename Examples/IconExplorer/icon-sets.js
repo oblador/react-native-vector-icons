@@ -3,6 +3,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Foundation from 'react-native-vector-icons/Foundation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -13,6 +14,7 @@ import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo.json';
 import EvilIconsGlyphs from 'react-native-vector-icons/glyphmaps/EvilIcons.json';
 import FeatherGlyphs from 'react-native-vector-icons/glyphmaps/Feather.json';
 import FontAwesomeGlyphs from 'react-native-vector-icons/glyphmaps/FontAwesome.json';
+import FontAwesome5Glyphs from 'react-native-vector-icons/glyphmaps/FontAwesome5.json';
 import FoundationGlyphs from 'react-native-vector-icons/glyphmaps/Foundation.json';
 import IoniconsGlyphs from 'react-native-vector-icons/glyphmaps/Ionicons.json';
 import MaterialIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialIcons.json';
@@ -25,6 +27,7 @@ const GLYPH_MAPS = {
   EvilIcons: EvilIconsGlyphs,
   Feather: FeatherGlyphs,
   FontAwesome: FontAwesomeGlyphs,
+  FontAwesome5: FontAwesome5Glyphs.free,
   Foundation: FoundationGlyphs,
   Ionicons: IoniconsGlyphs,
   MaterialIcons: MaterialIconsGlyphs,
@@ -38,6 +41,7 @@ const ICON_SETS = {
   EvilIcons,
   Feather,
   FontAwesome,
+  FontAwesome5,
   Foundation,
   Ionicons,
   MaterialIcons,

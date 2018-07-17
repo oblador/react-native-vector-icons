@@ -15,6 +15,7 @@
     "build-entypo": "./scripts/entypo.sh",
     "build-evilicons": "./scripts/evilicons.sh",
     "build-fontawesome": "./scripts/fontawesome.sh",
+    "build-fontawesome5": "./scripts/fontawesome5.sh",
     "build-feather": "./scripts/feather.sh",
     "build-foundation": "./scripts/foundation.sh",
     "build-ionicons": "./scripts/ionicons.sh",
@@ -22,7 +23,8 @@
     "build-materialcommunityicons": "./scripts/materialcommunityicons.sh",
     "build-octicons": "./scripts/octicons.sh",
     "build-zocial": "./scripts/zocial.sh",
-    "build-simplelineicons": "./scripts/simplelineicons.sh"
+    "build-simplelineicons": "./scripts/simplelineicons.sh",
+    "fa5upgrade": "./scripts/fa5upgrade.sh"
   },
   "keywords": [
     "react-native",

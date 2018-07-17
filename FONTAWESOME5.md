@@ -90,32 +90,12 @@ const solid_icon_btn = (<FontAwesome5.Solid.Button name={'comments'} />);
 
 # Upgrading to Pro
 
-Upgrading to the Pro version requires some manual work since you need to be
-logged in to download the files. Note that these steps should be performed
-before linking the library in order to avoid any side-effects.
+You need your FontAwesome npm token which can be obtained by logging into your
+account and then access the ```Services``` tab.
 
-## How-To
-
-1. First you need to download the font files by logging into your account,
-going to 'Downloads' and downloading the 'Font Awesome Pro for Desktop'
-package.
-2. Unzip the downloaded archive.
-3. a) Automatic installation
-    * Included in the ```bin/```
-3. b) Manual installation
-    * Move the font files into the ```Fonts/``` folder of this library and rename
-      them:
-        * ```Font Awesome 5 Brands-Regular-400.otf``` > ```FontAwesome5_Brands.otf```
-        * ```Font Awesome 5 Pro-Light-300.otf``` > ```FontAwesome5_Light.otf```
-        * ```Font Awesome 5 Pro-Regular-400.otf``` > ```FontAwesome5_Regular.otf```
-        * ```Font Awesome 5 Pro-Solid-900.otf``` > ```FontAwesome5_Solid.otf```
-4. Link the library using ```react-native link react-native-vector-icons```
-or any manual method described in the [`main readme`](README.md).
-
-## Upgrading after linking the free fonts
-If you have already linked the library you should unlink the library before
-upgrading and relinking. This is done by running ```react-native unlink
-react-native-vector-icons``` and should work without issues.
+Run ```npm run fa5upgrade``` in the ```node_modules/react-native-vector-icons```
+folder and enter the token when asked to in order to
+upgrade to the Pro version. Note that you need to rebuild the app after this.
 
 ## Using the Pro version
 

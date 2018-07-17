@@ -29,30 +29,31 @@ export const FA5Types = {
 
 export function FA5iconSet(pro_version = false) {
   const version = pro_version ? 'Pro' : 'Free';
+  const glyphs = pro_version ? glyphMap.pro : glyphMap.free;
   const familyName = 'Font Awesome 5 ' + version;
 
   const BrandsSet = createIconSet(
-    glyphMap,
+    glyphs,
     'Font Awesome 5 Brands',
     'FontAwesome5_Brands.otf'
   );
 
   const RegularSet = createIconSet(
-    glyphMap,
+    glyphs,
     familyName,
     'FontAwesome5_Regular.otf'
   );
 
   const LightSet = pro_version
     ? createIconSet(
-      glyphMap,
+      glyphs,
       familyName,
       'FontAwesome5_Light.otf'
     )
     : RegularSet;
 
   const SolidSet = createIconSet(
-    glyphMap,
+    glyphs,
     familyName,
     'FontAwesome5_Solid.otf'
   );
@@ -63,7 +64,7 @@ export function FA5iconSet(pro_version = false) {
       light: PropTypes.bool,
       solid: PropTypes.bool,
       type: PropTypes.oneOf(Object.keys(FA5Types)),
-      name: PropTypes.oneOf(Object.keys(glyphMap)),
+      name: PropTypes.oneOf(Object.keys(glyphs)),
       size: PropTypes.number,
       color: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       children: PropTypes.node,
