@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.platform       = :ios, "7.0"
   s.source         = { :git => "https://github.com/oblador/react-native-vector-icons.git", :tag => "v#{s.version}" }
   s.source_files   = 'RNVectorIconsManager/**/*.{h,m}'
-  s.resources      = "Fonts/*.(o|t)tf"
+  s.resources      = "Fonts/*.ttf"
   s.preserve_paths = "**/*.js"
   s.dependency 'React'
 
