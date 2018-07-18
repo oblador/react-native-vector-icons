@@ -14,7 +14,7 @@ import createIconSet, {
   DEFAULT_ICON_SIZE
 } from './lib/create-icon-set';
 
-import glyphMap from './glyphmaps/FontAwesome5.json';
+import glyphMap from './glyphmaps/FontAwesome5Free.json';
 
 import createIconButtonComponent from './lib/icon-button';
 import createTabBarItemIOSComponent from './lib/tab-bar-item-ios';
@@ -27,7 +27,7 @@ export const FA5Types = {
   brand: 2
 };
 
-export function FA5iconSet(pro_version = false) {
+export function FA5iconSet(glyphMap, pro_version = false) {
   const version = pro_version ? 'Pro' : 'Free';
   const glyphs = pro_version ? glyphMap.pro : glyphMap.free;
   const familyName = 'Font Awesome 5 ' + version;
@@ -129,5 +129,5 @@ export function FA5iconSet(pro_version = false) {
   return FA5icon;
 }
 
-const iconSet = FA5iconSet(false);
+const iconSet = FA5iconSet(glyphMap, false);
 export default iconSet;

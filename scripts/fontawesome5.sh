@@ -9,30 +9,41 @@ echo "Setting up npm config"
 npm config set "@fortawesome:registry" https://npm.fontawesome.com/
 npm config set "//npm.fontawesome.com/:_authToken" $fa5_token
 
-echo "Installing FontAwesome5"
+echo "Creating temporary folder"
 
-npm install @fortawesome/fontawesome-free --no-shrinkwrap
-npm install @fortawesome/fontawesome-pro --no-shrinkwrap
+TEMP_DIR=`mktemp -d -t rnvi`
+echo "Created folder $TEMP_DIR"
+pushd $TEMP_DIR
+
+echo "Downloading FontAwesome5"
+
+npm pack @fortawesome/fontawesome-free
+tar -xzf fortawesome-fontawesome-free*
+mv package free
+
+npm pack @fortawesome/fontawesome-pro
+tar -xzf fortawesome-fontawesome-pro*
+mv package pro
+
+popd
 
 echo "Creating glyphmaps"
 
-mkdir -p temp
-
 node ./bin/generate-icon \
-    ./node_modules/@fortawesome/fontawesome-free/css/all.css -g temp/free_all.json \
+    $TEMP_DIR/free/css/all.css -g glyphmaps/FontAwesome5Free.json \
      --componentName FontAwesome5 --fontFamily fontawesome5 -p .fa-
 node ./bin/generate-icon \
-    ./node_modules/@fortawesome/fontawesome-pro/css/all.css -g temp/pro_all.json \
+    $TEMP_DIR/pro/css/all.css -g glyphmaps/FontAwesome5Pro.json \
      --componentName FontAwesome5 --fontFamily fontawesome5 -p .fa-
-
-node ./bin/generate-fa5-glyphmap > glyphmaps/FontAwesome5.json
-
-rm -r temp
 
 echo "Copying font files"
 
-cp ./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf Fonts/FontAwesome5_Brands.ttf
-cp ./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf Fonts/FontAwesome5_Regular.ttf
-cp ./node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf Fonts/FontAwesome5_Solid.ttf
+cp $TEMP_DIR/free/webfonts/fa-brands-400.ttf Fonts/FontAwesome5_Brands.ttf
+cp $TEMP_DIR/free/webfonts/fa-regular-400.ttf Fonts/FontAwesome5_Regular.ttf
+cp $TEMP_DIR/free/webfonts/fa-solid-900.ttf Fonts/FontAwesome5_Solid.ttf
+
+echo "Removing temporary files"
+
+rm -r $TEMP_DIR
 
 echo "Done"

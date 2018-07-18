@@ -5,5 +5,7 @@
 
 import {FA5iconSet} from './FontAwesome5';
 
-const iconSet = FA5iconSet(true);
+import glyphMap from './glyphmaps/FontAwesome5Pro.json';
+
+const iconSet = FA5iconSet(glyphMap, true);
 export default iconSet;
