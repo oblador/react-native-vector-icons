@@ -91,27 +91,14 @@ const solid_icon_btn = (<FontAwesome5.Solid.Button name={'comments'} />);
 You need your FontAwesome npm token which can be obtained by logging into your
 account and then access the ```Services``` tab.
 
-Run ```npm run fa5upgrade``` in the ```node_modules/react-native-vector-icons```
-folder and enter the token when asked to in order to
-upgrade to the Pro version. Note that you need to link and rebuild the app
-after this.
+Run ```fa5upgrade``` and enter the token when asked to in order to
+upgrade to the Pro version.
 
 ## Manually
 
-If the shell script does not work you can install the Pro version manually
-by replacing the font files in ```Fonts/```. First you need to download the
-Pro pack from the FontAwesome website (use the web version). Then rename
-the font files in the ```webfonts/``` folder like this:
-
-* fa-brands-400.ttf > FontAwesome5_Brands.ttf
-* fa-light-300.ttf > FontAwesome5_Light.ttf
-* fa-regular-400.ttf > FontAwesome5_Regular.ttf
-* fa-solid-900.ttf > FontAwesome5_Solid.ttf
-
-Place these in the ```Fonts/``` folder and replace the Free font files in the
-process.
-
-Link and rebuild the project.
+If the shell script does not work you can install the Pro version manually. 
+All you really need to do is adding the Pro fonts to your project, there is
+instructions on how to do this in main README.md.
 
 ## Using the Pro version
 
