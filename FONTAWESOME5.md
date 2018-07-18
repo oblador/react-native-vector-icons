@@ -8,42 +8,8 @@ easily implemented without any additional setup.
 
 ### Table of Content
 
-* [`Setup`](#setup-ios-only)
 * [`Usage`](#usage)
 * [`Upgrading to Pro`](#upgrading-to-pro)
-
-# Setup (iOS only)
-
-**If you intend to use FontAwesome5 Pro you should upgrade before linking the
-project, it's just easier that way**
-
-Using ```react-native link react-native-vector-icons``` should do most of the
-work needed but if there is any general problem linking the library, look in
-the [`main readme`](README.md) for a solution.
-
-After the library has been successfully linked to your project you need to
-setup the fonts in the beginning of your AppDelegate.m.
-
-```objc
-#import "AppDelegate.h"
-
-#import <React/RCTBundleURLProvider.h>
-#import <React/RCTRootView.h>
-#import <RNVectorIconsManager.h>            // <----- ADD THIS LINE
-
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  [RNVectorIconsManager setupFontAwesome5]; // <----- ADD THIS LINE
-
-  NSURL *jsCodeLocation;
-  ...
-  React Native setup
-  ...
-  return YES;
-}
-```
 
 # Usage
 
@@ -75,16 +41,39 @@ const icon = (<FontAwesome5 name={'git'} brand />);
 
 No specified type indicates Regular font.
 
-So just using icons works pretty much like normal. However, access to the
-Button, TabBarItem etc. must be accessed in a certain way due to the split
-icon files. The icon set must be specified:
+Button, TabBarItem etc. works the same way:
 
 ```javascript
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-const regular_icon_btn = (<FontAwesome5.Regular.Button name={'comments'} />);
-const solid_icon_btn = (<FontAwesome5.Solid.Button name={'comments'} />);
+const regular_icon_btn = (<FontAwesome5.Button name={'comments'} />);
+const solid_icon_btn = (<FontAwesome5.Button name={'comments'} solid />);
 ```
+
+## getImageSource
+
+```getImageSource``` works a little different due to its native backend and how
+the font is separated into different files. Therefore, the enum FA5Style is
+defined to help setting the style of the font:
+
+```javascript
+const FA5Style = {
+  regular: 0,
+  light: 1,
+  solid: 2,
+  brand: 3,
+};
+```
+
+Use this to select which style the generated image should have:
+
+```javascript
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
+FontAwesome5.getImageSource("comments", 30, '#000', FA5Style.solid).then(source => this.setState({ image: source }));
+```
+
+Not passing a style will result in Regular style.
 
 # Upgrading to Pro
 
@@ -102,9 +91,9 @@ instructions on how to do this in main README.md.
 
 ## Using the Pro version
 
-Should be fairly simple, just include the icon set like this:
+Just as easy as using the Free icons, just include the icon set like this:
 ```javascript
 import FontAwesome5Pro from 'react-native-vector-icons/FontAwesome5Pro';
 
-const icon = (<FontAwesome5 name={'comments'} light/>);
+const icon = (<FontAwesome5Pro name={'comments'} light/>);
 ```
