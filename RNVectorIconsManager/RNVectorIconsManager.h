@@ -19,6 +19,4 @@
 
 @interface RNVectorIconsManager : NSObject <RCTBridgeModule>
 
-+ (void)setupFontAwesome5;
-
 @end
