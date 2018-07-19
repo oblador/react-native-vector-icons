@@ -19,4 +19,8 @@ if (pack.rnpm.assets.indexOf('./assets/fonts') !== -1) process.exit();
 
 pack.rnpm.assets.push('./assets/fonts');
 
-fs.writeFileSync('./package.json', JSON.stringify(pack, null, 2), 'utf8');
+fs.writeFileSync(
+  './package.json',
+  `${JSON.stringify(pack, null, 2)}\r\n`,
+  'utf8'
+);
