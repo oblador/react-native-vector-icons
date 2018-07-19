@@ -3,7 +3,7 @@
 
 const fs = require('fs');
 
-const json = fs.readFileSync('package.json', 'utf8');
+const json = fs.readFileSync('./package.json', 'utf8');
 
 const pack = JSON.parse(json);
 
@@ -15,8 +15,8 @@ if (!pack.rnpm) {
   pack.rnpm.assets = [];
 }
 
-if (pack.rnpm.assets.indexOf('./assets/fonts') !== 0) process.exit();
+if (pack.rnpm.assets.indexOf('./assets/fonts') !== -1) process.exit();
 
 pack.rnpm.assets.push('./assets/fonts');
 
-fs.writeFileSync('package.json', JSON.stringify(pack, null, 2), 'utf8');
+fs.writeFileSync('./package.json', JSON.stringify(pack, null, 2), 'utf8');

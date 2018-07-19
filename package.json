@@ -4,7 +4,6 @@
   "description": "Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.",
   "main": "dist/index.js",
   "bin": {
-    "add-font-assets": "./bin/add-font-assets.js",
     "fa5-upgrade": "./bin/fa5-upgrade.sh",
     "generate-icon": "./bin/generate-icon.js"
   },

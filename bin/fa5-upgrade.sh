@@ -36,7 +36,7 @@ cp ${TEMP_DIR}/pro/webfonts/fa-solid-900.ttf assets/fonts/FontAwesome5_Pro_Solid
 
 echo "Modifying package.json"
 
-./node_modules/.bin/add-font-assets
+/usr/bin/env node ./node_modules/react-native-vector-icons/bin/add-font-assets.js
 
 echo "Linking project"
 
