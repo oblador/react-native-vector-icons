@@ -15,8 +15,7 @@ if (!pack.rnpm) {
   pack.rnpm.assets = [];
 }
 
-for (let i = 0; i < pack.rnpm.assets.length; i += 1)
-  if (pack.rnpm.assets[i] === './assets/fonts') process.exit();
+if (pack.rnpm.assets.indexOf('./assets/fonts') !== 0) process.exit();
 
 pack.rnpm.assets.push('./assets/fonts');
 
