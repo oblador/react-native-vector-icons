@@ -3,24 +3,22 @@
 
 const fs = require('fs');
 
-const json = fs.readFileSync('./package.json', 'utf8');
+const json = require('../../package.json');
 
-const pack = JSON.parse(json);
-
-if (!pack.rnpm) {
-  pack.rnpm = {
+if (!json.rnpm) {
+  json.rnpm = {
     assets: [],
   };
-} else if (!pack.rnpm.assets) {
-  pack.rnpm.assets = [];
+} else if (!json.rnpm.assets) {
+  json.rnpm.assets = [];
 }
 
-if (pack.rnpm.assets.indexOf('./assets/fonts') !== -1) process.exit();
+if (json.rnpm.assets.indexOf('./assets/fonts') !== -1) process.exit();
 
-pack.rnpm.assets.push('./assets/fonts');
+json.rnpm.assets.push('./assets/fonts');
 
 fs.writeFileSync(
   './package.json',
-  `${JSON.stringify(pack, null, 2)}\r\n`,
+  `${JSON.stringify(json, null, 2)}\r\n`,
   'utf8'
 );
