@@ -5,7 +5,7 @@
 def config = project.hasProperty("vectoricons") ? project.vectoricons : [];
 
 def iconFontsDir = config.iconFontsDir ?: "../../node_modules/react-native-vector-icons/Fonts";
-def iconFontNames = config.iconFontNames ?: [ "*.ttf", "*.otf" ];
+def iconFontNames = config.iconFontNames ?: [ "*.ttf" ];
 
 gradle.projectsEvaluated {
     // Grab all build types and product flavors
