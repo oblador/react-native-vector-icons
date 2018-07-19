@@ -68,7 +68,7 @@ const FA5Style = {
 Use this to select which style the generated image should have:
 
 ```javascript
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import FontAwesome5, { FA5Style } from 'react-native-vector-icons/FontAwesome5';
 
 FontAwesome5.getImageSource("comments", 30, '#000', FA5Style.solid).then(source => this.setState({ image: source }));
 ```
@@ -80,7 +80,7 @@ Not passing a style will result in Regular style.
 You need your FontAwesome npm token which can be obtained by logging into your
 account and then access the ```Services``` tab.
 
-Run ```fa5upgrade``` and enter the token when asked to in order to
+Run ```./node_modules/.bin/fa5-upgrade``` and enter the token when asked to in order to
 upgrade to the Pro version.
 
 ## Manually
