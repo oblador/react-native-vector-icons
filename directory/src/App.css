@@ -24,6 +24,11 @@
 }
 
 @font-face {
+  font-family: 'FontAwesome5Brands';
+  src: url('../../Fonts/FontAwesome5_Brands.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Foundation';
   src: url('../../Fonts/Foundation.ttf') format('truetype');
 }
