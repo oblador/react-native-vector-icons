@@ -31,10 +31,20 @@ echo "Creating glyphmaps"
 
 node ./bin/generate-icon \
     ${TEMP_DIR}/free/css/all.css -g glyphmaps/FontAwesome5Free.json \
-     --componentName FontAwesome5 --fontFamily fontawesome5 -p .fa-
+     --componentName FontAwesome5 --fontFamily fontawesome5 -p .fa- > /dev/null
 node ./bin/generate-icon \
     ${TEMP_DIR}/pro/css/all.css -g glyphmaps/FontAwesome5Pro.json \
-     --componentName FontAwesome5 --fontFamily fontawesome5 -p .fa-
+     --componentName FontAwesome5 --fontFamily fontawesome5 -p .fa- > /dev/null
+
+echo "Generating font metadata"
+
+node ./bin/generate-fontawesome5-metadata \
+    --path ${TEMP_DIR}/free \
+    --output glyphmaps/FontAwesome5Free_meta.json
+
+node ./bin/generate-fontawesome5-metadata \
+    --path ${TEMP_DIR}/pro \
+    --output glyphmaps/FontAwesome5Pro_meta.json
 
 echo "Copying font files"
 

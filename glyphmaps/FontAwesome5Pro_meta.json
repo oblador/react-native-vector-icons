@@ -1,0 +1,6052 @@
+{
+  "500px": [
+    "brands"
+  ],
+  "accessible-icon": [
+    "brands"
+  ],
+  "accusoft": [
+    "brands"
+  ],
+  "address-book": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "address-card": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "adjust": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "adn": [
+    "brands"
+  ],
+  "adversal": [
+    "brands"
+  ],
+  "affiliatetheme": [
+    "brands"
+  ],
+  "alarm-clock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "algolia": [
+    "brands"
+  ],
+  "align-center": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "align-justify": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "align-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "align-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "allergies": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "amazon": [
+    "brands"
+  ],
+  "amazon-pay": [
+    "brands"
+  ],
+  "ambulance": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "american-sign-language-interpreting": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "amilia": [
+    "brands"
+  ],
+  "anchor": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "android": [
+    "brands"
+  ],
+  "angellist": [
+    "brands"
+  ],
+  "angle-double-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "angle-double-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "angle-double-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "angle-double-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "angle-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "angle-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "angle-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "angle-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "angry": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "angrycreative": [
+    "brands"
+  ],
+  "angular": [
+    "brands"
+  ],
+  "app-store": [
+    "brands"
+  ],
+  "app-store-ios": [
+    "brands"
+  ],
+  "apper": [
+    "brands"
+  ],
+  "apple": [
+    "brands"
+  ],
+  "apple-pay": [
+    "brands"
+  ],
+  "archive": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "archway": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-circle-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-circle-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-circle-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-circle-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-from-bottom": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-from-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-from-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-from-top": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-square-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-square-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-square-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-square-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-to-bottom": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-to-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-to-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-to-top": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-alt-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-circle-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-circle-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-circle-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-circle-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-from-bottom": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-from-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-from-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-from-top": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-square-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-square-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-square-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-square-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-to-bottom": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-to-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-to-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-to-top": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrow-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrows": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrows-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrows-alt-h": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrows-alt-v": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrows-h": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "arrows-v": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "assistive-listening-systems": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "asterisk": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "asymmetrik": [
+    "brands"
+  ],
+  "at": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "atlas": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "audible": [
+    "brands"
+  ],
+  "audio-description": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "autoprefixer": [
+    "brands"
+  ],
+  "avianex": [
+    "brands"
+  ],
+  "aviato": [
+    "brands"
+  ],
+  "award": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "aws": [
+    "brands"
+  ],
+  "backspace": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "backward": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "badge": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "badge-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "balance-scale": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "balance-scale-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "balance-scale-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ban": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "band-aid": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bandcamp": [
+    "brands"
+  ],
+  "barcode": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "barcode-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "barcode-read": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "barcode-scan": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bars": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "baseball": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "baseball-ball": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "basketball-ball": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "basketball-hoop": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bath": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "battery-bolt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "battery-empty": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "battery-full": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "battery-half": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "battery-quarter": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "battery-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "battery-three-quarters": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bed": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "beer": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "behance": [
+    "brands"
+  ],
+  "behance-square": [
+    "brands"
+  ],
+  "bell": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bell-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bezier-curve": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bicycle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bimobject": [
+    "brands"
+  ],
+  "binoculars": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "birthday-cake": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bitbucket": [
+    "brands"
+  ],
+  "bitcoin": [
+    "brands"
+  ],
+  "bity": [
+    "brands"
+  ],
+  "black-tie": [
+    "brands"
+  ],
+  "blackberry": [
+    "brands"
+  ],
+  "blanket": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "blender": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "blind": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "blogger": [
+    "brands"
+  ],
+  "blogger-b": [
+    "brands"
+  ],
+  "bluetooth": [
+    "brands"
+  ],
+  "bluetooth-b": [
+    "brands"
+  ],
+  "bold": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bolt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bomb": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bong": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "book": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "book-heart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "book-open": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bookmark": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bowling-ball": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bowling-pins": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "box": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "box-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "box-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "box-fragile": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "box-full": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "box-heart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "box-open": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "box-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "box-usd": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "boxes": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "boxes-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "boxing-glove": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "braille": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "briefcase": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "briefcase-medical": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "broadcast-tower": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "broom": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "browser": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "brush": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "btc": [
+    "brands"
+  ],
+  "bug": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "building": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bullhorn": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bullseye": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "burn": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "buromobelexperte": [
+    "brands"
+  ],
+  "bus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "bus-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "buysellads": [
+    "brands"
+  ],
+  "calculator": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "calendar": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "calendar-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "calendar-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "calendar-edit": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "calendar-exclamation": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "calendar-minus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "calendar-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "calendar-times": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "camera": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "camera-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "camera-retro": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cannabis": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "capsules": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "car": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-circle-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-circle-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-circle-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-circle-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-square-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-square-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-square-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-square-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "caret-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cart-arrow-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cart-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cc-amazon-pay": [
+    "brands"
+  ],
+  "cc-amex": [
+    "brands"
+  ],
+  "cc-apple-pay": [
+    "brands"
+  ],
+  "cc-diners-club": [
+    "brands"
+  ],
+  "cc-discover": [
+    "brands"
+  ],
+  "cc-jcb": [
+    "brands"
+  ],
+  "cc-mastercard": [
+    "brands"
+  ],
+  "cc-paypal": [
+    "brands"
+  ],
+  "cc-stripe": [
+    "brands"
+  ],
+  "cc-visa": [
+    "brands"
+  ],
+  "centercode": [
+    "brands"
+  ],
+  "certificate": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chalkboard": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chalkboard-teacher": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chart-area": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chart-bar": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chart-line": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chart-pie": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "check-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "check-double": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "check-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-bishop": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-bishop-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-board": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-clock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-clock-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-king": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-king-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-knight": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-knight-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-pawn": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-pawn-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-queen": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-queen-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-rook": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chess-rook-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-circle-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-circle-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-circle-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-circle-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-double-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-double-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-double-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-double-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-square-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-square-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-square-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-square-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chevron-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "child": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "chrome": [
+    "brands"
+  ],
+  "church": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "circle-notch": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "clipboard": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "clipboard-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "clipboard-list": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "clock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "clone": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "closed-captioning": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cloud": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cloud-download": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cloud-download-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cloud-upload": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cloud-upload-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cloudscale": [
+    "brands"
+  ],
+  "cloudsmith": [
+    "brands"
+  ],
+  "cloudversify": [
+    "brands"
+  ],
+  "club": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cocktail": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "code": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "code-branch": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "code-commit": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "code-merge": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "codepen": [
+    "brands"
+  ],
+  "codiepie": [
+    "brands"
+  ],
+  "coffee": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cog": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cogs": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "coins": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "columns": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-dots": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-edit": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-exclamation": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-lines": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-minus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-smile": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-alt-times": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-dots": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-edit": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-exclamation": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-lines": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-minus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-smile": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comment-times": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comments": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "comments-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "compact-disc": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "compass": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "compress": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "compress-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "compress-wide": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "concierge-bell": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "connectdevelop": [
+    "brands"
+  ],
+  "container-storage": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "contao": [
+    "brands"
+  ],
+  "conveyor-belt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "conveyor-belt-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cookie": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cookie-bite": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "copy": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "copyright": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "couch": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cpanel": [
+    "brands"
+  ],
+  "creative-commons": [
+    "brands"
+  ],
+  "creative-commons-by": [
+    "brands"
+  ],
+  "creative-commons-nc": [
+    "brands"
+  ],
+  "creative-commons-nc-eu": [
+    "brands"
+  ],
+  "creative-commons-nc-jp": [
+    "brands"
+  ],
+  "creative-commons-nd": [
+    "brands"
+  ],
+  "creative-commons-pd": [
+    "brands"
+  ],
+  "creative-commons-pd-alt": [
+    "brands"
+  ],
+  "creative-commons-remix": [
+    "brands"
+  ],
+  "creative-commons-sa": [
+    "brands"
+  ],
+  "creative-commons-sampling": [
+    "brands"
+  ],
+  "creative-commons-sampling-plus": [
+    "brands"
+  ],
+  "creative-commons-share": [
+    "brands"
+  ],
+  "creative-commons-zero": [
+    "brands"
+  ],
+  "credit-card": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "credit-card-blank": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "credit-card-front": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cricket": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "crop": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "crop-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "crosshairs": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "crow": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "crown": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "css3": [
+    "brands"
+  ],
+  "css3-alt": [
+    "brands"
+  ],
+  "cube": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cubes": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "curling": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cut": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "cuttlefish": [
+    "brands"
+  ],
+  "d-and-d": [
+    "brands"
+  ],
+  "dashcube": [
+    "brands"
+  ],
+  "database": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "deaf": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "delicious": [
+    "brands"
+  ],
+  "deploydog": [
+    "brands"
+  ],
+  "deskpro": [
+    "brands"
+  ],
+  "desktop": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "desktop-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "deviantart": [
+    "brands"
+  ],
+  "diagnoses": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "diamond": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dice": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dice-five": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dice-four": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dice-one": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dice-six": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dice-three": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dice-two": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "digg": [
+    "brands"
+  ],
+  "digital-ocean": [
+    "brands"
+  ],
+  "digital-tachograph": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "discord": [
+    "brands"
+  ],
+  "discourse": [
+    "brands"
+  ],
+  "divide": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dizzy": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dna": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dochub": [
+    "brands"
+  ],
+  "docker": [
+    "brands"
+  ],
+  "dollar-sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dolly": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dolly-empty": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dolly-flatbed": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dolly-flatbed-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dolly-flatbed-empty": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "donate": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "door-closed": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "door-open": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dot-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dove": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "download": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "draft2digital": [
+    "brands"
+  ],
+  "drafting-compass": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dribbble": [
+    "brands"
+  ],
+  "dribbble-square": [
+    "brands"
+  ],
+  "dropbox": [
+    "brands"
+  ],
+  "drum": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "drum-steelpan": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "drupal": [
+    "brands"
+  ],
+  "dumbbell": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "dyalog": [
+    "brands"
+  ],
+  "earlybirds": [
+    "brands"
+  ],
+  "ebay": [
+    "brands"
+  ],
+  "edge": [
+    "brands"
+  ],
+  "edit": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "eject": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "elementor": [
+    "brands"
+  ],
+  "ellipsis-h": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ellipsis-h-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ellipsis-v": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ellipsis-v-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ember": [
+    "brands"
+  ],
+  "empire": [
+    "brands"
+  ],
+  "envelope": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "envelope-open": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "envelope-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "envira": [
+    "brands"
+  ],
+  "equals": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "eraser": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "erlang": [
+    "brands"
+  ],
+  "ethereum": [
+    "brands"
+  ],
+  "etsy": [
+    "brands"
+  ],
+  "euro-sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "exchange": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "exchange-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "exclamation": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "exclamation-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "exclamation-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "exclamation-triangle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "expand": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "expand-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "expand-arrows": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "expand-arrows-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "expand-wide": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "expeditedssl": [
+    "brands"
+  ],
+  "external-link": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "external-link-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "external-link-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "external-link-square-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "eye": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "eye-dropper": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "eye-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "facebook": [
+    "brands"
+  ],
+  "facebook-f": [
+    "brands"
+  ],
+  "facebook-messenger": [
+    "brands"
+  ],
+  "facebook-square": [
+    "brands"
+  ],
+  "fast-backward": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fast-forward": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fax": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "feather": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "feather-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "female": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "field-hockey": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fighter-jet": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-archive": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-audio": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-code": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-contract": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-download": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-edit": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-excel": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-exclamation": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-export": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-image": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-import": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-invoice": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-invoice-dollar": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-medical": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-medical-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-minus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-pdf": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-powerpoint": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-prescription": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-signature": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-times": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-upload": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-video": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "file-word": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fill": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fill-drip": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "film": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "film-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "filter": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fingerprint": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fire": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fire-extinguisher": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "firefox": [
+    "brands"
+  ],
+  "first-aid": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "first-order": [
+    "brands"
+  ],
+  "first-order-alt": [
+    "brands"
+  ],
+  "firstdraft": [
+    "brands"
+  ],
+  "fish": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "flag": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "flag-checkered": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "flask": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "flickr": [
+    "brands"
+  ],
+  "flipboard": [
+    "brands"
+  ],
+  "flushed": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fly": [
+    "brands"
+  ],
+  "folder": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "folder-open": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "font": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "font-awesome": [
+    "brands"
+  ],
+  "font-awesome-alt": [
+    "brands"
+  ],
+  "font-awesome-flag": [
+    "brands"
+  ],
+  "font-awesome-logo-full": [
+    "brands",
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fonticons": [
+    "brands"
+  ],
+  "fonticons-fi": [
+    "brands"
+  ],
+  "football-ball": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "football-helmet": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "forklift": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fort-awesome": [
+    "brands"
+  ],
+  "fort-awesome-alt": [
+    "brands"
+  ],
+  "forumbee": [
+    "brands"
+  ],
+  "forward": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "foursquare": [
+    "brands"
+  ],
+  "fragile": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "free-code-camp": [
+    "brands"
+  ],
+  "freebsd": [
+    "brands"
+  ],
+  "frog": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "frown": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "frown-open": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "fulcrum": [
+    "brands"
+  ],
+  "futbol": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "galactic-republic": [
+    "brands"
+  ],
+  "galactic-senate": [
+    "brands"
+  ],
+  "gamepad": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "gas-pump": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "gavel": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "gem": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "genderless": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "get-pocket": [
+    "brands"
+  ],
+  "gg": [
+    "brands"
+  ],
+  "gg-circle": [
+    "brands"
+  ],
+  "gift": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "git": [
+    "brands"
+  ],
+  "git-square": [
+    "brands"
+  ],
+  "github": [
+    "brands"
+  ],
+  "github-alt": [
+    "brands"
+  ],
+  "github-square": [
+    "brands"
+  ],
+  "gitkraken": [
+    "brands"
+  ],
+  "gitlab": [
+    "brands"
+  ],
+  "gitter": [
+    "brands"
+  ],
+  "glass-martini": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "glass-martini-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "glasses": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "glide": [
+    "brands"
+  ],
+  "glide-g": [
+    "brands"
+  ],
+  "globe": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "globe-africa": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "globe-americas": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "globe-asia": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "gofore": [
+    "brands"
+  ],
+  "golf-ball": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "golf-club": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "goodreads": [
+    "brands"
+  ],
+  "goodreads-g": [
+    "brands"
+  ],
+  "google": [
+    "brands"
+  ],
+  "google-drive": [
+    "brands"
+  ],
+  "google-play": [
+    "brands"
+  ],
+  "google-plus": [
+    "brands"
+  ],
+  "google-plus-g": [
+    "brands"
+  ],
+  "google-plus-square": [
+    "brands"
+  ],
+  "google-wallet": [
+    "brands"
+  ],
+  "graduation-cap": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "gratipay": [
+    "brands"
+  ],
+  "grav": [
+    "brands"
+  ],
+  "greater-than": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "greater-than-equal": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grimace": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-beam": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-beam-sweat": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-hearts": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-squint": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-squint-tears": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-stars": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-tears": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-tongue": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-tongue-squint": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-tongue-wink": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grin-wink": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grip-horizontal": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "grip-vertical": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "gripfire": [
+    "brands"
+  ],
+  "grunt": [
+    "brands"
+  ],
+  "gulp": [
+    "brands"
+  ],
+  "h-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "h1": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "h2": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "h3": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hacker-news": [
+    "brands"
+  ],
+  "hacker-news-square": [
+    "brands"
+  ],
+  "hand-heart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-holding": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-holding-box": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-holding-heart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-holding-seedling": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-holding-usd": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-holding-water": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-lizard": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-paper": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-peace": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-point-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-point-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-point-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-point-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-pointer": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-receiving": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-rock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-scissors": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hand-spock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hands": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hands-heart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hands-helping": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hands-usd": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "handshake": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "handshake-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hashtag": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hdd": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "heading": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "headphones": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "headphones-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "headset": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "heart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "heart-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "heart-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "heartbeat": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "helicopter": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hexagon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "highlighter": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hips": [
+    "brands"
+  ],
+  "hire-a-helper": [
+    "brands"
+  ],
+  "history": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hockey-puck": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hockey-sticks": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "home": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "home-heart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hooli": [
+    "brands"
+  ],
+  "hornbill": [
+    "brands"
+  ],
+  "hospital": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hospital-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hospital-symbol": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hot-tub": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hotel": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hotjar": [
+    "brands"
+  ],
+  "hourglass": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hourglass-end": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hourglass-half": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "hourglass-start": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "houzz": [
+    "brands"
+  ],
+  "html5": [
+    "brands"
+  ],
+  "hubspot": [
+    "brands"
+  ],
+  "i-cursor": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "id-badge": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "id-card": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "id-card-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "image": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "images": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "imdb": [
+    "brands"
+  ],
+  "inbox": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "inbox-in": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "inbox-out": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "indent": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "industry": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "industry-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "infinity": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "info": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "info-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "info-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "instagram": [
+    "brands"
+  ],
+  "internet-explorer": [
+    "brands"
+  ],
+  "inventory": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ioxhost": [
+    "brands"
+  ],
+  "italic": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "itunes": [
+    "brands"
+  ],
+  "itunes-note": [
+    "brands"
+  ],
+  "jack-o-lantern": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "java": [
+    "brands"
+  ],
+  "jedi-order": [
+    "brands"
+  ],
+  "jenkins": [
+    "brands"
+  ],
+  "joget": [
+    "brands"
+  ],
+  "joint": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "joomla": [
+    "brands"
+  ],
+  "js": [
+    "brands"
+  ],
+  "js-square": [
+    "brands"
+  ],
+  "jsfiddle": [
+    "brands"
+  ],
+  "key": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "keybase": [
+    "brands"
+  ],
+  "keyboard": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "keycdn": [
+    "brands"
+  ],
+  "kickstarter": [
+    "brands"
+  ],
+  "kickstarter-k": [
+    "brands"
+  ],
+  "kiss": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "kiss-beam": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "kiss-wink-heart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "kiwi-bird": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "korvue": [
+    "brands"
+  ],
+  "lamp": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "language": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "laptop": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "laravel": [
+    "brands"
+  ],
+  "lastfm": [
+    "brands"
+  ],
+  "lastfm-square": [
+    "brands"
+  ],
+  "laugh": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "laugh-beam": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "laugh-squint": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "laugh-wink": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "leaf": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "leaf-heart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "leanpub": [
+    "brands"
+  ],
+  "lemon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "less": [
+    "brands"
+  ],
+  "less-than": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "less-than-equal": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "level-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "level-down-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "level-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "level-up-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "life-ring": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "lightbulb": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "line": [
+    "brands"
+  ],
+  "link": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "linkedin": [
+    "brands"
+  ],
+  "linkedin-in": [
+    "brands"
+  ],
+  "linode": [
+    "brands"
+  ],
+  "linux": [
+    "brands"
+  ],
+  "lira-sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "list": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "list-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "list-ol": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "list-ul": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "location-arrow": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "lock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "lock-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "lock-open": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "lock-open-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "long-arrow-alt-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "long-arrow-alt-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "long-arrow-alt-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "long-arrow-alt-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "long-arrow-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "long-arrow-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "long-arrow-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "long-arrow-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "loveseat": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "low-vision": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "luchador": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "luggage-cart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "lyft": [
+    "brands"
+  ],
+  "magento": [
+    "brands"
+  ],
+  "magic": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "magnet": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mailchimp": [
+    "brands"
+  ],
+  "male": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mandalorian": [
+    "brands"
+  ],
+  "map": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "map-marked": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "map-marked-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "map-marker": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "map-marker-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "map-pin": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "map-signs": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "marker": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mars": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mars-double": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mars-stroke": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mars-stroke-h": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mars-stroke-v": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mastodon": [
+    "brands"
+  ],
+  "maxcdn": [
+    "brands"
+  ],
+  "medal": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "medapps": [
+    "brands"
+  ],
+  "medium": [
+    "brands"
+  ],
+  "medium-m": [
+    "brands"
+  ],
+  "medkit": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "medrt": [
+    "brands"
+  ],
+  "meetup": [
+    "brands"
+  ],
+  "megaport": [
+    "brands"
+  ],
+  "meh": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "meh-blank": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "meh-rolling-eyes": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "memory": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mercury": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "microchip": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "microphone": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "microphone-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "microphone-alt-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "microphone-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "microsoft": [
+    "brands"
+  ],
+  "minus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "minus-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "minus-hexagon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "minus-octagon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "minus-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mix": [
+    "brands"
+  ],
+  "mixcloud": [
+    "brands"
+  ],
+  "mizuni": [
+    "brands"
+  ],
+  "mobile": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mobile-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mobile-android": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mobile-android-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "modx": [
+    "brands"
+  ],
+  "monero": [
+    "brands"
+  ],
+  "money-bill": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "money-bill-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "money-bill-wave": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "money-bill-wave-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "money-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "money-check-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "monument": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "moon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mortar-pestle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "motorcycle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "mouse-pointer": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "music": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "napster": [
+    "brands"
+  ],
+  "neuter": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "newspaper": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "nimblr": [
+    "brands"
+  ],
+  "nintendo-switch": [
+    "brands"
+  ],
+  "node": [
+    "brands"
+  ],
+  "node-js": [
+    "brands"
+  ],
+  "not-equal": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "notes-medical": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "npm": [
+    "brands"
+  ],
+  "ns8": [
+    "brands"
+  ],
+  "nutritionix": [
+    "brands"
+  ],
+  "object-group": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "object-ungroup": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "octagon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "odnoklassniki": [
+    "brands"
+  ],
+  "odnoklassniki-square": [
+    "brands"
+  ],
+  "old-republic": [
+    "brands"
+  ],
+  "opencart": [
+    "brands"
+  ],
+  "openid": [
+    "brands"
+  ],
+  "opera": [
+    "brands"
+  ],
+  "optin-monster": [
+    "brands"
+  ],
+  "osi": [
+    "brands"
+  ],
+  "outdent": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "page4": [
+    "brands"
+  ],
+  "pagelines": [
+    "brands"
+  ],
+  "paint-brush": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "paint-brush-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "paint-roller": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "palette": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "palfed": [
+    "brands"
+  ],
+  "pallet": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pallet-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "paper-plane": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "paperclip": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "parachute-box": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "paragraph": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "parking": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "passport": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "paste": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "patreon": [
+    "brands"
+  ],
+  "pause": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pause-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "paw": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "paypal": [
+    "brands"
+  ],
+  "pen": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pen-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pen-fancy": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pen-nib": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pen-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pencil": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pencil-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pencil-ruler": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pennant": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "people-carry": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "percent": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "percentage": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "periscope": [
+    "brands"
+  ],
+  "person-carry": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "person-dolly": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "person-dolly-empty": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "phabricator": [
+    "brands"
+  ],
+  "phoenix-framework": [
+    "brands"
+  ],
+  "phoenix-squadron": [
+    "brands"
+  ],
+  "phone": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "phone-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "phone-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "phone-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "phone-volume": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "php": [
+    "brands"
+  ],
+  "pied-piper": [
+    "brands"
+  ],
+  "pied-piper-alt": [
+    "brands"
+  ],
+  "pied-piper-hat": [
+    "brands"
+  ],
+  "pied-piper-pp": [
+    "brands"
+  ],
+  "piggy-bank": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pills": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pinterest": [
+    "brands"
+  ],
+  "pinterest-p": [
+    "brands"
+  ],
+  "pinterest-square": [
+    "brands"
+  ],
+  "plane": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "plane-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "plane-arrival": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "plane-departure": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "play": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "play-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "playstation": [
+    "brands"
+  ],
+  "plug": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "plus-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "plus-hexagon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "plus-octagon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "plus-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "podcast": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "poo": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "portrait": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pound-sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "power-off": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "prescription": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "prescription-bottle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "prescription-bottle-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "print": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "procedures": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "product-hunt": [
+    "brands"
+  ],
+  "project-diagram": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "pushed": [
+    "brands"
+  ],
+  "puzzle-piece": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "python": [
+    "brands"
+  ],
+  "qq": [
+    "brands"
+  ],
+  "qrcode": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "question": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "question-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "question-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "quidditch": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "quinscape": [
+    "brands"
+  ],
+  "quora": [
+    "brands"
+  ],
+  "quote-left": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "quote-right": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "r-project": [
+    "brands"
+  ],
+  "racquet": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ramp-loading": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "random": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ravelry": [
+    "brands"
+  ],
+  "react": [
+    "brands"
+  ],
+  "readme": [
+    "brands"
+  ],
+  "rebel": [
+    "brands"
+  ],
+  "receipt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rectangle-landscape": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rectangle-portrait": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rectangle-wide": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "recycle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "red-river": [
+    "brands"
+  ],
+  "reddit": [
+    "brands"
+  ],
+  "reddit-alien": [
+    "brands"
+  ],
+  "reddit-square": [
+    "brands"
+  ],
+  "redo": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "redo-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "registered": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rendact": [
+    "brands"
+  ],
+  "renren": [
+    "brands"
+  ],
+  "repeat": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "repeat-1": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "repeat-1-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "repeat-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "reply": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "reply-all": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "replyd": [
+    "brands"
+  ],
+  "researchgate": [
+    "brands"
+  ],
+  "resolving": [
+    "brands"
+  ],
+  "retweet": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "retweet-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rev": [
+    "brands"
+  ],
+  "ribbon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "road": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "robot": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rocket": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rocketchat": [
+    "brands"
+  ],
+  "rockrms": [
+    "brands"
+  ],
+  "route": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rss": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rss-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ruble-sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ruler": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ruler-combined": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ruler-horizontal": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ruler-vertical": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "rupee-sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sad-cry": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sad-tear": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "safari": [
+    "brands"
+  ],
+  "sass": [
+    "brands"
+  ],
+  "save": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "scanner": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "scanner-keyboard": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "scanner-touchscreen": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "schlix": [
+    "brands"
+  ],
+  "school": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "screwdriver": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "scribd": [
+    "brands"
+  ],
+  "scrubber": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "search": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "search-minus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "search-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "searchengin": [
+    "brands"
+  ],
+  "seedling": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sellcast": [
+    "brands"
+  ],
+  "sellsy": [
+    "brands"
+  ],
+  "server": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "servicestack": [
+    "brands"
+  ],
+  "share": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "share-all": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "share-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "share-alt-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "share-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shekel-sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shield": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shield-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shield-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ship": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shipping-fast": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shipping-timed": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shirtsinbulk": [
+    "brands"
+  ],
+  "shoe-prints": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shopping-bag": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shopping-basket": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shopping-cart": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shopware": [
+    "brands"
+  ],
+  "shower": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shuttle-van": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "shuttlecock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sign-in": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sign-in-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sign-language": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sign-out": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sign-out-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "signal": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "signature": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "simplybuilt": [
+    "brands"
+  ],
+  "sistrix": [
+    "brands"
+  ],
+  "sitemap": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sith": [
+    "brands"
+  ],
+  "skull": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "skyatlas": [
+    "brands"
+  ],
+  "skype": [
+    "brands"
+  ],
+  "slack": [
+    "brands"
+  ],
+  "slack-hash": [
+    "brands"
+  ],
+  "sliders-h": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sliders-h-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sliders-v": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sliders-v-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "slideshare": [
+    "brands"
+  ],
+  "smile": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "smile-beam": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "smile-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "smile-wink": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "smoking": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "smoking-ban": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "snapchat": [
+    "brands"
+  ],
+  "snapchat-ghost": [
+    "brands"
+  ],
+  "snapchat-square": [
+    "brands"
+  ],
+  "snowflake": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "solar-panel": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sort": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sort-alpha-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sort-alpha-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sort-amount-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sort-amount-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sort-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sort-numeric-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sort-numeric-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sort-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "soundcloud": [
+    "brands"
+  ],
+  "spa": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "space-shuttle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "spade": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "speakap": [
+    "brands"
+  ],
+  "spinner": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "spinner-third": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "splotch": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "spotify": [
+    "brands"
+  ],
+  "spray-can": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "square-full": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "squarespace": [
+    "brands"
+  ],
+  "stack-exchange": [
+    "brands"
+  ],
+  "stack-overflow": [
+    "brands"
+  ],
+  "stamp": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "star": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "star-exclamation": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "star-half": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "star-half-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "staylinked": [
+    "brands"
+  ],
+  "steam": [
+    "brands"
+  ],
+  "steam-square": [
+    "brands"
+  ],
+  "steam-symbol": [
+    "brands"
+  ],
+  "step-backward": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "step-forward": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "stethoscope": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sticker-mule": [
+    "brands"
+  ],
+  "sticky-note": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "stop": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "stop-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "stopwatch": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "store": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "store-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "strava": [
+    "brands"
+  ],
+  "stream": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "street-view": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "strikethrough": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "stripe": [
+    "brands"
+  ],
+  "stripe-s": [
+    "brands"
+  ],
+  "stroopwafel": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "studiovinari": [
+    "brands"
+  ],
+  "stumbleupon": [
+    "brands"
+  ],
+  "stumbleupon-circle": [
+    "brands"
+  ],
+  "subscript": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "subway": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "suitcase": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "suitcase-rolling": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sun": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "superpowers": [
+    "brands"
+  ],
+  "superscript": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "supple": [
+    "brands"
+  ],
+  "surprise": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "swatchbook": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "swimmer": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "swimming-pool": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sync": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "sync-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "syringe": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "table": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "table-tennis": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tablet": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tablet-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tablet-android": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tablet-android-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tablet-rugged": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tablets": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tachometer": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tachometer-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tag": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tags": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tape": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tasks": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "taxi": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "teamspeak": [
+    "brands"
+  ],
+  "telegram": [
+    "brands"
+  ],
+  "telegram-plane": [
+    "brands"
+  ],
+  "tencent-weibo": [
+    "brands"
+  ],
+  "tennis-ball": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "terminal": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "text-height": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "text-width": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "th": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "th-large": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "th-list": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "themeco": [
+    "brands"
+  ],
+  "themeisle": [
+    "brands"
+  ],
+  "thermometer": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "thermometer-empty": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "thermometer-full": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "thermometer-half": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "thermometer-quarter": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "thermometer-three-quarters": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "thumbs-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "thumbs-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "thumbtack": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ticket": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ticket-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "times": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "times-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "times-hexagon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "times-octagon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "times-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tint": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tint-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tired": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "toggle-off": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "toggle-on": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "toolbox": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tooth": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "trade-federation": [
+    "brands"
+  ],
+  "trademark": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "train": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "transgender": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "transgender-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "trash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "trash-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tree": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tree-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "trello": [
+    "brands"
+  ],
+  "triangle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tripadvisor": [
+    "brands"
+  ],
+  "trophy": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "trophy-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "truck": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "truck-container": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "truck-couch": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "truck-loading": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "truck-moving": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "truck-ramp": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tshirt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tty": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tumblr": [
+    "brands"
+  ],
+  "tumblr-square": [
+    "brands"
+  ],
+  "tv": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "tv-retro": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "twitch": [
+    "brands"
+  ],
+  "twitter": [
+    "brands"
+  ],
+  "twitter-square": [
+    "brands"
+  ],
+  "typo3": [
+    "brands"
+  ],
+  "uber": [
+    "brands"
+  ],
+  "uikit": [
+    "brands"
+  ],
+  "umbrella": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "umbrella-beach": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "underline": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "undo": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "undo-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "uniregistry": [
+    "brands"
+  ],
+  "universal-access": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "university": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "unlink": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "unlock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "unlock-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "untappd": [
+    "brands"
+  ],
+  "upload": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "usb": [
+    "brands"
+  ],
+  "usd-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "usd-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-alt-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-astronaut": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-check": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-circle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-clock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-cog": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-edit": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-friends": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-graduate": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-lock": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-md": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-minus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-ninja": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-secret": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-shield": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-tag": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-tie": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "user-times": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "users": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "users-cog": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "ussunnah": [
+    "brands"
+  ],
+  "utensil-fork": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "utensil-knife": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "utensil-spoon": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "utensils": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "utensils-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "vaadin": [
+    "brands"
+  ],
+  "vector-square": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "venus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "venus-double": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "venus-mars": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "viacoin": [
+    "brands"
+  ],
+  "viadeo": [
+    "brands"
+  ],
+  "viadeo-square": [
+    "brands"
+  ],
+  "vial": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "vials": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "viber": [
+    "brands"
+  ],
+  "video": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "video-plus": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "video-slash": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "vimeo": [
+    "brands"
+  ],
+  "vimeo-square": [
+    "brands"
+  ],
+  "vimeo-v": [
+    "brands"
+  ],
+  "vine": [
+    "brands"
+  ],
+  "vk": [
+    "brands"
+  ],
+  "vnv": [
+    "brands"
+  ],
+  "volleyball-ball": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "volume-down": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "volume-mute": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "volume-off": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "volume-up": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "vuejs": [
+    "brands"
+  ],
+  "walking": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "wallet": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "warehouse": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "warehouse-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "watch": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "weebly": [
+    "brands"
+  ],
+  "weibo": [
+    "brands"
+  ],
+  "weight": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "weight-hanging": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "weixin": [
+    "brands"
+  ],
+  "whatsapp": [
+    "brands"
+  ],
+  "whatsapp-square": [
+    "brands"
+  ],
+  "wheelchair": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "whistle": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "whmcs": [
+    "brands"
+  ],
+  "wifi": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "wikipedia-w": [
+    "brands"
+  ],
+  "window": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "window-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "window-close": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "window-maximize": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "window-minimize": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "window-restore": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "windows": [
+    "brands"
+  ],
+  "wine-glass": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "wine-glass-alt": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "wix": [
+    "brands"
+  ],
+  "wolf-pack-battalion": [
+    "brands"
+  ],
+  "won-sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "wordpress": [
+    "brands"
+  ],
+  "wordpress-simple": [
+    "brands"
+  ],
+  "wpbeginner": [
+    "brands"
+  ],
+  "wpexplorer": [
+    "brands"
+  ],
+  "wpforms": [
+    "brands"
+  ],
+  "wrench": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "x-ray": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "xbox": [
+    "brands"
+  ],
+  "xing": [
+    "brands"
+  ],
+  "xing-square": [
+    "brands"
+  ],
+  "y-combinator": [
+    "brands"
+  ],
+  "yahoo": [
+    "brands"
+  ],
+  "yandex": [
+    "brands"
+  ],
+  "yandex-international": [
+    "brands"
+  ],
+  "yelp": [
+    "brands"
+  ],
+  "yen-sign": [
+    "light",
+    "regular",
+    "solid"
+  ],
+  "yoast": [
+    "brands"
+  ],
+  "youtube": [
+    "brands"
+  ],
+  "youtube-square": [
+    "brands"
+  ]
+}
