@@ -7,15 +7,14 @@ const argv = require('yargs')
   .usage('')
   .option('path', {
     alias: 'p',
-    string: true
+    string: true,
   })
   .option('output', {
     alias: 'o',
-    string: true
+    string: true,
   })
   .demandOption('path')
-  .demandOption('output')
-  .argv;
+  .demandOption('output').argv;
 
 const generatedJSON = {};
 
@@ -36,7 +35,9 @@ const sortedKeys = Object.keys(generatedJSON).sort();
 
 const outputJSON = {};
 
-sortedKeys.forEach(key => outputJSON[key] = generatedJSON[key]);
+sortedKeys.forEach(key => {
+  outputJSON[key] = generatedJSON[key];
+});
 
 fs.writeFileSync(
   argv.output,
