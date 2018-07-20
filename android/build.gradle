@@ -10,13 +10,21 @@ buildscript {
 
 apply plugin: 'com.android.library'
 
+def ext = rootProject.ext
+
+def projectReactNativeVersion = ext.has('reactNativeVersion') ? ext.reactNativeVersion : '+'
+def projectCompileSdkVersion = ext.has('compileSdkVersion') ? ext.compileSdkVersion : 27
+def projectBuildToolsVersion = ext.has('buildToolsVersion') ? ext.buildToolsVersion : '27.0.3'
+def projectMinSdkVersion = ext.has('minSdkVersion') ? ext.minSdkVersion : 16
+def projectTargetSdkVersion = ext.has('targetSdkVersion') ? ext.targetSdkVersion : 27
+
 android {
-  compileSdkVersion 26
-  buildToolsVersion "26.0.1"
+  compileSdkVersion projectCompileSdkVersion
+  buildToolsVersion projectBuildToolsVersion
 
   defaultConfig {
-    minSdkVersion 16
-    targetSdkVersion 26
+    minSdkVersion projectMinSdkVersion
+    targetSdkVersion projectTargetSdkVersion
     versionCode 1
     versionName "1.0"
   }
@@ -30,5 +38,5 @@ repositories {
 }
 
 dependencies {
-  compile "com.facebook.react:react-native:+"
+  compile "com.facebook.react:react-native:${projectReactNativeVersion}"
 }
