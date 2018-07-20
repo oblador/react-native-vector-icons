@@ -219,6 +219,15 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 
 You can use `Icon.hasIcon(name)` to check if the name is valid in current icon set.
 
+
+### Methods
+
+| Prop | Description | Default |
+|---|---|---|
+|**`getRawGlyphMap`**|(Advanced Usage) Get's the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()` |*None*|
+|**`getFontFamily`**|(Advanced Usage) Get's the font family that is currently used to retrieve icons as text.  Usage: `const fontFamily = Icon. getFontFamily()`|*None*|
+
+
 ### Styling
 Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
 
