@@ -11,7 +11,8 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
 * [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **70** icons) 
 * [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons) 
-* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons) 
+* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
+* [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.1.1, 1265 (free) **2067** (pro) icons)
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
@@ -24,6 +25,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 1. Run: `$ npm install react-native-vector-icons --save`
 2. For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
+3. If you intend to use FontAwesome 5, check out [`this guide`](FONTAWESOME5.md) to get you started.
 
 ### iOS 
 
@@ -493,4 +495,3 @@ Both npm and android file hierarchies tend to get very deep and even worse when 
 This project is licenced under the [MIT License](http://opensource.org/licenses/mit-license.html).
 
 Any bundled fonts are copyright to their respective authors and mostly under MIT or [SIL OFL](http://scripts.sil.org/OFL).
-
