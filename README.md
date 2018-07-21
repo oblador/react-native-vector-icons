@@ -10,13 +10,14 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
 * [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **70** icons) 
-* [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v3.2.2, **240** icons) 
-* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons) 
+* [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons) 
+* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
+* [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.1.1, 1265 (free) **2067** (pro) icons)
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-* [`Ionicons`](http://ionicframework.com/docs/v2/ionicons/) by Ben Sperry (v3.0.0, **859** icons)
+* [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
-* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.1.19, **2120** icons)
-* [`Octicons`](http://octicons.github.com) by Github, Inc. (v6.0.1, **177** icons)
+* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.4.85, **2485** icons)
+* [`Octicons`](http://octicons.github.com) by Github, Inc. (v7.2.0, **176** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 * [`SimpleLineIcons`](http://simplelineicons.com/) by Sabbir & Contributors (v2.4.1, **189** icons)
 
@@ -24,6 +25,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 1. Run: `$ npm install react-native-vector-icons --save`
 2. For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
+3. If you intend to use FontAwesome 5, check out [`this guide`](FONTAWESOME5.md) to get you started.
 
 ### iOS 
 
@@ -57,6 +59,8 @@ pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 Edit `Info.plist` as described above. 
 
 If you are using `use_frameworks!` in your `Podfile` you instead need to dynamically load the icon font by doing `Icon.loadFont()` when boostrapping your application.
+
+*Note: You must be consuming React itself via CocoaPods for this to work, see [React Native documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps) on how to set that up.*
 
 ### Android
 
@@ -215,6 +219,8 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 |**`name`**|What icon to show, see Icon Explorer app or one of the links above. |*None*|
 |**`color`**|Color of the icon. |*Inherited*|
 
+You can use `Icon.hasIcon(name)` to check if the name is valid in current icon set.
+
 ### Styling
 Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
 
@@ -350,7 +356,7 @@ const Icon = createIconSetFromFontello(fontelloConfig);
 ### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
 ```js
 import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
-import icoMoonConfig from './config.json';
+import icoMoonConfig from './selection.json';
 const Icon = createIconSetFromIcoMoon(icoMoonConfig);
 ```
 
@@ -470,13 +476,14 @@ Save output to file, defaults to STDOUT
 
 #### The icons show up as a crossed out box on Android
 * Make sure you've copied the font to `android/app/src/main/assets/fonts`.
-* Delete the `android/app/build` folder. 
+* Delete the build folder with `rm -rf android/app/build`. 
 * Recompile the project.
 
 #### Red screen with "Unrecognized font family" error on iOS
 * Make sure you've added manually the reference of your `.ttf` on your xcodeproj `Resources` folder.
 * Check that the font you are trying to use appears in `Info.plist`, if you've added the whole folder and it's blue in color, then you need to add it to the path. 
 * Check that the font is copied in the *Copy Bundle Resources* in *Build Phases*.
+* Delete the build folder with `rm -rf ios/build`
 * Recompile the project.
 
 #### Android build fails on Windows for no good reason
@@ -488,4 +495,3 @@ Both npm and android file hierarchies tend to get very deep and even worse when 
 This project is licenced under the [MIT License](http://opensource.org/licenses/mit-license.html).
 
 Any bundled fonts are copyright to their respective authors and mostly under MIT or [SIL OFL](http://scripts.sil.org/OFL).
-

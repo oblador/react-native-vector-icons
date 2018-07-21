@@ -40,7 +40,9 @@ const styles = StyleSheet.create({
 
 class ColoredView extends PureComponent {
   componentWillMount() {
-    Icon.getImageSource('md-arrow-back', 30).then((source) => this.setState({ backIcon: source }));
+    Icon.getImageSource('md-arrow-back', 30).then(source =>
+      this.setState({ backIcon: source })
+    );
   }
 
   _navigateToSubview() {
@@ -55,10 +57,12 @@ class ColoredView extends PureComponent {
 
   render() {
     return (
-      <View style={[styles.tabContent, {backgroundColor: this.props.color}]}>
+      <View style={[styles.tabContent, { backgroundColor: this.props.color }]}>
         <Text style={styles.tabText}>{this.props.pageText}</Text>
         <TouchableOpacity onPress={() => this._navigateToSubview()}>
-          <View style={styles.button}><Text style={styles.buttonText}>Tap Me</Text></View>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Tap Me</Text>
+          </View>
         </TouchableOpacity>
       </View>
     );
@@ -76,7 +80,9 @@ class TabBarExample extends PureComponent {
 
   componentWillMount() {
     // https://github.com/facebook/react-native/issues/1403 prevents this to work for initial load
-    Icon.getImageSource('ios-settings', 30).then((source) => this.setState({ gearIcon: source }));
+    Icon.getImageSource('ios-settings', 30).then(source =>
+      this.setState({ gearIcon: source })
+    );
   }
 
   _renderContent(color, pageText) {
@@ -99,9 +105,7 @@ class TabBarExample extends PureComponent {
 
   render() {
     return (
-      <TabBarIOS
-        tintColor="black"
-        barTintColor="#3abeff">
+      <TabBarIOS tintColor="black" barTintColor="#3abeff">
         <Icon.TabBarItemIOS
           title="Home"
           iconName="ios-home-outline"
@@ -111,7 +115,8 @@ class TabBarExample extends PureComponent {
             this.setState({
               selectedTab: 'home',
             });
-          }}>
+          }}
+        >
           {this._renderContent('#414A8C', 'Home')}
         </Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
@@ -123,7 +128,8 @@ class TabBarExample extends PureComponent {
             this.setState({
               selectedTab: 'profile',
             });
-          }}>
+          }}
+        >
           {this._renderContent('#090', 'Profile')}
         </Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
@@ -135,7 +141,8 @@ class TabBarExample extends PureComponent {
             this.setState({
               selectedTab: 'starred',
             });
-          }}>
+          }}
+        >
           {this._renderContent('#900', 'Starred')}
         </Icon.TabBarItemIOS>
         <Icon.TabBarItemIOS
@@ -150,7 +157,8 @@ class TabBarExample extends PureComponent {
             this.setState({
               selectedTab: 'settings',
             });
-          }}>
+          }}
+        >
           {this._renderContent('#009', 'Settings')}
         </Icon.TabBarItemIOS>
       </TabBarIOS>
