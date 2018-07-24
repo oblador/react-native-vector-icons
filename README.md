@@ -219,7 +219,14 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 |**`name`**|What icon to show, see Icon Explorer app or one of the links above. |*None*|
 |**`color`**|Color of the icon. |*Inherited*|
 
-You can use `Icon.hasIcon(name)` to check if the name is valid in current icon set.
+### Static Methods
+
+| Prop | Description |
+|---|---|
+|**`getFontFamily`**|Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily()`|
+|**`getImageSource`**|Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)`|
+|**`getRawGlyphMap`**|Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()` |
+|**`hasIcon`**|Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name)`|
 
 ### Styling
 Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
