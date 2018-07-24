@@ -38,5 +38,5 @@ repositories {
 }
 
 dependencies {
-  compile "com.facebook.react:react-native:${projectReactNativeVersion}"
+  implementation "com.facebook.react:react-native:${projectReactNativeVersion}"
 }
