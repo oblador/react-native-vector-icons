@@ -13,10 +13,10 @@ apply plugin: 'com.android.library'
 def ext = rootProject.ext
 
 def projectReactNativeVersion = ext.has('reactNativeVersion') ? ext.reactNativeVersion : '+'
-def projectCompileSdkVersion = ext.has('compileSdkVersion') ? ext.compileSdkVersion : 27
-def projectBuildToolsVersion = ext.has('buildToolsVersion') ? ext.buildToolsVersion : '27.0.3'
+def projectCompileSdkVersion = ext.has('compileSdkVersion') ? ext.compileSdkVersion : 26
+def projectBuildToolsVersion = ext.has('buildToolsVersion') ? ext.buildToolsVersion : '26.0.1'
 def projectMinSdkVersion = ext.has('minSdkVersion') ? ext.minSdkVersion : 16
-def projectTargetSdkVersion = ext.has('targetSdkVersion') ? ext.targetSdkVersion : 27
+def projectTargetSdkVersion = ext.has('targetSdkVersion') ? ext.targetSdkVersion : 26
 
 android {
   compileSdkVersion projectCompileSdkVersion
