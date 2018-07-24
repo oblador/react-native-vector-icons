@@ -7,6 +7,7 @@ import Entypo from '../../glyphmaps/Entypo.json';
 import EvilIcons from '../../glyphmaps/EvilIcons.json';
 import Feather from '../../glyphmaps/Feather.json';
 import FontAwesome from '../../glyphmaps/FontAwesome.json';
+import FontAwesome5 from '../../glyphmaps/FontAwesome5Free.json';
 import Foundation from '../../glyphmaps/Foundation.json';
 import Ionicons from '../../glyphmaps/Ionicons.json';
 import MaterialCommunityIcons from '../../glyphmaps/MaterialCommunityIcons.json';
@@ -20,6 +21,7 @@ const IconFamilies = {
   EvilIcons,
   Feather,
   FontAwesome,
+  FontAwesome5,
   Foundation,
   Ionicons,
   MaterialCommunityIcons,
@@ -64,7 +66,7 @@ class SearchBar extends PureComponent {
   state = {
     keyword: ''
   };
-  
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.inputRef.value);
@@ -73,7 +75,7 @@ class SearchBar extends PureComponent {
   handleChange = (e) => {
     e.preventDefault();
     clearInterval(this.timer);
-    
+
     this.setState({ keyword: this.inputRef.value });
 
     this.timer = setTimeout(

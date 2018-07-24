@@ -4,6 +4,7 @@
   "description": "Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.",
   "main": "dist/index.js",
   "bin": {
+    "fa5-upgrade": "./bin/fa5-upgrade.sh",
     "generate-icon": "./bin/generate-icon.js"
   },
   "scripts": {
@@ -15,6 +16,7 @@
     "build-entypo": "./scripts/entypo.sh",
     "build-evilicons": "./scripts/evilicons.sh",
     "build-fontawesome": "./scripts/fontawesome.sh",
+    "build-fontawesome5": "./scripts/fontawesome5.sh",
     "build-feather": "./scripts/feather.sh",
     "build-foundation": "./scripts/foundation.sh",
     "build-ionicons": "./scripts/ionicons.sh",
