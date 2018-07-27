@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@mdi/font@^2.4.85":
-  version "2.4.85"
-  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-2.4.85.tgz#f257a2c3ed1dec3023f2dc12cd9210fab572ab42"
+"@mdi/font@^2.5.94":
+  version "2.5.94"
+  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-2.5.94.tgz#c05415b294243962046c398c8ba0b3a2311cf690"
 
 abbrev@1:
   version "1.1.0"
@@ -1189,9 +1189,9 @@ esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
 
-evil-icons@^1.8.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/evil-icons/-/evil-icons-1.9.0.tgz#0f15d6295cb2ef9bf21dda69a5aedb98e2ac6b92"
+evil-icons@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/evil-icons/-/evil-icons-1.10.1.tgz#5c6abfec541025a90f73bba6151340e015ef7f9b"
 
 execa@^0.7.0:
   version "0.7.0"

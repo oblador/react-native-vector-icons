@@ -4,6 +4,7 @@
   "description": "Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.",
   "main": "dist/index.js",
   "bin": {
+    "fa5-upgrade": "./bin/fa5-upgrade.sh",
     "generate-icon": "./bin/generate-icon.js"
   },
   "scripts": {
@@ -15,6 +16,7 @@
     "build-entypo": "./scripts/entypo.sh",
     "build-evilicons": "./scripts/evilicons.sh",
     "build-fontawesome": "./scripts/fontawesome.sh",
+    "build-fontawesome5": "./scripts/fontawesome5.sh",
     "build-feather": "./scripts/feather.sh",
     "build-foundation": "./scripts/foundation.sh",
     "build-ionicons": "./scripts/ionicons.sh",
@@ -66,6 +68,7 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
+    "@mdi/font": "^2.5.94",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^8.0.0",
     "babel-preset-react-native": "^4.0.0",
@@ -76,11 +79,10 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "^7.1.0",
-    "evil-icons": "^1.8.0",
+    "evil-icons": "^1.10.1",
     "font-awesome": "^4.6.3",
     "ionicons": "^4.0.0",
     "material-design-icons": "^3.0.1",
-    "@mdi/font": "^2.4.85",
     "octicons": "^7.2.0",
     "prettier": "^1.13.3"
   }
