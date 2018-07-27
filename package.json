@@ -68,6 +68,7 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
+    "@mdi/font": "^2.5.94",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^8.0.0",
     "babel-preset-react-native": "^4.0.0",
@@ -82,7 +83,6 @@
     "font-awesome": "^4.6.3",
     "ionicons": "^4.0.0",
     "material-design-icons": "^3.0.1",
-    "@mdi/font": "^2.4.85",
     "octicons": "^7.2.0",
     "prettier": "^1.13.3"
   }

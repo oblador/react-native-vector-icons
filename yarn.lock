@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@mdi/font@^2.4.85":
-  version "2.4.85"
-  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-2.4.85.tgz#f257a2c3ed1dec3023f2dc12cd9210fab572ab42"
+"@mdi/font@^2.5.94":
+  version "2.5.94"
+  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-2.5.94.tgz#c05415b294243962046c398c8ba0b3a2311cf690"
 
 abbrev@1:
   version "1.1.0"
