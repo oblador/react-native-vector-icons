@@ -10,7 +10,7 @@ import metadata from './glyphmaps/FontAwesome5Free_meta.json';
 
 export { FA5Style } from './lib/create-icon-set-from-fontawesome5';
 
-const iconSet = createFA5iconSet(glyphMap, metadata, false, true);
+const iconSet = createFA5iconSet(glyphMap, metadata, false);
 
 export default iconSet;
 
