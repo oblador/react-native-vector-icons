@@ -16,30 +16,18 @@ const argv = require('yargs')
   .demandOption('path')
   .demandOption('output').argv;
 
-const generatedJSON = {};
-
 const path = `${argv.path}/svgs/`;
-fs.readdirSync(path).forEach(file => {
-  if (fs.statSync(path + file).isDirectory()) {
-    generatedJSON[file] = [];
 
-    fs.readdirSync(path + file).forEach(icon => {
-      const name = icon.split('.')[0];
-      generatedJSON[file].push(name);
-    });
-  }
-});
-
-const sortedKeys = Object.keys(generatedJSON).sort();
-
-const outputJSON = {};
-
-sortedKeys.forEach(key => {
-  outputJSON[key] = generatedJSON[key];
-});
+const generatedJSON = {};
+fs.readdirSync(path)
+  .filter(file => fs.statSync(path + file).isDirectory())
+  .forEach(file => {
+    const icons = fs.readdirSync(path + file);
+    generatedJSON[file] = icons.map(icon => icon.split('.')[0]);
+  });
 
 fs.writeFileSync(
   argv.output,
-  `${JSON.stringify(outputJSON, null, 2)}\r\n`,
+  `${JSON.stringify(generatedJSON, null, 2)}\r\n`,
   'utf8'
 );
