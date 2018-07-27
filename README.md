@@ -9,7 +9,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
-* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **70** icons) 
+* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons) 
 * [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons) 
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
 * [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.1.1, 1265 (free) **2067** (pro) icons)

@@ -1189,9 +1189,9 @@ esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
 
-evil-icons@^1.8.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/evil-icons/-/evil-icons-1.9.0.tgz#0f15d6295cb2ef9bf21dda69a5aedb98e2ac6b92"
+evil-icons@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/evil-icons/-/evil-icons-1.10.1.tgz#5c6abfec541025a90f73bba6151340e015ef7f9b"
 
 execa@^0.7.0:
   version "0.7.0"
