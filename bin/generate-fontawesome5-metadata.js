@@ -21,7 +21,7 @@ const generatedJSON = {};
 const path = `${argv.path}/svgs/`;
 fs.readdirSync(path).forEach(file => {
   if (fs.statSync(path + file).isDirectory()) {
-    generatedJSON[file] = []
+    generatedJSON[file] = [];
 
     fs.readdirSync(path + file).forEach(icon => {
       const name = icon.split('.')[0];
