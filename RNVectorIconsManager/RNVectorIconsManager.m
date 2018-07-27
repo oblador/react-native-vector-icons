@@ -29,7 +29,8 @@
 @synthesize bridge = _bridge;
 RCT_EXPORT_MODULE();
 
-- (NSString *)hexStringFromColor:(UIColor *)color {
+- (NSString *)hexStringFromColor:(UIColor *)color
+{
   const CGFloat *components = CGColorGetComponents(color.CGColor);
 
   CGFloat r = components[0];
@@ -42,19 +43,28 @@ RCT_EXPORT_MODULE();
           lroundf(b * 255)];
 }
 
-
-RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph withFontSize:(CGFloat)fontSize withColor:(UIColor *)color callback:(RCTResponseSenderBlock)callback){
+- (NSString *)generateFilePath:(NSString *)glyph withFontName:(NSString *)fontName
+                                                 withFontSize:(CGFloat)fontSize
+                                                 withColor:(UIColor *)color
+                                                 withExtraIdentifier:(NSString *)identifier
+{
   CGFloat screenScale = RCTScreenScale();
-
   NSString *hexColor = [self hexStringFromColor:color];
+  NSString *fileName = [NSString stringWithFormat:@"tmp/RNVectorIcons_%@_%@_%hu_%.f%@@%.fx.png",
+                                                  identifier, fontName,
+                                                  [glyph characterAtIndex:0],
+                                                  fontSize, hexColor, screenScale];
+  
+  return [NSHomeDirectory() stringByAppendingPathComponent:fileName];
+}
 
-  NSString *fileName = [NSString stringWithFormat:@"tmp/RNVectorIcons_%@_%hu_%.f%@@%.fx.png", fontName, [glyph characterAtIndex:0], fontSize, hexColor, screenScale];
-  NSString *filePath = [NSHomeDirectory() stringByAppendingPathComponent:fileName];
-
+- (BOOL)createAndSaveGlyphImage:(NSString *)glyph withFont:(UIFont *)font
+                                                  withFilePath:(NSString *)filePath
+                                                  withColor:(UIColor *)color
+{
   if(![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
     // No cached icon exists, we need to create it and persist to disk
 
-    UIFont *font = [UIFont fontWithName:fontName size:fontSize];
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:glyph attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: color}];
 
     CGSize iconSize = [attributedString size];
@@ -65,11 +75,73 @@ RCT_EXPORT_METHOD(getImageForFont:(NSString*)fontName withGlyph:(NSString*)glyph
     UIGraphicsEndImageContext();
   
     NSData *imageData = UIImagePNGRepresentation(iconImage);
-    BOOL success = [imageData writeToFile:filePath atomically:YES];
-    if(!success) {
-      return callback(@[@"Failed to write rendered icon image"]);
+    return [imageData writeToFile:filePath atomically:YES];
+  }
+  
+  return YES;
+}
+
+RCT_EXPORT_METHOD(getImageForFont:(NSString *)fontName
+                  withGlyph:(NSString *)glyph
+                  withFontSize:(CGFloat)fontSize
+                  withColor:(UIColor *)color
+                  callback:(RCTResponseSenderBlock)callback)
+{
+  UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+  NSString *filePath = [self generateFilePath:glyph withFontName:fontName
+                                                    withFontSize:fontSize
+                                                    withColor:color
+                                                    withExtraIdentifier:@""];
+
+  BOOL success = [self createAndSaveGlyphImage:glyph withFont:font
+                                                     withFilePath:filePath
+                                                     withColor:color];
+  
+  if(!success) {
+    return callback(@[@"Failed to write rendered icon image"]);
+  }
+  
+  callback(@[[NSNull null], filePath]);
+}
+
+RCT_EXPORT_METHOD(getImageForFontAwesome5:(NSString *)fontFamily
+                  withGlyph:(NSString *)glyph
+                  withFontSize:(CGFloat)fontSize
+                  withFontStyle:(NSInteger)style
+                  withColor:(UIColor *)color
+                  callback:(RCTResponseSenderBlock)callback)
+{
+  NSNumber *fontWeight = [NSNumber numberWithDouble:UIFontWeightRegular];
+  if (style == 1)
+    fontWeight = [NSNumber numberWithDouble:UIFontWeightUltraLight];
+  else if (style == 2)
+    fontWeight = [NSNumber numberWithDouble:UIFontWeightBold];
+  
+  NSString *identifier = [NSString stringWithFormat:@"FA5.%ld", (long)style];
+  NSString *filePath = [self generateFilePath:glyph withFontName:fontFamily
+                                                    withFontSize:fontSize
+                                                    withColor:color
+                                                    withExtraIdentifier: identifier];
+  
+  UIFont *font = [UIFont fontWithName:fontFamily size:fontSize];
+  for (NSString *fontString in [UIFont fontNamesForFamilyName:fontFamily]) {
+    UIFont *testFont = [UIFont fontWithName:fontString size:fontSize];
+    NSDictionary *traits = [testFont.fontDescriptor objectForKey:UIFontDescriptorTraitsAttribute];
+    NSNumber *testFontWeight = traits[UIFontWeightTrait];
+    
+    if (testFontWeight.doubleValue == fontWeight.doubleValue) {
+      font = testFont;
+      break;
     }
   }
+  
+  BOOL success = [self createAndSaveGlyphImage:glyph withFont:font
+                                                     withFilePath:filePath
+                                                     withColor:color];
+  if(!success) {
+    return callback(@[@"Failed to write rendered icon image"]);
+  }
+  
   callback(@[[NSNull null], filePath]);
 }
 
@@ -102,6 +174,26 @@ RCT_EXPORT_METHOD(loadFontWithFileName:(NSString *)fontFileName
   }
   if (provider) {
     CFRelease(provider);
+  }
+}
+
+RCT_EXPORT_METHOD(setupFontAwesome5)
+{
+  for (NSString *family in [UIFont familyNames]) {
+    if ([family hasPrefix:@"Font Awesome 5"]) {
+      for (NSString *fontName in [UIFont fontNamesForFamilyName:family]) {
+        UIFont *font = [UIFont fontWithName:fontName size:12];
+        NSDictionary *traits = [font.fontDescriptor objectForKey:UIFontDescriptorTraitsAttribute];
+        
+        if ([fontName hasSuffix:@"Light"]) {
+          [traits setValue:[NSNumber numberWithDouble:UIFontWeightUltraLight] forKey:UIFontWeightTrait];
+        } else if ([fontName hasSuffix:@"Regular"]) {
+          [traits setValue:[NSNumber numberWithDouble:UIFontWeightRegular] forKey:UIFontWeightTrait];
+        } else if ([fontName hasSuffix:@"Solid"]) {
+          [traits setValue:[NSNumber numberWithDouble:UIFontWeightBold] forKey:UIFontWeightTrait];
+        }
+      }
+    }
   }
 }
 

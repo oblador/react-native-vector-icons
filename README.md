@@ -9,13 +9,14 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
-* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **70** icons) 
+* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons) 
 * [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons) 
-* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons) 
+* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
+* [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.1.1, 1265 (free) **2067** (pro) icons)
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
-* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.4.85, **2485** icons)
+* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.5.94, **2595** icons)
 * [`Octicons`](http://octicons.github.com) by Github, Inc. (v7.2.0, **176** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 * [`SimpleLineIcons`](http://simplelineicons.com/) by Sabbir & Contributors (v2.4.1, **189** icons)
@@ -24,6 +25,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 1. Run: `$ npm install react-native-vector-icons --save`
 2. For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
+3. If you intend to use FontAwesome 5, check out [`this guide`](FONTAWESOME5.md) to get you started.
 
 ### iOS 
 
@@ -217,7 +219,14 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 |**`name`**|What icon to show, see Icon Explorer app or one of the links above. |*None*|
 |**`color`**|Color of the icon. |*Inherited*|
 
-You can use `Icon.hasIcon(name)` to check if the name is valid in current icon set.
+### Static Methods
+
+| Prop | Description |
+|---|---|
+|**`getFontFamily`**|Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily()`|
+|**`getImageSource`**|Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)`|
+|**`getRawGlyphMap`**|Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()` |
+|**`hasIcon`**|Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name)`|
 
 ### Styling
 Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
@@ -493,4 +502,3 @@ Both npm and android file hierarchies tend to get very deep and even worse when 
 This project is licenced under the [MIT License](http://opensource.org/licenses/mit-license.html).
 
 Any bundled fonts are copyright to their respective authors and mostly under MIT or [SIL OFL](http://scripts.sil.org/OFL).
-
