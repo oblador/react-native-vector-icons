@@ -160,7 +160,7 @@ class App extends PureComponent {
     let familyName = family;
 
     if (family === 'FontAwesome5') {
-      if (FontAwesome5Meta[name].indexOf('solid') === -1)
+      if (FontAwesome5Meta['solid'].indexOf(name) === -1)
         familyName = 'FontAwesome5Brands';
     }
 
