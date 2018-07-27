@@ -21,12 +21,11 @@ const generatedJSON = {};
 const path = `${argv.path}/svgs/`;
 fs.readdirSync(path).forEach(file => {
   if (fs.statSync(path + file).isDirectory()) {
+    generatedJSON[file] = []
+
     fs.readdirSync(path + file).forEach(icon => {
       const name = icon.split('.')[0];
-
-      if (!generatedJSON[name]) generatedJSON[name] = [];
-
-      generatedJSON[name].push(file);
+      generatedJSON[file].push(name);
     });
   }
 });
