@@ -8,6 +8,8 @@ import EvilIcons from '../../glyphmaps/EvilIcons.json';
 import Feather from '../../glyphmaps/Feather.json';
 import FontAwesome from '../../glyphmaps/FontAwesome.json';
 import FontAwesome5 from '../../glyphmaps/FontAwesome5Free.json';
+import FontAwesome5Brands from '../../glyphmaps/FontAwesome5Free.json';
+import FontAwesome5Meta from '../../glyphmaps/FontAwesome5Free_meta.json';
 import Foundation from '../../glyphmaps/Foundation.json';
 import Ionicons from '../../glyphmaps/Ionicons.json';
 import MaterialCommunityIcons from '../../glyphmaps/MaterialCommunityIcons.json';
@@ -22,6 +24,7 @@ const IconFamilies = {
   Feather,
   FontAwesome,
   FontAwesome5,
+  FontAwesome5Brands,
   Foundation,
   Ionicons,
   MaterialCommunityIcons,
@@ -154,10 +157,17 @@ class App extends PureComponent {
   };
 
   renderIcon(family, name) {
+    let familyName = family;
+
+    if (family === 'FontAwesome5') {
+      if (FontAwesome5Meta['solid'].indexOf(name) === -1)
+        familyName = 'FontAwesome5Brands';
+    }
+
     return (
       <div className="Result-Icon-Container" key={name}>
         <Icon
-          family={family}
+          family={familyName}
           name={name}
           className="Result-Icon"
         />
