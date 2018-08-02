@@ -2,8 +2,10 @@
 /* eslint-disable no-console */
 
 const fs = require('fs');
+const path = require('path');
 
-const json = require('../../package.json');
+/* eslint-disable import/no-dynamic-require */
+const json = require(path.resolve('./package.json'));
 
 if (!json.rnpm) {
   json.rnpm = {
