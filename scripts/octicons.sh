@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 TEMP_DIR=`mktemp -d -t rnvi`
-fontcustom compile node_modules/octicons/build/svg -o $TEMP_DIR -n Octicons -t css -h
+fontcustom compile node_modules/octicons/build/svg -o $TEMP_DIR -n Octicons -t css -h -A
 node bin/generate-icon $TEMP_DIR/Octicons.css\
   --prefix=.icon-\
   --componentName=Octicons\
