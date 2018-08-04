@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5DBEB17C1B18CFF400B34395 /* RNVectorIconsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */; };
 		A39873C81EA65EE60051E01A /* RNVectorIconsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */; };
+		D5CA25432116463D00AFA9BA /* RCTFont+FA5.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CA25422116463D00AFA9BA /* RCTFont+FA5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		5DBEB16B1B18CF1500B34395 /* RNVectorIconsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNVectorIconsManager.h; sourceTree = "<group>"; };
 		5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNVectorIconsManager.m; sourceTree = "<group>"; };
 		A39873CE1EA65EE60051E01A /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRNVectorIcons-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5CA25412116463D00AFA9BA /* RCTFont+FA5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTFont+FA5.h"; sourceTree = "<group>"; };
+		D5CA25422116463D00AFA9BA /* RCTFont+FA5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCTFont+FA5.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 			children = (
 				5DBEB16B1B18CF1500B34395 /* RNVectorIconsManager.h */,
 				5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */,
+				D5CA25412116463D00AFA9BA /* RCTFont+FA5.h */,
+				D5CA25422116463D00AFA9BA /* RCTFont+FA5.m */,
 			);
 			path = RNVectorIconsManager;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DBEB17C1B18CFF400B34395 /* RNVectorIconsManager.m in Sources */,
+				D5CA25432116463D00AFA9BA /* RCTFont+FA5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
