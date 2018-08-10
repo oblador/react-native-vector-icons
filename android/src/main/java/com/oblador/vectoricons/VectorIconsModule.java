@@ -67,7 +67,10 @@ public class VectorIconsModule extends ReactContextBaseJavaModule {
       Rect textBounds = new Rect();
       paint.getTextBounds(glyph, 0, glyph.length(), textBounds);
 
-      Bitmap bitmap = Bitmap.createBitmap(textBounds.width(), textBounds.height(), Bitmap.Config.ARGB_8888);
+      Bitmap bitmap = Bitmap.createBitmap(
+        textBounds.width() == 0 ? 100 : textBounds.width(), 
+        textBounds.height() == 0 ? 100 : textBounds.height(), 
+        Bitmap.Config.ARGB_8888);
       Canvas canvas = new Canvas(bitmap);
       canvas.drawText(glyph, -textBounds.left, -textBounds.top, paint);
 
