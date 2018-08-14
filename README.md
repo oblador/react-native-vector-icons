@@ -343,12 +343,12 @@ For example usage see `Examples/IconExplorer/index.android.js`or the examples se
 ## Custom Fonts
 
 ### `createIconSet(glyphMap, fontFamily[, fontFile])`
-Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be a path to the font file in you asset folder. 
+Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be the custom font file name. 
 
 ```js
 import { createIconSet } from 'react-native-vector-icons';
 const glyphMap = { 'icon-name': 1234, test: '∆' };
-const Icon = createIconSet(glyphMap, 'FontName');
+const Icon = createIconSet(glyphMap, 'FontName', 'font-name.ttf');
 ```
 
 ### `createIconSetFromFontello(config[, fontFamily[, fontFile]])`
@@ -358,6 +358,11 @@ Convenience method to create a custom font based on a [fontello](http://fontello
 import { createIconSetFromFontello } from 'react-native-vector-icons';
 import fontelloConfig from './config.json';
 const Icon = createIconSetFromFontello(fontelloConfig);
+
+// LineAwesome Example
+import { createIconSetFromFontello } from 'react-native-vector-icons';
+import icoMoonConfig from './config.json';
+const Icon = createIconSetFromFontello(icoMoonConfig, 'LineAwesome', 'line-awesome.ttf');
 ```
 
 ### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
