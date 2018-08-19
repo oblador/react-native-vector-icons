@@ -529,7 +529,7 @@ You probably didn't update the font files linked to your native project after up
 
 #### Some icons are missing after upgrading this package
 
-Sometimes vendors decides to remove some icons from newer releases, this has nothing to do with this package. If you depend on an older version of a font you can add it as a [custom font](#custom-font).
+Sometimes vendors decides to remove some icons from newer releases, this has nothing to do with this package. If you depend on an older version of a font you can add it as a [custom font](#custom-fonts).
 
 ## License
 
