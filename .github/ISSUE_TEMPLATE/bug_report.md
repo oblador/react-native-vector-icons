@@ -6,7 +6,7 @@ about: Create a report to help us improve
 
 <!-- Requirements: please go through this checklist before opening a new issue -->
   - [ ] Review the documentation: https://github.com/oblador/react-native-vector-icons
-  - [ ] Search for existing issues: https://github.com/oblador/react-native-vector-icons/issues
+  - [ ] Search for existing issues (including closed issues): https://github.com/oblador/react-native-vector-icons/issues
 
 <!-- Describe your environment (OS, target platform, react-native-vector-icons version etc.) -->
 ## Environment
