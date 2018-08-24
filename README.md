@@ -367,7 +367,7 @@ import icoMoonConfig from './selection.json';
 const Icon = createIconSetFromIcoMoon(icoMoonConfig, 'LineAwesome', 'line-awesome.ttf');
 ```
 
-Make sure you're using the _Download_ option in IcoMoon, and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
+Make sure you're using the _Download_ option in [IcoMoon](https://icomoon.io/app), and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
 #### iOS 
 You have to manually make a reference of your `.ttf` on your xcodeproj `Resources` folder.
 
