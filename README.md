@@ -358,18 +358,13 @@ Convenience method to create a custom font based on a [fontello](http://fontello
 import { createIconSetFromFontello } from 'react-native-vector-icons';
 import fontelloConfig from './config.json';
 const Icon = createIconSetFromFontello(fontelloConfig);
-
-// LineAwesome Example
-import { createIconSetFromFontello } from 'react-native-vector-icons';
-import icoMoonConfig from './config.json';
-const Icon = createIconSetFromFontello(icoMoonConfig, 'LineAwesome', 'line-awesome.ttf');
 ```
 
 ### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
 ```js
 import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
 import icoMoonConfig from './selection.json';
-const Icon = createIconSetFromIcoMoon(icoMoonConfig);
+const Icon = createIconSetFromIcoMoon(icoMoonConfig, 'LineAwesome', 'line-awesome.ttf');
 ```
 
 Make sure you're using the _Download_ option in IcoMoon, and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
