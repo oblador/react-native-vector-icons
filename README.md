@@ -525,7 +525,7 @@ Both npm and android file hierarchies tend to get very deep and even worse when 
 
 #### Wrong icons are shown after upgrading this package
 
-You probably didn't update the font files linked to your native project after upgrading. You can relink the project or you can manually update them.
+You probably didn't update the font files linked to your native project after upgrading. However, this only applies to Android targets since iOS bundles the fonts when building the app (try to clean your build from Xcode if the problem exists). On android you can relink the project or you manually update the fonts. To have them automatically synced use the [gradle approach](https://github.com/oblador/react-native-vector-icons#option-with-gradle-recommended).
 
 #### Some icons are missing after upgrading this package
 
