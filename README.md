@@ -67,7 +67,7 @@ If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`, 
 
 #### Option: With `react-native link`
 
-`$ react-native link`
+`$ react-native link react-native-vector-icons`
 
 *Note: Some users are having trouble using this method, try one of the others if you are too.*
 
