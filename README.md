@@ -4,6 +4,29 @@
 
 Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project. 
 
+## Table of Contents
+- [Bundeled Icon Sets](#bundled-icon-sets)
+- [Installation](#installation)
+  - [iOS](#ios)
+  - [Android](#android)
+  - [OSX](#osx-via-react-native-desktop)
+  - [Windows](#windows-via-react-native-windows)
+  - [Web](#web-with-webpack)
+- [Upgrading](#upgrading)
+- [Icon Component](#icon-component)
+- [Icon.Button Component](#iconbutton-component)
+- [Usage as PNG image/source object](#usage-as-png-imagesource-object)
+- [Usage with TabBarIOS](#usage-with-tabbarios)
+- [Usage with NavigatorIOS](#usage-with-navigatorios)
+- [Usage with ToolbarAndroid](#usage-with-toolbarandroid)
+- [Custom Fonts](#custom-fonts)
+- [Animation](#animation)
+- [Examples](#examples)
+- [Generating your own icon set from a CSS file](#generating-your-own-icon-set-from-a-css-file)
+- [Changelog](#changelog)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+
 ## Bundled Icon Sets
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
@@ -201,6 +224,9 @@ if (style.styleSheet) {
 // Inject stylesheet
 document.head.appendChild(style);
 ```
+
+## Upgrading
+Upgrading this package often requires the font files linked to your projects to be updated as well. If the automatic linking works for you, running this again should update the fonts. Otherwise you need to follow the steps outlined in the [installation](#installation) section.
 
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
@@ -495,7 +521,15 @@ Save output to file, defaults to STDOUT
 
 #### Android build fails on Windows for no good reason
 
-Both npm and android file hierarchies tend to get very deep and even worse when you combine them. Since Windows file system has a max length, long file name addresses will result in numerous errors including `Execution failed for task ':react-native-vector-icons:processReleaseResources'`. So try to keep the path to your project folder as short as possible. 
+Both npm and android file hierarchies tend to get very deep and even worse when you combine them. Since Windows file system has a max length, long file name addresses will result in numerous errors including `Execution failed for task ':react-native-vector-icons:processReleaseResources'`. So try to keep the path to your project folder as short as possible.
+
+#### Wrong icons are shown after upgrading this package
+
+You probably didn't update the font files linked to your native project after upgrading. However, this only applies to Android targets since iOS bundles the fonts when building the app (try to clean your build from Xcode if the problem exists). On android you can relink the project or you manually update the fonts. To have them automatically synced use the [gradle approach](https://github.com/oblador/react-native-vector-icons#option-with-gradle-recommended).
+
+#### Some icons are missing after upgrading this package
+
+Sometimes vendors decides to remove some icons from newer releases, this has nothing to do with this package. If you depend on an older version of a font you can add it as a [custom font](#custom-fonts).
 
 ## License
 
