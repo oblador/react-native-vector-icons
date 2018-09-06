@@ -369,12 +369,12 @@ For example usage see `Examples/IconExplorer/index.android.js`or the examples se
 ## Custom Fonts
 
 ### `createIconSet(glyphMap, fontFamily[, fontFile])`
-Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be a path to the font file in you asset folder. 
+Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be the custom font file name. 
 
 ```js
 import { createIconSet } from 'react-native-vector-icons';
 const glyphMap = { 'icon-name': 1234, test: '∆' };
-const Icon = createIconSet(glyphMap, 'FontName');
+const Icon = createIconSet(glyphMap, 'FontName', 'font-name.ttf');
 ```
 
 ### `createIconSetFromFontello(config[, fontFamily[, fontFile]])`
@@ -390,10 +390,10 @@ const Icon = createIconSetFromFontello(fontelloConfig);
 ```js
 import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
 import icoMoonConfig from './selection.json';
-const Icon = createIconSetFromIcoMoon(icoMoonConfig);
+const Icon = createIconSetFromIcoMoon(icoMoonConfig, 'LineAwesome', 'line-awesome.ttf');
 ```
 
-Make sure you're using the _Download_ option in IcoMoon, and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
+Make sure you're using the _Download_ option in [IcoMoon](https://icomoon.io/app), and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
 #### iOS 
 You have to manually make a reference of your `.ttf` on your xcodeproj `Resources` folder.
 
