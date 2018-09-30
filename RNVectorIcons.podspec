@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage       = "https://github.com/oblador/react-native-vector-icons"
   s.license        = "MIT"
   s.author         = { "Joel Arvidsson" => "joel@oblador.se" }
-  s.platform       = :ios, "7.0"
+  s.platform       = :ios, "9.0"
   s.source         = { :git => "https://github.com/oblador/react-native-vector-icons.git", :tag => "v#{s.version}" }
   s.source_files   = 'RNVectorIconsManager/**/*.{h,m}'
   s.resources      = "Fonts/*.ttf"
