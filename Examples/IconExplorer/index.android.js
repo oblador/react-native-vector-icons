@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  AppRegistry,
-  BackAndroid,
-  StyleSheet,
-  ToolbarAndroid,
-  View,
-} from 'react-native';
+import { AppRegistry, BackAndroid, StyleSheet, View } from 'react-native';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Navigator } from 'react-native-deprecated-custom-components';
@@ -34,35 +28,38 @@ BackAndroid.addEventListener('hardwareBackPress', () => {
 
 const RouteMapper = (route, navigationOperations) => {
   navigator = navigationOperations;
-  if (route.name === 'list') {
-    return (
-      <View style={{ flex: 1 }}>
-        <Ionicons.ToolbarAndroid
-          style={styles.toolbar}
-          titleColor="white"
-          title={route.title}
-        />
-        <IconSetList navigator={navigationOperations} />
-      </View>
-    );
-  } else if (route.name === 'iconSet') {
-    return (
-      <View style={{ flex: 1 }}>
-        <Ionicons.ToolbarAndroid
-          actions={[]}
-          navIconName="md-arrow-back"
-          onIconClicked={navigationOperations.pop}
-          style={styles.toolbar}
-          titleColor="white"
-          title={route.title}
-        />
-        <IconList
-          style={{ flex: 1 }}
-          navigator={navigationOperations}
-          iconSet={route.iconSet}
-        />
-      </View>
-    );
+  switch (route.name) {
+    case 'list':
+      return (
+        <View style={{ flex: 1 }}>
+          <Ionicons.ToolbarAndroid
+            style={styles.toolbar}
+            titleColor="white"
+            title={route.title}
+          />
+          <IconSetList navigator={navigationOperations} />
+        </View>
+      );
+    case 'iconSet':
+      return (
+        <View style={{ flex: 1 }}>
+          <Ionicons.ToolbarAndroid
+            actions={[]}
+            navIconName="md-arrow-back"
+            onIconClicked={navigationOperations.pop}
+            style={styles.toolbar}
+            titleColor="white"
+            title={route.title}
+          />
+          <IconList
+            style={{ flex: 1 }}
+            navigator={navigationOperations}
+            iconSet={route.iconSet}
+          />
+        </View>
+      );
+    default:
+      throw new Error(`Unknown route "${route.name}"`);
   }
 };
 
