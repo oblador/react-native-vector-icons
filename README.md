@@ -4,19 +4,43 @@
 
 Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project. 
 
+## Table of Contents
+- [Bundeled Icon Sets](#bundled-icon-sets)
+- [Installation](#installation)
+  - [iOS](#ios)
+  - [Android](#android)
+  - [OSX](#osx-via-react-native-desktop)
+  - [Windows](#windows-via-react-native-windows)
+  - [Web](#web-with-webpack)
+- [Upgrading](#upgrading)
+- [Icon Component](#icon-component)
+- [Icon.Button Component](#iconbutton-component)
+- [Usage as PNG image/source object](#usage-as-png-imagesource-object)
+- [Usage with TabBarIOS](#usage-with-tabbarios)
+- [Usage with NavigatorIOS](#usage-with-navigatorios)
+- [Usage with ToolbarAndroid](#usage-with-toolbarandroid)
+- [Custom Fonts](#custom-fonts)
+- [Animation](#animation)
+- [Examples](#examples)
+- [Generating your own icon set from a CSS file](#generating-your-own-icon-set-from-a-css-file)
+- [Changelog](#changelog)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+
 ## Bundled Icon Sets
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
 
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
-* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.8.0, **70** icons) 
-* [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v3.2.2, **240** icons) 
-* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons) 
+* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons) 
+* [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons) 
+* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
+* [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.3.1, 1341 (free) **3978** (pro) icons)
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-* [`Ionicons`](http://ionicframework.com/docs/v2/ionicons/) by Ben Sperry (v3.0.0, **859** icons)
+* [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
-* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.1.19, **2120** icons)
-* [`Octicons`](http://octicons.github.com) by Github, Inc. (v6.0.1, **177** icons)
+* [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.5.94, **2595** icons)
+* [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.0.0, **177** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 * [`SimpleLineIcons`](http://simplelineicons.com/) by Sabbir & Contributors (v2.4.1, **189** icons)
 
@@ -24,6 +48,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 1. Run: `$ npm install react-native-vector-icons --save`
 2. For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
+3. If you intend to use FontAwesome 5, check out [`this guide`](FONTAWESOME5.md) to get you started.
 
 ### iOS 
 
@@ -40,23 +65,25 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
 
+#### Option: With `react-native link`
+
+`$ react-native link react-native-vector-icons`
+
+*Note: Some users are having trouble using this method, try one of the others if you are too.*
+
 #### Option: With [CocoaPods](https://cocoapods.org/)
 
 Add the following to your `Podfile` and run `pod update`:
 
 ```
-pod 'RNVectorIcons', :path => 'node_modules/react-native-vector-icons'
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 ```
 
 Edit `Info.plist` as described above. 
 
 If you are using `use_frameworks!` in your `Podfile` you instead need to dynamically load the icon font by doing `Icon.loadFont()` when boostrapping your application.
 
-#### Option: With `rnpm`
-
-`$ react-native link`
-
-*Note: Some users are having trouble using this method, try one of the others if you are too.*
+*Note: You must be consuming React itself via CocoaPods for this to work, see [React Native documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps) on how to set that up.*
 
 ### Android
 
@@ -198,6 +225,9 @@ if (style.styleSheet) {
 document.head.appendChild(style);
 ```
 
+## Upgrading
+Upgrading this package often requires the font files linked to your projects to be updated as well. If the automatic linking works for you, running this again should update the fonts. Otherwise you need to follow the steps outlined in the [installation](#installation) section.
+
 ## `Icon` Component
 You can either use one of the bundled icons above or roll your own custom font. 
 
@@ -214,6 +244,15 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 |**`size`**|Size of the icon, can also be passed as `fontSize` in the style object. |`12`|
 |**`name`**|What icon to show, see Icon Explorer app or one of the links above. |*None*|
 |**`color`**|Color of the icon. |*Inherited*|
+
+### Static Methods
+
+| Prop | Description |
+|---|---|
+|**`getFontFamily`**|Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily()`|
+|**`getImageSource`**|Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)`|
+|**`getRawGlyphMap`**|Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()` |
+|**`hasIcon`**|Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name)`|
 
 ### Styling
 Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
@@ -330,12 +369,12 @@ For example usage see `Examples/IconExplorer/index.android.js`or the examples se
 ## Custom Fonts
 
 ### `createIconSet(glyphMap, fontFamily[, fontFile])`
-Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be a path to the font file in you asset folder. 
+Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be the custom font file name. 
 
 ```js
 import { createIconSet } from 'react-native-vector-icons';
 const glyphMap = { 'icon-name': 1234, test: '∆' };
-const Icon = createIconSet(glyphMap, 'FontName');
+const Icon = createIconSet(glyphMap, 'FontName', 'font-name.ttf');
 ```
 
 ### `createIconSetFromFontello(config[, fontFamily[, fontFile]])`
@@ -350,11 +389,11 @@ const Icon = createIconSetFromFontello(fontelloConfig);
 ### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
 ```js
 import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
-import icoMoonConfig from './config.json';
-const Icon = createIconSetFromIcoMoon(icoMoonConfig);
+import icoMoonConfig from './selection.json';
+const Icon = createIconSetFromIcoMoon(icoMoonConfig, 'LineAwesome', 'line-awesome.ttf');
 ```
 
-Make sure you're using the _Download_ option in IcoMoon, and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
+Make sure you're using the _Download_ option in [IcoMoon](https://icomoon.io/app), and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
 #### iOS 
 You have to manually make a reference of your `.ttf` on your xcodeproj `Resources` folder.
 
@@ -470,22 +509,30 @@ Save output to file, defaults to STDOUT
 
 #### The icons show up as a crossed out box on Android
 * Make sure you've copied the font to `android/app/src/main/assets/fonts`.
-* Delete the `android/app/build` folder. 
+* Delete the build folder with `rm -rf android/app/build`. 
 * Recompile the project.
 
 #### Red screen with "Unrecognized font family" error on iOS
 * Make sure you've added manually the reference of your `.ttf` on your xcodeproj `Resources` folder.
 * Check that the font you are trying to use appears in `Info.plist`, if you've added the whole folder and it's blue in color, then you need to add it to the path. 
 * Check that the font is copied in the *Copy Bundle Resources* in *Build Phases*.
+* Delete the build folder with `rm -rf ios/build`
 * Recompile the project.
 
 #### Android build fails on Windows for no good reason
 
-Both npm and android file hierarchies tend to get very deep and even worse when you combine them. Since Windows file system has a max length, long file name addresses will result in numerous errors including `Execution failed for task ':react-native-vector-icons:processReleaseResources'`. So try to keep the path to your project folder as short as possible. 
+Both npm and android file hierarchies tend to get very deep and even worse when you combine them. Since Windows file system has a max length, long file name addresses will result in numerous errors including `Execution failed for task ':react-native-vector-icons:processReleaseResources'`. So try to keep the path to your project folder as short as possible.
+
+#### Wrong icons are shown after upgrading this package
+
+You probably didn't update the font files linked to your native project after upgrading. However, this only applies to Android targets since iOS bundles the fonts when building the app (try to clean your build from Xcode if the problem exists). On android you can relink the project or you manually update the fonts. To have them automatically synced use the [gradle approach](https://github.com/oblador/react-native-vector-icons#option-with-gradle-recommended).
+
+#### Some icons are missing after upgrading this package
+
+Sometimes vendors decides to remove some icons from newer releases, this has nothing to do with this package. If you depend on an older version of a font you can add it as a [custom font](#custom-fonts).
 
 ## License
 
 This project is licenced under the [MIT License](http://opensource.org/licenses/mit-license.html).
 
 Any bundled fonts are copyright to their respective authors and mostly under MIT or [SIL OFL](http://scripts.sil.org/OFL).
-
