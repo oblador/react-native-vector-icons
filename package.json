@@ -13,6 +13,7 @@
     "prepublish": "npm run build-web",
     "build": "./scripts/build-icons.sh",
     "build-web": "rm -rf ./dist && babel ./{,lib}/*.js --out-dir ./dist && cp -R ./glyphmaps ./dist/glyphmaps",
+    "build-antd": "./scripts/antdesign.sh",
     "build-entypo": "./scripts/entypo.sh",
     "build-evilicons": "./scripts/evilicons.sh",
     "build-fontawesome": "./scripts/fontawesome.sh",

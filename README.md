@@ -31,6 +31,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
 
+* [`AntDesign`](https://ant.design/) by AntFinance (**297** icons)
 * [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
 * [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons) 
 * [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons) 

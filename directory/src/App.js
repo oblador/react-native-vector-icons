@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import './App.css';
 
+import AntD from '../../glyphmaps/AntD.json';
 import Entypo from '../../glyphmaps/Entypo.json';
 import EvilIcons from '../../glyphmaps/EvilIcons.json';
 import Feather from '../../glyphmaps/Feather.json';
@@ -19,6 +20,7 @@ import SimpleLineIcons from '../../glyphmaps/SimpleLineIcons.json';
 import Zocial from '../../glyphmaps/Zocial.json';
 
 const IconFamilies = {
+  AntD,
   Entypo,
   EvilIcons,
   Feather,
