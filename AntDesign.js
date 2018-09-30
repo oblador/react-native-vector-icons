@@ -6,7 +6,7 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/AntDesign.json';
 
-const iconSet = createIconSet(glyphMap, 'AntDesign', 'AntDesign.ttf');
+const iconSet = createIconSet(glyphMap, 'anticon', 'AntDesign.ttf');
 
 export default iconSet;
 
