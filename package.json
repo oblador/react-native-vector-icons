@@ -69,7 +69,6 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
-    "@bodhiveggie/antd-icons": "0.0.1",
     "@mdi/font": "^2.5.94",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^8.0.0",
