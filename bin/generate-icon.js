@@ -4,8 +4,10 @@
 const _ = require('lodash');
 const fs = require('fs');
 const path = require('path');
+const yargs = require('yargs');
 const generateIconSetFromCss = require('../lib/generate-icon-set-from-css');
-const argv = require('yargs')
+
+const { argv } = yargs
   .usage(
     'Usage: $0 [options] path/to/styles.css \nFor default template please provide --componentName and --fontFamily'
   )
@@ -19,7 +21,7 @@ const argv = require('yargs')
   .describe('o', 'Save output to file, defaults to STDOUT')
   .alias('o', 'output')
   .describe('g', 'Save glyphmap JSON to file')
-  .alias('g', 'glyphmap').argv;
+  .alias('g', 'glyphmap');
 
 let template;
 if (argv.template) {

@@ -2,8 +2,9 @@
 /* eslint-disable no-console */
 
 const fs = require('fs');
+const yargs = require('yargs');
 
-const argv = require('yargs')
+const { argv } = yargs
   .usage('')
   .option('path', {
     alias: 'p',
@@ -14,7 +15,7 @@ const argv = require('yargs')
     string: true,
   })
   .demandOption('path')
-  .demandOption('output').argv;
+  .demandOption('output');
 
 const path = `${argv.path}/svgs/`;
 

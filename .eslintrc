@@ -9,6 +9,11 @@
     "prettier"
   ],
   "parser": "babel-eslint",
+  "settings": {
+    "import/ignore": [
+      "lib/react-native.js"
+    ]
+  },
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/require-default-props": [0],

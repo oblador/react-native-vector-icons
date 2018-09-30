@@ -69,22 +69,23 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
     "@mdi/font": "^2.5.94",
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^8.0.0",
-    "babel-preset-react-native": "^4.0.0",
-    "eslint": "^4.3.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-prettier": "^2.1.2",
-    "eslint-plugin-react": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.7.0",
+    "eslint-plugin-react": "^7.11.0",
     "evil-icons": "^1.10.1",
     "font-awesome": "^4.6.3",
     "ionicons": "^4.0.0",
     "material-design-icons": "^3.0.1",
+    "metro-react-native-babel-preset": "0.47.0",
     "octicons": "^8.0.0",
-    "prettier": "^1.13.3"
+    "prettier": "^1.14.3"
   }
 }
