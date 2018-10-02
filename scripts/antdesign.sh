@@ -9,7 +9,7 @@ popd
 node bin/generate-icon ${TEMP}/font/iconfont.css\
    --prefix=.icon-\
    --componentName=AntDesign\
-   --fontFamily=AntDesign\
+   --fontFamily=anticon\
    --template=templates/separated-icon-set.tpl\
    --glyphmap=glyphmaps/AntDesign.json\
    > AntDesign.js
