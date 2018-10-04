@@ -12,7 +12,7 @@
     "format": "prettier index.js {bin,lib,Examples/*}/*.js --write",
     "prepublish": "npm run build-web",
     "build": "./scripts/build-icons.sh",
-    "build-web": "rm -rf ./dist && babel ./{,lib}/*.js --out-dir ./dist && cp -R ./glyphmaps ./dist/glyphmaps",
+    "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps",
     "build-antd": "./scripts/antdesign.sh",
     "build-entypo": "./scripts/entypo.sh",
     "build-evilicons": "./scripts/evilicons.sh",
