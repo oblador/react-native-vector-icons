@@ -11,5 +11,7 @@ node_modules
 bower_components
 
 Examples
-.travis.yml
+.*
 directory
+bower.json
+scripts
