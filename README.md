@@ -43,7 +43,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v2.8.94, **2894** icons)
 * [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.0.0, **177** icons)
 * [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
-* [`SimpleLineIcons`](http://simplelineicons.com/) by Sabbir & Contributors (v2.4.1, **189** icons)
+* [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.4.1, **189** icons)
 
 ## Installation
 
