@@ -37,6 +37,12 @@ gradle.projectsEvaluated {
                     // compatible with Android Gradle Plugin 3.2+ new asset directory
                     into("${buildDir}/intermediates/merged_assets/${targetPath}/merge${targetName}Assets/out/fonts/")
                 }
+                // Workaround for Android Gradle Plugin 3.2+ new asset directory
+                iconFontNames.each { name ->
+                    from(iconFontsDir)
+                    include(name)
+                    into("${buildDir}/intermediates/merged_assets/${targetPath}/merge${targetName}Assets/out/fonts/")
+                }
             }
 
             currentFontTask.dependsOn("merge${targetName}Resources")
