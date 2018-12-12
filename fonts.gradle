@@ -8,51 +8,37 @@ def iconFontsDir = config.iconFontsDir ?: "../../node_modules/react-native-vecto
 def iconFontNames = config.iconFontNames ?: [ "*.ttf" ];
 
 gradle.projectsEvaluated {
-    // Grab all build types and product flavors
-    def buildTypes = android.buildTypes.collect { type -> type.name }
-    def productFlavors = android.productFlavors.collect { flavor -> flavor.name }
+    android.applicationVariants.all { def variant ->
+        def targetName = variant.name.capitalize()
+        def targetPath = variant.dirName
 
-    // When no product flavors defined, use empty
-    if (!productFlavors) productFlavors.add("")
+        // Create task for copying fonts
+        def currentFontTask = tasks.create(
+                name: "copy${targetName}IconFonts",
+                type: Copy) {
+            iconFontNames.each { name ->
+                from(iconFontsDir)
+                include(name)
+                into("${buildDir}/intermediates/assets/${targetPath}/fonts/")
 
-    productFlavors.each { productFlavorName ->
-        buildTypes.each { buildTypeName ->
-            // Create variant and target names
-            def flavorNameCapitalized = "${productFlavorName.capitalize()}"
-            def buildNameCapitalized = "${buildTypeName.capitalize()}"
-            def targetName = "${flavorNameCapitalized}${buildNameCapitalized}"
-            def targetPath = productFlavorName ?
-                    "${productFlavorName}/${buildTypeName}" :
-                    "${buildTypeName}"
-
-            // Create task for copying fonts
-            def currentFontTask = tasks.create(
-                    name: "copy${targetName}IconFonts",
-                    type: Copy) {
-                iconFontNames.each { name ->
-                    from(iconFontsDir)
-                    include(name)
-                    into("${buildDir}/intermediates/assets/${targetPath}/fonts/")
-                    
-                    // compatible with Android Gradle Plugin 3.2+ new asset directory
-                    into("${buildDir}/intermediates/merged_assets/${targetPath}/merge${targetName}Assets/out/fonts/")
-                }
+                // compatible with Android Gradle Plugin 3.2+ new asset directory
+                into("${buildDir}/intermediates/merged_assets/${variant.name}/merge${targetName}Assets/out/fonts/")
             }
+        }
 
-            currentFontTask.dependsOn("merge${targetName}Resources")
-            currentFontTask.dependsOn("merge${targetName}Assets")
+        currentFontTask.dependsOn("merge${targetName}Resources")
+        currentFontTask.dependsOn("merge${targetName}Assets")
 
-            [
-                "process${flavorNameCapitalized}Armeabi-v7a${buildNameCapitalized}Resources",
-                "process${flavorNameCapitalized}X86${buildNameCapitalized}Resources",
-                "processUniversal${targetName}Resources",
-                "process${targetName}Resources"
-            ].each { name ->
-                Task dependentTask = tasks.findByPath(name);
+        [
+            "processArmeabi-v7a${targetName}Resources",
+            "processX86${targetName}Resources",
+            "processUniversal${targetName}Resources",
+            "process${targetName}Resources"
+        ].each { name ->
+            Task dependentTask = tasks.findByPath(name);
 
-                if (dependentTask != null) {
-                    dependentTask.dependsOn(currentFontTask)
-                }
+            if (dependentTask != null) {
+                dependentTask.dependsOn(currentFontTask)
             }
         }
     }
