@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  android:
+    working_directory: ~/repo
+    docker:
+      - image: reactnativecommunity/react-native-android
+    steps:
+      - checkout
+      - run: yarn install
+      - run: cd Examples/IconExplorer/android && yarn install && chmod +x gradlew && ./gradlew assembleDebug
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - android
