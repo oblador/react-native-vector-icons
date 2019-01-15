@@ -110,7 +110,7 @@ cd "$TEMP_DIR_PATH"
 if download_and_unpack_fontawesome_pro; then
   echo "[SUCCESS] $FONT_NAME was unpacked to [$TEMP_DIR_PATH/$FONTAWESOME_PRO_DIR_NAME] directory";
 else
-  exit1 1;
+  exit 1;
 fi
 cd - > /dev/null
 
