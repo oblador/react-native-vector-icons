@@ -27,16 +27,23 @@ gradle.projectsEvaluated {
 
             // Create task for copying fonts
             def currentFontTask = tasks.create(
-                    name: "copy${targetName}IconFonts",
-                    type: Copy) {
-                iconFontNames.each { name ->
-                    from(iconFontsDir)
-                    include(name)
-                    into("${buildDir}/intermediates/assets/${targetPath}/fonts/")
-                    
-                    // compatible with Android Gradle Plugin 3.2+ new asset directory
-                    into("${buildDir}/intermediates/merged_assets/${targetPath}/merge${targetName}Assets/out/fonts/")
+                name: "copy${targetName}IconFonts",
+                type: Copy) {
+
+              into("${buildDir}/intermediates")
+
+              iconFontNames.each { fontName ->
+
+                from(iconFontsDir) {
+                  include(fontName)
+                  into("assets/${targetPath}/fonts/")
                 }
+
+                from(iconFontsDir) {
+                  include(fontName)
+                  into("merged_assets/${targetPath}/merge${targetName}Assets/out/fonts/")
+                }
+              }
             }
 
             currentFontTask.dependsOn("merge${targetName}Resources")
