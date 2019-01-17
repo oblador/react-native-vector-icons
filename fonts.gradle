@@ -26,32 +26,28 @@ gradle.projectsEvaluated {
                     "${buildTypeName}"
 
             // Create tasks for copying fonts
-            // compatible with Android Gradle Plugin < 3.2
-            def currentFontTask31 = tasks.create(
-                    name: "copy${targetName}IconFonts31",
-                    type: Copy) {
-                iconFontNames.each { name ->
-                    from(iconFontsDir)
-                    include(name)
-                    into("${buildDir}/intermediates/assets/${targetPath}/fonts/")
+            def currentFontTask = tasks.create(
+                name: "copy${targetName}IconFonts",
+                type: Copy) {
+
+              into("${buildDir}/intermediates")
+
+              iconFontNames.each { fontName ->
+
+                from(iconFontsDir) {
+                  include(fontName)
+                  into("assets/${targetPath}/fonts/")
                 }
+
+                from(iconFontsDir) {
+                  include(fontName)
+                  into("merged_assets/${targetPath}/merge${targetName}Assets/out/fonts/")
+                }
+              }
             }
 
-            // compatible with Android Gradle Plugin 3.2+ new asset directory
-            def currentFontTask32 = tasks.create(
-                    name: "copy${targetName}IconFonts32",
-                    type: Copy) {
-                iconFontNames.each { name ->
-                    from(iconFontsDir)
-                    include(name)
-                    into("${buildDir}/intermediates/merged_assets/${targetPath}/merge${targetName}Assets/out/fonts/")
-                }
-            }
-
-            currentFontTask31.dependsOn("merge${targetName}Resources")
-            currentFontTask31.dependsOn("merge${targetName}Assets")
-            currentFontTask32.dependsOn("merge${targetName}Resources")
-            currentFontTask32.dependsOn("merge${targetName}Assets")
+            currentFontTask.dependsOn("merge${targetName}Resources")
+            currentFontTask.dependsOn("merge${targetName}Assets")
 
             [
                 "process${flavorNameCapitalized}Armeabi-v7a${buildNameCapitalized}Resources",
@@ -62,8 +58,7 @@ gradle.projectsEvaluated {
                 Task dependentTask = tasks.findByPath(name);
 
                 if (dependentTask != null) {
-                    dependentTask.dependsOn(currentFontTask31)
-                    dependentTask.dependsOn(currentFontTask32)
+                    dependentTask.dependsOn(currentFontTask)
                 }
             }
         }
