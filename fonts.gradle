@@ -25,7 +25,7 @@ gradle.projectsEvaluated {
                     "${productFlavorName}/${buildTypeName}" :
                     "${buildTypeName}"
 
-            // Create tasks for copying fonts
+            // Create task for copying fonts
             def currentFontTask = tasks.create(
                 name: "copy${targetName}IconFonts",
                 type: Copy) {
