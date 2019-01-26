@@ -1,0 +1,111 @@
+/**
+ * @flow strict
+ */
+
+import { PureComponent } from 'react';
+
+export type Color = number | string;
+
+export type GlyphMap = { [key: string]: number };
+
+export type IconName<Glyphs: GlyphMap> = $Keys<Glyphs>;
+
+export type IconButtonProps<Glyphs: GlyphMap> = {
+  backgroundColor?: Color,
+  borderRadius?: number,
+  color?: Color,
+  name: IconName<Glyphs>,
+  size?: number
+};
+
+declare class IconButton<Glyphs: GlyphMap> extends PureComponent<IconButtonProps<Glyphs>> {
+}
+
+export type IconToolbarAndroidActions<Glyphs: GlyphMap> = {
+  iconColor?: Color,
+  iconName?: IconName<Glyphs>,
+  iconSize?: number,
+  show?: 'always' | 'ifRoom' | 'never',
+  showWithText?: boolean,
+  title: string
+};
+
+export type IconToolbarAndroidProps<Glyphs: GlyphMap> = {
+  actions: IconToolbarAndroidActions<Glyphs>[],
+  iconColor?: Color,
+  iconSize?: number,
+  logoName?: IconName<Glyphs>,
+  navIconName?: IconName<Glyphs>,
+  overflowIconName?: IconName<Glyphs>,
+  titleColor?: Color
+};
+
+declare class IconToolbarAndroid<Glyphs: GlyphMap> extends PureComponent<IconToolbarAndroidProps<Glyphs>> {
+}
+
+export type TabBarItemIOSProps<Glyphs: GlyphMap> = {
+  iconColor?: Color,
+  iconName: IconName<Glyphs>,
+  iconSize?: number,
+  selectedIconColor?: Color,
+  selectedIconName?: IconName<Glyphs>
+};
+
+declare class TabBarItemIOS<Glyphs: GlyphMap> extends PureComponent<TabBarItemIOSProps<Glyphs>> {
+}
+
+export type IconProps<Glyphs: GlyphMap> = {
+  allowFontScaling?: boolean,
+  color?: Color,
+  name: IconName<Glyphs>,
+  size?: number
+};
+
+export type ImageSource = {|
+  uri: string,
+  scale: number
+|};
+
+declare class Icon<Glyphs: GlyphMap> extends PureComponent<IconProps<Glyphs>> {
+  static Button: Class<IconButton<Glyphs>>;
+  static TabBarItem: Class<TabBarItemIOS<Glyphs>>;
+  static TabBarItemIOS: Class<TabBarItemIOS<Glyphs>>;
+  static ToolbarAndroid: Class<IconToolbarAndroid<Glyphs>>;
+
+  static getFontFamily(): string;
+  static getImageSource(name: IconName<Glyphs>, size?: number, color?: Color): Promise<ImageSource>;
+  static getRawGlyphMap(): Glyphs;
+  static hasIcon(name: string): boolean;
+  static loadFont(file?: string): Promise<void>;
+}
+
+declare export function createIconSet<Glyphs: GlyphMap>(
+  glyphMap: Glyphs,
+  fontFamily: string,
+  fontFile?: string
+): Class<Icon<Glyphs>>;
+
+export type FontelloConfig = {
+  glyphs: Array<{
+    css: string,
+    code: number
+  }>
+};
+
+declare export function createIconSetFromFontello(
+  config: FontelloConfig,
+  fontFamily?: string,
+  fontFile?: string
+): Class<Icon<GlyphMap>>;
+
+export type IcoMoonConfig = {
+  icons: Array<{
+    properties: { name: string, code: number }
+  }>
+};
+
+declare export function createIconSetFromIcoMoon(
+  config: IcoMoonConfig,
+  fontFamily?: string,
+  fontFile?: string
+): Class<Icon<GlyphMap>>;
