@@ -479,6 +479,21 @@ function ExampleView(props) {
 * [product-kitty](https://github.com/rkho/product-kitty) ([blog post](http://richardkho.com/persisting-tabbars-in-react-native/))
 * [react-native-netflix](https://github.com/mariodev12/react-native-netflix)
 
+### Online examples
+
+* [`AntDesign`](https://ide.appitr.com/public/ide/35-abiding-skin)
+* [`Entypo`](https://ide.appitr.com/public/ide/36-straight-nation)
+* [`EvilIcons`](https://ide.appitr.com/public/ide/130-nonstop-turkey)
+* [`Feather`](https://ide.appitr.com/public/ide/38-premium-taste)
+* [`FontAwesome`](https://ide.appitr.com/public/ide/31-thinkable-cover)
+* [`Foundation`](https://ide.appitr.com/public/ide/32-stale-way)
+* [`Ionicons`](https://ide.appitr.com/public/ide/33-thundering-caption)
+* [`MaterialIcons`](https://ide.appitr.com/public/ide/34-picayune-wash)
+* [`MaterialCommunityIcons`](https://ide.appitr.com/public/ide/4-keen-move)
+* [`Octicons`](https://ide.appitr.com/public/ide/5-earsplitting-vessel)
+* [`Zocial`](https://ide.appitr.com/public/ide/6-saucy-leather)
+* [`SimpleLineIcons`](https://ide.appitr.com/public/ide/7-holy-quarter)
+
 ## Generating your own icon set from a CSS file
 
 If you already have a icon font with associated CSS file then you can easily generate a icon set with the `generate-icon` script. 
