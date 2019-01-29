@@ -109,44 +109,6 @@ RCT_EXPORT_METHOD(getImageForFont:(NSString *)fontName
   callback(@[[NSNull null], filePath]);
 }
 
-RCT_EXPORT_METHOD(getImageForFontAwesome5:(NSString *)fontFamily
-                  withGlyph:(NSString *)glyph
-                  withFontSize:(CGFloat)fontSize
-                  withFontStyle:(NSInteger)style
-                  withColor:(UIColor *)color
-                  callback:(RCTResponseSenderBlock)callback)
-{
-  NSString *fontWeight = @"400";
-  if (style == 1)
-    fontWeight = @"100";
-  else if (style == 2)
-    fontWeight = @"700";
-  
-  UIFont *font = [UIFont systemFontOfSize: 14];
-  font = [RCTFont updateFont:font
-                  withFamily:fontFamily
-                        size:[NSNumber numberWithDouble: fontSize]
-                      weight:fontWeight
-                       style:nil
-                     variant:nil
-             scaleMultiplier:1];
-  
-  NSString *identifier = [NSString stringWithFormat:@"FA5.%ld", (long)style];
-  NSString *filePath = [self generateFilePath:glyph withFontName:fontFamily
-                                                    withFontSize:fontSize
-                                                    withColor:color
-                                                    withExtraIdentifier: identifier];
-  
-  BOOL success = [self createAndSaveGlyphImage:glyph withFont:font
-                                                     withFilePath:filePath
-                                                     withColor:color];
-  if(!success) {
-    return callback(@[@"Failed to write rendered icon image"]);
-  }
-  
-  callback(@[[NSNull null], filePath]);
-}
-
 RCT_EXPORT_METHOD(loadFontWithFileName:(NSString *)fontFileName
                   extension:(NSString *)extension
                   resolver:(RCTPromiseResolveBlock)resolve
