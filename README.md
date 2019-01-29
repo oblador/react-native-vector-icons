@@ -19,6 +19,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [Usage with TabBarIOS](#usage-with-tabbarios)
 - [Usage with NavigatorIOS](#usage-with-navigatorios)
 - [Usage with ToolbarAndroid](#usage-with-toolbarandroid)
+- [Multi-style fonts](#multi-style-fonts)
 - [Custom Fonts](#custom-fonts)
 - [Animation](#animation)
 - [Examples](#examples)
@@ -36,7 +37,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 * [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons) 
 * [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons) 
 * [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
-* [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.6.3, 1480 (free) **4845** (pro) icons)
+* [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.7.0, 1500 (free) **5082** (pro) icons)
 * [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 * [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
 * [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
@@ -238,6 +239,7 @@ const myIcon = (<Icon name="rocket" size={30} color="#900" />)
 ```
 
 ### Properties
+
 Any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following: 
 
 | Prop | Description | Default |
@@ -275,6 +277,7 @@ By combining some of these you can create for example :
 ![star](https://cloud.githubusercontent.com/assets/378279/7667569/3010dd7e-fc0d-11e4-9696-cb721fe8e98d.png)
 
 ## `Icon.Button` Component
+
 A convenience component for creating buttons with an icon on the left side. 
 
 ```js
@@ -365,7 +368,46 @@ Simply use `Icon.ToolbarAndroid` instead of `React.ToolbarAndroid`, this is comp
 |**`iconSize`**|Size of the icons. |`24`|
 |**`iconColor`**|Color of the icons. |`black`|
 
-For example usage see `Examples/IconExplorer/index.android.js`or the examples section below. Don't forget to import and link to this project as described above if you are going to use the ToolbarAndroid integration. 
+For example usage see `Examples/IconExplorer/index.android.js`or the examples section below. Don't forget to import and link to this project as described above if you are going to use the ToolbarAndroid integration.
+
+# Multi-style fonts
+
+Some fonts today use multiple styles, FontAwesome 5 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
+
+```jsx
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
+const myIcon1 = (<Icon name="comments" size={30} color="#900" />) // Defaults to regular
+const myIcon2 = (<Icon name="comments" size={30} color="#900" solid />)
+const myIcon3 = (<Icon name="comments" size={30} color="#900" light />) // Only in FA5 Pro
+```
+
+### Static methods
+
+All static methods from `Icon` is supported by multi-styled fonts.
+
+| Prop                   | Description                                                  |
+| ---------------------- | ------------------------------------------------------------ |
+| **`getFontFamily`**    | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily(style)` |
+| **`getImageSource`**   | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color, style)` |
+| **`getRawGlyphMap`**   | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap(style)` |
+| **`hasIcon`**          | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name, style)` |
+| **`getStyledIconSet`** | Use this to get a `Icon` component for a single style. Usage. `const StyledIcon = Icon.getStyledIconSet(style)` |
+
+If no style argument is passed (or if it's invalid) the methods will default to a pre-defineds fallback.
+
+### Components
+
+`Icon.Button`,  `Icon.TabBarItem`, `Icon.TabBarItemIOS`, `Icon.ToolbarAndroid` are all supported, usage is just like `Icon`:
+
+```jsx
+import Icon from 'react-native-vector-icons/FontAwesome5';
+const myButton = (
+  <Icon.Button name="facebook" onPress={this.loginWithFacebook} solid>
+    Login with Facebook
+  </Icon.Button>
+);
+```
 
 ## Custom Fonts
 
@@ -388,6 +430,7 @@ const Icon = createIconSetFromFontello(fontelloConfig);
 ```
 
 ### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
+
 ```js
 import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
 import icoMoonConfig from './selection.json';
@@ -395,8 +438,92 @@ const Icon = createIconSetFromIcoMoon(icoMoonConfig, 'LineAwesome', 'line-awesom
 ```
 
 Make sure you're using the _Download_ option in [IcoMoon](https://icomoon.io/app), and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
+
+###`createMultiStyleIconSet(styles [, options])`
+
+```jsx
+import { createMultiStyleIconSet } from 'react-native-vector-icons';
+
+/* 
+ * This is just example code, you are free to 
+ * design your glyphmap and styles to your liking 
+ */
+
+import glyphmap from './glyphmap.json';
+/* 
+ * glyphmap = {
+ *   "style1": [
+ *	   "hello",
+ *	   "world"
+ *   ],
+ *   "style2": [
+ *	   "foo",
+ *	   "bar"
+ *   ]
+ * }
+ */
+
+const glyphKeys = Object.keys(glyphmap); /* ["style1", "style2"] */
+const options = {
+  defaultStyle: 'style1',
+  glyphValidator: (name, style) => glyphKeys.indexOf(name) !== -1,
+  fallbackFamily: (name) => {
+    for (let i = 0; i < glyphKeys.length; i++) {
+      const style = glyphKeys[i];
+      if (glyphmap[style].indexOf(name) !== -1) {
+        return style;
+      }
+    }
+    
+    /* Always return some family */
+    return glyphKeys[0];
+  }
+};
+
+/*
+ * The styles object consits of keys, which will be
+ * used as the styles later, and objects which are
+ * used as style objects for the font. The style
+ * should have unique characteristics for each font 
+ * in order to ensure that the right one will be
+ * chosen. FontAwesome 5 uses font weight since
+ * 5.7.0 in order to diffirentiate the styles but
+ * other properties (like fontFamily) can be used.
+ * It's just a standard RN style object.
+ */
+const styles = {
+  style1: {
+    fontWeight: '700'
+  },
+  style2: {
+    fontWeight: '100'
+  }
+};
+
+const Icon = createMultiStyleIconSet(styles, options);
+
+/* Uses default style (style1) */
+<Icon name={'hello'} />
+<Icon name={'world'} style1 />
+/* Default style is style1 but this will fall back to style2 */
+<Icon name={'foo'} />
+/* This will also fall back to style2 */
+<Icon name={'foo'} style1 />
+/* Regular use of style2 */
+<Icon name={'bar'} style2 />
+```
+
+| option         | Description                                                  | default                            |
+| -------------- | ------------------------------------------------------------ | ---------------------------------- |
+| defaultStyle   | The name of the style to be used if no style is supplied during rendering. | ` Object.keys(styles)[0]`          |
+| fallbackFamily | Function for selecting a family if a glyph is not available. The function should accept the `name` of the glyph as a parameter. Returns the name if the family. | `(name) => Object.keys(styles)[0]` |
+| glyphValidator | Function for validating that a glyph is available for a chosen style. It has `name` and `style` as parameters, in that order. Returns `true` if the glyph is valid or `false` if it's not. | `(name, style) => true`            |
+
+
+
 #### iOS 
-You have to manually make a reference of your `.ttf` on your xcodeproj `Resources` folder.
+
+You have to manually make a reference of your `.ttf` on your xcodeproj `Resources` folder and in `Info.plist`.
 
 ## Animation
 
