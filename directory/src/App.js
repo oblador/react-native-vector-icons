@@ -91,14 +91,22 @@ class SearchBar extends PureComponent {
     return (
       <div className="Search-Container">
         <div className="Search-Content">
-          <form onSubmit={this.handleSubmit}>
-            <Icon family="FontAwesome" name="search" className="Search-Icon" />
+          <form className="Search-Form" onSubmit={this.handleSubmit}>
+            {/* Clicking the Label focuses the cursor onto the form input */}
+            <label htmlFor="Search-Input" className="Search-Label">
+              <Icon
+                family="FontAwesome"
+                name="search"
+                className="Search-Icon"
+              />
+            </label>
             <input
+              type="text"
+              id="Search-Input"
+              className="Search-Input"
               ref={ref => (this.inputRef = ref)}
               onChange={this.handleChange}
-              placeholder="Search for an icon"
-              type="text"
-              className="Search-Input"
+              placeholder="Search for an icon..."
             />
           </form>
         </div>
