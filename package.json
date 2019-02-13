@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "eslint index.js {bin,lib}/*.js",
-    "format": "prettier index.js {bin,lib,Examples/*}/*.js --write",
+    "format": "prettier index.js *.md {bin,lib,directory,Examples}/**/*.js --write",
     "prepublish": "npm run build-web",
     "build": "./scripts/build-icons.sh",
     "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps",
@@ -73,12 +73,12 @@
     "@babel/core": "^7.1.2",
     "@mdi/font": "^3.4.93",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.3.0",
+    "eslint": "^5.13.0",
     "eslint-config-airbnb": "17.1.0",
-    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^2.7.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.11.0",
     "evil-icons": "^1.10.1",
     "font-awesome": "^4.6.3",
@@ -86,6 +86,6 @@
     "material-design-icons": "^3.0.1",
     "metro-react-native-babel-preset": "0.47.0",
     "octicons": "^8.4.1",
-    "prettier": "^1.14.3"
+    "prettier": "^1.16.4"
   }
 }
