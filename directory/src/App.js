@@ -68,10 +68,6 @@ const HeaderBar = props => {
 class SearchBar extends PureComponent {
   timer = null;
 
-  state = {
-    keyword: '',
-  };
-
   handleSubmit = e => {
     e.preventDefault();
     this.props.onSubmit(this.inputRef.value);
@@ -81,15 +77,35 @@ class SearchBar extends PureComponent {
     e.preventDefault();
     clearInterval(this.timer);
 
-    this.setState({ keyword: this.inputRef.value });
+    const text = this.inputRef.value;
 
     this.timer = setTimeout(
-      () => this.props.onSubmit(this.state.keyword),
+      () => this.props.onSubmit(text),
       WAITING_INTERVAL
     );
   };
 
+  handleFamilyChange = (family, checked) => {
+    const { selectedFamilies: selected } = this.props;
+    const selectedFamilies = checked
+      ? [...selected, family]
+      : selected.filter(f => f !== family);
+
+    this.props.onSelectedFamiliesChange(selectedFamilies);
+  };
+
+  handleSelectAll = () => {
+    this.props.onSelectedFamiliesChange(
+      Object.keys(IconFamilies).filter(family => family !== 'FontAwesome5Brands')
+    );
+  };
+
+  handleSelectNone = () => {
+    this.props.onSelectedFamiliesChange([]);
+  };
+
   render() {
+    const { text, selectedFamilies } = this.props;
     return (
       <div className="Search-Container">
         <div className="Search-Content">
@@ -107,10 +123,46 @@ class SearchBar extends PureComponent {
               id="Search-Input"
               className="Search-Input"
               ref={ref => (this.inputRef = ref)}
+              defaultValue={text}
               onChange={this.handleChange}
               placeholder="Search for an icon..."
             />
           </form>
+          <div className="Search-Families">
+            <div className="Search-Buttons-Container">
+              <button
+                type="button"
+                className="Search-Button"
+                onClick={this.handleSelectAll}
+              >
+                Select all
+              </button>
+              <button
+                type="button"
+                className="Search-Button"
+                onClick={this.handleSelectNone}
+              >
+                Select none
+              </button>
+            </div>
+            <div className="Search-Select-Families">
+              {Object.keys(IconFamilies)
+                .filter(family => family !== 'FontAwesome5Brands')
+                .map(family => (
+                  <div key={family} className="Search-Family">
+                    <input
+                      type="checkbox"
+                      id={family}
+                      checked={selectedFamilies.indexOf(family) >= 0}
+                      onChange={e =>
+                        this.handleFamilyChange(family, e.target.checked)
+                      }
+                    />
+                    <label htmlFor={family}>{family}</label>
+                  </div>
+                ))}
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -118,30 +170,15 @@ class SearchBar extends PureComponent {
 }
 
 class App extends PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      matches: [],
-    };
-  }
-
-  componentDidMount() {
-    this.handleSubmit('');
-  }
-
-  handleSubmit = text => {
-    let matches = [];
-    Object.keys(IconFamilies).forEach(family => {
-      const icons = IconFamilies[family];
-      const names = Object.keys(icons);
-      const results = names.filter(name => name.indexOf(text) >= 0);
-      if (results.length) {
-        matches = [...matches, { family, names: results }];
-      }
-    });
-
-    this.setState({ matches });
+  state = {
+    text: '',
+    selectedFamilies: [],
   };
+
+  handleSubmit = text => this.setState({ text });
+
+  handleSelectedFamiliesChange = selectedFamilies =>
+    this.setState({ selectedFamilies });
 
   renderMatch = match => {
     const { family, names } = match;
@@ -172,6 +209,14 @@ class App extends PureComponent {
     );
   }
 
+  renderNoFamily() {
+    return (
+      <div className="Result-Row">
+        <h2 className="Result-Title">No family selected.</h2>
+      </div>
+    );
+  }
+
   renderNotFound() {
     return (
       <div className="Result-Row">
@@ -181,13 +226,33 @@ class App extends PureComponent {
   }
 
   render() {
+    const { selectedFamilies, text } = this.state;
+    let matches = [];
+    Object.keys(IconFamilies)
+      .filter(family => selectedFamilies.indexOf(family) >= 0)
+      .forEach(family => {
+        const icons = IconFamilies[family];
+        const names = Object.keys(icons);
+        const results = names.filter(name => name.indexOf(text) >= 0);
+        if (results.length) {
+          matches = [...matches, { family, names: results }];
+        }
+      });
+
     return (
       <div className="App">
         <HeaderBar />
-        <SearchBar onSubmit={this.handleSubmit} />
+        <SearchBar
+          text={text}
+          onSubmit={this.handleSubmit}
+          selectedFamilies={selectedFamilies}
+          onSelectedFamiliesChange={this.handleSelectedFamiliesChange}
+        />
         <div className="Container">
-          {this.state.matches.map(this.renderMatch)}
-          {this.state.matches.length === 0 && this.renderNotFound()}
+          {matches.map(this.renderMatch)}
+          {selectedFamilies.length === 0
+            ? this.renderNoFamily()
+            : matches.length === 0 && this.renderNotFound()}
         </div>
       </div>
     );

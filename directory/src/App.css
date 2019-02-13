@@ -142,6 +142,50 @@ body {
   outline: none;
 }
 
+.Search-Families {
+  margin: 1em 0 0 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.Search-Buttons-Container {
+  height: 100%;
+  min-width: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 1em;
+}
+
+.Search-Button {
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: block;
+  cursor: pointer;
+  color: #666666;
+  padding: 6px 24px;
+  margin-bottom: 1em;
+  white-space: nowrap;
+}
+.Search-Button:hover {
+  background-color: #e9e9e9;
+}
+.Search-Button:active {
+  position: relative;
+  top: 1px;
+}
+
+.Search-Select-Families {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Search-Family {
+  margin: 0 0.5em 0.5em 0;
+}
+
 .Container {
   max-width: 1200px;
   margin: 0 auto;
