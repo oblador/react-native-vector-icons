@@ -141,20 +141,6 @@ class App extends PureComponent {
     this.setState({ matches });
   };
 
-  renderFamily(familyName) {
-    return (
-      <div>
-        {Object.keys(IconFamilies[familyName]).map(iconName => (
-          <Icon
-            key={iconName + familyName}
-            family={familyName}
-            name={iconName}
-          />
-        ))}
-      </div>
-    );
-  }
-
   renderMatch = match => {
     const { family, names } = match;
     return (
