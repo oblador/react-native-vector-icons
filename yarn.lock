@@ -2165,9 +2165,10 @@ object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-octicons@^8.0.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/octicons/-/octicons-8.1.0.tgz#e609066618080868f9aa810c71e7692acf9063c6"
+octicons@^8.4.1:
+  version "8.4.1"
+  resolved "https://registry.yarnpkg.com/octicons/-/octicons-8.4.1.tgz#ccc3a17ba956278a64390d361bfb88be18a195c7"
+  integrity sha512-xg+HvjTNy+4+i+Tz5AUetJd7kyKMjLjCxgWkl/75HH4OzxmL7bzDsay4ShfgCRu7rLMocipWkitQ8d51Kd4ngQ==
   dependencies:
     object-assign "^4.1.1"
 

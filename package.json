@@ -85,7 +85,7 @@
     "ionicons": "^4.0.0",
     "material-design-icons": "^3.0.1",
     "metro-react-native-babel-preset": "0.47.0",
-    "octicons": "^8.0.0",
+    "octicons": "^8.4.1",
     "prettier": "^1.14.3"
   }
 }
