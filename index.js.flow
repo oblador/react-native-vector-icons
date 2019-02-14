@@ -79,6 +79,8 @@ declare class Icon<Glyphs: GlyphMap> extends PureComponent<IconProps<Glyphs>> {
   static loadFont(file?: string): Promise<void>;
 }
 
+export type IconClass<Glyphs: GlyphMap> = Class<Icon<Glyphs>>;
+
 declare export function createIconSet<Glyphs: GlyphMap>(
   glyphMap: Glyphs,
   fontFamily: string,
