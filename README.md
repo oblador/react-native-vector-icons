@@ -126,7 +126,7 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   include ':app'
 
   + include ':react-native-vector-icons'
-  + project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
+  + project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '..//node_modules//react-native-vector-icons//android')
   ```
 
 - Edit `android/app/build.gradle` (note: **app** folder) to look like this:
