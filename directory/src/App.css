@@ -68,90 +68,129 @@
   src: url('../../Fonts/Zocial.ttf') format('truetype');
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .App {
   width: 100%;
 }
 
 .Header-Container {
+  padding: 20px 20px 0 20px;
   background-color: #23527c;
-  padding: 10px 10px 10px 10px;
-  width: 100%;
+  color: #fff;
 }
 
 .Header-Content {
+  max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-  max-width: 1300px;
-  padding: 0px 10px;
 }
 
 .Header-Title {
-  color: #fff;
-  opacity: 0.8;
+  margin: 0;
   font-size: 18px;
   font-weight: normal;
 }
 
 .Search-Container {
-  background-color: #3e3e3e;
-  padding: 10px 10px 10px 10px;
-  width: 100%;
+  padding: 20px;
+  background-color: #23527c;
+  color: #fff;
 }
 
 .Search-Content {
+  max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-  max-width: 1300px;
-  padding: 0px 10px;
-  position: relative;
 }
 
-.Search-Icon-Container {
+.Search-Form {
+  display: flex;
+  background-color: #fff;
+  color: #333;
+  border-radius: 3px;
+}
+
+.Search-Label {
+  padding: 10px;
+  border-right: 1px solid #eee;
 }
 
 .Search-Icon {
-  font-size: 18px;
-  color: #fff;
-  opacity: 0.7;
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .Search-Input {
-  background-color: transparent;
-  width: 100%;
-  font-size: 16px;
-  margin-left: 25px;
+  flex-grow: 1;
+  padding: 10px;
   border: 0;
-  padding: 10px 5px;
-  color: #fff;
+  border-radius: 0 3px 3px 0;
+  font-size: inherit;
 }
 
 .Search-Input:focus {
   outline: none;
 }
 
-.Result-Title {
-  font-weight: normal;
-  opacity: 0.6;
-  font-size: 14px;
+.Container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
 }
 
 .Result-Row {
-  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.Result-Title {
+  margin: 0;
+  padding: 1em 20px;
+  font-size: 200%;
+  font-weight: normal;
+  color: #fff;
+  background-color: #f66;
+}
+
+.Result-List {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .Result-Icon-Container {
-  vertical-align: top;
-  width: 100px;
-  display: inline-block;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.02);
-  border-radius: 3px;
+  width: 50%;
   padding: 20px;
-  margin-right: 10px;
+  text-align: center;
+  outline: 1px solid #eee;
+  background-color: #fff;
+}
+
+@media (min-width: 480px) {
+  .Result-Icon-Container {
+    width: 33%;
+  }
+}
+
+@media (min-width: 600px) {
+  .Result-Icon-Container {
+    width: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .Result-Icon-Container {
+    width: 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  .Result-Icon-Container {
+    width: 14.27%;
+  }
 }
 
 .Result-Icon {
@@ -163,10 +202,4 @@
   font-weight: normal;
   opacity: 0.8;
   margin: 10px 0 0 0;
-}
-
-.Container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 10px 30px 30px 30px;
 }
