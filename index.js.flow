@@ -6,108 +6,111 @@ import { PureComponent } from 'react';
 
 export type Color = number | string;
 
-export type GlyphMap = { [key: string]: number };
-
-export type IconName<Glyphs: GlyphMap> = $Keys<Glyphs>;
-
-export type IconButtonProps<Glyphs: GlyphMap> = {
+export type IconButtonProps<Glyphs: string> = {
   backgroundColor?: Color,
   borderRadius?: number,
   color?: Color,
-  name: IconName<Glyphs>,
-  size?: number
+  name: Glyphs,
+  size?: number,
 };
 
-declare class IconButton<Glyphs: GlyphMap> extends PureComponent<IconButtonProps<Glyphs>> {
-}
+declare class IconButton<Glyphs: string> extends PureComponent<
+  IconButtonProps<Glyphs>
+> {}
 
-export type IconToolbarAndroidActions<Glyphs: GlyphMap> = {
+export type IconToolbarAndroidActions<Glyphs: string> = {
   iconColor?: Color,
-  iconName?: IconName<Glyphs>,
+  iconName?: Glyphs,
   iconSize?: number,
   show?: 'always' | 'ifRoom' | 'never',
   showWithText?: boolean,
-  title: string
+  title: string,
 };
 
-export type IconToolbarAndroidProps<Glyphs: GlyphMap> = {
+export type IconToolbarAndroidProps<Glyphs: string> = {
   actions: IconToolbarAndroidActions<Glyphs>[],
   iconColor?: Color,
   iconSize?: number,
-  logoName?: IconName<Glyphs>,
-  navIconName?: IconName<Glyphs>,
-  overflowIconName?: IconName<Glyphs>,
-  titleColor?: Color
+  logoName?: Glyphs,
+  navIconName?: Glyphs,
+  overflowIconName?: Glyphs,
+  titleColor?: Color,
 };
 
-declare class IconToolbarAndroid<Glyphs: GlyphMap> extends PureComponent<IconToolbarAndroidProps<Glyphs>> {
-}
+declare class IconToolbarAndroid<Glyphs: string> extends PureComponent<
+  IconToolbarAndroidProps<Glyphs>
+> {}
 
-export type TabBarItemIOSProps<Glyphs: GlyphMap> = {
+export type TabBarItemIOSProps<Glyphs: string> = {
   iconColor?: Color,
-  iconName: IconName<Glyphs>,
+  iconName: Glyphs,
   iconSize?: number,
   selectedIconColor?: Color,
-  selectedIconName?: IconName<Glyphs>
+  selectedIconName?: Glyphs,
 };
 
-declare class TabBarItemIOS<Glyphs: GlyphMap> extends PureComponent<TabBarItemIOSProps<Glyphs>> {
-}
+declare class TabBarItemIOS<Glyphs: string> extends PureComponent<
+  TabBarItemIOSProps<Glyphs>
+> {}
 
-export type IconProps<Glyphs: GlyphMap> = {
+export type IconProps<Glyphs: string> = {
   allowFontScaling?: boolean,
   color?: Color,
-  name: IconName<Glyphs>,
-  size?: number
+  name: Glyphs,
+  size?: number,
 };
 
 export type ImageSource = {|
   uri: string,
-  scale: number
+  scale: number,
 |};
 
-declare class Icon<Glyphs: GlyphMap> extends PureComponent<IconProps<Glyphs>> {
+declare class Icon<Glyphs: string> extends PureComponent<IconProps<Glyphs>> {
   static Button: Class<IconButton<Glyphs>>;
   static TabBarItem: Class<TabBarItemIOS<Glyphs>>;
   static TabBarItemIOS: Class<TabBarItemIOS<Glyphs>>;
   static ToolbarAndroid: Class<IconToolbarAndroid<Glyphs>>;
 
   static getFontFamily(): string;
-  static getImageSource(name: IconName<Glyphs>, size?: number, color?: Color): Promise<ImageSource>;
-  static getRawGlyphMap(): Glyphs;
+  static getImageSource(
+    name: Glyphs,
+    size?: number,
+    color?: Color
+  ): Promise<ImageSource>;
+  static getRawGlyphMap(): { [name: Glyphs]: number };
   static hasIcon(name: string): boolean;
   static loadFont(file?: string): Promise<void>;
 }
 
-export type IconClass<Glyphs: GlyphMap> = Class<Icon<Glyphs>>;
+export type IconClass<Glyphs: string> = Class<Icon<Glyphs>>;
 
-declare export function createIconSet<Glyphs: GlyphMap>(
-  glyphMap: Glyphs,
+declare export function createIconSet<GlyphMap: { [key: string]: number }>(
+  glyphMap: GlyphMap,
   fontFamily: string,
   fontFile?: string
-): Class<Icon<Glyphs>>;
+): Class<Icon<$Keys<GlyphMap>>>;
 
 export type FontelloConfig = {
   glyphs: Array<{
     css: string,
-    code: number
-  }>
+    code: number,
+  }>,
 };
 
 declare export function createIconSetFromFontello(
   config: FontelloConfig,
   fontFamily?: string,
   fontFile?: string
-): Class<Icon<GlyphMap>>;
+): Class<Icon<string>>;
 
 export type IcoMoonConfig = {
   icons: Array<{
-    properties: { name: string, code: number }
-  }>
+    properties: { name: string, code: number },
+  }>,
 };
 
 declare export function createIconSetFromIcoMoon(
   config: IcoMoonConfig,
   fontFamily?: string,
   fontFile?: string
-): Class<Icon<GlyphMap>>;
+): Class<Icon<string>>;

@@ -4,37 +4,28 @@
 const fs = require('fs');
 const yargs = require('yargs');
 
-const { argv } = yargs
-  .usage('Usage: $0 [icons...]')
-  .help();
+const { argv } = yargs.usage('Usage: $0 [icons...]').help();
 
 const icons = argv._;
-for (let i = 0; i < icons.length; ++i) {
+for (let i = 0; i < icons.length; i += 1) {
   const icon = icons[i];
   let mapFile = icon;
   if (mapFile === 'FontAwesome5') {
-    mapFile = 'FontAwesome5Free'
+    mapFile = 'FontAwesome5Free';
   }
 
-  const glyphmap = JSON.parse(fs.readFileSync(`glyphmaps/${mapFile}.json`, { encoding: 'utf8' }));
-  const names = Object.keys(glyphmap).join("': number,\n  '");
-
-  const glyphTypeDef = `/**
- * @flow strict
- */
-
-export type ${icon}Glyphs = {|
-  '${names}': number
-|};
-`;
-  fs.writeFileSync(`glyphmaps/${mapFile}.js.flow`, glyphTypeDef);
+  const glyphmap = JSON.parse(
+    fs.readFileSync(`glyphmaps/${mapFile}.json`, { encoding: 'utf8' })
+  );
+  const names = Object.keys(glyphmap).join("' | '");
 
   const iconClass = `/**
  * @flow strict
  */
 
 import type { IconClass } from './index';
-import type { ${icon}Glyphs } from './glyphmaps/${mapFile}';
+
+type ${icon}Glyphs = '${names}';
 
 type Icon = IconClass<${icon}Glyphs>;
 
