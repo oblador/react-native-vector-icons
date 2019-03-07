@@ -82,7 +82,7 @@ declare class Icon<Glyphs: string> extends PureComponent<IconProps<Glyphs>> {
   static loadFont(file?: string): Promise<void>;
 }
 
-export type IconClass<Glyphs: string> = Class<Icon<Glyphs>>;
+export type { Icon };
 
 declare export function createIconSet<GlyphMap: { [key: string]: number }>(
   glyphMap: GlyphMap,

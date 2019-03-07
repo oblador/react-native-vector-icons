@@ -23,13 +23,11 @@ for (let i = 0; i < icons.length; i += 1) {
  * @flow strict
  */
 
-import type { IconClass } from './index';
+import type { Icon } from './index';
 
 type ${icon}Glyphs = '${names}';
 
-type Icon = IconClass<${icon}Glyphs>;
-
-declare export default Icon;
+declare export default Class<Icon<${icon}Glyphs>>;
 `;
   fs.writeFileSync(`${icon}.js.flow`, iconClass);
 }
