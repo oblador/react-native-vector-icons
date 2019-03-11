@@ -8,58 +8,43 @@ def iconFontsDir = config.iconFontsDir ?: "../../node_modules/react-native-vecto
 def iconFontNames = config.iconFontNames ?: [ "*.ttf" ];
 
 gradle.projectsEvaluated {
-    // Grab all build types and product flavors
-    def buildTypes = android.buildTypes.collect { type -> type.name }
-    def productFlavors = android.productFlavors.collect { flavor -> flavor.name }
+    android.applicationVariants.all { def variant ->
+        def targetName = variant.name.capitalize()
+        def targetPath = variant.dirName
 
-    // When no product flavors defined, use empty
-    if (!productFlavors) productFlavors.add("")
-
-    productFlavors.each { productFlavorName ->
-        buildTypes.each { buildTypeName ->
-            // Create variant and target names
-            def flavorNameCapitalized = "${productFlavorName.capitalize()}"
-            def buildNameCapitalized = "${buildTypeName.capitalize()}"
-            def targetName = "${flavorNameCapitalized}${buildNameCapitalized}"
-            def targetPath = productFlavorName ?
-                    "${productFlavorName}/${buildTypeName}" :
-                    "${buildTypeName}"
-
-            // Create task for copying fonts
-            def currentFontTask = tasks.create(
+        // Create task for copying fonts
+        def currentFontTask = tasks.create(
                 name: "copy${targetName}IconFonts",
                 type: Copy) {
+            into("${buildDir}/intermediates")
 
-              into("${buildDir}/intermediates")
+            iconFontNames.each { fontName ->
 
-              iconFontNames.each { fontName ->
+              from(iconFontsDir) {
+                include(fontName)
+                into("assets/${targetPath}/fonts/")
+              }
 
-                from(iconFontsDir) {
-                  include(fontName)
-                  into("assets/${targetPath}/fonts/")
-                }
-
-                from(iconFontsDir) {
-                  include(fontName)
-                  into("merged_assets/${targetPath}/merge${targetName}Assets/out/fonts/")
-                }
+              from(iconFontsDir) {
+                include(fontName)
+                into("merged_assets/${variant.name}/merge${targetName}Assets/out/fonts/")
               }
             }
+        }
 
-            currentFontTask.dependsOn("merge${targetName}Resources")
-            currentFontTask.dependsOn("merge${targetName}Assets")
+        currentFontTask.dependsOn("merge${targetName}Resources")
+        currentFontTask.dependsOn("merge${targetName}Assets")
 
-            [
-                "process${flavorNameCapitalized}Armeabi-v7a${buildNameCapitalized}Resources",
-                "process${flavorNameCapitalized}X86${buildNameCapitalized}Resources",
-                "processUniversal${targetName}Resources",
-                "process${targetName}Resources"
-            ].each { name ->
-                Task dependentTask = tasks.findByPath(name);
+        [
+            "processArmeabi-v7a${targetName}Resources",
+            "processX86${targetName}Resources",
+            "processUniversal${targetName}Resources",
+            "process${targetName}Resources"
+        ].each { name ->
+            Task dependentTask = tasks.findByPath(name);
 
-                if (dependentTask != null) {
-                    dependentTask.dependsOn(currentFontTask)
-                }
+            if (dependentTask != null) {
+                dependentTask.dependsOn(currentFontTask)
             }
         }
     }
