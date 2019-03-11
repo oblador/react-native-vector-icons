@@ -49,7 +49,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ## Installation
 
-1. Run: `$ npm install react-native-vector-icons --save`
+1. Run: `$ npm install react-native-vector-icons`
 2. For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
 3. If you intend to use FontAwesome 5, check out [`this guide`](FONTAWESOME5.md) to get you started.
 
