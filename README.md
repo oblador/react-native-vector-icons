@@ -64,6 +64,34 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
 
+ <details><summary>List of all available fonts to copy & paste in info.plist</summary>
+  
+  ```xml
+  <key>UIAppFonts</key>
+  <array>
+    <string>AntDesign.ttf</string>
+    <string>Entypo.ttf</string>
+    <string>EvilIcons.ttf</string>
+    <string>Feather.ttf</string>
+    <string>FontAwesome.ttf</string>
+    <string>FontAwesome5_Brands.ttf</string>
+    <string>FontAwesome5_Regular.ttf</string>
+    <string>FontAwesome5_Solid.ttf</string>
+    <string>Foundation.ttf</string>
+    <string>Ionicons.ttf</string>
+    <string>MaterialIcons.ttf</string>
+    <string>MaterialCommunityIcons.ttf</string>
+    <string>SimpleLineIcons.ttf</string>
+    <string>Octicons.ttf</string>
+    <string>Zocial.ttf</string>
+  </array>
+  ```
+  
+</details>
+
+<br>
+
+
 _Note: you need to recompile your project after adding new fonts, also ensure that they also appear under **Copy Bundle Resources** in **Build Phases**._
 
 If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
