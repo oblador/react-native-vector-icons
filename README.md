@@ -33,19 +33,19 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
 
-* [`AntDesign`](https://ant.design/) by AntFinance (**297** icons)
-* [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons) 
-* [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons) 
-* [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons) 
-* [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
-* [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.7.0, 1500 (free) **5082** (pro) icons)
-* [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-* [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
-* [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
-- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v3.4.93, **3494** icons)
+- [`AntDesign`](https://ant.design/) by AntFinance (**297** icons)
+- [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons)
+- [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
+- [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons)
+- [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
+- [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.7.0, 1500 (free) **5082** (pro) icons)
+- [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
+- [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
+- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
+- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v3.5.95, **3596** icons)
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
-* [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
-* [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.4.1, **189** icons)
+- [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
+- [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.4.1, **189** icons)
 
 ## Installation
 
@@ -90,7 +90,6 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 </details>
 
 <br>
-
 
 _Note: you need to recompile your project after adding new fonts, also ensure that they also appear under **Copy Bundle Resources** in **Build Phases**._
 
@@ -310,7 +309,7 @@ By combining some of these you can create for example :
 
 ## `Icon.Button` Component
 
-A convenience component for creating buttons with an icon on the left side. 
+A convenience component for creating buttons with an icon on the left side.
 
 ```js
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -417,9 +416,9 @@ Some fonts today use multiple styles, FontAwesome 5 for example, which is suppor
 ```jsx
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const myIcon1 = (<Icon name="comments" size={30} color="#900" />) // Defaults to regular
-const myIcon2 = (<Icon name="comments" size={30} color="#900" solid />)
-const myIcon3 = (<Icon name="comments" size={30} color="#900" light />) // Only in FA5 Pro
+const myIcon1 = <Icon name="comments" size={30} color="#900" />; // Defaults to regular
+const myIcon2 = <Icon name="comments" size={30} color="#900" solid />;
+const myIcon3 = <Icon name="comments" size={30} color="#900" light />; // Only in FA5 Pro
 ```
 
 ### Static methods
@@ -438,7 +437,7 @@ If no style argument is passed (or if it's invalid) the methods will default to 
 
 ### Components
 
-`Icon.Button`,  `Icon.TabBarItem`, `Icon.TabBarItemIOS`, `Icon.ToolbarAndroid` are all supported, usage is just like `Icon`:
+`Icon.Button`, `Icon.TabBarItem`, `Icon.TabBarItemIOS`, `Icon.ToolbarAndroid` are all supported, usage is just like `Icon`:
 
 ```jsx
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -490,21 +489,21 @@ Make sure you're using the _Download_ option in [IcoMoon](https://icomoon.io/app
 ```jsx
 import { createMultiStyleIconSet } from 'react-native-vector-icons';
 
-/* 
- * This is just example code, you are free to 
- * design your glyphmap and styles to your liking 
+/*
+ * This is just example code, you are free to
+ * design your glyphmap and styles to your liking
  */
 
 import glyphmap from './glyphmap.json';
-/* 
+/*
  * glyphmap = {
  *   "style1": [
- *	   "hello",
- *	   "world"
+ *     "hello",
+ *     "world"
  *   ],
  *   "style2": [
- *	   "foo",
- *	   "bar"
+ *     "foo",
+ *     "bar"
  *   ]
  * }
  */
@@ -520,7 +519,7 @@ const options = {
         return style;
       }
     }
-    
+
     /* Always return some family */
     return glyphKeys[0];
   }
@@ -530,7 +529,7 @@ const options = {
  * The styles object consits of keys, which will be
  * used as the styles later, and objects which are
  * used as style objects for the font. The style
- * should have unique characteristics for each font 
+ * should have unique characteristics for each font
  * in order to ensure that the right one will be
  * chosen. FontAwesome 5 uses font weight since
  * 5.7.0 in order to diffirentiate the styles but
@@ -565,9 +564,7 @@ const Icon = createMultiStyleIconSet(styles, options);
 | fallbackFamily | Function for selecting a family if a glyph is not available. The function should accept the `name` of the glyph as a parameter. Returns the name if the family. | `(name) => Object.keys(styles)[0]` |
 | glyphValidator | Function for validating that a glyph is available for a chosen style. It has `name` and `style` as parameters, in that order. Returns `true` if the glyph is valid or `false` if it's not. | `(name, style) => true`            |
 
-
-
-#### iOS 
+#### iOS
 
 You have to manually make a reference of your `.ttf` on your xcodeproj `Resources` folder and in `Info.plist`.
 
