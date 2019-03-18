@@ -25,7 +25,7 @@ for (let i = 0; i < icons.length; i += 1) {
 
 import type { Icon } from './index';
 
-type ${icon}Glyphs = '${names}';
+export type ${icon}Glyphs = '${names}';
 
 declare export default Class<Icon<${icon}Glyphs>>;
 `;
