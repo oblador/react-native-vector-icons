@@ -6,13 +6,18 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/SimpleLineIcons.json';
 
-const iconSet = createIconSet(glyphMap, 'simple-line-icons', 'SimpleLineIcons.ttf');
+const iconSet = createIconSet(
+  glyphMap,
+  'simple-line-icons',
+  'SimpleLineIcons.ttf'
+);
 
+// noinspection JSUnusedGlobalSymbols
 export default iconSet;
-
-export const Button = iconSet.Button;
-export const TabBarItem = iconSet.TabBarItem;
-export const TabBarItemIOS = iconSet.TabBarItemIOS;
-export const ToolbarAndroid = iconSet.ToolbarAndroid;
-export const getImageSource = iconSet.getImageSource;
-
+export const {
+  Button,
+  TabBarItem,
+  TabBarItemIOS,
+  ToolbarAndroid,
+  getImageSource,
+} = iconSet;

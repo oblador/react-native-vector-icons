@@ -2,10 +2,7 @@
 *.log
 
 # Runtime data
-tmp
 .fontcustom-manifest.json
-build
-dist
 *.js.flow
 
 # Dependency directory
