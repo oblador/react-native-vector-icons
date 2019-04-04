@@ -7,18 +7,18 @@
     "test": "jest"
   },
   "dependencies": {
-    "ramda": "^0.25.0",
-    "react": "16.5.0",
-    "react-native": "0.57.1",
+    "ramda": "^0.26.1",
+    "react": "16.8.6",
+    "react-native": "0.59.5",
     "react-native-deprecated-custom-components": "^0.1.2",
     "react-native-vector-icons": "*"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.1.2",
-    "babel-jest": "23.6.0",
-    "jest": "23.6.0",
-    "metro-react-native-babel-preset": "0.47.0",
-    "react-test-renderer": "16.5.0"
+    "@babel/runtime": "^7.4.3",
+    "babel-jest": "24.7.1",
+    "jest": "24.7.1",
+    "metro-react-native-babel-preset": "0.53.1",
+    "react-test-renderer": "16.8.6"
   },
   "jest": {
     "preset": "react-native"

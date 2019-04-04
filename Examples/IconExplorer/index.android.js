@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppRegistry, BackAndroid, StyleSheet, View } from 'react-native';
+import { AppRegistry, BackHandler, StyleSheet, View } from 'react-native';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Navigator } from 'react-native-deprecated-custom-components';
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 });
 
 let navigator;
-BackAndroid.addEventListener('hardwareBackPress', () => {
+BackHandler.addEventListener('hardwareBackPress', () => {
   if (navigator && navigator.getCurrentRoutes().length > 1) {
     navigator.pop();
     return true;
