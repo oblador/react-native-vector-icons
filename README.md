@@ -484,7 +484,7 @@ const Icon = createIconSetFromIcoMoon(
 
 Make sure you're using the _Download_ option in [IcoMoon](https://icomoon.io/app), and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
 
-###`createMultiStyleIconSet(styles [, options])`
+### `createMultiStyleIconSet(styles [, options])`
 
 ```jsx
 import { createMultiStyleIconSet } from 'react-native-vector-icons';
