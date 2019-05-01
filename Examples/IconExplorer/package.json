@@ -11,7 +11,7 @@
     "react": "16.5.0",
     "react-native": "0.57.1",
     "react-native-deprecated-custom-components": "^0.1.2",
-    "react-native-vector-icons": "*"
+    "react-native-vector-icons": "file::../../../"
   },
   "devDependencies": {
     "@babel/runtime": "^7.1.2",
