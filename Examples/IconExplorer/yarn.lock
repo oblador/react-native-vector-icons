@@ -4934,10 +4934,10 @@ react-native-vector-icons@*:
     prop-types "^15.6.2"
     yargs "^13.2.2"
 
-react-native@0.59.7:
-  version "0.59.7"
-  resolved "https://registry.npmjs.org/react-native/-/react-native-0.59.7.tgz#63571ed58b93e3cc05c1e9bcc4eedbc8a0a591fc"
-  integrity sha512-EFKuWSUv9noU44HugitxoO1QompGSKFe6+kjuhG5lKL+FiHrJjKIt8RsvyMS9MxRBIIip1vNBFaQLG8a9fl4aw==
+react-native@0.59.8:
+  version "0.59.8"
+  resolved "https://registry.npmjs.org/react-native/-/react-native-0.59.8.tgz#ade4141c777c60f5ec4889d9811d0f80a9d56547"
+  integrity sha512-x1T+/pEXrjgdH9uDzd5doJy5aFlBqW04j7ljDKIGALchhnvdFbtXXrUZ/1PfWHMrIdZxtaDt4tkSttp662GSQA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@react-native-community/cli" "^1.2.1"
