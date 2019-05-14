@@ -1,80 +1,54 @@
 import React from 'react';
-import { AppRegistry, BackHandler, StyleSheet, View } from 'react-native';
+import { AppRegistry, StyleSheet } from 'react-native';
 
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import { Navigator } from 'react-native-deprecated-custom-components';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 import IconSetList from './IconSetList';
 import IconList from './IconList';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  header: {
     backgroundColor: 'white',
   },
-  toolbar: {
-    backgroundColor: '#a9a9a9',
-    height: 56,
-  },
 });
 
-let navigator;
-BackHandler.addEventListener('hardwareBackPress', () => {
-  if (navigator && navigator.getCurrentRoutes().length > 1) {
-    navigator.pop();
-    return true;
+class IconListScreen extends React.Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: navigation.state.params.title,
+    headerStyle: styles.header,
+  });
+
+  render() {
+    const { iconSet } = this.props.navigation.state.params;
+
+    return <IconList iconSet={iconSet} />
   }
-  return false;
+}
+
+class IconExplorer extends React.Component {
+  static navigationOptions = {
+    title: 'Icon Explorer',
+    headerStyle: styles.header,
+  };
+
+  render() {
+    const { navigate } = this.props.navigation;
+    return (
+      <IconSetList
+        navigator={{
+          push({ iconSet, title }) {
+            navigate('IconSet', { title, iconSet })
+          },
+        }}
+      />
+    )
+  }
+}
+
+const AppNavigator = createStackNavigator({
+  IconExplorer: { screen: IconExplorer },
+  IconSet: { screen: IconListScreen },
 });
 
-const RouteMapper = (route, navigationOperations) => {
-  navigator = navigationOperations;
-  switch (route.name) {
-    case 'list':
-      return (
-        <View style={{ flex: 1 }}>
-          <Ionicons.ToolbarAndroid
-            style={styles.toolbar}
-            titleColor="white"
-            title={route.title}
-          />
-          <IconSetList navigator={navigationOperations} />
-        </View>
-      );
-    case 'iconSet':
-      return (
-        <View style={{ flex: 1 }}>
-          <Ionicons.ToolbarAndroid
-            actions={[]}
-            navIconName="md-arrow-back"
-            onIconClicked={navigationOperations.pop}
-            style={styles.toolbar}
-            titleColor="white"
-            title={route.title}
-          />
-          <IconList
-            style={{ flex: 1 }}
-            navigator={navigationOperations}
-            iconSet={route.iconSet}
-          />
-        </View>
-      );
-    default:
-      throw new Error(`Unknown route "${route.name}"`);
-  }
-};
+const App = createAppContainer(AppNavigator);
 
-const initialRoute = {
-  title: 'IconExplorer',
-  name: 'list',
-};
-
-const IconExplorer = () => (
-  <Navigator
-    style={styles.container}
-    initialRoute={initialRoute}
-    configureScene={() => Navigator.SceneConfigs.FadeAndroid}
-    renderScene={RouteMapper}
-  />
-);
-
-AppRegistry.registerComponent('IconExplorer', () => IconExplorer);
+AppRegistry.registerComponent('IconExplorer', () => App);
