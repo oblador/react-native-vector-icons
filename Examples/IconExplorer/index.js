@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppRegistry, StyleSheet } from 'react-native';
-
 import { createAppContainer, createStackNavigator } from 'react-navigation';
+
 import IconSetList from './IconSetList';
 import IconList from './IconList';
 

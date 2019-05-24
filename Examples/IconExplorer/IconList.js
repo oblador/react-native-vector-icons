@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   searchBar: {
-    marginTop: Platform.OS === 'android' ? 0 : 64,
     padding: 3,
     paddingLeft: 8,
     flexDirection: 'row',
@@ -26,7 +25,7 @@ const styles = StyleSheet.create({
   searchBarInput: {
     fontSize: 15,
     flex: 1,
-    height: Platform.OS === 'android' ? 45 : 30,
+    height: 45,
   },
   list: {
     flex: 1,
