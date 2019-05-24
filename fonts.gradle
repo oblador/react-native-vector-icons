@@ -25,9 +25,16 @@ gradle.projectsEvaluated {
                 into("assets/${targetPath}/fonts/")
               }
 
+              // Workaround for Android Gradle Plugin 3.2+ new asset directory
               from(iconFontsDir) {
                 include(fontName)
                 into("merged_assets/${variant.name}/merge${targetName}Assets/out/fonts/")
+              }
+
+              // Workaround for Android Gradle Plugin 3.4+ new asset directory
+              from(iconFontsDir) {
+                include(fontName)
+                into("merged_assets/${variant.name}/out/fonts/")
               }
             }
         }
