@@ -159,20 +159,11 @@ export default class IconSetsList extends PureComponent {
   };
 
   navigateToIconSet(iconSet) {
-    if (Platform.OS === 'ios') {
-      this.props.navigator.push({
-        title: iconSet.name,
-        component: IconList,
-        passProps: { iconSet },
-      });
-    } else {
-      Keyboard.dismiss();
-      this.props.navigator.push({
-        title: iconSet.name,
-        name: 'iconSet',
-        iconSet,
-      });
-    }
+    this.props.navigator.push({
+      title: iconSet.name,
+      name: 'iconSet',
+      iconSet,
+    });
   }
 
   renderIconSet = ({ item }) => (

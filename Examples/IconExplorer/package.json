@@ -7,11 +7,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "@babel/core": "^7.4.4",
     "ramda": "^0.26.1",
     "react": "16.8.6",
     "react-native": "0.59.8",
-    "react-native-deprecated-custom-components": "^0.1.2",
-    "react-native-vector-icons": "*"
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-screens": "^1.0.0-alpha.22",
+    "react-native-vector-icons": "*",
+    "react-navigation": "^3.9.1"
   },
   "devDependencies": {
     "@babel/runtime": "^7.4.4",
