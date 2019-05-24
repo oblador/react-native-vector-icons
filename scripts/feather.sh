@@ -14,6 +14,17 @@ check_nodejs() {
   if [[ ! -x "${NODE}" ]]; then return 1; fi
 }
 
+check_parallel() {
+  PARALLEL=`which parallel`
+  if [[ ! -x "${PARALLEL}" ]]; then return 1; fi
+}
+
+check_inkscape() {
+  XVFB=`which xvfb-run`
+  INKSCAPE=`which inkscape`
+  if [[ ! -x "${INKSCAPE}" ]]; then return 1; fi
+}
+
 print() {
   echo -ne "\e[0m${1}"
 }
@@ -29,13 +40,19 @@ fail() {
 run_generation() {
   yarn
 
+  TEMP_DIR=`mktemp -d`
+  echo "Using ${TEMP_DIR} as temporary directory"
+  cp node_modules/feather-icons/dist/icons/* "$TEMP_DIR"
+  CMD="${PARALLEL} --bar ${INKSCAPE} -f {} --verb=EditSelectAll --verb=StrokeToPath --verb=FileSave --verb=FileQuit ::: ${TEMP_DIR}/*.svg"
+  if [[ -x "${XVFB}" ]]; then ${XVFB} -d ${CMD}; else ${CMD}; fi
+
   print "Cleaning older installations..."
   rm -rf ${FEATHER_DIR} || true
   if [ -d "${FEATHER_DIR}" ]; then show_error "Can't remove Feather temp directory."; fi
   success "OK"
 
   print "Generating assets based on Feather specified in package.json..."
-  ${FONT_CUSTOM} compile node_modules/feather-icons/dist/icons\
+  ${FONT_CUSTOM} compile ${TEMP_DIR}\
     --font-name=Feather\
     --output=${FEATHER_DIR}\
     --quiet\
@@ -55,7 +72,7 @@ run_generation() {
   success "OK"
 
   print "Moving TTF font to right path..."
-  mv "${FEATHER_DIR}/Feather.ttf" "Fonts/Feather.ttf" && rm -rf ${FEATHER_DIR}
+  mv "${FEATHER_DIR}/Feather.ttf" "Fonts/Feather.ttf" && rm -rf ${TEMP_DIR} && rm -rf ${FEATHER_DIR}
   if [ -d "${FEATHER_DIR}" ]; then show_error "Can't remove Feather temp directory."; fi
   success "OK"
 }
@@ -76,6 +93,8 @@ show_error() {
 
 check_nodejs || show_help "NodeJS"
 check_font_custom || show_help "FontCustom"
+check_inkscape || show_help "Inkscape"
+check_parallel || show_help "GNU Parallel"
 
 set +e
 run_generation
