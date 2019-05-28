@@ -20,31 +20,51 @@ check_parallel() {
 }
 
 check_inkscape() {
-  XVFB=`which xvfb-run`
   INKSCAPE=`which inkscape`
   if [[ ! -x "${INKSCAPE}" ]]; then return 1; fi
 }
 
 print() {
-  echo -ne "\e[0m${1}"
+  printf "\e[0m${1}"
 }
 
 success() {
-  echo -e "\e[32m${1}"
+  printf "\e[32m${1}\n"
 }
 
 fail() {
-  echo -e "\e[31m${1}"
+  printf "\e[31m${1}\n"
 }
 
 run_generation() {
   yarn
 
+  if [[ -z "${XVFB}" ]]; then
+    print "Xvfb not informed, trying to find\n"
+    OSNAME=`uname -s`
+    if [[ ${OSNAME} == 'Linux' ]]; then XVFB=`which Xvfb`;
+    elif [[ ${OSNAME} == 'Darwin' ]]; then XVFB='/usr/X11/bin/Xvfb';
+    fi
+  fi
+
   TEMP_DIR=`mktemp -d`
-  echo "Using ${TEMP_DIR} as temporary directory"
+  print "Using ${TEMP_DIR} as temporary directory\n"
   cp node_modules/feather-icons/dist/icons/* "$TEMP_DIR"
   CMD="${PARALLEL} --bar ${INKSCAPE} -f {} --verb=EditSelectAll --verb=StrokeToPath --verb=FileSave --verb=FileQuit ::: ${TEMP_DIR}/*.svg"
-  if [[ -x "${XVFB}" ]]; then ${XVFB} -d ${CMD}; else ${CMD}; fi
+
+  if [[ -x "${XVFB}" ]]; then
+    print "Using Xvfb located in ${XVFB}\n"
+    # this part is borrow from xfvb-run from linux
+    SERVERNUM=2019
+    AUTHFILE=$(mktemp -p "$TEMP_DIR" Xauthority.XXXXXX)
+    XVFBARGS="-screen 0 640x480x24"
+    LISTENTCP="-nolisten tcp"
+    XAUTHORITY=$AUTHFILE ${XVFB} ":$SERVERNUM" $XVFBARGS $LISTENTCP >> /dev/null 2>&1 &
+    XVFBPID=$! && DISPLAY=":$SERVERNUM" ${CMD} && kill ${XVFBPID}
+  else
+    print "Xvfb not located\n"
+    ${CMD}
+  fi
 
   print "Cleaning older installations..."
   rm -rf ${FEATHER_DIR} || true
@@ -78,9 +98,9 @@ run_generation() {
 }
 
 show_help() {
-  echo "$1 not found in your PATH."
-  echo "To generate this font, its necessary to use a helper utility named FontCustom with NodeJS."
-  echo "Go to https://github.com/oblador/react-native-vector-icons/blob/master/BUILDING_FEATHER.md and follow the instructions."
+  print "$1 not found in your PATH.\n"
+  print "To generate this font, its necessary to use a helper utility named FontCustom with NodeJS.\n"
+  print "Go to https://github.com/oblador/react-native-vector-icons/blob/master/BUILDING_FEATHER.md and follow the instructions.\n"
   exit 1
 }
 
