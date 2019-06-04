@@ -36,7 +36,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [`AntDesign`](https://ant.design/) by AntFinance (**297** icons)
 - [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons)
 - [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
-- [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.7.0, **266** icons)
+- [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.21.0, **279** icons)
 - [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
 - [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.7.0, 1500 (free) **5082** (pro) icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
