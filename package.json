@@ -19,6 +19,7 @@
     "build-evilicons": "./scripts/evilicons.sh",
     "build-fontawesome": "./scripts/fontawesome.sh",
     "build-fontawesome5": "./scripts/fontawesome5.sh",
+    "build-fontisto": "./scripts/fontisto.sh",
     "build-feather": "./scripts/feather.sh",
     "build-foundation": "./scripts/foundation.sh",
     "build-ionicons": "./scripts/ionicons.sh",
