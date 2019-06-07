@@ -7,7 +7,7 @@ rm -rf AntDesign.js.flow Entypo.js.flow EvilIcons.js.flow Feather.js.flow \
     Zocial.js.flow
 
 node bin/generate-flow AntDesign Entypo EvilIcons Feather FontAwesome \
-    FontAwesome5 FontAwesome5Pro Foundation Ionicons MaterialCommunityIcons \
-    MaterialIcons Octicons SimpleLineIcons Zocial
+    FontAwesome5 FontAwesome5Pro Fontisto Foundation Ionicons \
+    MaterialCommunityIcons MaterialIcons Octicons SimpleLineIcons Zocial
 
 cp *.js.flow dist/

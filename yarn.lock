@@ -1355,6 +1355,10 @@ font-awesome@^4.6.3:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
 
+fontisto@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/fontisto/-/fontisto-3.0.4.tgz#711a2f23eb8eee83ef0cea578b5f0d99e4602304"
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
