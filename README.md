@@ -43,7 +43,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 - [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
 - [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
-- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v3.5.95, **3596** icons)
+- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v3.6.95, **3695** icons)
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
 - [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 - [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.4.1, **189** icons)
