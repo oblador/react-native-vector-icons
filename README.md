@@ -29,7 +29,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ## Sponsoring
 
-If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own. 
+If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own.
 
 ## Bundled Icon Sets
 
@@ -44,6 +44,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 - [`Ionicons`](https://ionicons.com/) by Iconic Framework (v5.0.1, **1227** icons)
+- [`LineAwesome`](https://icons8.com/line-awesome/) by Icons8 (v1.1, **654** icons)
 - [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1547** icons)
 - [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v5.3.45, **5346** icons)
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
@@ -82,6 +83,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
     <string>FontAwesome5_Solid.ttf</string>
     <string>Foundation.ttf</string>
     <string>Ionicons.ttf</string>
+    <string>LineAwesome.ttf</string>
     <string>MaterialIcons.ttf</string>
     <string>MaterialCommunityIcons.ttf</string>
     <string>SimpleLineIcons.ttf</string>

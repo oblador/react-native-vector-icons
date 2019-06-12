@@ -23,6 +23,7 @@
     "build-feather": "./scripts/feather.sh",
     "build-foundation": "./scripts/foundation.sh",
     "build-ionicons": "./scripts/ionicons.sh",
+    "build-lineawesome": "./scripts/lineawesome.sh",
     "build-materialicons": "./scripts/materialicons.sh",
     "build-materialcommunityicons": "./scripts/materialcommunityicons.sh",
     "build-octicons": "./scripts/octicons.sh",
