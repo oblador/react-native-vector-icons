@@ -343,7 +343,7 @@ Any [`Text`](http://facebook.github.io/react-native/docs/text.html), [`Touchable
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | **`color`**           | Text and icon color, use `iconStyle` or nest a `Text` component if you need different colors.                                                     | `white`             |
 | **`size`**            | Icon size.                                                                                                                                        | `20`                |
-| **`iconStyle`**       | Styles applied to the icon only, good for setting margins or a different color. _Note: use `iconStyle` for margins or expect unstable behaviour._ | `{marginRight: 10}` |
+| **`iconStyle`**       | Styles applied to the icon only, good for setting margins or a different color. _Note: use `iconStyle` for margins or expect unstable behaviour._ | _None_              |
 | **`backgroundColor`** | Background color of the button.                                                                                                                   | `#007AFF`           |
 | **`borderRadius`**    | Border radius of the button, set to `0` to disable.                                                                                               | `5`                 |
 | **`onPress`**         | A function called when the button is pressed.                                                                                                     | _None_              |
