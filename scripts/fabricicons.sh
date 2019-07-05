@@ -8,7 +8,7 @@ popd
 node bin/generate-icon ${TEMP}/css/fabric-icons.css\
   --prefix=.ms-Icon--\
   --componentName=FabricIcons\
-  --fontFamily=FabricMDL2Icons\
+  --fontFamily='Fabric MDL2 Assets'\
   --template=templates/separated-icon-set.tpl\
   --glyphmap=glyphmaps/FabricIcons.json\
   > FabricIcons.js

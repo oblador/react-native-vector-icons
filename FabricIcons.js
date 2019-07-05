@@ -6,7 +6,7 @@
 import createIconSet from './lib/create-icon-set';
 import glyphMap from './glyphmaps/FabricIcons.json';
 
-const iconSet = createIconSet(glyphMap, 'FabricMDL2Icons', 'FabricIcons.ttf');
+const iconSet = createIconSet(glyphMap, 'Fabric MDL2 Assets', 'FabricIcons.ttf');
 
 export default iconSet;
 
