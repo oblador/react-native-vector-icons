@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+# See the README at https://github.com/smarppy/fabric-icons to know how to update this collection.
+
 TEMP=$(mktemp -d -t rnvi)
 pushd ${TEMP}
 git clone https://github.com/smarppy/fabric-icons.git .
