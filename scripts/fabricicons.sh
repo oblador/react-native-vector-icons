@@ -1,15 +1,11 @@
 #!/bin/bash -e
 
-DIR=fabric-icons
-TMP_DIR=${TEMP}/fabric-icons
-
-rm -rf ${TMP_DIR}
-
+TEMP=$(mktemp -d -t rnvi)
 pushd ${TEMP}
-git clone https://github.com/smarppy/fabric-icons.git ${DIR}
+git clone https://github.com/smarppy/fabric-icons.git .
 popd
 
-node bin/generate-icon ${TMP_DIR}/css/fabric-icons.css\
+node bin/generate-icon ${TEMP}/css/fabric-icons.css\
   --prefix=.ms-Icon--\
   --componentName=FabricIcons\
   --fontFamily=FabricMDL2Icons\
@@ -17,6 +13,6 @@ node bin/generate-icon ${TMP_DIR}/css/fabric-icons.css\
   --glyphmap=glyphmaps/FabricIcons.json\
   > FabricIcons.js
 
-mv ${TMP_DIR}/fonts/fabric-icons.ttf Fonts/FabricIcons.ttf
+mv ${TEMP}/fonts/fabric-icons.ttf Fonts/FabricIcons.ttf
 
-rm -rf ${TMP_DIR}
+rm -rf ${TEMP}
