@@ -18,7 +18,6 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [Icon.Button Component](#iconbutton-component)
 - [Usage as PNG image/source object](#usage-as-png-imagesource-object)
 - [Usage with TabBarIOS](#usage-with-tabbarios)
-- [Usage with NavigatorIOS](#usage-with-navigatorios)
 - [Usage with ToolbarAndroid](#usage-with-toolbarandroid)
 - [Multi-style fonts](#multi-style-fonts)
 - [Custom Fonts](#custom-fonts)
@@ -373,27 +372,6 @@ Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended
 For example usage see `Examples/TabBarExample` or the examples section below. Don't forget to import and link to this project as described above if you are going to use the TabBar integration.
 
 **Note:** using `iconColor` and `selectedIconColor` requires the attribute [renderAsOriginal](https://facebook.github.io/react-native/docs/tabbarios-item.html#renderasoriginal) to be set to `true` on `Icon.TabBarItemIOS`.
-
-## Usage with [NavigatorIOS](http://facebook.github.io/react-native/docs/navigatorios.html)
-
-Use `Icon.getImageSource` to get an image source object and pass it as you would with `backButtonIcon`, `leftButtonIcon` or `rightButtonIcon`.
-
-Note: Since [`NavigatorIOS` doesn't rerender with new state](https://github.com/facebook/react-native/issues/1403) and the async nature of `getImageSource` you must not use it with `initialRoute` until the icon is rendered, but any view added by `push` should be fine. Easiest way is to simple add an `if` statment at the beginning of you render method like this:
-
-```
-  render() {
-    if (!this.state.myIcon) {
-      return false;
-    }
-    return (<NavigatorIOS ... />);
-  }
-```
-
-[Facebook writes](http://facebook.github.io/react-native/docs/navigator-comparison.html#navigatorios):
-
-> Development belongs to open-source community - not used by the React Native team on their apps. A result of this is that there is currently a backlog of unresolved bugs, nobody who uses this has stepped up to take ownership for it yet.
-
-You are probably better off with [`Navigator.NavigationBar`](http://facebook.github.io/react-native/docs/navigator.html) or [`react-native-navbar`](https://github.com/Kureev/react-native-navbar).
 
 ## Usage with [ToolbarAndroid](http://facebook.github.io/react-native/docs/toolbarandroid.html)
 
