@@ -139,7 +139,7 @@ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 #### Option: Manually
 
-- Copy the contents in the `Fonts` folder to `android/app/src/main/assets/fonts` (_note lowercase font folder_).
+- Copy the contents in the `Fonts` folder to `android/app/src/main/assets/fonts` (_note lowercase fonts folder_).
 
 ##### Integrating library for `getImageSource` and `ToolbarAndroid` support
 
