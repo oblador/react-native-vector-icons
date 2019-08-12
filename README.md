@@ -6,7 +6,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ## Table of Contents
 
-- [Bundeled Icon Sets](#bundled-icon-sets)
+- [Bundled Icon Sets](#bundled-icon-sets)
 - [Installation](#installation)
   - [iOS](#ios)
   - [Android](#android)
