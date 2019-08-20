@@ -17,6 +17,9 @@
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/require-default-props": [0],
+    "react/static-property-placement": [0],
+    "react/jsx-props-no-spreading": [0],
+    "react/state-in-constructor": [0],
     "import/no-extraneous-dependencies": [0],
     "import/no-unresolved": [2, { ignore: ['^react(-native)?$'] }],
     "import/extensions": [2, { "js": "never", "json": "always" }],
@@ -28,9 +31,6 @@
       "exports": "always-multiline",
       "functions": "ignore",
     }],
-    "prettier/prettier": ["error", {
-      "trailingComma": "es5",
-      "singleQuote": true
-    }]
+    "prettier/prettier": ["error"]
   }
 }
