@@ -404,13 +404,13 @@ const myIcon3 = <Icon name="comments" size={30} color="#900" light />; // Only i
 
 All static methods from `Icon` is supported by multi-styled fonts.
 
-| Prop                   | Description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| **`getFontFamily`**    | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily(style)` |
+| Prop                   | Description                                                                                                                                                                                      |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **`getFontFamily`**    | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily(style)`                                                                  |
 | **`getImageSource`**   | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color, style)` |
-| **`getRawGlyphMap`**   | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap(style)` |
-| **`hasIcon`**          | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name, style)` |
-| **`getStyledIconSet`** | Use this to get a `Icon` component for a single style. Usage. `const StyledIcon = Icon.getStyledIconSet(style)` |
+| **`getRawGlyphMap`**   | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap(style)`                                                                                                  |
+| **`hasIcon`**          | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name, style)`                                                                                          |
+| **`getStyledIconSet`** | Use this to get a `Icon` component for a single style. Usage. `const StyledIcon = Icon.getStyledIconSet(style)`                                                                                  |
 
 If no style argument is passed (or if it's invalid) the methods will default to a pre-defineds fallback.
 
@@ -537,10 +537,10 @@ const Icon = createMultiStyleIconSet(styles, options);
 <Icon name={'bar'} style2 />
 ```
 
-| option         | Description                                                  | default                            |
-| -------------- | ------------------------------------------------------------ | ---------------------------------- |
-| defaultStyle   | The name of the style to be used if no style is supplied during rendering. | ` Object.keys(styles)[0]`          |
-| fallbackFamily | Function for selecting a family if a glyph is not available. The function should accept the `name` of the glyph as a parameter. Returns the name if the family. | `(name) => Object.keys(styles)[0]` |
+| option         | Description                                                                                                                                                                                | default                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| defaultStyle   | The name of the style to be used if no style is supplied during rendering.                                                                                                                 | `Object.keys(styles)[0]`           |
+| fallbackFamily | Function for selecting a family if a glyph is not available. The function should accept the `name` of the glyph as a parameter. Returns the name if the family.                            | `(name) => Object.keys(styles)[0]` |
 | glyphValidator | Function for validating that a glyph is available for a chosen style. It has `name` and `style` as parameters, in that order. Returns `true` if the glyph is valid or `false` if it's not. | `(name, style) => true`            |
 
 #### iOS

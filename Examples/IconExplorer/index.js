@@ -20,7 +20,7 @@ class IconListScreen extends React.Component {
   render() {
     const { iconSet } = this.props.navigation.state.params;
 
-    return <IconList iconSet={iconSet} />
+    return <IconList iconSet={iconSet} />;
   }
 }
 
@@ -36,11 +36,11 @@ class IconExplorer extends React.Component {
       <IconSetList
         navigator={{
           push({ iconSet, title }) {
-            navigate('IconSet', { title, iconSet })
+            navigate('IconSet', { title, iconSet });
           },
         }}
       />
-    )
+    );
   }
 }
 
