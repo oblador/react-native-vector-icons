@@ -2,6 +2,7 @@ import { pipe, toPairs, groupBy, map } from 'ramda';
 import AntD from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import FabricIcons from 'react-native-vector-icons/FabricIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -15,6 +16,7 @@ import Zocial from 'react-native-vector-icons/Zocial';
 import AntDGlyphs from 'react-native-vector-icons/glyphmaps/AntDesign.json';
 import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo.json';
 import EvilIconsGlyphs from 'react-native-vector-icons/glyphmaps/EvilIcons.json';
+import FabricIconsGlyphs from 'react-native-vector-icons/glyphmaps/FabricIcons.json';
 import FeatherGlyphs from 'react-native-vector-icons/glyphmaps/Feather.json';
 import FontAwesomeGlyphs from 'react-native-vector-icons/glyphmaps/FontAwesome.json';
 import FontAwesome5Glyphs from 'react-native-vector-icons/glyphmaps/FontAwesome5Free.json';
@@ -30,6 +32,7 @@ const GLYPH_MAPS = {
   AntD: AntDGlyphs,
   Entypo: EntypoGlyphs,
   EvilIcons: EvilIconsGlyphs,
+  FabricIcons: FabricIconsGlyphs,
   Feather: FeatherGlyphs,
   FontAwesome: FontAwesomeGlyphs,
   FontAwesome5: FontAwesome5Glyphs,
@@ -46,6 +49,7 @@ const ICON_SETS = {
   AntD,
   Entypo,
   EvilIcons,
+  FabricIcons,
   Feather,
   FontAwesome,
   FontAwesome5,
