@@ -359,7 +359,7 @@ For a complete example check out the `TabBarExample` project.
 
 ## Usage with [TabBarIOS](http://facebook.github.io/react-native/docs/tabbarios.html)
 
-Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties:
+Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties
 
 | Prop                    | Description                                                             | Default       |
 | ----------------------- | ----------------------------------------------------------------------- | ------------- |
