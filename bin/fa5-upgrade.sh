@@ -76,7 +76,6 @@ copy_ttf_fonts_to_dest_dir()
   cp "$font_dir_path/fa-light-300.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Light.ttf" &&
   cp "$font_dir_path/fa-regular-400.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Regular.ttf" &&
   cp "$font_dir_path/fa-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Solid.ttf"
-  cp "$font_dir_path/fa-duotone-900.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Duotone.ttf"
 
   retval=$?
   if [ "$retval" != 0 ]; then
