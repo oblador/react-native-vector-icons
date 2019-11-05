@@ -95,9 +95,12 @@ _Note: you need to recompile your project after adding new fonts, also ensure th
 
 If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
 
+
 #### Option: With `react-native link`
 
 `$ react-native link react-native-vector-icons`
+
+Note: If you are using react-native version 0.60 or higher you don't need to link [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 
 _Note: Some users are having trouble using this method, try one of the others if you are too._
 
