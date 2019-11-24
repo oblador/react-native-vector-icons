@@ -74,7 +74,7 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@mdi/font": "^4.0.96",
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.0.3",
     "eslint": "^6.2.1",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-prettier": "^6.1.0",
