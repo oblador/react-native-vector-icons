@@ -9,10 +9,10 @@ import glyphMap from './glyphmaps/Entypo.json';
 const iconSet = createIconSet(glyphMap, 'Entypo', 'Entypo.ttf');
 
 export default iconSet;
-
-export const Button = iconSet.Button;
-export const TabBarItem = iconSet.TabBarItem;
-export const TabBarItemIOS = iconSet.TabBarItemIOS;
-export const ToolbarAndroid = iconSet.ToolbarAndroid;
-export const getImageSource = iconSet.getImageSource;
-
+export const {
+  Button,
+  TabBarItem,
+  TabBarItemIOS,
+  ToolbarAndroid,
+  getImageSource,
+} = iconSet;
