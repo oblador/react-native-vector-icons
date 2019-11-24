@@ -1,5 +1,4 @@
-IconExplorer
-============
+# IconExplorer
 
 To run on OSX you must first install `react-native-desktop` with:
 

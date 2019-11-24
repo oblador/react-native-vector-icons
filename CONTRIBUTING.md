@@ -16,11 +16,11 @@ If you wish to submit a pull request for a new feature or issue, you should star
 
 ### Setup
 
-*  Install [Node.js](https://nodejs.org/) if you have not already. (*We suggest you to use node v6.x.x*)
-*  Fork the repo
-* ```git clone https://github.com/*yourusername*/react-native-vector-icons.git && cd react-native-vector-icons```
-* ```yarn install``` OR ```npm install```
-* ```npm test```
-* Optionally ```brew install fontcustom && npm run build``` if you've updated any icon sets.
+- Install [Node.js](https://nodejs.org/) if you have not already. (_We suggest you to use node v6.x.x_)
+- Fork the repo
+- `git clone https://github.com/*yourusername*/react-native-vector-icons.git && cd react-native-vector-icons`
+- `yarn install` OR `npm install`
+- `npm test`
+- Optionally `brew install fontcustom && npm run build` if you've updated any icon sets.
 
 One you have done this, create a new branch with a name that loosely describes the issue on which you will be working. Once you think you have the addressed the issue in question, submit a pull request to the `master` branch.
