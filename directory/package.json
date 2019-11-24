@@ -1,21 +1,35 @@
 {
   "name": "react-native-vector-icons-directory",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "homepage": "https://oblador.github.io/react-native-vector-icons",
-  "devDependencies": {
-    "gh-pages": "^1.0.0",
-    "react-scripts": "^0.8.4"
-  },
   "dependencies": {
-    "lodash": "^4.14.0",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build"
+    "generate-glyphmap-index": "mkdir -p src/generated && node bin/generate-glyphmap-index.js > src/generated/glyphmapIndex.json",
+    "generate-font-index": "mkdir -p src/generated/fonts && cp ../Fonts/*.ttf src/generated/fonts && node bin/generate-font-styles.js > src/generated/fonts.css",
+    "postinstall": "yarn generate-glyphmap-index && yarn generate-font-index"
+  },
+  "eslintConfig": {
+    "extends": "../.eslintrc"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

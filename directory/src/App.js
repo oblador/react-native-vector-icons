@@ -3,40 +3,7 @@ import PropTypes from 'prop-types';
 
 import './App.css';
 
-import AntDesign from '../../glyphmaps/AntDesign.json';
-import Entypo from '../../glyphmaps/Entypo.json';
-import EvilIcons from '../../glyphmaps/EvilIcons.json';
-import Feather from '../../glyphmaps/Feather.json';
-import FontAwesome from '../../glyphmaps/FontAwesome.json';
-import FontAwesome5 from '../../glyphmaps/FontAwesome5Free.json';
-import FontAwesome5Brands from '../../glyphmaps/FontAwesome5Free.json';
-import FontAwesome5Meta from '../../glyphmaps/FontAwesome5Free_meta.json';
-import Fontisto from '../../glyphmaps/Fontisto.json';
-import Foundation from '../../glyphmaps/Foundation.json';
-import Ionicons from '../../glyphmaps/Ionicons.json';
-import MaterialCommunityIcons from '../../glyphmaps/MaterialCommunityIcons.json';
-import MaterialIcons from '../../glyphmaps/MaterialIcons.json';
-import Octicons from '../../glyphmaps/Octicons.json';
-import SimpleLineIcons from '../../glyphmaps/SimpleLineIcons.json';
-import Zocial from '../../glyphmaps/Zocial.json';
-
-const IconFamilies = {
-  AntDesign,
-  Entypo,
-  EvilIcons,
-  Feather,
-  FontAwesome,
-  FontAwesome5,
-  FontAwesome5Brands,
-  Fontisto,
-  Foundation,
-  Ionicons,
-  MaterialCommunityIcons,
-  MaterialIcons,
-  SimpleLineIcons,
-  Octicons,
-  Zocial,
-};
+import IconFamilies from './generated/glyphmapIndex.json';
 
 const WAITING_INTERVAL = 300;
 
@@ -131,14 +98,16 @@ class App extends PureComponent {
 
   handleSubmit = text => {
     let matches = [];
-    Object.keys(IconFamilies).forEach(family => {
-      const icons = IconFamilies[family];
-      const names = Object.keys(icons);
-      const results = names.filter(name => name.indexOf(text) >= 0);
-      if (results.length) {
-        matches = [...matches, { family, names: results }];
-      }
-    });
+    Object.keys(IconFamilies)
+      .sort()
+      .forEach(family => {
+        const icons = IconFamilies[family];
+        const names = Object.keys(icons);
+        const results = names.filter(name => name.indexOf(text) >= 0);
+        if (results.length) {
+          matches = [...matches, { family, names: results }];
+        }
+      });
 
     this.setState({ matches });
   };
@@ -157,16 +126,9 @@ class App extends PureComponent {
   };
 
   renderIcon(family, name) {
-    let familyName = family;
-
-    if (family === 'FontAwesome5') {
-      if (FontAwesome5Meta.solid.indexOf(name) === -1)
-        familyName = 'FontAwesome5Brands';
-    }
-
     return (
       <div className="Result-Icon-Container" key={name}>
-        <Icon family={familyName} name={name} className="Result-Icon" />
+        <Icon family={family} name={name} className="Result-Icon" />
         <h4 className="Result-Icon-Name">{name}</h4>
       </div>
     );
