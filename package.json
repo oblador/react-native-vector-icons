@@ -67,12 +67,12 @@
   },
   "dependencies": {
     "lodash": "^4.17.15",
-    "prop-types": "^15.6.2",
-    "yargs": "^13.2.2"
+    "prop-types": "^15.7.2",
+    "yargs": "^15.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
     "@mdi/font": "^4.0.96",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.2.1",
@@ -89,8 +89,8 @@
     "fontisto": "^3.0.4",
     "ionicons": "^4.0.0",
     "material-design-icons": "^3.0.1",
-    "metro-react-native-babel-preset": "^0.56.0",
+    "metro-react-native-babel-preset": "^0.57.0",
     "octicons": "^8.4.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   }
 }
