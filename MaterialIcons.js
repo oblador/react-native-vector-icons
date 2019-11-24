@@ -9,10 +9,11 @@ import glyphMap from './glyphmaps/MaterialIcons.json';
 const iconSet = createIconSet(glyphMap, 'Material Icons', 'MaterialIcons.ttf');
 
 export default iconSet;
-
-export const Button = iconSet.Button;
-export const TabBarItem = iconSet.TabBarItem;
-export const TabBarItemIOS = iconSet.TabBarItemIOS;
-export const ToolbarAndroid = iconSet.ToolbarAndroid;
-export const getImageSource = iconSet.getImageSource;
+export const {
+  Button,
+  TabBarItem,
+  TabBarItemIOS,
+  ToolbarAndroid,
+  getImageSource,
+} = iconSet;
 
