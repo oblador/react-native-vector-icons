@@ -153,8 +153,12 @@ body {
 }
 
 .Result-Title {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   margin: 0;
   padding: 1em 20px;
+  border-radius: 3px 3px 0 0;
   font-size: 200%;
   font-weight: normal;
   color: #fff;
