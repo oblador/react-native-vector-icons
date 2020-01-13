@@ -73,7 +73,7 @@
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
-    "@mdi/font": "^4.0.96",
+    "@mdi/font": "^4.7.95",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.2.1",
     "eslint-config-airbnb": "18.0.1",
