@@ -12,6 +12,14 @@ body {
 
 .App {
   width: 100%;
+  padding-top: 120px;
+}
+
+.Navbar-Container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 .Header-Container {
@@ -81,7 +89,7 @@ body {
 
 .Result-Title {
   position: sticky;
-  top: 0;
+  top: 119px;
   z-index: 1;
   margin: 0;
   padding: 1em 20px;

@@ -145,8 +145,10 @@ class App extends PureComponent {
   render() {
     return (
       <div className="App">
-        <HeaderBar />
-        <SearchBar onSubmit={this.handleSubmit} />
+        <div className="Navbar-Container">
+          <HeaderBar />
+          <SearchBar onSubmit={this.handleSubmit} />
+        </div>
         <div className="Container">
           {this.state.matches.map(this.renderMatch)}
           {this.state.matches.length === 0 && this.renderNotFound()}
