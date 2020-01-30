@@ -60,11 +60,6 @@
     "url": "git://github.com/oblador/react-native-vector-icons.git"
   },
   "license": "MIT",
-  "rnpm": {
-    "assets": [
-      "Fonts"
-    ]
-  },
   "dependencies": {
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
