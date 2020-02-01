@@ -16,6 +16,3 @@ bower_components
 # Xcode
 
 xcuserdata
-
-# mac
-.DS_Store
