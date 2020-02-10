@@ -1463,6 +1463,7 @@ fast-levenshtein@~2.0.6:
 feather-icons@^4.21.0:
   version "4.21.0"
   resolved "https://registry.yarnpkg.com/feather-icons/-/feather-icons-4.21.0.tgz#fd545bc735960dd6c6afed7c35d8d9a4bb513983"
+  integrity sha512-5RgyUH0J9NCRG5Z+aL8kJduMM4J6IAKlGqSrnkWW6rpY5jC9MyE0NkvgsKOmnedAZN2ORmdXTndPIHFWaMCf6w==
   dependencies:
     classnames "^2.2.5"
     core-js "^2.5.3"
@@ -1780,6 +1781,7 @@ inquirer@^7.0.0:
 ionicons@^4.0.0:
   version "4.4.4"
   resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-4.4.4.tgz#d2b2dfe240e4c8686f59acd91c9c8c1dd13931c1"
+  integrity sha512-HOcxF+pFHQQA4x7zy1eyuzTsaJzyyKKGYGsqvMMnB26rvp9sTKjA8JDZ4L4GRSNWliHC/oXbBoidglJa/0kiPA==
 
 is-accessor-descriptor@^0.1.6:
   version "0.1.6"
@@ -2427,6 +2429,7 @@ object.values@^1.1.0:
 octicons@^8.4.1:
   version "8.4.1"
   resolved "https://registry.yarnpkg.com/octicons/-/octicons-8.4.1.tgz#ccc3a17ba956278a64390d361bfb88be18a195c7"
+  integrity sha512-xg+HvjTNy+4+i+Tz5AUetJd7kyKMjLjCxgWkl/75HH4OzxmL7bzDsay4ShfgCRu7rLMocipWkitQ8d51Kd4ngQ==
   dependencies:
     object-assign "^4.1.1"
 
