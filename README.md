@@ -195,12 +195,6 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
 _Note: If you're using React Native (Android) <= 0.17, [follow this instructions](https://github.com/oblador/react-native-vector-icons/blob/2fe5b97afa849652215e3258189e8ca3ea775c53/README.md#integrating-library-for-getimagesource-support)_
 
-#### Option: With `rnpm`
-
-`$ react-native link`
-
-_Note: Some users are having trouble using this method, try one of the others if you are too._
-
 ### OSX via [`react-native-desktop`](https://github.com/ptmt/react-native-desktop)
 
 - Browse to `node_modules/react-native-vector-icons` and drag the folder `Fonts` to your project in Xcode. **Make sure your app is checked under "Add to targets" and that "Create folder references" is checked**.
