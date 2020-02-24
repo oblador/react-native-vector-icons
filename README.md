@@ -93,7 +93,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 _Note: you need to recompile your project after adding new fonts, also ensure that they also appear under **Copy Bundle Resources** in **Build Phases**._
 
-If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
+If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`/`getImageSourceSync`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
 
 #### Option: With `react-native link`
 
@@ -193,8 +193,6 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   }
   ```
 
-_Note: If you're using React Native (Android) <= 0.17, [follow this instructions](https://github.com/oblador/react-native-vector-icons/blob/2fe5b97afa849652215e3258189e8ca3ea775c53/README.md#integrating-library-for-getimagesource-support)_
-
 #### Option: With `rnpm`
 
 `$ react-native link`
@@ -284,6 +282,7 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`getFontFamily`**  | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily()`                                                                |
 | **`getImageSource`** | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
+| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)` |
 | **`getRawGlyphMap`** | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()`                                                                                                |
 | **`hasIcon`**        | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name)`                                                                                          |
 
@@ -351,9 +350,11 @@ Any [`Text`](http://facebook.github.io/react-native/docs/text.html), [`Touchable
 
 Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
 
-```
+```js
 Icon.getImageSource('user', 20, 'red').then((source) => this.setState({ userIcon: source }));
 ```
+
+Alternatively you may use the synchronous method `Icon.getImageSourceSync` to avoid rendering glitches. Keep in mind that this method is blocking and might incur performance penalties. Subsequent calls will use cache however. 
 
 For a complete example check out the `TabBarExample` project.
 
@@ -409,7 +410,8 @@ All static methods from `Icon` is supported by multi-styled fonts.
 | Prop                   | Description                                                                                                                                                                                      |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **`getFontFamily`**    | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily(style)`                                                                  |
-| **`getImageSource`**   | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color, style)` |
+| **`getImageSource`**   | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
+| **`getImageSourceSync`**   | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)` |
 | **`getRawGlyphMap`**   | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap(style)`                                                                                                  |
 | **`hasIcon`**          | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name, style)`                                                                                          |
 | **`getStyledIconSet`** | Use this to get a `Icon` component for a single style. Usage. `const StyledIcon = Icon.getStyledIconSet(style)`                                                                                  |

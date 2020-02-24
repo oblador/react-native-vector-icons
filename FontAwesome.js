@@ -15,5 +15,5 @@ export const {
   TabBarItemIOS,
   ToolbarAndroid,
   getImageSource,
+  getImageSourceSync,
 } = iconSet;
-
