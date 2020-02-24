@@ -29,6 +29,8 @@
 #import "RCTFont.h"
 #endif
 
+NSString *const RNVIErrorDomain = @"org.oblador.react-native-vector-icons";
+
 @implementation RNVectorIconsManager
 
 @synthesize bridge = _bridge;
@@ -59,7 +61,7 @@ RCT_EXPORT_MODULE();
                                                   identifier, fontName,
                                                   [glyph characterAtIndex:0],
                                                   fontSize, hexColor, screenScale];
-  
+
   return [NSHomeDirectory() stringByAppendingPathComponent:fileName];
 }
 
@@ -75,22 +77,22 @@ RCT_EXPORT_MODULE();
     CGSize iconSize = [attributedString size];
     UIGraphicsBeginImageContextWithOptions(iconSize, NO, 0.0);
     [attributedString drawAtPoint:CGPointMake(0, 0)];
-    
+
     UIImage *iconImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-  
+
     NSData *imageData = UIImagePNGRepresentation(iconImage);
     return [imageData writeToFile:filePath atomically:YES];
   }
-  
+
   return YES;
 }
 
-RCT_EXPORT_METHOD(getImageForFont:(NSString *)fontName
-                  withGlyph:(NSString *)glyph
-                  withFontSize:(CGFloat)fontSize
-                  withColor:(UIColor *)color
-                  callback:(RCTResponseSenderBlock)callback)
+- (NSString *)createGlyphImagePathForFont:(NSString *)fontName
+                                withGlyph:(NSString *)glyph
+                                withFontSize:(CGFloat)fontSize
+                                withColor:(UIColor *)color
+                                withError:(NSError **)error
 {
   UIFont *font = [UIFont fontWithName:fontName size:fontSize];
   NSString *filePath = [self generateFilePath:glyph withFontName:fontName
@@ -101,19 +103,55 @@ RCT_EXPORT_METHOD(getImageForFont:(NSString *)fontName
   BOOL success = [self createAndSaveGlyphImage:glyph withFont:font
                                                      withFilePath:filePath
                                                      withColor:color];
-  
-  if(!success) {
-    return callback(@[@"Failed to write rendered icon image"]);
+
+  if (!success) {
+    *error = [NSError errorWithDomain:RNVIErrorDomain code:RNVIGenericError userInfo:@{NSLocalizedDescriptionKey: @"Failed to write rendered icon image"}];
+    return nil;
   }
-  
-  callback(@[[NSNull null], filePath]);
+  return filePath;
 }
 
-RCT_EXPORT_METHOD(loadFontWithFileName:(NSString *)fontFileName
-                  extension:(NSString *)extension
-                  resolver:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject)
-{
+RCT_EXPORT_METHOD(
+  getImageForFont:(NSString *)fontName
+  withGlyph:(NSString *)glyph
+  withFontSize:(CGFloat)fontSize
+  withColor:(UIColor *)color
+  resolver:(RCTPromiseResolveBlock)resolve
+  rejecter:(RCTPromiseRejectBlock)reject
+) {
+  NSError *error = nil;
+  NSString *filePath = [self createGlyphImagePathForFont:fontName
+                                               withGlyph:glyph
+                                               withFontSize:fontSize
+                                               withColor:color
+                                               withError:&error];
+  if (error != nil) {
+    reject([NSString stringWithFormat:@"%ld", (long)error.code], error.localizedDescription, error);
+  } else {
+    resolve(filePath);
+  }
+}
+
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(
+  getImageForFontSync:(NSString *)fontName
+  withGlyph:(NSString *)glyph
+  withFontSize:(CGFloat)fontSize
+  withColor:(UIColor *)color
+) {
+  NSError *error = nil;
+  return [self createGlyphImagePathForFont:fontName
+                                 withGlyph:glyph
+                                 withFontSize:fontSize
+                                 withColor:color
+                                 withError:&error];
+}
+
+RCT_EXPORT_METHOD(
+  loadFontWithFileName:(NSString *)fontFileName
+  extension:(NSString *)extension
+  resolver:(RCTPromiseResolveBlock)resolve
+  rejecter:(RCTPromiseRejectBlock)reject
+) {
   NSBundle *bundle = [NSBundle bundleForClass:[self class]];
   NSURL *fontURL = [bundle URLForResource:fontFileName withExtension:extension];
   NSData *fontData = [NSData dataWithContentsOfURL:fontURL];
