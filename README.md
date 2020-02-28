@@ -193,7 +193,6 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   }
   ```
 
-_Note: If you're using React Native (Android) <= 0.17, [follow this instructions](https://github.com/oblador/react-native-vector-icons/blob/2fe5b97afa849652215e3258189e8ca3ea775c53/README.md#integrating-library-for-getimagesource-support)_
 
 ### OSX via [`react-native-desktop`](https://github.com/ptmt/react-native-desktop)
 
