@@ -77,6 +77,11 @@ declare class Icon<Glyphs: string> extends PureComponent<IconProps<Glyphs>> {
     size?: number,
     color?: Color
   ): Promise<ImageSource>;
+  static getImageSourceSync(
+    name: Glyphs,
+    size?: number,
+    color?: Color
+  ): ImageSource;
   static getRawGlyphMap(): { [name: Glyphs]: number };
   static hasIcon(name: string): boolean;
   static loadFont(file?: string): Promise<void>;

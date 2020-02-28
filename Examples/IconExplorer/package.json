@@ -6,15 +6,17 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "postinstall": "pwd && ./scripts/postinstall.sh",
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/toolbar-android": "^0.1.0-rc.1",
     "ramda": "^0.26.1",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-gesture-handler": "^1.5.1",
     "react-native-screens": "^2.0.0-alpha.12",
-    "react-native-vector-icons": "*",
+    "react-native-vector-icons": "file:../../",
     "react-navigation": "^4.0.10",
     "react-navigation-stack": "^1.10.3"
   },
