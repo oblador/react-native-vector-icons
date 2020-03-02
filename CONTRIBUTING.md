@@ -8,7 +8,7 @@ If this is your first open source contribution, please take a look at [this](htt
 
 ## Reporting Bugs & Feature Requests
 
-If you would like to submit a feature request or report a bug, we encourage you to first look through the [issues](https://github.com/react-native-vector-icons/loki/issues) and [pull requests](https://github.com/oblador/react-native-vector-icons/pulls) before filing a new issue.
+If you would like to submit a feature request or report a bug, we encourage you to first look through the [issues](https://github.com/oblador/react-native-vector-icons/issues) and [pull requests](https://github.com/oblador/react-native-vector-icons/pulls) before filing a new issue.
 
 ## Submitting a Pull Request
 
