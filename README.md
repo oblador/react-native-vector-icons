@@ -193,11 +193,6 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   }
   ```
 
-#### Option: With `rnpm`
-
-`$ react-native link`
-
-_Note: Some users are having trouble using this method, try one of the others if you are too._
 
 ### OSX via [`react-native-desktop`](https://github.com/ptmt/react-native-desktop)
 
