@@ -93,7 +93,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 _Note: you need to recompile your project after adding new fonts, also ensure that they also appear under **Copy Bundle Resources** in **Build Phases**._
 
-If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`/`getImageSourceSync`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
+If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`/`getImageSourceSync`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](https://reactnative.dev/docs/linking-libraries-ios.html#content).
 
 #### Option: With `react-native link`
 
@@ -113,7 +113,7 @@ Edit `Info.plist` as described above.
 
 If you are using `use_frameworks!` in your `Podfile` you instead need to dynamically load the icon font by doing `Icon.loadFont()` when boostrapping your application.
 
-_Note: You must be consuming React itself via CocoaPods for this to work, see [React Native documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps) on how to set that up._
+_Note: You must be consuming React itself via CocoaPods for this to work, see [React Native documentation](https://reactnative.dev/docs/integration-with-existing-apps) on how to set that up._
 
 ### Android
 
@@ -263,7 +263,7 @@ const myIcon = <Icon name="rocket" size={30} color="#900" />;
 
 ### Properties
 
-Any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
+Any [Text property](https://reactnative.dev/docs/text.html) and the following:
 
 | Prop        | Description                                                             | Default     |
 | ----------- | ----------------------------------------------------------------------- | ----------- |
@@ -283,7 +283,7 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 
 ### Styling
 
-Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
+Since `Icon` builds on top of the `Text` component, most [style properties](https://reactnative.dev/docs/style.html) will work as expected, you might find it useful to play around with these:
 
 - `backgroundColor`
 - `borderWidth`
@@ -330,7 +330,7 @@ const customTextButton = (
 
 ### Properties
 
-Any [`Text`](http://facebook.github.io/react-native/docs/text.html), [`TouchableHighlight`](http://facebook.github.io/react-native/docs/touchablehighlight.html) or [`TouchableWithoutFeedback`](http://facebook.github.io/react-native/docs/touchablewithoutfeedback.html) property in addition to these:
+Any [`Text`](https://reactnative.dev/docs/text.html), [`TouchableHighlight`](https://reactnative.dev/docs/touchablehighlight.html) or [`TouchableWithoutFeedback`](https://reactnative.dev/docs/touchablewithoutfeedback.html) property in addition to these:
 
 | Prop                  | Description                                                                                                                                       | Default             |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
@@ -353,7 +353,7 @@ Alternatively you may use the synchronous method `Icon.getImageSourceSync` to av
 
 For a complete example check out the `TabBarExample` project.
 
-## Usage with [TabBarIOS](http://facebook.github.io/react-native/docs/tabbarios.html)
+## Usage with [TabBarIOS](https://reactnative.dev/docs/tabbarios.html)
 
 Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties:
 
@@ -367,9 +367,9 @@ Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended
 
 For example usage see `Examples/TabBarExample` or the examples section below. Don't forget to import and link to this project as described above if you are going to use the TabBar integration.
 
-**Note:** using `iconColor` and `selectedIconColor` requires the attribute [renderAsOriginal](https://facebook.github.io/react-native/docs/tabbarios-item.html#renderasoriginal) to be set to `true` on `Icon.TabBarItemIOS`.
+**Note:** using `iconColor` and `selectedIconColor` requires the attribute [renderAsOriginal](https://reactnative.dev/docs/tabbarios-item.html#renderasoriginal) to be set to `true` on `Icon.TabBarItemIOS`.
 
-## Usage with [ToolbarAndroid](http://facebook.github.io/react-native/docs/toolbarandroid.html)
+## Usage with [ToolbarAndroid](https://github.com/react-native-community/toolbar-android)
 
 Simply use `Icon.ToolbarAndroid` instead of `React.ToolbarAndroid`, this is composition of the underlying `ToolbarAndroid` component that works the same but any `*icon` property also takes `*iconName`:
 
@@ -548,7 +548,7 @@ You have to manually make a reference of your `.ttf` on your xcodeproj `Resource
 
 ## Animation
 
-React Native comes with an amazing animation library called [`Animated`](http://facebook.github.io/react-native/docs/animated.html). To use it with an icon, simply create an animated component with this line: `const AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
+React Native comes with an amazing animation library called [`Animated`](https://reactnative.dev/docs/animated.html). To use it with an icon, simply create an animated component with this line: `const AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
 
 ## Examples
 
