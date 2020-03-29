@@ -84,6 +84,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
     <string>SimpleLineIcons.ttf</string>
     <string>Octicons.ttf</string>
     <string>Zocial.ttf</string>
+    <string>Fontisto.ttf</string>
   </array>
   ```
   
