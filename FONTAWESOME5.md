@@ -85,8 +85,10 @@ Not passing a style will result in Regular style.
 You need your FontAwesome npm token which can be obtained by logging into your
 account and then access the `Services` tab.
 
-Run `./node_modules/.bin/fa5-upgrade` and enter the token when asked to in order to
-upgrade to the Pro version.
+Run `yarn fa5-upgrade` or `./node_modules/.bin/fa5-upgrade` and enter the token
+when asked to in order to upgrade to the Pro version. It will install the fonts
+in your repo in the `assets/fonts` directory but the folder can be customized by
+setting it when executing the command: `yarn fa5-upgrade [destination]`.
 
 ## Manually
 
