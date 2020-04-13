@@ -63,6 +63,7 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
+    "string.fromcodepoint": "^0.2.1",
     "yargs": "^15.0.2"
   },
   "devDependencies": {
