@@ -1782,9 +1782,10 @@ inquirer@^7.0.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-ionicons@^4.0.0:
-  version "4.4.4"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-4.4.4.tgz#d2b2dfe240e4c8686f59acd91c9c8c1dd13931c1"
+ionicons@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.0.1.tgz#fb48475b042b04b3ed2ba9876800687917d4603d"
+  integrity sha512-P9GHr7pgCJcG211W0wute49NZ9AvJZvFJf4OwYybakjX6j7tu0q5t5HNWn9bcb9YjI7SxBblJg8iqQ1Yb59DXw==
 
 is-accessor-descriptor@^0.1.6:
   version "0.1.6"

@@ -40,7 +40,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.7.0, 1500 (free) **5082** (pro) icons)
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-- [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
+- [`Ionicons`](https://ionicons.com/) by Iconic Framework (v5.0.1, **1227** icons)
 - [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
 - [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v4.0.96, **4416** icons)
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
