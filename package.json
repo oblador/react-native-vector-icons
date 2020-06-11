@@ -71,7 +71,7 @@
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
-    "@mdi/font": "^4.0.96",
+    "@mdi/font": "^5.3.45",
     "@react-native-community/toolbar-android": "^0.1.0-rc.1",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.2.1",
