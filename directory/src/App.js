@@ -16,7 +16,7 @@ class Icon extends PureComponent {
   render() {
     return (
       <span style={{ fontFamily: this.props.family }} {...this.props}>
-        {String.fromCharCode(IconFamilies[this.props.family][this.props.name])}
+        {String.fromCodePoint(IconFamilies[this.props.family][this.props.name])}
       </span>
     );
   }
