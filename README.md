@@ -92,7 +92,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 <br>
 
-_Note: you need to recompile your project after adding new fonts, also ensure that they also appear under **Copy Bundle Resources** in **Build Phases**._
+_Note: you need to recompile your project after adding new fonts, also ensure that they **NOT** appear under **Copy Bundle Resources** in **Build Phases**. (if necessary, remove the resources)_
 
 If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`/`getImageSourceSync`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](https://reactnative.dev/docs/linking-libraries-ios.html#content).
 
