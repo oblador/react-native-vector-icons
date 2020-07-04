@@ -18,7 +18,6 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [Icon.Button Component](#iconbutton-component)
 - [Usage as PNG image/source object](#usage-as-png-imagesource-object)
 - [Usage with TabBarIOS](#usage-with-tabbarios)
-- [Usage with ToolbarAndroid](#usage-with-toolbarandroid)
 - [Multi-style fonts](#multi-style-fonts)
 - [Custom Fonts](#custom-fonts)
 - [Animation](#animation)
@@ -142,9 +141,9 @@ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 - Copy the contents in the `Fonts` folder to `android/app/src/main/assets/fonts` (_note lowercase fonts folder_).
 
-##### Integrating library for `getImageSource` and `ToolbarAndroid` support
+##### Integrating library for `getImageSource` support
 
-These steps are optional and only needed if you want to use the `Icon.getImageSource` function or using custom icons in the `Icon.ToolbarAndroid` component.
+These steps are optional and only needed if you want to use the `Icon.getImageSource` function.
 
 - Edit `android/settings.gradle` to look like this (without the +):
 
@@ -193,7 +192,6 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
 
   }
   ```
-
 
 ### OSX via [`react-native-desktop`](https://github.com/ptmt/react-native-desktop)
 
@@ -274,13 +272,13 @@ Any [Text property](https://reactnative.dev/docs/text.html) and the following:
 
 ### Static Methods
 
-| Prop                 | Description                                                                                                                                                                               |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`getFontFamily`**  | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily()`                                                                |
-| **`getImageSource`** | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
-| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)` |
-| **`getRawGlyphMap`** | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()`                                                                                                |
-| **`hasIcon`**        | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name)`                                                                                          |
+| Prop                     | Description                                                                                                                                                                               |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`getFontFamily`**      | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily()`                                                                |
+| **`getImageSource`**     | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
+| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)`                                                                              |
+| **`getRawGlyphMap`**     | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()`                                                                                                |
+| **`hasIcon`**            | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name)`                                                                                          |
 
 ### Styling
 
@@ -347,10 +345,12 @@ Any [`Text`](https://reactnative.dev/docs/text.html), [`TouchableHighlight`](htt
 Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
 
 ```js
-Icon.getImageSource('user', 20, 'red').then((source) => this.setState({ userIcon: source }));
+Icon.getImageSource('user', 20, 'red').then(source =>
+  this.setState({ userIcon: source })
+);
 ```
 
-Alternatively you may use the synchronous method `Icon.getImageSourceSync` to avoid rendering glitches. Keep in mind that this method is blocking and might incur performance penalties. Subsequent calls will use cache however. 
+Alternatively you may use the synchronous method `Icon.getImageSourceSync` to avoid rendering glitches. Keep in mind that this method is blocking and might incur performance penalties. Subsequent calls will use cache however.
 
 For a complete example check out the `TabBarExample` project.
 
@@ -370,23 +370,6 @@ For example usage see `Examples/TabBarExample` or the examples section below. Do
 
 **Note:** using `iconColor` and `selectedIconColor` requires the attribute [renderAsOriginal](https://reactnative.dev/docs/tabbarios-item.html#renderasoriginal) to be set to `true` on `Icon.TabBarItemIOS`.
 
-## Usage with [ToolbarAndroid](https://github.com/react-native-community/toolbar-android)
-
-Simply use `Icon.ToolbarAndroid` instead of `React.ToolbarAndroid`, this is composition of the underlying `ToolbarAndroid` component that works the same but any `*icon` property also takes `*iconName`:
-
-- add @react-native-community/toolbar-android to dependencies
-
-| Prop                   | Description                                                                                                                        | Default |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| **`logoName`**         | Name of the navigation logo icon (similar to `ToolbarAndroid` `logo`)                                                              | _None_  |
-| **`navIconName`**      | Name of the navigation icon (similar to `ToolbarAndroid` `navIcon`)                                                                | _None_  |
-| **`overflowIconName`** | Name of the overflow icon (similar to `ToolbarAndroid` `overflowIcon`).                                                            | _none_  |
-| **`actions`**          | Possible actions on the toolbar as part of the action menu, takes the additional arguments `iconName`, `iconColor` and `iconSize`. | _none_  |
-| **`iconSize`**         | Size of the icons.                                                                                                                 | `24`    |
-| **`iconColor`**        | Color of the icons.                                                                                                                | `black` |
-
-For example usage see `Examples/IconExplorer/index.android.js`or the examples section below. Don't forget to import and link to this project as described above if you are going to use the ToolbarAndroid integration.
-
 # Multi-style fonts
 
 Some fonts today use multiple styles, FontAwesome 5 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
@@ -403,20 +386,20 @@ const myIcon3 = <Icon name="comments" size={30} color="#900" light />; // Only i
 
 All static methods from `Icon` is supported by multi-styled fonts.
 
-| Prop                   | Description                                                                                                                                                                                      |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **`getFontFamily`**    | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily(style)`                                                                  |
-| **`getImageSource`**   | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
-| **`getImageSourceSync`**   | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)` |
-| **`getRawGlyphMap`**   | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap(style)`                                                                                                  |
-| **`hasIcon`**          | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name, style)`                                                                                          |
-| **`getStyledIconSet`** | Use this to get a `Icon` component for a single style. Usage. `const StyledIcon = Icon.getStyledIconSet(style)`                                                                                  |
+| Prop                     | Description                                                                                                                                                                               |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`getFontFamily`**      | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily(style)`                                                           |
+| **`getImageSource`**     | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
+| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)`                                                                              |
+| **`getRawGlyphMap`**     | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap(style)`                                                                                           |
+| **`hasIcon`**            | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name, style)`                                                                                   |
+| **`getStyledIconSet`**   | Use this to get a `Icon` component for a single style. Usage. `const StyledIcon = Icon.getStyledIconSet(style)`                                                                           |
 
 If no style argument is passed (or if it's invalid) the methods will default to a pre-defineds fallback.
 
 ### Components
 
-`Icon.Button`, `Icon.TabBarItem`, `Icon.TabBarItemIOS`, `Icon.ToolbarAndroid` are all supported, usage is just like `Icon`:
+`Icon.Button`, `Icon.TabBarItem`, `Icon.TabBarItemIOS` are all supported, usage is just like `Icon`:
 
 ```jsx
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -596,33 +579,37 @@ function TabBarView(props) {
 
 ### ToolbarAndroid
 
-Don't forgot add @react-native-community/toolbar-android to dependencies
+Since [`ToolbarAndroid`](https://github.com/react-native-community/toolbar-android) was removed from core, it is also removed as a convenience component from this library. Simply use `getImageSourceSync` instead, but don't forget to import and link to this project as described above first.
 
 ```js
+import ToolbarAndroid from '@react-native-community/toolbar-android';
 import Icon from 'react-native-vector-icons/Ionicons';
+
+const navIcon = Icon.getImageSourceSync('md-arrow-back', 24, 'white');
+const overflowIcon = Icon.getImageSourceSync('md-more', 24, 'white');
+const settingsIcon = Icon.getImageSourceSync('md-settings', 30, 'white');
+const twitterIcon = Icon.getImageSourceSync('logo-twitter', 25, '#4099FF');
 
 function ToolbarView(props) {
   return (
-    <Icon.ToolbarAndroid
+    <ToolbarAndroid
       title="Home"
       titleColor="white"
-      navIconName="md-arrow-back"
+      navIcon={navIcon}
       onIconClicked={props.navigator.pop}
       actions={[
         {
           title: 'Settings',
-          iconName: 'md-settings',
-          iconSize: 30,
+          icon: settingsIcon,
           show: 'always',
         },
         {
           title: 'Follow me on Twitter',
-          iconName: 'logo-twitter',
-          iconColor: '#4099FF',
+          icon: twitterIcon,
           show: 'ifRoom',
         },
       ]}
-      overflowIconName="md-more"
+      overflowIcon={overflowIcon}
     />
   );
 }
