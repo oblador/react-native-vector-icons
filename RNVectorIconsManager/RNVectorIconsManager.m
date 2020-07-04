@@ -57,12 +57,13 @@ RCT_EXPORT_MODULE();
 {
   CGFloat screenScale = RCTScreenScale();
   NSString *hexColor = [self hexStringFromColor:color];
-  NSString *fileName = [NSString stringWithFormat:@"tmp/RNVectorIcons_%@_%@_%hu_%.f%@@%.fx.png",
+  NSString *fileName = [NSString stringWithFormat:@"%@RNVectorIcons_%@_%@_%hu_%.f%@@%.fx.png",
+                                                  NSTemporaryDirectory(),
                                                   identifier, fontName,
                                                   [glyph characterAtIndex:0],
                                                   fontSize, hexColor, screenScale];
 
-  return [NSHomeDirectory() stringByAppendingPathComponent:fileName];
+  return fileName;
 }
 
 - (BOOL)createAndSaveGlyphImage:(NSString *)glyph withFont:(UIFont *)font
