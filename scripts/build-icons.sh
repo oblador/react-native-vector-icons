@@ -5,6 +5,7 @@ mkdir Fonts glyphmaps
 ./scripts/antdesign.sh
 ./scripts/entypo.sh
 ./scripts/evilicons.sh
+./scripts/fabricicons.sh
 ./scripts/fontawesome.sh
 ./scripts/fontawesome5.sh
 ./scripts/fontisto.sh

@@ -17,6 +17,7 @@
     "build-antd": "./scripts/antdesign.sh",
     "build-entypo": "./scripts/entypo.sh",
     "build-evilicons": "./scripts/evilicons.sh",
+    "build-fabricicons": "./scripts/fabricicons.sh",
     "build-fontawesome": "./scripts/fontawesome.sh",
     "build-fontawesome5": "./scripts/fontawesome5.sh",
     "build-fontisto": "./scripts/fontisto.sh",

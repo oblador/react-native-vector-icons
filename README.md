@@ -42,6 +42,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`AntDesign`](https://ant.design/) by AntFinance (**297** icons)
 - [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons)
 - [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
+- [`FabricIcons`](https://developer.microsoft.com/en-us/fabric/) by Microsoft Office (**1749** icons)
 - [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.21.0, **279** icons)
 - [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
 - [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.13.0, 1588 (free) **7842** (pro) icons)
@@ -79,6 +80,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
     <string>AntDesign.ttf</string>
     <string>Entypo.ttf</string>
     <string>EvilIcons.ttf</string>
+    <string>FabricIcons.ttf</string>
     <string>Feather.ttf</string>
     <string>FontAwesome.ttf</string>
     <string>FontAwesome5_Brands.ttf</string>
