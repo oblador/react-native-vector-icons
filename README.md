@@ -27,6 +27,14 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
 
+## Sponsoring
+
+If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own. 
+
+`react-native-vector-icons` is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial.
+
+<a href="https://tracking.gitads.io/?repo=react-native-vector-icons"><img src="https://images.gitads.io/react-native-vector-icons" alt="GitAds"/></a>
+
 ## Bundled Icon Sets
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
