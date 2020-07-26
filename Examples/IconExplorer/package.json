@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "ramda": "^0.26.1",
-    "react": "16.11.0",
-    "react-native": "0.62.2",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
     "react-native-gesture-handler": "^1.5.1",
     "react-native-screens": "^2.0.0-alpha.12",
     "react-native-vector-icons": "file:../../",
@@ -20,12 +20,12 @@
     "react-navigation-stack": "^1.10.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/runtime": "^7.10.4",
+    "@babel/core": "^7.10.5",
+    "@babel/runtime": "^7.10.5",
     "babel-jest": "^26.1.0",
     "jest": "^26.1.0",
-    "metro-react-native-babel-preset": "^0.60.0",
-    "react-test-renderer": "16.11.0"
+    "metro-react-native-babel-preset": "^0.61.0",
+    "react-test-renderer": "16.13.1"
   },
   "jest": {
     "preset": "react-native"
