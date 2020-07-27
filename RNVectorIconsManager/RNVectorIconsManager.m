@@ -33,6 +33,16 @@ NSString *const RNVIErrorDomain = @"org.oblador.react-native-vector-icons";
 
 @implementation RNVectorIconsManager
 
+- (dispatch_queue_t)methodQueue
+{
+    return dispatch_get_main_queue();
+}
+
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
+}
+
 @synthesize bridge = _bridge;
 RCT_EXPORT_MODULE();
 
