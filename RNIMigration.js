@@ -33,7 +33,7 @@ export default class Icon extends PureComponent {
 
   iconRef = null;
 
-  handleComponentRef = ref => {
+  handleComponentRef = (ref) => {
     this.iconRef = ref;
   };
 
@@ -52,7 +52,7 @@ export default class Icon extends PureComponent {
         allowFontScaling={false}
         ref={this.handleComponentRef}
         {...this.props}
-        name={name}
+        name={name.toLowerCase()}
       />
     );
   }
