@@ -68,6 +68,7 @@
     "lodash.pick": "^4.4.0",
     "lodash.template": "^4.5.0",
     "prop-types": "^15.7.2",
+    "string.fromcodepoint": "^0.2.1",
     "yargs": "^15.0.2"
   },
   "devDependencies": {
