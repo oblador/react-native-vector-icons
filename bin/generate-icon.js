@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 
-const _ = require('lodash');
+const omit = require('lodash.omit');
 const fs = require('fs');
 const path = require('path');
 const yargs = require('yargs');
@@ -28,7 +28,7 @@ if (argv.template) {
   template = fs.readFileSync(argv.template, { encoding: 'utf8' });
 }
 
-const data = _.omit(
+const data = omit(
   argv,
   '_ $0 o output p prefix t template g glyphmap'.split(' ')
 );
