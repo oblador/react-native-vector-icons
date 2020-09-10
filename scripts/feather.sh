@@ -4,24 +4,14 @@
 FEATHER_DIR="Feather"
 FEATHER_JS="Feather.js"
 
-check_font_custom() {
-  FONT_CUSTOM=`which fontcustom`
-  if [[ ! -x "${FONT_CUSTOM}" ]]; then return 1; fi
-}
-
 check_nodejs() {
   NODE=`which node`
   if [[ ! -x "${NODE}" ]]; then return 1; fi
 }
 
-check_parallel() {
-  PARALLEL=`which parallel`
-  if [[ ! -x "${PARALLEL}" ]]; then return 1; fi
-}
-
-check_inkscape() {
-  INKSCAPE=`which inkscape`
-  if [[ ! -x "${INKSCAPE}" ]]; then return 1; fi
+check_docker() {
+  DOCKER=`which docker`
+  if [[ ! -x "${DOCKER}" ]]; then return 1; fi
 }
 
 print() {
@@ -39,46 +29,14 @@ fail() {
 run_generation() {
   yarn
 
-  if [[ -z "${XVFB}" ]]; then
-    print "Xvfb not informed, trying to find\n"
-    OSNAME=`uname -s`
-    if [[ ${OSNAME} == 'Linux' ]]; then XVFB=`which Xvfb`;
-    elif [[ ${OSNAME} == 'Darwin' ]]; then XVFB='/usr/X11/bin/Xvfb';
-    fi
-  fi
-
-  TEMP_DIR=`mktemp -d`
-  print "Using ${TEMP_DIR} as temporary directory\n"
-  cp node_modules/feather-icons/dist/icons/* "$TEMP_DIR"
-  CMD="${PARALLEL} --bar ${INKSCAPE} -f {} --verb=EditSelectAll --verb=StrokeToPath --verb=FileSave --verb=FileQuit ::: ${TEMP_DIR}/*.svg"
-
-  if [[ -x "${XVFB}" ]]; then
-    print "Using Xvfb located in ${XVFB}\n"
-    # this part is borrow from xfvb-run from linux
-    SERVERNUM=2019
-    AUTHFILE=$(mktemp -p "$TEMP_DIR" Xauthority.XXXXXX)
-    XVFBARGS="-screen 0 640x480x24"
-    LISTENTCP="-nolisten tcp"
-    XAUTHORITY=$AUTHFILE ${XVFB} ":$SERVERNUM" $XVFBARGS $LISTENTCP >> /dev/null 2>&1 &
-    XVFBPID=$! && DISPLAY=":$SERVERNUM" ${CMD} && kill ${XVFBPID}
-  else
-    print "Xvfb not located\n"
-    ${CMD}
-  fi
-
   print "Cleaning older installations..."
   rm -rf ${FEATHER_DIR} || true
   if [ -d "${FEATHER_DIR}" ]; then show_error "Can't remove Feather temp directory."; fi
   success "OK"
 
-  print "Generating assets based on Feather specified in package.json..."
-  ${FONT_CUSTOM} compile ${TEMP_DIR}\
-    --font-name=Feather\
-    --output=${FEATHER_DIR}\
-    --quiet\
-    --force\
-    --no-hash
-  if [ ! -f "${FEATHER_DIR}/Feather.css" ]; then show_error "Can't generate assets."; fi
+  print "Using docker rfbezerra/svg-to-ttf to generate font..."
+  ${DOCKER} run --rm -v "${PWD}:/fonts" rfbezerra/svg-to-ttf -n Feather -u $(id -u) -o "${FEATHER_DIR}" \
+    -i "node_modules/feather-icons/dist/icons"
   success "OK"
 
   print "Generating JS file mapping..."
@@ -92,7 +50,7 @@ run_generation() {
   success "OK"
 
   print "Moving TTF font to right path..."
-  mv "${FEATHER_DIR}/Feather.ttf" "Fonts/Feather.ttf" && rm -rf ${TEMP_DIR} && rm -rf ${FEATHER_DIR}
+  mv "${FEATHER_DIR}/Feather.ttf" "Fonts/Feather.ttf" && rm -rf ${FEATHER_DIR}
   if [ -d "${FEATHER_DIR}" ]; then show_error "Can't remove Feather temp directory."; fi
   success "OK"
 }
@@ -111,10 +69,8 @@ show_error() {
   exit 1
 }
 
+check_docker || show_help "Docker"
 check_nodejs || show_help "NodeJS"
-check_font_custom || show_help "FontCustom"
-check_inkscape || show_help "Inkscape"
-check_parallel || show_help "GNU Parallel"
 
 set +e
 run_generation
