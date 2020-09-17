@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
   s.source_files   = 'RNVectorIconsManager/**/*.{h,m}'
   s.resources      = "Fonts/*.ttf"
   s.preserve_paths = "**/*.js"
-  s.dependency 'React'
+  s.dependency 'React-Core'
 
 end
