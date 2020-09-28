@@ -1,4 +1,5 @@
 ![Vector Icons for React Native](https://cloud.githubusercontent.com/assets/378279/12009887/33f4ae1c-ac8d-11e5-8666-7a87458753ee.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Foblador%2Freact-native-vector-icons.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Foblador%2Freact-native-vector-icons?ref=badge_shield)
 
 [![Travis](https://img.shields.io/travis/oblador/react-native-vector-icons.svg)](https://travis-ci.org/oblador/react-native-vector-icons) [![npm](https://img.shields.io/npm/v/react-native-vector-icons.svg)](https://npmjs.com/package/react-native-vector-icons) [![npm](https://img.shields.io/npm/dm/react-native-vector-icons.svg)](https://npmjs.com/package/react-native-vector-icons)
 
@@ -703,3 +704,6 @@ Sometimes vendors decides to remove some icons from newer releases, this has not
 This project is licenced under the [MIT License](http://opensource.org/licenses/mit-license.html).
 
 Any bundled fonts are copyright to their respective authors and mostly under MIT or [SIL OFL](http://scripts.sil.org/OFL).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Foblador%2Freact-native-vector-icons.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Foblador%2Freact-native-vector-icons?ref=badge_large)
