@@ -11,8 +11,6 @@ const iconSet = createIconSet(glyphMap, 'anticon', 'AntDesign.ttf');
 export default iconSet;
 export const {
   Button,
-  TabBarItem,
-  TabBarItemIOS,
   getImageSource,
   getImageSourceSync,
 } = iconSet;

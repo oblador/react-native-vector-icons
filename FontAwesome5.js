@@ -15,8 +15,6 @@ const iconSet = createFA5iconSet(glyphMap, metadata, false);
 export default iconSet;
 export const {
   Button,
-  TabBarItem,
-  TabBarItemIOS,
   getImageSource,
   getImageSourceSync,
 } = iconSet;

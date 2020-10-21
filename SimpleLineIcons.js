@@ -11,8 +11,6 @@ const iconSet = createIconSet(glyphMap, 'simple-line-icons', 'SimpleLineIcons.tt
 export default iconSet;
 export const {
   Button,
-  TabBarItem,
-  TabBarItemIOS,
   getImageSource,
   getImageSourceSync,
 } = iconSet;

@@ -11,8 +11,6 @@ const iconSet = createIconSet(glyphMap, 'zocial', 'Zocial.ttf');
 export default iconSet;
 export const {
   Button,
-  TabBarItem,
-  TabBarItemIOS,
   getImageSource,
   getImageSourceSync,
 } = iconSet;
