@@ -6,26 +6,37 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ## Table of Contents
 
-- [Bundled Icon Sets](#bundled-icon-sets)
-- [Installation](#installation)
-  - [iOS](#ios)
-  - [Android](#android)
-  - [OSX](#osx-via-react-native-desktop)
-  - [Windows](#windows-via-react-native-windows)
-  - [Web](#web-with-webpack)
-- [Upgrading](#upgrading)
-- [Icon Component](#icon-component)
-- [Icon.Button Component](#iconbutton-component)
-- [Usage as PNG image/source object](#usage-as-png-imagesource-object)
-- [Usage with TabBarIOS](#usage-with-tabbarios)
 - [Multi-style fonts](#multi-style-fonts)
-- [Custom Fonts](#custom-fonts)
-- [Animation](#animation)
-- [Examples](#examples)
-- [Generating your own icon set from a CSS file](#generating-your-own-icon-set-from-a-css-file)
-- [Changelog](#changelog)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
+    - [Static methods](#static-methods-1)
+    - [Components](#components)
+  - [Custom Fonts](#custom-fonts)
+    - [`createIconSet(glyphMap, fontFamily[, fontFile])`](#createiconsetglyphmap-fontfamily-fontfile)
+    - [`createIconSetFromFontello(config[, fontFamily[, fontFile]])`](#createiconsetfromfontelloconfig-fontfamily-fontfile)
+    - [`createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`](#createiconsetfromicomoonconfig-fontfamily-fontfile)
+    - [`createMultiStyleIconSet(styles [, options])`](#createmultistyleiconsetstyles--options)
+      - [iOS](#ios-1)
+  - [Animation](#animation)
+  - [Examples](#examples)
+    - [IconExplorer](#iconexplorer)
+    - [Basic Example](#basic-example)
+    - [TabBar](#tabbar)
+    - [ToolbarAndroid](#toolbarandroid)
+    - [Inline Icons](#inline-icons)
+    - [Community examples](#community-examples)
+  - [Generating your own icon set from a CSS file](#generating-your-own-icon-set-from-a-css-file)
+    - [Example usage:](#example-usage)
+    - [Options](#options)
+      - [`-p`, `--prefix`](#-p---prefix)
+      - [`-t`, `--template`](#-t---template)
+      - [`-o`, `--output`](#-o---output)
+  - [Changelog](#changelog)
+  - [Troubleshooting](#troubleshooting)
+      - [The icons show up as a crossed out box on Android](#the-icons-show-up-as-a-crossed-out-box-on-android)
+      - [Red screen with "Unrecognized font family" error on iOS](#red-screen-with-unrecognized-font-family-error-on-ios)
+      - [Android build fails on Windows for no good reason](#android-build-fails-on-windows-for-no-good-reason)
+      - [Wrong icons are shown after upgrading this package](#wrong-icons-are-shown-after-upgrading-this-package)
+      - [Some icons are missing after upgrading this package](#some-icons-are-missing-after-upgrading-this-package)
+  - [License](#license)
 
 ## Sponsoring
 
@@ -358,22 +369,6 @@ Alternatively you may use the synchronous method `Icon.getImageSourceSync` to av
 
 For a complete example check out the `TabBarExample` project.
 
-## Usage with [TabBarIOS](https://reactnative.dev/docs/tabbarios.html)
-
-Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties:
-
-| Prop                    | Description                                                             | Default       |
-| ----------------------- | ----------------------------------------------------------------------- | ------------- |
-| **`iconName`**          | Name of the default icon (similar to `TabBarIOS.Item` `icon`)           | _None_        |
-| **`selectedIconName`**  | Name of the selected icon (similar to `TabBarIOS.Item` `selectedIcon`). | _`iconName`_  |
-| **`iconSize`**          | Size of the icon.                                                       | `30`          |
-| **`iconColor`**         | Color of the icon.                                                      | _None_        |
-| **`selectedIconColor`** | Color of the selected icon.                                             | _`iconColor`_ |
-
-For example usage see `Examples/TabBarExample` or the examples section below. Don't forget to import and link to this project as described above if you are going to use the TabBar integration.
-
-**Note:** using `iconColor` and `selectedIconColor` requires the attribute [renderAsOriginal](https://reactnative.dev/docs/tabbarios-item.html#renderasoriginal) to be set to `true` on `Icon.TabBarItemIOS`.
-
 # Multi-style fonts
 
 Some fonts today use multiple styles, FontAwesome 5 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
@@ -403,7 +398,7 @@ If no style argument is passed (or if it's invalid) the methods will default to 
 
 ### Components
 
-`Icon.Button`, `Icon.TabBarItem`, `Icon.TabBarItemIOS` are all supported, usage is just like `Icon`:
+`Icon.Button` is supported, usage is just like `Icon`:
 
 ```jsx
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -556,27 +551,56 @@ function ExampleView(props) {
 }
 ```
 
-### TabBarIOS
+### TabBar
+Since [`TabBarIOS`](https://reactnative.dev/docs/tabbarios.html) was removed from core in favor of [@react-navigation/bottom-tabs](https://reactnative.dev/docs/tabbarios.html), it is also removed as a convenience component from this library. Simply use the `Icon` instead, but don't forget to import and link to this project as described above first. 
 
-Full example in `TabBarExample` project in `Examples/TabBarExample` folder.
-
+Below is an [example](https://reactnavigation.org/docs/bottom-tab-navigator/#example) taken from @react-navigation:
 ```js
-import { View, Text, TabBarIOS } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-function TabBarView(props) {
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
   return (
-    <TabBarIOS>
-      <Icon.TabBarItem
-        title="Home"
-        iconName="ios-home-outline"
-        selectedIconName="ios-home"
-      >
-        <View style={styles.tabContent}>
-          <Text>Home Tab</Text>
-        </View>
-      </Icon.TabBarItem>
-    </TabBarIOS>
+    <Tab.Navigator
+      initialRouteName="Feed"
+      tabBarOptions={{
+        activeTintColor: '#e91e63',
+      }}
+    >
+      <Tab.Screen
+        name="Feed"
+        component={Feed}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Notifications"
+        component={Notifications}
+        options={{
+          tabBarLabel: 'Updates',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="bell" color={color} size={size} />
+          ),
+          tabBarBadge: 3,
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="account" color={color} size={size} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
   );
 }
 ```
