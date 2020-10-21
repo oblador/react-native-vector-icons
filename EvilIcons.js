@@ -11,8 +11,6 @@ const iconSet = createIconSet(glyphMap, 'EvilIcons', 'EvilIcons.ttf');
 export default iconSet;
 export const {
   Button,
-  TabBarItem,
-  TabBarItemIOS,
   getImageSource,
   getImageSourceSync,
 } = iconSet;

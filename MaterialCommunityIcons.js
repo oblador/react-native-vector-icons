@@ -11,8 +11,6 @@ const iconSet = createIconSet(glyphMap, 'Material Design Icons', 'MaterialCommun
 export default iconSet;
 export const {
   Button,
-  TabBarItem,
-  TabBarItemIOS,
   getImageSource,
   getImageSourceSync,
 } = iconSet;
