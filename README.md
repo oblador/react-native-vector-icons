@@ -642,7 +642,7 @@ function ExampleView(props) {
 
 ## Generating your own icon set from a CSS file
 
-If you already have a icon font with associated CSS file then you can easily generate a icon set with the `generate-icon` script.
+If you already have an icon font with associated CSS file then you can easily generate a icon set with the `generate-icon` script.
 
 ### Example usage:
 
