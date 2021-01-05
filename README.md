@@ -49,6 +49,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
 - [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 - [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.4.1, **189** icons)
+- [`IcoFont`](https://icofont.com/) by IcoFont (v1.0.1, **2095** icons)
 
 ## Installation
 
@@ -88,6 +89,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
     <string>Octicons.ttf</string>
     <string>Zocial.ttf</string>
     <string>Fontisto.ttf</string>
+    <string>IcoFont.ttf</string>
   </array>
   ```
   

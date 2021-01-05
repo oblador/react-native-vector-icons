@@ -17,4 +17,8 @@ bower_components
 
 xcuserdata
 
+# OS
 .DS_Store
+
+# IDE
+.idea/

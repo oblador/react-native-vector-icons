@@ -1,6 +1,6 @@
 # Contributing
 
-Thank for taking the time to check out the repo and be willing to contribute!
+Thanks for taking the time to check out the repo and be willing to contribute!
 
 If you have found an issue or would like to request a new feature, simply create a new issue. Be sure to fill out as much information as possible.
 
