@@ -96,8 +96,6 @@ If you are not sure which fonts to add, simply copy & paste all available fonts 
   </array>
   ```
 
-After that, go to **XCode Settings -> Build Phases -> Copy Bundle Resources** and include the fonts you added.
-
 ##### Step 2: Link the Dependencies
 
 ###### Option: With react-native >= 0.60
