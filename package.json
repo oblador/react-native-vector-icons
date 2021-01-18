@@ -68,7 +68,7 @@
     "lodash.pick": "^4.4.0",
     "lodash.template": "^4.5.0",
     "prop-types": "^15.7.2",
-    "yargs": "^15.0.2"
+    "yargs": "^16.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
