@@ -6,41 +6,30 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ## Table of Contents
 
+- [Bundled Icon Sets](#bundled-icon-sets)
+- [Installation](#installation)
+  - [iOS](#ios)
+  - [Android](#android)
+  - [OSX](#osx-via-react-native-desktop)
+  - [Windows](#windows-via-react-native-windows)
+  - [Web](#web-with-webpack)
+- [Upgrading](#upgrading)
+- [Icon Component](#icon-component)
+- [Icon.Button Component](#iconbutton-component)
+- [Usage as PNG image/source object](#usage-as-png-imagesource-object)
+- [TabBar](#tabbar)
 - [Multi-style fonts](#multi-style-fonts)
-    - [Static methods](#static-methods-1)
-    - [Components](#components)
-  - [Custom Fonts](#custom-fonts)
-    - [`createIconSet(glyphMap, fontFamily[, fontFile])`](#createiconsetglyphmap-fontfamily-fontfile)
-    - [`createIconSetFromFontello(config[, fontFamily[, fontFile]])`](#createiconsetfromfontelloconfig-fontfamily-fontfile)
-    - [`createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`](#createiconsetfromicomoonconfig-fontfamily-fontfile)
-    - [`createMultiStyleIconSet(styles [, options])`](#createmultistyleiconsetstyles--options)
-      - [iOS](#ios-1)
-  - [Animation](#animation)
-  - [Examples](#examples)
-    - [IconExplorer](#iconexplorer)
-    - [Basic Example](#basic-example)
-    - [TabBar](#tabbar)
-    - [ToolbarAndroid](#toolbarandroid)
-    - [Inline Icons](#inline-icons)
-    - [Community examples](#community-examples)
-  - [Generating your own icon set from a CSS file](#generating-your-own-icon-set-from-a-css-file)
-    - [Example usage:](#example-usage)
-    - [Options](#options)
-      - [`-p`, `--prefix`](#-p---prefix)
-      - [`-t`, `--template`](#-t---template)
-      - [`-o`, `--output`](#-o---output)
-  - [Changelog](#changelog)
-  - [Troubleshooting](#troubleshooting)
-      - [The icons show up as a crossed out box on Android](#the-icons-show-up-as-a-crossed-out-box-on-android)
-      - [Red screen with "Unrecognized font family" error on iOS](#red-screen-with-unrecognized-font-family-error-on-ios)
-      - [Android build fails on Windows for no good reason](#android-build-fails-on-windows-for-no-good-reason)
-      - [Wrong icons are shown after upgrading this package](#wrong-icons-are-shown-after-upgrading-this-package)
-      - [Some icons are missing after upgrading this package](#some-icons-are-missing-after-upgrading-this-package)
-  - [License](#license)
+- [Custom Fonts](#custom-fonts)
+- [Animation](#animation)
+- [Examples](#examples)
+- [Generating your own icon set from a CSS file](#generating-your-own-icon-set-from-a-css-file)
+- [Changelog](#changelog)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
 ## Sponsoring
 
-If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own. 
+If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own.
 
 ## Bundled Icon Sets
 
@@ -108,7 +97,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 _Note: you need to recompile your project after adding new fonts, also ensure that they also appear under **Copy Bundle Resources** in **Build Phases**._
 
-If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`/`getImageSourceSync`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](https://reactnative.dev/docs/linking-libraries-ios.html#content).
+If you want to use `getImageSource`/`getImageSourceSync`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](https://reactnative.dev/docs/linking-libraries-ios.html#content).
 
 #### Option: With `react-native link`
 
@@ -367,8 +356,6 @@ Icon.getImageSource('user', 20, 'red').then(source =>
 
 Alternatively you may use the synchronous method `Icon.getImageSourceSync` to avoid rendering glitches. Keep in mind that this method is blocking and might incur performance penalties. Subsequent calls will use cache however.
 
-For a complete example check out the `TabBarExample` project.
-
 # Multi-style fonts
 
 Some fonts today use multiple styles, FontAwesome 5 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
@@ -552,9 +539,11 @@ function ExampleView(props) {
 ```
 
 ### TabBar
-Since [`TabBarIOS`](https://reactnative.dev/docs/tabbarios.html) was removed from core in favor of [@react-navigation/bottom-tabs](https://reactnative.dev/docs/tabbarios.html), it is also removed as a convenience component from this library. Simply use the `Icon` instead, but don't forget to import and link to this project as described above first. 
 
-Below is an [example](https://reactnavigation.org/docs/bottom-tab-navigator/#example) taken from @react-navigation:
+Since [`TabBarIOS`](https://reactnative.dev/docs/tabbarios.html) was removed from core in favor of [@react-navigation/bottom-tabs](https://reactnative.dev/docs/tabbarios.html), it is also removed as a convenience component from this library. Simply use the `Icon` instead, but don't forget to import and link to this project as described above first.
+
+Below is an [example](https://reactnavigation.org/docs/bottom-tab-navigator/#example) taken from `react-navigation`:
+
 ```js
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -657,12 +646,6 @@ function ExampleView(props) {
   );
 }
 ```
-
-### Community examples
-
-- [react-native-dribbble-app](https://github.com/catalinmiron/react-native-dribbble-app)
-- [product-kitty](https://github.com/rkho/product-kitty) ([blog post](http://richardkho.com/persisting-tabbars-in-react-native/))
-- [react-native-netflix](https://github.com/mariodev12/react-native-netflix)
 
 ## Generating your own icon set from a CSS file
 
