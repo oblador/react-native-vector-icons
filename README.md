@@ -206,10 +206,9 @@ _Note: you need to recompile your project after adding new fonts, also ensure th
 
 ### Windows via [`react-native-windows`](https://github.com/ReactWindows/react-native-windows)
 
-- Open your solution in Visual Studio, right click the Assets folder in your solution, click **Add Existing**.
-- Browse to the `node_modules\react-native-vector-icons\Fonts` folder, select the required font files
-- Click the **Add** drop-down and select **Add as Link**.
-- Set **Copy To Output Directory** property of each font file to **Copy if newer**
+- In the top level projects (/windows/project-name/Assets), copy and paste the font files.
+- Open your solution in Visual Studio, right click the Assets folder in your solution, click **Add > Existing Item**.
+- Select the fonts that were into /windows/project-name/assets and click **Add**.
 
 _Note: you need to recompile your project after adding new fonts._
 
