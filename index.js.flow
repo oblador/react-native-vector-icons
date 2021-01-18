@@ -18,18 +18,6 @@ declare class IconButton<Glyphs: string> extends PureComponent<
   IconButtonProps<Glyphs>
 > {}
 
-export type TabBarItemIOSProps<Glyphs: string> = {
-  iconColor?: Color,
-  iconName: Glyphs,
-  iconSize?: number,
-  selectedIconColor?: Color,
-  selectedIconName?: Glyphs,
-};
-
-declare class TabBarItemIOS<Glyphs: string> extends PureComponent<
-  TabBarItemIOSProps<Glyphs>
-> {}
-
 export type IconProps<Glyphs: string> = {
   allowFontScaling?: boolean,
   color?: Color,
@@ -44,8 +32,6 @@ export type ImageSource = {|
 
 declare class Icon<Glyphs: string> extends PureComponent<IconProps<Glyphs>> {
   static Button: Class<IconButton<Glyphs>>;
-  static TabBarItem: Class<TabBarItemIOS<Glyphs>>;
-  static TabBarItemIOS: Class<TabBarItemIOS<Glyphs>>;
 
   static getFontFamily(): string;
   static getImageSource(
