@@ -17,7 +17,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [Icon Component](#icon-component)
 - [Icon.Button Component](#iconbutton-component)
 - [Usage as PNG image/source object](#usage-as-png-imagesource-object)
-- [Usage with TabBarIOS](#usage-with-tabbarios)
+- [TabBar](#tabbar)
 - [Multi-style fonts](#multi-style-fonts)
 - [Custom Fonts](#custom-fonts)
 - [Animation](#animation)
@@ -29,7 +29,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 
 ## Sponsoring
 
-If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own. 
+If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own.
 
 ## Bundled Icon Sets
 
@@ -202,10 +202,9 @@ _Note: you need to recompile your project after adding new fonts, also ensure th
 
 ### Windows via [`react-native-windows`](https://github.com/ReactWindows/react-native-windows)
 
-- Open your solution in Visual Studio, right click the Assets folder in your solution, click **Add Existing**.
-- Browse to the `node_modules\react-native-vector-icons\Fonts` folder, select the required font files
-- Click the **Add** drop-down and select **Add as Link**.
-- Set **Copy To Output Directory** property of each font file to **Copy if newer**
+- In the top level projects (/windows/project-name/Assets), copy and paste the font files.
+- Open your solution in Visual Studio, right click the Assets folder in your solution, click **Add > Existing Item**.
+- Select the fonts that were into /windows/project-name/assets and click **Add**.
 
 _Note: you need to recompile your project after adding new fonts._
 
@@ -352,24 +351,6 @@ Icon.getImageSource('user', 20, 'red').then(source =>
 
 Alternatively you may use the synchronous method `Icon.getImageSourceSync` to avoid rendering glitches. Keep in mind that this method is blocking and might incur performance penalties. Subsequent calls will use cache however.
 
-For a complete example check out the `TabBarExample` project.
-
-## Usage with [TabBarIOS](https://reactnative.dev/docs/tabbarios.html)
-
-Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties:
-
-| Prop                    | Description                                                             | Default       |
-| ----------------------- | ----------------------------------------------------------------------- | ------------- |
-| **`iconName`**          | Name of the default icon (similar to `TabBarIOS.Item` `icon`)           | _None_        |
-| **`selectedIconName`**  | Name of the selected icon (similar to `TabBarIOS.Item` `selectedIcon`). | _`iconName`_  |
-| **`iconSize`**          | Size of the icon.                                                       | `30`          |
-| **`iconColor`**         | Color of the icon.                                                      | _None_        |
-| **`selectedIconColor`** | Color of the selected icon.                                             | _`iconColor`_ |
-
-For example usage see `Examples/TabBarExample` or the examples section below. Don't forget to import and link to this project as described above if you are going to use the TabBar integration.
-
-**Note:** using `iconColor` and `selectedIconColor` requires the attribute [renderAsOriginal](https://reactnative.dev/docs/tabbarios-item.html#renderasoriginal) to be set to `true` on `Icon.TabBarItemIOS`.
-
 # Multi-style fonts
 
 Some fonts today use multiple styles, FontAwesome 5 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
@@ -399,7 +380,7 @@ If no style argument is passed (or if it's invalid) the methods will default to 
 
 ### Components
 
-`Icon.Button`, `Icon.TabBarItem`, `Icon.TabBarItemIOS` are all supported, usage is just like `Icon`:
+`Icon.Button` is supported, usage is just like `Icon`:
 
 ```jsx
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -552,27 +533,58 @@ function ExampleView(props) {
 }
 ```
 
-### TabBarIOS
+### TabBar
 
-Full example in `TabBarExample` project in `Examples/TabBarExample` folder.
+Since [`TabBarIOS`](https://reactnative.dev/docs/tabbarios.html) was removed from core in favor of [@react-navigation/bottom-tabs](https://reactnative.dev/docs/tabbarios.html), it is also removed as a convenience component from this library. Simply use the `Icon` instead, but don't forget to import and link to this project as described above first.
+
+Below is an [example](https://reactnavigation.org/docs/bottom-tab-navigator/#example) taken from `react-navigation`:
 
 ```js
-import { View, Text, TabBarIOS } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-function TabBarView(props) {
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
   return (
-    <TabBarIOS>
-      <Icon.TabBarItem
-        title="Home"
-        iconName="ios-home-outline"
-        selectedIconName="ios-home"
-      >
-        <View style={styles.tabContent}>
-          <Text>Home Tab</Text>
-        </View>
-      </Icon.TabBarItem>
-    </TabBarIOS>
+    <Tab.Navigator
+      initialRouteName="Feed"
+      tabBarOptions={{
+        activeTintColor: '#e91e63',
+      }}
+    >
+      <Tab.Screen
+        name="Feed"
+        component={Feed}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Notifications"
+        component={Notifications}
+        options={{
+          tabBarLabel: 'Updates',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="bell" color={color} size={size} />
+          ),
+          tabBarBadge: 3,
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="account" color={color} size={size} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
   );
 }
 ```
@@ -630,15 +642,9 @@ function ExampleView(props) {
 }
 ```
 
-### Community examples
-
-- [react-native-dribbble-app](https://github.com/catalinmiron/react-native-dribbble-app)
-- [product-kitty](https://github.com/rkho/product-kitty) ([blog post](http://richardkho.com/persisting-tabbars-in-react-native/))
-- [react-native-netflix](https://github.com/mariodev12/react-native-netflix)
-
 ## Generating your own icon set from a CSS file
 
-If you already have a icon font with associated CSS file then you can easily generate a icon set with the `generate-icon` script.
+If you already have an icon font with associated CSS file then you can easily generate a icon set with the `generate-icon` script.
 
 ### Example usage:
 

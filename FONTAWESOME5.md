@@ -41,7 +41,7 @@ const icon = <FontAwesome5 name={'git'} brand />;
 
 No specified type indicates Regular font.
 
-Button, TabBarItem etc. works the same way:
+Button works the same way:
 
 ```javascript
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
