@@ -43,7 +43,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.13.0, 1588 (free) **7842** (pro) icons)
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-- [`Ionicons`](https://ionicons.com/) by Iconic Framework (v5.0.1, **1227** icons)
+- [`Ionicons`](https://ionicons.com/) by Iconic Framework (v5.4.0, **1332** icons)
 - [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1547** icons)
 - [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v5.3.45, **5346** icons)
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
