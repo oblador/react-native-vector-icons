@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  npm:
+    name: NPM
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --non-interactive --silent
+      - name: Publish to NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  directory:
+    name: Directory website
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --non-interactive --silent
+        working-directory: directory
+      - name: Build directory
+        run: yarn build
+        working-directory: directory
+      - name: Publish static assets to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          branch: gh-pages
+          folder: directory/build
