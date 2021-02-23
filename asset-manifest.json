@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-native-vector-icons/static/css/main.29c38f6a.chunk.css",
-    "main.js": "/react-native-vector-icons/static/js/main.564da2b5.chunk.js",
-    "main.js.map": "/react-native-vector-icons/static/js/main.564da2b5.chunk.js.map",
+    "main.js": "/react-native-vector-icons/static/js/main.123629a8.chunk.js",
+    "main.js.map": "/react-native-vector-icons/static/js/main.123629a8.chunk.js.map",
     "runtime-main.js": "/react-native-vector-icons/static/js/runtime-main.aa5e1be8.js",
     "runtime-main.js.map": "/react-native-vector-icons/static/js/runtime-main.aa5e1be8.js.map",
     "static/js/2.309be1a4.chunk.js": "/react-native-vector-icons/static/js/2.309be1a4.chunk.js",
     "static/js/2.309be1a4.chunk.js.map": "/react-native-vector-icons/static/js/2.309be1a4.chunk.js.map",
     "index.html": "/react-native-vector-icons/index.html",
-    "precache-manifest.a364afc3dbff77e519794632d85f0a24.js": "/react-native-vector-icons/precache-manifest.a364afc3dbff77e519794632d85f0a24.js",
+    "precache-manifest.86b90fb6a6c70b679004bfc15e2d85d2.js": "/react-native-vector-icons/precache-manifest.86b90fb6a6c70b679004bfc15e2d85d2.js",
     "service-worker.js": "/react-native-vector-icons/service-worker.js",
     "static/css/main.29c38f6a.chunk.css.map": "/react-native-vector-icons/static/css/main.29c38f6a.chunk.css.map",
     "static/js/2.309be1a4.chunk.js.LICENSE.txt": "/react-native-vector-icons/static/js/2.309be1a4.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.aa5e1be8.js",
     "static/js/2.309be1a4.chunk.js",
     "static/css/main.29c38f6a.chunk.css",
-    "static/js/main.564da2b5.chunk.js"
+    "static/js/main.123629a8.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d8a9828c92d2ea1d95db2ddc9d336df2",
+    "revision": "7939d36826deac1fbb1239298ce2f291",
     "url": "/react-native-vector-icons/index.html"
   },
   {
-    "revision": "9c2859392f8817146550",
+    "revision": "00c2384ea8ba5ea9dfd5",
     "url": "/react-native-vector-icons/static/css/main.29c38f6a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-native-vector-icons/static/js/2.309be1a4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9c2859392f8817146550",
-    "url": "/react-native-vector-icons/static/js/main.564da2b5.chunk.js"
+    "revision": "00c2384ea8ba5ea9dfd5",
+    "url": "/react-native-vector-icons/static/js/main.123629a8.chunk.js"
   },
   {
     "revision": "76c09d0d81af99894269",
