@@ -12,9 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: yarn --frozen-lockfile --non-interactive --silent
       - name: Publish to NPM
@@ -29,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: '14.x'
       - name: Install dependencies
