@@ -67,7 +67,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
 
- <details><summary>List of all available fonts to copy & paste in info.plist</summary>
+ <details><summary>List of all available fonts to copy & paste in Info.plist</summary>
   
   ```xml
   <key>UIAppFonts</key>
