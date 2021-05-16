@@ -4,6 +4,8 @@
 
 Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project.
 
+If you want to use `.svg` files natively – try [`react-native-vector-image`](https://github.com/oblador/react-native-vector-image).
+
 ## Table of Contents
 
 - [Bundled Icon Sets](#bundled-icon-sets)
