@@ -1,18 +1,9 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+set -e
 
 # Feather temporary assets output directory
 FEATHER_DIR="Feather"
 FEATHER_JS="Feather.js"
-
-check_nodejs() {
-  NODE=`which node`
-  if [[ ! -x "${NODE}" ]]; then return 1; fi
-}
-
-check_docker() {
-  DOCKER=`which docker`
-  if [[ ! -x "${DOCKER}" ]]; then return 1; fi
-}
 
 print() {
   printf "\e[0m${1}"
@@ -34,13 +25,12 @@ run_generation() {
   if [ -d "${FEATHER_DIR}" ]; then show_error "Can't remove Feather temp directory."; fi
   success "OK"
 
-  print "Using docker rfbezerra/svg-to-ttf to generate font..."
-  ${DOCKER} run --rm -v "${PWD}:/fonts" rfbezerra/svg-to-ttf -n Feather -u $(id -u) -o "${FEATHER_DIR}" \
-    -i "node_modules/feather-icons/dist/icons"
+  print "Generating font via grunt-webfont..."
+  ./node_modules/grunt/bin/grunt webfont
   success "OK"
 
   print "Generating JS file mapping..."
-  ${NODE} bin/generate-icon ${FEATHER_DIR}/Feather.css\
+  node bin/generate-icon ${FEATHER_DIR}/Feather.css\
     --prefix=.icon-\
     --componentName=Feather\
     --fontFamily=Feather\
@@ -57,8 +47,6 @@ run_generation() {
 
 show_help() {
   print "$1 not found in your PATH.\n"
-  print "To generate this font, its necessary to use a helper utility named FontCustom with NodeJS.\n"
-  print "Go to https://github.com/oblador/react-native-vector-icons/blob/master/BUILDING_FEATHER.md and follow the instructions.\n"
   exit 1
 }
 
@@ -68,9 +56,6 @@ show_error() {
   fail "Check your installation and try again."
   exit 1
 }
-
-check_docker || show_help "Docker"
-check_nodejs || show_help "NodeJS"
 
 set +e
 run_generation
