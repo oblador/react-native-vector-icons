@@ -12,6 +12,7 @@ export type IconButtonProps<Glyphs: string> = {
   color?: Color,
   name: Glyphs,
   size?: number,
+  ...
 };
 
 declare class IconButton<Glyphs: string> extends PureComponent<
@@ -23,6 +24,7 @@ export type IconProps<Glyphs: string> = {
   color?: Color,
   name: Glyphs,
   size?: number,
+  ...
 };
 
 export type ImageSource = {|
