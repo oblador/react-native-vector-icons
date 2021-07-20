@@ -12,7 +12,7 @@
   "dependencies": {
     "ramda": "^0.26.1",
     "react": "16.13.1",
-    "react-native": "0.63.2",
+    "react-native": "0.64.1",
     "react-native-gesture-handler": "^1.5.1",
     "react-native-screens": "^2.0.0-alpha.12",
     "react-native-vector-icons": "file:../../",
