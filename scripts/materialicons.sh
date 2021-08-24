@@ -5,7 +5,7 @@
 # them directly from the git repo.
 
 TEMP_DIR=`mktemp -d -t rnvi`
-REF="f5f56570741833bdd36463f1f1b6b7d4edd3f9c1" # v4.0.0
+REF="63c5cb306073a9ecdfd3579f0f696746ab6305f6" # v4.0.0
 
 curl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIcons-Regular.ttf -Ls > Fonts/MaterialIcons.ttf
 
