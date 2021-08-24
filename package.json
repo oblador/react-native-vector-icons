@@ -24,6 +24,7 @@
     "build-foundation": "./scripts/foundation.sh",
     "build-ionicons": "./scripts/ionicons.sh",
     "build-materialicons": "./scripts/materialicons.sh",
+    "build-outlinedmaterialicons": "./scripts/materialicons-outlined.sh",
     "build-materialcommunityicons": "./scripts/materialcommunityicons.sh",
     "build-octicons": "./scripts/octicons.sh",
     "build-zocial": "./scripts/zocial.sh",

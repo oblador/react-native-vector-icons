@@ -47,6 +47,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 - [`Ionicons`](https://ionicons.com/) by Iconic Framework (v5.0.1, **1227** icons)
 - [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1547** icons)
+  - [`MaterialIconsOutlined`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1547** icons)
 - [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v5.3.45, **5346** icons)
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
 - [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
@@ -70,29 +71,30 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
 
  <details><summary>List of all available fonts to copy & paste in Info.plist</summary>
-  
-  ```xml
-  <key>UIAppFonts</key>
-  <array>
-    <string>AntDesign.ttf</string>
-    <string>Entypo.ttf</string>
-    <string>EvilIcons.ttf</string>
-    <string>Feather.ttf</string>
-    <string>FontAwesome.ttf</string>
-    <string>FontAwesome5_Brands.ttf</string>
-    <string>FontAwesome5_Regular.ttf</string>
-    <string>FontAwesome5_Solid.ttf</string>
-    <string>Foundation.ttf</string>
-    <string>Ionicons.ttf</string>
-    <string>MaterialIcons.ttf</string>
-    <string>MaterialCommunityIcons.ttf</string>
-    <string>SimpleLineIcons.ttf</string>
-    <string>Octicons.ttf</string>
-    <string>Zocial.ttf</string>
-    <string>Fontisto.ttf</string>
-  </array>
-  ```
-  
+
+```xml
+<key>UIAppFonts</key>
+<array>
+  <string>AntDesign.ttf</string>
+  <string>Entypo.ttf</string>
+  <string>EvilIcons.ttf</string>
+  <string>Feather.ttf</string>
+  <string>FontAwesome.ttf</string>
+  <string>FontAwesome5_Brands.ttf</string>
+  <string>FontAwesome5_Regular.ttf</string>
+  <string>FontAwesome5_Solid.ttf</string>
+  <string>Foundation.ttf</string>
+  <string>Ionicons.ttf</string>
+  <string>MaterialIcons.ttf</string>
+  <string>MaterialIconsOutlined.ttf</string>
+  <string>MaterialCommunityIcons.ttf</string>
+  <string>SimpleLineIcons.ttf</string>
+  <string>Octicons.ttf</string>
+  <string>Zocial.ttf</string>
+  <string>Fontisto.ttf</string>
+</array>
+```
+
 </details>
 
 <br>
