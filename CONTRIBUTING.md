@@ -22,6 +22,6 @@ If you wish to submit a pull request for a new feature or issue, you should star
 - `yarn install` OR `npm install`
 - `npm test`
 - Optionally `brew install fontcustom && npm run build` if you've updated any icon sets.
-- Optionally `brew install fontforge` if you want to update the Outlined Material Icons because the font file is published as .otf file and needs to be converted to an .ttf file.
+- Optionally `brew install fontforge` if you want to update the Outlined Material Icons because the font file is published as .otf file and needs to be converted to a .ttf file.
 
 One you have done this, create a new branch with a name that loosely describes the issue on which you will be working. Once you think you have the addressed the issue in question, submit a pull request to the `master` branch.
