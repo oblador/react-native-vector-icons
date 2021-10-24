@@ -199,14 +199,14 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   }
   ```
 
-### OSX via [`react-native-desktop`](https://github.com/ptmt/react-native-desktop)
+### macOS via [`react-native-macos`](https://github.com/microsoft/react-native-macos)
 
 - Browse to `node_modules/react-native-vector-icons` and drag the folder `Fonts` to your project in Xcode. **Make sure your app is checked under "Add to targets" and that "Create folder references" is checked**.
 - Edit `Info.plist` and add a property called **Application fonts resource path** (or `ATSApplicationFontsPath` if Xcode won't autocomplete/not using Xcode) and type `Fonts` as the value.
 
 _Note: you need to recompile your project after adding new fonts, also ensure that the `Fonts` folder also appear under **Copy Bundle Resources** in **Build Phases**._
 
-### Windows via [`react-native-windows`](https://github.com/ReactWindows/react-native-windows)
+### Windows via [`react-native-windows`](https://github.com/microsoft/react-native-windows)
 
 - In the top level projects (/windows/project-name/Assets), copy and paste the font files.
 - Open your solution in Visual Studio, right click the Assets folder in your solution, click **Add > Existing Item**.
