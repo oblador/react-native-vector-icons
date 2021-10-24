@@ -71,8 +71,8 @@
     "yargs": "^16.1.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
+    "@babel/cli": "^7.12.9",
+    "@babel/core": "^7.12.9",
     "@mdi/font": "^5.3.45",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.2.0",
@@ -88,9 +88,9 @@
     "font-awesome": "^4.6.3",
     "fontisto": "^3.0.4",
     "ionicons": "^5.0.1",
-    "metro-react-native-babel-preset": "^0.57.0",
+    "metro-react-native-babel-preset": "^0.66.2",
     "octicons": "^8.4.1",
     "prettier": "^1.19.1",
-    "react": "^16.12.0"
+    "react": "^17.0.2"
   }
 }
