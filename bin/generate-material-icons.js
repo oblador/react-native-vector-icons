@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 
 const omit = require('lodash.omit');
-const lodashTemplate = require('lodash.template');
+const lodashTemplate = require('lodash/template');
 const fs = require('fs');
 const path = require('path');
 const yargs = require('yargs');
