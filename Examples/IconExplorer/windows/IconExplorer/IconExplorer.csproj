@@ -178,6 +178,10 @@
       <Link>Assets\EvilIcons.ttf</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\FabricIcons.ttf">
+      <Link>Assets\FabricIcons.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\FontAwesome.ttf">
       <Link>Assets\FontAwesome.ttf</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

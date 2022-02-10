@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-rm -rf AntDesign.js.flow Entypo.js.flow EvilIcons.js.flow Feather.js.flow \
+rm -rf AntDesign.js.flow Entypo.js.flow EvilIcons.js.flow FabricIcons.js.flow Feather.js.flow \
     FontAwesome.js.flow FontAwesome5.js.flow FontAwesome5Pro.js.flow \
     Foundation.js.flow Ionicons.js.flow MaterialCommunityIcons.js.flow \
     MaterialIcons.js.flow Octicons.js.flow SimpleLineIcons.js.flow \
