@@ -1,7 +1,7 @@
 {
   "name": "react-native-vector-icons",
-  "version": "6.6.0",
-  "description": "Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.",
+  "version": "9.0.0",
+  "description": "Customizable Icons for React Native with support for NavBar/TabBar, image source and full styling.",
   "main": "dist/index.js",
   "bin": {
     "fa5-upgrade": "./bin/fa5-upgrade.sh",
@@ -61,37 +61,37 @@
     "url": "git://github.com/oblador/react-native-vector-icons.git"
   },
   "license": "MIT",
-  "rnpm": {
-    "assets": [
-      "Fonts"
-    ]
-  },
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash.frompairs": "^4.0.1",
+    "lodash.isequal": "^4.5.0",
+    "lodash.isstring": "^4.0.1",
+    "lodash.omit": "^4.5.0",
+    "lodash.pick": "^4.4.0",
+    "lodash.template": "^4.5.0",
     "prop-types": "^15.7.2",
-    "yargs": "^15.0.2"
+    "yargs": "^16.1.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
-    "@mdi/font": "^4.0.96",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.2.1",
-    "eslint-config-airbnb": "18.0.1",
-    "eslint-config-prettier": "^6.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "@babel/cli": "^7.12.9",
+    "@babel/core": "^7.12.9",
+    "@mdi/font": "^5.3.45",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4",
     "evil-icons": "^1.10.1",
-    "feather-icons": "^4.21.0",
+    "feather-icons": "^4.28.0",
     "font-awesome": "^4.6.3",
     "fontisto": "^3.0.4",
-    "ionicons": "^4.0.0",
-    "material-design-icons": "^3.0.1",
-    "metro-react-native-babel-preset": "^0.57.0",
+    "ionicons": "^5.0.1",
+    "metro-react-native-babel-preset": "^0.66.2",
     "octicons": "^8.4.1",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "react": "^17.0.2"
   }
 }

@@ -1,6 +1,6 @@
 # Generating Feather icon set
 
-### To build Feather Icon Set is necessary:
+### To build the Feather icon Set you will need:
 
 - [Inkscape](https://inkscape.org/)
 - [GNU Parallel](https://www.gnu.org/software/parallel/)
@@ -10,8 +10,7 @@
 1. Go to [Font Custom](https://github.com/FontCustom/fontcustom) and follow the installation instructions
 2. Generate the icon set with `yarn build-feather`
 
-Before we can build icon set, is necessary pre-process the icons. This task will be done using Inkscape with help of Parallel.
-If you have Xvfb installed, you will see a progress-bar on console, if not, for every single icon one inkscape window will be launched to adjust svg.
+Before we can build the icon set, you'll need to pre-process the icons. You can do this using Inkscape with help of Parallel.
+If you have Xvfb installed, you will see a progress bar in the console; if not, each icon will launch one Inkscape window to adjust the SVG.
 
-During the building stage, a folder named Feather will be created.
-It will be removed at the end of build.
+The building stage will create a folder called `Feather`. This will be removed at the end of the build.

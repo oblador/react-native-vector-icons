@@ -12,45 +12,11 @@ export type IconButtonProps<Glyphs: string> = {
   color?: Color,
   name: Glyphs,
   size?: number,
+  ...
 };
 
 declare class IconButton<Glyphs: string> extends PureComponent<
   IconButtonProps<Glyphs>
-> {}
-
-export type IconToolbarAndroidActions<Glyphs: string> = {
-  iconColor?: Color,
-  iconName?: Glyphs,
-  iconSize?: number,
-  show?: 'always' | 'ifRoom' | 'never',
-  showWithText?: boolean,
-  title: string,
-};
-
-export type IconToolbarAndroidProps<Glyphs: string> = {
-  actions: IconToolbarAndroidActions<Glyphs>[],
-  iconColor?: Color,
-  iconSize?: number,
-  logoName?: Glyphs,
-  navIconName?: Glyphs,
-  overflowIconName?: Glyphs,
-  titleColor?: Color,
-};
-
-declare class IconToolbarAndroid<Glyphs: string> extends PureComponent<
-  IconToolbarAndroidProps<Glyphs>
-> {}
-
-export type TabBarItemIOSProps<Glyphs: string> = {
-  iconColor?: Color,
-  iconName: Glyphs,
-  iconSize?: number,
-  selectedIconColor?: Color,
-  selectedIconName?: Glyphs,
-};
-
-declare class TabBarItemIOS<Glyphs: string> extends PureComponent<
-  TabBarItemIOSProps<Glyphs>
 > {}
 
 export type IconProps<Glyphs: string> = {
@@ -58,6 +24,7 @@ export type IconProps<Glyphs: string> = {
   color?: Color,
   name: Glyphs,
   size?: number,
+  ...
 };
 
 export type ImageSource = {|
@@ -67,9 +34,6 @@ export type ImageSource = {|
 
 declare class Icon<Glyphs: string> extends PureComponent<IconProps<Glyphs>> {
   static Button: Class<IconButton<Glyphs>>;
-  static TabBarItem: Class<TabBarItemIOS<Glyphs>>;
-  static TabBarItemIOS: Class<TabBarItemIOS<Glyphs>>;
-  static ToolbarAndroid: Class<IconToolbarAndroid<Glyphs>>;
 
   static getFontFamily(): string;
   static getImageSource(
@@ -77,6 +41,11 @@ declare class Icon<Glyphs: string> extends PureComponent<IconProps<Glyphs>> {
     size?: number,
     color?: Color
   ): Promise<ImageSource>;
+  static getImageSourceSync(
+    name: Glyphs,
+    size?: number,
+    color?: Color
+  ): ImageSource;
   static getRawGlyphMap(): { [name: Glyphs]: number };
   static hasIcon(name: string): boolean;
   static loadFont(file?: string): Promise<void>;

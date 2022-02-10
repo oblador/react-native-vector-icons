@@ -4,6 +4,8 @@
 
 Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project.
 
+If you want to use `.svg` files natively – try [`react-native-vector-image`](https://github.com/oblador/react-native-vector-image).
+
 ## Table of Contents
 
 - [Bundled Icon Sets](#bundled-icon-sets)
@@ -17,8 +19,7 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [Icon Component](#icon-component)
 - [Icon.Button Component](#iconbutton-component)
 - [Usage as PNG image/source object](#usage-as-png-imagesource-object)
-- [Usage with TabBarIOS](#usage-with-tabbarios)
-- [Usage with ToolbarAndroid](#usage-with-toolbarandroid)
+- [TabBar](#tabbar)
 - [Multi-style fonts](#multi-style-fonts)
 - [Custom Fonts](#custom-fonts)
 - [Animation](#animation)
@@ -28,6 +29,10 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
 
+## Sponsoring
+
+If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own.
+
 ## Bundled Icon Sets
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
@@ -36,14 +41,14 @@ Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate
 - [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons)
 - [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
 - [`FabricIcons`](https://developer.microsoft.com/en-us/fabric/) by Microsoft Office (**1749** icons)
-- [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.21.0, **279** icons)
+- [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.28.0, **285** icons)
 - [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
-- [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.7.0, 1500 (free) **5082** (pro) icons)
+- [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.13.0, 1588 (free) **7842** (pro) icons)
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-- [`Ionicons`](https://ionicons.com/) by Ben Sperry (v4.2.4, **696** icons)
-- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v3.0.1, **932** icons)
-- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v4.0.96, **4416** icons)
+- [`Ionicons`](https://ionicons.com/) by Iconic Framework (v5.0.1, **1227** icons)
+- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1547** icons)
+- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v5.3.45, **5346** icons)
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
 - [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
 - [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.4.1, **189** icons)
@@ -65,7 +70,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
 
- <details><summary>List of all available fonts to copy & paste in info.plist</summary>
+ <details><summary>List of all available fonts to copy & paste in Info.plist</summary>
   
   ```xml
   <key>UIAppFonts</key>
@@ -86,6 +91,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
     <string>SimpleLineIcons.ttf</string>
     <string>Octicons.ttf</string>
     <string>Zocial.ttf</string>
+    <string>Fontisto.ttf</string>
   </array>
   ```
   
@@ -95,7 +101,7 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
 
 _Note: you need to recompile your project after adding new fonts, also ensure that they also appear under **Copy Bundle Resources** in **Build Phases**._
 
-If you want to use the TabBar/NavigatorIOS integration or use `getImageSource`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
+If you want to use `getImageSource`/`getImageSourceSync`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](https://reactnative.dev/docs/linking-libraries-ios.html#content).
 
 #### Option: With `react-native link`
 
@@ -115,7 +121,7 @@ Edit `Info.plist` as described above.
 
 If you are using `use_frameworks!` in your `Podfile` you instead need to dynamically load the icon font by doing `Icon.loadFont()` when boostrapping your application.
 
-_Note: You must be consuming React itself via CocoaPods for this to work, see [React Native documentation](https://facebook.github.io/react-native/docs/integration-with-existing-apps) on how to set that up._
+_Note: You must be consuming React itself via CocoaPods for this to work, see [React Native documentation](https://reactnative.dev/docs/integration-with-existing-apps) on how to set that up._
 
 ### Android
 
@@ -143,9 +149,9 @@ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 - Copy the contents in the `Fonts` folder to `android/app/src/main/assets/fonts` (_note lowercase fonts folder_).
 
-##### Integrating library for `getImageSource` and `ToolbarAndroid` support
+##### Integrating library for `getImageSource` support
 
-These steps are optional and only needed if you want to use the `Icon.getImageSource` function or using custom icons in the `Icon.ToolbarAndroid` component.
+These steps are optional and only needed if you want to use the `Icon.getImageSource` function.
 
 - Edit `android/settings.gradle` to look like this (without the +):
 
@@ -195,27 +201,18 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   }
   ```
 
-_Note: If you're using React Native (Android) <= 0.17, [follow this instructions](https://github.com/oblador/react-native-vector-icons/blob/2fe5b97afa849652215e3258189e8ca3ea775c53/README.md#integrating-library-for-getimagesource-support)_
-
-#### Option: With `rnpm`
-
-`$ react-native link`
-
-_Note: Some users are having trouble using this method, try one of the others if you are too._
-
-### OSX via [`react-native-desktop`](https://github.com/ptmt/react-native-desktop)
+### macOS via [`react-native-macos`](https://github.com/microsoft/react-native-macos)
 
 - Browse to `node_modules/react-native-vector-icons` and drag the folder `Fonts` to your project in Xcode. **Make sure your app is checked under "Add to targets" and that "Create folder references" is checked**.
 - Edit `Info.plist` and add a property called **Application fonts resource path** (or `ATSApplicationFontsPath` if Xcode won't autocomplete/not using Xcode) and type `Fonts` as the value.
 
 _Note: you need to recompile your project after adding new fonts, also ensure that the `Fonts` folder also appear under **Copy Bundle Resources** in **Build Phases**._
 
-### Windows via [`react-native-windows`](https://github.com/ReactWindows/react-native-windows)
+### Windows via [`react-native-windows`](https://github.com/microsoft/react-native-windows)
 
-- Open your solution in Visual Studio, right click the Assets folder in your solution, click **Add Existing**.
-- Browse to the `node_modules\react-native-vector-icons\Fonts` folder, select the required font files
-- Click the **Add** drop-down and select **Add as Link**.
-- Set **Copy To Output Directory** property of each font file to **Copy if newer**
+- In the top level projects (/windows/project-name/Assets), copy and paste the font files.
+- Open your solution in Visual Studio, right click the Assets folder in your solution, click **Add > Existing Item**.
+- Select the fonts that were into /windows/project-name/assets and click **Add**.
 
 _Note: you need to recompile your project after adding new fonts._
 
@@ -272,7 +269,7 @@ const myIcon = <Icon name="rocket" size={30} color="#900" />;
 
 ### Properties
 
-Any [Text property](http://facebook.github.io/react-native/docs/text.html) and the following:
+Any [Text property](https://reactnative.dev/docs/text.html) and the following:
 
 | Prop        | Description                                                             | Default     |
 | ----------- | ----------------------------------------------------------------------- | ----------- |
@@ -282,16 +279,17 @@ Any [Text property](http://facebook.github.io/react-native/docs/text.html) and t
 
 ### Static Methods
 
-| Prop                 | Description                                                                                                                                                                               |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`getFontFamily`**  | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily()`                                                                |
-| **`getImageSource`** | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
-| **`getRawGlyphMap`** | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()`                                                                                                |
-| **`hasIcon`**        | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name)`                                                                                          |
+| Prop                     | Description                                                                                                                                                                               |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`getFontFamily`**      | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily()`                                                                |
+| **`getImageSource`**     | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
+| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)`                                                                              |
+| **`getRawGlyphMap`**     | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()`                                                                                                |
+| **`hasIcon`**            | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name)`                                                                                          |
 
 ### Styling
 
-Since `Icon` builds on top of the `Text` component, most [style properties](http://facebook.github.io/react-native/docs/style.html) will work as expected, you might find it useful to play around with these:
+Since `Icon` builds on top of the `Text` component, most [style properties](https://reactnative.dev/docs/style.html) will work as expected, you might find it useful to play around with these:
 
 - `backgroundColor`
 - `borderWidth`
@@ -338,7 +336,7 @@ const customTextButton = (
 
 ### Properties
 
-Any [`Text`](http://facebook.github.io/react-native/docs/text.html), [`TouchableHighlight`](http://facebook.github.io/react-native/docs/touchablehighlight.html) or [`TouchableWithoutFeedback`](http://facebook.github.io/react-native/docs/touchablewithoutfeedback.html) property in addition to these:
+Any [`Text`](https://reactnative.dev/docs/text.html), [`TouchableHighlight`](https://reactnative.dev/docs/touchablehighlight.html) or [`TouchableWithoutFeedback`](https://reactnative.dev/docs/touchablewithoutfeedback.html) property in addition to these:
 
 | Prop                  | Description                                                                                                                                       | Default             |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
@@ -353,42 +351,13 @@ Any [`Text`](http://facebook.github.io/react-native/docs/text.html), [`Touchable
 
 Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
 
+```js
+Icon.getImageSource('user', 20, 'red').then(source =>
+  this.setState({ userIcon: source })
+);
 ```
-Icon.getImageSource('user', 20, 'red').then((source) => this.setState({ userIcon: source }));
-```
 
-For a complete example check out the `TabBarExample` project.
-
-## Usage with [TabBarIOS](http://facebook.github.io/react-native/docs/tabbarios.html)
-
-Simply use `Icon.TabBarItemIOS` instead of `TabBarIOS.Item`. This is an extended component that works exactly the same but with three additional properties:
-
-| Prop                    | Description                                                             | Default       |
-| ----------------------- | ----------------------------------------------------------------------- | ------------- |
-| **`iconName`**          | Name of the default icon (similar to `TabBarIOS.Item` `icon`)           | _None_        |
-| **`selectedIconName`**  | Name of the selected icon (similar to `TabBarIOS.Item` `selectedIcon`). | _`iconName`_  |
-| **`iconSize`**          | Size of the icon.                                                       | `30`          |
-| **`iconColor`**         | Color of the icon.                                                      | _None_        |
-| **`selectedIconColor`** | Color of the selected icon.                                             | _`iconColor`_ |
-
-For example usage see `Examples/TabBarExample` or the examples section below. Don't forget to import and link to this project as described above if you are going to use the TabBar integration.
-
-**Note:** using `iconColor` and `selectedIconColor` requires the attribute [renderAsOriginal](https://facebook.github.io/react-native/docs/tabbarios-item.html#renderasoriginal) to be set to `true` on `Icon.TabBarItemIOS`.
-
-## Usage with [ToolbarAndroid](http://facebook.github.io/react-native/docs/toolbarandroid.html)
-
-Simply use `Icon.ToolbarAndroid` instead of `React.ToolbarAndroid`, this is composition of the underlying `ToolbarAndroid` component that works the same but any `*icon` property also takes `*iconName`:
-
-| Prop                   | Description                                                                                                                        | Default |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| **`logoName`**         | Name of the navigation logo icon (similar to `ToolbarAndroid` `logo`)                                                              | _None_  |
-| **`navIconName`**      | Name of the navigation icon (similar to `ToolbarAndroid` `navIcon`)                                                                | _None_  |
-| **`overflowIconName`** | Name of the overflow icon (similar to `ToolbarAndroid` `overflowIcon`).                                                            | _none_  |
-| **`actions`**          | Possible actions on the toolbar as part of the action menu, takes the additional arguments `iconName`, `iconColor` and `iconSize`. | _none_  |
-| **`iconSize`**         | Size of the icons.                                                                                                                 | `24`    |
-| **`iconColor`**        | Color of the icons.                                                                                                                | `black` |
-
-For example usage see `Examples/IconExplorer/index.android.js`or the examples section below. Don't forget to import and link to this project as described above if you are going to use the ToolbarAndroid integration.
+Alternatively you may use the synchronous method `Icon.getImageSourceSync` to avoid rendering glitches. Keep in mind that this method is blocking and might incur performance penalties. Subsequent calls will use cache however.
 
 # Multi-style fonts
 
@@ -406,19 +375,20 @@ const myIcon3 = <Icon name="comments" size={30} color="#900" light />; // Only i
 
 All static methods from `Icon` is supported by multi-styled fonts.
 
-| Prop                   | Description                                                                                                                                                                                      |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **`getFontFamily`**    | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily(style)`                                                                  |
-| **`getImageSource`**   | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color, style)` |
-| **`getRawGlyphMap`**   | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap(style)`                                                                                                  |
-| **`hasIcon`**          | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name, style)`                                                                                          |
-| **`getStyledIconSet`** | Use this to get a `Icon` component for a single style. Usage. `const StyledIcon = Icon.getStyledIconSet(style)`                                                                                  |
+| Prop                     | Description                                                                                                                                                                               |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`getFontFamily`**      | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily(style)`                                                           |
+| **`getImageSource`**     | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
+| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)`                                                                              |
+| **`getRawGlyphMap`**     | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap(style)`                                                                                           |
+| **`hasIcon`**            | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name, style)`                                                                                   |
+| **`getStyledIconSet`**   | Use this to get a `Icon` component for a single style. Usage. `const StyledIcon = Icon.getStyledIconSet(style)`                                                                           |
 
 If no style argument is passed (or if it's invalid) the methods will default to a pre-defineds fallback.
 
 ### Components
 
-`Icon.Button`, `Icon.TabBarItem`, `Icon.TabBarItemIOS`, `Icon.ToolbarAndroid` are all supported, usage is just like `Icon`:
+`Icon.Button` is supported, usage is just like `Icon`:
 
 ```jsx
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -551,7 +521,7 @@ You have to manually make a reference of your `.ttf` on your xcodeproj `Resource
 
 ## Animation
 
-React Native comes with an amazing animation library called [`Animated`](http://facebook.github.io/react-native/docs/animated.html). To use it with an icon, simply create an animated component with this line: `const AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
+React Native comes with an amazing animation library called [`Animated`](https://reactnative.dev/docs/animated.html). To use it with an icon, simply create an animated component with this line: `const AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
 
 ## Examples
 
@@ -571,58 +541,95 @@ function ExampleView(props) {
 }
 ```
 
-### TabBarIOS
+### TabBar
 
-Full example in `TabBarExample` project in `Examples/TabBarExample` folder.
+Since [`TabBarIOS`](https://reactnative.dev/docs/tabbarios.html) was removed from core in favor of [@react-navigation/bottom-tabs](https://reactnative.dev/docs/tabbarios.html), it is also removed as a convenience component from this library. Simply use the `Icon` instead, but don't forget to import and link to this project as described above first.
+
+Below is an [example](https://reactnavigation.org/docs/bottom-tab-navigator/#example) taken from `react-navigation`:
 
 ```js
-import { View, Text, TabBarIOS } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-function TabBarView(props) {
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
   return (
-    <TabBarIOS>
-      <Icon.TabBarItem
-        title="Home"
-        iconName="ios-home-outline"
-        selectedIconName="ios-home"
-      >
-        <View style={styles.tabContent}>
-          <Text>Home Tab</Text>
-        </View>
-      </Icon.TabBarItem>
-    </TabBarIOS>
+    <Tab.Navigator
+      initialRouteName="Feed"
+      tabBarOptions={{
+        activeTintColor: '#e91e63',
+      }}
+    >
+      <Tab.Screen
+        name="Feed"
+        component={Feed}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Notifications"
+        component={Notifications}
+        options={{
+          tabBarLabel: 'Updates',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="bell" color={color} size={size} />
+          ),
+          tabBarBadge: 3,
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="account" color={color} size={size} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
   );
 }
 ```
 
 ### ToolbarAndroid
 
+Since [`ToolbarAndroid`](https://github.com/react-native-community/toolbar-android) was removed from core, it is also removed as a convenience component from this library. Simply use `getImageSourceSync` instead, but don't forget to import and link to this project as described above first.
+
 ```js
+import ToolbarAndroid from '@react-native-community/toolbar-android';
 import Icon from 'react-native-vector-icons/Ionicons';
+
+const navIcon = Icon.getImageSourceSync('md-arrow-back', 24, 'white');
+const overflowIcon = Icon.getImageSourceSync('md-more', 24, 'white');
+const settingsIcon = Icon.getImageSourceSync('md-settings', 30, 'white');
+const twitterIcon = Icon.getImageSourceSync('logo-twitter', 25, '#4099FF');
 
 function ToolbarView(props) {
   return (
-    <Icon.ToolbarAndroid
+    <ToolbarAndroid
       title="Home"
       titleColor="white"
-      navIconName="md-arrow-back"
+      navIcon={navIcon}
       onIconClicked={props.navigator.pop}
       actions={[
         {
           title: 'Settings',
-          iconName: 'md-settings',
-          iconSize: 30,
+          icon: settingsIcon,
           show: 'always',
         },
         {
           title: 'Follow me on Twitter',
-          iconName: 'logo-twitter',
-          iconColor: '#4099FF',
+          icon: twitterIcon,
           show: 'ifRoom',
         },
       ]}
-      overflowIconName="md-more"
+      overflowIcon={overflowIcon}
     />
   );
 }
@@ -643,15 +650,9 @@ function ExampleView(props) {
 }
 ```
 
-### Community examples
-
-- [react-native-dribbble-app](https://github.com/catalinmiron/react-native-dribbble-app)
-- [product-kitty](https://github.com/rkho/product-kitty) ([blog post](http://richardkho.com/persisting-tabbars-in-react-native/))
-- [react-native-netflix](https://github.com/mariodev12/react-native-netflix)
-
 ## Generating your own icon set from a CSS file
 
-If you already have a icon font with associated CSS file then you can easily generate a icon set with the `generate-icon` script.
+If you already have an icon font with associated CSS file then you can easily generate a icon set with the `generate-icon` script.
 
 ### Example usage:
 

@@ -2,7 +2,7 @@
 
 TEMP_DIR_PATH=""
 FONTAWESOME_PRO_DIR_NAME=""
-DEST_DIR_PATH="assets/fonts"
+DEST_DIR_PATH=${1:-"assets/fonts"}
 PROJECT_NAME="react-native-vector-icons"
 FONT_NAME="Font Awesome Pro"
 
@@ -84,14 +84,19 @@ copy_ttf_fonts_to_dest_dir()
   fi
 }
 
-modify_package_json()
+create_rn_config()
 {
-  /usr/bin/env node "./node_modules/$PROJECT_NAME/bin/add-font-assets.js"
+  if [ -f "./react-native.config.js" ]; then
+    echo "You already have a react-native-config.js file, make sure you have the new fonts added to the dependencies!";
+    return 1;
+  else
+    echo "module.exports = { assets: [ '${DEST_DIR_PATH}' ] };" > react-native.config.js;
+  fi
 }
 
 react_native_link_project()
 {
-  react-native link "$PROJECT_NAME"
+  react-native link
 }
 
 if setup_npm_config; then
@@ -120,10 +125,10 @@ else
   exit 1;
 fi
 
-if modify_package_json; then
-  echo "[SUCCESS] Modified package.json file";
+if create_rn_config; then
+  echo "[SUCCESS] Created react-native.config.js";
 else
-  exit 1;
+  echo "[INFO] Didn't create react-native.config.js, it already exists. Make sure '${DEST_DIR_PATH}' is part of the 'assets' array!";
 fi
 
 if react_native_link_project; then

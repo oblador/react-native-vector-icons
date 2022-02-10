@@ -7,7 +7,7 @@ import {
   Text,
   TextInput,
   View,
-} from './react-native';
+} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
