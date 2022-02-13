@@ -95,9 +95,25 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
   
 </details>
 
+- In your XCode Settings, in the **Build Phases** tab, under **Copy Bundle Resources** add the fonts you have copied in the `Fonts` directory.
+
+- For React Native > 0.60, when pods are installed/updated [auto linking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) will automatically add all fonts to the **Build Phases**, **Copy Pods Resources**. Which will end up in your bundle.
+To avoid that, create a `react-native.config.js` file at the root of your react-native project with:
+```js
+module.exports = {
+  dependencies: {
+    'react-native-vector-icons': {
+      platforms: {
+        ios: null,
+      },
+    },
+  },
+};
+```
+
 <br>
 
-_Note: you need to recompile your project after adding new fonts, also ensure that they also appear under **Copy Bundle Resources** in **Build Phases**._
+_Note: you need to recompile your project after adding new fonts.
 
 If you want to use `getImageSource`/`getImageSourceSync`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](https://reactnative.dev/docs/linking-libraries-ios.html#content).
 
@@ -105,7 +121,8 @@ If you want to use `getImageSource`/`getImageSourceSync`, then you need to add `
 
 `$ react-native link react-native-vector-icons`
 
-_Note: Some users are having trouble using this method, try one of the others if you are too._
+_Note: Some users are having trouble using this method, try one of the others if you are too._  
+For React Native > 0.60, [auto linking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) (equivalent of `react-native link`) will automatically run when Pods are installed or updated.
 
 #### Option: With [CocoaPods](https://cocoapods.org/)
 
