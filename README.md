@@ -668,7 +668,7 @@ CSS selector prefix [default: ".icon-"]
 
 #### `-t`, `--template`
 
-Template in lodash format [default: "./template/iconSet.tpl"]
+Template in JS template string format [default: "./template/iconSet.tpl"]
 
 For default template please provide `--componentName` and `--fontFamily`.
 
