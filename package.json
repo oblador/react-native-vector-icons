@@ -67,6 +67,7 @@
   "devDependencies": {
     "@babel/cli": "^7.12.9",
     "@babel/core": "^7.12.9",
+    "@entypo-icons/core": "^1.0.1",
     "@mdi/font": "^6.5.95",
     "@primer/octicons": "^16.3.1",
     "babel-eslint": "^10.1.0",

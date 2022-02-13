@@ -654,6 +654,11 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@entypo-icons/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@entypo-icons/core/-/core-1.0.1.tgz#58c89ad14326b1fb68d06fbe80c2077daadb2afb"
+  integrity sha512-BHywDzBXI3GPZwOluZtGmZ1nEHqZMtH0ideZRWfsWAhCCmRSrGzPQgFdPZLH3vxK38LMcP2atAfZ/8Ui72mFuQ==
+
 "@mdi/font@^6.5.95":
   version "6.5.95"
   resolved "https://registry.yarnpkg.com/@mdi/font/-/font-6.5.95.tgz#203922f6dd46397de9eb1f5956b85339adb6344d"
