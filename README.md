@@ -180,6 +180,7 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   ```
 
 - Edit your `MainApplication.java` (deep in `android/app/src/main/java/...`) to look like this (note **two** places to edit):
+- Note: this is optional step, it's necessary only and only if your **react-native app doesn't support auto-linking** otherwise you can ignore this.
 
   ```diff
   package com.myapp;
