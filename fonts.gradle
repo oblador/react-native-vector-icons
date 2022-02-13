@@ -1,58 +1,32 @@
 /**
+ * Register font asset source folder
+ */
+android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/ReactNativeVectorIcons")
+
+/**
  * Task to copy icon font files
  */
+afterEvaluate {
+    def config = project.hasProperty("vectoricons") ? project.vectoricons : [];
+    def iconFontsDir = config.iconFontsDir ?: "../../node_modules/react-native-vector-icons/Fonts";
+    def iconFontNames = config.iconFontNames ?: [ "*.ttf" ];
 
-def config = project.hasProperty("vectoricons") ? project.vectoricons : [];
+    def fontCopyTask = tasks.create(
+        name: "copyReactNativeVectorIconFonts",
+        type: Copy) {
+        description = "copy vector icon fonts."
+        into "$buildDir/intermediates/ReactNativeVectorIcons/fonts"
 
-def iconFontsDir = config.iconFontsDir ?: "../../node_modules/react-native-vector-icons/Fonts";
-def iconFontNames = config.iconFontNames ?: [ "*.ttf" ];
+        iconFontNames.each { fontName ->
+            from(iconFontsDir) {
+                include(fontName)
+            }
+        }
+    }
 
-gradle.projectsEvaluated {
     android.applicationVariants.all { def variant ->
         def targetName = variant.name.capitalize()
-        def targetPath = variant.dirName
-
-        // Create task for copying fonts
-        def currentFontTask = tasks.create(
-                name: "copy${targetName}IconFonts",
-                type: Copy) {
-            into("${buildDir}/intermediates")
-
-            iconFontNames.each { fontName ->
-
-              from(iconFontsDir) {
-                include(fontName)
-                into("assets/${targetPath}/fonts/")
-              }
-
-              // Workaround for Android Gradle Plugin 3.2+ new asset directory
-              from(iconFontsDir) {
-                include(fontName)
-                into("merged_assets/${variant.name}/merge${targetName}Assets/out/fonts/")
-              }
-
-              // Workaround for Android Gradle Plugin 3.4+ new asset directory
-              from(iconFontsDir) {
-                include(fontName)
-                into("merged_assets/${variant.name}/out/fonts/")
-              }
-            }
-        }
-
-        currentFontTask.dependsOn("merge${targetName}Resources")
-        currentFontTask.dependsOn("merge${targetName}Assets")
-
-        [
-            "processArmeabi-v7a${targetName}Resources",
-            "processX86${targetName}Resources",
-            "processUniversal${targetName}Resources",
-            "process${targetName}Resources"
-        ].each { name ->
-            Task dependentTask = tasks.findByPath(name);
-
-            if (dependentTask != null) {
-                dependentTask.dependsOn(currentFontTask)
-            }
-        }
+        def generateAssetsTask = tasks.findByName("generate${targetName}Assets")
+        generateAssetsTask.dependsOn(fontCopyTask)
     }
 }

@@ -1,8 +1,7 @@
-import 'react-native-gesture-handler';
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import IconSetList from './IconSetList';
 import IconList from './IconList';
@@ -13,42 +12,38 @@ const styles = StyleSheet.create({
   },
 });
 
-class IconListScreen extends React.Component {
-  static navigationOptions = ({ navigation }) => ({
-    title: navigation.state.params.title,
-    headerStyle: styles.header,
-  });
+const IconListScreen = ({ route, navigation }) => (
+  <IconList iconSet={route.params.iconSet} />
+);
 
-  render() {
-    const { iconSet } = this.props.navigation.state.params;
+const IconExplorer = ({ navigation }) => (
+  <IconSetList
+    navigator={{
+      push({ iconSet, title }) {
+        navigation.navigate('IconSet', { title, iconSet });
+      },
+    }}
+  />
+);
 
-    return <IconList iconSet={iconSet} />;
-  }
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="IconExplorer">
+        <Stack.Screen name="IconExplorer" component={IconExplorer} />
+        <Stack.Screen
+          name="IconSet"
+          component={IconListScreen}
+          options={({ route }) => ({
+            title: route.params.title,
+            headerStyle: styles.header,
+          })}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
-class IconExplorer extends React.Component {
-  static navigationOptions = {
-    title: 'Icon Explorer',
-    headerStyle: styles.header,
-  };
-
-  render() {
-    const { navigate } = this.props.navigation;
-    return (
-      <IconSetList
-        navigator={{
-          push({ iconSet, title }) {
-            navigate('IconSet', { title, iconSet });
-          },
-        }}
-      />
-    );
-  }
-}
-
-const AppNavigator = createStackNavigator({
-  IconExplorer: { screen: IconExplorer },
-  IconSet: { screen: IconListScreen },
-});
-
-export default createAppContainer(AppNavigator);
+export default App;

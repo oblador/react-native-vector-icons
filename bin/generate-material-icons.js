@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 
-const omit = require('lodash.omit');
-const lodashTemplate = require('lodash.template');
 const fs = require('fs');
 const path = require('path');
 const yargs = require('yargs');
+const { omit } = require('../lib/object-utils');
 
 const { argv } = yargs
   .usage(
@@ -13,7 +12,7 @@ const { argv } = yargs
   )
   .demand(1)
   .default('t', path.resolve(__dirname, '..', 'templates/bundled-icon-set.tpl'))
-  .describe('t', 'Template in lodash format')
+  .describe('t', 'Template in JS template string format')
   .alias('t', 'template')
   .describe('o', 'Save output to file, defaults to STDOUT')
   .alias('o', 'output')
@@ -40,15 +39,16 @@ if (argv.template) {
   template = fs.readFileSync(argv.template, { encoding: 'utf8' });
 }
 
-let data = omit(argv, '_ $0 o output t template g glyphmap'.split(' '));
+const data = omit(argv, '_ $0 o output t template g glyphmap'.split(' '));
 const glyphMap = extractGlyphMapFromCodepoints(argv._[0]);
 
 let content = JSON.stringify(glyphMap, null, '  ');
 if (template) {
-  const compiled = lodashTemplate(template);
-  data = data || {};
-  data.glyphMap = content;
-  content = compiled(data);
+  const templateVariables = { glyphMap: content, ...data };
+  content = template.replace(
+    /\${([^}]*)}/g,
+    (_, key) => templateVariables[key]
+  );
 }
 
 if (argv.output) {
