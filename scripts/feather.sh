@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 TEMP_DIR=tmp
+rm -rf $TEMP_DIR/svg
 mkdir -p $TEMP_DIR/svg
 cp node_modules/feather-icons/dist/icons/*.svg $TEMP_DIR/svg
 
@@ -11,6 +12,7 @@ cp node_modules/feather-icons/dist/icons/*.svg $TEMP_DIR/svg
   --output $TEMP_DIR \
   --name Feather \
   --templates css \
+  --force \
   --no-hash
 
 node bin/generate-icon ${TEMP_DIR}/Feather.css \

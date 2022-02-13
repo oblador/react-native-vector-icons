@@ -5,6 +5,7 @@ TEMP_DIR=tmp
   --output $TEMP_DIR \
   --name EvilIcons \
   --templates css \
+  --force \
   --no-hash
 
 node bin/generate-icon.js $TEMP_DIR/EvilIcons.css \
