@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/react-native-vector-icons/static/css/main.29c38f6a.chunk.css",
-    "main.js": "/react-native-vector-icons/static/js/main.123629a8.chunk.js",
-    "main.js.map": "/react-native-vector-icons/static/js/main.123629a8.chunk.js.map",
-    "runtime-main.js": "/react-native-vector-icons/static/js/runtime-main.aa5e1be8.js",
-    "runtime-main.js.map": "/react-native-vector-icons/static/js/runtime-main.aa5e1be8.js.map",
-    "static/js/2.309be1a4.chunk.js": "/react-native-vector-icons/static/js/2.309be1a4.chunk.js",
-    "static/js/2.309be1a4.chunk.js.map": "/react-native-vector-icons/static/js/2.309be1a4.chunk.js.map",
+    "main.css": "/react-native-vector-icons/static/css/main.61785842.css",
+    "main.js": "/react-native-vector-icons/static/js/main.52fa445d.js",
+    "static/media/MaterialCommunityIcons.ttf": "/react-native-vector-icons/static/media/MaterialCommunityIcons.5d42b4e60858731e7b65.ttf",
+    "static/media/Fontisto.ttf": "/react-native-vector-icons/static/media/Fontisto.c0edd68811e0237502fe.ttf",
+    "static/media/Ionicons.ttf": "/react-native-vector-icons/static/media/Ionicons.3517aeaa34b2f8cd8eef.ttf",
+    "static/media/MaterialIcons.ttf": "/react-native-vector-icons/static/media/MaterialIcons.120b4c7bbd155bd0a04d.ttf",
+    "static/media/FontAwesome5_Solid.ttf": "/react-native-vector-icons/static/media/FontAwesome5_Solid.07c3313b24f7b1ca85ee.ttf",
+    "static/media/FontAwesome.ttf": "/react-native-vector-icons/static/media/FontAwesome.1e59d2330b4c6deb84b3.ttf",
+    "static/media/FontAwesome5_Brands.ttf": "/react-native-vector-icons/static/media/FontAwesome5_Brands.9e138496e8f1719c6ebf.ttf",
+    "static/media/AntDesign.ttf": "/react-native-vector-icons/static/media/AntDesign.163adab9dbd7cb1ed12a.ttf",
+    "static/media/Entypo.ttf": "/react-native-vector-icons/static/media/Entypo.fc6169344c041cffcdae.ttf",
+    "static/media/Foundation.ttf": "/react-native-vector-icons/static/media/Foundation.c0cbb004854f9c746f89.ttf",
+    "static/media/Feather.ttf": "/react-native-vector-icons/static/media/Feather.0f5d9cede2e831f3fc80.ttf",
+    "static/media/SimpleLineIcons.ttf": "/react-native-vector-icons/static/media/SimpleLineIcons.3ec13a24af3fdda11107.ttf",
+    "static/media/Octicons.ttf": "/react-native-vector-icons/static/media/Octicons.6b742a230954dc640ba2.ttf",
+    "static/media/FontAwesome5_Regular.ttf": "/react-native-vector-icons/static/media/FontAwesome5_Regular.1017bce89c72f95bcf8e.ttf",
+    "static/media/Zocial.ttf": "/react-native-vector-icons/static/media/Zocial.07fea2ac49bcc67d9a6b.ttf",
+    "static/media/EvilIcons.ttf": "/react-native-vector-icons/static/media/EvilIcons.699664b33ac2837d5bee.ttf",
     "index.html": "/react-native-vector-icons/index.html",
-    "precache-manifest.86b90fb6a6c70b679004bfc15e2d85d2.js": "/react-native-vector-icons/precache-manifest.86b90fb6a6c70b679004bfc15e2d85d2.js",
-    "service-worker.js": "/react-native-vector-icons/service-worker.js",
-    "static/css/main.29c38f6a.chunk.css.map": "/react-native-vector-icons/static/css/main.29c38f6a.chunk.css.map",
-    "static/js/2.309be1a4.chunk.js.LICENSE.txt": "/react-native-vector-icons/static/js/2.309be1a4.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/react-native-vector-icons/static/media/Zocial.5cdf883b.ttf"
+    "main.61785842.css.map": "/react-native-vector-icons/static/css/main.61785842.css.map",
+    "main.52fa445d.js.map": "/react-native-vector-icons/static/js/main.52fa445d.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.aa5e1be8.js",
-    "static/js/2.309be1a4.chunk.js",
-    "static/css/main.29c38f6a.chunk.css",
-    "static/js/main.123629a8.chunk.js"
+    "static/css/main.61785842.css",
+    "static/js/main.52fa445d.js"
   ]
 }
