@@ -40,7 +40,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
 - [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.21.0, **279** icons)
 - [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
-- [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.14.0, 1598 (free) **7848** (pro) icons)
+- [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.15.3, 1598 (free) **7848** (pro) icons)
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 - [`Ionicons`](https://ionicons.com/) by Iconic Framework (v5.0.1, **1227** icons)
