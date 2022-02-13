@@ -38,7 +38,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
 
 - [`AntDesign`](https://ant.design/) by AntFinance (**298** icons)
-- [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons)
+- [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 **411** icons)
 - [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
 - [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.28.0, **286** icons)
 - [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
