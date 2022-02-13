@@ -67,8 +67,10 @@
   "devDependencies": {
     "@babel/cli": "^7.12.9",
     "@babel/core": "^7.12.9",
-    "@mdi/font": "^5.3.45",
+    "@mdi/font": "^6.5.95",
+    "@primer/octicons": "^16.3.1",
     "babel-eslint": "^10.1.0",
+    "css-social-buttons": "^1.1.1",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -79,12 +81,12 @@
     "eslint-plugin-react-hooks": "^4",
     "evil-icons": "^1.10.1",
     "feather-icons": "^4.28.0",
-    "font-awesome": "^4.6.3",
+    "font-awesome": "^4.7.0",
     "fontisto": "^3.0.4",
     "ionicons": "^5.0.1",
     "metro-react-native-babel-preset": "^0.66.2",
-    "octicons": "^8.4.1",
     "prettier": "^1.19.1",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "simple-line-icons": "^2.5.5"
   }
 }

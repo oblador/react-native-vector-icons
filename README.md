@@ -37,20 +37,20 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
 
-- [`AntDesign`](https://ant.design/) by AntFinance (**297** icons)
+- [`AntDesign`](https://ant.design/) by AntFinance (**298** icons)
 - [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons)
 - [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
-- [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.28.0, **285** icons)
+- [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.28.0, **286** icons)
 - [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
 - [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.13.0, 1588 (free) **7842** (pro) icons)
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 - [`Ionicons`](https://ionicons.com/) by Iconic Framework (v5.0.1, **1227** icons)
-- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1547** icons)
-- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v5.3.45, **5346** icons)
-- [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
-- [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
-- [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.4.1, **189** icons)
+- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1517** icons)
+- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v6.5.95, **6596** icons)
+- [`Octicons`](http://octicons.github.com) by Github, Inc. (v16.3.1, **250** icons)
+- [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.4.0, **100** icons)
+- [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.5.5, **189** icons)
 
 ## Installation
 
