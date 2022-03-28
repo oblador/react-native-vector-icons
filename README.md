@@ -189,10 +189,11 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   }
 
   dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:+"  // From node_modules
-  + compile project(':react-native-vector-icons')
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    //noinspection GradleDynamicVersion
+    implementation "com.facebook.react:react-native:+"  // From node_modules
+
+  + implementation project(':react-native-vector-icons')
   }
   ```
 
