@@ -124,6 +124,8 @@ If you want to use `getImageSource`/`getImageSourceSync`, then you need to add `
 _Note: Some users are having trouble using this method, try one of the others if you are too._  
 For React Native > 0.60, [auto linking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) (equivalent of `react-native link`) will automatically run when Pods are installed or updated.
 
+Edit `Info.plist` as described above.
+
 #### Option: With [CocoaPods](https://cocoapods.org/)
 
 Add the following to your `Podfile` and run `pod update`:
