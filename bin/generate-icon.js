@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 
-const omit = require('lodash.omit');
 const fs = require('fs');
 const path = require('path');
 const yargs = require('yargs');
 const generateIconSetFromCss = require('../lib/generate-icon-set-from-css');
+const { omit } = require('../lib/object-utils');
 
 const { argv } = yargs
   .usage(
@@ -16,7 +16,7 @@ const { argv } = yargs
   .describe('p', 'CSS selector prefix')
   .alias('p', 'prefix')
   .default('t', path.resolve(__dirname, '..', 'templates/bundled-icon-set.tpl'))
-  .describe('t', 'Template in lodash format')
+  .describe('t', 'Template in JS template string format')
   .alias('t', 'template')
   .describe('o', 'Save output to file, defaults to STDOUT')
   .alias('o', 'output')
