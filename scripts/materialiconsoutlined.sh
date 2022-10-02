@@ -11,7 +11,7 @@ curl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/Ma
 
 curl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIconsOutlined-Regular.codepoints -Ls > $TEMP_DIR/MaterialIconsOutlined-Regular.codepoints
 
-fontforge -c "Open($1); Generate($2)" Fonts/MaterialIconsOutlined.otf Fonts/MaterialIconsOutlined.ttf
+fontforge -lang=py -c "open(argv[1]).generate(argv[2])" Fonts/MaterialIconsOutlined.otf Fonts/MaterialIconsOutlined.ttf
 
 node bin/generate-material-icons $TEMP_DIR/MaterialIconsOutlined-Regular.codepoints\
   --componentName=MaterialIconsOutlined\
