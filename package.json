@@ -11,6 +11,7 @@
     "test": "eslint index.js {bin,lib}/*.js",
     "format": "prettier index.js *.md {bin,lib,directory,Examples}/**/*.js --write",
     "prepublish": "npm run build-web && npm run build-flow",
+    "preinstall": "npm install -g fantasticon",
     "build": "./scripts/build-icons.sh",
     "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps",
     "build-flow": "./scripts/build-flow.sh",

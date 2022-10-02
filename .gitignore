@@ -18,3 +18,9 @@ bower_components
 xcuserdata
 
 .DS_Store
+*.lock
+android/.gradle/7.4.2/dependencies-accessors/gc.properties
+android/.gradle/7.4.2/fileChanges/last-build.bin
+android/.gradle/7.4.2/gc.properties
+android/.gradle/buildOutputCleanup/cache.properties
+android/.gradle/vcs-1/gc.properties

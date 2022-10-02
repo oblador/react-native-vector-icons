@@ -1,12 +1,7 @@
 #!/bin/bash -e
 
-TEMP_DIR=tmp
-./scripts/fontcustom compile node_modules/evil-icons/assets/icons \
-  --output $TEMP_DIR \
-  --name EvilIcons \
-  --templates css \
-  --force \
-  --no-hash
+TEMP_DIR=$(mktemp -d -t rnvi.XXXXXX)
+fantasticon node_modules/evil-icons/assets/icons -o $TEMP_DIR -n EvilIcons -g css -t ttf
 
 node bin/generate-icon.js $TEMP_DIR/EvilIcons.css \
   --prefix=.icon-ei- \

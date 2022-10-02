@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-TEMP=$(mktemp -d -t rnvi)
+TEMP=$(mktemp -d -t rnvi.XXXXXX)
 pushd ${TEMP}
 curl -o font.zip -L https://github.com/ant-design/ant-design/releases/download/resource/iconfont-3.x.zip
 unzip -j -d font font.zip

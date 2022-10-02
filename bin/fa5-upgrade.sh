@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 TEMP_DIR_PATH=""
 FONTAWESOME_PRO_DIR_NAME=""

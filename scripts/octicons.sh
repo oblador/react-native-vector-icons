@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-TEMP_DIR=tmp
+TEMP_DIR=$(mktemp -d -t rnvi.XXXXXX)
 rm -rf $TEMP_DIR/svg
 mkdir -p $TEMP_DIR/svg
 cp node_modules/@primer/octicons/build/svg/*-16.svg $TEMP_DIR/svg
@@ -10,14 +10,7 @@ do
   mv $f $(echo $f | sed -e 's/-16\.svg$/.svg/')
 done
 
-./scripts/svg-object-to-path.sh $TEMP_DIR/svg/*.svg
-
-./scripts/fontcustom compile $TEMP_DIR/svg \
-  --output $TEMP_DIR \
-  --name Octicons \
-  --templates css \
-  --no-hash \
-  --autowidth
+fantasticon $TEMP_DIR/svg -o $TEMP_DIR -n Octicons -g css -t ttf
 
 node bin/generate-icon.js $TEMP_DIR/Octicons.css\
   --prefix=.icon- \

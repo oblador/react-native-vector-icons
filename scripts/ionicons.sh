@@ -1,10 +1,19 @@
 #!/bin/bash -e
 
-node bin/generate-icon node_modules/ionicons/dist/css/ionicons.css\
+TEMP=$(mktemp -d -t rnvi.XXXXXX)
+pushd ${TEMP}
+curl -o font.zip -L https://ionic.io/ionicons/ionicons.designerpack.zip
+unzip -j -d $TEMP/svg font.zip
+popd
+
+fantasticon $TEMP/svg -o $TEMP -n ionicons -g css -t ttf
+
+node bin/generate-icon $TEMP/ionicons.css\
   --prefix=.ion-\
   --componentName=Ionicons\
   --fontFamily=Ionicons\
   --template=templates/separated-icon-set.tpl\
   --glyphmap=glyphmaps/Ionicons.json\
   > Ionicons.js
-cp node_modules/ionicons/dist/fonts/ionicons.ttf Fonts/Ionicons.ttf
+
+cp $TEMP/ionicons.ttf Fonts/Ionicons.ttf

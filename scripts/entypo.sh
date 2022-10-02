@@ -1,13 +1,7 @@
 #!/bin/bash -e
 
-TEMP_DIR=tmp
-
-./scripts/fontcustom compile node_modules/@entypo-icons/core/icons \
-  --output $TEMP_DIR \
-  --name Entypo \
-  --templates css \
-  --force \
-  --no-hash
+TEMP_DIR=$(mktemp -d -t rnvi.XXXXXX)
+fantasticon node_modules/@entypo-icons/core/icons -o $TEMP_DIR -n Entypo -g css -t ttf
 
 node bin/generate-icon.js $TEMP_DIR/Entypo.css\
   --componentName=Entypo \
