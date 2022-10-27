@@ -10,13 +10,13 @@
     "test": "jest"
   },
   "dependencies": {
-    "@react-navigation/native": "^6.0.6",
-    "@react-navigation/native-stack": "^6.2.5",
+    "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.1",
     "ramda": "^0.26.1",
-    "react": "17.0.2",
-    "react-native": "0.67.2",
-    "react-native-safe-area-context": "^3.3.2",
-    "react-native-screens": "^3.8.0",
+    "react": "18.1.0",
+    "react-native": "0.70.4",
+    "react-native-safe-area-context": "^4.4.1",
+    "react-native-screens": "^3.18.2",
     "react-native-vector-icons": "file:../../"
   },
   "devDependencies": {
@@ -24,8 +24,8 @@
     "@babel/runtime": "^7.12.5",
     "babel-jest": "^26.6.3",
     "jest": "^26.6.3",
-    "metro-react-native-babel-preset": "^0.66.2",
-    "react-test-renderer": "17.0.2"
+    "metro-react-native-babel-preset": "0.72.3",
+    "react-test-renderer": "18.1.0"
   },
   "jest": {
     "preset": "react-native"
