@@ -8,25 +8,13 @@
 
 #import "RNVectorIconsManager.h"
 #import <CoreText/CoreText.h>
-#if __has_include(<React/RCTConvert.h>)
 #import <React/RCTConvert.h>
-#else // Compatibility for RN version < 0.40
-#import "RCTConvert.h"
-#endif
-#if __has_include(<React/RCTBridge.h>)
 #import <React/RCTBridge.h>
-#else // Compatibility for RN version < 0.40
-#import "RCTBridge.h"
-#endif
-#if __has_include(<React/RCTUtils.h>)
 #import <React/RCTUtils.h>
-#else // Compatibility for RN version < 0.40
-#import "RCTUtils.h"
-#endif
-#if __has_include(<React/RCTFont.h>)
 #import <React/RCTFont.h>
-#else // Compatibility for RN version < 0.40
-#import "RCTFont.h"
+// Thanks to this guard, we won't import this header when we build for the old architecture.
+#ifdef RCT_NEW_ARCH_ENABLED
+#import "RNVectorIconsSpec.h"
 #endif
 
 NSString *const RNVIErrorDomain = @"org.oblador.react-native-vector-icons";
@@ -34,7 +22,7 @@ NSString *const RNVIErrorDomain = @"org.oblador.react-native-vector-icons";
 @implementation RNVectorIconsManager
 
 @synthesize bridge = _bridge;
-RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE(RNVectorIcons);
 
 - (NSString *)hexStringFromColor:(UIColor *)color
 {
@@ -178,5 +166,14 @@ RCT_EXPORT_METHOD(
     CFRelease(provider);
   }
 }
+
+// Thanks to this guard, we won't compile this code when we build for the old architecture.
+#ifdef RCT_NEW_ARCH_ENABLED
+- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
+    (const facebook::react::ObjCTurboModule::InitParams &)params
+{
+    return std::make_shared<facebook::react::RNVectorIconsSpecJSI>(params);
+}
+#endif
 
 @end

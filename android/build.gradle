@@ -1,49 +1,53 @@
 buildscript {
-  // The Android Gradle plugin is only required when opening the android folder stand-alone.
-  // This avoids unnecessary downloads and potential conflicts when the library is included as a
-  // module dependency in an application project.
-  if (project == rootProject) {
+    ext.safeExtGet = {prop, fallback ->
+        rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+    }
     repositories {
-      mavenCentral()
-      google()
+        google()
+        gradlePluginPortal()
     }
-
     dependencies {
-      classpath("com.android.tools.build:gradle:3.5.3")
+        classpath("com.android.tools.build:gradle:7.0.4")
     }
-  }
+}
+
+def isNewArchitectureEnabled() {
+    return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
 }
 
 apply plugin: 'com.android.library'
-
-def safeExtGet(prop, fallback) {
-    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+if (isNewArchitectureEnabled()) {
+    apply plugin: 'com.facebook.react'
 }
-
 
 android {
-  compileSdkVersion safeExtGet('compileSdkVersion', 28)
-  
-  defaultConfig {
-    minSdkVersion safeExtGet('minSdkVersion', 16)
-    targetSdkVersion safeExtGet('targetSdkVersion', 28)
-    versionCode 1
-    versionName "1.0"
-  }
-  lintOptions {
-    abortOnError false
-  }
-}
+    compileSdkVersion safeExtGet('compileSdkVersion', 31)
 
-repositories {
-    mavenLocal()
-    google()
-    maven {
-        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-        url "$rootDir/../node_modules/react-native/android"
+    defaultConfig {
+        minSdkVersion safeExtGet('minSdkVersion', 21)
+        targetSdkVersion safeExtGet('targetSdkVersion', 31)
+        buildConfigField("boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString())
+    }
+    sourceSets {
+        main {
+            if (isNewArchitectureEnabled()) {
+                java.srcDirs += ['src/newarch']
+            } else {
+                java.srcDirs += ['src/oldarch']
+            }
+        }
     }
 }
 
+repositories {
+    maven {
+        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+        url "$projectDir/../node_modules/react-native/android"
+    }
+    mavenCentral()
+    google()
+}
+
 dependencies {
-  implementation "com.facebook.react:react-native:+"
+    implementation 'com.facebook.react:react-native:+'
 }

@@ -89,5 +89,13 @@
     "prettier": "^1.19.1",
     "react": "^17.0.2",
     "simple-line-icons": "^2.5.5"
+  },
+  "codegenConfig": {
+    "name": "RNVectorIconsSpec",
+    "type": "modules",
+    "jsSrcsDir": "lib",
+    "android": {
+      "javaPackageName": "com.oblador.vectoricons"
+    }
   }
 }

@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "postinstall": "pwd && ./scripts/postinstall.sh",
+    "postinstall": "DESTINATION='node_modules/react-native-vector-icons' LIB_FILE=`cd ../.. && echo \\`pwd\\`/\\`npm pack\\`` && (rm -rf $DESTINATION || true) && mkdir $DESTINATION && tar -xvzf $LIB_FILE -C $DESTINATION --strip-components 1 && rm $LIB_FILE",
     "test": "jest"
   },
   "dependencies": {
