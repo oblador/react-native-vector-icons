@@ -33,6 +33,11 @@ If you want to use `.svg` files natively – try [`react-native-vector-image`](h
 
 If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own.
 
+## Code Search
+[Documatic](https://www.documatic.com/) is sponsoring this library and provides their codebase search engine to the our community free of charge. Previously there wasn't a week when I didn't scream at the computer because our code search was so bad at my company – I would seriously consider it if you have a non-trivally sized repo. Help this library and yourself by asking it your questions about vector icons at [askyourcode.com](https://askyourcode.com/?lib=react-native-vector-icons) or get their [VSCode extension](https://marketplace.visualstudio.com/items?itemName=Documatic.documatic)!
+
+<a href="https://askyourcode.com/?lib=react-native-vector-icons"><img src="https://user-images.githubusercontent.com/378279/198386344-1849fa40-1846-487b-a81c-529fed1c98da.gif" width="840" height="530" alt="Documatic screen cast"></a>
+
 ## Bundled Icon Sets
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
@@ -41,9 +46,9 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 **411** icons)
 - [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
 - [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.28.0, **286** icons)
-- [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
-- [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.15.3, 1598 (free) **7848** (pro) icons)
-- [`FontAwesome 6`](https://fontawesome.com) by Fonticons, Inc. (v6.1.2, 2016 (free) **16150** (pro) icons)
+- [`FontAwesome`](https://fontawesome.com/v4/icons/) by Dave Gandy (v4.7.0, **675** icons)
+- [`FontAwesome 5`](https://fontawesome.com/v5/icons/) by Fonticons, Inc. (v5.15.3, 1598 (free) **7848** (pro) icons)
+- [`FontAwesome 6`](https://fontawesome.com/v6/icons/) by Fonticons, Inc. (v6.1.2, 2016 (free) **16150** (pro) icons)
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 - [`Ionicons`](https://ionicons.com/) by Ionic (v5.0.1, **1227** icons)
