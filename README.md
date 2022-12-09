@@ -119,6 +119,8 @@ module.exports = {
 
 _Note: you need to recompile your project after adding new fonts._
 
+_Note 2: if you're getting problems with `duplicate outputs file` for fonts on ios build, try running `cd ios && pod install` after the `react-native.config.js` configuration._
+
 ### Android
 
 #### Option: With Gradle (recommended)
