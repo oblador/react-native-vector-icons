@@ -142,7 +142,9 @@ apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
 
 <details>
-<summary>⚠️ Monorepo configuration</summary>
+<summary>Monorepo configuration</summary>
+
+<!-- ##### Monorepo configuration -->
 <br>
 If you are working in a monorepo, you'll need to point to the correct location of the `fonts.gradle` script and of the Font files, **relative to the android/app/build.gradle file**. For example if your repo uses this common structure:
   
@@ -168,6 +170,8 @@ project.ext.vectoricons = [
 - apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 + apply from: "../../../../node_modules/react-native-vector-icons/fonts.gradle
 ```
+  
+  ⚠️ There have been [reported issues](https://github.com/oblador/react-native-vector-icons/issues/1281#issuecomment-1363201537) when using RNVI < 9.0.0 in a monorepo, so make sure you are on 9+.
 </details>
 
 #### Option: Manually
