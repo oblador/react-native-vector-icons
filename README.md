@@ -141,6 +141,35 @@ project.ext.vectoricons = [
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
 
+<details>
+<summary>⚠️ Monorepo configuration</summary>
+<br>
+If you are working in a monorepo, you'll need to point to the correct location of the `fonts.gradle` script and of the Font files, **relative to the android/app/build.gradle file**. For example if your repo uses this common structure:
+  
+  
+```text
+your-monorepo/
+├─ node_modules/
+│  ├─ react-native-vector-icons
+├─ apps/
+│  ├─ YourApp/
+│  │  ├─ android/
+│  │  │  ├─ app/
+│  │  │  │  ├─ build.gradle
+```
+
+you will need to update the paths to:
+```diff
+project.ext.vectoricons = [
++ iconFontsDir: "../../../../node_modules/react-native-vector-icons/Fonts",
+  iconFontNames: ["WhateverFonts", "..."]
+]
+
+- apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
++ apply from: "../../../../node_modules/react-native-vector-icons/fonts.gradle
+```
+</details>
+
 #### Option: Manually
 
 - Copy the contents in the `Fonts` folder to `android/app/src/main/assets/fonts` (_note lowercase fonts folder_).
