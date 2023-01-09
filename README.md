@@ -555,7 +555,7 @@ function MyTabs() {
   return (
     <Tab.Navigator
       initialRouteName="Feed"
-      tabBarOptions={{
+      screenOptions={{
         activeTintColor: '#e91e63',
       }}
     >
