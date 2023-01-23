@@ -78,11 +78,14 @@ copy_ttf_fonts_to_dest_dir()
     cp "$font_dir_path/fa-brands-400.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Brands.ttf" &&
     cp "$font_dir_path/fa-regular-400.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Regular.ttf" &&
     cp "$font_dir_path/fa-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Solid.ttf"
-  else if [ "$VERSION" = "6" ]; then
+  elif [ "$VERSION" = "6" ]; then
     cp "$font_dir_path/fa-light-300.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Light.ttf" &&
     cp "$font_dir_path/fa-brands-400.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Brands.ttf" &&
     cp "$font_dir_path/fa-regular-400.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Regular.ttf" &&
     cp "$font_dir_path/fa-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Solid.ttf"
+    cp "$font_dir_path/fa-duotone-900.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Duotone.ttf"
+    cp "$font_dir_path/fa-thin-100.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Thin.ttf"
+    cp "$font_dir_path/fa-sharp-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Sharp_Solid.ttf"
   else
     echo "[FAIL] Unsupported version [$VERSION]";
     exit 1

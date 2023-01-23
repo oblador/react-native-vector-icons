@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Please enter your FontAwesome6 npm token:"
 
@@ -11,7 +11,7 @@ npm config set "//npm.fontawesome.com/:_authToken" ${fa6_token}
 
 echo "Creating temporary folder"
 
-TEMP_DIR=`mktemp -d -t rnvi`
+TEMP_DIR=`mktemp -d -t rnvi.XXXXXX`
 echo "Created folder $TEMP_DIR"
 pushd ${TEMP_DIR}
 

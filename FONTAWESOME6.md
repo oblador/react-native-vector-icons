@@ -1,6 +1,6 @@
 # FontAwesome 6
 
-FontAwesome 6 is split into three different font files which makes it somewhat
+FontAwesome 6 is split into multiple font files which makes it somewhat
 harder to use in some cases. The implemented solution should be fairly
 straightforward to use after it has been setup.
 Android and iOS handles fonts differently which is why it could be
@@ -33,11 +33,14 @@ const icon = <FontAwesome6 name={'git'} brand />;
 
 **Valid types**
 
-| Type      | Description                                 |
-| --------- | ------------------------------------------- |
-| **brand** | Uses the Brands font                        |
-| **light** | Uses the Light font (pro) or Regular (Free) |
-| **solid** | Uses the Solid font                         |
+| Type           | Description                                       |
+| -------------- | ------------------------------------------------- |
+| **brand**      | Uses the Brands font                              |
+| **solid**      | Uses the Solid font                               |
+| **light**      | Uses the Light font (pro) or Regular (Free)       |
+| **thin**       | Uses the Thin font (pro) or Regular (Free)        |
+| **duotone**    | Uses the Duotone font (pro) or Regular (Free)     |
+| **sharpSolid** | Uses the Sharp Solid font (pro) or Regular (Free) |
 
 No specified type indicates Regular font.
 
@@ -62,6 +65,9 @@ const FA6Style = {
   light: 1,
   solid: 2,
   brand: 3,
+  light: 4,
+  duotone: 5,
+  sharpSolid: 6,
 };
 ```
 
