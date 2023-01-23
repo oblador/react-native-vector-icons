@@ -4,6 +4,7 @@
   "description": "Customizable Icons for React Native with support for NavBar/TabBar, image source and full styling.",
   "main": "dist/index.js",
   "bin": {
+    "fa-upgrade": "./bin/fa-upgrade.sh",
     "fa5-upgrade": "./bin/fa5-upgrade.sh",
     "fa6-upgrade": "./bin/fa6-upgrade.sh",
     "generate-icon": "./bin/generate-icon.js"
