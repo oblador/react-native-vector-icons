@@ -1,0 +1,6 @@
+#!/bin/bash
+
+docker run --rm --interactive --tty \
+  --volume $(pwd):/app/project \
+  telor/fontcustom-worker \
+  fontcustom $@

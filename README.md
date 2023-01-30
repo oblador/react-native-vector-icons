@@ -33,24 +33,29 @@ If you want to use `.svg` files natively – try [`react-native-vector-image`](h
 
 If you find the library useful, please consider [sponsoring](https://github.com/sponsors/oblador). Things I have planned is to split up the repo into a monorepo, that would enable individual versioning of icon sets, better performance, smaller bundle and easier for the community to publish their own.
 
+## Code Search
+[Documatic](https://www.documatic.com/) is sponsoring this library and provides their codebase search engine to the our community free of charge. Previously there wasn't a week when I didn't scream at the computer because our code search was so bad at my company – I would seriously consider it if you have a non-trivally sized repo. Help this library and yourself by asking it your questions about vector icons at [askyourcode.com](https://askyourcode.com/?lib=react-native-vector-icons) or get their [VSCode extension](https://marketplace.visualstudio.com/items?itemName=Documatic.documatic)!
+
+<a href="https://askyourcode.com/?lib=react-native-vector-icons"><img src="https://user-images.githubusercontent.com/378279/198386344-1849fa40-1846-487b-a81c-529fed1c98da.gif" width="840" height="530" alt="Documatic screen cast"></a>
+
 ## Bundled Icon Sets
 
 [Browse all](https://oblador.github.io/react-native-vector-icons/).
 
-- [`AntDesign`](https://ant.design/) by AntFinance (**297** icons)
-- [`Entypo`](http://entypo.com) by Daniel Bruce (**411** icons)
+- [`AntDesign`](https://ant.design/) by AntFinance (**298** icons)
+- [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 **411** icons)
 - [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
-- [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.28.0, **285** icons)
-- [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
-- [`FontAwesome 5`](https://fontawesome.com) by Fonticons, Inc. (v5.13.0, 1588 (free) **7842** (pro) icons)
+- [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.28.0, **286** icons)
+- [`FontAwesome`](https://fontawesome.com/v4/icons/) by Dave Gandy (v4.7.0, **675** icons)
+- [`FontAwesome 5`](https://fontawesome.com/v5/icons/) by Fonticons, Inc. (v5.15.3, 1598 (free) **7848** (pro) icons)
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
-- [`Ionicons`](https://ionicons.com/) by Iconic Framework (v5.0.1, **1227** icons)
-- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1547** icons)
-- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v5.3.45, **5346** icons)
-- [`Octicons`](http://octicons.github.com) by Github, Inc. (v8.4.1, **184** icons)
-- [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.0, **100** icons)
-- [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.4.1, **189** icons)
+- [`Ionicons`](https://ionicons.com/) by Ionic (v5.0.1, **1227** icons)
+- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1517** icons)
+- [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v6.5.95, **6596** icons)
+- [`Octicons`](http://octicons.github.com) by Github, Inc. (v16.3.1, **250** icons)
+- [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.4.0, **100** icons)
+- [`SimpleLineIcons`](https://simplelineicons.github.io/) by Sabbir & Contributors (v2.5.5, **189** icons)
 
 ## Installation
 
@@ -59,8 +64,6 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 3. If you intend to use FontAwesome 5, check out [`this guide`](FONTAWESOME5.md) to get you started.
 
 ### iOS
-
-#### Option: Manually
 
 If you want to use any of the bundled icons, you need to add the icon fonts to your Xcode project. Just follow these steps:
 
@@ -95,31 +98,26 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
   
 </details>
 
+- In your XCode Settings, in the **Build Phases** tab, under **Copy Bundle Resources** add the fonts you have copied in the `Fonts` directory.
+
+- When using auto linking, it will automatically add all fonts to the **Build Phases**, **Copy Pods Resources**. Which will end up in your bundle.
+  To avoid that, create a `react-native.config.js` file at the root of your react-native project with:
+
+```js
+module.exports = {
+  dependencies: {
+    'react-native-vector-icons': {
+      platforms: {
+        ios: null,
+      },
+    },
+  },
+};
+```
+
 <br>
 
-_Note: you need to recompile your project after adding new fonts, also ensure that they also appear under **Copy Bundle Resources** in **Build Phases**._
-
-If you want to use `getImageSource`/`getImageSourceSync`, then you need to add `RNVectorIcons.xcodeproj` to **Libraries** and add `libRNVectorIcons.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](https://reactnative.dev/docs/linking-libraries-ios.html#content).
-
-#### Option: With `react-native link`
-
-`$ react-native link react-native-vector-icons`
-
-_Note: Some users are having trouble using this method, try one of the others if you are too._
-
-#### Option: With [CocoaPods](https://cocoapods.org/)
-
-Add the following to your `Podfile` and run `pod update`:
-
-```
-pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-```
-
-Edit `Info.plist` as described above.
-
-If you are using `use_frameworks!` in your `Podfile` you instead need to dynamically load the icon font by doing `Icon.loadFont()` when boostrapping your application.
-
-_Note: You must be consuming React itself via CocoaPods for this to work, see [React Native documentation](https://reactnative.dev/docs/integration-with-existing-apps) on how to set that up._
+_Note: you need to recompile your project after adding new fonts._
 
 ### Android
 
@@ -172,14 +170,16 @@ These steps are optional and only needed if you want to use the `Icon.getImageSo
   }
 
   dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:+"  // From node_modules
-  + compile project(':react-native-vector-icons')
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    //noinspection GradleDynamicVersion
+    implementation "com.facebook.react:react-native:+"  // From node_modules
+
+  + implementation project(':react-native-vector-icons')
   }
   ```
 
 - Edit your `MainApplication.java` (deep in `android/app/src/main/java/...`) to look like this (note **two** places to edit):
+- Note: this is optional step, it's necessary only and only if your **react-native app doesn't support auto-linking** otherwise you can ignore this.
 
   ```diff
   package com.myapp;
@@ -668,7 +668,7 @@ CSS selector prefix [default: ".icon-"]
 
 #### `-t`, `--template`
 
-Template in lodash format [default: "./template/iconSet.tpl"]
+Template in JS template string format [default: "./template/iconSet.tpl"]
 
 For default template please provide `--componentName` and `--fontFamily`.
 
