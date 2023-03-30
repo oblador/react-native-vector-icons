@@ -12,6 +12,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import AntDGlyphs from 'react-native-vector-icons/glyphmaps/AntDesign.json';
 import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo.json';
@@ -26,6 +27,7 @@ import IoniconsGlyphs from 'react-native-vector-icons/glyphmaps/Ionicons.json';
 import MaterialIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialIcons.json';
 import MaterialCommunityIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json';
 import OcticonsGlyphs from 'react-native-vector-icons/glyphmaps/Octicons.json';
+import SimpleLineIconsGlyphs from 'react-native-vector-icons/glyphmaps/SimpleLineIcons.json';
 import ZocialGlyphs from 'react-native-vector-icons/glyphmaps/Zocial.json';
 
 const GLYPH_MAPS = {
@@ -42,6 +44,7 @@ const GLYPH_MAPS = {
   MaterialIcons: MaterialIconsGlyphs,
   MaterialCommunityIcons: MaterialCommunityIconsGlyphs,
   Octicons: OcticonsGlyphs,
+  SimpleLineIcons: SimpleLineIconsGlyphs,
   Zocial: ZocialGlyphs,
 };
 
@@ -59,6 +62,7 @@ const ICON_SETS = {
   MaterialIcons,
   MaterialCommunityIcons,
   Octicons,
+  SimpleLineIcons,
   Zocial,
 };
 

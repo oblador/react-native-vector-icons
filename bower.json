@@ -15,8 +15,6 @@
     "tests"
   ],
   "devDependencies": {
-    "css-social-buttons": "~1.0.0",
-    "foundation-icon-fonts": "*",
-    "simple-line-icons": "2.4.1"
+    "foundation-icon-fonts": "*"
   }
 }

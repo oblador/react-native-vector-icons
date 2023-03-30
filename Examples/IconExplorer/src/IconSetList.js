@@ -9,8 +9,11 @@ import {
   TouchableHighlight,
   View,
 } from 'react-native';
+import { createAnimatableComponent } from 'react-native-animatable';
 
 import ICON_SETS from './icon-sets';
+
+const AnimatableIcon = createAnimatableComponent(FontAwesome);
 
 const BUTTONS = [
   {
@@ -93,6 +96,22 @@ const SYNCHROUNOUS = [
   },
 ];
 
+const ANIMATED = [
+  {
+    name: 'synchronous',
+    children: (
+      <AnimatableIcon
+        animation="pulse"
+        easing="ease-out"
+        iterationCount="infinite"
+        name="heart"
+        size={30}
+        color="#e0284f"
+      />
+    ),
+  },
+];
+
 const styles = StyleSheet.create({
   sectionHeader: {
     paddingVertical: 5,
@@ -163,6 +182,7 @@ export default class IconSetsList extends PureComponent {
       { title: 'BUTTONS', data: BUTTONS, renderItem: renderButton },
       { title: 'INLINE', data: INLINE, renderItem: renderRow },
       { title: 'SYNCHROUNOUS', data: SYNCHROUNOUS, renderItem: renderRow },
+      { title: 'ANIMATED', data: ANIMATED, renderItem: renderRow },
       { title: 'STYLING', data: STYLING, renderItem: renderStyling },
     ],
   };
