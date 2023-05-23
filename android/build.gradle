@@ -37,6 +37,7 @@ android {
             }
         }
     }
+  namespace "com.oblador.vectoricons"
 }
 
 repositories {
