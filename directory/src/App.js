@@ -1,6 +1,8 @@
+import './App.css';
+
 /* eslint-disable react/prop-types, jsx-a11y/label-has-associated-control */
 import * as React from 'react';
-import './App.css';
+
 import IconFamilies from './generated/glyphmapIndex.json';
 
 const WAITING_INTERVAL = 300;
@@ -67,12 +69,13 @@ const SearchBar = ({ onSubmit }) => {
   );
 };
 
-const renderIcon = (family, name) => (
-  <div className="Result-Icon-Container" key={name}>
-    <Icon family={family} name={name} className="Result-Icon" />
-    <h4 className="Result-Icon-Name">{name}</h4>
-  </div>
-);
+const renderIcon = (family, name) =>
+  family.includes('_meta') ? null : (
+    <div className="Result-Icon-Container" key={name}>
+      <Icon family={family} name={name} className="Result-Icon" />
+      <h4 className="Result-Icon-Name">{name}</h4>
+    </div>
+  );
 
 const renderMatch = match => {
   const { family, names } = match;
