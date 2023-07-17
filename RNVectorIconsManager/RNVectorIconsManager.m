@@ -154,7 +154,8 @@ RCT_EXPORT_METHOD(
       if (error.code == kCTFontManagerErrorAlreadyRegistered || error.code == kCTFontManagerErrorDuplicatedName) {
         resolve(nil);
       } else {
-        reject(@"font_load_failed", @"Font failed to load", error);
+        NSString *errorMessage = [NSString stringWithFormat:@"Font '%@' failed to load", fontFileName];
+        reject(@"font_load_failed", errorMessage, error);
       }
     } else {
       resolve(nil);
