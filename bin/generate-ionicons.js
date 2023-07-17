@@ -5,7 +5,7 @@ const glob = require('glob');
 const xml2js = require('xml2js');
 
 const SVGIcons2SVGFontStream = require('svgicons2svgfont');
-const SVGIconsDirStream = require('svgicons2svgfont/src/iconsdir.js');
+const SVGIconsDirStream = require('svgicons2svgfont/src/iconsdir');
 
 const svg2ttf = require('svg2ttf');
 
