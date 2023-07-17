@@ -123,7 +123,7 @@ This method has the advantage of fonts being copied from this module at build ti
 Edit `android/app/build.gradle` ( NOT `android/build.gradle` ) and add the following:
 
 ```gradle
-apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 ```
 
 To customize the files being copied, add the following instead:
