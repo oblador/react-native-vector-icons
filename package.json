@@ -61,7 +61,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "oslllo-svg-fixer": "^2.2.0",
     "prop-types": "^15.7.2",
+    "svg2ttf": "^6.0.3",
+    "svgicons2svgfont": "^12.0.0",
     "yargs": "^16.1.1"
   },
   "devDependencies": {
@@ -84,7 +87,7 @@
     "feather-icons": "^4.28.0",
     "font-awesome": "^4.7.0",
     "fontisto": "^3.0.4",
-    "ionicons": "^5.0.1",
+    "ionicons": "^7.1.0",
     "metro-react-native-babel-preset": "^0.66.2",
     "prettier": "^1.19.1",
     "react": "^17.0.2",

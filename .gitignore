@@ -18,3 +18,5 @@ bower_components
 xcuserdata
 
 .DS_Store
+
+.yarn
