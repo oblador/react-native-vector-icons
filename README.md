@@ -47,7 +47,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 - [`Ionicons`](https://ionicons.com/) by Ionic (v5.0.1, **1227** icons)
-- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **1517** icons)
+- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **2189** icons)
 - [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v6.5.95, **6596** icons)
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v16.3.1, **250** icons)
 - [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.4.0, **100** icons)
@@ -160,6 +160,7 @@ your-monorepo/
 ```
 
 you will need to update the paths to:
+
 ```diff
 project.ext.vectoricons = [
 + iconFontsDir: "../../../../node_modules/react-native-vector-icons/Fonts",
@@ -169,8 +170,9 @@ project.ext.vectoricons = [
 - apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 + apply from: "../../../../node_modules/react-native-vector-icons/fonts.gradle
 ```
-  
-  ⚠️ There have been [reported issues](https://github.com/oblador/react-native-vector-icons/issues/1281#issuecomment-1363201537) when using RNVI < 9.0.0 in a monorepo, so make sure you are on 9+.
+
+⚠️ There have been [reported issues](https://github.com/oblador/react-native-vector-icons/issues/1281#issuecomment-1363201537) when using RNVI < 9.0.0 in a monorepo, so make sure you are on 9+.
+
 </details>
 
 #### Option: Manually
