@@ -41,8 +41,9 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 **411** icons)
 - [`EvilIcons`](http://evil-icons.io) by Alexander Madyankin & Roman Shamin (v1.10.1, **70** icons)
 - [`Feather`](http://feathericons.com) by Cole Bemis & Contributors (v4.28.0, **286** icons)
-- [`FontAwesome`](https://fontawesome.com/v4/icons/) by Dave Gandy (v4.7.0, **675** icons)
+- [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0, **675** icons)
 - [`FontAwesome 5`](https://fontawesome.com/v5/icons/) by Fonticons, Inc. (v5.15.3, 1598 (free) **7848** (pro) icons)
+- [`FontAwesome 6`](https://fontawesome.com) by Fonticons, Inc. (v6.1.2, 2016 (free) **16150** (pro) icons)
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 - [`Ionicons`](https://ionicons.com/) by Ionic (v5.0.1, **1227** icons)
@@ -56,7 +57,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 
 1. Run: `$ npm install --save react-native-vector-icons`
 2. For each platform (iOS/Android/Windows) you plan to use, follow one of the options for the corresponding platform.
-3. If you intend to use FontAwesome 5, check out [`this guide`](FONTAWESOME5.md) to get you started.
+3. Check out these guides if you intend to use FontAwesome 5 or 6 to get you started: [`FontAwesome 5`](FONTAWESOME5.md) [`FontAwesome 6`](FONTAWESOME6.md)
 
 ### iOS
 
@@ -80,6 +81,9 @@ If you want to use any of the bundled icons, you need to add the icon fonts to y
     <string>FontAwesome5_Brands.ttf</string>
     <string>FontAwesome5_Regular.ttf</string>
     <string>FontAwesome5_Solid.ttf</string>
+    <string>FontAwesome6_Brands.ttf</string>
+    <string>FontAwesome6_Regular.ttf</string>
+    <string>FontAwesome6_Solid.ttf</string>
     <string>Foundation.ttf</string>
     <string>Ionicons.ttf</string>
     <string>MaterialIcons.ttf</string>
