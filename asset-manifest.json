@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/react-native-vector-icons/static/css/main.61785842.css",
-    "main.js": "/react-native-vector-icons/static/js/main.52fa445d.js",
+    "main.css": "/react-native-vector-icons/static/css/main.4d1ac3f1.css",
+    "main.js": "/react-native-vector-icons/static/js/main.86e4cf74.js",
     "static/media/MaterialCommunityIcons.ttf": "/react-native-vector-icons/static/media/MaterialCommunityIcons.5d42b4e60858731e7b65.ttf",
+    "static/media/Ionicons.ttf": "/react-native-vector-icons/static/media/Ionicons.9b6b1954a5eb6efeaf11.ttf",
+    "static/media/FontAwesome6_Solid.ttf": "/react-native-vector-icons/static/media/FontAwesome6_Solid.b1a653db79258eeccc5d.ttf",
+    "static/media/MaterialIcons.ttf": "/react-native-vector-icons/static/media/MaterialIcons.f20305dee9d396fea5c7.ttf",
     "static/media/Fontisto.ttf": "/react-native-vector-icons/static/media/Fontisto.c0edd68811e0237502fe.ttf",
-    "static/media/Ionicons.ttf": "/react-native-vector-icons/static/media/Ionicons.3517aeaa34b2f8cd8eef.ttf",
-    "static/media/MaterialIcons.ttf": "/react-native-vector-icons/static/media/MaterialIcons.120b4c7bbd155bd0a04d.ttf",
     "static/media/FontAwesome5_Solid.ttf": "/react-native-vector-icons/static/media/FontAwesome5_Solid.07c3313b24f7b1ca85ee.ttf",
+    "static/media/FontAwesome6_Brands.ttf": "/react-native-vector-icons/static/media/FontAwesome6_Brands.450a5c898f0b184b968b.ttf",
     "static/media/FontAwesome.ttf": "/react-native-vector-icons/static/media/FontAwesome.1e59d2330b4c6deb84b3.ttf",
     "static/media/FontAwesome5_Brands.ttf": "/react-native-vector-icons/static/media/FontAwesome5_Brands.9e138496e8f1719c6ebf.ttf",
     "static/media/AntDesign.ttf": "/react-native-vector-icons/static/media/AntDesign.163adab9dbd7cb1ed12a.ttf",
     "static/media/Entypo.ttf": "/react-native-vector-icons/static/media/Entypo.fc6169344c041cffcdae.ttf",
+    "static/media/FontAwesome6_Regular.ttf": "/react-native-vector-icons/static/media/FontAwesome6_Regular.3cd9fb8fcec4ad0f99d4.ttf",
     "static/media/Foundation.ttf": "/react-native-vector-icons/static/media/Foundation.c0cbb004854f9c746f89.ttf",
     "static/media/Feather.ttf": "/react-native-vector-icons/static/media/Feather.0f5d9cede2e831f3fc80.ttf",
     "static/media/SimpleLineIcons.ttf": "/react-native-vector-icons/static/media/SimpleLineIcons.3ec13a24af3fdda11107.ttf",
@@ -19,11 +22,11 @@
     "static/media/Zocial.ttf": "/react-native-vector-icons/static/media/Zocial.07fea2ac49bcc67d9a6b.ttf",
     "static/media/EvilIcons.ttf": "/react-native-vector-icons/static/media/EvilIcons.699664b33ac2837d5bee.ttf",
     "index.html": "/react-native-vector-icons/index.html",
-    "main.61785842.css.map": "/react-native-vector-icons/static/css/main.61785842.css.map",
-    "main.52fa445d.js.map": "/react-native-vector-icons/static/js/main.52fa445d.js.map"
+    "main.4d1ac3f1.css.map": "/react-native-vector-icons/static/css/main.4d1ac3f1.css.map",
+    "main.86e4cf74.js.map": "/react-native-vector-icons/static/js/main.86e4cf74.js.map"
   },
   "entrypoints": [
-    "static/css/main.61785842.css",
-    "static/js/main.52fa445d.js"
+    "static/css/main.4d1ac3f1.css",
+    "static/js/main.86e4cf74.js"
   ]
 }
