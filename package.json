@@ -64,10 +64,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "oslllo-svg-fixer": "^2.2.0",
     "prop-types": "^15.7.2",
-    "svg2ttf": "^6.0.3",
-    "svgicons2svgfont": "^12.0.0",
     "yargs": "^16.1.1"
   },
   "devDependencies": {
@@ -92,9 +89,12 @@
     "fontisto": "^3.0.4",
     "ionicons": "^7.1.0",
     "metro-react-native-babel-preset": "^0.66.2",
+    "oslllo-svg-fixer": "^2.2.0",
     "prettier": "^1.19.1",
     "react": "^17.0.2",
-    "simple-line-icons": "^2.5.5"
+    "simple-line-icons": "^2.5.5",
+    "svg2ttf": "^6.0.3",
+    "svgicons2svgfont": "^12.0.0"
   },
   "codegenConfig": {
     "name": "RNVectorIconsSpec",
