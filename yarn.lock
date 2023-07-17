@@ -2956,7 +2956,7 @@ oslllo-potrace@^2.0.1:
 
 oslllo-svg-fixer@^2.2.0:
   version "2.2.0"
-  resolved "https://registry.npmjs.org/oslllo-svg-fixer/-/oslllo-svg-fixer-2.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/oslllo-svg-fixer/-/oslllo-svg-fixer-2.2.0.tgz#c5fde47463af29ef7bc63c643145a7e4a370df26"
   integrity sha512-70jEmHwp/jqq2I2ZVaTOvHykPlEOhIHRto5AHntrjzD8/R6FOk0t8RjlyZNgpPlDjc7T/9a695qKAxF3bFVYKg==
   dependencies:
     ansi-colors "^4.1.3"
@@ -3431,7 +3431,7 @@ svg-pathdata@^6.0.3:
 
 svg2ttf@^6.0.3:
   version "6.0.3"
-  resolved "https://registry.npmjs.org/svg2ttf/-/svg2ttf-6.0.3.tgz"
+  resolved "https://registry.yarnpkg.com/svg2ttf/-/svg2ttf-6.0.3.tgz#7b92978ff124b2a583d21e1208b9675e245e56d1"
   integrity sha512-CgqMyZrbOPpc+WqH7aga4JWkDPso23EgypLsbQ6gN3uoPWwwiLjXvzgrwGADBExvCRJrWFzAeK1bSoSpE7ixSQ==
   dependencies:
     "@xmldom/xmldom" "^0.7.2"
@@ -3443,7 +3443,7 @@ svg2ttf@^6.0.3:
 
 svgicons2svgfont@^12.0.0:
   version "12.0.0"
-  resolved "https://registry.npmjs.org/svgicons2svgfont/-/svgicons2svgfont-12.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/svgicons2svgfont/-/svgicons2svgfont-12.0.0.tgz#80dfb5f20a4e83403f893a30320194dc380690b3"
   integrity sha512-fjyDkhiG0M1TPBtZzD12QV3yDcG2fUgiqHPOCYzf7hHE40Hl3GhnE6P1njsJCCByhwM7MiufyDW3L7IOR5dg9w==
   dependencies:
     commander "^9.3.0"
