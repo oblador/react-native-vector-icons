@@ -69,13 +69,12 @@ const SearchBar = ({ onSubmit }) => {
   );
 };
 
-const renderIcon = (family, name) =>
-  family.includes('_meta') ? null : (
-    <div className="Result-Icon-Container" key={name}>
-      <Icon family={family} name={name} className="Result-Icon" />
-      <h4 className="Result-Icon-Name">{name}</h4>
-    </div>
-  );
+const renderIcon = (family, name) => (
+  <div className="Result-Icon-Container" key={name}>
+    <Icon family={family} name={name} className="Result-Icon" />
+    <h4 className="Result-Icon-Name">{name}</h4>
+  </div>
+);
 
 const renderMatch = match => {
   const { family, names } = match;
