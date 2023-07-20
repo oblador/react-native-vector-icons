@@ -35,8 +35,7 @@ const index = fs
   .filter(
     f =>
       path.extname(f) === glypmapExtension &&
-      !f.includes('_meta') &&
-      (!f.startsWith('FontAwesome5') || !f.startsWith('FontAwesome6'))
+      !(f.startsWith('FontAwesome5') || f.startsWith('FontAwesome6'))
   )
   .reduce(
     (acc, file) => {
