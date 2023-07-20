@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-native-vector-icons/static/css/main.4d1ac3f1.css",
-    "main.js": "/react-native-vector-icons/static/js/main.86e4cf74.js",
+    "main.css": "/react-native-vector-icons/static/css/main.2e91a8f3.css",
+    "main.js": "/react-native-vector-icons/static/js/main.642125a4.js",
     "static/media/MaterialCommunityIcons.ttf": "/react-native-vector-icons/static/media/MaterialCommunityIcons.5d42b4e60858731e7b65.ttf",
     "static/media/Ionicons.ttf": "/react-native-vector-icons/static/media/Ionicons.9b6b1954a5eb6efeaf11.ttf",
     "static/media/FontAwesome6_Solid.ttf": "/react-native-vector-icons/static/media/FontAwesome6_Solid.b1a653db79258eeccc5d.ttf",
@@ -22,11 +22,11 @@
     "static/media/Zocial.ttf": "/react-native-vector-icons/static/media/Zocial.07fea2ac49bcc67d9a6b.ttf",
     "static/media/EvilIcons.ttf": "/react-native-vector-icons/static/media/EvilIcons.699664b33ac2837d5bee.ttf",
     "index.html": "/react-native-vector-icons/index.html",
-    "main.4d1ac3f1.css.map": "/react-native-vector-icons/static/css/main.4d1ac3f1.css.map",
-    "main.86e4cf74.js.map": "/react-native-vector-icons/static/js/main.86e4cf74.js.map"
+    "main.2e91a8f3.css.map": "/react-native-vector-icons/static/css/main.2e91a8f3.css.map",
+    "main.642125a4.js.map": "/react-native-vector-icons/static/js/main.642125a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d1ac3f1.css",
-    "static/js/main.86e4cf74.js"
+    "static/css/main.2e91a8f3.css",
+    "static/js/main.642125a4.js"
   ]
 }
