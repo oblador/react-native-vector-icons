@@ -6,14 +6,24 @@ const path = require('path');
 const glypmapDirectory = path.resolve(__dirname, '../../glyphmaps');
 const glypmapExtension = '.json';
 
-const fontAwesomeGlyphmap = require(path.join(
+const fontAwesome5Glyphmap = require(path.join(
   glypmapDirectory,
   'FontAwesome5Free.json'
 ));
-const fontAwesomeMeta = require(path.join(
+const fontAwesome5Meta = require(path.join(
   glypmapDirectory,
   'FontAwesome5Free_meta.json'
 ));
+
+const fontAwesome6Glyphmap = require(path.join(
+  glypmapDirectory,
+  'FontAwesome6Free.json'
+));
+const fontAwesome6Meta = require(path.join(
+  glypmapDirectory,
+  'FontAwesome6Free_meta.json'
+));
+
 const pickGlyps = (glyps, glyphmap) =>
   glyps.reduce((acc, glyp) => {
     acc[glyp] = glyphmap[glyp];
@@ -22,8 +32,11 @@ const pickGlyps = (glyps, glyphmap) =>
 
 const index = fs
   .readdirSync(glypmapDirectory)
-  .filter(f => path.extname(f) === glypmapExtension)
-  .filter(f => !f.startsWith('FontAwesome5'))
+  .filter(
+    f =>
+      path.extname(f) === glypmapExtension &&
+      !(f.startsWith('FontAwesome5') || f.startsWith('FontAwesome6'))
+  )
   .reduce(
     (acc, file) => {
       const name = path.basename(file, glypmapExtension);
@@ -31,10 +44,15 @@ const index = fs
       return acc;
     },
     {
-      FontAwesome5: pickGlyps(fontAwesomeMeta.solid, fontAwesomeGlyphmap),
+      FontAwesome5: pickGlyps(fontAwesome5Meta.solid, fontAwesome5Glyphmap),
       FontAwesome5Brands: pickGlyps(
-        fontAwesomeMeta.brands,
-        fontAwesomeGlyphmap
+        fontAwesome5Meta.brands,
+        fontAwesome5Glyphmap
+      ),
+      FontAwesome6: pickGlyps(fontAwesome6Meta.solid, fontAwesome6Glyphmap),
+      FontAwesome6Brands: pickGlyps(
+        fontAwesome6Meta.brands,
+        fontAwesome6Glyphmap
       ),
     }
   );

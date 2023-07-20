@@ -1,6 +1,8 @@
+import './App.css';
+
 /* eslint-disable react/prop-types, jsx-a11y/label-has-associated-control */
 import * as React from 'react';
-import './App.css';
+
 import IconFamilies from './generated/glyphmapIndex.json';
 
 const WAITING_INTERVAL = 300;
