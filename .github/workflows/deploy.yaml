@@ -1,6 +1,14 @@
 name: Deploy
 
 on:
+  workflow_dispatch:
+    inputs:
+      skip-npm:
+        type: boolean
+        description: Skip NPM release
+      skip-directory:
+        type: boolean
+        description: Skip directory website deployment
   release:
     types: [created]
 
@@ -8,7 +16,7 @@ jobs:
   npm:
     name: NPM
     runs-on: ubuntu-latest
-
+    if: github.event.inputs.skip-npm != 'true'
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
@@ -26,7 +34,7 @@ jobs:
   directory:
     name: Directory website
     runs-on: ubuntu-latest
-
+    if: github.event.inputs.skip-directory != 'true'
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
