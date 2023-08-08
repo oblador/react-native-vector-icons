@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5DBEB17C1B18CFF400B34395 /* RNVectorIconsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */; };
-		A39873C81EA65EE60051E01A /* RNVectorIconsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */; };
+		5DBEB17C1B18CFF400B34395 /* RNVectorIconsManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.mm */; };
+		A39873C81EA65EE60051E01A /* RNVectorIconsManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		5DBEB1501B18CEA900B34395 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNVectorIcons.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBEB16B1B18CF1500B34395 /* RNVectorIconsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNVectorIconsManager.h; sourceTree = "<group>"; };
-		5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNVectorIconsManager.m; sourceTree = "<group>"; };
+		5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objcpp; path = RNVectorIconsManager.mm; sourceTree = "<group>"; };
 		A39873CE1EA65EE60051E01A /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRNVectorIcons-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				5DBEB16B1B18CF1500B34395 /* RNVectorIconsManager.h */,
-				5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.m */,
+				5DBEB16C1B18CF1500B34395 /* RNVectorIconsManager.mm */,
 			);
 			path = RNVectorIconsManager;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DBEB17C1B18CFF400B34395 /* RNVectorIconsManager.m in Sources */,
+				5DBEB17C1B18CFF400B34395 /* RNVectorIconsManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A39873C81EA65EE60051E01A /* RNVectorIconsManager.m in Sources */,
+				A39873C81EA65EE60051E01A /* RNVectorIconsManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
