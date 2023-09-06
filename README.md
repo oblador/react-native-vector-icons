@@ -47,7 +47,7 @@ If you find the library useful, please consider [sponsoring](https://github.com/
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) by Kenan Gündoğan (v3.0.4, **615** icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0, **283** icons)
 - [`Ionicons`](https://ionicons.com/) by Ionic (v7.1.0, **1338** icons)
-- [`MaterialIcons`](https://www.google.com/design/icons/) by Google, Inc. (v4.0.0, **2189** icons)
+- [`MaterialIcons`](https://fonts.google.com/icons) by Google, Inc. (v4.0.0, **2189** icons)
 - [`MaterialCommunityIcons`](https://materialdesignicons.com/) by MaterialDesignIcons.com (v6.5.95, **6596** icons)
 - [`Octicons`](http://octicons.github.com) by Github, Inc. (v16.3.1, **250** icons)
 - [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.4.0, **100** icons)
