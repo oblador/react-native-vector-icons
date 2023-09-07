@@ -12,10 +12,6 @@
 #import <React/RCTBridge.h>
 #import <React/RCTUtils.h>
 #import <React/RCTFont.h>
-// Thanks to this guard, we won't import this header when we build for the old architecture.
-#ifdef RCT_NEW_ARCH_ENABLED
-#import "RNVectorIconsSpec.h"
-#endif
 
 NSString *const RNVIErrorDomain = @"org.oblador.react-native-vector-icons";
 
@@ -79,9 +75,10 @@ RCT_EXPORT_MODULE(RNVectorIcons);
 - (NSString *)createGlyphImagePathForFont:(NSString *)fontName
                                 withGlyph:(NSString *)glyph
                                 withFontSize:(CGFloat)fontSize
-                                withColor:(UIColor *)color
+                                withColor:(double)color
                                 withError:(NSError **)error
 {
+  UIColor *parsedColor = [RCTConvert UIColor:@(color)];
   UIFont *font = [UIFont fontWithName:fontName size:fontSize];
   NSString *filePath = [self generateFilePath:glyph withFontName:fontName
                                                     withFontSize:fontSize
@@ -101,11 +98,11 @@ RCT_EXPORT_MODULE(RNVectorIcons);
 
 RCT_EXPORT_METHOD(
   getImageForFont:(NSString *)fontName
-  withGlyph:(NSString *)glyph
-  withFontSize:(CGFloat)fontSize
-  withColor:(UIColor *)color
-  resolver:(RCTPromiseResolveBlock)resolve
-  rejecter:(RCTPromiseRejectBlock)reject
+  glyph:(NSString *)glyph
+  fontSize:(CGFloat)fontSize
+  color:(double)color
+  resolve:(RCTPromiseResolveBlock)resolve
+  reject:(RCTPromiseRejectBlock)reject
 ) {
   NSError *error = nil;
   NSString *filePath = [self createGlyphImagePathForFont:fontName
@@ -122,9 +119,9 @@ RCT_EXPORT_METHOD(
 
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(
   getImageForFontSync:(NSString *)fontName
-  withGlyph:(NSString *)glyph
-  withFontSize:(CGFloat)fontSize
-  withColor:(UIColor *)color
+  glyph:(NSString *)glyph
+  fontSize:(CGFloat)fontSize
+  color:(double)color
 ) {
   NSError *error = nil;
   return [self createGlyphImagePathForFont:fontName
@@ -137,8 +134,8 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(
 RCT_EXPORT_METHOD(
   loadFontWithFileName:(NSString *)fontFileName
   extension:(NSString *)extension
-  resolver:(RCTPromiseResolveBlock)resolve
-  rejecter:(RCTPromiseRejectBlock)reject
+  resolve:(RCTPromiseResolveBlock)resolve
+  reject:(RCTPromiseRejectBlock)reject
 ) {
   NSBundle *bundle = [NSBundle bundleForClass:[self class]];
   NSURL *fontURL = [bundle URLForResource:fontFileName withExtension:extension];
@@ -155,7 +152,7 @@ RCT_EXPORT_METHOD(
         resolve(nil);
       } else {
         NSString *errorMessage = [NSString stringWithFormat:@"Font '%@' failed to load", fontFileName];
-        reject(@"font_load_failed", errorMessage, error);
+        reject(@"font_load_failed", errorMessage, error);
       }
     } else {
       resolve(nil);
@@ -173,7 +170,7 @@ RCT_EXPORT_METHOD(
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
 {
-    return std::make_shared<facebook::react::RNVectorIconsSpecJSI>(params);
+    return std::make_shared<facebook::react::NativeRNVectorIconsSpecJSI>(params);
 }
 #endif
 
