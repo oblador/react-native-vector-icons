@@ -82,12 +82,12 @@ RCT_EXPORT_MODULE(RNVectorIcons);
   UIFont *font = [UIFont fontWithName:fontName size:fontSize];
   NSString *filePath = [self generateFilePath:glyph withFontName:fontName
                                                     withFontSize:fontSize
-                                                    withColor:color
+                                                    withColor:parsedColor
                                                     withExtraIdentifier:@""];
 
   BOOL success = [self createAndSaveGlyphImage:glyph withFont:font
                                                      withFilePath:filePath
-                                                     withColor:color];
+                                                     withColor:parsedColor];
 
   if (!success) {
     *error = [NSError errorWithDomain:RNVIErrorDomain code:RNVIGenericError userInfo:@{NSLocalizedDescriptionKey: @"Failed to write rendered icon image"}];
