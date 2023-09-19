@@ -463,6 +463,9 @@ const Icon = createIconSetFromIcoMoon(
   'LineAwesome',
   'line-awesome.ttf'
 );
+
+// This is required for iOS to load a custom font
+Icon.loadFont();
 ```
 
 Make sure you're using the _Download_ option in [IcoMoon](https://icomoon.io/app), and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
