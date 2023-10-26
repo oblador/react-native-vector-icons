@@ -41,6 +41,8 @@ const icon = <FontAwesome6 name={'git'} brand />;
 | **thin**       | Uses the Thin font (pro) or Regular (Free)        |
 | **duotone**    | Uses the Duotone font (pro) or Regular (Free)     |
 | **sharpSolid** | Uses the Sharp Solid font (pro) or Regular (Free) |
+| **sharpLight** | Uses the Sharp Light font (pro) or Regular (Free) |
+| **sharp**      | Uses the Sharp font (pro) or Regular (Free)       |
 
 No specified type indicates Regular font.
 
@@ -61,13 +63,15 @@ defined to help setting the style of the font:
 
 ```javascript
 const FA6Style = {
-  regular: 0,
-  light: 1,
-  solid: 2,
-  brand: 3,
-  light: 4,
-  duotone: 5,
-  sharpSolid: 6,
+  regular: 'regular',
+  light: 'light',
+  solid: 'solid',
+  brand: 'brand',
+  sharp: 'sharp',
+  sharpLight: 'sharpLight',
+  sharpLight: 'sharpSolid',
+  duotone: 'duotone',
+  thin: 'thin',
 };
 ```
 
