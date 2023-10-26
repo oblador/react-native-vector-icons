@@ -16,5 +16,7 @@ Pod::Spec.new do |s|
   s.resources      = "Fonts/*.ttf"
   s.preserve_paths = "**/*.js"
   # React Native Core dependency
-  install_modules_dependencies(s)
+  if defined? install_modules_dependencies
+    install_modules_dependencies(s)
+  end
 end
