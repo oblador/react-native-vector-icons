@@ -139,9 +139,9 @@ To make font management smoother on Android, use this method:
   To customize the fonts being copied, use:
 
   ```gradle
-  project.ext.vectoricons = {
+  project.ext.vectoricons = [
       iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Specify font files
-  }
+  ]
 
   apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 
