@@ -47,7 +47,7 @@ async function generateGlyphMap(svgFontPath, output) {
   const data = await readFileAsync(svgFontPath);
 
   return new Promise((resolve, reject) => {
-    parser.parseString(data, function(err, result) {
+    parser.parseString(data, (err, result) => {
       if (err !== null) {
         reject(err);
       }
