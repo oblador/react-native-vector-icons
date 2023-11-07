@@ -70,10 +70,10 @@
   "devDependencies": {
     "@babel/cli": "^7.23.0",
     "@babel/core": "^7.23.2",
+    "@babel/eslint-parser": "^7.22.15",
     "@entypo-icons/core": "^1.0.1",
     "@mdi/font": "^6.5.95",
     "@primer/octicons": "^16.3.1",
-    "babel-eslint": "^10.1.0",
     "css-social-buttons": "^1.1.1",
     "eslint": "^8.53.0",
     "eslint-config-airbnb": "^19.0.4",
