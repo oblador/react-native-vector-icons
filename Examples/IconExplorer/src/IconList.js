@@ -49,11 +49,11 @@ const styles = StyleSheet.create({
 });
 
 const getFilteredGlyphNames = (iconSet, query) =>
-  iconSet.glyphNames.filter(glyphNames =>
-    glyphNames.find(glyphName => glyphName.indexOf(query) !== -1)
+  iconSet.glyphNames.filter((glyphNames) =>
+    glyphNames.find((glyphName) => glyphName.indexOf(query) !== -1)
   );
 
-const keyExtractor = item => item[0];
+const keyExtractor = (item) => item[0];
 
 export default class IconList extends PureComponent {
   state = {
@@ -62,8 +62,9 @@ export default class IconList extends PureComponent {
 
   componentDidMount() {
     if (Platform.OS === 'osx') {
-      this.searchListner = DeviceEventEmitter.addListener('onSearchIcons', e =>
-        this.setFilter(e.query)
+      this.searchListner = DeviceEventEmitter.addListener(
+        'onSearchIcons',
+        (e) => this.setFilter(e.query)
       );
     }
   }
@@ -80,7 +81,7 @@ export default class IconList extends PureComponent {
     });
   }
 
-  handleSearchChange = event => {
+  handleSearchChange = (event) => {
     const filter = event.nativeEvent.text.toLowerCase();
     this.setFilter(filter);
   };

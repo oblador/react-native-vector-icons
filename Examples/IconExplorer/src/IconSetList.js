@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const keyExtractor = item => item.name;
+const keyExtractor = (item) => item.name;
 
 const ItemSeparator = () => <View style={styles.separator} />;
 
