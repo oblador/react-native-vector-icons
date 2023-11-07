@@ -44,7 +44,7 @@ const SearchBar = ({ onSubmit }) => {
   const inputRef = React.useRef();
   const timerRef = React.useRef(null);
   const handleSubmit = React.useCallback(
-    e => {
+    (e) => {
       e.preventDefault();
       onSubmit(inputRef.current.value);
     },
@@ -52,7 +52,7 @@ const SearchBar = ({ onSubmit }) => {
   );
 
   const handleChange = React.useCallback(
-    e => {
+    (e) => {
       e.preventDefault();
       clearInterval(timerRef.current);
 
@@ -93,14 +93,14 @@ const renderIcon = (family, name) => (
   </div>
 );
 
-const renderMatch = match => {
+const renderMatch = (match) => {
   const { family, names } = match;
   return (
     <div className="Result-Row" key={family}>
       <h2 className="Result-Title" id={family}>{family}</h2>
 
       <div className="Result-List">
-        {names.map(name => renderIcon(family, name))}
+        {names.map((name) => renderIcon(family, name))}
       </div>
     </div>
   );
@@ -112,20 +112,20 @@ const renderNotFound = () => (
   </div>
 );
 
-const getMatches = query =>
+const getMatches = (query) =>
   Object.keys(IconFamilies)
     .sort()
-    .map(family => {
+    .map((family) => {
       const icons = IconFamilies[family];
       const names = Object.keys(icons);
-      const results = names.filter(name => name.indexOf(query) >= 0);
+      const results = names.filter((name) => name.indexOf(query) >= 0);
       return { family, names: results };
     })
     .filter(({ names }) => names.length);
 
 const App = () => {
   const [matches, setMatches] = React.useState([]);
-  const handleSubmit = React.useCallback(text => {
+  const handleSubmit = React.useCallback((text) => {
     setMatches(getMatches(text));
   });
   React.useLayoutEffect(() => handleSubmit(''), []);

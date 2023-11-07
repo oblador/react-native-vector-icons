@@ -21,10 +21,10 @@ const path = `${argv.path}/svgs/`;
 
 const generatedJSON = {};
 fs.readdirSync(path)
-  .filter(file => fs.statSync(path + file).isDirectory())
-  .forEach(file => {
+  .filter((file) => fs.statSync(path + file).isDirectory())
+  .forEach((file) => {
     const icons = fs.readdirSync(path + file);
-    generatedJSON[file] = icons.map(icon => icon.split('.')[0]);
+    generatedJSON[file] = icons.map((icon) => icon.split('.')[0]);
   });
 
 fs.writeFileSync(

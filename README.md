@@ -486,7 +486,7 @@ Any [`Text`](https://reactnative.dev/docs/text.html), [`TouchableHighlight`](htt
 Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
 
 ```js
-Icon.getImageSource('user', 20, 'red').then(source =>
+Icon.getImageSource('user', 20, 'red').then((source) =>
   this.setState({ userIcon: source })
 );
 ```

@@ -80,12 +80,9 @@ Use this to select which style the generated image should have:
 ```javascript
 import FontAwesome6, { FA6Style } from 'react-native-vector-icons/FontAwesome6';
 
-FontAwesome6.getImageSource(
-  'comments',
-  30,
-  '#000',
-  FA6Style.solid
-).then(source => this.setState({ image: source }));
+FontAwesome6.getImageSource('comments', 30, '#000', FA6Style.solid).then(
+  (source) => this.setState({ image: source })
+);
 ```
 
 Not passing a style will result in Regular style.
