@@ -321,13 +321,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-string-parser@npm:^7.19.4":
-  version: 7.19.4
-  resolution: "@babel/helper-string-parser@npm:7.19.4"
-  checksum: e20c81582e75df2a020a1c547376668a6e1e1c2ca535a6b7abb25b83d5536c99c0d113184bbe87c1a26e923a9bb0c6e5279fca8db6bd609cd3499fafafc01598
-  languageName: node
-  linkType: hard
-
 "@babel/helper-string-parser@npm:^7.22.5":
   version: 7.22.5
   resolution: "@babel/helper-string-parser@npm:7.22.5"
@@ -335,14 +328,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-validator-identifier@npm:^7.18.6, @babel/helper-validator-identifier@npm:^7.19.1":
-  version: 7.19.1
-  resolution: "@babel/helper-validator-identifier@npm:7.19.1"
-  checksum: f978ecfea840f65b64ab9e17fac380625a45f4fe1361eeb29867fcfd1c9eaa72abd7023f2f40ac3168587d7e5153660d16cfccb352a557be2efd347a051b4b20
-  languageName: node
-  linkType: hard
-
-"@babel/helper-validator-identifier@npm:^7.22.20":
+"@babel/helper-validator-identifier@npm:^7.18.6, @babel/helper-validator-identifier@npm:^7.19.1, @babel/helper-validator-identifier@npm:^7.22.20":
   version: 7.22.20
   resolution: "@babel/helper-validator-identifier@npm:7.22.20"
   checksum: dcad63db345fb110e032de46c3688384b0008a42a4845180ce7cd62b1a9c0507a1bed727c4d1060ed1a03ae57b4d918570259f81724aaac1a5b776056f37504e
@@ -929,18 +915,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.18.6, @babel/types@npm:^7.18.9, @babel/types@npm:^7.19.0, @babel/types@npm:^7.20.0, @babel/types@npm:^7.20.2, @babel/types@npm:^7.20.5, @babel/types@npm:^7.20.7, @babel/types@npm:^7.7.0":
-  version: 7.20.7
-  resolution: "@babel/types@npm:7.20.7"
-  dependencies:
-    "@babel/helper-string-parser": "npm:^7.19.4"
-    "@babel/helper-validator-identifier": "npm:^7.19.1"
-    to-fast-properties: "npm:^2.0.0"
-  checksum: df0061f306bd95389604075ba5a88e984a801635c70c77b3b6ae8ab44675064b9ef4088c6c78dbf786a28efc662ad37f9c09f8658ba44c12cb8dd6f450a8bde7
-  languageName: node
-  linkType: hard
-
-"@babel/types@npm:^7.8.3":
+"@babel/types@npm:^7.18.6, @babel/types@npm:^7.18.9, @babel/types@npm:^7.19.0, @babel/types@npm:^7.20.0, @babel/types@npm:^7.20.2, @babel/types@npm:^7.20.5, @babel/types@npm:^7.20.7, @babel/types@npm:^7.7.0, @babel/types@npm:^7.8.3":
   version: 7.23.0
   resolution: "@babel/types@npm:7.23.0"
   dependencies:
@@ -3325,14 +3300,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.2":
-  version: 4.2.10
-  resolution: "graceful-fs@npm:4.2.10"
-  checksum: 4223a833e38e1d0d2aea630c2433cfb94ddc07dfc11d511dbd6be1d16688c5be848acc31f9a5d0d0ddbfb56d2ee5a6ae0278aceeb0ca6a13f27e06b9956fb952
-  languageName: node
-  linkType: hard
-
-"graceful-fs@npm:^4.2.6":
+"graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.2.6":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
@@ -5073,18 +5041,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.2.1":
-  version: 7.3.8
-  resolution: "semver@npm:7.3.8"
-  dependencies:
-    lru-cache: "npm:^6.0.0"
-  bin:
-    semver: bin/semver.js
-  checksum: 7e581d679530db31757301c2117721577a2bb36a301a443aac833b8efad372cda58e7f2a464fe4412ae1041cc1f63a6c1fe0ced8c57ce5aca1e0b57bb0d627b9
-  languageName: node
-  linkType: hard
-
-"semver@npm:^7.3.5":
+"semver@npm:^7.2.1, semver@npm:^7.3.5":
   version: 7.5.4
   resolution: "semver@npm:7.5.4"
   dependencies:
