@@ -103,5 +103,6 @@
     "android": {
       "javaPackageName": "com.oblador.vectoricons"
     }
-  }
+  },
+  "packageManager": "yarn@4.0.1"
 }
