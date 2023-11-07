@@ -62,8 +62,8 @@ const ICON_SETS = {
   Zocial,
 };
 
-const groupGlyphNames = glyphMap =>
-  Object.values(groupBy(name => glyphMap[name])(Object.keys(glyphMap)));
+const groupGlyphNames = (glyphMap) =>
+  Object.values(groupBy((name) => glyphMap[name])(Object.keys(glyphMap)));
 
 const transformIconSets = pipe(
   toPairs,

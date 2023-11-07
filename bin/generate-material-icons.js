@@ -24,7 +24,7 @@ function extractGlyphMapFromCodepoints(fileName) {
     .readFileSync(fileName, { encoding: 'utf8' })
     .split('\n');
   const glyphMap = {};
-  codepoints.forEach(point => {
+  codepoints.forEach((point) => {
     const parts = point.split(' ');
     if (parts.length === 2) {
       glyphMap[parts[0].replace(/_/g, '-')] = parseInt(parts[1], 16);

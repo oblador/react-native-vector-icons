@@ -14,8 +14,8 @@ const fontDirectory = path.resolve(__dirname, '../../Fonts');
 const fontExtension = '.ttf';
 const styles = fs
   .readdirSync(fontDirectory)
-  .filter(f => path.extname(f) === fontExtension)
-  .map(file => ({
+  .filter((f) => path.extname(f) === fontExtension)
+  .map((file) => ({
     file,
     fontFamily: customFontMap[file] || path.basename(file, fontExtension),
   }))

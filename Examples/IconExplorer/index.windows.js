@@ -63,12 +63,12 @@ class IconExplorer extends PureComponent {
     return (
       <View
         style={styles.container}
-        onLayout={e => this.setState({ layout: e.nativeEvent.layout })}
+        onLayout={(e) => this.setState({ layout: e.nativeEvent.layout })}
       >
         <View style={styles.leftPanel}>
           <IconSetList
             navigator={{
-              push: route => this.setState({ iconSet: route.iconSet }),
+              push: (route) => this.setState({ iconSet: route.iconSet }),
             }}
           />
         </View>

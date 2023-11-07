@@ -6,23 +6,19 @@ const path = require('path');
 const glypmapDirectory = path.resolve(__dirname, '../../glyphmaps');
 const glypmapExtension = '.json';
 
-const fontAwesome5Glyphmap = require(path.join(
-  glypmapDirectory,
-  'FontAwesome5Free.json'
-));
-const fontAwesome5Meta = require(path.join(
-  glypmapDirectory,
-  'FontAwesome5Free_meta.json'
-));
+const fontAwesome5Glyphmap = require(
+  path.join(glypmapDirectory, 'FontAwesome5Free.json')
+);
+const fontAwesome5Meta = require(
+  path.join(glypmapDirectory, 'FontAwesome5Free_meta.json')
+);
 
-const fontAwesome6Glyphmap = require(path.join(
-  glypmapDirectory,
-  'FontAwesome6Free.json'
-));
-const fontAwesome6Meta = require(path.join(
-  glypmapDirectory,
-  'FontAwesome6Free_meta.json'
-));
+const fontAwesome6Glyphmap = require(
+  path.join(glypmapDirectory, 'FontAwesome6Free.json')
+);
+const fontAwesome6Meta = require(
+  path.join(glypmapDirectory, 'FontAwesome6Free_meta.json')
+);
 
 const pickGlyps = (glyps, glyphmap) =>
   glyps.reduce((acc, glyp) => {
@@ -33,7 +29,7 @@ const pickGlyps = (glyps, glyphmap) =>
 const index = fs
   .readdirSync(glypmapDirectory)
   .filter(
-    f =>
+    (f) =>
       path.extname(f) === glypmapExtension &&
       !(f.startsWith('FontAwesome5') || f.startsWith('FontAwesome6'))
   )
