@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.platforms      = { :ios => "12.0", :tvos => "9.0" }
   s.source         = { :git => package["repository"]["url"], :tag => "v#{s.version}" }
 
-  s.source_files   = 'RNVectorIconsManager/**/*.{h,m,mm,swift}'
+  s.source_files   = 'ios/**/*.{h,m,mm,swift}'
   s.resources      = "Fonts/*.ttf"
   s.preserve_paths = "**/*.js"
   # React Native Core dependency
