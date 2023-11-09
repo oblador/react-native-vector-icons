@@ -163,6 +163,9 @@ RCT_EXPORT_METHOD(
       resolve(nil);
     }
 
+    if (errorRef) {
+        CFRelease(errorRef);
+    }
     CFRelease(font);
   }
   if (provider) {
