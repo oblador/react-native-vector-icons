@@ -104,5 +104,8 @@
       "javaPackageName": "com.oblador.vectoricons"
     }
   },
+  "workspaces": [
+    "packages/*",
+  ],
   "packageManager": "yarn@4.0.1"
 }
