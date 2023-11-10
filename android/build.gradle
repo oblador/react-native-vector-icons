@@ -22,6 +22,10 @@ if (isNewArchitectureEnabled()) {
 
 android {
     namespace = "com.oblador.vectoricons"
+    buildFeatures {
+         buildConfig true
+    }
+
     compileSdkVersion safeExtGet('compileSdkVersion', 31)
 
     defaultConfig {
