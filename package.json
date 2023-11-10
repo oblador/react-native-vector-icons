@@ -1,8 +1,8 @@
 {
-  "name": "react-native-vector-icons",
-  "version": "10.1.0",
-  "description": "Customizable Icons for React Native with support for NavBar/TabBar, image source and full styling.",
-  "main": "dist/index.js",
+  "name": "@react-native-vector-icons",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Customizable Icons for React Native with support for image source and full styling.",
   "bin": {
     "fa-upgrade.sh": "./bin/fa-upgrade.sh",
     "fa5-upgrade": "./bin/fa5-upgrade.sh",
