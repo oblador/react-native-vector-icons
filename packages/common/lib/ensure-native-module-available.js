@@ -1,4 +1,4 @@
-import NativeIconAPI from './NativeRNVectorIcons';
+import NativeIconAPI from './NativeVectorIcons';
 
 export default function ensureNativeModuleAvailable() {
   if (!NativeIconAPI) {
