@@ -5,5 +5,60 @@
   "dependencies": {
     "@react-native-vector-icons/common": "^0"
   },
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "*.podspec",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "osx",
+    "windows",
+    "macos",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ui",
+    "icon",
+    "icons",
+    "vector",
+    "retina",
+    "font",
+    "antdesign"
+  ],
+  "author": {
+    "name": "Joel Arvidsson",
+    "email": "joel@oblador.se"
+  },
+  "homepage": "https://github.com/oblador/react-native-vector-icons",
+  "bugs": {
+    "url": "https://github.com/oblador/react-native-vector-icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oblador/react-native-vector-icons.git"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
+  },
   "packageManager": "yarn@4.0.1"
 }
