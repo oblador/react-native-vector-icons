@@ -146,12 +146,17 @@ export default function createIconSet(
   }
 
   async function loadFont(file = fontFile) {
+    console.debug('MOO', file, fontFile);
     if (Platform.OS === 'ios') {
+    console.debug('MOO1');;
       ensureNativeModuleAvailable();
       if (!file) {
+    console.debug('MOO2');
         throw new Error('Unable to load font, because no file was specified. ');
       }
+    console.debug('MOO3');
       await NativeIconAPI.loadFontWithFileName(...file.split('.'));
+    console.debug('MOO4');
     }
   }
 
