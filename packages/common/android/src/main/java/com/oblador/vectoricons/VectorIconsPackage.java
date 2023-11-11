@@ -35,7 +35,7 @@ public class VectorIconsPackage extends TurboReactPackage {
                       VectorIconsModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
-                      false, // hasConstants // FIXME JF: Template has true
+                      true, // hasConstants
                       false, // isCxxModule
                       isTurboModule // isTurboModule
       ));

@@ -15,7 +15,6 @@ import android.graphics.Typeface;
 import android.graphics.Rect;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
-import android.util.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
