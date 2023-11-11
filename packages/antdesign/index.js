@@ -8,10 +8,12 @@ import glyphMap from './glyphmaps/AntDesign.json';
 
 const iconSet = createIconSet(glyphMap, 'anticon', 'AntDesign.ttf');
 
+
+console.debug(iconSet);
+console.debug(iconSet.loadFont);
+iconSet.loadFont().then(() => console.debug('ANT LOADED')).catch(() => console.debug('LOAD failed'));
+
 export default iconSet;
-
-iconSet.loadFont();
-
 export const {
   Button,
   getImageSource,
