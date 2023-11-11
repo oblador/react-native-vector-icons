@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+// import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {
   Alert,
   Image,
@@ -13,7 +13,7 @@ import { createAnimatableComponent } from 'react-native-animatable';
 
 import ICON_SETS from './icon-sets';
 
-const AnimatableIcon = createAnimatableComponent(FontAwesome);
+// const AnimatableIcon = createAnimatableComponent(FontAwesome);
 
 const BUTTONS = [
   {
@@ -77,8 +77,9 @@ const INLINE = [
     name: 'inline',
     children: (
       <Text>
-        This text has <FontAwesome name="rocket" /> inline{' '}
-        <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
+        MOO
+        {/* This text has <FontAwesome name="rocket" /> inline{' '} */}
+        {/* <FontAwesome name="hand-peace-o"> icons!</FontAwesome> */}
       </Text>
     ),
   },
@@ -89,7 +90,7 @@ const SYNCHROUNOUS = [
     name: 'synchronous',
     children: (
       <Image
-        source={FontAwesome.getImageSourceSync('check', 40, 'green')}
+        // source={FontAwesome.getImageSourceSync('check', 40, 'green')}
         style={{ height: 40, width: 40 }}
       />
     ),
@@ -100,14 +101,16 @@ const ANIMATED = [
   {
     name: 'synchronous',
     children: (
-      <AnimatableIcon
-        animation="pulse"
-        easing="ease-out"
-        iterationCount="infinite"
-        name="heart"
-        size={30}
-        color="#e0284f"
-      />
+    <>
+    </>
+      // <AnimatableIcon
+      //   animation="pulse"
+      //   easing="ease-out"
+      //   iterationCount="infinite"
+      //   name="heart"
+      //   size={30}
+      //   color="#e0284f"
+      // />
     ),
   },
 ];
@@ -154,14 +157,14 @@ const renderSectionHeader = ({ section }) => (
 
 const renderButton = ({ item }) => (
   <View style={styles.row}>
-    <FontAwesome.Button
-      name={item.name}
-      backgroundColor={item.backgroundColor}
-      color={item.color}
-      onPress={() => Alert.alert('You pressed "' + item.text + '"')}
-    >
-      {item.text}
-    </FontAwesome.Button>
+    {/* <FontAwesome.Button */}
+    {/*   name={item.name} */}
+    {/*   backgroundColor={item.backgroundColor} */}
+    {/*   color={item.color} */}
+    {/*   onPress={() => Alert.alert('You pressed "' + item.text + '"')} */}
+    {/* > */}
+    {/*   {item.text} */}
+    {/* </FontAwesome.Button> */}
   </View>
 );
 
@@ -170,7 +173,7 @@ const renderRow = ({ item }) => <View style={styles.row}>{item.children}</View>;
 const renderStyling = ({ item }) => (
   <View style={styles.row}>
     <View style={item.containerStyle}>
-      <FontAwesome {...item} />
+      {/* <FontAwesome {...item} /> */}
     </View>
   </View>
 );

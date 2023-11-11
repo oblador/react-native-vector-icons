@@ -9,6 +9,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-vector-icons/antdesign": "^0",
+    "@react-native-vector-icons/common": "^0",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
     "ramda": "^0.29.0",

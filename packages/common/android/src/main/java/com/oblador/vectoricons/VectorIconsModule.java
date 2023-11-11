@@ -1,7 +1,8 @@
 package com.oblador.vectoricons;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactMethod;
 
@@ -26,6 +27,13 @@ import java.util.Map;
 public class VectorIconsModule extends VectorIconsSpec {
   public static final String NAME = "VectorIcons";
 
+  @interface Errors {
+    String E_UNKNOWN_ERROR = "E_UNKNOWN_ERROR";
+    String E_NOT_IMPLEMENTED = "E_NOT_IMPLEMENTED";
+  }
+
+  private static final Map<String, Typeface> sTypefaceCache = new HashMap<String, Typeface>();
+
   VectorIconsModule(ReactApplicationContext context) {
     super(context);
   }
@@ -36,12 +44,29 @@ public class VectorIconsModule extends VectorIconsSpec {
     return NAME;
   }
 
-  private static final Map<String, Typeface> sTypefaceCache = new HashMap<String, Typeface>();
+  @ReactMethod
+  public void loadFontWithFileName(String fontFileName, String extension, Promise promise) {
+    promise.reject(Errors.E_NOT_IMPLEMENTED);
+  }
 
-  @ReactMethod // FIXME: From template but this might be wrong
-  public static String getImageForFont(String fontFamily, String glyph, Integer fontSize, Integer color, Context context) throws java.io.IOException, FileNotFoundException {
+  @ReactMethod
+  public void getImageForFont(String fontFamily, String glyph, double fontSize, double color, final Promise promise) {
+    try {
+      String imagePath = getImageForFontSync(fontFamily, glyph, fontSize, color);
+      promise.resolve(imagePath);
+    } catch (Throwable fail) {
+       promise.reject(Errors.E_UNKNOWN_ERROR, fail);
+    }
+  }
+
+  @ReactMethod
+  public String getImageForFontSync(String fontFamily, String glyph, double fontSizeD, double colorD) throws IOException, FileNotFoundException {
+    Context context = getReactApplicationContext();
     File cacheFolder = context.getCacheDir();
     String cacheFolderPath = cacheFolder.getAbsolutePath() + "/";
+
+    int fontSize = (int)fontSizeD;
+    int color = (int)colorD;
 
     float scale = context.getResources().getDisplayMetrics().density;
     String scaleSuffix = "@" + (scale == (int) scale ? Integer.toString((int) scale) : Float.toString(scale)) + "x";
