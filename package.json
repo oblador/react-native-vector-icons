@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b packages",
+    "clean": "tsc -b packages --clean",
+    "format": "prettier index.js *.md {bin,lib,directory,Examples}/**/*.js --write",
+    "test": "yarn workspaces foreach run test"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@4.0.1"
+}

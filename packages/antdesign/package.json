@@ -1,0 +1,9 @@
+{
+  "name": "@react-native-vector-icons/antdesign",
+  "description": "Antdesign font for react native vector icons",
+  "version": "0.0.1",
+  "dependencies": {
+    "@react-native-vector-icons/common": "^0"
+  },
+  "packageManager": "yarn@4.0.1"
+}

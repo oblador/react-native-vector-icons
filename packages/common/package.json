@@ -1,6 +1,5 @@
 {
-  "name": "@react-native-vector-icons",
-  "private": true,
+  "name": "@react-native-vector-icons/common",
   "version": "0.0.1",
   "description": "Customizable Icons for React Native with support for image source and full styling.",
   "bin": {
@@ -96,7 +95,7 @@
     "svgicons2svgfont": "^12.0.0"
   },
   "codegenConfig": {
-    "name": "RNVectorIconsSpec",
+    "name": "VectorIconsSpec",
     "type": "modules",
     "jsSrcsDir": "lib",
     "android": {
@@ -104,7 +103,7 @@
     }
   },
   "workspaces": [
-    "packages/*",
+    "packages/*"
   ],
   "packageManager": "yarn@4.0.1"
 }

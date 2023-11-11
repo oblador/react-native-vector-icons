@@ -5,7 +5,7 @@ import { Platform, PixelRatio, processColor, Text } from 'react-native';
 import ensureNativeModuleAvailable from './ensure-native-module-available';
 import createIconSourceCache from './create-icon-source-cache';
 import createIconButtonComponent from './icon-button';
-import NativeIconAPI from './NativeRNVectorIcons';
+import NativeIconAPI from './NativeVectorIcons';
 
 export const DEFAULT_ICON_SIZE = 12;
 export const DEFAULT_ICON_COLOR = 'black';
