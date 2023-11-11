@@ -2,6 +2,29 @@
   "name": "@react-native-vector-icons/common",
   "version": "0.0.1",
   "description": "Customizable Icons for React Native with support for image source and full styling.",
+  "main": "lib/commonjs/index FIXME",
+  "module": "lib/module/index FIXME",
+  "types": "lib/typescript/src/index.d.ts FIXME",
+  "react-native": "src/index FIXME",
+  "source": "src/index FIXME",
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "*.podspec",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
   "bin": {
     "fa-upgrade.sh": "./bin/fa-upgrade.sh",
     "fa5-upgrade": "./bin/fa5-upgrade.sh",
@@ -9,6 +32,13 @@
     "generate-icon": "./bin/generate-icon.js"
   },
   "scripts": {
+    "example": "yarn workspace react-native-vector-icons-example",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
+    "prepare": "bob build",
+    "release": "release-it",
     "test": "eslint index.js {bin,lib}/*.js",
     "format": "prettier index.js *.md {bin,lib,directory,Examples}/**/*.js --write",
     "prepublish": "npm run build-web",
@@ -32,15 +62,15 @@
   },
   "keywords": [
     "react-native",
-    "react-component",
-    "react-native-component",
-    "react",
-    "mobile",
     "ios",
     "android",
     "osx",
     "windows",
     "macos",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
     "ui",
     "icon",
     "icons",
@@ -61,18 +91,44 @@
     "url": "git://github.com/oblador/react-native-vector-icons.git"
   },
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "prop-types": "^15.8.1",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.23.0",
-    "@babel/core": "^7.23.2",
-    "@babel/eslint-parser": "^7.22.15",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@evilmartians/lefthook": "^1.5.0",
+    "@react-native/eslint-config": "^0.72.2",
+    "@release-it/conventional-changelog": "^5.0.0",
+    "@types/jest": "^28.1.2",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "0.70.0",
+    "commitlint": "^17.0.2",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.1",
+    "pod-install": "^0.1.0",
+    "prettier": "^2.0.5",
+    "react": "18.2.0",
+    "react-native": "0.72.6",
+    "react-native-builder-bob": "^0.23.1",
+    "release-it": "^15.0.0",
+    "turbo": "^1.10.7",
+    "typescript": "^5.0.2",
     "@entypo-icons/core": "^1.0.1",
     "@mdi/font": "^6.5.95",
     "@primer/octicons": "^16.3.1",
     "css-social-buttons": "^1.1.1",
+    "evil-icons": "^1.10.1",
+    "feather-icons": "^4.28.0",
+    "font-awesome": "^4.7.0",
+    "fontisto": "^3.0.4",
+    "ionicons": "^7.1.0",
     "eslint": "^8.53.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
@@ -81,29 +137,71 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "evil-icons": "^1.10.1",
-    "feather-icons": "^4.28.0",
-    "font-awesome": "^4.7.0",
-    "fontisto": "^3.0.4",
-    "ionicons": "^7.1.0",
-    "metro-react-native-babel-preset": "^0.77.0",
     "oslllo-svg-fixer": "^2.2.0",
-    "prettier": "^3.0.3",
-    "react": "^18.2.0",
     "simple-line-icons": "^2.5.5",
     "svg2ttf": "^6.0.3",
     "svgicons2svgfont": "^12.0.0"
   },
-  "codegenConfig": {
-    "name": "VectorIconsSpec",
-    "type": "modules",
-    "jsSrcsDir": "lib",
-    "android": {
-      "javaPackageName": "com.oblador.vectoricons"
-    }
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
   },
   "workspaces": [
     "packages/*"
   ],
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  },
+  "codegenConfig": {
+    "name": "VectorIconsSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.oblador.vectoricons"
+    }
+  },
   "packageManager": "yarn@4.0.1"
 }
