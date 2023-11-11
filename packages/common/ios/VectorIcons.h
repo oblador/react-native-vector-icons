@@ -9,8 +9,6 @@
 @interface VectorIcons : NSObject <RCTBridgeModule>
 #endif
 
-#import <React/RCTLog.h>
-
 FOUNDATION_EXPORT NSString *const RNVIErrorDomain;
 
 enum {
