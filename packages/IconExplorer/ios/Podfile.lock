@@ -493,6 +493,7 @@ PODS:
   - RNScreens (3.27.0):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
+  - rnvi-antdesign (0.0.1)
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -564,6 +565,7 @@ DEPENDENCIES:
   - React-utils (from `../../../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../../../node_modules/react-native/ReactCommon`)
   - RNScreens (from `../../../node_modules/react-native-screens`)
+  - "rnvi-antdesign (from `../../../node_modules/@react-native-vector-icons/antdesign`)"
   - Yoga (from `../../../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -667,6 +669,8 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/react-native/ReactCommon"
   RNScreens:
     :path: "../../../node_modules/react-native-screens"
+  rnvi-antdesign:
+    :path: "../../../node_modules/@react-native-vector-icons/antdesign"
   Yoga:
     :path: "../../../node_modules/react-native/ReactCommon/yoga"
 
@@ -724,6 +728,7 @@ SPEC CHECKSUMS:
   React-utils: fa59c9a3375fb6f4aeb66714fd3f7f76b43a9f16
   ReactCommon: dd03c17275c200496f346af93a7b94c53f3093a4
   RNScreens: 3c2d122f5e08c192e254c510b212306da97d2581
+  rnvi-antdesign: eed57fbfe0e1381008c258e9044e860127fa0010
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: b76f1acfda8212aa16b7e26bcce3983230c82603
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
