@@ -92,6 +92,10 @@ body {
   background-color: #f66;
 }
 
+.Result-Title > a, .Result-Title > a:link {
+  color: #fff;
+}
+
 .Result-List {
   display: flex;
   flex-wrap: wrap;
@@ -138,4 +142,32 @@ body {
   font-weight: normal;
   opacity: 0.8;
   margin: 10px 0 0 0;
+}
+
+
+.Family-Links-Container {
+  padding: 10px 20px 20px 20px;
+  background-color: #23527c;
+}
+
+.Family-Links-Content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Family-Links-Title {
+  color: #FFF;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.Family-Links-Link, .Family-Links-Link:link {
+  color: #FFF;
+  font-size: 16px;
+}
+
+.Family-Links-List {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
