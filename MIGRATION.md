@@ -9,3 +9,10 @@
 * Use loadfont on ios so plist.info doesn't have to be changed
 * Should we subdir the fonts - would mean changing loadfont API
 * We could do the same on android which to be honest might simplyfy things like a google font library
+* Should we keep button
+* Should we expose
+  * loadFOnt
+  * hasIcon
+  * getRawGlyphmap
+  * getFOntFamily?
+* Why do we make the text non-selectable?

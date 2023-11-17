@@ -1,14 +1,14 @@
 {
   "extends": [
+    "@react-native",
     "airbnb",
-    "prettier",
+    // "prettier",
   ],
-  "plugins": [
-    "prettier"
-  ],
-  "parser": "@babel/eslint-parser",
+  // "plugins": [
+  //   "prettier"
+  // ],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
     "react/require-default-props": [0],
     "react/static-property-placement": [0],
     "react/jsx-props-no-spreading": [0],

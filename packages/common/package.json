@@ -2,11 +2,11 @@
   "name": "@react-native-vector-icons/common",
   "version": "0.0.1",
   "description": "Customizable Icons for React Native with support for image source and full styling.",
-  "main": "lib/commonjs/index FIXME",
-  "module": "lib/module/index FIXME",
-  "types": "lib/typescript/src/index.d.ts FIXME",
-  "react-native": "src/index FIXME",
-  "source": "src/index FIXME",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "files": [
     "src",
     "lib",
@@ -98,15 +98,16 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.2",
-    "@evilmartians/lefthook": "^1.5.0",
-    "@release-it/conventional-changelog": "^5.0.0",
-    "@types/jest": "^28.1.2",
-    "@types/react": "~17.0.21",
-    "@types/react-native": "0.70.0",
-    "commitlint": "^17.0.2",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@evilmartians/lefthook": "^1.5.2",
+    "@react-native/eslint-config": "^0.74.0",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "@types/jest": "^28.1.8",
+    "@types/react": "~18.2.37",
+    "@types/react-native": "0.70.17",
+    "commitlint": "^17.8.1",
     "css-social-buttons": "^1.1.1",
-    "del-cli": "^5.0.0",
+    "del-cli": "^5.1.0",
     "eslint": "^8.53.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
@@ -115,18 +116,18 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "jest": "^28.1.1",
+    "jest": "^28.1.3",
     "oslllo-svg-fixer": "^2.2.0",
-    "pod-install": "^0.1.0",
-    "prettier": "^2.0.5",
+    "pod-install": "^0.1.39",
+    "prettier": "^3.0.3",
     "react": "18.2.0",
     "react-native": "0.72.6",
     "react-native-builder-bob": "^0.23.1",
-    "release-it": "^15.0.0",
+    "release-it": "^15.11.0",
     "svg2ttf": "^6.0.3",
     "svgicons2svgfont": "^12.0.0",
-    "turbo": "^1.10.7",
-    "typescript": "^5.0.2"
+    "turbo": "^1.10.16",
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "react": "*",
@@ -166,6 +167,36 @@
         "preset": "angular"
       }
     }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
   },
   "react-native-builder-bob": {
     "source": "src",
