@@ -1,22 +1,29 @@
 const TYPE_VALUE = 'value';
 const TYPE_ERROR = 'error';
 
-export default function createIconSourceCache() {
-  const cache = new Map();
+type ValueData = { uri: string; scale: number };
 
-  const setValue = (key, value) =>
+type Value =
+  | { type: typeof TYPE_VALUE; data: ValueData }
+  | { type: typeof TYPE_ERROR; data: Error };
+
+export default function createIconSourceCache() {
+  const cache = new Map<string, Value>();
+
+  const setValue = (key: string, value: ValueData) =>
     cache.set(key, { type: TYPE_VALUE, data: value });
 
-  const setError = (key, error) =>
+  const setError = (key: string, error: Error) =>
     cache.set(key, { type: TYPE_ERROR, data: error });
 
-  const has = (key) => cache.has(key);
+  const has = (key: string) => cache.has(key);
 
-  const get = (key) => {
+  const get = (key: string) => {
     if (!cache.has(key)) {
       return undefined;
     }
-    const { type, data } = cache.get(key);
+
+    const { type, data } = cache.get(key)!;
     if (type === TYPE_ERROR) {
       throw data;
     }
