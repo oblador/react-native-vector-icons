@@ -5,6 +5,9 @@
   "dependencies": {
     "@react-native-vector-icons/common": "^0"
   },
+  "scripts": {
+    "update": "scripts/update.sh"
+  },
   "files": [
     "src",
     "lib",
