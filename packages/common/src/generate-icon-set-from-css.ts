@@ -66,7 +66,7 @@ const escapeRegExp = (str: string) =>
 export const generateIconSetFromCss = (
   cssFiles: string[],
   selectorPrefix: string,
-  template: string,
+  template?: string,
   data = {}
 ) => {
   const glyphMap = extractGlyphMapFromCss(

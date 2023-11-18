@@ -26,10 +26,7 @@
     "!**/.*"
   ],
   "bin": {
-    "fa-upgrade.sh": "./bin/fa-upgrade.sh",
-    "fa5-upgrade": "./bin/fa5-upgrade.sh",
-    "fa6-upgrade": "./bin/fa6-upgrade.sh",
-    "generate-icon": "./bin/generate-icon.js"
+    "generate-icon": "./lib/commonjs/bin/generate-icon.js"
   },
   "scripts": {
     "example": "yarn workspace react-native-vector-icons-example",

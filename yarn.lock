@@ -4455,10 +4455,7 @@ __metadata:
     react: "*"
     react-native: "*"
   bin:
-    fa-upgrade.sh: ./bin/fa-upgrade.sh
-    fa5-upgrade: ./bin/fa5-upgrade.sh
-    fa6-upgrade: ./bin/fa6-upgrade.sh
-    generate-icon: ./bin/generate-icon.js
+    generate-icon: ./lib/commonjs/bin/generate-icon.js
   languageName: unknown
   linkType: soft
 
@@ -4503,12 +4500,34 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5"
+  dependencies:
+    "@react-native-vector-icons/common": "npm:^0"
+  bin:
+    fa-upgrade5.sh: ./bin/fa-upgrade5.sh
+  languageName: unknown
+  linkType: soft
+
+"@react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6"
+  dependencies:
+    "@react-native-vector-icons/common": "npm:^0"
+  bin:
+    fa-upgrade6.sh: ./bin/fa-upgrade6.sh
+  languageName: unknown
+  linkType: soft
+
 "@react-native-vector-icons/fontawesome@workspace:packages/fontawesome":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome@workspace:packages/fontawesome"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
     font-awesome: "npm:^4.7.0"
+  bin:
+    fa-upgrade.sh: ./bin/fa-upgrade.sh
   languageName: unknown
   linkType: soft
 
