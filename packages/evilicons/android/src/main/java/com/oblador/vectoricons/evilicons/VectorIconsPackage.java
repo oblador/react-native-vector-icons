@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.antdesign;
+package com.oblador.vectoricons.evilicons;
 
 import androidx.annotation.Nullable;
 
