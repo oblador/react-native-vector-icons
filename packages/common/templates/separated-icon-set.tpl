@@ -3,14 +3,12 @@
  * Usage: <${componentName} name="icon-name" size={20} color="#4F8EF7" />
  */
 
-import createIconSet from './lib/create-icon-set';
+import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from './glyphmaps/${componentName}.json';
 
-const iconSet = createIconSet(glyphMap, '${fontFamily}', '${componentName}.ttf');
+const Icon = createIconSet(glyphMap, '${fontFamily}', '${componentName}.ttf');
 
-export default iconSet;
-export const {
-  Button,
-  getImageSource,
-  getImageSourceSync,
-} = iconSet;
+Icon.loadFont();
+
+export default Icon;
+export const { Button, getImageSource, getImageSourceSync } = Icon;
