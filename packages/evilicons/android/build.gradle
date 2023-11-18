@@ -34,7 +34,7 @@ def supportsNamespace() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.oblador.vectoricons.antdesign"
+    namespace "com.oblador.vectoricons.evilicons"
 
     sourceSets {
       main {
@@ -67,19 +67,19 @@ if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
     libraryName = "VectorIcons"
-    codegenJavaPackageName = "com.oblador.vectoricons.antdesign"
+    codegenJavaPackageName = "com.oblador.vectoricons.evilicons"
   }
 }
 
 /**
  * Register font asset source folder
  */
-android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/ReactNativeVectorIconsAntDesign")
+android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/ReactNativeVectorIconsEvilIcons")
 
 // Define the copy task
 task copyFiles(type: Copy) {
-    from '../../../../node_modules/@react-native-vector-icons/antdesign/fonts'
-    into "$buildDir/intermediates/ReactNativeVectorIconsAntDesign/fonts"
+    from '../../../../node_modules/@react-native-vector-icons/evilicons/fonts'
+    into "$buildDir/intermediates/ReactNativeVectorIconsEvilIcons/fonts"
 }
 
 // Make sure the task runs before the build
