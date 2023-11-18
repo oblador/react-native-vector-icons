@@ -26,6 +26,7 @@
     "!**/.*"
   ],
   "bin": {
+    "fontcustom": "./lib/commonjs/bin/fontcustom",
     "generate-icon": "./lib/commonjs/bin/generate-icon.js"
   },
   "scripts": {

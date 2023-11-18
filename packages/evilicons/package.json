@@ -1,12 +1,15 @@
 {
   "name": "@react-native-vector-icons/evilicons",
-  "description": "Antdesign font for react native vector icons",
+  "description": "Evil Icons font for react native vector icons",
   "version": "0.0.1",
   "dependencies": {
     "@react-native-vector-icons/common": "^0"
   },
   "devDependencies": {
     "evil-icons": "^1.10.1"
+  },
+  "scripts": {
+    "update": "scripts/update.sh"
   },
   "files": [
     "src",
