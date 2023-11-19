@@ -1,12 +1,15 @@
 {
   "name": "@react-native-vector-icons/fontawesome",
-  "description": "Antdesign font for react native vector icons",
+  "description": "Font Awesome font for react native vector icons",
   "version": "0.0.1",
   "dependencies": {
     "@react-native-vector-icons/common": "^0"
   },
   "devDependencies": {
     "font-awesome": "^4.7.0"
+  },
+  "scripts": {
+    "update": "scripts/update.sh"
   },
   "bin": {
     "fa-upgrade.sh": "./bin/fa-upgrade.sh"
