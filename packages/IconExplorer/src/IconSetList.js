@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-// import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import React from 'react';
+import FontAwesome from '@react-native-vector-icons/fontawesome';
 import {
   Alert,
   Image,
@@ -13,7 +13,7 @@ import { createAnimatableComponent } from 'react-native-animatable';
 
 import ICON_SETS from './icon-sets';
 
-// const AnimatableIcon = createAnimatableComponent(FontAwesome);
+const AnimatableIcon = createAnimatableComponent(FontAwesome);
 
 const BUTTONS = [
   {
@@ -77,9 +77,8 @@ const INLINE = [
     name: 'inline',
     children: (
       <Text>
-        MOO
-        {/* This text has <FontAwesome name="rocket" /> inline{' '} */}
-        {/* <FontAwesome name="hand-peace-o"> icons!</FontAwesome> */}
+        This text has <FontAwesome name="rocket" /> inline{' '}
+        <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
       </Text>
     ),
   },
@@ -90,7 +89,7 @@ const SYNCHROUNOUS = [
     name: 'synchronous',
     children: (
       <Image
-        // source={FontAwesome.getImageSourceSync('check', 40, 'green')}
+        source={FontAwesome.getImageSourceSync('check', 40, 'green')}
         style={{ height: 40, width: 40 }}
       />
     ),
@@ -101,16 +100,14 @@ const ANIMATED = [
   {
     name: 'synchronous',
     children: (
-    <>
-    </>
-      // <AnimatableIcon
-      //   animation="pulse"
-      //   easing="ease-out"
-      //   iterationCount="infinite"
-      //   name="heart"
-      //   size={30}
-      //   color="#e0284f"
-      // />
+      <AnimatableIcon
+        animation="pulse"
+        easing="ease-out"
+        iterationCount="infinite"
+        name="heart"
+        size={30}
+        color="#e0284f"
+      />
     ),
   },
 ];
@@ -157,14 +154,14 @@ const renderSectionHeader = ({ section }) => (
 
 const renderButton = ({ item }) => (
   <View style={styles.row}>
-    {/* <FontAwesome.Button */}
-    {/*   name={item.name} */}
-    {/*   backgroundColor={item.backgroundColor} */}
-    {/*   color={item.color} */}
-    {/*   onPress={() => Alert.alert('You pressed "' + item.text + '"')} */}
-    {/* > */}
-    {/*   {item.text} */}
-    {/* </FontAwesome.Button> */}
+    <FontAwesome.Button
+      name={item.name}
+      backgroundColor={item.backgroundColor}
+      color={item.color}
+      onPress={() => Alert.alert('You pressed "' + item.text + '"')}
+    >
+      {item.text}
+    </FontAwesome.Button>
   </View>
 );
 
@@ -173,34 +170,30 @@ const renderRow = ({ item }) => <View style={styles.row}>{item.children}</View>;
 const renderStyling = ({ item }) => (
   <View style={styles.row}>
     <View style={item.containerStyle}>
-      {/* <FontAwesome {...item} /> */}
+      <FontAwesome {...item} />
     </View>
   </View>
 );
 
-export default class IconSetsList extends PureComponent {
-  state = {
-    sections: [
+export const IconSetList = (props) => {
+    const sections = [
       { title: 'ICON SETS', data: ICON_SETS },
       { title: 'BUTTONS', data: BUTTONS, renderItem: renderButton },
       { title: 'INLINE', data: INLINE, renderItem: renderRow },
       { title: 'SYNCHROUNOUS', data: SYNCHROUNOUS, renderItem: renderRow },
       { title: 'ANIMATED', data: ANIMATED, renderItem: renderRow },
       { title: 'STYLING', data: STYLING, renderItem: renderStyling },
-    ],
-  };
+    ];
 
-  navigateToIconSet(iconSet) {
-    this.props.navigator.push({
-      title: iconSet.name,
-      name: 'iconSet',
-      iconSet,
-    });
-  }
+  const navigateToIconSet = (iconSet) => props.navigator.push({
+    title: iconSet.name,
+    name: 'iconSet',
+    iconSet,
+  });
 
-  renderIconSet = ({ item }) => (
+  const renderIconSet = ({ item }) => (
     <TouchableHighlight
-      onPress={() => this.navigateToIconSet(item)}
+      onPress={() => navigateToIconSet(item)}
       underlayColor="#eee"
     >
       <View style={styles.row}>
@@ -209,17 +202,19 @@ export default class IconSetsList extends PureComponent {
       </View>
     </TouchableHighlight>
   );
+  console.debug('MOO');
+  console.debug('MOO');
+  console.debug('MOO');
+  console.debug(renderIconSet);
 
-  render() {
-    return (
-      <SectionList
-        sections={this.state.sections}
-        renderSectionHeader={renderSectionHeader}
-        renderItem={this.renderIconSet}
-        ItemSeparatorComponent={ItemSeparator}
-        initialNumToRender={15}
-        keyExtractor={keyExtractor}
-      />
-    );
-  }
+  return (
+    <SectionList
+      sections={sections}
+      renderSectionHeader={renderSectionHeader}
+      renderItem={renderIconSet}
+      ItemSeparatorComponent={ItemSeparator}
+      initialNumToRender={15}
+      keyExtractor={keyExtractor}
+    />
+  );
 }

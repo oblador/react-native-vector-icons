@@ -3,7 +3,7 @@ import AntD from '@react-native-vector-icons/antdesign';
 // import Entypo from 'react-native-vector-icons/Entypo';
 import EvilIcons from '@react-native-vector-icons/evilicons';
 // import Feather from 'react-native-vector-icons/Feather';
-// import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import FontAwesome from '@react-native-vector-icons/fontawesome';
 // import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Fontisto from '@react-native-vector-icons/fontisto';
 // import Foundation from 'react-native-vector-icons/Foundation';
@@ -17,7 +17,7 @@ import AntDGlyphs from '@react-native-vector-icons/antdesign/glyphmaps/AntDesign
 // import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo.json';
 import EvilIconsGlyphs from '@react-native-vector-icons/evilicons/glyphmaps/EvilIcons.json';
 // import FeatherGlyphs from 'react-native-vector-icons/glyphmaps/Feather.json';
-// import FontAwesomeGlyphs from 'react-native-vector-icons/glyphmaps/FontAwesome.json';
+import FontAwesomeGlyphs from '@react-native-vector-icons/fontawesome/glyphmaps/FontAwesome.json';
 // import FontAwesome5Glyphs from 'react-native-vector-icons/glyphmaps/FontAwesome5Free.json';
 import FontistoGlyphs from '@react-native-vector-icons/fontisto/glyphmaps/Fontisto.json';
 // import FoundationGlyphs from 'react-native-vector-icons/glyphmaps/Foundation.json';
@@ -33,7 +33,7 @@ const GLYPH_MAPS = {
   // Entypo: EntypoGlyphs,
   EvilIcons: EvilIconsGlyphs,
   // Feather: FeatherGlyphs,
-  // FontAwesome: FontAwesomeGlyphs,
+  FontAwesome: FontAwesomeGlyphs,
   // FontAwesome5: FontAwesome5Glyphs,
   Fontisto: FontistoGlyphs,
   // Foundation: FoundationGlyphs,
@@ -50,7 +50,7 @@ const ICON_SETS = {
   // Entypo,
   EvilIcons,
   // Feather,
-  // FontAwesome,
+  FontAwesome,
   // FontAwesome5,
   Fontisto,
   // Foundation,
