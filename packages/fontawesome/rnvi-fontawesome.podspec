@@ -3,7 +3,7 @@ require "json"
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
-  s.name         = "rnvi-fontisto"
+  s.name         = "rnvi-fontawesome"
   s.version      = package["version"]
   s.summary      = package["description"]
   s.homepage     = package["homepage"]
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   # FIXME: Should we do this in the future? We would have to change how loadfont works though, to give the subdir
   # s.resource_bundles = {
-  #   'RNVI_Fontisto' => ['fonts/*.ttf'],
+  #   'RNVI_FontAwesome' => ['fonts/*.ttf'],
   # }
 end
 

@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import IconSetList from './IconSetList';
+import { IconSetList } from './IconSetList';
 import IconList from './IconList';
 
 const styles = StyleSheet.create({

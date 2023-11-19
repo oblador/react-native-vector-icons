@@ -12,6 +12,7 @@
     "@react-native-vector-icons/antdesign": "^0",
     "@react-native-vector-icons/common": "^0",
     "@react-native-vector-icons/evilicons": "^0",
+    "@react-native-vector-icons/fontawesome": "^0",
     "@react-native-vector-icons/fontisto": "^0",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",

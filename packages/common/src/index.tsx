@@ -10,7 +10,7 @@ import {
 
 import ensureNativeModuleAvailable from './ensure-native-module-available';
 import createIconSourceCache from './create-icon-source-cache';
-// import createIconButtonComponent from './icon-button';
+import createIconButtonComponent from './icon-button';
 import NativeIconAPI from './NativeVectorIcons';
 
 export const DEFAULT_ICON_SIZE = 12;
@@ -171,7 +171,7 @@ export const createIconSet = <T extends Record<string, number>>(
 
   const getFontFamily = () => fontReference;
 
-  // Icon.Button = createIconButtonComponent<keyof T>(Icon);
+  Icon.Button = createIconButtonComponent<Extract<keyof T, string>>(Icon);
   Icon.getImageSource = getImageSource;
   Icon.getImageSourceSync = getImageSourceSync;
   Icon.loadFont = loadFont;
