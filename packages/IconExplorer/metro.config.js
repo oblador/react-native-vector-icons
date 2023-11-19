@@ -15,7 +15,8 @@ const config = {
   watchFolders: [
     path.resolve(__dirname, '../../node_modules'),
     path.resolve(__dirname, '../common'),
-    path.resolve(__dirname, '../antdesign')
+    path.resolve(__dirname, '../antdesign'),
+    path.resolve(__dirname, '../fontisto')
   ],
 };
 
