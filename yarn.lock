@@ -4483,7 +4483,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/evilicons@workspace:packages/evilicons":
+"@react-native-vector-icons/evilicons@npm:^0, @react-native-vector-icons/evilicons@workspace:packages/evilicons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/evilicons@workspace:packages/evilicons"
   dependencies:
@@ -6300,6 +6300,7 @@ __metadata:
     "@babel/runtime": "npm:^7.23.2"
     "@react-native-vector-icons/antdesign": "npm:^0"
     "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/evilicons": "npm:^0"
     "@react-native-vector-icons/fontisto": "npm:^0"
     "@react-native/metro-config": "npm:^0.72.11"
     "@react-navigation/native": "npm:^6.1.9"

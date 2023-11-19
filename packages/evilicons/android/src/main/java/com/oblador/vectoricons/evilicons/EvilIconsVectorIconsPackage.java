@@ -10,7 +10,7 @@ import com.facebook.react.TurboReactPackage;
 
 import java.util.HashMap;
 
-public class VectorIconsPackage extends TurboReactPackage {
+public class EvilIconsVectorIconsPackage extends TurboReactPackage {
   @Nullable
   @Override
   public NativeModule getModule(String name, ReactApplicationContext reactContext) {

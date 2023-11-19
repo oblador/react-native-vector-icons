@@ -1,13 +1,19 @@
 #!/usr/bin/env node
 
-import { execSync } from 'node:child_process';
+import { spawn } from 'node:child_process';
 
-const cmd = `docker run --rm --interactive --tty \
-   --volume $(pwd):/app/project \
-   --user $(id -u):$(id -g) \
-   telor/fontcustom-worker \
-   fontcustom ${process.argv.slice(2).join(' ')}
-`;
+const args = [
+  'run',
+  '--rm',
+  '--volume',
+  '$(pwd):/app/project',
+  '--volume',
+  '$(pwd)/../../node_modules:/app/node_modules',
+  '--user',
+  '$(id -u):$(id -g)',
+  'telor/fontcustom-worker',
+  'fontcustom',
+  ...process.argv.slice(2),
+];
 
-const stdout = execSync(cmd);
-console.log(stdout.toString());
+spawn('docker', args);
