@@ -2,7 +2,7 @@
 
 import { execSync } from 'node:child_process';
 
-const cmd = `echo docker run --rm --interactive --tty \
+const cmd = `docker run --rm --interactive --tty \
    --volume $(pwd):/app/project \
    --user $(id -u):$(id -g) \
    telor/fontcustom-worker \
