@@ -20,10 +20,15 @@ Pod::Spec.new do |s|
   #   'RNVI_FontAwesome6' => ['fonts/*.ttf'],
   # }
 
-  spec.script_phase = {
+  # NOTE: This is pretty brittle. Hopefully it works for everyone
+  s.script_phase = {
     :name => 'Copy Font Awesome Pro Fonts',
-    :script => 'cp -R ${SRCROOT}/assets/fonts ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/',
-    :execution_position => :before_compile,
+    :script => '
+      if [ -d ${SRCROOT}/../../assets/fonts ]; then
+        APP_NAME="$(echo $PODS_ROOT | sed \'s/\/ios\/Pods//;s/.*\///\').app"
+        cp ${SRCROOT}/../../assets/fonts/* ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}
+      fi
+    ',
   }
 end
 

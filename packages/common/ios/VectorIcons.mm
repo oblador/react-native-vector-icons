@@ -142,41 +142,35 @@ RCT_EXPORT_METHOD(loadFontWithFileName
       CGDataProviderCreateWithCFData((CFDataRef)fontData);
   CGFontRef font = CGFontCreateWithDataProvider(provider);
 
-  NSLog(@"loadFontWithFileName: START");
-
   if (font) {
-    NSLog(@"loadFontWithFileName: font");
     CFErrorRef errorRef = NULL;
     if (CTFontManagerRegisterGraphicsFont(font, &errorRef) == NO) {
-      NSLog(@"loadFontWithFileName: OATH1");
       NSError *error = (__bridge NSError *)errorRef;
       if (error.code == kCTFontManagerErrorAlreadyRegistered ||
           error.code == kCTFontManagerErrorDuplicatedName) {
-        NSLog(@"loadFontWithFileName: OATH2");
         resolve(nil);
       } else {
-        NSLog(@"loadFontWithFileName: OATH3");
         NSString *errorMessage = [NSString
             stringWithFormat:@"Font '%@' failed to load", fontFileName];
         reject(@"font_load_failed", errorMessage, error);
       }
     } else {
-      NSLog(@"loadFontWithFileName: OATH4");
       resolve(nil);
     }
 
     if (errorRef) {
       CFRelease(errorRef);
     }
-    NSLog(@"loadFontWithFileName: OATH5");
+
     CFRelease(font);
-    NSLog(@"loadFontWithFileName: OATH6");
+  } else {
+    // TODO: Should we reject back to javascript?
+    NSLog(@"RNVI: failed to find font %@.%@", fontFileName, extension);
   }
+
   if (provider) {
-    NSLog(@"loadFontWithFileName: OATH7");
     CFRelease(provider);
   }
-  NSLog(@"loadFontWithFileName: OATH8");
 }
 
 // Don't compile this code when we build for the old architecture.
