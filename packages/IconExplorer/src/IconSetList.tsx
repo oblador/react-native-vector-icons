@@ -1,40 +1,26 @@
 import React from 'react';
-import FontAwesome from '@react-native-vector-icons/fontawesome';
+
 import {
-  Alert,
   Image,
   SectionList,
   StyleSheet,
   Text,
   TouchableHighlight,
   View,
+  type ViewProps,
 } from 'react-native';
+
 import { createAnimatableComponent } from 'react-native-animatable';
+
+import FontAwesome from '@react-native-vector-icons/fontawesome';
 
 import ICON_SETS from './icon-sets';
 
 const AnimatableIcon = createAnimatableComponent(FontAwesome);
 
-const BUTTONS = [
-  {
-    text: 'Login with Facebook',
-    name: 'facebook',
-    backgroundColor: '#3b5998',
-  },
-  {
-    text: 'Follow me on Twitter',
-    name: 'twitter',
-    backgroundColor: '#55acee',
-  },
-  {
-    text: 'Fork on GitHub',
-    name: 'code-fork',
-    backgroundColor: '#ccc',
-    color: '#000',
-  },
-];
-
-const STYLING = [
+const STYLING: (Parameters<typeof FontAwesome>[0] & {
+  containerStyle?: ViewProps['style'];
+})[] = [
   { name: 'github', size: 40, color: '#333' },
   {
     name: 'heart',
@@ -89,8 +75,9 @@ const SYNCHROUNOUS = [
     name: 'synchronous',
     children: (
       <Image
-        source={FontAwesome.getImageSourceSync('check', 40, 'green')}
-        style={{ height: 40, width: 40 }}
+        source={FontAwesome.getImageSourceSync('check', 40, 'green')!}
+        width={40}
+        height={40}
       />
     ),
   },
@@ -98,7 +85,7 @@ const SYNCHROUNOUS = [
 
 const ANIMATED = [
   {
-    name: 'synchronous',
+    name: 'animated',
     children: (
       <AnimatableIcon
         animation="pulse"
@@ -142,32 +129,15 @@ const styles = StyleSheet.create({
   },
 });
 
-const keyExtractor = (item) => item.name;
+export type IconSet = (typeof ICON_SETS)[number];
 
 const ItemSeparator = () => <View style={styles.separator} />;
 
-const renderSectionHeader = ({ section }) => (
-  <View style={styles.sectionHeader}>
-    <Text style={styles.sectionHeaderTitle}>{section.title}</Text>
-  </View>
+const renderRow = (item: { children: JSX.Element }) => (
+  <View style={styles.row}>{item.children}</View>
 );
 
-const renderButton = ({ item }) => (
-  <View style={styles.row}>
-    <FontAwesome.Button
-      name={item.name}
-      backgroundColor={item.backgroundColor}
-      color={item.color}
-      onPress={() => Alert.alert('You pressed "' + item.text + '"')}
-    >
-      {item.text}
-    </FontAwesome.Button>
-  </View>
-);
-
-const renderRow = ({ item }) => <View style={styles.row}>{item.children}</View>;
-
-const renderStyling = ({ item }) => (
+const renderStyling = (item: (typeof STYLING)[number]) => (
   <View style={styles.row}>
     <View style={item.containerStyle}>
       <FontAwesome {...item} />
@@ -175,25 +145,18 @@ const renderStyling = ({ item }) => (
   </View>
 );
 
-export const IconSetList = (props) => {
-    const sections = [
-      { title: 'ICON SETS', data: ICON_SETS },
-      { title: 'BUTTONS', data: BUTTONS, renderItem: renderButton },
-      { title: 'INLINE', data: INLINE, renderItem: renderRow },
-      { title: 'SYNCHROUNOUS', data: SYNCHROUNOUS, renderItem: renderRow },
-      { title: 'ANIMATED', data: ANIMATED, renderItem: renderRow },
-      { title: 'STYLING', data: STYLING, renderItem: renderStyling },
-    ];
-
-  const navigateToIconSet = (iconSet) => props.navigator.push({
-    title: iconSet.name,
-    name: 'iconSet',
-    iconSet,
-  });
-
-  const renderIconSet = ({ item }) => (
+export const IconSetList = ({
+  navigator,
+  multiNavigator,
+}: {
+  navigator: (iconSet: IconSet, title: string) => void;
+  multiNavigator: (iconSet: IconSet, title: string) => void;
+}) => {
+  const renderIcon = (item: (typeof ICON_SETS)[number]) => (
     <TouchableHighlight
-      onPress={() => navigateToIconSet(item)}
+      onPress={() =>
+        item.meta ? multiNavigator(item, item.name) : navigator(item, item.name)
+      }
       underlayColor="#eee"
     >
       <View style={styles.row}>
@@ -202,19 +165,27 @@ export const IconSetList = (props) => {
       </View>
     </TouchableHighlight>
   );
-  console.debug('MOO');
-  console.debug('MOO');
-  console.debug('MOO');
-  console.debug(renderIconSet);
 
   return (
     <SectionList
-      sections={sections}
-      renderSectionHeader={renderSectionHeader}
-      renderItem={renderIconSet}
+      sections={[
+        { title: 'ICON SETS', data: ICON_SETS.map((item) => renderIcon(item)) },
+        { title: 'INLINE', data: INLINE.map((item) => renderRow(item)) },
+        {
+          title: 'SYNCHROUNOUS',
+          data: SYNCHROUNOUS.map((item) => renderRow(item)),
+        },
+        { title: 'ANIMATED', data: ANIMATED.map((item) => renderRow(item)) },
+        { title: 'STYLING', data: STYLING.map((item) => renderStyling(item)) },
+      ]}
+      renderItem={({ item }) => item}
+      renderSectionHeader={({ section }) => (
+        <View style={styles.sectionHeader}>
+          <Text style={styles.sectionHeaderTitle}>{section.title}</Text>
+        </View>
+      )}
       ItemSeparatorComponent={ItemSeparator}
       initialNumToRender={15}
-      keyExtractor={keyExtractor}
     />
   );
-}
+};
