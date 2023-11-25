@@ -58,7 +58,7 @@ public class VectorIconsModule extends VectorIconsSpec {
     }
   }
 
-  @ReactMethod
+  @ReactMethod(isBlockingSynchronousMethod = true)
   public String getImageForFontSync(String fontFamily, String glyph, double fontSizeD, double colorD) throws IOException, FileNotFoundException {
     Context context = getReactApplicationContext();
     File cacheFolder = context.getCacheDir();
