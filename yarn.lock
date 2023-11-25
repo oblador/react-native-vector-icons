@@ -4501,21 +4501,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5":
+"@react-native-vector-icons/fontawesome5@npm:^0, @react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   bin:
     fa-upgrade5.sh: ./bin/fa-upgrade5.sh
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6":
+"@react-native-vector-icons/fontawesome6@npm:^0, @react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   bin:
     fa-upgrade6.sh: ./bin/fa-upgrade6.sh
   languageName: unknown
@@ -4526,7 +4538,13 @@ __metadata:
   resolution: "@react-native-vector-icons/fontawesome@workspace:packages/fontawesome"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
     font-awesome: "npm:^4.7.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   bin:
     fa-upgrade.sh: ./bin/fa-upgrade.sh
   languageName: unknown
@@ -6302,6 +6320,8 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^0"
     "@react-native-vector-icons/evilicons": "npm:^0"
     "@react-native-vector-icons/fontawesome": "npm:^0"
+    "@react-native-vector-icons/fontawesome5": "npm:^0"
+    "@react-native-vector-icons/fontawesome6": "npm:^0"
     "@react-native-vector-icons/fontisto": "npm:^0"
     "@react-native/metro-config": "npm:^0.72.11"
     "@react-navigation/native": "npm:^6.1.9"
@@ -6312,7 +6332,6 @@ __metadata:
     babel-jest: "npm:^29.7.0"
     jest: "npm:^29.7.0"
     metro-react-native-babel-preset: "npm:0.76.8"
-    ramda: "npm:^0.29.1"
     react: "npm:18.2.0"
     react-native: "npm:0.72.6"
     react-native-animatable: "npm:^1.4.0"
@@ -10175,6 +10194,20 @@ __metadata:
     eslint: ^7.32.0 || ^8.2.0
     eslint-plugin-import: ^2.25.2
   checksum: 93639d991654414756f82ad7860aac30b0dc6797277b7904ddb53ed88a32c470598696bbc6c503e066414024d305221974d3769e6642de65043bedf29cbbd30f
+  languageName: node
+  linkType: hard
+
+"eslint-config-airbnb-typescript@npm:^17.1.0":
+  version: 17.1.0
+  resolution: "eslint-config-airbnb-typescript@npm:17.1.0"
+  dependencies:
+    eslint-config-airbnb-base: "npm:^15.0.0"
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": ^5.13.0 || ^6.0.0
+    "@typescript-eslint/parser": ^5.0.0 || ^6.0.0
+    eslint: ^7.32.0 || ^8.2.0
+    eslint-plugin-import: ^2.25.3
+  checksum: 46d1753d660fe4225ccd89e91dd9f812db490326dfb835cfb786ab0b9a4ca25a39171a838661233b8f6f9a19294aaedaa962e19df915066beb80e7422749f7f1
   languageName: node
   linkType: hard
 
@@ -18572,13 +18605,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ramda@npm:^0.29.1":
-  version: 0.29.1
-  resolution: "ramda@npm:0.29.1"
-  checksum: 5de53a07400959c1a704c366ec52b1b8cd9a444dc1f9cdf17d607e0b9eeaa38cbaea309d43e59dbd7f36731ba977a64d40092555c0e7c2d4a41e8e922239c0ba
-  languageName: node
-  linkType: hard
-
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -19554,6 +19580,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    eslint-config-airbnb-typescript: "npm:^17.1.0"
     typescript: "npm:^5.2.2"
   languageName: unknown
   linkType: soft

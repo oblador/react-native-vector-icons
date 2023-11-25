@@ -3,12 +3,12 @@
  * Usage: <FontAwesome5 name="icon-name" size={20} color="#4F8EF7" />
  */
 
-import { createFA5iconSet } from './lib/create-icon-set-from-fontawesome5';
+import { createFA5iconSet } from './create-icon-set-from-fontawesome5';
 
-import glyphMap from './glyphmaps/FontAwesome5Free.json';
-import metadata from './glyphmaps/FontAwesome5Free_meta.json';
+import glyphMap from '../glyphmaps/FontAwesome5Free.json';
+import metadata from '../glyphmaps/FontAwesome5Free_meta.json';
 
-export { FA5Style } from './lib/create-icon-set-from-fontawesome5';
+export { FA5Style } from './create-icon-set-from-fontawesome5';
 
 const iconSet = createFA5iconSet(glyphMap, metadata, false);
 
