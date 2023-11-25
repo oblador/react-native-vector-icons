@@ -1,5 +1,6 @@
+const path = require('path');
+
 const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
-const path = require("path");
 
 /**
  * Metro configuration
@@ -17,6 +18,8 @@ const config = {
     path.resolve(__dirname, '../common'),
     path.resolve(__dirname, '../antdesign'),
     path.resolve(__dirname, '../fontawesome'),
+    path.resolve(__dirname, '../fontawesome5'),
+    path.resolve(__dirname, '../fontawesome6'),
     path.resolve(__dirname, '../fontisto'),
     path.resolve(__dirname, '../evilicons')
   ],

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, from 'react';
 import {
   AppRegistry,
   Dimensions,
@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native-desktop';
 
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@react-native-vector-icons/ionicons';
 import IconSetList from './IconSetList';
 import IconList from './IconList';
 

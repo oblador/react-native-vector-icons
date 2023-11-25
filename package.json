@@ -5,19 +5,24 @@
     "packages/*"
   ],
   "scripts": {
+    "prepare": "yarn workspaces foreach --all run prepare",
     "build": "tsc -b packages",
     "clean": "tsc -b packages --clean",
     "format": "prettier index.js *.md {bin,lib,directory,Examples}/**/*.js --write",
     "test": "yarn workspaces foreach run test"
   },
   "devDependencies": {
+    "eslint-config-airbnb-typescript": "^17.1.0",
     "typescript": "^5.2.2"
   },
   "eslintConfig": {
     "root": true,
     "extends": [
       "@react-native",
-      "prettier"
+      "airbnb",
+      "airbnb-typescript",
+      "prettier",
+      "plugin:import/typescript"
     ],
     "rules": {
       "no-unused-vars": "off",
@@ -33,7 +38,12 @@
           "trailingComma": "es5",
           "useTabs": false
         }
-      ]
+      ],
+      "react/function-component-definition": "off",
+      "FIXME: Something wrong above": "off",
+      "import/prefer-default-export": "off",
+      "react/jsx-props-no-spreading": "off",
+      "react/require-default-props": "off"
     }
   },
   "eslintIgnore": [

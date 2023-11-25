@@ -13,10 +13,11 @@
     "@react-native-vector-icons/common": "^0",
     "@react-native-vector-icons/evilicons": "^0",
     "@react-native-vector-icons/fontawesome": "^0",
+    "@react-native-vector-icons/fontawesome5": "^0",
+    "@react-native-vector-icons/fontawesome6": "^0",
     "@react-native-vector-icons/fontisto": "^0",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
-    "ramda": "^0.29.1",
     "react": "18.2.0",
     "react-native": "0.72.6",
     "react-native-animatable": "^1.4.0",
@@ -36,6 +37,11 @@
     "metro-react-native-babel-preset": "0.76.8",
     "react-test-renderer": "18.2.0",
     "typescript": "5.2.2"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "project": "./packages/IconExplorer/tsconfig.json"
+    }
   },
   "engines": {
     "node": ">=16"
