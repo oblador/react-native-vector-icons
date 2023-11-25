@@ -4,7 +4,10 @@ import EvilIcons from '@react-native-vector-icons/evilicons';
 // import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 // import FontAwesome5 from '@react-native-vector-icons/fontawesome5/FontAwesome5';
-import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
+import {
+  FontAwesome6,
+  FontAwesome6Pro,
+} from '@react-native-vector-icons/fontawesome6';
 import Fontisto from '@react-native-vector-icons/fontisto';
 // import Foundation from 'react-native-vector-icons/Foundation';
 // import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -21,6 +24,8 @@ import FontAwesomeGlyphs from '@react-native-vector-icons/fontawesome/glyphmaps/
 // import FontAwesome5Glyphs from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5Free.json';
 import FontAwesome6Glyphs from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6Free.json';
 import FontAwesome6Meta from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6Free_meta.json';
+import FontAwesome6ProGlyphs from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6Pro.json';
+import FontAwesome6ProMeta from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6Pro_meta.json';
 import FontistoGlyphs from '@react-native-vector-icons/fontisto/glyphmaps/Fontisto.json';
 // import FoundationGlyphs from 'react-native-vector-icons/glyphmaps/Foundation.json';
 // import IoniconsGlyphs from 'react-native-vector-icons/glyphmaps/Ionicons.json';
@@ -71,6 +76,12 @@ const iconSets = [
     component: FontAwesome6,
     glyphNames: groupGlyphNames(FontAwesome6Glyphs),
     meta: FontAwesome6Meta,
+  },
+  {
+    name: 'FontAwesome6Pro',
+    component: FontAwesome6Pro,
+    glyphNames: groupGlyphNames(FontAwesome6ProGlyphs),
+    meta: FontAwesome6ProMeta,
   },
   {
     name: 'Fontisto',

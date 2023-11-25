@@ -1,5 +1,5 @@
 {
-  "brands": [
+  "brand": [
     "42-group",
     "500px",
     "accessible-icon",
@@ -13749,7 +13749,7 @@
     "yin-yang",
     "z"
   ],
-  "sharp-light": [
+  "sharpLight": [
     "0",
     "00",
     "1",
@@ -17063,7 +17063,7 @@
     "yin-yang",
     "z"
   ],
-  "sharp-regular": [
+  "sharp": [
     "0",
     "00",
     "1",
@@ -20377,7 +20377,7 @@
     "yin-yang",
     "z"
   ],
-  "sharp-solid": [
+  "sharpSolid": [
     "0",
     "00",
     "1",

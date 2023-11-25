@@ -17,7 +17,7 @@ const argv = yargs
     t: {
       alias: 'template',
       type: 'string',
-      default: path.resolve(__dirname, '..', 'templates/bundled-icon-set.tpl'),
+      default: path.resolve(__dirname, '../../../templates/bundled-icon-set.tpl'),
       describe: 'Template in JS template string format',
     },
     o: {

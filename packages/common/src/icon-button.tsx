@@ -10,7 +10,7 @@ import {
   type TouchableNativeFeedbackProps,
 } from 'react-native';
 import { pick, omit } from './object-utils';
-import type { IconProps } from 'react-native-vector-icons';
+import type { IconProps } from './create-icon-set';
 
 const styles = StyleSheet.create({
   container: {
