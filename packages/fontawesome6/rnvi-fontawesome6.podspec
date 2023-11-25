@@ -19,5 +19,11 @@ Pod::Spec.new do |s|
   # s.resource_bundles = {
   #   'RNVI_FontAwesome6' => ['fonts/*.ttf'],
   # }
+
+  spec.script_phase = {
+    :name => 'Copy Font Awesome Pro Fonts',
+    :script => 'cp -R ${SRCROOT}/assets/fonts ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/',
+    :execution_position => :before_compile,
+  }
 end
 
