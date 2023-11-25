@@ -167,6 +167,26 @@ export const createFA6iconSet = <
     }
   };
 
+  Icon.loadFont = async (file?: string) => {
+    if (file) {
+      return SolidIcon.loadFont(file);
+    }
+
+    // TODO: Should we have an API here that allows for specific fonts to be loaded?
+    // Maybe pass iconTypeName in or hace a loadAll?
+    await Promise.all([
+      ThinIcon.loadFont(),
+      LightIcon.loadFont(),
+      RegularIcon.loadFont(),
+      SolidIcon.loadFont(),
+      SharpLightIcon.loadFont(),
+      SharpIcon.loadFont(),
+      SharpSolidIcon.loadFont(),
+      DuotoneIcon.loadFont(),
+      BrandIcon.loadFont(),
+    ]);
+  }
+
   return Icon;
 };
 

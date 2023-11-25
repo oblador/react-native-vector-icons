@@ -9,4 +9,6 @@ import metadata from '../glyphmaps/FontAwesome6Free_meta.json';
 
 const Icon = createFA6iconSet(metadata, false);
 
+Icon.loadFont();
+
 export default Icon;

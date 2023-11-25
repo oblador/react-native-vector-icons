@@ -21,3 +21,6 @@
 * Is fallbackFamily worth the complexity? Is it better to show no icon than a wrong icon? Maybe with a console warning?
 * I've simplified create multi significantly to make the types work more easily, we could probably go back the other way but will need someone to help with type magic
 * Do we keep the old default entry points for FA6 and friends or just use { }
+* loadFont
+  * Should we have a better API for fontawesome6
+  * should we error if font missing back to javascript
