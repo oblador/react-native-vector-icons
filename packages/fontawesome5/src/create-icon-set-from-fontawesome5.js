@@ -1,5 +1,5 @@
 import { Platform } from 'react-native';
-import createMultiStyleIconSet from './create-multi-style-icon-set';
+import { createMultiStyleIconSet } from '@react-native-vector-icons/common';
 
 const FA5Style = {
   regular: 'regular',
@@ -60,6 +60,7 @@ function createFA5iconSet(glyphMap, metadata = {}, pro = false) {
   const regularIcons = createFontAwesomeStyle('Regular', '400');
   const solidIcons = createFontAwesomeStyle('Solid', '900');
   const Icon = createMultiStyleIconSet(
+    ['brand', 'light', 'regular', 'solid'],
     {
       brand: brandIcons,
       light: lightIcons,

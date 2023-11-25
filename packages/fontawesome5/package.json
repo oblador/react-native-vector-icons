@@ -1,9 +1,27 @@
 {
   "name": "@react-native-vector-icons/fontawesome5",
-  "description": "FOntawesome font for react native vector icons",
+  "description": "Fontawesome 5 font for react native vector icons",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "version": "0.0.1",
   "dependencies": {
     "@react-native-vector-icons/common": "^0"
+  },
+  "devDependencies": {
+    "del-cli": "^5.1.0",
+    "react-native-builder-bob": "^0.23.1",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "clean": "del-cli android/build ios/build lib",
+    "prepare": "bob build"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   },
   "bin": {
     "fa-upgrade5.sh": "./bin/fa-upgrade5.sh"
@@ -62,6 +80,20 @@
   },
   "engines": {
     "node": ">= 18.0.0"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
+    ]
   },
   "packageManager": "yarn@4.0.1"
 }
