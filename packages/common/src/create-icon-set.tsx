@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { forwardRef, type Ref } from 'react';
+
 import {
   Platform,
   PixelRatio,
@@ -10,27 +11,21 @@ import {
 
 import ensureNativeModuleAvailable from './ensure-native-module-available';
 import createIconSourceCache from './create-icon-source-cache';
-import createIconButtonComponent from './icon-button';
+// import createIconButtonComponent from './icon-button';
 import NativeIconAPI from './NativeVectorIcons';
 
 export const DEFAULT_ICON_SIZE = 12;
 export const DEFAULT_ICON_COLOR = 'black';
 
-// type CreateIconSetProps = (
-//   glyphMap: Record<string, number>,
-//   fontFamily: string,
-//   fontFile: string,
-//   fontStyle: TextProps['style']
-// );
-
 export type IconProps<T> = TextProps & {
   name: T;
   size?: number;
   color?: TextStyle['color'];
+  innerRef?: Ref<Text>;
 };
 
-export const createIconSet = <T extends Record<string, number>>(
-  glyphMap: T,
+export const createIconSet = <GM extends Record<string, number>>(
+  glyphMap: GM,
   fontFamily: string,
   fontFile: string,
   fontStyle?: TextProps['style']
@@ -47,7 +42,7 @@ export const createIconSet = <T extends Record<string, number>>(
     default: fontFamily,
   });
 
-  const resolveGlyph = (name: string) => {
+  const resolveGlyph = (name: keyof GM) => {
     const glyph = glyphMap[name] || '?';
 
     if (typeof glyph === 'number') {
@@ -64,8 +59,9 @@ export const createIconSet = <T extends Record<string, number>>(
     style,
     children,
     allowFontScaling = false,
+    innerRef,
     ...props
-  }: IconProps<keyof T>) => {
+  }: IconProps<keyof GM>) => {
     const glyph = name ? resolveGlyph(name as string) : '';
 
     const styleDefaults = {
@@ -87,18 +83,20 @@ export const createIconSet = <T extends Record<string, number>>(
 
     // TODO: Why do we disable selectability?
     return (
-      <Text selectable={false} {...newProps}>
+      <Text ref={innerRef} selectable={false} {...newProps}>
         {glyph}
         {children}
       </Text>
     );
   };
 
+  const WrappedIcon = forwardRef<Text, IconProps<keyof typeof glyphMap>>((props, ref) => <Icon innerRef={ref} {...props} />);
+  WrappedIcon.displayName = 'Icon';
+
   const imageSourceCache = createIconSourceCache();
 
-  const getImageSourceBase = async (
-    sync: boolean,
-    name: string,
+  const getImageSourceSync = (
+    name: keyof GM,
     size = DEFAULT_ICON_SIZE,
     color = DEFAULT_ICON_COLOR
   ) => {
@@ -114,19 +112,14 @@ export const createIconSet = <T extends Record<string, number>>(
     }
 
     try {
-      const imagePath = sync
-        ? NativeIconAPI.getImageForFontSync(
-            fontReference,
-            glyph,
-            size,
-            processedColor as number // FIXME what if a non existant colour was passed in?
-          )
-        : await NativeIconAPI.getImageForFont(
-            fontReference,
-            glyph,
-            size,
-            processedColor as number // FIXME what if a non existant colour was passed in?
-          );
+      const imagePath =
+        NativeIconAPI.getImageForFontSync(
+          fontReference,
+          glyph,
+          size,
+          processedColor as number // FIXME what if a non existant colour was passed in?
+        );
+      console.debug('MOO', imagePath);
       const value = { uri: imagePath, scale: PixelRatio.get() };
       imageSourceCache.setValue(cacheKey, value);
       return value;
@@ -136,17 +129,37 @@ export const createIconSet = <T extends Record<string, number>>(
     }
   };
 
-  const getImageSourceSync = async (
-    name: string,
-    size = DEFAULT_ICON_SIZE,
-    color = DEFAULT_ICON_COLOR
-  ) => getImageSourceBase(true, name, size, color);
-
   const getImageSource = async (
-    name: string,
+    name: keyof GM,
     size = DEFAULT_ICON_SIZE,
     color = DEFAULT_ICON_COLOR
-  ) => getImageSourceBase(false, name, size, color);
+  ) => {
+    ensureNativeModuleAvailable();
+
+    const glyph = resolveGlyph(name);
+    const processedColor = processColor(color);
+    const cacheKey = `${glyph}:${size}:${String(processedColor)}`;
+
+    if (imageSourceCache.has(cacheKey)) {
+      // FIXME: Should this check if it's an error and throw it again?
+      return imageSourceCache.get(cacheKey);
+    }
+
+    try {
+      const imagePath = await NativeIconAPI.getImageForFont(
+        fontReference,
+        glyph,
+        size,
+        processedColor as number // FIXME what if a non existant colour was passed in?
+      );
+      const value = { uri: imagePath, scale: PixelRatio.get() };
+      imageSourceCache.setValue(cacheKey, value);
+      return value;
+    } catch (error) {
+      imageSourceCache.setError(cacheKey, error as Error);
+      throw error;
+    }
+  };
 
   const loadFont = async (file = fontFile) => {
     if (Platform.OS !== 'ios') {
@@ -157,10 +170,12 @@ export const createIconSet = <T extends Record<string, number>>(
     if (!file) {
       throw new Error('Unable to load font, because no file was specified.');
     }
+
     const [filename, extension] = file.split('.'); // FIXME: what if filename has two dots?
     if (!extension) {
       throw new Error('Font needs a filename extensison.');
     }
+
     await NativeIconAPI.loadFontWithFileName(filename!, extension);
   };
 
@@ -171,13 +186,14 @@ export const createIconSet = <T extends Record<string, number>>(
 
   const getFontFamily = () => fontReference;
 
-  Icon.Button = createIconButtonComponent<Extract<keyof T, string>>(Icon);
-  Icon.getImageSource = getImageSource;
-  Icon.getImageSourceSync = getImageSourceSync;
-  Icon.loadFont = loadFont;
-  Icon.hasIcon = hasIcon;
-  Icon.getRawGlyphMap = getRawGlyphMap;
-  Icon.getFontFamily = getFontFamily;
+  const IconNamespace = Object.assign(WrappedIcon, {
+    getImageSource: getImageSource,
+    getImageSourceSync: getImageSourceSync,
+    loadFont: loadFont,
+    hasIcon: hasIcon,
+    getRawGlyphMap: getRawGlyphMap,
+    getFontFamily: getFontFamily,
+  });
 
-  return Icon;
+  return IconNamespace;
 };
