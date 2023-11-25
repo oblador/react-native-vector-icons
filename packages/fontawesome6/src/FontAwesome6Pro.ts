@@ -7,6 +7,8 @@ import { createFA6iconSet } from './create-icon-set-from-fontawesome6';
 
 import metadata from '../glyphmaps/FontAwesome6Pro_meta.json';
 
-const iconSet = createFA6iconSet(metadata, true);
+const Icon = createFA6iconSet(metadata, true);
 
-export default iconSet;
+Icon.loadFont();
+
+export default Icon;
