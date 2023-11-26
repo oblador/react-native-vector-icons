@@ -30,6 +30,13 @@ const argv = yargs
       type: 'string',
       describe: 'Save glyphmap JSON to file',
     },
+    m: {
+      alias: 'mode',
+      type: 'string',
+      describe: 'Create from css or codepoints',
+      choices: ['css', 'codepoints'],
+      default: 'css',
+    },
   })
   .usage(
     'Usage: $0 [options] path/to/styles.css \nFor default template please provide --componentName and --fontFamily'
@@ -50,6 +57,7 @@ const data = omit(
 const content = generateIconSetFromCss(
   argv._ as string[],
   argv.p,
+  argv.m as 'css' | 'codepoints',
   template,
   data
 );
@@ -61,5 +69,5 @@ if (argv.o) {
 }
 
 if (argv.g) {
-  fs.writeFileSync(argv.g, generateIconSetFromCss(argv._ as string[], argv.p));
+  fs.writeFileSync(argv.g, generateIconSetFromCss(argv._ as string[], argv.p, argv.m as 'css' | 'codepoints'));
 }
