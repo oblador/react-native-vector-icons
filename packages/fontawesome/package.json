@@ -1,12 +1,12 @@
 {
   "name": "@react-native-vector-icons/fontawesome",
   "description": "Font Awesome font for react native vector icons",
+  "version": "0.0.1",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "version": "0.0.1",
   "dependencies": {
     "@react-native-vector-icons/common": "^0"
   },
@@ -16,14 +16,14 @@
     "react-native-builder-bob": "^0.23.1",
     "typescript": "^5.2.2"
   },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
     "prepare": "bob build",
     "update": "scripts/update.sh"
-  },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
   },
   "bin": {
     "fa-upgrade.sh": "./bin/fa-upgrade.sh"
@@ -62,7 +62,7 @@
     "vector",
     "retina",
     "font",
-    "antdesign"
+    "fontawesome"
   ],
   "author": {
     "name": "Joel Arvidsson",
