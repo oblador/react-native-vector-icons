@@ -4470,7 +4470,6 @@ __metadata:
   bin:
     fontcustom: ./lib/commonjs/bin/fontcustom.js
     generate-icon: ./lib/commonjs/bin/generate-icon.js
-    svg-object-to-path: ./lib/commonjs/bin/svg-object-to-path.js
   languageName: unknown
   linkType: soft
 
@@ -4629,6 +4628,21 @@ __metadata:
   dependencies:
     "@mdi/font": "npm:^6.5.95"
     "@react-native-vector-icons/common": "npm:^0"
+  languageName: unknown
+  linkType: soft
+
+"@react-native-vector-icons/matrialcommunityicons@workspace:packages/materialcommunityicons":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/matrialcommunityicons@workspace:packages/materialcommunityicons"
+  dependencies:
+    "@mdi/font": "npm:^6.5.95"
+    "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
