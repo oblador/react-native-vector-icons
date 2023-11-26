@@ -1,15 +1,15 @@
+import React, { useCallback, useLayoutEffect } from 'react';
 import './App.css';
-
-/* eslint-disable react/prop-types, jsx-a11y/label-has-associated-control */
-import * as React from 'react';
 
 import IconFamilies from './generated/glyphmapIndex.json';
 
 const WAITING_INTERVAL = 300;
 
-const Icon = React.memo(({ family, name, ...props }) => (
+type Match = { family: string, names: string[] };
+
+const Icon = React.memo(({ family, name, ...props }: { family: string, name: string } & React.HTMLProps<HTMLSpanElement>) => (
   <span style={{ fontFamily: family }} {...props}>
-    {String.fromCodePoint(IconFamilies[family][name])}
+    {String.fromCodePoint(IconFamilies[family as keyof typeof IconFamilies][name as keyof ((typeof IconFamilies)[keyof typeof IconFamilies])])}
   </span>
 ));
 
@@ -40,24 +40,29 @@ const HeaderBar = () => {
   );
 };
 
-const SearchBar = ({ onSubmit }) => {
-  const inputRef = React.useRef();
-  const timerRef = React.useRef(null);
+const SearchBar = ({ onSubmit }: { onSubmit: (text?: string) => void }) => {
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const handleSubmit = React.useCallback(
-    (e) => {
+    (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      onSubmit(inputRef.current.value);
+
+      if (inputRef.current?.value) {
+        onSubmit(inputRef.current.value);
+      }
     },
     [inputRef, onSubmit]
   );
 
   const handleChange = React.useCallback(
-    (e) => {
+    (e: React.ChangeEvent<HTMLInputElement>) => {
       e.preventDefault();
-      clearInterval(timerRef.current);
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
 
       timerRef.current = setTimeout(
-        () => onSubmit(inputRef.current.value),
+        () => onSubmit(inputRef.current?.value),
         WAITING_INTERVAL
       );
     },
@@ -86,25 +91,22 @@ const SearchBar = ({ onSubmit }) => {
   );
 };
 
-const renderIcon = (family, name) => (
+const renderIcon = (family: string, name: string) => (
   <div className="Result-Icon-Container" key={name}>
     <Icon family={family} name={name} className="Result-Icon" />
     <h4 className="Result-Icon-Name">{name}</h4>
   </div>
 );
 
-const renderMatch = (match) => {
-  const { family, names } = match;
-  return (
-    <div className="Result-Row" key={family}>
-      <h2 className="Result-Title" id={family}>{family}</h2>
+const renderMatch = ({ family, names }: Match) => (
+  <div className="Result-Row" key={family}>
+    <h2 className="Result-Title" id={family}>{family}</h2>
 
-      <div className="Result-List">
-        {names.map((name) => renderIcon(family, name))}
-      </div>
+    <div className="Result-List">
+      {names.map((name) => renderIcon(family, name))}
     </div>
-  );
-};
+  </div>
+);
 
 const renderNotFound = () => (
   <div className="Result-Row">
@@ -112,11 +114,11 @@ const renderNotFound = () => (
   </div>
 );
 
-const getMatches = (query) =>
+const getMatches = (query: string) =>
   Object.keys(IconFamilies)
     .sort()
     .map((family) => {
-      const icons = IconFamilies[family];
+      const icons = IconFamilies[family as keyof typeof IconFamilies];
       const names = Object.keys(icons);
       const results = names.filter((name) => name.indexOf(query) >= 0);
       return { family, names: results };
@@ -124,11 +126,11 @@ const getMatches = (query) =>
     .filter(({ names }) => names.length);
 
 const App = () => {
-  const [matches, setMatches] = React.useState([]);
-  const handleSubmit = React.useCallback((text) => {
+  const [matches, setMatches] = React.useState<Match[]>([]);
+  const handleSubmit = useCallback((text: string = '') => {
     setMatches(getMatches(text));
-  });
-  React.useLayoutEffect(() => handleSubmit(''), []);
+  }, []);
+  useLayoutEffect(() => handleSubmit(''), [handleSubmit]);
 
   return (
     <div className="App">

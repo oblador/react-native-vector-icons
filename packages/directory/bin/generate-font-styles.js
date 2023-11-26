@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
 const path = require('path');
+const { globSync } = require('glob');
 
 const customFontMap = {
   'FontAwesome5_Solid.ttf': 'FontAwesome5',
@@ -10,14 +10,13 @@ const customFontMap = {
   'FontAwesome6_Brands.ttf': 'FontAwesome6Brands',
 };
 
-const fontDirectory = path.resolve(__dirname, '../../Fonts');
-const fontExtension = '.ttf';
-const styles = fs
-  .readdirSync(fontDirectory)
-  .filter((f) => path.extname(f) === fontExtension)
+const fontFiles = globSync('src/generated/fonts/*.ttf');
+
+const styles = fontFiles
+  .map((file) => path.basename(file))
   .map((file) => ({
     file,
-    fontFamily: customFontMap[file] || path.basename(file, fontExtension),
+    fontFamily: customFontMap[file] || path.basename(file, '.ttf'),
   }))
   .map(
     ({ file, fontFamily }) => `
