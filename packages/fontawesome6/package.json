@@ -7,7 +7,6 @@
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "version": "0.0.1",
   "dependencies": {
     "@react-native-vector-icons/common": "^0"
   },

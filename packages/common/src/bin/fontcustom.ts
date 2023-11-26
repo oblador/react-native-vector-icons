@@ -8,15 +8,13 @@ const { uid, gid } = os.userInfo();
 const args = [
   'run',
   '--rm',
-  '--volume',
-  `${process.cwd()}:/app/project`,
-  '--volume',
-  `${process.cwd()}/../../node_modules:/app/node_modules`,
-  '--user',
-  `${uid}:${gid}`,
-  'telor/fontcustom-worker',
-  'fontcustom',
+  `--volume=${process.cwd()}:/project`,
+  `--volume=${process.cwd()}/../../node_modules:/project/node_modules`,
+  `--user=${uid}:${gid}`,
+  'karel3d/fontcustom',
   ...process.argv.slice(2),
 ];
 
-spawnSync('docker', args, { stdio: 'inherit' });
+const { status } = spawnSync('docker', args, { stdio: 'inherit' });
+
+process.exit(status || 0);
