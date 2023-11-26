@@ -1,19 +1,22 @@
 #!/usr/bin/env node
 
-import { spawn } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
+import os from 'node:os';
+
+const { uid, gid } = os.userInfo();
 
 const args = [
   'run',
   '--rm',
   '--volume',
-  '$(pwd):/app/project',
+  `${process.cwd()}:/app/project`,
   '--volume',
-  '$(pwd)/../../node_modules:/app/node_modules',
+  `${process.cwd()}/../../node_modules:/app/node_modules`,
   '--user',
-  '$(id -u):$(id -g)',
+  `${uid}:${gid}`,
   'telor/fontcustom-worker',
   'fontcustom',
   ...process.argv.slice(2),
 ];
 
-spawn('docker', args);
+spawnSync('docker', args, { stdio: 'inherit' });

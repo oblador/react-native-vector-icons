@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 set -e
 
@@ -12,12 +12,12 @@ fontcustom compile ../node_modules/evil-icons/assets/icons \
   --no-hash
 
 generate-icon $TEMP_DIR/EvilIcons.css \
-  --prefix=.icon-ei- \
-  --componentName=EvilIcons \
-  --fontFamily=EvilIcons \
-  --template=../common/templates/separated-icon-set.tpl \
-  --glyphmap=glyphmaps/EvilIcons.json \
-  > index.tsx
+  --prefix .icon-ei- \
+  --componentName EvilIcons \
+  --fontFamily EvilIcons \
+  --template ../common/templates/separated-icon-set.tpl \
+  --glyphmap glyphmaps/EvilIcons.json \
+  > src/index.tsx
 
 cp $TEMP_DIR/EvilIcons.ttf fonts
 

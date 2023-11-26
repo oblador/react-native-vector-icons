@@ -1,6 +1,7 @@
 {
   "name": "@react-native-vector-icons/fontawesome6",
   "description": "Font Awesome 6 font for react native vector icons",
+  "version": "0.0.1",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
