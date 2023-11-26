@@ -27,3 +27,4 @@
 * Fix duplcation in upgrade scripts for fontawesome
 * Support fontello
 * Support icomoon
+* Should we leave upstream names on the icons
