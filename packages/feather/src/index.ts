@@ -11,5 +11,5 @@ const Icon = createIconSet(glyphMap, 'Feather', 'Feather.ttf');
 Icon.loadFont();
 
 export default Icon;
-export const { Button, getImageSource, getImageSourceSync } = Icon;
+export const { getImageSource, getImageSourceSync } = Icon;
 

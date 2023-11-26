@@ -20,7 +20,7 @@ generate-icon $TEMP_DIR/Feather.css \
   --fontFamily Feather \
   --template ../common/templates/separated-icon-set.tpl \
   --glyphmap glyphmaps/Feather.json \
-  > src/index.tsx
+  > src/index.ts
 
 mv $TEMP_DIR/Feather.ttf fonts
 

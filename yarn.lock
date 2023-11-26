@@ -4495,7 +4495,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/entypo@workspace:packages/entypo":
+"@react-native-vector-icons/entypo@npm:^0, @react-native-vector-icons/entypo@workspace:packages/entypo":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/entypo@workspace:packages/entypo"
   dependencies:
@@ -4515,11 +4515,17 @@ __metadata:
   resolution: "@react-native-vector-icons/evilicons@workspace:packages/evilicons"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
     evil-icons: "npm:^1.10.1"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/feather@workspace:packages/feather":
+"@react-native-vector-icons/feather@npm:^0, @react-native-vector-icons/feather@workspace:packages/feather":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/feather@workspace:packages/feather"
   dependencies:
@@ -4599,7 +4605,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/foundation@workspace:packages/foundation":
+"@react-native-vector-icons/foundation@npm:^0, @react-native-vector-icons/foundation@workspace:packages/foundation":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/foundation@workspace:packages/foundation"
   dependencies:
@@ -4614,7 +4620,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/ionicons@workspace:packages/ionicons":
+"@react-native-vector-icons/ionicons@npm:^0, @react-native-vector-icons/ionicons@workspace:packages/ionicons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/ionicons@workspace:packages/ionicons"
   dependencies:
@@ -4630,7 +4636,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/materialicons@workspace:packages/materialicons":
+"@react-native-vector-icons/materialcommunityicons@npm:^0, @react-native-vector-icons/materialcommunityicons@workspace:packages/materialcommunityicons":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/materialcommunityicons@workspace:packages/materialcommunityicons"
+  dependencies:
+    "@mdi/font": "npm:^6.5.95"
+    "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-native-vector-icons/materialicons@npm:^0, @react-native-vector-icons/materialicons@workspace:packages/materialicons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/materialicons@workspace:packages/materialicons"
   dependencies:
@@ -4645,22 +4666,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/matrialcommunityicons@workspace:packages/materialcommunityicons":
-  version: 0.0.0-use.local
-  resolution: "@react-native-vector-icons/matrialcommunityicons@workspace:packages/materialcommunityicons"
-  dependencies:
-    "@mdi/font": "npm:^6.5.95"
-    "@react-native-vector-icons/common": "npm:^0"
-    del-cli: "npm:^5.1.0"
-    react-native-builder-bob: "npm:^0.23.1"
-    typescript: "npm:^5.2.2"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  languageName: unknown
-  linkType: soft
-
-"@react-native-vector-icons/octicons@workspace:packages/octicons":
+"@react-native-vector-icons/octicons@npm:^0, @react-native-vector-icons/octicons@workspace:packages/octicons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/octicons@workspace:packages/octicons"
   dependencies:
@@ -4676,7 +4682,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/simplelineicons@workspace:packages/simplelineicons":
+"@react-native-vector-icons/simplelineicons@npm:^0, @react-native-vector-icons/simplelineicons@workspace:packages/simplelineicons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/simplelineicons@workspace:packages/simplelineicons"
   dependencies:
@@ -4691,7 +4697,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/zocial@workspace:packages/zocial":
+"@react-native-vector-icons/zocial@npm:^0, @react-native-vector-icons/zocial@workspace:packages/zocial":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/zocial@workspace:packages/zocial"
   dependencies:
@@ -6429,11 +6435,20 @@ __metadata:
     "@babel/runtime": "npm:^7.23.2"
     "@react-native-vector-icons/antdesign": "npm:^0"
     "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/entypo": "npm:^0"
     "@react-native-vector-icons/evilicons": "npm:^0"
+    "@react-native-vector-icons/feather": "npm:^0"
     "@react-native-vector-icons/fontawesome": "npm:^0"
     "@react-native-vector-icons/fontawesome5": "npm:^0"
     "@react-native-vector-icons/fontawesome6": "npm:^0"
     "@react-native-vector-icons/fontisto": "npm:^0"
+    "@react-native-vector-icons/foundation": "npm:^0"
+    "@react-native-vector-icons/ionicons": "npm:^0"
+    "@react-native-vector-icons/materialcommunityicons": "npm:^0"
+    "@react-native-vector-icons/materialicons": "npm:^0"
+    "@react-native-vector-icons/octicons": "npm:^0"
+    "@react-native-vector-icons/simplelineicons": "npm:^0"
+    "@react-native-vector-icons/zocial": "npm:^0"
     "@react-native/metro-config": "npm:^0.72.11"
     "@react-navigation/native": "npm:^6.1.9"
     "@react-navigation/native-stack": "npm:^6.9.17"
