@@ -26,3 +26,4 @@
   * should we error if font missing back to javascript
 * Fix duplcation in upgrade scripts for fontawesome
 * Support fontello
+* Support icomoon

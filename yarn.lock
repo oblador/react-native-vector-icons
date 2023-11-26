@@ -49,6 +49,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@assemblyscript/loader@npm:^0.10.1":
+  version: 0.10.1
+  resolution: "@assemblyscript/loader@npm:0.10.1"
+  checksum: 70bd0c9dc4f63d5d2b3b9d94239507320623b1bd83fc758306e64a6fe616c8e589586edcaeb92772bbf3c6379233f26d9c1b4830d23ddba64fd1d922a47577d5
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.16.0, @babel/code-frame@npm:^7.22.13, @babel/code-frame@npm:^7.8.3":
   version: 7.22.13
   resolution: "@babel/code-frame@npm:7.22.13"
@@ -4604,7 +4611,14 @@ __metadata:
   resolution: "@react-native-vector-icons/ionicons@workspace:packages/ionicons"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
     ionicons: "npm:^7.1.0"
+    oslllo-svg-fixer: "npm:^3.0.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -7432,7 +7446,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base64-js@npm:^1.1.2, base64-js@npm:^1.3.1":
+"base64-js@npm:^1.1.2, base64-js@npm:^1.2.0, base64-js@npm:^1.3.1":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
   checksum: f23823513b63173a001030fae4f2dabe283b99a9d324ade3ad3d148e218134676f1ee8568c877cd79ec1c53158dcf2d2ba527a97c606618928ba99dd930102bf
@@ -8078,6 +8092,15 @@ __metadata:
   dependencies:
     string-width: "npm:^4.2.3"
   checksum: ea3185f74f984baf0fa7ace1830b2dd41ea86d4e0a10a7eeda0f5cda24407cd2994d6622f9ea67cd0b9adfb7c1f7f66240b2d73aa3cfd5be87602522d86d03eb
+  languageName: node
+  linkType: hard
+
+"cli-progress@npm:^3.12.0":
+  version: 3.12.0
+  resolution: "cli-progress@npm:3.12.0"
+  dependencies:
+    string-width: "npm:^4.2.3"
+  checksum: f464cb19ebde2f3880620a2adfaeeefaec6cb15c8e610c8a659ca1047ee90d69f3bf2fdabbb1fe33ac408678e882e3e0eecdb84ab5df0edf930b269b8a72682d
   languageName: node
   linkType: hard
 
@@ -10962,7 +10985,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0, fast-glob@npm:^3.3.1":
   version: 3.3.2
   resolution: "fast-glob@npm:3.3.2"
   dependencies:
@@ -12048,6 +12071,24 @@ __metadata:
   dependencies:
     function-bind: "npm:^1.1.2"
   checksum: 5d415b114f410661208c95e7ab4879f1cc2765b8daceff4dc8718317d1cb7b9ffa7c5d1eafd9a4389c9aab7445d6ea88e05f3096cb1e529618b55304956b87fc
+  languageName: node
+  linkType: hard
+
+"hdr-histogram-js@npm:^2.0.1":
+  version: 2.0.3
+  resolution: "hdr-histogram-js@npm:2.0.3"
+  dependencies:
+    "@assemblyscript/loader": "npm:^0.10.1"
+    base64-js: "npm:^1.2.0"
+    pako: "npm:^1.0.3"
+  checksum: 98c41264a086e57a56ec021283c211bec6aa456b4ade088ed9b7553f1632b1d33113b8399206f241c154bba47da86fa46786a04bde6637d0f4261530db279e5e
+  languageName: node
+  linkType: hard
+
+"hdr-histogram-percentiles-obj@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "hdr-histogram-percentiles-obj@npm:3.0.0"
+  checksum: 7b1c90b01bdee22da3b6e1f95fdbe186ceb6875a53340c3615f6e9899ee5d4bc6624a0fe67a15b0e59ccddca8d3b835911214285a77fa22a04cf64c9e3d64d39
   languageName: node
   linkType: hard
 
@@ -16427,6 +16468,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nice-napi@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "nice-napi@npm:1.0.2"
+  dependencies:
+    node-addon-api: "npm:^3.0.0"
+    node-gyp: "npm:latest"
+    node-gyp-build: "npm:^4.2.2"
+  conditions: "!os=win32"
+  languageName: node
+  linkType: hard
+
 "no-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "no-case@npm:3.0.4"
@@ -16448,6 +16500,15 @@ __metadata:
   version: 3.1.1
   resolution: "node-abort-controller@npm:3.1.1"
   checksum: f7ad0e7a8e33809d4f3a0d1d65036a711c39e9d23e0319d80ebe076b9a3b4432b4d6b86a7fab65521de3f6872ffed36fc35d1327487c48eb88c517803403eda3
+  languageName: node
+  linkType: hard
+
+"node-addon-api@npm:^3.0.0":
+  version: 3.2.1
+  resolution: "node-addon-api@npm:3.2.1"
+  dependencies:
+    node-gyp: "npm:latest"
+  checksum: 41f21c9d12318875a2c429befd06070ce367065a3ef02952cfd4ea17ef69fa14012732f510b82b226e99c254da8d671847ea018cad785f839a5366e02dd56302
   languageName: node
   linkType: hard
 
@@ -16496,6 +16557,17 @@ __metadata:
   version: 1.3.1
   resolution: "node-forge@npm:1.3.1"
   checksum: e882819b251a4321f9fc1d67c85d1501d3004b4ee889af822fd07f64de3d1a8e272ff00b689570af0465d65d6bf5074df9c76e900e0aff23e60b847f2a46fbe8
+  languageName: node
+  linkType: hard
+
+"node-gyp-build@npm:^4.2.2":
+  version: 4.7.1
+  resolution: "node-gyp-build@npm:4.7.1"
+  bin:
+    node-gyp-build: bin.js
+    node-gyp-build-optional: optional.js
+    node-gyp-build-test: build-test.js
+  checksum: b8e4a3f889237cd08edde3775e2b4e1e39a0571580584e33e29979f0c532a254ce3c5ec9435bd526254ad0b3f0b4a7e7fe14e53bd400f6ea9445f3bfd88a6b1e
   languageName: node
   linkType: hard
 
@@ -16981,6 +17053,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"oslllo-svg-fixer@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "oslllo-svg-fixer@npm:3.0.0"
+  dependencies:
+    ansi-colors: "npm:^4.1.3"
+    cli-progress: "npm:^3.12.0"
+    fast-glob: "npm:^3.3.1"
+    oslllo-potrace: "npm:^2.0.1"
+    oslllo-svg2: "npm:^2.0.2"
+    oslllo-validator: "npm:^3.1.0"
+    piscina: "npm:^4.1.0"
+    yargs: "npm:^16.2.0"
+  bin:
+    oslllo-svg-fixer: src/cli.js
+  checksum: ba4fb43fef27c53c2aecb7341b8c3b41f4778fc7174d6affcf107f16ade45eebb0705f665c88bab9fcde845c93aab83b614df299badf49d2ecda407d2eab5334
+  languageName: node
+  linkType: hard
+
 "oslllo-svg2@npm:^2.0.2":
   version: 2.0.2
   resolution: "oslllo-svg2@npm:2.0.2"
@@ -17153,7 +17243,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pako@npm:^1.0.5":
+"pako@npm:^1.0.3, pako@npm:^1.0.5":
   version: 1.0.11
   resolution: "pako@npm:1.0.11"
   checksum: 86dd99d8b34c3930345b8bbeb5e1cd8a05f608eeb40967b293f72fe469d0e9c88b783a8777e4cc7dc7c91ce54c5e93d88ff4b4f060e6ff18408fd21030d9ffbe
@@ -17409,6 +17499,20 @@ __metadata:
   version: 4.0.6
   resolution: "pirates@npm:4.0.6"
   checksum: 00d5fa51f8dded94d7429700fb91a0c1ead00ae2c7fd27089f0c5b63e6eca36197fe46384631872690a66f390c5e27198e99006ab77ae472692ab9c2ca903f36
+  languageName: node
+  linkType: hard
+
+"piscina@npm:^4.1.0":
+  version: 4.2.0
+  resolution: "piscina@npm:4.2.0"
+  dependencies:
+    hdr-histogram-js: "npm:^2.0.1"
+    hdr-histogram-percentiles-obj: "npm:^3.0.0"
+    nice-napi: "npm:^1.0.2"
+  dependenciesMeta:
+    nice-napi:
+      optional: true
+  checksum: b74043fe56d7a5ebfd28d90fd0369be1b1180ecce82e8c77b5b40867abb1b7ed6b4143549877afe245a86f4d4d758e1d9d3a2e5a899f7d45eb27d3979ab56317
   languageName: node
   linkType: hard
 
