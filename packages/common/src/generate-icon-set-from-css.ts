@@ -1,5 +1,22 @@
 import fs from 'fs';
 
+ const extractGlyphMapFromCodepoints = (fileName: string) => {
+   const codepoints = fs
+     .readFileSync(fileName, { encoding: 'utf8' })
+     .split('\n');
+
+   const glyphMap: Record<string, number> = {};
+
+   codepoints.forEach((point) => {
+     const parts = point.split(' ');
+     if (parts[0] && parts[1]) {
+       glyphMap[parts[0].replace(/_/g, '-')] = parseInt(parts[1], 16);
+     }
+   });
+
+   return glyphMap;
+ }
+
 const extractGlyphMapFromCss = (files: string[], selectorPattern: string) => {
   const styleRulePattern =
     '(\\.[A-Za-z0-9_.:, \\n\\t-]+)\\{[^}]*content: ?["\\\'](?:\\\\([A-Fa-f0-9]+)|([^"\\\']+))["\\\'][^}]*\\}';
@@ -66,13 +83,14 @@ const escapeRegExp = (str: string) =>
 export const generateIconSetFromCss = (
   cssFiles: string[],
   selectorPrefix: string,
+  mode: 'css' | 'codepoints' = 'css',
   template?: string,
   data = {}
 ) => {
-  const glyphMap = extractGlyphMapFromCss(
+  const glyphMap = mode === 'css' ? extractGlyphMapFromCss(
     cssFiles,
     `${escapeRegExp(selectorPrefix)}([A-Za-z0-9_-]+)::?before`
-  );
+  ) : extractGlyphMapFromCodepoints(cssFiles[0]!);
 
   const content = JSON.stringify(glyphMap, null, '  ');
 

@@ -3918,6 +3918,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-design-icons/font@npm:^0.14.13":
+  version: 0.14.13
+  resolution: "@material-design-icons/font@npm:0.14.13"
+  checksum: 0ce541e7b8ad2b56fcdda1d609e4d0956021c1fe85c921f48728c527a766bb3895f90ce62051de91671b21aa1d7f7eb65e691a7e8e28efb5d132366bee1e70c2
+  languageName: node
+  linkType: hard
+
 "@mdi/font@npm:^6.5.95":
   version: 6.9.96
   resolution: "@mdi/font@npm:6.9.96"
@@ -4469,6 +4476,7 @@ __metadata:
     react-native: "*"
   bin:
     fontcustom: ./lib/commonjs/bin/fontcustom.js
+    fontforge: ./lib/commonjs/bin/fontforge.js
     generate-icon: ./lib/commonjs/bin/generate-icon.js
   languageName: unknown
   linkType: soft
@@ -4626,8 +4634,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/materialicons@workspace:packages/materialicons"
   dependencies:
-    "@mdi/font": "npm:^6.5.95"
+    "@material-design-icons/font": "npm:^0.14.13"
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 

@@ -1,11 +1,29 @@
 {
   "name": "@react-native-vector-icons/materialicons",
-  "description": "Antdesign font for react native vector icons",
+  "description": "Material Icons font for react native vector icons",
   "version": "0.0.1",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "dependencies": {
     "@react-native-vector-icons/common": "^0"
   },
   "devDependencies": {
+    "@material-design-icons/font": "^0.14.13",
+    "del-cli": "^5.1.0",
+    "react-native-builder-bob": "^0.23.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "scripts": {
+    "clean": "del-cli android/build ios/build lib",
+    "prepare": "bob build",
+    "update": "scripts/update.sh"
   },
   "files": [
     "src",
@@ -41,7 +59,7 @@
     "vector",
     "retina",
     "font",
-    "antdesign"
+    "materialicons"
   ],
   "author": {
     "name": "Joel Arvidsson",
@@ -61,6 +79,20 @@
   },
   "engines": {
     "node": ">= 18.0.0"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
+    ]
   },
   "packageManager": "yarn@4.0.1"
 }
