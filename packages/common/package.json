@@ -26,8 +26,9 @@
     "!**/.*"
   ],
   "bin": {
-    "fontcustom": "./lib/commonjs/bin/fontcustom",
-    "generate-icon": "./lib/commonjs/bin/generate-icon.js"
+    "fontcustom": "./lib/commonjs/bin/fontcustom.js",
+    "generate-icon": "./lib/commonjs/bin/generate-icon.js",
+    "svg-object-to-path": "./lib/commonjs/bin/svg-object-to-path.js"
   },
   "scripts": {
     "test": "eslint index.js {bin,lib}/*.js",

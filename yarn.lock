@@ -4412,6 +4412,12 @@ __metadata:
   resolution: "@react-native-vector-icons/antdesign@workspace:packages/antdesign"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -4455,8 +4461,9 @@ __metadata:
     react: "*"
     react-native: "*"
   bin:
-    fontcustom: ./lib/commonjs/bin/fontcustom
+    fontcustom: ./lib/commonjs/bin/fontcustom.js
     generate-icon: ./lib/commonjs/bin/generate-icon.js
+    svg-object-to-path: ./lib/commonjs/bin/svg-object-to-path.js
   languageName: unknown
   linkType: soft
 
@@ -4503,7 +4510,13 @@ __metadata:
   resolution: "@react-native-vector-icons/feather@workspace:packages/feather"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
     feather-icons: "npm:^4.28.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
