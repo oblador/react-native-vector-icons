@@ -3,7 +3,10 @@ import AntD from '@react-native-vector-icons/antdesign';
 import EvilIcons from '@react-native-vector-icons/evilicons';
 // import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
-// import FontAwesome5 from '@react-native-vector-icons/fontawesome5/FontAwesome5';
+import {
+  FontAwesome5,
+  FontAwesome5Pro,
+} from '@react-native-vector-icons/fontawesome5';
 import {
   FontAwesome6,
   FontAwesome6Pro,
@@ -20,8 +23,11 @@ import AntDGlyphs from '@react-native-vector-icons/antdesign/glyphmaps/AntDesign
 // import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo.json';
 import EvilIconsGlyphs from '@react-native-vector-icons/evilicons/glyphmaps/EvilIcons.json';
 // import FeatherGlyphs from 'react-native-vector-icons/glyphmaps/Feather.json';
+import FontAwesome5Glyphs from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5Free.json';
+import FontAwesome5Meta from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5Free_meta.json';
+import FontAwesome5ProGlyphs from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5Pro.json';
+import FontAwesome5ProMeta from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5Pro_meta.json';
 import FontAwesomeGlyphs from '@react-native-vector-icons/fontawesome/glyphmaps/FontAwesome.json';
-// import FontAwesome5Glyphs from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5Free.json';
 import FontAwesome6Glyphs from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6Free.json';
 import FontAwesome6Meta from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6Free_meta.json';
 import FontAwesome6ProGlyphs from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6Pro.json';
@@ -35,10 +41,6 @@ import FontistoGlyphs from '@react-native-vector-icons/fontisto/glyphmaps/Fontis
 // import SimpleLineIconsGlyphs from 'react-native-vector-icons/glyphmaps/SimpleLineIcons.json';
 // import ZocialGlyphs from 'react-native-vector-icons/glyphmaps/Zocial.json';
 import React from 'react';
-
-const a = <AntD name="down" />;
-const b = <FontAwesome name="hourglass" />;
-const c = <FontAwesome6 iconTypeName="solid" name='' />;
 
 const groupGlyphNames = (glyphMap: Record<string, number>) => {
   const result: Record<number, string[]> = {};
@@ -66,11 +68,18 @@ const iconSets = [
     component: FontAwesome,
     glyphNames: groupGlyphNames(FontAwesomeGlyphs),
   },
-  // {
-  //   name: 'FontAwesome5',
-  //   component: FontAwesome5,
-  //   glyphNames: groupGlyphNames(FontAwesome5Glyphs),
-  // },
+  {
+    name: 'FontAwesome5',
+    component: FontAwesome5,
+    glyphNames: groupGlyphNames(FontAwesome5Glyphs),
+    meta: FontAwesome5Meta,
+  },
+  {
+    name: 'FontAwesome5Pro',
+    component: FontAwesome5Pro,
+    glyphNames: groupGlyphNames(FontAwesome5ProGlyphs),
+    meta: FontAwesome5ProMeta,
+  },
   {
     name: 'FontAwesome6',
     component: FontAwesome6,

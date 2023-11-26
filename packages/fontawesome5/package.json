@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome5",
-  "description": "Fontawesome 5 font for react native vector icons",
+  "description": "Font Awesome 5 font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -17,7 +17,8 @@
   },
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
-    "prepare": "bob build"
+    "prepare": "bob build",
+    "update": "scripts/update.sh"
   },
   "peerDependencies": {
     "react": "*",

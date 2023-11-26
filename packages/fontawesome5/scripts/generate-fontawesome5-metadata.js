@@ -19,12 +19,23 @@ const { argv } = yargs
 
 const path = `${argv.path}/svgs/`;
 
+const mapFamily = (family) => {
+  switch (family) {
+    case 'brands':
+      return 'brand';
+    default:
+      return family;
+  }
+};
+
 const generatedJSON = {};
 fs.readdirSync(path)
   .filter((file) => fs.statSync(path + file).isDirectory())
   .forEach((file) => {
     const icons = fs.readdirSync(path + file);
-    generatedJSON[file] = icons.map((icon) => icon.split('.')[0]);
+    const name = mapFamily(file);
+
+    generatedJSON[name] = icons.map((icon) => icon.split('.')[0]);
   });
 
 fs.writeFileSync(
@@ -32,3 +43,20 @@ fs.writeFileSync(
   `${JSON.stringify(generatedJSON, null, 2)}\r\n`,
   'utf8'
 );
+
+const glyphMaps = {};
+const iconTypes = Object.keys(generatedJSON);
+const mainMapFilename = argv.output.replace('_meta', '');
+const mainMap = JSON.parse(fs.readFileSync(mainMapFilename, 'utf8'));
+
+iconTypes.forEach((iconType) => {
+  const glyphs = generatedJSON[iconType];
+  glyphMaps[iconType] = {};
+  glyphs.forEach((glyph) => { glyphMaps[iconType][glyph] = mainMap[glyph]; });
+
+  fs.writeFileSync(
+    argv.output.replace('_meta', `_${iconType}`),
+    JSON.stringify(glyphMaps[iconType]),
+    'utf8'
+  );
+});
