@@ -11,4 +11,4 @@ const Icon = createIconSet(glyphMap, '${fontFamily}', '${componentName}.ttf');
 Icon.loadFont();
 
 export default Icon;
-export const { Button, getImageSource, getImageSourceSync } = Icon;
+export const { getImageSource, getImageSourceSync } = Icon;

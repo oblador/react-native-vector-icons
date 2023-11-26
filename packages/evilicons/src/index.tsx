@@ -4,12 +4,12 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
-import glyphMap from './glyphmaps/EvilIcons.json';
+import glyphMap from '../glyphmaps/EvilIcons.json';
 
 const Icon = createIconSet(glyphMap, 'EvilIcons', 'EvilIcons.ttf');
 
 Icon.loadFont();
 
 export default Icon;
-export const { Button, getImageSource, getImageSourceSync } = Icon;
+export const { getImageSource, getImageSourceSync } = Icon;
 
