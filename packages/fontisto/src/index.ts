@@ -4,7 +4,7 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
-import glyphMap from './glyphmaps/Fontisto.json';
+import glyphMap from '../glyphmaps/Fontisto.json';
 
 const Icon = createIconSet(glyphMap, 'Fontisto', 'Fontisto.ttf');
 

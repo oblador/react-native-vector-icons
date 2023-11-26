@@ -4574,7 +4574,13 @@ __metadata:
   resolution: "@react-native-vector-icons/fontisto@workspace:packages/fontisto"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
     fontisto: "npm:^3.0.4"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
