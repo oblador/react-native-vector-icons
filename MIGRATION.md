@@ -25,3 +25,4 @@
   * Should we have a better API for fontawesome6
   * should we error if font missing back to javascript
 * Fix duplcation in upgrade scripts for fontawesome
+* Support fontello
