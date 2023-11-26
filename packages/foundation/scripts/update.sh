@@ -1,10 +1,13 @@
-#!/bin/bash -e
+#!/bin/bash
 
-node bin/generate-icon bower_components/foundation-icon-fonts/foundation-icons.css \
-  --prefix=.fi- \
-  --componentName=Foundation \
-  --fontFamily=fontcustom \
-  --template=templates/separated-icon-set.tpl \
-  --glyphmap=glyphmaps/Foundation.json \
-  > Foundation.js
-cp bower_components/foundation-icon-fonts/foundation-icons.ttf Fonts/Foundation.ttf
+set -e
+
+generate-icon ../../node_modules/foundation-icon-fonts/foundation-icons.css \
+  --prefix .fi- \
+  --componentName Foundation \
+  --fontFamily fontcustom \
+  --template ../common/templates/separated-icon-set.tpl \
+  --glyphmap glyphmaps/Foundation.json \
+  > src/index.ts
+
+cp ../../node_modules/foundation-icon-fonts/foundation-icons.ttf fonts/Foundation.ttf
