@@ -4519,6 +4519,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^0"
     del-cli: "npm:^5.1.0"
     feather-icons: "npm:^4.28.0"
+    oslllo-svg-fixer: "npm:^3.0.0"
     react-native-builder-bob: "npm:^0.23.1"
     typescript: "npm:^5.2.2"
   peerDependencies:

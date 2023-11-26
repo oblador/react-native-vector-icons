@@ -5,10 +5,8 @@ set -e
 TEMP_DIR=$(mktemp -q -d -t rnvi.XXX -p .)
 
 mkdir -p $TEMP_DIR/svg
-cp ../../node_modules/feather-icons/dist/icons/*.svg $TEMP_DIR/svg
 
-# The most icons fail compile with "Some fragments did not join" if not converted to plain paths
-svg-object-to-path "$TEMP_DIR/svg/*.svg"
+oslllo-svg-fixer -s ../../node_modules/feather-icons/dist/icons -d $TEMP_DIR/svg
 
 fontcustom compile $TEMP_DIR/svg \
   --output $TEMP_DIR \
