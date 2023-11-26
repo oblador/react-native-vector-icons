@@ -58,7 +58,7 @@ const mainMap = JSON.parse(fs.readFileSync(mainMapFilename, 'utf8'));
 iconTypes.forEach((iconType) => {
   const glyphs = generatedJSON[iconType];
   glyphMaps[iconType] = {};
-  glyphs.forEach((glyph) => { glyphMaps[iconType][glyph] = mainMap[glyph] ; });
+  glyphs.forEach((glyph) => { glyphMaps[iconType][glyph] = mainMap[glyph]; });
 
   fs.writeFileSync(
     argv.output.replace('_meta', `_${iconType}`),
