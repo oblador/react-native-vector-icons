@@ -4,7 +4,7 @@ set -e
 
 TEMP_DIR=$(mktemp -q -d -t rnvi.XXX -p .)
 
-fontcustom compile ../node_modules/@entypo-icons/core/icons \
+fontcustom compile node_modules/@entypo-icons/core/icons \
   --output $TEMP_DIR \
   --name Entypo \
   --templates css \
@@ -16,7 +16,7 @@ generate-icon $TEMP_DIR/Entypo.css \
   --fontFamily Entypo \
   --template ../common/templates/separated-icon-set.tpl \
   --glyphmap glyphmaps/Entypo.json \
-  > src/index.tsx
+  > src/index.ts
 
 cp $TEMP_DIR/Entypo.ttf fonts
 

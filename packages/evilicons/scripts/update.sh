@@ -4,7 +4,7 @@ set -e
 
 TEMP_DIR=$(mktemp -q -d -t rnvi.XXX -p .)
 
-fontcustom compile ../node_modules/evil-icons/assets/icons \
+fontcustom compile node_modules/evil-icons/assets/icons \
   --output $TEMP_DIR \
   --name EvilIcons \
   --templates css \

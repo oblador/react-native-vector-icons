@@ -1,5 +1,5 @@
 {
-  "name": "@react-native-vector-icons/matrialcommunityicons",
+  "name": "@react-native-vector-icons/materialcommunityicons",
   "description": "Material Community Icons font for react native vector icons",
   "version": "0.0.1",
   "main": "lib/commonjs/index",
