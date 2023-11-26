@@ -4666,6 +4666,13 @@ __metadata:
   dependencies:
     "@primer/octicons": "npm:^16.3.1"
     "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    oslllo-svg-fixer: "npm:^3.0.0"
+    react-native-builder-bob: "npm:^0.23.1"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
