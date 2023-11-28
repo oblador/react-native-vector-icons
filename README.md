@@ -298,7 +298,12 @@ If no style argument is passed (or if it's invalid) the methods will default to 
 
 ### `createIconSet(glyphMap, fontFamily[, fontFile])`
 
-Returns your own custom font based on the `glyphMap` where the key is the icon name and the value is either a UTF-8 character or it's character code. `fontFamily` is the name of the font **NOT** the filename. Open the font in Font Book.app or similar to learn the name. Optionally pass the third `fontFile` argument for android support, it should be the custom font file name.
+Returns your own custom font based on the `glyphMap` where the key is the icon
+name and the value is either a UTF-8 character or it's character code.
+`fontFamily` is the name of the font **NOT** the filename. Open the font in
+Font Book.app or similar to learn the name. Optionally pass the third
+`fontFile` argument for android support, it should be the custom font file
+name.
 
 ```js
 import { createIconSet } from 'react-native-vector-icons';
@@ -308,7 +313,10 @@ const Icon = createIconSet(glyphMap, 'FontName', 'font-name.ttf');
 
 ### `createIconSetFromFontello(config[, fontFamily[, fontFile]])`
 
-Convenience method to create a custom font based on a [fontello](http://fontello.com) config file. Don't forget to import the font as described above and drop the `config.json` somewhere convenient in your project.
+Convenience method to create a custom font based on a
+[fontello](http://fontello.com) config file. Don't forget to import the font as
+described above and drop the `config.json` somewhere convenient in your
+project.
 
 ```js
 import { createIconSetFromFontello } from 'react-native-vector-icons';
@@ -328,7 +336,10 @@ const Icon = createIconSetFromIcoMoon(
 );
 ```
 
-Make sure you're using the _Download_ option in [IcoMoon](https://icomoon.io/app), and use the `.json` file that's included in the `.zip` you've downloaded. You'll also need to import the `.ttf` font file into your project, following the instructions above.
+Make sure you're using the _Download_ option in
+[IcoMoon](https://icomoon.io/app), and use the `.json` file that's included in
+the `.zip` you've downloaded. You'll also need to import the `.ttf` font file
+into your project, following the instructions above.
 
 ### `createMultiStyleIconSet(styles [, options])`
 
