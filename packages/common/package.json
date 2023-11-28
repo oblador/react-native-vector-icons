@@ -31,31 +31,8 @@
     "generate-icon": "./lib/commonjs/bin/generate-icon.js"
   },
   "scripts": {
-    "test": "eslint index.js {bin,lib}/*.js",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
-    "prepare": "bob build",
-    "release": "release-it",
-    "format": "prettier index.js *.md {bin,lib,directory,Examples}/**/*.js --write",
-    "prepublish": "npm run build-web",
-    "build": "./scripts/build-icons.sh",
-    "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps",
-    "build-antd": "./scripts/antdesign.sh",
-    "build-entypo": "./scripts/entypo.sh",
-    "build-evilicons": "./scripts/evilicons.sh",
-    "build-fontawesome": "./scripts/fontawesome.sh",
-    "build-fontawesome5": "./scripts/fontawesome5.sh",
-    "build-fontawesome6": "./scripts/fontawesome6.sh",
-    "build-fontisto": "./scripts/fontisto.sh",
-    "build-feather": "./scripts/feather.sh",
-    "build-foundation": "./scripts/foundation.sh",
-    "build-ionicons": "./scripts/ionicons.sh",
-    "build-materialicons": "./scripts/materialicons.sh",
-    "build-materialcommunityicons": "./scripts/materialcommunityicons.sh",
-    "build-octicons": "./scripts/octicons.sh",
-    "build-zocial": "./scripts/zocial.sh",
-    "build-simplelineicons": "./scripts/simplelineicons.sh"
+    "prepare": "bob build"
   },
   "keywords": [
     "react-native",
