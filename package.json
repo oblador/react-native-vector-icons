@@ -10,6 +10,13 @@
     "clean": "tsc -b packages --clean",
     "format": "prettier index.js *.md {bin,lib,directory,Examples}/**/*.js --write",
     "test": "yarn workspaces foreach run test"
+
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
+    "release": "release-it",
+    "format": "prettier **/*.{ts,tsx} --write",
+    "build": "yarn workspaces foreach --all run build",
+    "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps",
   },
   "devDependencies": {
     "eslint-config-airbnb-typescript": "^17.1.0",

@@ -24,7 +24,7 @@
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
     "prepare": "bob build",
-    "update": "scripts/update.sh"
+    "build": "scripts/update.sh"
   },
   "files": [
     "src",
@@ -44,6 +44,7 @@
     "!**/.*"
   ],
   "keywords": [
+    "react-native-vector-icons-icon",
     "react-native",
     "ios",
     "android",
