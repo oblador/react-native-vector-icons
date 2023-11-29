@@ -11,10 +11,10 @@
     "@react-native-vector-icons/common": "^0"
   },
   "devDependencies": {
-    "@mdi/font": "^6.5.95",
+    "@mdi/font": "^7.3.67",
     "del-cli": "^5.1.0",
-    "react-native-builder-bob": "^0.23.1",
-    "typescript": "^5.2.2"
+    "react-native-builder-bob": "^0.23.2",
+    "typescript": "^5.3.2"
   },
   "peerDependencies": {
     "react": "*",

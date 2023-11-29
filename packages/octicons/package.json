@@ -11,11 +11,11 @@
     "@react-native-vector-icons/common": "^0"
   },
   "devDependencies": {
-    "@primer/octicons": "^16.3.1",
+    "@primer/octicons": "^19.8.0",
     "del-cli": "^5.1.0",
     "oslllo-svg-fixer": "^3.0.0",
-    "react-native-builder-bob": "^0.23.1",
-    "typescript": "^5.2.2"
+    "react-native-builder-bob": "^0.23.2",
+    "typescript": "^5.3.2"
   },
   "peerDependencies": {
     "react": "*",
