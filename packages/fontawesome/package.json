@@ -13,8 +13,8 @@
   "devDependencies": {
     "del-cli": "^5.1.0",
     "font-awesome": "^4.7.0",
-    "react-native-builder-bob": "^0.23.1",
-    "typescript": "^5.2.2"
+    "react-native-builder-bob": "^0.23.2",
+    "typescript": "^5.3.2"
   },
   "peerDependencies": {
     "react": "*",
