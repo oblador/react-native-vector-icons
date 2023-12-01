@@ -74,12 +74,12 @@ if (isNewArchitectureEnabled()) {
 /**
  * Register font asset source folder
  */
-android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/ReactNativeVectorIconsFontawesome")
+android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/ReactNativeVectorIconsFontAwesome")
 
 // Define the copy task
 task copyFiles(type: Copy) {
     from '../../../../node_modules/@react-native-vector-icons/fontawesome/fonts'
-    into "$buildDir/intermediates/ReactNativeVectorIconsFontawesome/fonts"
+    into "$buildDir/intermediates/ReactNativeVectorIconsFontAwesome/fonts"
 }
 
 // Make sure the task runs before the build

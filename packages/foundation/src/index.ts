@@ -4,7 +4,7 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
-import glyphMap from '../glyphmaps/Foundation.json';
+import glyphMap from '../glyphmaps/foundation.json';
 
 const Icon = createIconSet(glyphMap, 'fontcustom', 'Foundation.ttf');
 

@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "prepare": "yarn workspaces foreach --all run prepare",
-    "build": "yarn workspaces foreach --all run build",
+    "build": "scripts/build.sh #yarn workspaces foreach --all run build",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
     "format": "prettier **/*.{ts,tsx} --write",
     "test": "yarn workspaces foreach run test",
