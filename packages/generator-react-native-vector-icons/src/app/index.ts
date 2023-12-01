@@ -2,6 +2,8 @@ import Generator from 'yeoman-generator';
 
 interface TemplateData {
   packageName: string,
+  namespace: string,
+
   name?: string,
   shortName?: string,
   className?: string,
@@ -14,6 +16,8 @@ export default class extends Generator {
     if (!templateData.packageName) {
       throw new Error('packageName is required');
     }
+
+    templateData.namespace ||= templateData.packageName.replaceAll('-', '_');
 
     //   name: name || iconName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join(' '),
     //   iconName,
