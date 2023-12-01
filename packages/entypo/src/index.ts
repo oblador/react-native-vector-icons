@@ -4,7 +4,7 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
-import glyphMap from '../glyphmaps/Entypo.json';
+import glyphMap from '../glyphmaps/entypo.json';
 
 const Icon = createIconSet(glyphMap, 'Entypo', 'Entypo.ttf');
 

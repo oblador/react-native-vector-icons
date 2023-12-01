@@ -15,6 +15,10 @@
     "react-native-builder-bob": "^0.23.2",
     "typescript": "^5.3.2"
   },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
     "prepare": "bob build",
@@ -62,7 +66,7 @@
     "vector",
     "retina",
     "font",
-    "antdesign"
+    "fontawesome6"
   ],
   "author": {
     "name": "Joel Arvidsson",

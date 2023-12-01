@@ -66,7 +66,7 @@ dependencies {
 if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
-    libraryName = "VectorIcons"
+    libraryName = "FeatherVectorIcons"
     codegenJavaPackageName = "com.oblador.vectoricons.feather"
   }
 }
