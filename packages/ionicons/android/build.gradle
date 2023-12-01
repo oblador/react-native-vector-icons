@@ -66,7 +66,7 @@ dependencies {
 if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
-    libraryName = "VectorIcons"
+    libraryName = "IoniconsVectorIcons"
     codegenJavaPackageName = "com.oblador.vectoricons.ionicons"
   }
 }
