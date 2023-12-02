@@ -13,7 +13,8 @@ interface Data {
   className: string,
   fontName: string,
   fontFile: string,
-  dependencies: Record<string, string>,
+  packageJSON: Record<string, Record<string, string>>,
+  customReadme?: boolean,
   buildSteps: {
     fixSVGPaths?: {
       location: string,
@@ -27,6 +28,9 @@ interface Data {
       location?: string,
       prefix?: string,
       cleanup?: boolean,
+    },
+    copyFont?: {
+      location: string,
     },
   },
 }
@@ -95,7 +99,6 @@ export default class extends Generator<Arguments> {
       ],
       'babel.config.js',
       'package.json',
-      'README.md',
       [
         'rnvi-packageName.podspec',
         `rnvi-${data.packageName}.podspec`,
@@ -104,6 +107,10 @@ export default class extends Generator<Arguments> {
       'tsconfig.json',
       'turbo.json',
     ];
+
+    if (!data.customReadme) {
+      files.push('README.md');
+    }
 
     files.forEach((file) => {
       if (typeof file === 'string') {
@@ -129,8 +136,9 @@ export default class extends Generator<Arguments> {
 
     const packageFile = this.destinationPath('package.json');
     const packageJSON = JSON.parse(fs.readFileSync(packageFile, 'utf8'));
-
-    packageJSON.devDependencies = { ...packageJSON.devDependencies, ...data.dependencies };
+    Object.entries(data.packageJSON).forEach(([key, value]) => {
+      packageJSON[key] = { ...packageJSON[key], ...value };
+    });
 
     fs.writeFileSync(packageFile, JSON.stringify(packageJSON, null, 2));
   }
@@ -141,6 +149,8 @@ export default class extends Generator<Arguments> {
     this._buildFontCustom();
 
     this._buildGlyphmap();
+
+    this._copyFont();
   }
 
   _fixSVGPaths() {
@@ -209,6 +219,17 @@ export default class extends Generator<Arguments> {
     if (glyphmap.cleanup) {
       fs.rmSync(location);
     }
+  }
+
+  _copyFont() {
+    const data = this.data;
+
+    const { copyFont } = this.data.buildSteps;
+    if (!copyFont) {
+      return;
+    }
+
+    fs.cpSync(copyFont.location, `fonts/${data.fontFile}.ttf`);
   }
 
   _data() {
