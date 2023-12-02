@@ -15,8 +15,12 @@ interface Data {
   fontFile: string,
   dependencies: Record<string, string>,
   buildSteps: {
+    fixSVGPaths?: {
+      location: string,
+    },
     fontCustom?: {
       location: string,
+      cleanup?: boolean,
     },
     glyphmap?: {
       mode: 'css' | 'codepoints',
@@ -41,6 +45,9 @@ export default class extends Generator<Arguments> {
 
   writing() {
     this._writeTemplates();
+  }
+
+  install() {
     this._writePackageJSON();
     this._buildSteps();
   }
@@ -122,17 +129,37 @@ export default class extends Generator<Arguments> {
     const packageFile = this.destinationPath('package.json');
     const packageJSON = JSON.parse(fs.readFileSync(packageFile, 'utf8'));
 
-    packageJSON.dependencies = { ...packageJSON.dependencies, ...data.dependencies };
+    packageJSON.devDependencies = { ...packageJSON.devDependencies, ...data.dependencies };
 
     fs.writeFileSync(packageFile, JSON.stringify(packageJSON, null, 2));
   }
 
   _buildSteps() {
+    this._fixSVGPaths();
+
     this._buildFontCustom();
 
     this._buildGlyphmap();
   }
 
+  _fixSVGPaths() {
+    const { fixSVGPaths } = this.data.buildSteps;
+    if (!fixSVGPaths) {
+      return;
+    }
+
+    fs.mkdirSync('fixedSvg');
+
+    const { status } = spawnSync('../../node_modules/.bin/oslllo-svg-fixer', [
+      '-s', `../../${fixSVGPaths.location}`,
+      '-d', 'fixedSvg',
+    ], { stdio: 'inherit' });
+
+    if (status !== 0) {
+      throw new Error(`oslllo-svg-fixer exited with status ${status}`);
+    }
+
+  }
   _buildFontCustom() {
     const data = this.data;
 
@@ -152,11 +179,16 @@ export default class extends Generator<Arguments> {
 
     this._docker('karel3d/fontcustom', args);
 
+    fs.mkdirSync('fonts', { recursive: true });
     fs.renameSync(`${data.className}/${data.className}.ttf`, `fonts/${data.className}.ttf`);
     fs.renameSync(`${data.className}/${data.className}.css`, `${data.className}.css`);
 
     fs.rmSync(data.className, { recursive: true });
     fs.rmSync('.fontcustom-manifest.json');
+
+    if (fontCustom.cleanup) {
+      fs.rmSync(fontCustom.location, { recursive: true });
+    }
   }
 
   _buildGlyphmap() {
@@ -169,6 +201,7 @@ export default class extends Generator<Arguments> {
 
     const json = generateGlyphmap(glyphmap.mode, [glyphmap.location]);
 
+    fs.mkdirSync('glyphmaps', { recursive: true });
     fs.writeFileSync(`glyphmaps/${data.fontFile}.json`, json);
 
     if (glyphmap.cleanup) {
