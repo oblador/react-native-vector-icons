@@ -24,10 +24,6 @@
     "prepare": "bob build",
     "build": "scripts/update.sh"
   },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
   "bin": {
     "fa-upgrade6.sh": "./bin/fa-upgrade6.sh"
   },

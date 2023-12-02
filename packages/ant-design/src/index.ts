@@ -4,7 +4,7 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
-import glyphMap from '../glyphmaps/ant_design.json';
+import glyphMap from '../glyphmaps/AntDesign.json';
 
 const Icon = createIconSet(glyphMap, 'AntDesign', 'AntDesign.ttf');
 
@@ -12,4 +12,3 @@ Icon.loadFont();
 
 export default Icon;
 export const { getImageSource, getImageSourceSync } = Icon;
-

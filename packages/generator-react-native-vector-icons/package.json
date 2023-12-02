@@ -12,6 +12,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
+    "oslllo-svg-fixer": "^3.0.0",
     "yeoman-generator": "^1.0.0"
   },
   "devDependencies": {
