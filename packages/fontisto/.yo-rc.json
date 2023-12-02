@@ -1,0 +1,20 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontisto",
+    "packageJSON": {
+      "devDependencies": {
+        "fontisto": "^3.0.4"
+      }
+    },
+    "buildSteps": {
+      "glyphmap": {
+        "location": "../../node_modules/fontisto/css/fontisto/fontisto.css",
+        "mode": "css",
+        "prefix": ".fi-"
+      },
+      "copyFont": {
+        "location": "../../node_modules/fontisto/fonts/fontisto/fontisto.ttf"
+      }
+    }
+  }
+}
