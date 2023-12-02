@@ -23,6 +23,8 @@ const mapFamily = (family) => {
   switch (family) {
     case 'brands':
       return 'brand';
+    case 'sharp-thin':
+      return 'sharpThin';
     case 'sharp-light':
       return 'sharpLight';
     case 'sharp-regular':

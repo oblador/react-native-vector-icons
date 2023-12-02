@@ -8,6 +8,7 @@ import thinGlyphMap from '../glyphmaps/FontAwesome6Pro_thin.json';
 import lightGlyphMap from '../glyphmaps/FontAwesome6Pro.json';
 import regularGlyphMap from '../glyphmaps/FontAwesome6Free_regular.json';
 import solidGlyphMap from '../glyphmaps/FontAwesome6Free_solid.json';
+import sharpThinGlyphMap from '../glyphmaps/FontAwesome6Pro_sharpThin.json';
 import sharpLightGlyphMap from '../glyphmaps/FontAwesome6Pro_sharpLight.json';
 import sharpGlyphMap from '../glyphmaps/FontAwesome6Pro_sharp.json';
 import sharpSolidGlyphMap from '../glyphmaps/FontAwesome6Pro_sharpSolid.json';
@@ -59,6 +60,12 @@ export const createFA6iconSet = <
   const RegularIcon = createFontAwesomeStyle(regularGlyphMap, 'Regular', '400');
   const SolidIcon = createFontAwesomeStyle(solidGlyphMap, 'Solid', '900');
 
+  const SharpThinIcon = createFontAwesomeStyle(
+    sharpThinGlyphMap,
+    'Sharp_Thin',
+    '100',
+    'FontAwesome6Sharp'
+  );
   const SharpLightIcon = createFontAwesomeStyle(
     sharpLightGlyphMap,
     'Sharp_Light',
@@ -97,6 +104,7 @@ export const createFA6iconSet = <
     | ({ iconTypeName?: 'light' } & IconProps<keyof typeof lightGlyphMap>)
     | ({ iconTypeName?: 'regular' } & IconProps<keyof typeof regularGlyphMap>)
     | ({ iconTypeName?: 'solid' } & IconProps<keyof typeof solidGlyphMap>)
+    | ({ iconTypeName?: 'sharpThin' } & IconProps<keyof typeof sharpThinGlyphMap>)
     | ({ iconTypeName?: 'sharpLight' } & IconProps<keyof typeof sharpLightGlyphMap>)
     | ({ iconTypeName?: 'sharp' } & IconProps<keyof typeof sharpGlyphMap>)
     | ({ iconTypeName?: 'sharpSolid' } & IconProps<keyof typeof sharpSolidGlyphMap>)
@@ -129,6 +137,8 @@ export const createFA6iconSet = <
       case 'solid':
         return <SolidIcon {...props} />;
 
+      case 'sharpThin':
+        return <SharpThinIcon {...props} />;
       case 'sharpLight':
         return <SharpLightIcon {...props} />;
       case 'sharp':
@@ -164,6 +174,7 @@ export const createFA6iconSet = <
       RegularIcon.loadFont(),
       SolidIcon.loadFont(),
 
+      SharpThinIcon.loadFont(),
       SharpLightIcon.loadFont(),
       SharpIcon.loadFont(),
       SharpSolidIcon.loadFont(),
