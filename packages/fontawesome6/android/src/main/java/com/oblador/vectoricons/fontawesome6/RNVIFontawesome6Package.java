@@ -29,7 +29,7 @@ public class RNVIFontawesome6Package extends TurboReactPackage {
       final Map<String, ReactModuleInfo> moduleInfos = new HashMap<>();
       boolean isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
       moduleInfos.put(
-              AntDesignModule.NAME,
+              RNVIFontawesome6Module.NAME,
               new ReactModuleInfo(
                       RNVIFontawesome6Module.NAME,
                       RNVIFontawesome6Module.NAME,

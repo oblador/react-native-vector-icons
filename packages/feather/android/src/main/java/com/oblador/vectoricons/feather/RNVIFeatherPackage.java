@@ -29,7 +29,7 @@ public class RNVIFeatherPackage extends TurboReactPackage {
       final Map<String, ReactModuleInfo> moduleInfos = new HashMap<>();
       boolean isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
       moduleInfos.put(
-              AntDesignModule.NAME,
+              RNVIFeatherModule.NAME,
               new ReactModuleInfo(
                       RNVIFeatherModule.NAME,
                       RNVIFeatherModule.NAME,
