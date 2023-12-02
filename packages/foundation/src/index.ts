@@ -4,12 +4,11 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
-import glyphMap from '../glyphmaps/foundation.json';
+import glyphMap from '../glyphmaps/Foundation.json';
 
-const Icon = createIconSet(glyphMap, 'fontcustom', 'Foundation.ttf');
+const Icon = createIconSet(glyphMap, 'Foundation', 'Foundation.ttf');
 
 Icon.loadFont();
 
 export default Icon;
 export const { getImageSource, getImageSourceSync } = Icon;
-
