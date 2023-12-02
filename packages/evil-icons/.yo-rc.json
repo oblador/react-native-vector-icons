@@ -5,7 +5,7 @@
       "devDependencies": {
         "evil-icons": "^1.10.1"
       }
-    }
+    },
     "buildSteps": {
       "fontCustom": {
         "location": "node_modules/evil-icons/assets/icons"
