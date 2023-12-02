@@ -29,7 +29,7 @@ public class RNVIEvilIconsPackage extends TurboReactPackage {
       final Map<String, ReactModuleInfo> moduleInfos = new HashMap<>();
       boolean isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
       moduleInfos.put(
-              AntDesignModule.NAME,
+              RNVIEvilIconsModule.NAME,
               new ReactModuleInfo(
                       RNVIEvilIconsModule.NAME,
                       RNVIEvilIconsModule.NAME,

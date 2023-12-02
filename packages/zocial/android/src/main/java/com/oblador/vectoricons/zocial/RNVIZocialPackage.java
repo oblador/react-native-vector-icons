@@ -29,7 +29,7 @@ public class RNVIZocialPackage extends TurboReactPackage {
       final Map<String, ReactModuleInfo> moduleInfos = new HashMap<>();
       boolean isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
       moduleInfos.put(
-              AntDesignModule.NAME,
+              RNVIZocialModule.NAME,
               new ReactModuleInfo(
                       RNVIZocialModule.NAME,
                       RNVIZocialModule.NAME,

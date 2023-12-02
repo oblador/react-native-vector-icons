@@ -29,7 +29,7 @@ public class RNVIFoundationPackage extends TurboReactPackage {
       final Map<String, ReactModuleInfo> moduleInfos = new HashMap<>();
       boolean isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
       moduleInfos.put(
-              AntDesignModule.NAME,
+              RNVIFoundationModule.NAME,
               new ReactModuleInfo(
                       RNVIFoundationModule.NAME,
                       RNVIFoundationModule.NAME,
