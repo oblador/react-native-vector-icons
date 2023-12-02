@@ -119,7 +119,6 @@ export const createIconSet = <GM extends Record<string, number>>(
           size,
           processedColor as number // FIXME what if a non existant colour was passed in?
         );
-      console.debug('MOO', imagePath);
       const value = { uri: imagePath, scale: PixelRatio.get() };
       imageSourceCache.setValue(cacheKey, value);
       return value;
