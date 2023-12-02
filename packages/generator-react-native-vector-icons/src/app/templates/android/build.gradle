@@ -140,7 +140,7 @@ task copyFiles(type: Copy) {
     from "${nodeModulesDir}/@react-native-vector-icons/fontawesome5/fonts"
 <% if (customAssets) { %>
     from("${projectRoot}/../assets/fonts") {
-      include 'FontAwesome5_Pro_*.ttf'
+      include '<%= customAssets %>'
     }
 <% } %>
 
