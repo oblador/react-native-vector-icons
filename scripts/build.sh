@@ -10,7 +10,15 @@ for package in *; do
   fi
 
   cd $package
+
   rm -rf *
+
+  # For font awesome feels a bit hack
+  if [ -f .rnvi-git-restore ]; then
+    git restore bin src scripts README.md
+  fi
+
   yo react-native-vector-icons --force
+
   cd -
 done

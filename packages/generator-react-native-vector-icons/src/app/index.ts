@@ -16,6 +16,8 @@ interface Data {
   fontFile: string,
   packageJSON: Record<string, Record<string, string>>,
   customReadme?: boolean,
+  customSrc?: boolean,
+  customAssets?: boolean,
   buildSteps: {
     preScript?: {
       script: string,
@@ -30,12 +32,15 @@ interface Data {
     },
     glyphmap?: {
       mode: 'css' | 'codepoints',
-      location?: string,
+      location: string | [string, string][]
       prefix?: string,
       cleanup?: boolean,
     },
     copyFont?: {
-      location: string,
+      location: string | [string, string][]
+    },
+    postScript?: {
+      script: string,
     },
   },
 }
@@ -108,10 +113,13 @@ export default class extends Generator<Arguments> {
         'rnvi-packageName.podspec',
         `rnvi-${data.packageName}.podspec`,
       ],
-      'src/index.ts',
       'tsconfig.json',
       'turbo.json',
     ];
+
+    if (!data.customSrc) {
+      files.push('src/index.ts');
+    }
 
     if (!data.customReadme) {
       files.push('README.md');
@@ -154,6 +162,7 @@ export default class extends Generator<Arguments> {
     this._buildFontCustom();
     this._buildGlyphmap();
     this._copyFont();
+    this._postScript();
   }
 
   _preScript() {
@@ -247,17 +256,28 @@ export default class extends Generator<Arguments> {
       return;
     }
 
-    const location = glyphmap.location || `${data.className}.css`;
-    const json = generateGlyphmap(glyphmap.mode, [location], glyphmap.prefix)
+    let locations: [string, string][] = [];
+    if (!glyphmap.location) {
+      locations.push([`${data.className}.css`, data.fontFile]);
+    } else if (typeof glyphmap.location === 'string') {
+      locations.push([glyphmap.location, data.fontFile]);
+    } else {
+      locations = glyphmap.location;
+    }
 
     if (!fs.existsSync('glyphmaps')) {
       fs.mkdirSync('glyphmaps');
     }
-    fs.writeFileSync(`glyphmaps/${data.fontFile}.json`, json);
 
-    if (glyphmap.cleanup) {
-      fs.rmSync(location);
-    }
+    locations.forEach(([from, to]) => {
+      const json = generateGlyphmap(glyphmap.mode, [from], glyphmap.prefix)
+
+      fs.writeFileSync(`glyphmaps/${to}.json`, json);
+
+      if (glyphmap.cleanup) {
+        fs.rmSync(from);
+      }
+    });
   }
 
   _copyFont() {
@@ -268,9 +288,33 @@ export default class extends Generator<Arguments> {
       return;
     }
 
-    fs.cpSync(copyFont.location, `fonts/${data.fontFile}.ttf`);
+    let locations: [string, string][] = [];
+    if (typeof copyFont.location === 'string') {
+      locations.push([copyFont.location, data.fontFile]);
+      return;
+    } else {
+      locations = copyFont.location;
+    }
+
+    locations.forEach(([from, to]) => fs.cpSync(from, `fonts/${to}.ttf`));
   }
 
+  _postScript() {
+    const { postScript } = this.data.buildSteps;
+    if (!postScript) {
+      return;
+    }
+
+    const { status } = spawnSync('bash', [
+      '-c',
+      postScript.script
+    ], { stdio: 'inherit' });
+
+    if (status !== 0) {
+      throw new Error(`postScript exited with status ${status}`);
+    }
+
+  }
   _data() {
     // TODO: Use zod to vaidate the .yo-rc.json data
     const data = this.config.getAll() as Data;
@@ -283,6 +327,9 @@ export default class extends Generator<Arguments> {
     data.className ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
     data.fontName ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
     data.fontFile ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
+    data.customReadme ||= false;
+    data.customSrc ||= false;
+    data.customAssets ||= false;
 
     return data;
   }

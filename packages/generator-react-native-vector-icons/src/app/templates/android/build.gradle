@@ -111,14 +111,39 @@ if (isNewArchitectureEnabled()) {
   }
 }
 
+
+def findNodeModulesDir(directory) {
+    def nodeModulesDir = new File(directory, "node_modules")
+    if (nodeModulesDir.exists()) {
+        return nodeModulesDir
+    } else {
+        def parentDir = directory.parentFile
+        if (parentDir != null) {
+            return findNodeModulesDir(parentDir)
+        } else {
+            throw new GradleException("Could not find node_modules directory")
+        }
+    }
+}
+
+def projectRoot = rootProject.projectDir
+def nodeModulesDir = findNodeModulesDir(projectRoot)
+
 /**
  * Register font asset source folder
  */
 android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVI<%= className %>")
 
+
 // Define the copy task
 task copyFiles(type: Copy) {
-    from '../../../../node_modules/@react-native-vector-icons/<%= packageName %>/fonts'
+    from "${nodeModulesDir}/@react-native-vector-icons/fontawesome5/fonts"
+<% if (customAssets) { %>
+    from("${projectRoot}/../assets/fonts") {
+      include 'FontAwesome5_Pro_*.ttf'
+    }
+<% } %>
+
     into "$buildDir/intermediates/RNVI<%= className %>/fonts"
 }
 
