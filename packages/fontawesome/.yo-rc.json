@@ -1,0 +1,25 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontawesome",
+    "fontName": "FontAwesome",
+    "fontFile": "FontAwesome",
+    "packageJSON": {
+      "devDependencies": {
+        "font-awesome": "^4.7.0"
+      },
+      "bin": {
+        "fa-upgrade.sh": "./bin/fa-upgrade.sh"
+      }
+    },
+    "buildSteps": {
+      "glyphmap": {
+        "location": "../../node_modules/font-awesome/css/font-awesome.css",
+        "mode": "css",
+        "prefix": ".fa-"
+      },
+      "copyFont": {
+        "location": "../../node_modules/font-awesome/fonts/fontawesome-webfont.ttf"
+      }
+    }
+  }
+}
