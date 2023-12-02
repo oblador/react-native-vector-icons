@@ -8,7 +8,7 @@
     },
     "buildSteps": {
       "fontCustom": {
-        "location": "node_modules/@entypo-icons/core/icons"
+        "location": "../../node_modules/@entypo-icons/core/icons"
       },
       "glyphmap": {
         "mode": "css",

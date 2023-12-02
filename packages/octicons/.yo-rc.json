@@ -1,14 +1,15 @@
 {
   "generator-react-native-vector-icons": {
-    "packageName": "ionicons",
+    "packageName": "octicons",
     "packageJSON": {
       "devDependencies": {
-        "ionicons": "^7.2.1"
+        "@primer/octicons": "^19.8.0"
       }
     },
     "buildSteps": {
       "fixSVGPaths": {
-        "location": "../../node_modules/ionicons/dist/svg"
+        "location": "../../node_modules/@primer/octicons/build/svg",
+        "keepPostfix": "-16"
       },
       "fontCustom": {
         "location": "fixedSvg",
