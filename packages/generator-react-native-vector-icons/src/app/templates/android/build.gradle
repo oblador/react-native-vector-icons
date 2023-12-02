@@ -110,7 +110,6 @@ if (isNewArchitectureEnabled()) {
     codegenJavaPackageName = "com.oblador.vectoricons.<%= namespace %>"
   }
 }
-<%_ if (customAssets) { %>
 
 def findNodeModulesDir(directory) {
     def nodeModulesDir = new File(directory, "node_modules")
@@ -129,7 +128,6 @@ def findNodeModulesDir(directory) {
 def projectRoot = rootProject.projectDir
 def nodeModulesDir = findNodeModulesDir(projectRoot)
 
-<%_ } %>
 /**
  * Register font asset source folder
  */

@@ -111,7 +111,6 @@ if (isNewArchitectureEnabled()) {
   }
 }
 
-
 def findNodeModulesDir(directory) {
     def nodeModulesDir = new File(directory, "node_modules")
     if (nodeModulesDir.exists()) {
@@ -128,7 +127,6 @@ def findNodeModulesDir(directory) {
 
 def projectRoot = rootProject.projectDir
 def nodeModulesDir = findNodeModulesDir(projectRoot)
-
 
 /**
  * Register font asset source folder
