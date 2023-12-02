@@ -93,11 +93,11 @@ export default class extends Generator<Arguments> {
       'android/src/main/AndroidManifest.xml',
       [
         'android/src/main/java/com/oblador/vectoricons/namespace/RNVIclassNamePackage.java',
-        `android/src/main/java/com/oblador/vectoricons/${data.packageName}/RNVI${data.className}Package.java`,
+        `android/src/main/java/com/oblador/vectoricons/${data.namespace}/RNVI${data.className}Package.java`,
       ],
       [
         'android/src/main/java/com/oblador/vectoricons/namespace/RNVIclassNameModule.java',
-        `android/src/main/java/com/oblador/vectoricons/${data.packageName}/RNVI${data.className}Module.java`,
+        `android/src/main/java/com/oblador/vectoricons/${data.namespace}/RNVI${data.className}Module.java`,
       ],
       [
         'android/src/main/newarch/RNVIclassNameSpec.java',
@@ -316,7 +316,7 @@ export default class extends Generator<Arguments> {
   }
   _data() {
     // TODO: Use zod to vaidate the .yo-rc.json data
-    const data = this.config.getAll() as Data;
+    const data = this.config.getAll() as unknown as Data;
     if (!data.packageName) {
       throw new Error('packageName is required');
     }
