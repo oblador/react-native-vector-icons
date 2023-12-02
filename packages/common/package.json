@@ -25,11 +25,6 @@
     "!**/__mocks__",
     "!**/.*"
   ],
-  "bin": {
-    "fontcustom": "./lib/commonjs/bin/fontcustom.js",
-    "fontforge": "./lib/commonjs/bin/fontforge.js",
-    "generate-icon": "./lib/commonjs/bin/generate-icon.js"
-  },
   "scripts": {
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
     "prepare": "bob build"
