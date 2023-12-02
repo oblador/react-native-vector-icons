@@ -1,0 +1,51 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontawesome6",
+    "customReadme": true,
+    "customSrc": true,
+    "customAssets": "FontAwesome6_Pro_*.ttf",
+    "packageJSON": {
+      "bin": {
+        "fa-upgrade6.sh": "./bin/fa-upgrade6.sh"
+      }
+    },
+    "buildSteps": {
+      "preScript": {
+        "script": "mkdir fa\ncd fa\n#So the npm commands work with workspaces\ntouch package.json\necho -n 'Please enter your FontAwesome6 npm token: '\nread fa6_token\nnpm config set '@fortawesome:registry' https://npm.fontawesome.com/\nnpm config set '//npm.fontawesome.com/:_authToken' ${fa6_token}\nARCHIVE=$(npm pack @fortawesome/fontawesome-free@^6 --silent 2> /dev/null)\ntar -xzf ${ARCHIVE}\nmv package free\nARCHIVE=$(npm pack @fortawesome/fontawesome-pro@^6 --silent 2> /dev/null)\ntar -xzf ${ARCHIVE}\nmv package pro\n"
+      },
+      "glyphmap": {
+        "location": [
+          [
+            "fa/free/css/all.css",
+            "FontAwesome6Free"
+          ],
+          [
+            "fa/pro/css/all.css",
+            "FontAwesome6Pro"
+          ]
+        ],
+        "mode": "css",
+        "prefix": ".fa-"
+      },
+      "copyFont": {
+        "location": [
+          [
+            "fa/free/webfonts/fa-brands-400.ttf",
+            "FontAwesome6_Brands"
+          ],
+          [
+            "fa/free/webfonts/fa-regular-400.ttf",
+            "FontAwesome6_Regular"
+          ],
+          [
+            "fa/free/webfonts/fa-solid-900.ttf",
+            "FontAwesome6_Solid"
+          ]
+        ]
+      },
+      "postScript": {
+        "script": "node ./scripts/generate-fontawesome6-metadata --path fa/free --output glyphmaps/FontAwesome6Free_meta.json\nnode ./scripts/generate-fontawesome6-metadata --path fa/pro --output glyphmaps/FontAwesome6Pro_meta.json\nrm -rf fa"
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
     "packageName": "fontawesome5",
     "customReadme": true,
     "customSrc": true,
-    "customAssets": true,
+    "customAssets": "FontAwesome5_Pro_*.ttf",
     "packageJSON": {
       "bin": {
         "fa-upgrade5.sh": "./bin/fa-upgrade5.sh"
