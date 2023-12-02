@@ -493,11 +493,30 @@ PODS:
   - RNScreens (3.27.0):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
-  - rnvi-antdesign (0.0.1)
-  - rnvi-evilicons (0.0.1)
-  - rnvi-fontawesome (0.0.1)
-  - rnvi-fontawesome6 (0.0.1)
-  - rnvi-fontisto (0.0.1)
+  - rnvi-entypo (0.0.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+  - rnvi-feather (0.0.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+  - rnvi-fontawesome (0.0.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+  - rnvi-fontawesome5 (0.0.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+  - rnvi-fontawesome6 (0.0.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+  - rnvi-fontisto (0.0.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+  - rnvi-ionicons (0.0.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+  - rnvi-octicons (0.0.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -569,11 +588,14 @@ DEPENDENCIES:
   - React-utils (from `../../../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../../../node_modules/react-native/ReactCommon`)
   - RNScreens (from `../../../node_modules/react-native-screens`)
-  - "rnvi-antdesign (from `../../../node_modules/@react-native-vector-icons/antdesign`)"
-  - "rnvi-evilicons (from `../../../node_modules/@react-native-vector-icons/evilicons`)"
+  - "rnvi-entypo (from `../../../node_modules/@react-native-vector-icons/entypo`)"
+  - "rnvi-feather (from `../../../node_modules/@react-native-vector-icons/feather`)"
   - "rnvi-fontawesome (from `../../../node_modules/@react-native-vector-icons/fontawesome`)"
+  - "rnvi-fontawesome5 (from `../../../node_modules/@react-native-vector-icons/fontawesome5`)"
   - "rnvi-fontawesome6 (from `../../../node_modules/@react-native-vector-icons/fontawesome6`)"
   - "rnvi-fontisto (from `../../../node_modules/@react-native-vector-icons/fontisto`)"
+  - "rnvi-ionicons (from `../../../node_modules/@react-native-vector-icons/ionicons`)"
+  - "rnvi-octicons (from `../../../node_modules/@react-native-vector-icons/octicons`)"
   - Yoga (from `../../../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -677,16 +699,22 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/react-native/ReactCommon"
   RNScreens:
     :path: "../../../node_modules/react-native-screens"
-  rnvi-antdesign:
-    :path: "../../../node_modules/@react-native-vector-icons/antdesign"
-  rnvi-evilicons:
-    :path: "../../../node_modules/@react-native-vector-icons/evilicons"
+  rnvi-entypo:
+    :path: "../../../node_modules/@react-native-vector-icons/entypo"
+  rnvi-feather:
+    :path: "../../../node_modules/@react-native-vector-icons/feather"
   rnvi-fontawesome:
     :path: "../../../node_modules/@react-native-vector-icons/fontawesome"
+  rnvi-fontawesome5:
+    :path: "../../../node_modules/@react-native-vector-icons/fontawesome5"
   rnvi-fontawesome6:
     :path: "../../../node_modules/@react-native-vector-icons/fontawesome6"
   rnvi-fontisto:
     :path: "../../../node_modules/@react-native-vector-icons/fontisto"
+  rnvi-ionicons:
+    :path: "../../../node_modules/@react-native-vector-icons/ionicons"
+  rnvi-octicons:
+    :path: "../../../node_modules/@react-native-vector-icons/octicons"
   Yoga:
     :path: "../../../node_modules/react-native/ReactCommon/yoga"
 
@@ -744,11 +772,14 @@ SPEC CHECKSUMS:
   React-utils: fa59c9a3375fb6f4aeb66714fd3f7f76b43a9f16
   ReactCommon: dd03c17275c200496f346af93a7b94c53f3093a4
   RNScreens: 3c2d122f5e08c192e254c510b212306da97d2581
-  rnvi-antdesign: 45c75a9366ffd6dc763f8904083225fb90b58adf
-  rnvi-evilicons: 6b4802cc57fdbb138f827640234c5bad771fd22f
-  rnvi-fontawesome: cf2e8c792a5d5af6800a0078b0c5d772fb499d19
-  rnvi-fontawesome6: 77eb66cca8d96aa58aedce7297c5d565decb0e29
-  rnvi-fontisto: 498b1211ecba6213342623a5456d57cdd3490d9d
+  rnvi-entypo: 340fad2bec30b440d8f93324121329a97798c3b2
+  rnvi-feather: 7bea0f360d9d39a00e52abda46b0f5b001bcdcac
+  rnvi-fontawesome: 8f2b7894910d5bb27d6c7fd412f53f1b221ab5f8
+  rnvi-fontawesome5: 9e0cb32a0d6f8282c8626b4c2c94580f99cd9a26
+  rnvi-fontawesome6: d2e8940389276f3b2808b7a413f30dd6c1f74f6e
+  rnvi-fontisto: 818d766ce3969c193174589ccc40dd99aa68d911
+  rnvi-ionicons: c0446206de9aeb15c448adaaa7089e6277d7d335
+  rnvi-octicons: b75efe65b13ad31cd75cda83fdce5cda8201d626
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: b76f1acfda8212aa16b7e26bcce3983230c82603
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
