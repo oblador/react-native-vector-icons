@@ -24,7 +24,8 @@ interface Data {
     },
     glyphmap?: {
       mode: 'css' | 'codepoints',
-      location: string,
+      location?: string,
+      prefix?: string,
       cleanup?: boolean,
     },
   },
@@ -199,13 +200,14 @@ export default class extends Generator<Arguments> {
       return;
     }
 
-    const json = generateGlyphmap(glyphmap.mode, [glyphmap.location]);
+    const location = glyphmap.location || `${data.className}.css`;
+    const json = generateGlyphmap(glyphmap.mode, [location], glyphmap.prefix)
 
     fs.mkdirSync('glyphmaps', { recursive: true });
     fs.writeFileSync(`glyphmaps/${data.fontFile}.json`, json);
 
     if (glyphmap.cleanup) {
-      fs.rmSync(glyphmap.location);
+      fs.rmSync(location);
     }
   }
 
