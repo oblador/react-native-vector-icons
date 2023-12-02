@@ -73,7 +73,7 @@
     "@react-native/eslint-config": "^0.74.0",
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/jest": "^29.5.10",
-    "@types/react": "~18.2.40",
+    "@types/react": "~18.2.41",
     "@types/react-native": "0.72.7",
     "commitlint": "^18.4.3",
     "css-social-buttons": "^1.1.1",
