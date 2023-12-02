@@ -16,6 +16,9 @@ interface Data {
   packageJSON: Record<string, Record<string, string>>,
   customReadme?: boolean,
   buildSteps: {
+    preScript?: {
+      script: string,
+    },
     fixSVGPaths?: {
       location: string,
     },
@@ -144,15 +147,29 @@ export default class extends Generator<Arguments> {
   }
 
   _buildSteps() {
+    this._preScript();
     this._fixSVGPaths();
-
     this._buildFontCustom();
-
     this._buildGlyphmap();
-
     this._copyFont();
   }
 
+  _preScript() {
+    const { preScript } = this.data.buildSteps;
+    if (!preScript) {
+      return;
+    }
+
+    const { status } = spawnSync('bash', [
+      '-c',
+      preScript.script
+    ], { stdio: 'inherit' });
+
+    if (status !== 0) {
+      throw new Error(`preScript exited with status ${status}`);
+    }
+
+  }
   _fixSVGPaths() {
     const { fixSVGPaths } = this.data.buildSteps;
     if (!fixSVGPaths) {
@@ -171,6 +188,7 @@ export default class extends Generator<Arguments> {
     }
 
   }
+
   _buildFontCustom() {
     const data = this.data;
 

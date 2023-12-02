@@ -1,0 +1,23 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "material-icons",
+    "fontName": "MaterialIcons-Regular",
+    "fontFile": "MaterialIcons",
+    "packageJSON": {
+      "devDependencies": {
+        "@mdi/font": "^7.3.67"
+      }
+    },
+    "buildSteps": {
+      "preScript": {
+        "script": "mkdir fonts\nREF='f7bd4f25f3764883717c09a1fd867f560c9a9581' # Sep 19, 2022 update\ncurl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIcons-Regular.codepoints -Ls > MaterialIcons-Regular.codepoints\ncurl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIcons-Regular.ttf -Ls > fonts/MaterialIcons.ttf"
+      },
+      "glyphmap": {
+        "location": "MaterialIcons-Regular.codepoints",
+        "mode": "codepoints",
+        "prefix": ".mdi-",
+        "cleanup": true
+      }
+    }
+  }
+}
