@@ -1,10 +1,10 @@
 {
   "generator-react-native-vector-icons": {
-    "packageName": "ant-design",
-    "dependencies": { "@ant-design/icons-svg": "^4.3.1" },
+    "packageName": "feather",
+    "dependencies": { "feather": "^4.29.1" },
     "buildSteps": {
       "fixSVGPaths": {
-        "location": "node_modules/@ant-design/icons-svg/inline-namespaced-svg/outlined"
+        "location": "node_modules/feather-icons/dist/icons"
       },
       "fontCustom": {
         "location": "fixedSvg",
