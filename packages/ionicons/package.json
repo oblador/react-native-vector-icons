@@ -72,10 +72,10 @@
   },
   "devDependencies": {
     "del-cli": "^5.1.0",
+    "ionicons": "^7.2.1",
     "react-native-builder-bob": "^0.23.2",
-    "turbo": "^1.10.7",
-    "typescript": "^5.3.2",
-    "ionicons": "^7.2.1"
+    "turbo": "^1.10.16",
+    "typescript": "^5.3.2"
   },
   "peerDependencies": {
     "react": "*",

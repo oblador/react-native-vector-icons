@@ -24,7 +24,6 @@ Pod::Spec.new do |s|
   # }
 
   # NOTE: This is pretty brittle. Hopefully it works for everyone
-
   s.script_phase = {
     :name => 'Copy Fontawesome5 Fonts',
     :script => '

@@ -71,11 +71,11 @@
     "@react-native-vector-icons/common": "^0"
   },
   "devDependencies": {
+    "@entypo-icons/core": "^1.0.1",
     "del-cli": "^5.1.0",
     "react-native-builder-bob": "^0.23.2",
-    "turbo": "^1.10.7",
-    "typescript": "^5.3.2",
-    "@entypo-icons/core": "^1.0.1"
+    "turbo": "^1.10.16",
+    "typescript": "^5.3.2"
   },
   "peerDependencies": {
     "react": "*",

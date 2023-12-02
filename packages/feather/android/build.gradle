@@ -118,7 +118,8 @@ android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVIFeat
 
 // Define the copy task
 task copyFiles(type: Copy) {
-    from '../../../../node_modules/@react-native-vector-icons/feather/fonts'
+    from "${nodeModulesDir}/@react-native-vector-icons/feather/fonts"
+
     into "$buildDir/intermediates/RNVIFeather/fonts"
 }
 
