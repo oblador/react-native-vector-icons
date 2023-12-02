@@ -4,9 +4,9 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
-import glyphMap from '../glyphmaps/<%= fontName %>.json';
+import glyphMap from '../glyphmaps/<%= fontFile %>.json';
 
-const Icon = createIconSet(glyphMap, '<%= fontName %>', '<%= fontName %>.ttf');
+const Icon = createIconSet(glyphMap, '<%= fontName %>', '<%= fontFile %>.ttf');
 
 Icon.loadFont();
 
