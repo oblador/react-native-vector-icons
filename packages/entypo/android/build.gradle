@@ -20,11 +20,11 @@ if (isNewArchitectureEnabled()) {
 }
 
 def getExtOrDefault(name) {
-▎ return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["AntDesign_" + name]
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["RNVIEntypo_" + name]
 }
 
 def getExtOrIntegerDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["AntDesignVectorIcons_" + name]).toInteger()
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["RNVIEntypo_" + name]).toInteger()
 }
 
 def supportsNamespace() {
@@ -49,8 +49,44 @@ android {
 
   compileSdkVersion getExtOrIntegerDefault("compileSdkVersion")
 
+  defaultConfig {
+    minSdkVersion getExtOrIntegerDefault("minSdkVersion")
+    targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
+    buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+
+  }
+
   buildFeatures {
     buildConfig true
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+    }
+  }
+
+  lintOptions {
+    disable "GradleCompatible"
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  sourceSets {
+    main {
+      if (isNewArchitectureEnabled()) {
+        java.srcDirs += [
+          "src/newarch",
+          // This is needed to build Kotlin project with NewArch enabled
+          "${project.buildDir}/generated/source/codegen/java"
+        ]
+      } else {
+        java.srcDirs += ["src/oldarch"]
+      }
+    }
   }
 }
 
@@ -70,7 +106,7 @@ dependencies {
 if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
-    libraryName = "EntypoVectorIcons"
+    libraryName = "RNVIEntypo"
     codegenJavaPackageName = "com.oblador.vectoricons.entypo"
   }
 }
@@ -78,12 +114,12 @@ if (isNewArchitectureEnabled()) {
 /**
  * Register font asset source folder
  */
-android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/ReactNativeVectorIconsEntypo")
+android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVIEntypo")
 
 // Define the copy task
 task copyFiles(type: Copy) {
     from '../../../../node_modules/@react-native-vector-icons/entypo/fonts'
-    into "$buildDir/intermediates/ReactNativeVectorIconsEntypo/fonts"
+    into "$buildDir/intermediates/RNVIEntypo/fonts"
 }
 
 // Make sure the task runs before the build

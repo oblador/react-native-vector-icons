@@ -80,37 +80,15 @@ const extractGlyphMapFromCss = (files: string[], selectorPattern: string) => {
 const escapeRegExp = (str: string) =>
   str.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&');
 
-export const generateIconSetFromCss = (
-  cssFiles: string[],
-  selectorPrefix: string,
+export const generateGlyphmap = (
   mode: 'css' | 'codepoints' = 'css',
-  template?: string,
-  data = {}
+  files: string[],
+  selectorPrefix = '.icon-',
 ) => {
-  const glyphMap = mode === 'css' ? extractGlyphMapFromCss(
-    cssFiles,
-    `${escapeRegExp(selectorPrefix)}([A-Za-z0-9_-]+)::?before`
-  ) : extractGlyphMapFromCodepoints(cssFiles[0]!);
+  const selectorPattern = `${escapeRegExp(selectorPrefix)}([A-Za-z0-9_-]+)::?before`;
+  const glyphMap = mode === 'css'
+    ? extractGlyphMapFromCss(files, selectorPattern)
+    : extractGlyphMapFromCodepoints(files[0]!);
 
-  const content = JSON.stringify(glyphMap, null, '  ');
-
-  if (template) {
-    const templateVariables = { glyphMap: content, ...data } as Record<
-      string,
-      string
-    >;
-
-    return template.replace(/\${([^}]*)}/g, (_, key) => {
-      const value = templateVariables[key];
-      if (!value) {
-        throw `${key} in template ${template} not available`;
-      }
-
-      return value;
-    });
-  }
-
-  return content;
+  return JSON.stringify(glyphMap, null, '  ');
 };
-
-export default generateIconSetFromCss;

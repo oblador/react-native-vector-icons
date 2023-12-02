@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
 import yargs from 'yargs';
 import generateIconSetFromCss from '../generate-icon-set-from-css';
 import { omit } from '../object-utils';
@@ -13,12 +12,6 @@ const argv = yargs
       type: 'string',
       default: '.icon-',
       describe: 'CSS selector prefix',
-    },
-    t: {
-      alias: 'template',
-      type: 'string',
-      default: path.resolve(__dirname, '../../../templates/bundled-icon-set.tpl'),
-      describe: 'Template in JS template string format',
     },
     o: {
       alias: 'output',
@@ -43,11 +36,6 @@ const argv = yargs
   )
   .demand(1)
   .parseSync();
-
-let template;
-if (argv.t) {
-  template = fs.readFileSync(argv.t, { encoding: 'utf8' });
-}
 
 const data = omit(
   argv,

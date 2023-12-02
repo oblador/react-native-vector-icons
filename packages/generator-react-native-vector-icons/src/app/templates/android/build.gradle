@@ -118,7 +118,7 @@ android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVI<%= 
 
 // Define the copy task
 task copyFiles(type: Copy) {
-    from '../../../../node_modules/@react-native-vector-icons/<%= iconName %>/fonts'
+    from '../../../../node_modules/@react-native-vector-icons/<%= packageName %>/fonts'
     into "$buildDir/intermediates/RNVI<%= className %>/fonts"
 }
 
