@@ -1,6 +1,6 @@
-import AntD from '@react-native-vector-icons/antdesign';
+import AntD from '@react-native-vector-icons/ant-design';
 import Entypo from '@react-native-vector-icons/entypo';
-import EvilIcons from '@react-native-vector-icons/evilicons';
+import EvilIcons from '@react-native-vector-icons/evil-icons';
 import Feather from '@react-native-vector-icons/feather';
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 import {
@@ -14,14 +14,14 @@ import {
 import Fontisto from '@react-native-vector-icons/fontisto';
 import Foundation from '@react-native-vector-icons/foundation';
 import Ionicons from '@react-native-vector-icons/ionicons';
-import MaterialIcons from '@react-native-vector-icons/materialicons';
-import MaterialCommunityIcons from '@react-native-vector-icons/materialcommunityicons';
+import MaterialIcons from '@react-native-vector-icons/material-icons';
+import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
 import Octicons from '@react-native-vector-icons/octicons';
-import SimpleLineIcons from '@react-native-vector-icons/simplelineicons';
+import SimpleLineIcons from '@react-native-vector-icons/simple-line-icons';
 import Zocial from '@react-native-vector-icons/zocial';
-import AntDGlyphs from '@react-native-vector-icons/antdesign/glyphmaps/AntDesign.json';
+import AntDGlyphs from '@react-native-vector-icons/ant-design/glyphmaps/AntDesign.json';
 import EntypoGlyphs from '@react-native-vector-icons/entypo/glyphmaps/Entypo.json';
-import EvilIconsGlyphs from '@react-native-vector-icons/evilicons/glyphmaps/EvilIcons.json';
+import EvilIconsGlyphs from '@react-native-vector-icons/evil-icons/glyphmaps/EvilIcons.json';
 import FeatherGlyphs from '@react-native-vector-icons/feather/glyphmaps/Feather.json';
 import FontAwesome5Glyphs from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5Free.json';
 import FontAwesome5Meta from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5Free_meta.json';
@@ -35,10 +35,10 @@ import FontAwesome6ProMeta from '@react-native-vector-icons/fontawesome6/glyphma
 import FontistoGlyphs from '@react-native-vector-icons/fontisto/glyphmaps/Fontisto.json';
 import FoundationGlyphs from '@react-native-vector-icons/foundation/glyphmaps/Foundation.json';
 import IoniconsGlyphs from '@react-native-vector-icons/ionicons/glyphmaps/Ionicons.json';
-import MaterialIconsGlyphs from '@react-native-vector-icons/materialicons/glyphmaps/MaterialIcons.json';
-import MaterialCommunityIconsGlyphs from '@react-native-vector-icons/materialcommunityicons/glyphmaps/MaterialCommunityIcons.json';
+import MaterialIconsGlyphs from '@react-native-vector-icons/material-icons/glyphmaps/MaterialIcons.json';
+import MaterialDesignIconsGlyphs from '@react-native-vector-icons/material-design-icons/glyphmaps/MaterialDesignIcons.json';
 import OcticonsGlyphs from '@react-native-vector-icons/octicons/glyphmaps/Octicons.json';
-import SimpleLineIconsGlyphs from '@react-native-vector-icons/simplelineicons/glyphmaps/SimpleLineIcons.json';
+import SimpleLineIconsGlyphs from '@react-native-vector-icons/simple-line-icons/glyphmaps/SimpleLineIcons.json';
 import ZocialGlyphs from '@react-native-vector-icons/zocial/glyphmaps/Zocial.json';
 
 const groupGlyphNames = (glyphMap: Record<string, number>) => {
@@ -121,8 +121,8 @@ const iconSets = [
   },
   {
     name: 'MaterialCommunityIcons',
-    component: MaterialCommunityIcons,
-    glyphNames: groupGlyphNames(MaterialCommunityIconsGlyphs),
+    component: MaterialDesignIcons,
+    glyphNames: groupGlyphNames(MaterialDesignIconsGlyphs),
   },
   {
     name: 'Octicons',
