@@ -4,12 +4,11 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
-import glyphMap from '../glyphmaps/material_design_icons.json';
+import glyphMap from '../glyphmaps/MaterialDesignIcons.json';
 
-const Icon = createIconSet(glyphMap, 'Material Design Icons', 'MaterialCommunityIcons.ttf');
+const Icon = createIconSet(glyphMap, 'MaterialDesignIcons', 'MaterialDesignIcons.ttf');
 
 Icon.loadFont();
 
 export default Icon;
 export const { getImageSource, getImageSourceSync } = Icon;
-
