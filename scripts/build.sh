@@ -12,6 +12,7 @@ for package in *; do
   fi
 
   cd $package
-  yo react-native-vector-icons
+  rm -rf *
+  yo react-native-vector-icons --force
   cd -
 done
