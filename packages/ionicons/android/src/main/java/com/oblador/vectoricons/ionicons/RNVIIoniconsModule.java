@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.ionicons;
+package com.oblador.vectoricons.ionicons;
 
 import androidx.annotation.NonNull;
 

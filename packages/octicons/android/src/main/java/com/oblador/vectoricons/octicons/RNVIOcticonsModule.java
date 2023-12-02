@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.octicons;
+package com.oblador.vectoricons.octicons;
 
 import androidx.annotation.NonNull;
 

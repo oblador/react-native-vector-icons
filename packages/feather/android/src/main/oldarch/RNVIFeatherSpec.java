@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.feather;
+package com.oblador.vectoricons.feather;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;

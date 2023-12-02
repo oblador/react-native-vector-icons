@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.foundation;
+package com.oblador.vectoricons.foundation;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 

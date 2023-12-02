@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.feather;
+package com.oblador.vectoricons.feather;
 
 import androidx.annotation.NonNull;
 

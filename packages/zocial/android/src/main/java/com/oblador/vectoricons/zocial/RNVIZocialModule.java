@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.zocial;
+package com.oblador.vectoricons.zocial;
 
 import androidx.annotation.NonNull;
 

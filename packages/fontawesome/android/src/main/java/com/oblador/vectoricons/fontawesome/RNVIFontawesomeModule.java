@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.fontawesome;
+package com.oblador.vectoricons.fontawesome;
 
 import androidx.annotation.NonNull;
 
