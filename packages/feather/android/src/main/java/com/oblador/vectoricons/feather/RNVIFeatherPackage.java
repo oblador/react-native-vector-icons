@@ -32,7 +32,7 @@ public class RNVIFeatherPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIFeatherModule.NAME,
-                      RNVIFeatherAntDesignModule.NAME,
+                      RNVIFeatherModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants

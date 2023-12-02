@@ -32,7 +32,7 @@ public class RNVIAntDesignPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIAntDesignModule.NAME,
-                      RNVIAntDesignAntDesignModule.NAME,
+                      RNVIAntDesignModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants

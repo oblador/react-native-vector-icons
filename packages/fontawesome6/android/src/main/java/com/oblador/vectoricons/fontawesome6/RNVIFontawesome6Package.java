@@ -32,7 +32,7 @@ public class RNVIFontawesome6Package extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIFontawesome6Module.NAME,
-                      RNVIFontawesome6AntDesignModule.NAME,
+                      RNVIFontawesome6Module.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants

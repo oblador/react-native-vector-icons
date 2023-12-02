@@ -32,7 +32,7 @@ public class RNVI<%= className %>Package extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVI<%= className %>Module.NAME,
-                      RNVI<%= className %>AntDesignModule.NAME,
+                      RNVI<%= className %>Module.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants
