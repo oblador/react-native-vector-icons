@@ -23,6 +23,19 @@ Pod::Spec.new do |s|
   #   'RNVI<%= className %>' => ['fonts/*.ttf'],
   # }
 
+  # NOTE: This is pretty brittle. Hopefully it works for everyone
+<% if (customAssets) { %>
+  s.script_phase = {
+    :name => 'Copy <%= name %> Fonts',
+    :script => '
+      if [ -d ${SRCROOT}/../../assets/fonts ]; then
+        APP_NAME="$(echo $PODS_ROOT | sed \'s/\/ios\/Pods//;s/.*\///\').app"
+        cp ${SRCROOT}/../../assets/fonts/* ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}
+      fi
+    ',
+  }
+<% } %>
+
   # Use install_modules_dependencies helper to install the dependencies if React Native version >=0.71.0.
   # See https://github.com/facebook/react-native/blob/febf6b7f33fdb4904669f99d795eba4c0f95d7bf/scripts/cocoapods/new_architecture.rb#L79.
   if respond_to?(:install_modules_dependencies, true)
