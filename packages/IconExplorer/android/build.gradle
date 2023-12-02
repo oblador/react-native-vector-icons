@@ -1,15 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-// Add this because we are a monorepo
-allprojects {
-    project.pluginManager.withPlugin("com.facebook.react") {
-        react {
-            reactNativeDir = rootProject.file("../../../node_modules/react-native/")
-            codegenDir = rootProject.file("../../../node_modules/react-native-codegen/")
-        }
-    }
-}
-
 buildscript {
     ext {
         buildToolsVersion = "33.0.0"
