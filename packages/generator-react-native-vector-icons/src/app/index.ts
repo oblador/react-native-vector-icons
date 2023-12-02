@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import path from 'node:path';
 import os from 'node:os';
 import { spawnSync } from 'node:child_process';
 
@@ -21,6 +22,7 @@ interface Data {
     },
     fixSVGPaths?: {
       location: string,
+      keepPostfix?: string,
     },
     fontCustom?: {
       location: string,
@@ -170,6 +172,7 @@ export default class extends Generator<Arguments> {
     }
 
   }
+
   _fixSVGPaths() {
     const { fixSVGPaths } = this.data.buildSteps;
     if (!fixSVGPaths) {
@@ -179,7 +182,7 @@ export default class extends Generator<Arguments> {
     fs.mkdirSync('fixedSvg');
 
     const { status } = spawnSync('../../node_modules/.bin/oslllo-svg-fixer', [
-      '-s', `../../${fixSVGPaths.location}`,
+      '-s', fixSVGPaths.location,
       '-d', 'fixedSvg',
     ], { stdio: 'inherit' });
 
@@ -187,6 +190,20 @@ export default class extends Generator<Arguments> {
       throw new Error(`oslllo-svg-fixer exited with status ${status}`);
     }
 
+    const { keepPostfix } = fixSVGPaths;
+    if (keepPostfix) {
+      const files = fs.readdirSync('fixedSvg');
+      files.forEach((file) => {
+        if (!file.endsWith(`${keepPostfix}.svg`)) {
+          // Delete files that do not end with -16.svg
+          fs.unlinkSync(path.join('fixedSvg', file));
+
+          return;
+        }
+        const newName = file.replace(keepPostfix, '');
+        fs.renameSync(path.join('fixedSvg', file), path.join('fixedSvg', newName));
+      });
+    }
   }
 
   _buildFontCustom() {

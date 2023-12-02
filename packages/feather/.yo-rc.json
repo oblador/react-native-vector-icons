@@ -8,7 +8,7 @@
     },
     "buildSteps": {
       "fixSVGPaths": {
-        "location": "node_modules/feather-icons/dist/icons"
+        "location": "../../node_modules/feather-icons/dist/icons"
       },
       "fontCustom": {
         "location": "fixedSvg",
