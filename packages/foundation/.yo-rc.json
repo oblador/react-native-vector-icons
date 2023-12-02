@@ -1,0 +1,20 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "foundation",
+    "packageJSON": {
+      "devDependencies": {
+        "foundation-icon-fonts": "^0.1.1"
+      }
+    },
+    "buildSteps": {
+      "glyphmap": {
+        "location": "../../node_modules/foundation-icon-fonts/foundation-icons.css",
+        "mode": "css",
+        "prefix": ".fi-"
+      },
+      "copyFont": {
+        "location": "../../node_modules/foundation-icon-fonts/foundation-icons.ttf"
+      }
+    }
+  }
+}

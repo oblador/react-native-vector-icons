@@ -1,7 +1,11 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "feather",
-    "dependencies": { "feather": "^4.29.1" },
+    "packageJSON": {
+      "devDependencies": {
+        "feather": "^4.29.1"
+      }
+    },
     "buildSteps": {
       "fixSVGPaths": {
         "location": "node_modules/feather-icons/dist/icons"
