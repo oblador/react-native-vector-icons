@@ -1,35 +1,18 @@
 {
   "name": "@react-native-vector-icons/foundation",
-  "description": "Foundation font for react native vector icons",
   "version": "0.0.1",
+  "description": "Foundation font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "dependencies": {
-    "@react-native-vector-icons/common": "^0",
-    "foundation-icon-fonts": "^0.1.1"
-  },
-  "devDependencies": {
-    "del-cli": "^5.1.0",
-    "react-native-builder-bob": "^0.23.2",
-    "typescript": "^5.3.2"
-  },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
-  "scripts": {
-    "clean": "del-cli android/build ios/build lib",
-    "prepare": "bob build",
-    "build": "scripts/update.sh"
-  },
   "files": [
     "src",
     "lib",
     "android",
     "ios",
+    "cpp",
     "*.podspec",
     "!ios/build",
     "!android/build",
@@ -42,8 +25,13 @@
     "!**/__mocks__",
     "!**/.*"
   ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "clean": "del-cli android/build ios/build lib",
+    "prepare": "bob build"
+  },
   "keywords": [
-    "react-native-vector-icons-icon",
     "react-native",
     "ios",
     "android",
@@ -60,26 +48,46 @@
     "vector",
     "retina",
     "font",
+    "react-native-vector-icons-icon",
     "foundation"
   ],
-  "author": {
-    "name": "Joel Arvidsson",
-    "email": "joel@oblador.se"
-  },
-  "homepage": "https://github.com/oblador/react-native-vector-icons",
-  "bugs": {
-    "url": "https://github.com/oblador/react-native-vector-icons/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/oblador/react-native-vector-icons.git"
   },
+  "author": {
+    "name": "Joel Arvidsson",
+    "email": "joel@oblador.se"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/oblador/react-native-vector-icons",
+  "bugs": {
+    "url": "https://github.com/oblador/react-native-vector-icons/issues"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "dependencies": {
+    "@react-native-vector-icons/common": "^0"
+  },
+  "devDependencies": {
+    "del-cli": "^5.1.0",
+    "react-native-builder-bob": "^0.23.2",
+    "turbo": "^1.10.7",
+    "typescript": "^5.3.2",
+    "foundation-icon-fonts": "^0.1.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "engines": {
     "node": ">= 18.0.0"
+  },
+  "codegenConfig": {
+    "name": "RNVIFoundationSpec",
+    "type": "modules",
+    "jsSrcsDir": "src"
   },
   "react-native-builder-bob": {
     "source": "src",
