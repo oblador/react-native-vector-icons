@@ -32,7 +32,7 @@ public class RNVIMaterialIconsPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIMaterialIconsModule.NAME,
-                      RNVIMaterialIconsAntDesignModule.NAME,
+                      RNVIMaterialIconsModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants

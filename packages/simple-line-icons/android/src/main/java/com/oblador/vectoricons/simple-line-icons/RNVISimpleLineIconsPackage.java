@@ -32,7 +32,7 @@ public class RNVISimpleLineIconsPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVISimpleLineIconsModule.NAME,
-                      RNVISimpleLineIconsAntDesignModule.NAME,
+                      RNVISimpleLineIconsModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants

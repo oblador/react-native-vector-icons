@@ -32,7 +32,7 @@ public class RNVIOcticonsPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIOcticonsModule.NAME,
-                      RNVIOcticonsAntDesignModule.NAME,
+                      RNVIOcticonsModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants

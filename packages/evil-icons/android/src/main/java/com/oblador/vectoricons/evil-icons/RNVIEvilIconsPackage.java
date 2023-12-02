@@ -32,7 +32,7 @@ public class RNVIEvilIconsPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIEvilIconsModule.NAME,
-                      RNVIEvilIconsAntDesignModule.NAME,
+                      RNVIEvilIconsModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants

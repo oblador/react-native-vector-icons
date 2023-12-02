@@ -32,7 +32,7 @@ public class RNVIFoundationPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIFoundationModule.NAME,
-                      RNVIFoundationAntDesignModule.NAME,
+                      RNVIFoundationModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants

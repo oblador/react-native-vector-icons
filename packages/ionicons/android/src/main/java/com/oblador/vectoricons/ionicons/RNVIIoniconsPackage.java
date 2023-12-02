@@ -32,7 +32,7 @@ public class RNVIIoniconsPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIIoniconsModule.NAME,
-                      RNVIIoniconsAntDesignModule.NAME,
+                      RNVIIoniconsModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants
