@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.fontisto;
+package com.oblador.vectoricons.fontisto;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 

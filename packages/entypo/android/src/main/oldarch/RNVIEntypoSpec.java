@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.entypo;
+package com.oblador.vectoricons.entypo;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;

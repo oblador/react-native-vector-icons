@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.material_design_icons;
+package com.oblador.vectoricons.material_design_icons;
 
 import androidx.annotation.NonNull;
 
