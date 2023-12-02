@@ -36,6 +36,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ant-design/icons-svg@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "@ant-design/icons-svg@npm:4.3.1"
+  checksum: ca5c870b5f6e0af1777570f892b8686719ca230f2974bb9b71bf812ee20f5da6294dbb10daf8fe644e8b5b49ff03bf2c8e8e46e49092cbca73c8228b69bfddad
+  languageName: node
+  linkType: hard
+
 "@apideck/better-ajv-errors@npm:^0.3.1":
   version: 0.3.6
   resolution: "@apideck/better-ajv-errors@npm:0.3.6"
@@ -4272,13 +4279,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-vector-icons/antdesign@npm:^0, @react-native-vector-icons/antdesign@workspace:packages/antdesign":
+"@react-native-vector-icons/ant-design@npm:^0, @react-native-vector-icons/ant-design@workspace:packages/ant-design":
   version: 0.0.0-use.local
-  resolution: "@react-native-vector-icons/antdesign@workspace:packages/antdesign"
+  resolution: "@react-native-vector-icons/ant-design@workspace:packages/ant-design"
   dependencies:
+    "@ant-design/icons-svg": "npm:^4.3.1"
     "@react-native-vector-icons/common": "npm:^0"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
+    turbo: "npm:^1.10.7"
     typescript: "npm:^5.3.2"
   peerDependencies:
     react: "*"
@@ -4360,6 +4369,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^0"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
+    turbo: "npm:^1.10.7"
     typescript: "npm:^5.3.2"
   peerDependencies:
     react: "*"
@@ -4367,9 +4377,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/evilicons@npm:^0, @react-native-vector-icons/evilicons@workspace:packages/evilicons":
+"@react-native-vector-icons/evil-icons@npm:^0, @react-native-vector-icons/evil-icons@workspace:packages/evil-icons":
   version: 0.0.0-use.local
-  resolution: "@react-native-vector-icons/evilicons@workspace:packages/evilicons"
+  resolution: "@react-native-vector-icons/evil-icons@workspace:packages/evil-icons"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
     del-cli: "npm:^5.1.0"
@@ -4493,9 +4503,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/materialcommunityicons@npm:^0, @react-native-vector-icons/materialcommunityicons@workspace:packages/materialcommunityicons":
+"@react-native-vector-icons/material-design-icons@npm:^0, @react-native-vector-icons/material-design-icons@workspace:packages/material-design-icons":
   version: 0.0.0-use.local
-  resolution: "@react-native-vector-icons/materialcommunityicons@workspace:packages/materialcommunityicons"
+  resolution: "@react-native-vector-icons/material-design-icons@workspace:packages/material-design-icons"
   dependencies:
     "@mdi/font": "npm:^7.3.67"
     "@react-native-vector-icons/common": "npm:^0"
@@ -4508,9 +4518,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/materialicons@npm:^0, @react-native-vector-icons/materialicons@workspace:packages/materialicons":
+"@react-native-vector-icons/material-symbols@npm:^0, @react-native-vector-icons/material-symbols@workspace:packages/material-symbols":
   version: 0.0.0-use.local
-  resolution: "@react-native-vector-icons/materialicons@workspace:packages/materialicons"
+  resolution: "@react-native-vector-icons/material-symbols@workspace:packages/material-symbols"
   dependencies:
     "@material-design-icons/font": "npm:^0.14.13"
     "@react-native-vector-icons/common": "npm:^0"
@@ -4539,9 +4549,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/simplelineicons@npm:^0, @react-native-vector-icons/simplelineicons@workspace:packages/simplelineicons":
+"@react-native-vector-icons/simple-line-icons@npm:^0, @react-native-vector-icons/simple-line-icons@workspace:packages/simple-line-icons":
   version: 0.0.0-use.local
-  resolution: "@react-native-vector-icons/simplelineicons@workspace:packages/simplelineicons"
+  resolution: "@react-native-vector-icons/simple-line-icons@workspace:packages/simple-line-icons"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
     del-cli: "npm:^5.1.0"
@@ -6623,10 +6633,10 @@ __metadata:
     "@babel/core": "npm:^7.23.3"
     "@babel/preset-env": "npm:^7.23.3"
     "@babel/runtime": "npm:^7.23.4"
-    "@react-native-vector-icons/antdesign": "npm:^0"
+    "@react-native-vector-icons/ant-design": "npm:^0"
     "@react-native-vector-icons/common": "npm:^0"
     "@react-native-vector-icons/entypo": "npm:^0"
-    "@react-native-vector-icons/evilicons": "npm:^0"
+    "@react-native-vector-icons/evil-icons": "npm:^0"
     "@react-native-vector-icons/feather": "npm:^0"
     "@react-native-vector-icons/fontawesome": "npm:^0"
     "@react-native-vector-icons/fontawesome5": "npm:^0"
@@ -6634,10 +6644,10 @@ __metadata:
     "@react-native-vector-icons/fontisto": "npm:^0"
     "@react-native-vector-icons/foundation": "npm:^0"
     "@react-native-vector-icons/ionicons": "npm:^0"
-    "@react-native-vector-icons/materialcommunityicons": "npm:^0"
-    "@react-native-vector-icons/materialicons": "npm:^0"
+    "@react-native-vector-icons/material-design-icons": "npm:^0"
+    "@react-native-vector-icons/material-symbols": "npm:^0"
     "@react-native-vector-icons/octicons": "npm:^0"
-    "@react-native-vector-icons/simplelineicons": "npm:^0"
+    "@react-native-vector-icons/simple-line-icons": "npm:^0"
     "@react-native-vector-icons/zocial": "npm:^0"
     "@react-native/metro-config": "npm:^0.73.2"
     "@react-navigation/native": "npm:^6.1.9"
@@ -12059,6 +12069,7 @@ __metadata:
     "@types/yeoman-generator": "npm:^5.2.14"
     copyfiles: "npm:^2.4.1"
     onchange: "npm:^7.1.0"
+    oslllo-svg-fixer: "npm:^3.0.0"
     tsc-watch: "npm:^6.0.4"
     typescript: "npm:^5.3.2"
     yeoman-generator: "npm:^1.0.0"
@@ -22661,7 +22672,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo@npm:^1.10.16":
+"turbo@npm:^1.10.16, turbo@npm:^1.10.7":
   version: 1.10.16
   resolution: "turbo@npm:1.10.16"
   dependencies:
@@ -22877,11 +22888,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.3.2#optional!builtin<compat/typescript>":
   version: 5.3.2
-  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
+  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=29ae49"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 73c8bad74e732d93211c9d77f28b03307e2f5fc6a0afc73f4b783261ab567686a16d6ae958bdaef383a00be1b0b8c8b6741dd6ca3d13af4963fa7e47456d49c7
+  checksum: c81b9bd20c6dbe90fa43e876c586021447f2b47baede9fa542b1f56715835c043e23b2eaf19c42c067cc6f5ae512bd9a9be28a67b3a1d9807f8c9cfb1269875e
   languageName: node
   linkType: hard
 

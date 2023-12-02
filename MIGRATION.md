@@ -30,6 +30,7 @@
 # Notes for the migration doc we'll need to write
 * Native typescript support
 * Removed ancient react-vector-icons compatibility
+* Major upgrade for antdesign
 * Things to undo
   * Remove any fonts from Info.plist
   * Remove font assets from react-native.config.js
