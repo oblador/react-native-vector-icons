@@ -208,7 +208,9 @@ export default class extends Generator<Arguments> {
 
     this._docker('karel3d/fontcustom', args);
 
-    fs.mkdirSync('fonts', { recursive: true });
+    if (!fs.existsSync('fonts')) {
+      fs.mkdirSync('fonts');
+    }
     fs.renameSync(`${data.className}/${data.className}.ttf`, `fonts/${data.className}.ttf`);
     fs.renameSync(`${data.className}/${data.className}.css`, `${data.className}.css`);
 
@@ -231,7 +233,9 @@ export default class extends Generator<Arguments> {
     const location = glyphmap.location || `${data.className}.css`;
     const json = generateGlyphmap(glyphmap.mode, [location], glyphmap.prefix)
 
-    fs.mkdirSync('glyphmaps', { recursive: true });
+    if (!fs.existsSync('glyphmaps')) {
+      fs.mkdirSync('glyphmaps');
+    }
     fs.writeFileSync(`glyphmaps/${data.fontFile}.json`, json);
 
     if (glyphmap.cleanup) {
