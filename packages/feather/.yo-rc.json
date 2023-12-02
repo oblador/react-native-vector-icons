@@ -3,7 +3,7 @@
     "packageName": "feather",
     "packageJSON": {
       "devDependencies": {
-        "feather": "^4.29.1"
+        "feather-icons": "^4.29.1"
       }
     },
     "buildSteps": {

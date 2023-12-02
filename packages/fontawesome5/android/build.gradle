@@ -129,11 +129,11 @@ def findNodeModulesDir(directory) {
 def projectRoot = rootProject.projectDir
 def nodeModulesDir = findNodeModulesDir(projectRoot)
 
+
 /**
  * Register font asset source folder
  */
 android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVIFontawesome5")
-
 
 // Define the copy task
 task copyFiles(type: Copy) {
@@ -142,7 +142,6 @@ task copyFiles(type: Copy) {
     from("${projectRoot}/../assets/fonts") {
       include 'FontAwesome5_Pro_*.ttf'
     }
-
 
     into "$buildDir/intermediates/RNVIFontawesome5/fonts"
 }

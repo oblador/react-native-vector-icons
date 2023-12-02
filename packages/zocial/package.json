@@ -71,11 +71,11 @@
     "@react-native-vector-icons/common": "^0"
   },
   "devDependencies": {
+    "css-social-buttons": "^1.1.1",
     "del-cli": "^5.1.0",
     "react-native-builder-bob": "^0.23.2",
-    "turbo": "^1.10.7",
-    "typescript": "^5.3.2",
-    "css-social-buttons": "^1.1.1"
+    "turbo": "^1.10.16",
+    "typescript": "^5.3.2"
   },
   "peerDependencies": {
     "react": "*",

@@ -118,7 +118,8 @@ android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVIIoni
 
 // Define the copy task
 task copyFiles(type: Copy) {
-    from '../../../../node_modules/@react-native-vector-icons/ionicons/fonts'
+    from "${nodeModulesDir}/@react-native-vector-icons/ionicons/fonts"
+
     into "$buildDir/intermediates/RNVIIonicons/fonts"
 }
 
