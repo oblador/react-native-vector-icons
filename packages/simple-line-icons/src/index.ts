@@ -4,7 +4,7 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
-import glyphMap from '../glyphmaps/simple_line_icons.json';
+import glyphMap from '../glyphmaps/SimpleLineIcons.json';
 
 const Icon = createIconSet(glyphMap, 'SimpleLineIcons', 'SimpleLineIcons.ttf');
 
@@ -12,4 +12,3 @@ Icon.loadFont();
 
 export default Icon;
 export const { getImageSource, getImageSourceSync } = Icon;
-
