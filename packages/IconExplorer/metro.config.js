@@ -31,7 +31,7 @@ const config = {
     path.resolve(__dirname, '../icomoon'),
     path.resolve(__dirname, '../ionicons'),
     path.resolve(__dirname, '../material-design-icons'),
-    path.resolve(__dirname, '../material-symbols'),
+    path.resolve(__dirname, '../material-icons'),
     path.resolve(__dirname, '../octicons'),
     path.resolve(__dirname, '../simple-line-icons'),
     path.resolve(__dirname, '../zocial'),
