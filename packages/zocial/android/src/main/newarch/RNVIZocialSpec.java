@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.zocial;
+package com.oblador.vectoricons.zocial;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 
