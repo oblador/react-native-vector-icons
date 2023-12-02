@@ -32,7 +32,7 @@ public class RNVIZocialPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIZocialModule.NAME,
-                      RNVIZocialAntDesignModule.NAME,
+                      RNVIZocialModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants

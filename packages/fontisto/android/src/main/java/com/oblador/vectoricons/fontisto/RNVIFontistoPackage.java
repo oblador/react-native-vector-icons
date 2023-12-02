@@ -32,7 +32,7 @@ public class RNVIFontistoPackage extends TurboReactPackage {
               AntDesignModule.NAME,
               new ReactModuleInfo(
                       RNVIFontistoModule.NAME,
-                      RNVIFontistoAntDesignModule.NAME,
+                      RNVIFontistoModule.NAME,
                       false, // canOverrideExistingModule
                       false, // needsEagerInit
                       true, // hasConstants
