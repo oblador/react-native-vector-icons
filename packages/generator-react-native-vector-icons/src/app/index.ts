@@ -100,12 +100,12 @@ export default class extends Generator<Arguments> {
         `android/src/main/java/com/oblador/vectoricons/${data.namespace}/RNVI${data.className}Module.java`,
       ],
       [
-        'android/src/main/newarch/RNVIclassNameSpec.java',
-        `android/src/main/newarch/RNVI${data.className}Spec.java`,
+        'android/src/newarch/RNVIclassNameSpec.java',
+        `android/src/newarch/RNVI${data.className}Spec.java`,
       ],
       [
-        'android/src/main/oldarch/RNVIclassNameSpec.java',
-        `android/src/main/oldarch/RNVI${data.className}Spec.java`,
+        'android/src/oldarch/RNVIclassNameSpec.java',
+        `android/src/oldarch/RNVI${data.className}Spec.java`,
       ],
       'babel.config.js',
       'package.json',
