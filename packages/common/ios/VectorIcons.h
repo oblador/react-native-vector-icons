@@ -1,6 +1,6 @@
 
 #ifdef RCT_NEW_ARCH_ENABLED
-#import "RNVectorIconsSpec.h"
+#import "VectorIconsSpec.h"
 
 @interface VectorIcons : NSObject <NativeVectorIconsSpec>
 #else
