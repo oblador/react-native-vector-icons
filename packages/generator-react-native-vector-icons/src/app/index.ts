@@ -291,7 +291,6 @@ export default class extends Generator<Arguments> {
     let locations: [string, string][] = [];
     if (typeof copyFont.location === 'string') {
       locations.push([copyFont.location, data.fontFile]);
-      return;
     } else {
       locations = copyFont.location;
     }

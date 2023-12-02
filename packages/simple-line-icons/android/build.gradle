@@ -118,7 +118,8 @@ android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVISimp
 
 // Define the copy task
 task copyFiles(type: Copy) {
-    from '../../../../node_modules/@react-native-vector-icons/simple-line-icons/fonts'
+    from "${nodeModulesDir}/@react-native-vector-icons/simple-line-icons/fonts"
+
     into "$buildDir/intermediates/RNVISimpleLineIcons/fonts"
 }
 

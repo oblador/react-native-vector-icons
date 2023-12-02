@@ -118,7 +118,8 @@ android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVIZoci
 
 // Define the copy task
 task copyFiles(type: Copy) {
-    from '../../../../node_modules/@react-native-vector-icons/zocial/fonts'
+    from "${nodeModulesDir}/@react-native-vector-icons/zocial/fonts"
+
     into "$buildDir/intermediates/RNVIZocial/fonts"
 }
 

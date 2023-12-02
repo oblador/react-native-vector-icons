@@ -12,12 +12,11 @@
     "yeoman-generator"
   ],
   "dependencies": {
+    "mem-fs": "^4.0.0",
     "oslllo-svg-fixer": "^3.0.0",
-    "yeoman-generator": "^1.0.0"
+    "yeoman-generator": "^7.1.1"
   },
   "devDependencies": {
-    "@types/copyfiles": "^2",
-    "@types/yeoman-generator": "^5.2.14",
     "copyfiles": "^2.4.1",
     "onchange": "^7.1.0",
     "tsc-watch": "^6.0.4",

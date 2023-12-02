@@ -129,20 +129,19 @@ def findNodeModulesDir(directory) {
 def projectRoot = rootProject.projectDir
 def nodeModulesDir = findNodeModulesDir(projectRoot)
 
+
 /**
  * Register font asset source folder
  */
 android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVIFontawesome6")
 
-
 // Define the copy task
 task copyFiles(type: Copy) {
-    from "${nodeModulesDir}/@react-native-vector-icons/fontawesome5/fonts"
+    from "${nodeModulesDir}/@react-native-vector-icons/fontawesome6/fonts"
 
     from("${projectRoot}/../assets/fonts") {
       include 'FontAwesome6_Pro_*.ttf'
     }
-
 
     into "$buildDir/intermediates/RNVIFontawesome6/fonts"
 }

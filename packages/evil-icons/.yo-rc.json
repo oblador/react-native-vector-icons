@@ -8,7 +8,7 @@
     },
     "buildSteps": {
       "fontCustom": {
-        "location": "../../node_modules/evil-icons/assets/icons"
+        "location": "node_modules/evil-icons/assets/icons"
       },
       "glyphmap": {
         "mode": "css",
