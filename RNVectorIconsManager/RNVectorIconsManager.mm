@@ -62,15 +62,15 @@ RCT_EXPORT_MODULE(RNVectorIcons);
     // No cached icon exists, we need to create it and persist to disk
 
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:glyph attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: color}];
-
     CGSize iconSize = [attributedString size];
-    UIGraphicsBeginImageContextWithOptions(iconSize, NO, 0.0);
-    [attributedString drawAtPoint:CGPointMake(0, 0)];
+    UIImage* newImage = [image imageWithRenderingMode: UIImageRenderingModeAlwaysTemplate];
 
-    UIImage *iconImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    UIGraphicsImageRenderer *renderer = [[UIGraphicsImageRenderer alloc] initWithSize:iconSize];
+    newImage = [renderer imageWithActions:^(UIGraphicsImageRendererContext * _Nonnull rendererContext) {
+      [attributedString drawAtPoint:CGPointMake(0, 0)];
+    }];
 
-    NSData *imageData = UIImagePNGRepresentation(iconImage);
+    NSData *imageData = UIImagePNGRepresentation(newImage);
     return [imageData writeToFile:filePath atomically:YES];
   }
 
