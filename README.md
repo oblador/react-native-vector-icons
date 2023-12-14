@@ -50,7 +50,7 @@ Should you find this library beneficial, kindly contemplate the option of [spons
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0 with *283* icons)
 - [`Ionicons`](https://ionicons.com/) crafted by Ionic (v7.1.0 containing *1338* icons)
 - [`MaterialIcons`](https://fonts.google.com/icons/) by Google, Inc. (v4.0.0 featuring *2189* icons)
-- [`MaterialCommunityIcons`](https://materialdesignicons.com/) from MaterialDesignIcons.com (v6.5.95 including *6596* icons)
+- [`MaterialCommunityIcons`](https://pictogrammers.com/library/mdi/) by Pictogrammers (v7.3.67 including *7367* icons)
 - [`Octicons`](http://octicons.github.com) designed by Github, Inc. (v16.3.1 with *250* icons)
 - [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.4.0 with *100* icons)
 - [`SimpleLineIcons`](https://simplelineicons.github.io/) crafted by Sabbir & Contributors (v2.5.5 with *189* icons)
