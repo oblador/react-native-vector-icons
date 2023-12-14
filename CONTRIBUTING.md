@@ -24,3 +24,18 @@ If you wish to submit a pull request for a new feature or issue, you should star
 - Optionally install [Docker](https://www.docker.com/products/docker-desktop) and run `npm run build` OR `yarn build` if you've updated any icon sets.
 
 One you have done this, create a new branch with a name that loosely describes the issue on which you will be working. Once you think you have the addressed the issue in question, submit a pull request to the `master` branch.
+
+### Version testing
+
+You can create new example apps for testing different versions and architectures
+
+```bash
+# Create a new app
+VERSION=0.71 # React native version
+ARCH=old # new or old
+TEAM=NLP12345AY
+bin/create-explorer $VERSION $ARCH $TEAM
+
+cd Examples/IconExplorer-${VERSION}-${ARCH}
+yarn run ios
+```

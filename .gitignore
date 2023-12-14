@@ -20,3 +20,6 @@ xcuserdata
 .DS_Store
 
 .yarn
+
+# Testing Examples
+Examples/IconExplorer-*
