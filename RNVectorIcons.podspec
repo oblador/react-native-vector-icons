@@ -18,5 +18,7 @@ Pod::Spec.new do |s|
   # React Native Core dependency
   if defined? install_modules_dependencies
     install_modules_dependencies(s)
+  else
+    s.dependency 'React-Core'
   end
 end
