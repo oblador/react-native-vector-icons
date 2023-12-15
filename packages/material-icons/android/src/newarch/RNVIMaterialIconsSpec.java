@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.material_icons;
+package com.reactnativevectoricons.material_icons;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 

@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.fontawesome6;
+package com.reactnativevectoricons.fontawesome6;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;

@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.evil_icons;
+package com.reactnativevectoricons.evil_icons;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 

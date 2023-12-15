@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.octicons;
+package com.reactnativevectoricons.octicons;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 

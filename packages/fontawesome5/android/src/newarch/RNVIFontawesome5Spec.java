@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.fontawesome5;
+package com.reactnativevectoricons.fontawesome5;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 

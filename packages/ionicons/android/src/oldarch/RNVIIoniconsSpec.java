@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.ionicons;
+package com.reactnativevectoricons.ionicons;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;

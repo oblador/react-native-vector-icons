@@ -93,12 +93,12 @@ export default class extends Generator<Arguments> {
       'android/src/main/AndroidManifestNew.xml',
       'android/src/main/AndroidManifest.xml',
       [
-        'android/src/main/java/com/oblador/vectoricons/namespace/RNVIclassNamePackage.java',
-        `android/src/main/java/com/oblador/vectoricons/${data.namespace}/RNVI${data.className}Package.java`,
+        'android/src/main/java/com/reactnativevectoricons/namespace/RNVIclassNamePackage.java',
+        `android/src/main/java/com/reactnativevectoricons/${data.namespace}/RNVI${data.className}Package.java`,
       ],
       [
-        'android/src/main/java/com/oblador/vectoricons/namespace/RNVIclassNameModule.java',
-        `android/src/main/java/com/oblador/vectoricons/${data.namespace}/RNVI${data.className}Module.java`,
+        'android/src/main/java/com/reactnativevectoricons/namespace/RNVIclassNameModule.java',
+        `android/src/main/java/com/reactnativevectoricons/${data.namespace}/RNVI${data.className}Module.java`,
       ],
       [
         'android/src/newarch/RNVIclassNameSpec.java',

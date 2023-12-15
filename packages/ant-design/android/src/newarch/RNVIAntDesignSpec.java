@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.ant_design;
+package com.reactnativevectoricons.ant_design;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 
