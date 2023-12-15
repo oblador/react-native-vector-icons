@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.<%= namespace %>;
+package com.reactnativevectoricons.<%= namespace %>;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 
