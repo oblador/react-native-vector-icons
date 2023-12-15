@@ -178,20 +178,10 @@ export const createIconSet = <GM extends Record<string, number>>(
     await NativeIconAPI.loadFontWithFileName(filename!, extension);
   };
 
-  const hasIcon = (name: string) =>
-    Object.prototype.hasOwnProperty.call(glyphMap, name);
-
-  const getRawGlyphMap = () => glyphMap;
-
-  const getFontFamily = () => fontReference;
-
   const IconNamespace = Object.assign(WrappedIcon, {
     getImageSource: getImageSource,
     getImageSourceSync: getImageSourceSync,
     loadFont: loadFont,
-    hasIcon: hasIcon,
-    getRawGlyphMap: getRawGlyphMap,
-    getFontFamily: getFontFamily,
   });
 
   return IconNamespace;

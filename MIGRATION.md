@@ -3,9 +3,6 @@
 * Explore better android font loading
 * Subdir fonts on ios
 * Remove
-  * hasIcon - kill this
-  * getRawGlyphmap - for the directory plus one other guy - probably kill that
-  * getFontFamily? - Probably kill
   * loadFont - search github then killas external
 * Think about <Text selectable>
 * FOntawesome5/6
@@ -16,7 +13,6 @@
 * Support fontello
 * Support icomoon
 * MIgration using js-codeshift
-* do we commit the .fontcustom into the repo
 * Move to new namespace
 * Can we use react-native-config for assets
 * Build script in common to make the fonts dumber
