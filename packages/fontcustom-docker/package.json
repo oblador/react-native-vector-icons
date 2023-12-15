@@ -1,0 +1,10 @@
+{
+  "name": "@react-native-vector-icons/fontcustom-docker",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Updated fontcustom docker image",
+  "scripts": {
+    "build": "docker build -t johnf/fontcustom .",
+    "publish": "docker push johnf/fontcustom"
+  }
+}

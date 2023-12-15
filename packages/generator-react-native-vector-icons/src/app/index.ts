@@ -71,9 +71,10 @@ export default class extends Generator<Arguments> {
     const { status } = spawnSync('docker', [
       'run',
       '--rm',
-      `--volume=${process.cwd()}:/project`,
-      `--volume=${process.cwd()}/../../node_modules:/project/node_modules`,
+      `--volume=${process.cwd()}:/usr/src/app`,
+      `--volume=${process.cwd()}/../../node_modules:/usr/src/app/node_modules`,
       `--user=${uid}:${gid}`,
+      `--env=SOURCE_DATE_EPOCH=1702622477`, // TODO: Should we use something more sensible as the date for the fonts
       image,
       ...args,
     ], { stdio: 'inherit' });
@@ -232,7 +233,7 @@ export default class extends Generator<Arguments> {
       '--no-hash',
     ];
 
-    this._docker('karel3d/fontcustom', args);
+    this._docker('johnf/fontcustom', args);
 
     if (!fs.existsSync('fonts')) {
       fs.mkdirSync('fonts');
@@ -241,7 +242,6 @@ export default class extends Generator<Arguments> {
     fs.renameSync(`${data.className}/${data.className}.css`, `${data.className}.css`);
 
     fs.rmSync(data.className, { recursive: true });
-    fs.rmSync('.fontcustom-manifest.json');
 
     if (fontCustom.cleanup) {
       fs.rmSync(fontCustom.location, { recursive: true });
