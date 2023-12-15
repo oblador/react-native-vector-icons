@@ -1,0 +1,1691 @@
+{
+  "checksum": {
+    "previous": "70de77ee00ba7182ed5b709c0f98f525415cf5078765e5a85cc2cb6c561112e6",
+    "current": "70de77ee00ba7182ed5b709c0f98f525415cf5078765e5a85cc2cb6c561112e6"
+  },
+  "fonts": [
+    "Entypo/Entypo.ttf",
+    "Entypo/Entypo.svg",
+    "Entypo/Entypo.woff",
+    "Entypo/Entypo.eot",
+    "Entypo/Entypo.woff2"
+  ],
+  "glyphs": {
+    "500px": {
+      "codepoint": 61696,
+      "source": "node_modules/@entypo-icons/core/icons/500px.svg"
+    },
+    "500px-with-circle": {
+      "codepoint": 61697,
+      "source": "node_modules/@entypo-icons/core/icons/500px-with-circle.svg"
+    },
+    "add-to-list": {
+      "codepoint": 61698,
+      "source": "node_modules/@entypo-icons/core/icons/add-to-list.svg"
+    },
+    "add-user": {
+      "codepoint": 61699,
+      "source": "node_modules/@entypo-icons/core/icons/add-user.svg"
+    },
+    "address": {
+      "codepoint": 61700,
+      "source": "node_modules/@entypo-icons/core/icons/address.svg"
+    },
+    "adjust": {
+      "codepoint": 61701,
+      "source": "node_modules/@entypo-icons/core/icons/adjust.svg"
+    },
+    "air": {
+      "codepoint": 61702,
+      "source": "node_modules/@entypo-icons/core/icons/air.svg"
+    },
+    "aircraft": {
+      "codepoint": 61703,
+      "source": "node_modules/@entypo-icons/core/icons/aircraft.svg"
+    },
+    "aircraft-landing": {
+      "codepoint": 61704,
+      "source": "node_modules/@entypo-icons/core/icons/aircraft-landing.svg"
+    },
+    "aircraft-take-off": {
+      "codepoint": 61705,
+      "source": "node_modules/@entypo-icons/core/icons/aircraft-take-off.svg"
+    },
+    "align-bottom": {
+      "codepoint": 61706,
+      "source": "node_modules/@entypo-icons/core/icons/align-bottom.svg"
+    },
+    "align-horizontal-middle": {
+      "codepoint": 61707,
+      "source": "node_modules/@entypo-icons/core/icons/align-horizontal-middle.svg"
+    },
+    "align-left": {
+      "codepoint": 61708,
+      "source": "node_modules/@entypo-icons/core/icons/align-left.svg"
+    },
+    "align-right": {
+      "codepoint": 61709,
+      "source": "node_modules/@entypo-icons/core/icons/align-right.svg"
+    },
+    "align-top": {
+      "codepoint": 61710,
+      "source": "node_modules/@entypo-icons/core/icons/align-top.svg"
+    },
+    "align-vertical-middle": {
+      "codepoint": 61711,
+      "source": "node_modules/@entypo-icons/core/icons/align-vertical-middle.svg"
+    },
+    "app-store": {
+      "codepoint": 61712,
+      "source": "node_modules/@entypo-icons/core/icons/app-store.svg"
+    },
+    "archive": {
+      "codepoint": 61713,
+      "source": "node_modules/@entypo-icons/core/icons/archive.svg"
+    },
+    "area-graph": {
+      "codepoint": 61714,
+      "source": "node_modules/@entypo-icons/core/icons/area-graph.svg"
+    },
+    "arrow-bold-down": {
+      "codepoint": 61715,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-bold-down.svg"
+    },
+    "arrow-bold-left": {
+      "codepoint": 61716,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-bold-left.svg"
+    },
+    "arrow-bold-right": {
+      "codepoint": 61717,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-bold-right.svg"
+    },
+    "arrow-bold-up": {
+      "codepoint": 61718,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-bold-up.svg"
+    },
+    "arrow-down": {
+      "codepoint": 61719,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-down.svg"
+    },
+    "arrow-left": {
+      "codepoint": 61720,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-left.svg"
+    },
+    "arrow-long-down": {
+      "codepoint": 61721,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-long-down.svg"
+    },
+    "arrow-long-left": {
+      "codepoint": 61722,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-long-left.svg"
+    },
+    "arrow-long-right": {
+      "codepoint": 61723,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-long-right.svg"
+    },
+    "arrow-long-up": {
+      "codepoint": 61724,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-long-up.svg"
+    },
+    "arrow-right": {
+      "codepoint": 61725,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-right.svg"
+    },
+    "arrow-up": {
+      "codepoint": 61726,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-up.svg"
+    },
+    "arrow-with-circle-down": {
+      "codepoint": 61727,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-with-circle-down.svg"
+    },
+    "arrow-with-circle-left": {
+      "codepoint": 61728,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-with-circle-left.svg"
+    },
+    "arrow-with-circle-right": {
+      "codepoint": 61729,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-with-circle-right.svg"
+    },
+    "arrow-with-circle-up": {
+      "codepoint": 61730,
+      "source": "node_modules/@entypo-icons/core/icons/arrow-with-circle-up.svg"
+    },
+    "attachment": {
+      "codepoint": 61731,
+      "source": "node_modules/@entypo-icons/core/icons/attachment.svg"
+    },
+    "awareness-ribbon": {
+      "codepoint": 61732,
+      "source": "node_modules/@entypo-icons/core/icons/awareness-ribbon.svg"
+    },
+    "back": {
+      "codepoint": 61733,
+      "source": "node_modules/@entypo-icons/core/icons/back.svg"
+    },
+    "back-in-time": {
+      "codepoint": 61734,
+      "source": "node_modules/@entypo-icons/core/icons/back-in-time.svg"
+    },
+    "baidu": {
+      "codepoint": 61735,
+      "source": "node_modules/@entypo-icons/core/icons/baidu.svg"
+    },
+    "bar-graph": {
+      "codepoint": 61736,
+      "source": "node_modules/@entypo-icons/core/icons/bar-graph.svg"
+    },
+    "basecamp": {
+      "codepoint": 61737,
+      "source": "node_modules/@entypo-icons/core/icons/basecamp.svg"
+    },
+    "battery": {
+      "codepoint": 61738,
+      "source": "node_modules/@entypo-icons/core/icons/battery.svg"
+    },
+    "beamed-note": {
+      "codepoint": 61739,
+      "source": "node_modules/@entypo-icons/core/icons/beamed-note.svg"
+    },
+    "behance": {
+      "codepoint": 61740,
+      "source": "node_modules/@entypo-icons/core/icons/behance.svg"
+    },
+    "bell": {
+      "codepoint": 61741,
+      "source": "node_modules/@entypo-icons/core/icons/bell.svg"
+    },
+    "blackboard": {
+      "codepoint": 61742,
+      "source": "node_modules/@entypo-icons/core/icons/blackboard.svg"
+    },
+    "block": {
+      "codepoint": 61743,
+      "source": "node_modules/@entypo-icons/core/icons/block.svg"
+    },
+    "book": {
+      "codepoint": 61744,
+      "source": "node_modules/@entypo-icons/core/icons/book.svg"
+    },
+    "bookmark": {
+      "codepoint": 61745,
+      "source": "node_modules/@entypo-icons/core/icons/bookmark.svg"
+    },
+    "bookmarks": {
+      "codepoint": 61746,
+      "source": "node_modules/@entypo-icons/core/icons/bookmarks.svg"
+    },
+    "bowl": {
+      "codepoint": 61747,
+      "source": "node_modules/@entypo-icons/core/icons/bowl.svg"
+    },
+    "box": {
+      "codepoint": 61748,
+      "source": "node_modules/@entypo-icons/core/icons/box.svg"
+    },
+    "briefcase": {
+      "codepoint": 61749,
+      "source": "node_modules/@entypo-icons/core/icons/briefcase.svg"
+    },
+    "browser": {
+      "codepoint": 61750,
+      "source": "node_modules/@entypo-icons/core/icons/browser.svg"
+    },
+    "brush": {
+      "codepoint": 61751,
+      "source": "node_modules/@entypo-icons/core/icons/brush.svg"
+    },
+    "bucket": {
+      "codepoint": 61752,
+      "source": "node_modules/@entypo-icons/core/icons/bucket.svg"
+    },
+    "bug": {
+      "codepoint": 61753,
+      "source": "node_modules/@entypo-icons/core/icons/bug.svg"
+    },
+    "cake": {
+      "codepoint": 61754,
+      "source": "node_modules/@entypo-icons/core/icons/cake.svg"
+    },
+    "calculator": {
+      "codepoint": 61755,
+      "source": "node_modules/@entypo-icons/core/icons/calculator.svg"
+    },
+    "calendar": {
+      "codepoint": 61756,
+      "source": "node_modules/@entypo-icons/core/icons/calendar.svg"
+    },
+    "camera": {
+      "codepoint": 61757,
+      "source": "node_modules/@entypo-icons/core/icons/camera.svg"
+    },
+    "ccw": {
+      "codepoint": 61758,
+      "source": "node_modules/@entypo-icons/core/icons/ccw.svg"
+    },
+    "chat": {
+      "codepoint": 61759,
+      "source": "node_modules/@entypo-icons/core/icons/chat.svg"
+    },
+    "check": {
+      "codepoint": 61760,
+      "source": "node_modules/@entypo-icons/core/icons/check.svg"
+    },
+    "chevron-down": {
+      "codepoint": 61761,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-down.svg"
+    },
+    "chevron-left": {
+      "codepoint": 61762,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-left.svg"
+    },
+    "chevron-right": {
+      "codepoint": 61763,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-right.svg"
+    },
+    "chevron-small-down": {
+      "codepoint": 61764,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-small-down.svg"
+    },
+    "chevron-small-left": {
+      "codepoint": 61765,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-small-left.svg"
+    },
+    "chevron-small-right": {
+      "codepoint": 61766,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-small-right.svg"
+    },
+    "chevron-small-up": {
+      "codepoint": 61767,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-small-up.svg"
+    },
+    "chevron-thin-down": {
+      "codepoint": 61768,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-thin-down.svg"
+    },
+    "chevron-thin-left": {
+      "codepoint": 61769,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-thin-left.svg"
+    },
+    "chevron-thin-right": {
+      "codepoint": 61770,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-thin-right.svg"
+    },
+    "chevron-thin-up": {
+      "codepoint": 61771,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-thin-up.svg"
+    },
+    "chevron-up": {
+      "codepoint": 61772,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-up.svg"
+    },
+    "chevron-with-circle-down": {
+      "codepoint": 61773,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-with-circle-down.svg"
+    },
+    "chevron-with-circle-left": {
+      "codepoint": 61774,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-with-circle-left.svg"
+    },
+    "chevron-with-circle-right": {
+      "codepoint": 61775,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-with-circle-right.svg"
+    },
+    "chevron-with-circle-up": {
+      "codepoint": 61776,
+      "source": "node_modules/@entypo-icons/core/icons/chevron-with-circle-up.svg"
+    },
+    "circle": {
+      "codepoint": 61777,
+      "source": "node_modules/@entypo-icons/core/icons/circle.svg"
+    },
+    "circle-with-cross": {
+      "codepoint": 61778,
+      "source": "node_modules/@entypo-icons/core/icons/circle-with-cross.svg"
+    },
+    "circle-with-minus": {
+      "codepoint": 61779,
+      "source": "node_modules/@entypo-icons/core/icons/circle-with-minus.svg"
+    },
+    "circle-with-plus": {
+      "codepoint": 61780,
+      "source": "node_modules/@entypo-icons/core/icons/circle-with-plus.svg"
+    },
+    "circular-graph": {
+      "codepoint": 61781,
+      "source": "node_modules/@entypo-icons/core/icons/circular-graph.svg"
+    },
+    "clapperboard": {
+      "codepoint": 61782,
+      "source": "node_modules/@entypo-icons/core/icons/clapperboard.svg"
+    },
+    "classic-computer": {
+      "codepoint": 61783,
+      "source": "node_modules/@entypo-icons/core/icons/classic-computer.svg"
+    },
+    "clipboard": {
+      "codepoint": 61784,
+      "source": "node_modules/@entypo-icons/core/icons/clipboard.svg"
+    },
+    "clock": {
+      "codepoint": 61785,
+      "source": "node_modules/@entypo-icons/core/icons/clock.svg"
+    },
+    "cloud": {
+      "codepoint": 61786,
+      "source": "node_modules/@entypo-icons/core/icons/cloud.svg"
+    },
+    "code": {
+      "codepoint": 61787,
+      "source": "node_modules/@entypo-icons/core/icons/code.svg"
+    },
+    "cog": {
+      "codepoint": 61788,
+      "source": "node_modules/@entypo-icons/core/icons/cog.svg"
+    },
+    "colours": {
+      "codepoint": 61789,
+      "source": "node_modules/@entypo-icons/core/icons/colours.svg"
+    },
+    "compass": {
+      "codepoint": 61790,
+      "source": "node_modules/@entypo-icons/core/icons/compass.svg"
+    },
+    "controller-fast-backward": {
+      "codepoint": 61791,
+      "source": "node_modules/@entypo-icons/core/icons/controller-fast-backward.svg"
+    },
+    "controller-fast-forward": {
+      "codepoint": 61792,
+      "source": "node_modules/@entypo-icons/core/icons/controller-fast-forward.svg"
+    },
+    "controller-jump-to-start": {
+      "codepoint": 61793,
+      "source": "node_modules/@entypo-icons/core/icons/controller-jump-to-start.svg"
+    },
+    "controller-next": {
+      "codepoint": 61794,
+      "source": "node_modules/@entypo-icons/core/icons/controller-next.svg"
+    },
+    "controller-paus": {
+      "codepoint": 61795,
+      "source": "node_modules/@entypo-icons/core/icons/controller-paus.svg"
+    },
+    "controller-play": {
+      "codepoint": 61796,
+      "source": "node_modules/@entypo-icons/core/icons/controller-play.svg"
+    },
+    "controller-record": {
+      "codepoint": 61797,
+      "source": "node_modules/@entypo-icons/core/icons/controller-record.svg"
+    },
+    "controller-stop": {
+      "codepoint": 61798,
+      "source": "node_modules/@entypo-icons/core/icons/controller-stop.svg"
+    },
+    "controller-volume": {
+      "codepoint": 61799,
+      "source": "node_modules/@entypo-icons/core/icons/controller-volume.svg"
+    },
+    "copy": {
+      "codepoint": 61800,
+      "source": "node_modules/@entypo-icons/core/icons/copy.svg"
+    },
+    "creative-cloud": {
+      "codepoint": 61801,
+      "source": "node_modules/@entypo-icons/core/icons/creative-cloud.svg"
+    },
+    "creative-commons": {
+      "codepoint": 61802,
+      "source": "node_modules/@entypo-icons/core/icons/creative-commons.svg"
+    },
+    "creative-commons-attribution": {
+      "codepoint": 61803,
+      "source": "node_modules/@entypo-icons/core/icons/creative-commons-attribution.svg"
+    },
+    "creative-commons-noderivs": {
+      "codepoint": 61804,
+      "source": "node_modules/@entypo-icons/core/icons/creative-commons-noderivs.svg"
+    },
+    "creative-commons-noncommercial-eu": {
+      "codepoint": 61805,
+      "source": "node_modules/@entypo-icons/core/icons/creative-commons-noncommercial-eu.svg"
+    },
+    "creative-commons-noncommercial-us": {
+      "codepoint": 61806,
+      "source": "node_modules/@entypo-icons/core/icons/creative-commons-noncommercial-us.svg"
+    },
+    "creative-commons-public-domain": {
+      "codepoint": 61807,
+      "source": "node_modules/@entypo-icons/core/icons/creative-commons-public-domain.svg"
+    },
+    "creative-commons-remix": {
+      "codepoint": 61808,
+      "source": "node_modules/@entypo-icons/core/icons/creative-commons-remix.svg"
+    },
+    "creative-commons-share": {
+      "codepoint": 61809,
+      "source": "node_modules/@entypo-icons/core/icons/creative-commons-share.svg"
+    },
+    "creative-commons-sharealike": {
+      "codepoint": 61810,
+      "source": "node_modules/@entypo-icons/core/icons/creative-commons-sharealike.svg"
+    },
+    "credit": {
+      "codepoint": 61811,
+      "source": "node_modules/@entypo-icons/core/icons/credit.svg"
+    },
+    "credit-card": {
+      "codepoint": 61812,
+      "source": "node_modules/@entypo-icons/core/icons/credit-card.svg"
+    },
+    "crop": {
+      "codepoint": 61813,
+      "source": "node_modules/@entypo-icons/core/icons/crop.svg"
+    },
+    "cross": {
+      "codepoint": 61814,
+      "source": "node_modules/@entypo-icons/core/icons/cross.svg"
+    },
+    "cup": {
+      "codepoint": 61815,
+      "source": "node_modules/@entypo-icons/core/icons/cup.svg"
+    },
+    "cw": {
+      "codepoint": 61816,
+      "source": "node_modules/@entypo-icons/core/icons/cw.svg"
+    },
+    "cycle": {
+      "codepoint": 61817,
+      "source": "node_modules/@entypo-icons/core/icons/cycle.svg"
+    },
+    "database": {
+      "codepoint": 61818,
+      "source": "node_modules/@entypo-icons/core/icons/database.svg"
+    },
+    "dial-pad": {
+      "codepoint": 61819,
+      "source": "node_modules/@entypo-icons/core/icons/dial-pad.svg"
+    },
+    "direction": {
+      "codepoint": 61820,
+      "source": "node_modules/@entypo-icons/core/icons/direction.svg"
+    },
+    "document": {
+      "codepoint": 61821,
+      "source": "node_modules/@entypo-icons/core/icons/document.svg"
+    },
+    "document-landscape": {
+      "codepoint": 61822,
+      "source": "node_modules/@entypo-icons/core/icons/document-landscape.svg"
+    },
+    "documents": {
+      "codepoint": 61823,
+      "source": "node_modules/@entypo-icons/core/icons/documents.svg"
+    },
+    "dot-single": {
+      "codepoint": 61824,
+      "source": "node_modules/@entypo-icons/core/icons/dot-single.svg"
+    },
+    "dots-three-horizontal": {
+      "codepoint": 61825,
+      "source": "node_modules/@entypo-icons/core/icons/dots-three-horizontal.svg"
+    },
+    "dots-three-vertical": {
+      "codepoint": 61826,
+      "source": "node_modules/@entypo-icons/core/icons/dots-three-vertical.svg"
+    },
+    "dots-two-horizontal": {
+      "codepoint": 61827,
+      "source": "node_modules/@entypo-icons/core/icons/dots-two-horizontal.svg"
+    },
+    "dots-two-vertical": {
+      "codepoint": 61828,
+      "source": "node_modules/@entypo-icons/core/icons/dots-two-vertical.svg"
+    },
+    "download": {
+      "codepoint": 61829,
+      "source": "node_modules/@entypo-icons/core/icons/download.svg"
+    },
+    "dribbble": {
+      "codepoint": 61830,
+      "source": "node_modules/@entypo-icons/core/icons/dribbble.svg"
+    },
+    "dribbble-with-circle": {
+      "codepoint": 61831,
+      "source": "node_modules/@entypo-icons/core/icons/dribbble-with-circle.svg"
+    },
+    "drink": {
+      "codepoint": 61832,
+      "source": "node_modules/@entypo-icons/core/icons/drink.svg"
+    },
+    "drive": {
+      "codepoint": 61833,
+      "source": "node_modules/@entypo-icons/core/icons/drive.svg"
+    },
+    "drop": {
+      "codepoint": 61834,
+      "source": "node_modules/@entypo-icons/core/icons/drop.svg"
+    },
+    "dropbox": {
+      "codepoint": 61835,
+      "source": "node_modules/@entypo-icons/core/icons/dropbox.svg"
+    },
+    "edit": {
+      "codepoint": 61836,
+      "source": "node_modules/@entypo-icons/core/icons/edit.svg"
+    },
+    "email": {
+      "codepoint": 61837,
+      "source": "node_modules/@entypo-icons/core/icons/email.svg"
+    },
+    "emoji-flirt": {
+      "codepoint": 61838,
+      "source": "node_modules/@entypo-icons/core/icons/emoji-flirt.svg"
+    },
+    "emoji-happy": {
+      "codepoint": 61839,
+      "source": "node_modules/@entypo-icons/core/icons/emoji-happy.svg"
+    },
+    "emoji-neutral": {
+      "codepoint": 61840,
+      "source": "node_modules/@entypo-icons/core/icons/emoji-neutral.svg"
+    },
+    "emoji-sad": {
+      "codepoint": 61841,
+      "source": "node_modules/@entypo-icons/core/icons/emoji-sad.svg"
+    },
+    "erase": {
+      "codepoint": 61842,
+      "source": "node_modules/@entypo-icons/core/icons/erase.svg"
+    },
+    "eraser": {
+      "codepoint": 61843,
+      "source": "node_modules/@entypo-icons/core/icons/eraser.svg"
+    },
+    "evernote": {
+      "codepoint": 61844,
+      "source": "node_modules/@entypo-icons/core/icons/evernote.svg"
+    },
+    "export": {
+      "codepoint": 61845,
+      "source": "node_modules/@entypo-icons/core/icons/export.svg"
+    },
+    "eye": {
+      "codepoint": 61846,
+      "source": "node_modules/@entypo-icons/core/icons/eye.svg"
+    },
+    "eye-with-line": {
+      "codepoint": 61847,
+      "source": "node_modules/@entypo-icons/core/icons/eye-with-line.svg"
+    },
+    "facebook": {
+      "codepoint": 61848,
+      "source": "node_modules/@entypo-icons/core/icons/facebook.svg"
+    },
+    "facebook-with-circle": {
+      "codepoint": 61849,
+      "source": "node_modules/@entypo-icons/core/icons/facebook-with-circle.svg"
+    },
+    "feather": {
+      "codepoint": 61850,
+      "source": "node_modules/@entypo-icons/core/icons/feather.svg"
+    },
+    "fingerprint": {
+      "codepoint": 61851,
+      "source": "node_modules/@entypo-icons/core/icons/fingerprint.svg"
+    },
+    "flag": {
+      "codepoint": 61852,
+      "source": "node_modules/@entypo-icons/core/icons/flag.svg"
+    },
+    "flash": {
+      "codepoint": 61853,
+      "source": "node_modules/@entypo-icons/core/icons/flash.svg"
+    },
+    "flashlight": {
+      "codepoint": 61854,
+      "source": "node_modules/@entypo-icons/core/icons/flashlight.svg"
+    },
+    "flat-brush": {
+      "codepoint": 61855,
+      "source": "node_modules/@entypo-icons/core/icons/flat-brush.svg"
+    },
+    "flattr": {
+      "codepoint": 61856,
+      "source": "node_modules/@entypo-icons/core/icons/flattr.svg"
+    },
+    "flickr": {
+      "codepoint": 61857,
+      "source": "node_modules/@entypo-icons/core/icons/flickr.svg"
+    },
+    "flickr-with-circle": {
+      "codepoint": 61858,
+      "source": "node_modules/@entypo-icons/core/icons/flickr-with-circle.svg"
+    },
+    "flow-branch": {
+      "codepoint": 61859,
+      "source": "node_modules/@entypo-icons/core/icons/flow-branch.svg"
+    },
+    "flow-cascade": {
+      "codepoint": 61860,
+      "source": "node_modules/@entypo-icons/core/icons/flow-cascade.svg"
+    },
+    "flow-line": {
+      "codepoint": 61861,
+      "source": "node_modules/@entypo-icons/core/icons/flow-line.svg"
+    },
+    "flow-parallel": {
+      "codepoint": 61862,
+      "source": "node_modules/@entypo-icons/core/icons/flow-parallel.svg"
+    },
+    "flow-tree": {
+      "codepoint": 61863,
+      "source": "node_modules/@entypo-icons/core/icons/flow-tree.svg"
+    },
+    "flower": {
+      "codepoint": 61864,
+      "source": "node_modules/@entypo-icons/core/icons/flower.svg"
+    },
+    "folder": {
+      "codepoint": 61865,
+      "source": "node_modules/@entypo-icons/core/icons/folder.svg"
+    },
+    "folder-images": {
+      "codepoint": 61866,
+      "source": "node_modules/@entypo-icons/core/icons/folder-images.svg"
+    },
+    "folder-music": {
+      "codepoint": 61867,
+      "source": "node_modules/@entypo-icons/core/icons/folder-music.svg"
+    },
+    "folder-video": {
+      "codepoint": 61868,
+      "source": "node_modules/@entypo-icons/core/icons/folder-video.svg"
+    },
+    "forward": {
+      "codepoint": 61869,
+      "source": "node_modules/@entypo-icons/core/icons/forward.svg"
+    },
+    "foursquare": {
+      "codepoint": 61870,
+      "source": "node_modules/@entypo-icons/core/icons/foursquare.svg"
+    },
+    "funnel": {
+      "codepoint": 61871,
+      "source": "node_modules/@entypo-icons/core/icons/funnel.svg"
+    },
+    "game-controller": {
+      "codepoint": 61872,
+      "source": "node_modules/@entypo-icons/core/icons/game-controller.svg"
+    },
+    "gauge": {
+      "codepoint": 61873,
+      "source": "node_modules/@entypo-icons/core/icons/gauge.svg"
+    },
+    "github": {
+      "codepoint": 61874,
+      "source": "node_modules/@entypo-icons/core/icons/github.svg"
+    },
+    "github-with-circle": {
+      "codepoint": 61875,
+      "source": "node_modules/@entypo-icons/core/icons/github-with-circle.svg"
+    },
+    "globe": {
+      "codepoint": 61876,
+      "source": "node_modules/@entypo-icons/core/icons/globe.svg"
+    },
+    "google-": {
+      "codepoint": 61877,
+      "source": "node_modules/@entypo-icons/core/icons/google+.svg"
+    },
+    "google--with-circle": {
+      "codepoint": 61878,
+      "source": "node_modules/@entypo-icons/core/icons/google+-with-circle.svg"
+    },
+    "google-drive": {
+      "codepoint": 61879,
+      "source": "node_modules/@entypo-icons/core/icons/google-drive.svg"
+    },
+    "google-hangouts": {
+      "codepoint": 61880,
+      "source": "node_modules/@entypo-icons/core/icons/google-hangouts.svg"
+    },
+    "google-play": {
+      "codepoint": 61881,
+      "source": "node_modules/@entypo-icons/core/icons/google-play.svg"
+    },
+    "graduation-cap": {
+      "codepoint": 61882,
+      "source": "node_modules/@entypo-icons/core/icons/graduation-cap.svg"
+    },
+    "grid": {
+      "codepoint": 61883,
+      "source": "node_modules/@entypo-icons/core/icons/grid.svg"
+    },
+    "grooveshark": {
+      "codepoint": 61884,
+      "source": "node_modules/@entypo-icons/core/icons/grooveshark.svg"
+    },
+    "hair-cross": {
+      "codepoint": 61885,
+      "source": "node_modules/@entypo-icons/core/icons/hair-cross.svg"
+    },
+    "hand": {
+      "codepoint": 61886,
+      "source": "node_modules/@entypo-icons/core/icons/hand.svg"
+    },
+    "heart": {
+      "codepoint": 61887,
+      "source": "node_modules/@entypo-icons/core/icons/heart.svg"
+    },
+    "heart-outlined": {
+      "codepoint": 61888,
+      "source": "node_modules/@entypo-icons/core/icons/heart-outlined.svg"
+    },
+    "help": {
+      "codepoint": 61889,
+      "source": "node_modules/@entypo-icons/core/icons/help.svg"
+    },
+    "help-with-circle": {
+      "codepoint": 61890,
+      "source": "node_modules/@entypo-icons/core/icons/help-with-circle.svg"
+    },
+    "home": {
+      "codepoint": 61891,
+      "source": "node_modules/@entypo-icons/core/icons/home.svg"
+    },
+    "hour-glass": {
+      "codepoint": 61892,
+      "source": "node_modules/@entypo-icons/core/icons/hour-glass.svg"
+    },
+    "houzz": {
+      "codepoint": 61893,
+      "source": "node_modules/@entypo-icons/core/icons/houzz.svg"
+    },
+    "icloud": {
+      "codepoint": 61894,
+      "source": "node_modules/@entypo-icons/core/icons/icloud.svg"
+    },
+    "image": {
+      "codepoint": 61895,
+      "source": "node_modules/@entypo-icons/core/icons/image.svg"
+    },
+    "image-inverted": {
+      "codepoint": 61896,
+      "source": "node_modules/@entypo-icons/core/icons/image-inverted.svg"
+    },
+    "images": {
+      "codepoint": 61897,
+      "source": "node_modules/@entypo-icons/core/icons/images.svg"
+    },
+    "inbox": {
+      "codepoint": 61898,
+      "source": "node_modules/@entypo-icons/core/icons/inbox.svg"
+    },
+    "infinity": {
+      "codepoint": 61899,
+      "source": "node_modules/@entypo-icons/core/icons/infinity.svg"
+    },
+    "info": {
+      "codepoint": 61900,
+      "source": "node_modules/@entypo-icons/core/icons/info.svg"
+    },
+    "info-with-circle": {
+      "codepoint": 61901,
+      "source": "node_modules/@entypo-icons/core/icons/info-with-circle.svg"
+    },
+    "instagram": {
+      "codepoint": 61902,
+      "source": "node_modules/@entypo-icons/core/icons/instagram.svg"
+    },
+    "instagram-with-circle": {
+      "codepoint": 61903,
+      "source": "node_modules/@entypo-icons/core/icons/instagram-with-circle.svg"
+    },
+    "install": {
+      "codepoint": 61904,
+      "source": "node_modules/@entypo-icons/core/icons/install.svg"
+    },
+    "key": {
+      "codepoint": 61905,
+      "source": "node_modules/@entypo-icons/core/icons/key.svg"
+    },
+    "keyboard": {
+      "codepoint": 61906,
+      "source": "node_modules/@entypo-icons/core/icons/keyboard.svg"
+    },
+    "lab-flask": {
+      "codepoint": 61907,
+      "source": "node_modules/@entypo-icons/core/icons/lab-flask.svg"
+    },
+    "landline": {
+      "codepoint": 61908,
+      "source": "node_modules/@entypo-icons/core/icons/landline.svg"
+    },
+    "language": {
+      "codepoint": 61909,
+      "source": "node_modules/@entypo-icons/core/icons/language.svg"
+    },
+    "laptop": {
+      "codepoint": 61910,
+      "source": "node_modules/@entypo-icons/core/icons/laptop.svg"
+    },
+    "lastfm": {
+      "codepoint": 61911,
+      "source": "node_modules/@entypo-icons/core/icons/lastfm.svg"
+    },
+    "lastfm-with-circle": {
+      "codepoint": 61912,
+      "source": "node_modules/@entypo-icons/core/icons/lastfm-with-circle.svg"
+    },
+    "layers": {
+      "codepoint": 61913,
+      "source": "node_modules/@entypo-icons/core/icons/layers.svg"
+    },
+    "leaf": {
+      "codepoint": 61914,
+      "source": "node_modules/@entypo-icons/core/icons/leaf.svg"
+    },
+    "level-down": {
+      "codepoint": 61915,
+      "source": "node_modules/@entypo-icons/core/icons/level-down.svg"
+    },
+    "level-up": {
+      "codepoint": 61916,
+      "source": "node_modules/@entypo-icons/core/icons/level-up.svg"
+    },
+    "lifebuoy": {
+      "codepoint": 61917,
+      "source": "node_modules/@entypo-icons/core/icons/lifebuoy.svg"
+    },
+    "light-bulb": {
+      "codepoint": 61918,
+      "source": "node_modules/@entypo-icons/core/icons/light-bulb.svg"
+    },
+    "light-down": {
+      "codepoint": 61919,
+      "source": "node_modules/@entypo-icons/core/icons/light-down.svg"
+    },
+    "light-up": {
+      "codepoint": 61920,
+      "source": "node_modules/@entypo-icons/core/icons/light-up.svg"
+    },
+    "line-graph": {
+      "codepoint": 61921,
+      "source": "node_modules/@entypo-icons/core/icons/line-graph.svg"
+    },
+    "link": {
+      "codepoint": 61922,
+      "source": "node_modules/@entypo-icons/core/icons/link.svg"
+    },
+    "linkedin": {
+      "codepoint": 61923,
+      "source": "node_modules/@entypo-icons/core/icons/linkedin.svg"
+    },
+    "linkedin-with-circle": {
+      "codepoint": 61924,
+      "source": "node_modules/@entypo-icons/core/icons/linkedin-with-circle.svg"
+    },
+    "list": {
+      "codepoint": 61925,
+      "source": "node_modules/@entypo-icons/core/icons/list.svg"
+    },
+    "location": {
+      "codepoint": 61926,
+      "source": "node_modules/@entypo-icons/core/icons/location.svg"
+    },
+    "location-pin": {
+      "codepoint": 61927,
+      "source": "node_modules/@entypo-icons/core/icons/location-pin.svg"
+    },
+    "lock": {
+      "codepoint": 61928,
+      "source": "node_modules/@entypo-icons/core/icons/lock.svg"
+    },
+    "lock-open": {
+      "codepoint": 61929,
+      "source": "node_modules/@entypo-icons/core/icons/lock-open.svg"
+    },
+    "log-out": {
+      "codepoint": 61930,
+      "source": "node_modules/@entypo-icons/core/icons/log-out.svg"
+    },
+    "login": {
+      "codepoint": 61931,
+      "source": "node_modules/@entypo-icons/core/icons/login.svg"
+    },
+    "loop": {
+      "codepoint": 61932,
+      "source": "node_modules/@entypo-icons/core/icons/loop.svg"
+    },
+    "magnet": {
+      "codepoint": 61933,
+      "source": "node_modules/@entypo-icons/core/icons/magnet.svg"
+    },
+    "magnifying-glass": {
+      "codepoint": 61934,
+      "source": "node_modules/@entypo-icons/core/icons/magnifying-glass.svg"
+    },
+    "mail": {
+      "codepoint": 61935,
+      "source": "node_modules/@entypo-icons/core/icons/mail.svg"
+    },
+    "mail-with-circle": {
+      "codepoint": 61936,
+      "source": "node_modules/@entypo-icons/core/icons/mail-with-circle.svg"
+    },
+    "man": {
+      "codepoint": 61937,
+      "source": "node_modules/@entypo-icons/core/icons/man.svg"
+    },
+    "map": {
+      "codepoint": 61938,
+      "source": "node_modules/@entypo-icons/core/icons/map.svg"
+    },
+    "mask": {
+      "codepoint": 61939,
+      "source": "node_modules/@entypo-icons/core/icons/mask.svg"
+    },
+    "medal": {
+      "codepoint": 61940,
+      "source": "node_modules/@entypo-icons/core/icons/medal.svg"
+    },
+    "medium": {
+      "codepoint": 61941,
+      "source": "node_modules/@entypo-icons/core/icons/medium.svg"
+    },
+    "medium-with-circle": {
+      "codepoint": 61942,
+      "source": "node_modules/@entypo-icons/core/icons/medium-with-circle.svg"
+    },
+    "megaphone": {
+      "codepoint": 61943,
+      "source": "node_modules/@entypo-icons/core/icons/megaphone.svg"
+    },
+    "menu": {
+      "codepoint": 61944,
+      "source": "node_modules/@entypo-icons/core/icons/menu.svg"
+    },
+    "merge": {
+      "codepoint": 61945,
+      "source": "node_modules/@entypo-icons/core/icons/merge.svg"
+    },
+    "message": {
+      "codepoint": 61946,
+      "source": "node_modules/@entypo-icons/core/icons/message.svg"
+    },
+    "mic": {
+      "codepoint": 61947,
+      "source": "node_modules/@entypo-icons/core/icons/mic.svg"
+    },
+    "minus": {
+      "codepoint": 61948,
+      "source": "node_modules/@entypo-icons/core/icons/minus.svg"
+    },
+    "mixi": {
+      "codepoint": 61949,
+      "source": "node_modules/@entypo-icons/core/icons/mixi.svg"
+    },
+    "mobile": {
+      "codepoint": 61950,
+      "source": "node_modules/@entypo-icons/core/icons/mobile.svg"
+    },
+    "modern-mic": {
+      "codepoint": 61951,
+      "source": "node_modules/@entypo-icons/core/icons/modern-mic.svg"
+    },
+    "moon": {
+      "codepoint": 61952,
+      "source": "node_modules/@entypo-icons/core/icons/moon.svg"
+    },
+    "mouse": {
+      "codepoint": 61953,
+      "source": "node_modules/@entypo-icons/core/icons/mouse.svg"
+    },
+    "mouse-pointer": {
+      "codepoint": 61954,
+      "source": "node_modules/@entypo-icons/core/icons/mouse-pointer.svg"
+    },
+    "music": {
+      "codepoint": 61955,
+      "source": "node_modules/@entypo-icons/core/icons/music.svg"
+    },
+    "network": {
+      "codepoint": 61956,
+      "source": "node_modules/@entypo-icons/core/icons/network.svg"
+    },
+    "new": {
+      "codepoint": 61957,
+      "source": "node_modules/@entypo-icons/core/icons/new.svg"
+    },
+    "new-message": {
+      "codepoint": 61958,
+      "source": "node_modules/@entypo-icons/core/icons/new-message.svg"
+    },
+    "news": {
+      "codepoint": 61959,
+      "source": "node_modules/@entypo-icons/core/icons/news.svg"
+    },
+    "newsletter": {
+      "codepoint": 61960,
+      "source": "node_modules/@entypo-icons/core/icons/newsletter.svg"
+    },
+    "note": {
+      "codepoint": 61961,
+      "source": "node_modules/@entypo-icons/core/icons/note.svg"
+    },
+    "notification": {
+      "codepoint": 61962,
+      "source": "node_modules/@entypo-icons/core/icons/notification.svg"
+    },
+    "notifications-off": {
+      "codepoint": 61963,
+      "source": "node_modules/@entypo-icons/core/icons/notifications-off.svg"
+    },
+    "old-mobile": {
+      "codepoint": 61964,
+      "source": "node_modules/@entypo-icons/core/icons/old-mobile.svg"
+    },
+    "old-phone": {
+      "codepoint": 61965,
+      "source": "node_modules/@entypo-icons/core/icons/old-phone.svg"
+    },
+    "onedrive": {
+      "codepoint": 61966,
+      "source": "node_modules/@entypo-icons/core/icons/onedrive.svg"
+    },
+    "open-book": {
+      "codepoint": 61967,
+      "source": "node_modules/@entypo-icons/core/icons/open-book.svg"
+    },
+    "palette": {
+      "codepoint": 61968,
+      "source": "node_modules/@entypo-icons/core/icons/palette.svg"
+    },
+    "paper-plane": {
+      "codepoint": 61969,
+      "source": "node_modules/@entypo-icons/core/icons/paper-plane.svg"
+    },
+    "paypal": {
+      "codepoint": 61970,
+      "source": "node_modules/@entypo-icons/core/icons/paypal.svg"
+    },
+    "pencil": {
+      "codepoint": 61971,
+      "source": "node_modules/@entypo-icons/core/icons/pencil.svg"
+    },
+    "phone": {
+      "codepoint": 61972,
+      "source": "node_modules/@entypo-icons/core/icons/phone.svg"
+    },
+    "picasa": {
+      "codepoint": 61973,
+      "source": "node_modules/@entypo-icons/core/icons/picasa.svg"
+    },
+    "pie-chart": {
+      "codepoint": 61974,
+      "source": "node_modules/@entypo-icons/core/icons/pie-chart.svg"
+    },
+    "pin": {
+      "codepoint": 61975,
+      "source": "node_modules/@entypo-icons/core/icons/pin.svg"
+    },
+    "pinterest": {
+      "codepoint": 61976,
+      "source": "node_modules/@entypo-icons/core/icons/pinterest.svg"
+    },
+    "pinterest-with-circle": {
+      "codepoint": 61977,
+      "source": "node_modules/@entypo-icons/core/icons/pinterest-with-circle.svg"
+    },
+    "plus": {
+      "codepoint": 61978,
+      "source": "node_modules/@entypo-icons/core/icons/plus.svg"
+    },
+    "popup": {
+      "codepoint": 61979,
+      "source": "node_modules/@entypo-icons/core/icons/popup.svg"
+    },
+    "power-plug": {
+      "codepoint": 61980,
+      "source": "node_modules/@entypo-icons/core/icons/power-plug.svg"
+    },
+    "price-ribbon": {
+      "codepoint": 61981,
+      "source": "node_modules/@entypo-icons/core/icons/price-ribbon.svg"
+    },
+    "price-tag": {
+      "codepoint": 61982,
+      "source": "node_modules/@entypo-icons/core/icons/price-tag.svg"
+    },
+    "print": {
+      "codepoint": 61983,
+      "source": "node_modules/@entypo-icons/core/icons/print.svg"
+    },
+    "progress-empty": {
+      "codepoint": 61984,
+      "source": "node_modules/@entypo-icons/core/icons/progress-empty.svg"
+    },
+    "progress-full": {
+      "codepoint": 61985,
+      "source": "node_modules/@entypo-icons/core/icons/progress-full.svg"
+    },
+    "progress-one": {
+      "codepoint": 61986,
+      "source": "node_modules/@entypo-icons/core/icons/progress-one.svg"
+    },
+    "progress-two": {
+      "codepoint": 61987,
+      "source": "node_modules/@entypo-icons/core/icons/progress-two.svg"
+    },
+    "publish": {
+      "codepoint": 61988,
+      "source": "node_modules/@entypo-icons/core/icons/publish.svg"
+    },
+    "qq": {
+      "codepoint": 61989,
+      "source": "node_modules/@entypo-icons/core/icons/qq.svg"
+    },
+    "qq-with-circle": {
+      "codepoint": 61990,
+      "source": "node_modules/@entypo-icons/core/icons/qq-with-circle.svg"
+    },
+    "quote": {
+      "codepoint": 61991,
+      "source": "node_modules/@entypo-icons/core/icons/quote.svg"
+    },
+    "radio": {
+      "codepoint": 61992,
+      "source": "node_modules/@entypo-icons/core/icons/radio.svg"
+    },
+    "raft": {
+      "codepoint": 61993,
+      "source": "node_modules/@entypo-icons/core/icons/raft.svg"
+    },
+    "raft-with-circle": {
+      "codepoint": 61994,
+      "source": "node_modules/@entypo-icons/core/icons/raft-with-circle.svg"
+    },
+    "rainbow": {
+      "codepoint": 61995,
+      "source": "node_modules/@entypo-icons/core/icons/rainbow.svg"
+    },
+    "rdio": {
+      "codepoint": 61996,
+      "source": "node_modules/@entypo-icons/core/icons/rdio.svg"
+    },
+    "rdio-with-circle": {
+      "codepoint": 61997,
+      "source": "node_modules/@entypo-icons/core/icons/rdio-with-circle.svg"
+    },
+    "remove-user": {
+      "codepoint": 61998,
+      "source": "node_modules/@entypo-icons/core/icons/remove-user.svg"
+    },
+    "renren": {
+      "codepoint": 61999,
+      "source": "node_modules/@entypo-icons/core/icons/renren.svg"
+    },
+    "reply": {
+      "codepoint": 62000,
+      "source": "node_modules/@entypo-icons/core/icons/reply.svg"
+    },
+    "reply-all": {
+      "codepoint": 62001,
+      "source": "node_modules/@entypo-icons/core/icons/reply-all.svg"
+    },
+    "resize-100": {
+      "codepoint": 62002,
+      "source": "node_modules/@entypo-icons/core/icons/resize-100.svg"
+    },
+    "resize-full-screen": {
+      "codepoint": 62003,
+      "source": "node_modules/@entypo-icons/core/icons/resize-full-screen.svg"
+    },
+    "retweet": {
+      "codepoint": 62004,
+      "source": "node_modules/@entypo-icons/core/icons/retweet.svg"
+    },
+    "rocket": {
+      "codepoint": 62005,
+      "source": "node_modules/@entypo-icons/core/icons/rocket.svg"
+    },
+    "round-brush": {
+      "codepoint": 62006,
+      "source": "node_modules/@entypo-icons/core/icons/round-brush.svg"
+    },
+    "rss": {
+      "codepoint": 62007,
+      "source": "node_modules/@entypo-icons/core/icons/rss.svg"
+    },
+    "ruler": {
+      "codepoint": 62008,
+      "source": "node_modules/@entypo-icons/core/icons/ruler.svg"
+    },
+    "save": {
+      "codepoint": 62009,
+      "source": "node_modules/@entypo-icons/core/icons/save.svg"
+    },
+    "scissors": {
+      "codepoint": 62010,
+      "source": "node_modules/@entypo-icons/core/icons/scissors.svg"
+    },
+    "scribd": {
+      "codepoint": 62011,
+      "source": "node_modules/@entypo-icons/core/icons/scribd.svg"
+    },
+    "select-arrows": {
+      "codepoint": 62012,
+      "source": "node_modules/@entypo-icons/core/icons/select-arrows.svg"
+    },
+    "share": {
+      "codepoint": 62013,
+      "source": "node_modules/@entypo-icons/core/icons/share.svg"
+    },
+    "share-alternative": {
+      "codepoint": 62014,
+      "source": "node_modules/@entypo-icons/core/icons/share-alternative.svg"
+    },
+    "shareable": {
+      "codepoint": 62015,
+      "source": "node_modules/@entypo-icons/core/icons/shareable.svg"
+    },
+    "shield": {
+      "codepoint": 62016,
+      "source": "node_modules/@entypo-icons/core/icons/shield.svg"
+    },
+    "shop": {
+      "codepoint": 62017,
+      "source": "node_modules/@entypo-icons/core/icons/shop.svg"
+    },
+    "shopping-bag": {
+      "codepoint": 62018,
+      "source": "node_modules/@entypo-icons/core/icons/shopping-bag.svg"
+    },
+    "shopping-basket": {
+      "codepoint": 62019,
+      "source": "node_modules/@entypo-icons/core/icons/shopping-basket.svg"
+    },
+    "shopping-cart": {
+      "codepoint": 62020,
+      "source": "node_modules/@entypo-icons/core/icons/shopping-cart.svg"
+    },
+    "shuffle": {
+      "codepoint": 62021,
+      "source": "node_modules/@entypo-icons/core/icons/shuffle.svg"
+    },
+    "signal": {
+      "codepoint": 62022,
+      "source": "node_modules/@entypo-icons/core/icons/signal.svg"
+    },
+    "sina-weibo": {
+      "codepoint": 62023,
+      "source": "node_modules/@entypo-icons/core/icons/sina-weibo.svg"
+    },
+    "skype": {
+      "codepoint": 62024,
+      "source": "node_modules/@entypo-icons/core/icons/skype.svg"
+    },
+    "skype-with-circle": {
+      "codepoint": 62025,
+      "source": "node_modules/@entypo-icons/core/icons/skype-with-circle.svg"
+    },
+    "slideshare": {
+      "codepoint": 62026,
+      "source": "node_modules/@entypo-icons/core/icons/slideshare.svg"
+    },
+    "smashing": {
+      "codepoint": 62027,
+      "source": "node_modules/@entypo-icons/core/icons/smashing.svg"
+    },
+    "sound": {
+      "codepoint": 62028,
+      "source": "node_modules/@entypo-icons/core/icons/sound.svg"
+    },
+    "sound-mix": {
+      "codepoint": 62029,
+      "source": "node_modules/@entypo-icons/core/icons/sound-mix.svg"
+    },
+    "sound-mute": {
+      "codepoint": 62030,
+      "source": "node_modules/@entypo-icons/core/icons/sound-mute.svg"
+    },
+    "soundcloud": {
+      "codepoint": 62031,
+      "source": "node_modules/@entypo-icons/core/icons/soundcloud.svg"
+    },
+    "sports-club": {
+      "codepoint": 62032,
+      "source": "node_modules/@entypo-icons/core/icons/sports-club.svg"
+    },
+    "spotify": {
+      "codepoint": 62033,
+      "source": "node_modules/@entypo-icons/core/icons/spotify.svg"
+    },
+    "spotify-with-circle": {
+      "codepoint": 62034,
+      "source": "node_modules/@entypo-icons/core/icons/spotify-with-circle.svg"
+    },
+    "spreadsheet": {
+      "codepoint": 62035,
+      "source": "node_modules/@entypo-icons/core/icons/spreadsheet.svg"
+    },
+    "squared-cross": {
+      "codepoint": 62036,
+      "source": "node_modules/@entypo-icons/core/icons/squared-cross.svg"
+    },
+    "squared-minus": {
+      "codepoint": 62037,
+      "source": "node_modules/@entypo-icons/core/icons/squared-minus.svg"
+    },
+    "squared-plus": {
+      "codepoint": 62038,
+      "source": "node_modules/@entypo-icons/core/icons/squared-plus.svg"
+    },
+    "star": {
+      "codepoint": 62039,
+      "source": "node_modules/@entypo-icons/core/icons/star.svg"
+    },
+    "star-outlined": {
+      "codepoint": 62040,
+      "source": "node_modules/@entypo-icons/core/icons/star-outlined.svg"
+    },
+    "stopwatch": {
+      "codepoint": 62041,
+      "source": "node_modules/@entypo-icons/core/icons/stopwatch.svg"
+    },
+    "stumbleupon": {
+      "codepoint": 62042,
+      "source": "node_modules/@entypo-icons/core/icons/stumbleupon.svg"
+    },
+    "stumbleupon-with-circle": {
+      "codepoint": 62043,
+      "source": "node_modules/@entypo-icons/core/icons/stumbleupon-with-circle.svg"
+    },
+    "suitcase": {
+      "codepoint": 62044,
+      "source": "node_modules/@entypo-icons/core/icons/suitcase.svg"
+    },
+    "swap": {
+      "codepoint": 62045,
+      "source": "node_modules/@entypo-icons/core/icons/swap.svg"
+    },
+    "swarm": {
+      "codepoint": 62046,
+      "source": "node_modules/@entypo-icons/core/icons/swarm.svg"
+    },
+    "sweden": {
+      "codepoint": 62047,
+      "source": "node_modules/@entypo-icons/core/icons/sweden.svg"
+    },
+    "switch": {
+      "codepoint": 62048,
+      "source": "node_modules/@entypo-icons/core/icons/switch.svg"
+    },
+    "tablet": {
+      "codepoint": 62049,
+      "source": "node_modules/@entypo-icons/core/icons/tablet.svg"
+    },
+    "tablet-mobile-combo": {
+      "codepoint": 62050,
+      "source": "node_modules/@entypo-icons/core/icons/tablet-mobile-combo.svg"
+    },
+    "tag": {
+      "codepoint": 62051,
+      "source": "node_modules/@entypo-icons/core/icons/tag.svg"
+    },
+    "text": {
+      "codepoint": 62052,
+      "source": "node_modules/@entypo-icons/core/icons/text.svg"
+    },
+    "text-document": {
+      "codepoint": 62053,
+      "source": "node_modules/@entypo-icons/core/icons/text-document.svg"
+    },
+    "text-document-inverted": {
+      "codepoint": 62054,
+      "source": "node_modules/@entypo-icons/core/icons/text-document-inverted.svg"
+    },
+    "thermometer": {
+      "codepoint": 62055,
+      "source": "node_modules/@entypo-icons/core/icons/thermometer.svg"
+    },
+    "thumbs-down": {
+      "codepoint": 62056,
+      "source": "node_modules/@entypo-icons/core/icons/thumbs-down.svg"
+    },
+    "thumbs-up": {
+      "codepoint": 62057,
+      "source": "node_modules/@entypo-icons/core/icons/thumbs-up.svg"
+    },
+    "thunder-cloud": {
+      "codepoint": 62058,
+      "source": "node_modules/@entypo-icons/core/icons/thunder-cloud.svg"
+    },
+    "ticket": {
+      "codepoint": 62059,
+      "source": "node_modules/@entypo-icons/core/icons/ticket.svg"
+    },
+    "time-slot": {
+      "codepoint": 62060,
+      "source": "node_modules/@entypo-icons/core/icons/time-slot.svg"
+    },
+    "tools": {
+      "codepoint": 62061,
+      "source": "node_modules/@entypo-icons/core/icons/tools.svg"
+    },
+    "traffic-cone": {
+      "codepoint": 62062,
+      "source": "node_modules/@entypo-icons/core/icons/traffic-cone.svg"
+    },
+    "trash": {
+      "codepoint": 62063,
+      "source": "node_modules/@entypo-icons/core/icons/trash.svg"
+    },
+    "tree": {
+      "codepoint": 62064,
+      "source": "node_modules/@entypo-icons/core/icons/tree.svg"
+    },
+    "triangle-down": {
+      "codepoint": 62065,
+      "source": "node_modules/@entypo-icons/core/icons/triangle-down.svg"
+    },
+    "triangle-left": {
+      "codepoint": 62066,
+      "source": "node_modules/@entypo-icons/core/icons/triangle-left.svg"
+    },
+    "triangle-right": {
+      "codepoint": 62067,
+      "source": "node_modules/@entypo-icons/core/icons/triangle-right.svg"
+    },
+    "triangle-up": {
+      "codepoint": 62068,
+      "source": "node_modules/@entypo-icons/core/icons/triangle-up.svg"
+    },
+    "tripadvisor": {
+      "codepoint": 62069,
+      "source": "node_modules/@entypo-icons/core/icons/tripadvisor.svg"
+    },
+    "trophy": {
+      "codepoint": 62070,
+      "source": "node_modules/@entypo-icons/core/icons/trophy.svg"
+    },
+    "tumblr": {
+      "codepoint": 62071,
+      "source": "node_modules/@entypo-icons/core/icons/tumblr.svg"
+    },
+    "tumblr-with-circle": {
+      "codepoint": 62072,
+      "source": "node_modules/@entypo-icons/core/icons/tumblr-with-circle.svg"
+    },
+    "tv": {
+      "codepoint": 62073,
+      "source": "node_modules/@entypo-icons/core/icons/tv.svg"
+    },
+    "twitter": {
+      "codepoint": 62074,
+      "source": "node_modules/@entypo-icons/core/icons/twitter.svg"
+    },
+    "twitter-with-circle": {
+      "codepoint": 62075,
+      "source": "node_modules/@entypo-icons/core/icons/twitter-with-circle.svg"
+    },
+    "typing": {
+      "codepoint": 62076,
+      "source": "node_modules/@entypo-icons/core/icons/typing.svg"
+    },
+    "uninstall": {
+      "codepoint": 62077,
+      "source": "node_modules/@entypo-icons/core/icons/uninstall.svg"
+    },
+    "unread": {
+      "codepoint": 62078,
+      "source": "node_modules/@entypo-icons/core/icons/unread.svg"
+    },
+    "untag": {
+      "codepoint": 62079,
+      "source": "node_modules/@entypo-icons/core/icons/untag.svg"
+    },
+    "upload": {
+      "codepoint": 62080,
+      "source": "node_modules/@entypo-icons/core/icons/upload.svg"
+    },
+    "upload-to-cloud": {
+      "codepoint": 62081,
+      "source": "node_modules/@entypo-icons/core/icons/upload-to-cloud.svg"
+    },
+    "user": {
+      "codepoint": 62082,
+      "source": "node_modules/@entypo-icons/core/icons/user.svg"
+    },
+    "users": {
+      "codepoint": 62083,
+      "source": "node_modules/@entypo-icons/core/icons/users.svg"
+    },
+    "v-card": {
+      "codepoint": 62084,
+      "source": "node_modules/@entypo-icons/core/icons/v-card.svg"
+    },
+    "video": {
+      "codepoint": 62085,
+      "source": "node_modules/@entypo-icons/core/icons/video.svg"
+    },
+    "video-camera": {
+      "codepoint": 62086,
+      "source": "node_modules/@entypo-icons/core/icons/video-camera.svg"
+    },
+    "vimeo": {
+      "codepoint": 62087,
+      "source": "node_modules/@entypo-icons/core/icons/vimeo.svg"
+    },
+    "vimeo-with-circle": {
+      "codepoint": 62088,
+      "source": "node_modules/@entypo-icons/core/icons/vimeo-with-circle.svg"
+    },
+    "vine": {
+      "codepoint": 62089,
+      "source": "node_modules/@entypo-icons/core/icons/vine.svg"
+    },
+    "vine-with-circle": {
+      "codepoint": 62090,
+      "source": "node_modules/@entypo-icons/core/icons/vine-with-circle.svg"
+    },
+    "vinyl": {
+      "codepoint": 62091,
+      "source": "node_modules/@entypo-icons/core/icons/vinyl.svg"
+    },
+    "vk": {
+      "codepoint": 62092,
+      "source": "node_modules/@entypo-icons/core/icons/vk.svg"
+    },
+    "vk-alternitive": {
+      "codepoint": 62093,
+      "source": "node_modules/@entypo-icons/core/icons/vk-alternitive.svg"
+    },
+    "vk-with-circle": {
+      "codepoint": 62094,
+      "source": "node_modules/@entypo-icons/core/icons/vk-with-circle.svg"
+    },
+    "voicemail": {
+      "codepoint": 62095,
+      "source": "node_modules/@entypo-icons/core/icons/voicemail.svg"
+    },
+    "wallet": {
+      "codepoint": 62096,
+      "source": "node_modules/@entypo-icons/core/icons/wallet.svg"
+    },
+    "warning": {
+      "codepoint": 62097,
+      "source": "node_modules/@entypo-icons/core/icons/warning.svg"
+    },
+    "water": {
+      "codepoint": 62098,
+      "source": "node_modules/@entypo-icons/core/icons/water.svg"
+    },
+    "windows-store": {
+      "codepoint": 62099,
+      "source": "node_modules/@entypo-icons/core/icons/windows-store.svg"
+    },
+    "xing": {
+      "codepoint": 62100,
+      "source": "node_modules/@entypo-icons/core/icons/xing.svg"
+    },
+    "xing-with-circle": {
+      "codepoint": 62101,
+      "source": "node_modules/@entypo-icons/core/icons/xing-with-circle.svg"
+    },
+    "yelp": {
+      "codepoint": 62102,
+      "source": "node_modules/@entypo-icons/core/icons/yelp.svg"
+    },
+    "youko": {
+      "codepoint": 62103,
+      "source": "node_modules/@entypo-icons/core/icons/youko.svg"
+    },
+    "youko-with-circle": {
+      "codepoint": 62104,
+      "source": "node_modules/@entypo-icons/core/icons/youko-with-circle.svg"
+    },
+    "youtube": {
+      "codepoint": 62105,
+      "source": "node_modules/@entypo-icons/core/icons/youtube.svg"
+    },
+    "youtube-with-circle": {
+      "codepoint": 62106,
+      "source": "node_modules/@entypo-icons/core/icons/youtube-with-circle.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "copyright": "",
+    "css3": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "Entypo",
+    "force": true,
+    "input": {
+      "templates": "node_modules/@entypo-icons/core/icons",
+      "vectors": "node_modules/@entypo-icons/core/icons"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "Entypo",
+      "fonts": "Entypo",
+      "preview": "Entypo"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css"
+    ]
+  },
+  "templates": [
+    "Entypo/Entypo.css"
+  ]
+}
