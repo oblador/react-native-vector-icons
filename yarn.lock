@@ -4106,6 +4106,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@react-native-vector-icons/fontcustom-docker@workspace:packages/fontcustom-docker":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/fontcustom-docker@workspace:packages/fontcustom-docker"
+  languageName: unknown
+  linkType: soft
+
 "@react-native-vector-icons/fontisto@npm:^0, @react-native-vector-icons/fontisto@workspace:packages/fontisto":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontisto@workspace:packages/fontisto"
@@ -21159,11 +21165,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.3.2#optional!builtin<compat/typescript>":
   version: 5.3.2
-  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
+  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=29ae49"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 73c8bad74e732d93211c9d77f28b03307e2f5fc6a0afc73f4b783261ab567686a16d6ae958bdaef383a00be1b0b8c8b6741dd6ca3d13af4963fa7e47456d49c7
+  checksum: c81b9bd20c6dbe90fa43e876c586021447f2b47baede9fa542b1f56715835c043e23b2eaf19c42c067cc6f5ae512bd9a9be28a67b3a1d9807f8c9cfb1269875e
   languageName: node
   linkType: hard
 
