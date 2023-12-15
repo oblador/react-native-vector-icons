@@ -38,7 +38,7 @@ def supportsNamespace() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.oblador.vectoricons.material_icons"
+    namespace "com.reactnativevectoricons.material_icons"
 
     sourceSets {
       main {
@@ -107,7 +107,7 @@ if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
     libraryName = "RNVIMaterialIcons"
-    codegenJavaPackageName = "com.oblador.vectoricons.material_icons"
+    codegenJavaPackageName = "com.reactnativevectoricons.material_icons"
   }
 }
 

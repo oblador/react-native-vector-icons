@@ -1,4 +1,4 @@
-package com.oblador.vectoricons.simple_line_icons;
+package com.reactnativevectoricons.simple_line_icons;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 

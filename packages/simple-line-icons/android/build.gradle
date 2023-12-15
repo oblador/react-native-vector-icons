@@ -38,7 +38,7 @@ def supportsNamespace() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.oblador.vectoricons.simple_line_icons"
+    namespace "com.reactnativevectoricons.simple_line_icons"
 
     sourceSets {
       main {
@@ -107,7 +107,7 @@ if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
     libraryName = "RNVISimpleLineIcons"
-    codegenJavaPackageName = "com.oblador.vectoricons.simple_line_icons"
+    codegenJavaPackageName = "com.reactnativevectoricons.simple_line_icons"
   }
 }
 
