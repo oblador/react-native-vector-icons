@@ -13,7 +13,6 @@
 * Support fontello
 * Support icomoon
 * MIgration using js-codeshift
-* Move to new namespace
 * Can we use react-native-config for assets
 * Build script in common to make the fonts dumber
 ios

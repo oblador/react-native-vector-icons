@@ -10,7 +10,6 @@ import { generateGlyphmap } from './generateGlyphmap.js';
 interface Data {
   name: string,
   packageName: string,
-  namespace: string,
   className: string,
   fontName: string,
   fontFile: string,
@@ -88,26 +87,6 @@ export default class extends Generator<Arguments> {
     const data = this.data;
 
     const files: Array<string | [string, string]> = [
-      'android/build.gradle',
-      'android/gradle.properties',
-      'android/src/main/AndroidManifestNew.xml',
-      'android/src/main/AndroidManifest.xml',
-      [
-        'android/src/main/java/com/reactnativevectoricons/namespace/RNVIclassNamePackage.java',
-        `android/src/main/java/com/reactnativevectoricons/${data.namespace}/RNVI${data.className}Package.java`,
-      ],
-      [
-        'android/src/main/java/com/reactnativevectoricons/namespace/RNVIclassNameModule.java',
-        `android/src/main/java/com/reactnativevectoricons/${data.namespace}/RNVI${data.className}Module.java`,
-      ],
-      [
-        'android/src/newarch/RNVIclassNameSpec.java',
-        `android/src/newarch/RNVI${data.className}Spec.java`,
-      ],
-      [
-        'android/src/oldarch/RNVIclassNameSpec.java',
-        `android/src/oldarch/RNVI${data.className}Spec.java`,
-      ],
       'babel.config.js',
       'package.json',
       [
@@ -115,7 +94,6 @@ export default class extends Generator<Arguments> {
         `rnvi-${data.packageName}.podspec`,
       ],
       'tsconfig.json',
-      'turbo.json',
     ];
 
     if (!data.customSrc) {
@@ -322,7 +300,6 @@ export default class extends Generator<Arguments> {
     }
 
     data.name ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join(' ');
-    data.namespace ||= data.packageName.replaceAll('-', '_');
     data.className ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
     data.fontName ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
     data.fontFile ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
