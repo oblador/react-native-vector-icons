@@ -126,11 +126,12 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(
 RCT_EXPORT_METHOD(
   loadFontWithFileName:(NSString *)fontFileName
   extension:(NSString *)extension
+  subdirectory:(NSString *)subdirectory
   resolve:(RCTPromiseResolveBlock)resolve
   reject:(RCTPromiseRejectBlock)reject
 ) {
   NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-  NSURL *fontURL = [bundle URLForResource:fontFileName withExtension:extension];
+  NSURL *fontURL = [bundle URLForResource:fontFileName withExtension:extension subdirectory:subdirectory];
   NSData *fontData = [NSData dataWithContentsOfURL:fontURL];
 
   CGDataProviderRef provider = CGDataProviderCreateWithCFData((CFDataRef)fontData);
@@ -141,19 +142,21 @@ RCT_EXPORT_METHOD(
     if (CTFontManagerRegisterGraphicsFont(font, &errorRef) == NO) {
       NSError *error = (__bridge NSError *)errorRef;
       if (error.code == kCTFontManagerErrorAlreadyRegistered || error.code == kCTFontManagerErrorDuplicatedName) {
+        // NSLog(@"Loaded font already %@/%@.%@", subdirectory, fontFileName, extension);
         resolve(nil);
       } else {
         NSString *errorMessage = [NSString stringWithFormat:@"Font '%@' failed to load", fontFileName];
         reject(@"font_load_failed", errorMessage, error);
       }
     } else {
+      // NSLog(@"Loaded font %@/%@.%@", subdirectory, fontFileName, extension);
       resolve(nil);
     }
 
     CFRelease(font);
   } else {
     // TODO: Should we reject back to javascript?
-    NSLog(@"RNVI: failed to find font %@.%@", fontFileName, extension);
+    NSLog(@"RNVI: failed to find font %@/%@.%@", subdirectory, fontFileName, extension);
   }
 
   if (provider) {

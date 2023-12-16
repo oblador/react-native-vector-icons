@@ -175,7 +175,7 @@ export const createIconSet = <GM extends Record<string, number>>(
       throw new Error('Font needs a filename extensison.');
     }
 
-    await NativeIconAPI.loadFontWithFileName(filename!, extension);
+    await NativeIconAPI.loadFontWithFileName(filename!, extension, 'react-native-vector-icons');
   };
 
   const IconNamespace = Object.assign(WrappedIcon, {
