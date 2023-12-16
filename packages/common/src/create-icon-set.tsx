@@ -160,17 +160,13 @@ export const createIconSet = <GM extends Record<string, number>>(
     }
   };
 
-  const loadFont = async (file = fontFile) => {
+  const loadFont = async () => {
     if (Platform.OS !== 'ios') {
       return;
     }
     ensureNativeModuleAvailable();
 
-    if (!file) {
-      throw new Error('Unable to load font, because no file was specified.');
-    }
-
-    const [filename, extension] = file.split('.'); // FIXME: what if filename has two dots?
+    const [filename, extension] = fontFile.split('.'); // FIXME: what if filename has two dots?
     if (!extension) {
       throw new Error('Font needs a filename extensison.');
     }
@@ -178,10 +174,11 @@ export const createIconSet = <GM extends Record<string, number>>(
     await NativeIconAPI.loadFontWithFileName(filename!, extension, 'react-native-vector-icons');
   };
 
+  loadFont();
+
   const IconNamespace = Object.assign(WrappedIcon, {
     getImageSource: getImageSource,
     getImageSourceSync: getImageSourceSync,
-    loadFont: loadFont,
   });
 
   return IconNamespace;
