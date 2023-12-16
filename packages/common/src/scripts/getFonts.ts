@@ -5,7 +5,6 @@ import path from 'node:path';
 import { resolveNodeModuleDir } from '@react-native-community/cli-tools';
 
 const rootDir = process.argv[2];
-const destFile = process.argv[3];
 if (!rootDir) {
   throw new Error('Need rootDir as first argument');
 }
