@@ -8,7 +8,5 @@ import glyphMap from '../glyphmaps/Zocial.json';
 
 const Icon = createIconSet(glyphMap, 'Zocial', 'Zocial.ttf');
 
-Icon.loadFont();
-
 export default Icon;
 export const { getImageSource, getImageSourceSync } = Icon;

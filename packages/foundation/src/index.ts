@@ -8,7 +8,5 @@ import glyphMap from '../glyphmaps/Foundation.json';
 
 const Icon = createIconSet(glyphMap, 'Foundation', 'Foundation.ttf');
 
-Icon.loadFont();
-
 export default Icon;
 export const { getImageSource, getImageSourceSync } = Icon;
