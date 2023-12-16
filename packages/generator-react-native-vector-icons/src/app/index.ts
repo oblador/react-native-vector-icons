@@ -87,7 +87,6 @@ export default class extends Generator<Arguments> {
     const data = this.data;
 
     const files: Array<string | [string, string]> = [
-      'babel.config.js',
       'package.json',
       'tsconfig.json',
     ];
