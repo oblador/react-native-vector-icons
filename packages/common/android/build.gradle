@@ -121,7 +121,7 @@ android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVI")
 //     8 <%_ } %>
 //
 task copyFonts(type: Exec) {
-  commandLine 'node', '../lib/commonjs/src/scripts/getFonts.js', rootDir.parentFile.absolutePath
+  commandLine 'node', '../lib/commonjs/scripts/getFonts.js', rootDir.parentFile.absolutePath
   def stdOut = new ByteArrayOutputStream()
   standardOutput = stdOut
 

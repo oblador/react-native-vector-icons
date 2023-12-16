@@ -9,14 +9,11 @@
   * Have a common package
   * Have stand and pro packages
   * Fix duplication in upgrade scripts for fontawesome
-* loadfont - console.ogo for missing fonts
 * Support fontello
 * Support icomoon
 * MIgration using js-codeshift
 * Can we use react-native-config for assets
 * Build script in common to make the fonts dumber
-ios
-* Can the common code load the fonts
 Expo
 * Has own font loading mechanism
 * Need to see how this will work
@@ -31,5 +28,4 @@ Expo
   * Remove any fonts from Info.plist
   * Remove font assets from react-native.config.js
   * Remove any frons from android and ios directories
-
 
