@@ -110,3 +110,32 @@ if (isNewArchitectureEnabled()) {
     codegenJavaPackageName = "com.reactnativevectoricons.common"
   }
 }
+
+android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVI")
+
+// TODO font awesome
+// %_ if (customAssets) { %>
+//     5 ▎   from("${projectRoot}/../assets/fonts") {
+//     6 ▎   ▎ include '<%= customAssets %>'
+//     7 ▎   }
+//     8 <%_ } %>
+//
+task copyFonts(type: Exec) {
+  commandLine 'node', '../lib/commonjs/src/scripts/getFonts.js', rootDir.parentFile.absolutePath
+  def stdOut = new ByteArrayOutputStream()
+  standardOutput = stdOut
+
+  doLast {
+    def directories = stdOut.toString().trim().split('\n').collect { it + "/fonts" }
+    copy {
+      from directories
+      include "*.ttf"
+
+      into "${buildDir}/intermediates/RNVI/fonts"
+
+      // eachFile { println "Copying font ${it.file}" }
+    }
+  }
+}
+
+preBuild.dependsOn(copyFonts)
