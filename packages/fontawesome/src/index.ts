@@ -8,7 +8,5 @@ import glyphMap from '../glyphmaps/FontAwesome.json';
 
 const Icon = createIconSet(glyphMap, 'FontAwesome', 'FontAwesome.ttf');
 
-Icon.loadFont();
-
 export default Icon;
 export const { getImageSource, getImageSourceSync } = Icon;

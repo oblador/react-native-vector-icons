@@ -8,7 +8,5 @@ import glyphMap from '../glyphmaps/MaterialIcons.json';
 
 const Icon = createIconSet(glyphMap, 'MaterialIcons-Regular', 'MaterialIcons.ttf');
 
-Icon.loadFont();
-
 export default Icon;
 export const { getImageSource, getImageSourceSync } = Icon;
