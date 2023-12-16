@@ -16,7 +16,7 @@ export interface Spec extends TurboModule {
     color: number
   ): string;
 
-  loadFontWithFileName(fontFileName: string, extension: string): Promise<void>;
+  loadFontWithFileName(fontFileName: string, extension: string, subdirectory?: string): Promise<void>;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('VectorIcons');

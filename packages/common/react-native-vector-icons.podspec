@@ -16,6 +16,26 @@ Pod::Spec.new do |s|
 
   s.source_files = "ios/**/*.{h,m,mm}"
 
+  s.script_phase = {
+    :name => 'Copy Fonts',
+    :script => "
+      echo $PODS_ROOT
+      APP_NAME=\"$(echo $PODS_ROOT | sed 's#/ios/Pods##;s#.*/##').app\"
+      echo $APP_NAME
+
+      mkdir  ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}/react-native-vector-icons
+      PACKAGE_DIRS=$(node #{__dir__}/lib/commonjs/scripts/getFonts.js ${SRCROOT}/../..)
+      for dir in $PACKAGE_DIRS; do
+        echo Copying fonts in $dir
+        cp $dir/fonts/* ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}/react-native-vector-icons
+      done
+
+      if [ -d ${SRCROOT}/../../assets/fonts ]; then
+        cp ${SRCROOT}/../../assets/fonts/* ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}
+      fi
+    ",
+  }
+
   # Use install_modules_dependencies helper to install the dependencies if React Native version >=0.71.0.
   # See https://github.com/facebook/react-native/blob/febf6b7f33fdb4904669f99d795eba4c0f95d7bf/scripts/cocoapods/new_architecture.rb#L79.
   if respond_to?(:install_modules_dependencies, true)

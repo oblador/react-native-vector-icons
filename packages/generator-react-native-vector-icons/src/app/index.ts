@@ -89,10 +89,6 @@ export default class extends Generator<Arguments> {
     const files: Array<string | [string, string]> = [
       'babel.config.js',
       'package.json',
-      [
-        'rnvi-packageName.podspec',
-        `rnvi-${data.packageName}.podspec`,
-      ],
       'tsconfig.json',
     ];
 
