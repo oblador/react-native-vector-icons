@@ -24,15 +24,11 @@ Pod::Spec.new do |s|
       echo $APP_NAME
 
       mkdir  ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}/react-native-vector-icons
-      PACKAGE_DIRS=$(node #{__dir__}/lib/commonjs/scripts/getFonts.js ${SRCROOT}/../..)
-      for dir in $PACKAGE_DIRS; do
-        echo Copying fonts in $dir
-        cp $dir/fonts/* ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}/react-native-vector-icons
+      FONTS=$(node #{__dir__}/lib/commonjs/scripts/getFonts.js ${SRCROOT}/../..)
+      for font in $FONTS; do
+        echo Copying font $font
+        cp $font ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}/react-native-vector-icons
       done
-
-      if [ -d ${SRCROOT}/../../assets/fonts ]; then
-        cp ${SRCROOT}/../../assets/fonts/* ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}
-      fi
     ",
   }
 

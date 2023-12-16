@@ -16,7 +16,7 @@ const getPackageJson = (dir: string) => {
   return packageJson;
 };
 
-const getVectorIconsPackages = () => {
+const getPackages = () => {
   const rootPackageJson = getPackageJson(rootDir);
   const dependencies = Object.keys(rootPackageJson.dependencies || {});
 
@@ -31,5 +31,20 @@ const getVectorIconsPackages = () => {
   return packageDirs;
 };
 
-const packageDirs = getVectorIconsPackages();
-packageDirs.forEach((dir) => console.log(dir));
+const getFonts = (dir: string) => {
+  const fonts = fs.readdirSync(`${dir}/fonts`);
+  fonts.forEach((font) => console.log(`${dir}/fonts/${font}`));
+
+  const rootPackageJson = getPackageJson(rootDir);
+  const config = rootPackageJson.reactNativeVectorIcons || {}
+  const fontDir = `${rootDir}/${config.fontDir || 'rnvi-fonts'}`;
+  if (!fs.existsSync(fontDir)) {
+    return;
+  }
+
+  const customFonts = fs.readdirSync(fontDir);
+  customFonts.forEach((font) => console.log(`${fontDir}/${font}`));
+};
+
+const packageDirs = getPackages();
+packageDirs.forEach((dir) => getFonts(dir));
