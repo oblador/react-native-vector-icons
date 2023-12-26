@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 type RootStackParamList = {
   IconExplorer: undefined;
-  IconSet: { iconSet: IconSet; title: string; iconTypeName?: string };
+  IconSet: { iconSet: IconSet; title: string; iconStyle?: string };
   MultiIconSet: { iconSet: IconSet; title: string };
 };
 
@@ -48,7 +48,7 @@ type IconSetScreenProps = NativeStackScreenProps<
 const IconSetScreen = ({ route }: IconSetScreenProps) => (
   <IconList
     iconSet={route.params.iconSet}
-    iconTypeName={route.params.iconTypeName}
+    iconStyle={route.params.iconStyle}
   />
 );
 
@@ -61,8 +61,8 @@ type MultiIconSetScreenProps = NativeStackScreenProps<
 const MultiIconSetScreen = ({ route, navigation: { navigate } }: MultiIconSetScreenProps) => (
   <MultiIconList
     iconSet={route.params.iconSet}
-    navigator={(iconTypeName: string, iconSet: IconSet, title: string) =>
-      navigate('IconSet', { title, iconTypeName, iconSet })
+    navigator={(iconStyle: string, iconSet: IconSet, title: string) =>
+      navigate('IconSet', { title, iconStyle, iconSet })
     }
   />
 );

@@ -1,14 +1,10 @@
 # TODO
 * Check why `fallbackFamily` was introduced
 * Explore better android font loading
-* FOntawesome5/6
-  * Have a common package
-  * Have stand and pro packages
-  * Fix duplication in upgrade scripts for fontawesome
 * Support fontello
 * Support icomoon
 * MIgration using js-codeshift
-* Can we use react-native-config for assets
+* getImageSync for fontawesome 5/6
 Expo
 * Has own font loading mechanism
 * Need to see how this will work

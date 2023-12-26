@@ -75,8 +75,8 @@
     "del-cli": "^5.1.0",
     "evil-icons": "^1.10.1",
     "react-native-builder-bob": "^0.23.2",
-    "turbo": "^1.10.16",
-    "typescript": "^5.3.2"
+    "turbo": "^1.11.2",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "react": "*",

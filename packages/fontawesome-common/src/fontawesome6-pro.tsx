@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Platform, type TextStyle } from 'react-native';
 
-import { createIconSet, type IconProps } from '@react-native-vector-icons/common';
+import { createIconSet as commonCreateIconSet, type IconProps } from '@react-native-vector-icons/common';
 
 import thinGM from '@react-native-vector-icons/fontawesome6-pro/glyphmaps/FontAwesome6Pro_thin.json';
 import lightGM from '@react-native-vector-icons/fontawesome6-pro/glyphmaps/FontAwesome6Pro.json';
@@ -18,7 +18,7 @@ import brandGM from '@react-native-vector-icons/fontawesome6-pro/glyphmaps/FontA
 
 type IconTypesPro = 'thin' | 'light' | 'regular' | 'solid' | 'duotone' | 'sharpThin' | 'sharpLight' | 'sharp' | 'sharpSolid' | 'brand';
 
-export const createFAProIconSet = (metadata: Record<IconTypesPro, string[]>) => {
+export const createIconSet = (metadata: Record<IconTypesPro, string[]>) => {
   const glyphValidator = (glyph: string, iconType: keyof typeof metadata) => metadata[iconType]?.includes(glyph);
 
   const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
@@ -54,16 +54,16 @@ export const createFAProIconSet = (metadata: Record<IconTypesPro, string[]>) => 
     | ({ iconStyle?: never } & RegularIconProps);
 
   const Icons = {
-    thin: createIconSet(thinGM, 'FontAwesome6Pro-Thin', 'FontAwesome6_Pro_Thin.ttf', fontStyle('100')),
-    light: createIconSet(lightGM, 'FontAwesome6Pro-Light', 'FontAwesome6_Pro_Light.ttf', fontStyle('300')),
-    regular: createIconSet(regularGM, 'FontAwesome6Pro-Regular', 'FontAwesome6_Pro_Regular.ttf', fontStyle('400')),
-    solid: createIconSet(solidGM, 'FontAwesome6Pro-Solid', 'FontAwesome6_Pro_Solid.ttf', fontStyle('900')),
-    sharpThin: createIconSet(sharpThinGM, 'FontAwesome6Pro-Thin', 'FontAwesome6_Pro_Sharp_Thin.ttf', fontStyle('100')),
-    sharpLight: createIconSet(sharpLightGM, 'FontAwesome6Pro-Light', 'FontAwesome6_Pro_Sharp_Light.ttf', fontStyle('300')),
-    sharpRegular: createIconSet(sharpRegularGM, 'FontAwesome6Pro-Regular', 'FontAwesome6_Pro_Sharp_Regular.ttf', fontStyle('400')),
-    sharpSolid: createIconSet(sharpSolidGM, 'FontAwesome6Pro-Solid', 'FontAwesome6_Pro_Sharp_Solid.ttf', fontStyle('900')),
-    duotone: createIconSet(duotoneGM, 'FontAwesome6Duotone-Solid', 'FontAwesome6_Pro_Duotone.ttf', fontStyle('900')),
-    brand: createIconSet(brandGM, 'FontAwesome6Brands-Regular', 'FontAwesome6_Pro_Brands.ttf', fontStyle('400')),
+    thin: commonCreateIconSet(thinGM, 'FontAwesome6Pro-Thin', 'FontAwesome6_Pro_Thin.ttf', fontStyle('100')),
+    light: commonCreateIconSet(lightGM, 'FontAwesome6Pro-Light', 'FontAwesome6_Pro_Light.ttf', fontStyle('300')),
+    regular: commonCreateIconSet(regularGM, 'FontAwesome6Pro-Regular', 'FontAwesome6_Pro_Regular.ttf', fontStyle('400')),
+    solid: commonCreateIconSet(solidGM, 'FontAwesome6Pro-Solid', 'FontAwesome6_Pro_Solid.ttf', fontStyle('900')),
+    sharpThin: commonCreateIconSet(sharpThinGM, 'FontAwesome6Pro-Thin', 'FontAwesome6_Pro_Sharp_Thin.ttf', fontStyle('100')),
+    sharpLight: commonCreateIconSet(sharpLightGM, 'FontAwesome6Pro-Light', 'FontAwesome6_Pro_Sharp_Light.ttf', fontStyle('300')),
+    sharpRegular: commonCreateIconSet(sharpRegularGM, 'FontAwesome6Pro-Regular', 'FontAwesome6_Pro_Sharp_Regular.ttf', fontStyle('400')),
+    sharpSolid: commonCreateIconSet(sharpSolidGM, 'FontAwesome6Pro-Solid', 'FontAwesome6_Pro_Sharp_Solid.ttf', fontStyle('900')),
+    duotone: commonCreateIconSet(duotoneGM, 'FontAwesome6Duotone-Solid', 'FontAwesome6_Pro_Duotone.ttf', fontStyle('900')),
+    brand: commonCreateIconSet(brandGM, 'FontAwesome6Brands-Regular', 'FontAwesome6_Pro_Brands.ttf', fontStyle('400')),
   };
 
   const Icon = (props: Props) => {
