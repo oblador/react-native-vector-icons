@@ -1,50 +1,39 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "fontawesome5",
+    "className": "FontAwesome5",
+    "commonPackage": "fontawesome-common/fontawesome5",
+    "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.ts",
     "customReadme": true,
-    "customSrc": true,
-    "customAssets": "FontAwesome5_Pro_*.ttf",
     "packageJSON": {
-      "bin": {
-        "fa-upgrade5.sh": "./bin/fa-upgrade5.sh"
+      "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.0.0"
       }
     },
     "buildSteps": {
-      "preScript": {
-        "script": "mkdir fa\ncd fa\n#So the npm commands work with workspaces\ntouch package.json\necho -n 'Please enter your FontAwesome5 npm token: '\nread fa5_token\nnpm config set '@fortawesome:registry' https://npm.fontawesome.com/\nnpm config set '//npm.fontawesome.com/:_authToken' ${fa5_token}\nARCHIVE=$(npm pack @fortawesome/fontawesome-free@^5 --silent 2> /dev/null)\ntar -xzf ${ARCHIVE}\nmv package free\nARCHIVE=$(npm pack @fortawesome/fontawesome-pro@^5 --silent 2> /dev/null)\ntar -xzf ${ARCHIVE}\nmv package pro\n"
-      },
       "glyphmap": {
-        "location": [
-          [
-            "fa/free/css/all.css",
-            "FontAwesome5Free"
-          ],
-          [
-            "fa/pro/css/all.css",
-            "FontAwesome5Pro"
-          ]
-        ],
+        "location": "../../node_modules/@fortawesome/fontawesome-free/css/all.css",
         "mode": "css",
         "prefix": ".fa-"
       },
       "copyFont": {
         "location": [
           [
-            "fa/free/webfonts/fa-brands-400.ttf",
+            "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf",
             "FontAwesome5_Brands"
           ],
           [
-            "fa/free/webfonts/fa-regular-400.ttf",
+            "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf",
             "FontAwesome5_Regular"
           ],
           [
-            "fa/free/webfonts/fa-solid-900.ttf",
+            "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf",
             "FontAwesome5_Solid"
           ]
         ]
       },
       "postScript": {
-        "script": "node ./scripts/generate-fontawesome5-metadata --path fa/free --output glyphmaps/FontAwesome5Free_meta.json\nnode ./scripts/generate-fontawesome5-metadata --path fa/pro --output glyphmaps/FontAwesome5Pro_meta.json\nrm -rf fa"
+        "script": "node ../fontawesome-common/scripts/generate-fontawesome-metadata --path ../../node_modules/@fortawesome/fontawesome-free --output glyphmaps/FontAwesome5_meta.json"
       }
     }
   }

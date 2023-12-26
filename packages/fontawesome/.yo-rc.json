@@ -3,12 +3,10 @@
     "packageName": "fontawesome",
     "fontName": "FontAwesome",
     "fontFile": "FontAwesome",
+    "className": "FontAwesome",
     "packageJSON": {
       "devDependencies": {
         "font-awesome": "^4.7.0"
-      },
-      "bin": {
-        "fa-upgrade.sh": "./bin/fa-upgrade.sh"
       }
     },
     "buildSteps": {

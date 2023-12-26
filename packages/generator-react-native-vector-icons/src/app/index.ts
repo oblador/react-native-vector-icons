@@ -15,8 +15,9 @@ interface Data {
   fontFile: string,
   packageJSON: Record<string, Record<string, string>>,
   customReadme?: boolean,
-  customSrc?: boolean,
+  customSrc?: string,
   customAssets?: boolean,
+  commonPackage?: string,
   buildSteps: {
     preScript?: {
       script: string,
@@ -73,7 +74,7 @@ export default class extends Generator<Arguments> {
       `--volume=${process.cwd()}:/usr/src/app`,
       `--volume=${process.cwd()}/../../node_modules:/usr/src/app/node_modules`,
       `--user=${uid}:${gid}`,
-      `--env=SOURCE_DATE_EPOCH=1702622477`, // TODO: Should we use something more sensible as the date for the fonts
+      '--env=SOURCE_DATE_EPOCH=1702622477', // TODO: Should we use something more sensible as the date for the fonts
       image,
       ...args,
     ], { stdio: 'inherit' });
@@ -91,7 +92,9 @@ export default class extends Generator<Arguments> {
       'tsconfig.json',
     ];
 
-    if (!data.customSrc) {
+    if (data.customSrc) {
+      files.push([data.customSrc, 'src/index.ts']);
+    } else {
       files.push('src/index.ts');
     }
 
@@ -123,7 +126,7 @@ export default class extends Generator<Arguments> {
 
     const packageFile = this.destinationPath('package.json');
     const packageJSON = JSON.parse(fs.readFileSync(packageFile, 'utf8'));
-    Object.entries(data.packageJSON).forEach(([key, value]) => {
+    Object.entries(data.packageJSON || {}).forEach(([key, value]) => {
       packageJSON[key] = { ...packageJSON[key], ...value };
     });
 
@@ -233,7 +236,7 @@ export default class extends Generator<Arguments> {
     if (!glyphmap.location) {
       locations.push([`${data.className}.css`, data.fontFile]);
     } else if (typeof glyphmap.location === 'string') {
-      locations.push([glyphmap.location, data.fontFile]);
+      locations.push([glyphmap.location, data.className]);
     } else {
       locations = glyphmap.location;
     }
@@ -299,8 +302,8 @@ export default class extends Generator<Arguments> {
     data.fontName ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
     data.fontFile ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
     data.customReadme ||= false;
-    data.customSrc ||= false;
     data.customAssets ||= false;
+    data.commonPackage ||= 'common';
 
     return data;
   }

@@ -1,8 +1,6 @@
 # TODO
 * Check why `fallbackFamily` was introduced
 * Explore better android font loading
-* Subdir fonts on ios
-* Think about <Text selectable>
 * FOntawesome5/6
   * Have a common package
   * Have stand and pro packages

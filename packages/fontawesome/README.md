@@ -13,11 +13,11 @@ npm install @react-native-vector-icons/fontawesome
 ## Usage
 
 ```js
-import Fontawesome from '@react-native-vector-icons/fontawesome';
+import FontAwesome from '@react-native-vector-icons/fontawesome';
 
 // ...
 
-<Fontawesome name="house" color="#ff0000" size={20} />
+<FontAwesome name="house" color="#ff0000" size={20} />
 ```
 
 ## Contributing
