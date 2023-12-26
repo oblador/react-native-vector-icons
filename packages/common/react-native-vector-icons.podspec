@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "12.0", :tvos => "9.0" }
-  s.source       = { :git => "https://github.com/oblador/react-native-vector-icons.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/react-native-vector-icons/react-native-vector-icons.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm}"
 
