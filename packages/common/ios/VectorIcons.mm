@@ -6,7 +6,7 @@
 #import <React/RCTFont.h>
 #import <React/RCTUtils.h>
 
-NSString *const RNVIErrorDomain = @"org.oblador.react-native-vector-icons";
+NSString *const RNVIErrorDomain = @"com.reactnativevectoricons.common";
 
 @implementation VectorIcons
 RCT_EXPORT_MODULE()
