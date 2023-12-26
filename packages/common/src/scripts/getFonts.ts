@@ -32,18 +32,20 @@ const getPackages = () => {
 };
 
 const getFonts = (dir: string) => {
-  const fonts = fs.readdirSync(`${dir}/fonts`);
-  fonts.forEach((font) => console.log(`${dir}/fonts/${font}`));
+  const fontDirs = [`${dir}/fonts`];
 
   const rootPackageJson = getPackageJson(rootDir);
-  const config = rootPackageJson.reactNativeVectorIcons || {}
-  const fontDir = `${rootDir}/${config.fontDir || 'rnvi-fonts'}`;
-  if (!fs.existsSync(fontDir)) {
-    return;
-  }
+  const config = rootPackageJson.reactNativeVectorIcons || {};
+  fontDirs.push(`${rootDir}/${config.fontDir || 'rnvi-fonts'}`);
 
-  const customFonts = fs.readdirSync(fontDir);
-  customFonts.forEach((font) => console.log(`${fontDir}/${font}`));
+  fontDirs.forEach((fontDir) => {
+    if (!fs.existsSync(fontDir)) {
+      return;
+    }
+
+    const fonts = fs.readdirSync(fontDir);
+    fonts.forEach((font) => console.log(`${fontDir}/${font}`));
+  });
 };
 
 const packageDirs = getPackages();

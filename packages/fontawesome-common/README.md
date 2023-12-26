@@ -1,0 +1,73 @@
+# FontAwesome 5 Pro
+
+## Installing the Pro Fonts
+
+You need your FontAwesome npm token which can be obtained by logging into your
+account and then access the `Services` tab.
+
+Run `yarn fa5-upgrade` and enter the token
+when asked to in order to upgrade to the Pro version. It will install the fonts
+in your repo in the `rnvi-fonts` directory but the folder can be customized by
+setting it when executing the command: `yarn fa5-upgrade [destination]`.
+
+### Manually
+
+If the shell script does not work you can install the Pro version manually.
+All you really need to do is adding the Pro fonts to the `rnvi-fonts` directory
+
+## Usage
+
+Using the standard icons works just like the standard icons in this library.
+
+```javascript
+import FontAwesome5Pro from 'react-native-vector-icons/FontAwesome5Pro';
+
+const icon = <FontAwesome5Pro name="comments" />;
+```
+
+Something special about the FontAwesome5Pro class is that you can also pass props
+to change the style of the icon:
+
+```javascript
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
+const icon = <FontAwesome5Pro name="comments" solid />;
+const icon = <FontAwesome5Pro name="git" brand />;
+```
+
+**Valid types**
+
+| Type      | Description                                 |
+| --------- | ------------------------------------------- |
+| **brand** | Uses the Brands font                        |
+| **light** | Uses the Light font (pro) or Regular (Free) |
+| **solid** | Uses the Solid font                         |
+
+No specified type indicates Regular font.
+
+### getImageSource
+
+`getImageSource` works a little different due to its native backend and how
+the font is separated into different files. Therefore, the enum FA5Style is
+defined to help setting the style of the font:
+
+```javascript
+const FA5Style = {
+  regular: 0,
+  light: 1,
+  solid: 2,
+  brand: 3,
+};
+```
+
+Use this to select which style the generated image should have:
+
+```javascript
+import FontAwesome5, { FA5Style } from 'react-native-vector-icons/FontAwesome5';
+
+FontAwesome5.getImageSource('comments', 30, '#000', FA5Style.solid).then(
+  (source) => this.setState({ image: source })
+);
+```
+
+Not passing a style will result in Regular style.

@@ -2221,6 +2221,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fortawesome/fontawesome-free@npm:^5.0.0":
+  version: 5.15.4
+  resolution: "@fortawesome/fontawesome-free@npm:5.15.4"
+  checksum: 0a12f11b17b3073475df965d423ac485715e281d11ecde17250fab5dc0a177fb29ced59242f6c024bef59429c502ba8fe831ed9500e14713cc30138e70df8fbc
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-free@npm:^6.0.0":
+  version: 6.5.1
+  resolution: "@fortawesome/fontawesome-free@npm:6.5.1"
+  checksum: dc359ede1ddfc6d91915345143008420001c56b164a6fe95d81bcca631eecca41009bfacf794d55bdb9d927c112119ce90a11cb4f576a815ed69ec681e5eb824
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^9.0.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -3966,6 +3980,7 @@ __metadata:
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     jest: "npm:^29.7.0"
+    onchange: "npm:^7.1.0"
     oslllo-svg-fixer: "npm:^3.0.0"
     pod-install: "npm:^0.1.39"
     prettier: "npm:^3.1.0"
@@ -4054,9 +4069,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/fontawesome5@npm:^0, @react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5":
+"@react-native-vector-icons/fontawesome-common@workspace:packages/fontawesome-common":
   version: 0.0.0-use.local
-  resolution: "@react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5"
+  resolution: "@react-native-vector-icons/fontawesome-common@workspace:packages/fontawesome-common"
+  dependencies:
+    "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
+    react-native-builder-bob: "npm:^0.23.2"
+    turbo: "npm:^1.10.16"
+    typescript: "npm:^5.3.2"
+  peerDependencies:
+    "@react-native-vector-icons/fontawesome5": "*"
+    "@react-native-vector-icons/fontawesome5-pro": "*"
+    "@react-native-vector-icons/fontawesome6": "*"
+    "@react-native-vector-icons/fontawesome6-pro": "*"
+    react: "*"
+    react-native: "*"
+  bin:
+    fa-upgrade.sh: ./bin/fa-upgrade.sh
+    fa-upgrade5.sh: ./bin/fa-upgrade5.sh
+    fa-upgrade6.sh: ./bin/fa-upgrade6.sh
+  languageName: unknown
+  linkType: soft
+
+"@react-native-vector-icons/fontawesome5-pro@npm:^0, @react-native-vector-icons/fontawesome5-pro@workspace:packages/fontawesome5-pro":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/fontawesome5-pro@workspace:packages/fontawesome5-pro"
   dependencies:
     "@react-native-vector-icons/common": "npm:^0"
     del-cli: "npm:^5.1.0"
@@ -4066,8 +4105,37 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: "*"
-  bin:
-    fa-upgrade5.sh: ./bin/fa-upgrade5.sh
+  languageName: unknown
+  linkType: soft
+
+"@react-native-vector-icons/fontawesome5@npm:^0, @react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5"
+  dependencies:
+    "@fortawesome/fontawesome-free": "npm:^5.0.0"
+    "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    react-native-builder-bob: "npm:^0.23.2"
+    turbo: "npm:^1.10.16"
+    typescript: "npm:^5.3.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
+"@react-native-vector-icons/fontawesome6-pro@npm:^0, @react-native-vector-icons/fontawesome6-pro@workspace:packages/fontawesome6-pro":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/fontawesome6-pro@workspace:packages/fontawesome6-pro"
+  dependencies:
+    "@react-native-vector-icons/common": "npm:^0"
+    del-cli: "npm:^5.1.0"
+    react-native-builder-bob: "npm:^0.23.2"
+    turbo: "npm:^1.10.16"
+    typescript: "npm:^5.3.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
   languageName: unknown
   linkType: soft
 
@@ -4075,6 +4143,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6"
   dependencies:
+    "@fortawesome/fontawesome-free": "npm:^6.0.0"
     "@react-native-vector-icons/common": "npm:^0"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
@@ -4083,8 +4152,6 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: "*"
-  bin:
-    fa-upgrade6.sh: ./bin/fa-upgrade6.sh
   languageName: unknown
   linkType: soft
 
@@ -4101,8 +4168,6 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: "*"
-  bin:
-    fa-upgrade.sh: ./bin/fa-upgrade.sh
   languageName: unknown
   linkType: soft
 
@@ -5967,7 +6032,9 @@ __metadata:
     "@react-native-vector-icons/feather": "npm:^0"
     "@react-native-vector-icons/fontawesome": "npm:^0"
     "@react-native-vector-icons/fontawesome5": "npm:^0"
+    "@react-native-vector-icons/fontawesome5-pro": "npm:^0"
     "@react-native-vector-icons/fontawesome6": "npm:^0"
+    "@react-native-vector-icons/fontawesome6-pro": "npm:^0"
     "@react-native-vector-icons/fontisto": "npm:^0"
     "@react-native-vector-icons/foundation": "npm:^0"
     "@react-native-vector-icons/ionicons": "npm:^0"
@@ -9284,7 +9351,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"duplexer@npm:^0.1.2, duplexer@npm:~0.1.1":
+"duplexer@npm:^0.1.2":
   version: 0.1.2
   resolution: "duplexer@npm:0.1.2"
   checksum: c57bcd4bdf7e623abab2df43a7b5b23d18152154529d166c1e0da6bee341d84c432d157d7e97b32fecb1bf3a8b8857dd85ed81a915789f550637ed25b8e64fc2
@@ -10214,21 +10281,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"event-stream@npm:=3.3.4":
-  version: 3.3.4
-  resolution: "event-stream@npm:3.3.4"
-  dependencies:
-    duplexer: "npm:~0.1.1"
-    from: "npm:~0"
-    map-stream: "npm:~0.1.0"
-    pause-stream: "npm:0.0.11"
-    split: "npm:0.3"
-    stream-combiner: "npm:~0.0.4"
-    through: "npm:~2.3.1"
-  checksum: c3ec4e1efc27ab3e73a98923f0a2fa9a19051b87068fea2f3d53d2e4e8c5cfdadf8c8a115b17f3d90b16a46432d396bad91b6e8d0cceb3e449be717a03b75209
-  languageName: node
-  linkType: hard
-
 "event-target-shim@npm:^5.0.0, event-target-shim@npm:^5.0.1":
   version: 5.0.1
   resolution: "event-target-shim@npm:5.0.1"
@@ -10874,13 +10926,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"from@npm:~0":
-  version: 0.1.7
-  resolution: "from@npm:0.1.7"
-  checksum: 3aab5aea8fe8e1f12a5dee7f390d46a93431ce691b6222dcd5701c5d34378e51ca59b44967da1105a0f90fcdf5d7629d963d51e7ccd79827d19693bdcfb688d4
-  languageName: node
-  linkType: hard
-
 "fs-extra@npm:^10.0.0, fs-extra@npm:^10.1.0":
   version: 10.1.0
   resolution: "fs-extra@npm:10.1.0"
@@ -11011,7 +11056,6 @@ __metadata:
     mem-fs: "npm:^4.0.0"
     onchange: "npm:^7.1.0"
     oslllo-svg-fixer: "npm:^3.0.0"
-    tsc-watch: "npm:^6.0.4"
     typescript: "npm:^5.3.2"
     yeoman-generator: "npm:^7.1.1"
   languageName: unknown
@@ -14834,13 +14878,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"map-stream@npm:~0.1.0":
-  version: 0.1.0
-  resolution: "map-stream@npm:0.1.0"
-  checksum: 7dd6debe511c1b55d9da75e1efa65a28b1252a2d8357938d2e49b412713c478efbaefb0cdf0ee0533540c3bf733e8f9f71e1a15aa0fe74bf71b64e75bf1576bd
-  languageName: node
-  linkType: hard
-
 "mdn-data@npm:2.0.14":
   version: 2.0.14
   resolution: "mdn-data@npm:2.0.14"
@@ -15776,13 +15813,6 @@ __metadata:
   dependencies:
     node-gyp: "npm:latest"
   checksum: 41f21c9d12318875a2c429befd06070ce367065a3ef02952cfd4ea17ef69fa14012732f510b82b226e99c254da8d671847ea018cad785f839a5366e02dd56302
-  languageName: node
-  linkType: hard
-
-"node-cleanup@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "node-cleanup@npm:2.1.2"
-  checksum: c59077d7cac01f6315e4417e5d13523e43aa19965b14768581dbd06b37419323abe5f7171afe6aa52b7a483bdd0027e5a5f62a532a2ebec2a8c4cdf163736c92
   languageName: node
   linkType: hard
 
@@ -16755,15 +16785,6 @@ __metadata:
   version: 5.0.0
   resolution: "path-type@npm:5.0.0"
   checksum: e8f4b15111bf483900c75609e5e74e3fcb79f2ddb73e41470028fcd3e4b5162ec65da9907be077ee5012c18801ff7fffb35f9f37a077f3f81d85a0b7d6578efd
-  languageName: node
-  linkType: hard
-
-"pause-stream@npm:0.0.11":
-  version: 0.0.11
-  resolution: "pause-stream@npm:0.0.11"
-  dependencies:
-    through: "npm:~2.3"
-  checksum: 86f12c64cdaaa8e45ebaca4e39a478e1442db8b4beabc280b545bfaf79c0e2f33c51efb554aace5c069cc441c7b924ba484837b345eaa4ba6fc940d62f826802
   languageName: node
   linkType: hard
 
@@ -17960,17 +17981,6 @@ __metadata:
   version: 1.0.1
   resolution: "prr@npm:1.0.1"
   checksum: 5b9272c602e4f4472a215e58daff88f802923b84bc39c8860376bb1c0e42aaf18c25d69ad974bd06ec6db6f544b783edecd5502cd3d184748d99080d68e4be5f
-  languageName: node
-  linkType: hard
-
-"ps-tree@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "ps-tree@npm:1.2.0"
-  dependencies:
-    event-stream: "npm:=3.3.4"
-  bin:
-    ps-tree: ./bin/ps-tree.js
-  checksum: 9d1c159e0890db5aa05f84d125193c2190a6c4ecd457596fd25e7611f8f747292a846459dcc0244e27d45529d4cea6d1010c3a2a087fad02624d12fdb7d97c22
   languageName: node
   linkType: hard
 
@@ -19855,15 +19865,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"split@npm:0.3":
-  version: 0.3.3
-  resolution: "split@npm:0.3.3"
-  dependencies:
-    through: "npm:2"
-  checksum: 88c09b1b4de84953bf5d6c153123a1fbb20addfea9381f70d27b4eb6b2bfbadf25d313f8f5d3fd727d5679b97bfe54da04766b91010f131635bf49e51d5db3fc
-  languageName: node
-  linkType: hard
-
 "sprintf-js@npm:~1.0.2":
   version: 1.0.3
   resolution: "sprintf-js@npm:1.0.3"
@@ -19953,15 +19954,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stream-combiner@npm:~0.0.4":
-  version: 0.0.4
-  resolution: "stream-combiner@npm:0.0.4"
-  dependencies:
-    duplexer: "npm:~0.1.1"
-  checksum: 8075a94c0eb0f20450a8236cb99d4ce3ea6e6a4b36d8baa7440b1a08cde6ffd227debadffaecd80993bd334282875d0e927ab5b88484625e01970dd251004ff5
-  languageName: node
-  linkType: hard
-
 "streamx@npm:^2.12.5":
   version: 2.15.5
   resolution: "streamx@npm:2.15.5"
@@ -19976,13 +19968,6 @@ __metadata:
   version: 2.0.0
   resolution: "strict-uri-encode@npm:2.0.0"
   checksum: 010cbc78da0e2cf833b0f5dc769e21ae74cdc5d5f5bd555f14a4a4876c8ad2c85ab8b5bdf9a722dc71a11dcd3184085e1c3c0bd50ec6bb85fffc0f28cf82597d
-  languageName: node
-  linkType: hard
-
-"string-argv@npm:^0.3.1":
-  version: 0.3.2
-  resolution: "string-argv@npm:0.3.2"
-  checksum: 75c02a83759ad1722e040b86823909d9a2fc75d15dd71ec4b537c3560746e33b5f5a07f7332d1e3f88319909f82190843aa2f0a0d8c8d591ec08e93d5b8dec82
   languageName: node
   linkType: hard
 
@@ -20687,7 +20672,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"through@npm:2, through@npm:>=2.2.7 <3, through@npm:~2.3, through@npm:~2.3.1":
+"through@npm:>=2.2.7 <3":
   version: 2.3.8
   resolution: "through@npm:2.3.8"
   checksum: 4b09f3774099de0d4df26d95c5821a62faee32c7e96fb1f4ebd54a2d7c11c57fe88b0a0d49cf375de5fee5ae6bf4eb56dbbf29d07366864e2ee805349970d3cc
@@ -20851,22 +20836,6 @@ __metadata:
   version: 0.1.13
   resolution: "ts-interface-checker@npm:0.1.13"
   checksum: 232509f1b84192d07b81d1e9b9677088e590ac1303436da1e92b296e9be8e31ea042e3e1fd3d29b1742ad2c959e95afe30f63117b8f1bc3a3850070a5142fea7
-  languageName: node
-  linkType: hard
-
-"tsc-watch@npm:^6.0.4":
-  version: 6.0.4
-  resolution: "tsc-watch@npm:6.0.4"
-  dependencies:
-    cross-spawn: "npm:^7.0.3"
-    node-cleanup: "npm:^2.1.2"
-    ps-tree: "npm:^1.2.0"
-    string-argv: "npm:^0.3.1"
-  peerDependencies:
-    typescript: "*"
-  bin:
-    tsc-watch: dist/lib/tsc-watch.js
-  checksum: e6891283daa5f3f5b6bc26bd4de24d85664a24cb0b0b3f3c46ec7b3f1ad0f599da02f73023814b3285b8fb9810164b8a43ed693f2fc12bc85a72b15d020545cd
   languageName: node
   linkType: hard
 
@@ -21165,11 +21134,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.3.2#optional!builtin<compat/typescript>":
   version: 5.3.2
-  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"
+  resolution: "typescript@patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=29ae49"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 73c8bad74e732d93211c9d77f28b03307e2f5fc6a0afc73f4b783261ab567686a16d6ae958bdaef383a00be1b0b8c8b6741dd6ca3d13af4963fa7e47456d49c7
+  checksum: c81b9bd20c6dbe90fa43e876c586021447f2b47baede9fa542b1f56715835c043e23b2eaf19c42c067cc6f5ae512bd9a9be28a67b3a1d9807f8c9cfb1269875e
   languageName: node
   linkType: hard
 
