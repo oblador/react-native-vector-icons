@@ -72,7 +72,7 @@
     "@react-native-vector-icons/common": "^0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.0.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "del-cli": "^5.1.0",
     "react-native-builder-bob": "^0.23.2",
     "typescript": "^5.3.3"
