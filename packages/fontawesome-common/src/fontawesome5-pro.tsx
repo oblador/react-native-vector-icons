@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Platform, type TextStyle } from 'react-native';
 
-import { createIconSet, type IconProps } from '@react-native-vector-icons/common';
+import { createIconSet as commonCreateIconSet, type IconProps } from '@react-native-vector-icons/common';
 
 import lightGMPro from '@react-native-vector-icons/fontawesome5-pro/glyphmaps/FontAwesome5Pro.json';
 import regularGMPro from '@react-native-vector-icons/fontawesome5-pro/glyphmaps/FontAwesome5Pro_regular.json';
@@ -12,7 +12,7 @@ import duotoneGMPro from '@react-native-vector-icons/fontawesome5-pro/glyphmaps/
 
 type IconTypesPro = 'light' | 'duotone' | 'regular' | 'solid' | 'brand';
 
-export const createFAProIconSet = (metadata: Record<IconTypesPro, string[]>) => {
+export const createIconSet = (metadata: Record<IconTypesPro, string[]>) => {
   const glyphValidator = (glyph: string, iconType: keyof typeof metadata) => metadata[iconType]?.includes(glyph);
 
   const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
@@ -38,11 +38,11 @@ export const createFAProIconSet = (metadata: Record<IconTypesPro, string[]>) => 
     | ({ iconStyle?: never } & RegularIconProps);
 
   const Icons = {
-    regular: createIconSet(regularGMPro, 'FontAwesome5Pro-Regular', 'FontAwesome5_Pro_Regular.ttf', fontStyle('400')),
-    solid: createIconSet(solidGMPro, 'FontAwesome5Pro-Solid', 'FontAwesome5_Pro_Solid.ttf', fontStyle('900')),
-    brand: createIconSet(brandGMPro, 'FontAwesome5Brands-Regular', 'FontAwesome5_Pro_Brands.ttf', fontStyle('400')),
-    light: createIconSet(lightGMPro, 'FontAwesome5$ro-Light', 'FontAwesome5_Pro_Light.ttf', fontStyle('300')),
-    duotone: createIconSet(duotoneGMPro, 'FontAwesome5Duotone-Solid', 'FontAwesome5_Pro_Duotone.ttf', fontStyle('900')),
+    regular: commonCreateIconSet(regularGMPro, 'FontAwesome5Pro-Regular', 'FontAwesome5_Pro_Regular.ttf', fontStyle('400')),
+    solid: commonCreateIconSet(solidGMPro, 'FontAwesome5Pro-Solid', 'FontAwesome5_Pro_Solid.ttf', fontStyle('900')),
+    brand: commonCreateIconSet(brandGMPro, 'FontAwesome5Brands-Regular', 'FontAwesome5_Pro_Brands.ttf', fontStyle('400')),
+    light: commonCreateIconSet(lightGMPro, 'FontAwesome5$ro-Light', 'FontAwesome5_Pro_Light.ttf', fontStyle('300')),
+    duotone: commonCreateIconSet(duotoneGMPro, 'FontAwesome5Duotone-Solid', 'FontAwesome5_Pro_Duotone.ttf', fontStyle('900')),
   };
 
   const Icon = (props: Props) => {
