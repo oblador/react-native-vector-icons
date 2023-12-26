@@ -75,7 +75,6 @@
     "@fortawesome/fontawesome-free": "^5.0.0",
     "del-cli": "^5.1.0",
     "react-native-builder-bob": "^0.23.2",
-    "turbo": "^1.11.2",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {

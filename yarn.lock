@@ -2443,7 +2443,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-free@npm:^6.0.0":
+"@fortawesome/fontawesome-free@npm:^6.5.1":
   version: 6.5.1
   resolution: "@fortawesome/fontawesome-free@npm:6.5.1"
   checksum: dc359ede1ddfc6d91915345143008420001c56b164a6fe95d81bcca631eecca41009bfacf794d55bdb9d927c112119ce90a11cb4f576a815ed69ec681e5eb824
@@ -4199,7 +4199,7 @@ __metadata:
     react: "npm:18.2.0"
     react-native: "npm:0.73.1"
     react-native-builder-bob: "npm:^0.23.2"
-    release-it: "npm:^17.0.0"
+    release-it: "npm:^17.0.1"
     svg2ttf: "npm:^6.0.3"
     svgicons2svgfont: "npm:^12.0.0"
     turbo: "npm:^1.11.2"
@@ -4327,7 +4327,6 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^0"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    turbo: "npm:^1.11.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
     react: "*"
@@ -4354,7 +4353,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6"
   dependencies:
-    "@fortawesome/fontawesome-free": "npm:^6.0.0"
+    "@fortawesome/fontawesome-free": "npm:^6.5.1"
     "@react-native-vector-icons/common": "npm:^0"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
@@ -19442,9 +19441,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"release-it@npm:^17.0.0":
-  version: 17.0.0
-  resolution: "release-it@npm:17.0.0"
+"release-it@npm:^17.0.1":
+  version: 17.0.1
+  resolution: "release-it@npm:17.0.1"
   dependencies:
     "@iarna/toml": "npm:2.2.5"
     "@octokit/rest": "npm:20.0.2"
@@ -19475,7 +19474,7 @@ __metadata:
     yargs-parser: "npm:21.1.1"
   bin:
     release-it: bin/release-it.js
-  checksum: 1a926e20f157337383d17a8ff08ca30e6451ac978c241e333cc5b5d147cd9264b67d8744287b5e1aab62dd9b3b99fcbb29d220331344b569eb64ae0df00415ad
+  checksum: ab7c4b945530b69452d292964c7555e90d5270020edd8bdca3b5972d320005bb79bafde218ce0b87f6457bbe1c7ad81aa9f2f6e9d8d719332949cdf02cb9c3e5
   languageName: node
   linkType: hard
 
@@ -21776,11 +21775,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.3.3#optional!builtin<compat/typescript>":
   version: 5.3.3
-  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=29ae49"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
+  checksum: e22df47df9b2b2f2617b8bf511a29aea3d177f9f7a0756818230a76b01cbd7da988bf55f9463aaa1a4c1ff90b80f8dc5676460d4e9dfc010572cbba59b822b0c
   languageName: node
   linkType: hard
 
