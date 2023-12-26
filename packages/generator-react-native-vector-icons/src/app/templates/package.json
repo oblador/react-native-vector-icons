@@ -29,7 +29,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build ios/build lib",
-    "prepare": "bob build"
+    "prepare": "bob build",
+    "watch": "onchange 'src/**' --initial -- yarn run prepare"
   },
   "keywords": [
     "react-native",
@@ -82,11 +83,6 @@
   },
   "engines": {
     "node": ">= 18.0.0"
-  },
-  "codegenConfig": {
-    "name": "RNVI<%= className %>Spec",
-    "type": "modules",
-    "jsSrcsDir": "src"
   },
   "react-native-builder-bob": {
     "source": "src",

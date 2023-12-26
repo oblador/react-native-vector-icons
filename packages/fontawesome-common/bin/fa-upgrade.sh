@@ -4,10 +4,9 @@ set -e
 
 TEMP_DIR_PATH=""
 FONTAWESOME_PRO_DIR_NAME=""
-VERSION="5"
-DEST_DIR_PATH=${2:-"assets/fonts"}
-PROJECT_NAME="react-native-vector-icons"
-FONT_NAME="Font Awesome Pro"
+VERSION=$1
+DEST_DIR_PATH=${2:-"rnvi-fonts"}
+FONT_NAME="Font Awesome Pro ${VERSION}"
 
 setup_npm_config()
 {
@@ -76,18 +75,22 @@ copy_ttf_fonts_to_dest_dir()
   local font_dir_path="$TEMP_DIR_PATH/$FONTAWESOME_PRO_DIR_NAME/webfonts"
 
   if [ "$VERSION" = "5" ]; then
-    cp "$font_dir_path/fa-light-300.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Light.ttf" &&
     cp "$font_dir_path/fa-brands-400.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Brands.ttf" &&
+    cp "$font_dir_path/fa-duotone-900.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Duotone.ttf" &&
+    cp "$font_dir_path/fa-light-300.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Light.ttf" &&
     cp "$font_dir_path/fa-regular-400.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Regular.ttf" &&
     cp "$font_dir_path/fa-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome5_Pro_Solid.ttf"
   elif [ "$VERSION" = "6" ]; then
-    cp "$font_dir_path/fa-light-300.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Light.ttf" &&
     cp "$font_dir_path/fa-brands-400.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Brands.ttf" &&
-    cp "$font_dir_path/fa-regular-400.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Regular.ttf" &&
-    cp "$font_dir_path/fa-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Solid.ttf" &&
     cp "$font_dir_path/fa-duotone-900.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Duotone.ttf" &&
-    cp "$font_dir_path/fa-thin-100.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Thin.ttf" &&
+    cp "$font_dir_path/fa-light-300.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Light.ttf" &&
+    cp "$font_dir_path/fa-regular-400.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Regular.ttf" &&
+    cp "$font_dir_path/fa-sharp-light-300.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Sharp_Light.ttf"
+    cp "$font_dir_path/fa-sharp-regular-400.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Sharp_Regular.ttf"
     cp "$font_dir_path/fa-sharp-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Sharp_Solid.ttf"
+    cp "$font_dir_path/fa-sharp-thin-100.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Sharp_Thin.ttf"
+    cp "$font_dir_path/fa-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Solid.ttf" &&
+    cp "$font_dir_path/fa-thin-100.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Thin.ttf" &&
   else
     echo "[FAIL] Unsupported version [$VERSION]";
     exit 1
@@ -128,7 +131,3 @@ fi
 
 echo "[SUCCESS] $FONT_NAME was successfully upgraded"
 echo "Note: [$TEMP_DIR_PATH] was created. Delete it manually or it will be deleted automatically on next reboot"
-
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-
-"${SCRIPT_DIR}"/fa-upgrade.sh 5 "$@"

@@ -9,13 +9,18 @@ for package in *; do
     continue
   fi
 
+  echo
+  echo "######################"
+  echo "Building $package"
+  echo "######################"
+  echo
+
   cd $package
 
   rm -rf *
 
-  # For font awesome feels a bit hack
-  if [ -f .rnvi-git-restore ]; then
-    git restore bin src scripts README.md
+  if [ "$(jq -r '."generator-react-native-vector-icons".customReadme' .yo-rc.json)" == "true" ]; then
+    git restore README.md > /dev/null || true
   fi
 
   yo react-native-vector-icons --force

@@ -29,7 +29,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build ios/build lib",
-    "prepare": "bob build"
+    "prepare": "bob build",
+    "watch": "onchange 'src/**' --initial -- yarn run prepare"
   },
   "keywords": [
     "react-native",
@@ -84,11 +85,6 @@
   "engines": {
     "node": ">= 18.0.0"
   },
-  "codegenConfig": {
-    "name": "RNVIFontawesomeSpec",
-    "type": "modules",
-    "jsSrcsDir": "src"
-  },
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
@@ -103,8 +99,5 @@
       ]
     ]
   },
-  "packageManager": "yarn@4.0.1",
-  "bin": {
-    "fa-upgrade.sh": "./bin/fa-upgrade.sh"
-  }
+  "packageManager": "yarn@4.0.1"
 }

@@ -1,6 +1,6 @@
 /**
- * Fontawesome icon set component.
- * Usage: <Fontawesome name="icon-name" size={20} color="#4F8EF7" />
+ * FontAwesome icon set component.
+ * Usage: <FontAwesome name="icon-name" size={20} color="#4F8EF7" />
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';

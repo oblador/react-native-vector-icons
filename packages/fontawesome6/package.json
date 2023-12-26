@@ -29,7 +29,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build ios/build lib",
-    "prepare": "bob build"
+    "prepare": "bob build",
+    "watch": "onchange 'src/**' --initial -- yarn run prepare"
   },
   "keywords": [
     "react-native",
@@ -71,6 +72,7 @@
     "@react-native-vector-icons/common": "^0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
     "del-cli": "^5.1.0",
     "react-native-builder-bob": "^0.23.2",
     "turbo": "^1.10.16",
@@ -82,11 +84,6 @@
   },
   "engines": {
     "node": ">= 18.0.0"
-  },
-  "codegenConfig": {
-    "name": "RNVIFontawesome6Spec",
-    "type": "modules",
-    "jsSrcsDir": "src"
   },
   "react-native-builder-bob": {
     "source": "src",
@@ -102,8 +99,5 @@
       ]
     ]
   },
-  "packageManager": "yarn@4.0.1",
-  "bin": {
-    "fa-upgrade6.sh": "./bin/fa-upgrade6.sh"
-  }
+  "packageManager": "yarn@4.0.1"
 }
