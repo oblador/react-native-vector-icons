@@ -75,7 +75,7 @@
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/jest": "^29.5.11",
     "@types/react": "~18.2.45",
-    "@types/react-native": "0.72.8",
+    "@types/react-native": "0.73.0",
     "commitlint": "^18.4.3",
     "css-social-buttons": "^1.1.1",
     "del-cli": "^5.1.0",
