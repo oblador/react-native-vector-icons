@@ -159,7 +159,7 @@
     "type": "modules",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "com.oblador.vectoricons"
+      "javaPackageName": "com.reactnativevectoricons.common"
     }
   },
   "packageManager": "yarn@4.0.1"
