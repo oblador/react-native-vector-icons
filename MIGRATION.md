@@ -1,5 +1,4 @@
 # TODO
-* Check why `fallbackFamily` was introduced
 * Explore better android font loading
 * Support fontello
 * Support icomoon
