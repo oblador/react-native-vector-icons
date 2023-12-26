@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
       APP_NAME=\"$(echo $PODS_ROOT | sed 's#/ios/Pods##;s#.*/##').app\"
       echo $APP_NAME
 
-      mkdir  ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}/react-native-vector-icons
+      mkdir ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}/react-native-vector-icons
       FONTS=$(node #{__dir__}/lib/commonjs/scripts/getFonts.js ${SRCROOT}/../..)
       for font in $FONTS; do
         echo Copying font $font
