@@ -7,33 +7,27 @@
     "customReadme": true,
     "packageJSON": {
       "devDependencies": {
-        "@fortawesome/fontawesome-free": "^6.0.0"
+        "@fortawesome/fontawesome-free": "^6.5.1"
       }
     },
     "buildSteps": {
+      "preScript": {
+        "script": "yarn"
+      },
       "glyphmap": {
-        "location": "../../node_modules/@fortawesome/fontawesome-free/css/all.css",
+        "location": "node_modules/@fortawesome/fontawesome-free/css/all.css",
         "mode": "css",
         "prefix": ".fa-"
       },
       "copyFont": {
         "location": [
-          [
-            "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf",
-            "FontAwesome6_Brands"
-          ],
-          [
-            "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf",
-            "FontAwesome6_Regular"
-          ],
-          [
-            "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf",
-            "FontAwesome6_Solid"
-          ]
+          ["node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf", "FontAwesome6_Brands"],
+          ["node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf", "FontAwesome6_Regular"],
+          ["node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf", "FontAwesome6_Solid"]
         ]
       },
       "postScript": {
-        "script": "node ../fontawesome-common/scripts/generate-fontawesome-metadata --path ../../node_modules/@fortawesome/fontawesome-free --output glyphmaps/FontAwesome6_meta.json"
+        "script": "node ../fontawesome-common/scripts/generate-fontawesome-metadata --path node_modules/@fortawesome/fontawesome-free --output glyphmaps/FontAwesome6_meta.json"
       }
     }
   }
