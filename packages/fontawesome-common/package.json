@@ -39,6 +39,15 @@
       ],
       "fontawesome5": [
         "lib/typescript/src/fontawesome5.d.ts"
+      ],
+      "fontawesome5-pro": [
+        "lib/typescript/src/fontawesome5-pro.d.ts"
+      ],
+      "fontawesome6": [
+        "lib/typescript/src/fontawesome6.d.ts"
+      ],
+      "fontawesome6-pro": [
+        "lib/typescript/src/fontawesome6-pro.d.ts"
       ]
     }
   },
@@ -111,8 +120,8 @@
     "del-cli": "^5.1.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",
-    "turbo": "^1.10.16",
-    "typescript": "^5.3.2"
+    "turbo": "^1.11.2",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "@react-native-vector-icons/fontawesome5": "*",

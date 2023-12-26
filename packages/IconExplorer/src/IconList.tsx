@@ -59,12 +59,12 @@ const styles = StyleSheet.create({
 });
 
 const getFilteredGlyphNames = (
-  iconTypeName: string | undefined,
+  iconStyle: string | undefined,
   iconSet: IconSet,
   query: string
 ) => {
-  const icons = iconTypeName
-    ? (iconSet.meta?.[iconTypeName as keyof typeof iconSet.meta] || []).map(
+  const icons = iconStyle
+    ? (iconSet.meta?.[iconStyle as keyof typeof iconSet.meta] || []).map(
         (name) => [name]
       )
     : iconSet.glyphNames;
@@ -76,10 +76,10 @@ const getFilteredGlyphNames = (
 
 export const IconList = ({
   iconSet,
-  iconTypeName = undefined,
+  iconStyle = undefined,
 }: {
   iconSet: IconSet;
-  iconTypeName?: string;
+  iconStyle?: string;
 }) => {
   const [filter, setFilter] = useState('');
 
@@ -99,7 +99,7 @@ export const IconList = ({
     event: NativeSyntheticEvent<TextInputChangeEventData>
   ) => setFilter(event.nativeEvent.text.toLowerCase());
 
-  const glyphNames = getFilteredGlyphNames(iconTypeName, iconSet, filter);
+  const glyphNames = getFilteredGlyphNames(iconStyle, iconSet, filter);
 
   const Icon = iconSet.component;
 
@@ -124,7 +124,7 @@ export const IconList = ({
         renderItem={({ item }) => (
           <View style={styles.row}>
             <Icon
-              iconTypeName={iconTypeName}
+              iconStyle={iconStyle}
               name={item[0]}
               size={20}
               style={styles.icon}
@@ -148,7 +148,7 @@ export const MultiIconList = ({
   navigator,
 }: {
   iconSet: IconSet;
-  navigator: (iconTypeName: string, iconSet: IconSet, title: string) => void;
+  navigator: (iconStyle: string, iconSet: IconSet, title: string) => void;
 }) => {
   if (!iconSet.meta) {
     throw new Error('Icon has no Meta how did we get here?');

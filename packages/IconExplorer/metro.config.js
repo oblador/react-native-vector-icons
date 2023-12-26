@@ -11,8 +11,36 @@ const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
 const config = {
   // For monorepo
   resolver: {
-    unstable_enableSymlinks: true
+    unstable_enableSymlinks: true,
+    unstable_enablePackageExports: true,
   },
+  //   extraNodeModules: new Proxy(
+  //     {},
+  //     {
+  //       get: (target, name) => {
+  //         console.debug("MOO", target, name);
+  //         if (name === '@react-native-vector-icons/fontawesome-common/fontawesome5') {
+  //           console.debug('FOO');
+  //           return path.join(__dirname, '..', 'react-native-vector-icons', 'fontawesome-common', 'fontawesome5.ts');
+  //         }
+  //
+  //         if (name === '@react-native-vector-icons/fontawesome-common/fontawesome6') {
+  //           return path.join(__dirname, '..', 'react-native-vector-icons', 'fontawesome-common', 'fontawesome6.ts');
+  //         }
+  //
+  //         if (name === '@react-native-vector-icons/fontawesome-common/fontawesome5-pro') {
+  //           return path.join(__dirname, '..', 'react-native-vector-icons', 'fontawesome-common', 'fontawesome5-pro.ts');
+  //         }
+  //
+  //         if (name === '@react-native-vector-icons/fontawesome-common/fontawesome6-pro') {
+  //           return path.join(__dirname, '..', 'react-native-vector-icons', 'fontawesome-common', 'fontawesome6-pro.ts');
+  //         }
+  //
+  //         return path.join(process.cwd(), `node_modules/${name}`);
+  //       },
+  //     }
+  //   ),
+  // },
   watchFolders: [
     path.resolve(__dirname, '../../node_modules'),
 
