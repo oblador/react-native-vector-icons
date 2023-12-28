@@ -49,6 +49,11 @@ sponsorship plays a pivotal role in materializing these advancements.
 
 RNVI comes with the following supported icons. You can [search NPM](https://www.npmjs.com/search?q=keywords%3Areact-native-vector-icons-icon) for third party icons.
 
+FIXME: update all of these
+FIXME: update all of these
+FIXME: update all of these
+FIXME: update all of these
+
 - [`AntDesign`](https://ant.design/) from AntFinance (_298_ icons)
 - [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 with _411_ icons)
 - [`EvilIcons`](http://evil-icons.io) designed by Alexander Madyankin & Roman Shamin (v1.10.1 with _70_ icons)
@@ -161,11 +166,8 @@ Any [Text property](https://reactnative.dev/docs/text.html) and the following:
 
 | Prop                     | Description                                                                                                                                                                               |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`getFontFamily`**      | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily()`                                                                |
 | **`getImageSource`**     | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
 | **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)`                                                                              |
-| **`getRawGlyphMap`**     | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap()`                                                                                                |
-| **`hasIcon`**            | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name)`                                                                                          |
 
 ### Styling
 
@@ -179,8 +181,6 @@ Since `Icon` builds on top of the `Text` component, most [style properties](http
 - `margin`
 - `color`
 - `fontSize`
-
-NOTE: On android `Text` doesn't currently support `border*` styles, to circumvent this simply wrap your `Icon` with a `View`.
 
 By combining some of these you can create for example :
 
@@ -219,14 +219,8 @@ All static methods from `Icon` is supported by multi-styled fonts.
 
 | Prop                     | Description                                                                                                                                                                               |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`getFontFamily`**      | Returns the font family that is currently used to retrieve icons as text. Usage: `const fontFamily = Icon.getFontFamily(style)`                                                           |
 | **`getImageSource`**     | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
 | **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)`                                                                              |
-| **`getRawGlyphMap`**     | Returns the raw glyph map of the icon set. Usage: `const glyphMap = Icon.getRawGlyphMap(style)`                                                                                           |
-| **`hasIcon`**            | Checks if the name is valid in current icon set. Usage: `const isNameValid = Icon.hasIcon(name, style)`                                                                                   |
-| **`getStyledIconSet`**   | Use this to get a `Icon` component for a single style. Usage. `const StyledIcon = Icon.getStyledIconSet(style)`                                                                           |
-
-If no style argument is passed (or if it's invalid) the methods will default to a pre-defineds fallback.
 
 ## Custom Fonts
 
@@ -361,7 +355,12 @@ You have to manually make a reference of your `.ttf` on your xcodeproj `Resource
 
 ## Animation
 
-React Native comes with an amazing animation library called [`Animated`](https://reactnative.dev/docs/animated.html). To use it with an icon, simply create an animated component with this line: `const AnimatedIcon = Animated.createAnimatedComponent(Icon)`. You can also use the higher level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
+React Native comes with an amazing animation library called
+[`Animated`](https://reactnative.dev/docs/animated.html). To use it with an
+icon, simply create an animated component with this line: `const AnimatedIcon =
+Animated.createAnimatedComponent(Icon)`. You can also use the higher level
+animation library
+[react-native-animatable](https://github.com/oblador/react-native-animatable).
 
 ## Usage Examples
 
@@ -374,104 +373,10 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 ### Basic Example
 
 ```js
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@react-native-vector-icons/ionicons';
 
 function ExampleView(props) {
   return <Icon name="ios-person" size={30} color="#4F8EF7" />;
-}
-```
-
-## TabBar
-
-Since [`TabBarIOS`](https://reactnative.dev/docs/tabbarios.html) was removed from core in favor of [@react-navigation/bottom-tabs](https://reactnative.dev/docs/tabbarios.html), it is also removed as a convenience component from this library. Simply use the `Icon` instead, but don't forget to import and link to this project as described above first.
-
-Below is an [example](https://reactnavigation.org/docs/bottom-tab-navigator/#example) taken from `react-navigation`:
-
-```js
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
-const Tab = createBottomTabNavigator();
-
-function MyTabs() {
-  return (
-    <Tab.Navigator
-      initialRouteName="Feed"
-      screenOptions={{
-        activeTintColor: '#e91e63',
-      }}
-    >
-      <Tab.Screen
-        name="Feed"
-        component={Feed}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Notifications"
-        component={Notifications}
-        options={{
-          tabBarLabel: 'Updates',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={size} />
-          ),
-          tabBarBadge: 3,
-        }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          tabBarLabel: 'Profile',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  );
-}
-```
-
-### ToolbarAndroid
-
-Since [`ToolbarAndroid`](https://github.com/react-native-community/toolbar-android) was removed from core, it is also removed as a convenience component from this library. Simply use `getImageSourceSync` instead, but don't forget to import and link to this project as described above first.
-
-```js
-import ToolbarAndroid from '@react-native-community/toolbar-android';
-import Icon from 'react-native-vector-icons/Ionicons';
-
-const navIcon = Icon.getImageSourceSync('md-arrow-back', 24, 'white');
-const overflowIcon = Icon.getImageSourceSync('md-more', 24, 'white');
-const settingsIcon = Icon.getImageSourceSync('md-settings', 30, 'white');
-const twitterIcon = Icon.getImageSourceSync('logo-twitter', 25, '#4099FF');
-
-function ToolbarView(props) {
-  return (
-    <ToolbarAndroid
-      title="Home"
-      titleColor="white"
-      navIcon={navIcon}
-      onIconClicked={props.navigator.pop}
-      actions={[
-        {
-          title: 'Settings',
-          icon: settingsIcon,
-          show: 'always',
-        },
-        {
-          title: 'Follow me on Twitter',
-          icon: twitterIcon,
-          show: 'ifRoom',
-        },
-      ]}
-      overflowIcon={overflowIcon}
-    />
-  );
 }
 ```
 
@@ -479,7 +384,7 @@ function ToolbarView(props) {
 
 ```js
 import { Text } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@react-native-vector-icons/ionicons';
 
 function ExampleView(props) {
   return (
@@ -490,63 +395,11 @@ function ExampleView(props) {
 }
 ```
 
-## Generating Your Own Icon Set from a CSS File
+## Generating Your Own Icon Package
 
-If you already have an icon font with associated CSS file then you can easily generate a icon set with the `generate-icon` script.
-
-### Example usage:
-
-```
-./node_modules/.bin/generate-icon path/to/styles.css --componentName=MyIcon --fontFamily=myicon > Components/MyIcon.js
-```
-
-### Options
-
-Any flags not listed below, like `--componentName` and `--fontFamily`, will be passed on to the template.
-
-#### `-p`, `--prefix`
-
-CSS selector prefix [default: ".icon-"]
-
-#### `-t`, `--template`
-
-Template in JS template string format [default: "./template/iconSet.tpl"]
-
-For default template please provide `--componentName` and `--fontFamily`.
-
-#### `-o`, `--output`
-
-Save output to file, defaults to STDOUT
+See [CREATE_FONT_PACKAGE.md] to learn how to create your own font packages.
 
 ## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
-
-## Troubleshooting
-
-#### The icons show up as a crossed out box on Android
-
-- Make sure you've copied the font to `android/app/src/main/assets/fonts`.
-- Delete the build folder with `rm -rf android/app/build`.
-- Recompile the project.
-
-#### Red screen with "Unrecognized font family" error on iOS
-
-- Make sure you've added manually the reference of your `.ttf` on your xcodeproj `Resources` folder.
-- Check that the font you are trying to use appears in `Info.plist`, if you've added the whole folder and it's blue in color, then you need to add it to the path.
-- Check that the font is copied in the _Copy Bundle Resources_ in _Build Phases_.
-- Delete the build folder with `rm -rf ios/build`
-- Recompile the project.
-
-#### Android build fails on Windows for no good reason
-
-Both npm and android file hierarchies tend to get very deep and even worse when you combine them. Since Windows file system has a max length, long file name addresses will result in numerous errors including `Execution failed for task ':react-native-vector-icons:processReleaseResources'`. So try to keep the path to your project folder as short as possible.
-
-#### Wrong icons are shown after upgrading this package
-
-You probably didn't update the font files linked to your native project after upgrading. However, this only applies to Android targets since iOS bundles the fonts when building the app (try to clean your build from Xcode if the problem exists). On android you can relink the project or you manually update the fonts. To have them automatically synced use the [gradle approach](https://github.com/oblador/react-native-vector-icons#option-with-gradle-recommended).
-
-#### Some icons are missing after upgrading this package
-
-Sometimes vendors decides to remove some icons from newer releases, this has nothing to do with this package. If you depend on an older version of a font you can add it as a [custom font](#custom-fonts).
 
 ## License
 

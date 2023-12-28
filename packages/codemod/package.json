@@ -58,11 +58,14 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "jscodeshift": "^0.15.1"
+    "jscodeshift": "^0.15.1",
+    "plist": "^3.1.0"
   },
   "devDependencies": {
     "@types/jscodeshift": "^0",
+    "@types/plist": "^3",
     "onchange": "^7.1.0",
+    "react-native-builder-bob": "^0.23.2",
     "typescript": "^5.3.3"
   },
   "engines": {
