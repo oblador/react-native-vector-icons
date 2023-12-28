@@ -7,6 +7,7 @@ import FontAwesome5 from '@react-native-vector-icons/fontawesome5';
 import FontAwesome5Pro from '@react-native-vector-icons/fontawesome5-pro';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
+import createFontelloIconSet from '@react-native-vector-icons/fontello';
 import Fontisto from '@react-native-vector-icons/fontisto';
 import Foundation from '@react-native-vector-icons/foundation';
 import Ionicons from '@react-native-vector-icons/ionicons';
@@ -37,6 +38,14 @@ import MaterialDesignIconsGlyphs from '@react-native-vector-icons/material-desig
 import OcticonsGlyphs from '@react-native-vector-icons/octicons/glyphmaps/Octicons.json';
 import SimpleLineIconsGlyphs from '@react-native-vector-icons/simple-line-icons/glyphmaps/SimpleLineIcons.json';
 import ZocialGlyphs from '@react-native-vector-icons/zocial/glyphmaps/Zocial.json';
+
+import FontelloConfig from '../fontello.config.json';
+
+const Fontello = createFontelloIconSet(FontelloConfig);
+const FontelloGlyphs: Record<string, number> = {};
+FontelloConfig.glyphs.forEach((glyph) => {
+  FontelloGlyphs[glyph.css] = glyph.code;
+});
 
 const groupGlyphNames = (glyphMap: Record<string, number>) => {
   const result: Record<number, string[]> = {};
@@ -95,6 +104,11 @@ const iconSets = [
     component: FontAwesome6Pro,
     glyphNames: groupGlyphNames(FontAwesome6ProGlyphs),
     meta: FontAwesome6ProMeta,
+  },
+  {
+    name: 'Fontello',
+    component: Fontello,
+    glyphNames: groupGlyphNames(FontelloGlyphs),
   },
   {
     name: 'Fontisto',

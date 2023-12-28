@@ -23,6 +23,10 @@ for package in *; do
     git restore README.md > /dev/null || true
   fi
 
+  if [ "$(jq -r '."generator-react-native-vector-icons".customSrc' .yo-rc.json)" == "true" ]; then
+    git restore src > /dev/null || true
+  fi
+
   yo react-native-vector-icons --force --skip-install
 
   cd -

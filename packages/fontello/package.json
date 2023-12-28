@@ -1,7 +1,7 @@
 {
-  "name": "@react-native-vector-icons/ant-design",
+  "name": "@react-native-vector-icons/fontello",
   "version": "0.0.1-alpha.1",
-  "description": "Ant Design font for react native vector icons",
+  "description": "Fontello font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -50,7 +50,7 @@
     "retina",
     "font",
     "react-native-vector-icons-icon",
-    "ant-design"
+    "fontello"
   ],
   "repository": {
     "type": "git",
@@ -72,8 +72,8 @@
     "@react-native-vector-icons/common": "workspace:*"
   },
   "devDependencies": {
-    "@ant-design/icons-svg": "^4.3.1",
     "del-cli": "^5.1.0",
+    "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",
     "typescript": "^5.3.3"
   },
