@@ -1,0 +1,86 @@
+{
+  "name": "@react-native-vector-icons/codemod",
+  "version": "0.0.1",
+  "description": "Tool to help users migrate from react-native-vector-icons to @react-native-vector-icons/*",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "source": "src/index",
+  "bin": {
+    "react-vector-icons-codemod": "./lib/index.js"
+  },
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "scripts": {
+    "clean": "del-cli lib",
+    "prepare": "bob build",
+    "watch": "onchange 'src/**' --initial -- yarn run prepare"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "osx",
+    "windows",
+    "macos",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ui",
+    "icon",
+    "icons",
+    "vector",
+    "retina",
+    "font",
+    "migration"
+  ],
+  "author": {
+    "name": "Joel Arvidsson",
+    "email": "joel@oblador.se"
+  },
+  "homepage": "https://github.com/react-native-vector-icons/react-native-vector-icons",
+  "bugs": {
+    "url": "https://github.com/react-native-vector-icons/react-native-vector-icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/react-native-vector-icons/react-native-vector-icons.git"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "jscodeshift": "^0.15.1"
+  },
+  "devDependencies": {
+    "@types/jscodeshift": "^0",
+    "onchange": "^7.1.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
+    ]
+  },
+  "packageManager": "yarn@4.0.1"
+}
