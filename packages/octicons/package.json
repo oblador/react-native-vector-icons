@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/octicons",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.1",
   "description": "Octicons font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -69,7 +69,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^0"
+    "@react-native-vector-icons/common": "workspace:*"
   },
   "devDependencies": {
     "@primer/octicons": "^19.8.0",
