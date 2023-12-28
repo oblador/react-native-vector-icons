@@ -7,7 +7,7 @@
     "customReadme": true,
     "packageJSON": {
       "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.0.0"
+        "@fortawesome/fontawesome-free": "^5.15.4"
       }
     },
     "buildSteps": {
