@@ -4,6 +4,7 @@
 * Support icomoon
 * MIgration using js-codeshift
 * getImageSync for fontawesome 5/6
+* Export types?
 Expo
 * Has own font loading mechanism
 * Need to see how this will work
