@@ -20,7 +20,7 @@ const imports: [string, string][] = [
   ['react-native-vector-icons/Zocial', '@react-native-vector-icons/zocial'],
 ];
 
-export default (j: JSCodeshift, root: Collection) => {
+export default (j: JSCodeshift, root: Collection, r: (msg: string) => void) => {
   const pkgs = new Set<string>();
 
   root
@@ -36,5 +36,5 @@ export default (j: JSCodeshift, root: Collection) => {
   })
   .toSource();
 
-  return pkgs;
+  pkgs.forEach((pkg) => r(`DEP_FOUND: ${pkg}`));
 };
