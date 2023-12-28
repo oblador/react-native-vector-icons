@@ -15,7 +15,7 @@ interface Data {
   fontFile: string,
   packageJSON: Record<string, Record<string, string>>,
   customReadme?: boolean,
-  customSrc?: string,
+  customSrc?: string | boolean,
   customAssets?: boolean,
   commonPackage?: string,
   buildSteps: {
@@ -92,7 +92,9 @@ export default class extends Generator<Arguments> {
       'tsconfig.json',
     ];
 
-    if (data.customSrc) {
+    if (data.customSrc === true) {
+      // Do nothing
+    } else if (data.customSrc) {
       files.push([data.customSrc, 'src/index.ts']);
     } else {
       files.push('src/index.ts');
@@ -298,6 +300,7 @@ export default class extends Generator<Arguments> {
     }
 
     data.name ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join(' ');
+    data.buildSteps ||= {};
     data.className ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
     data.fontName ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
     data.fontFile ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');

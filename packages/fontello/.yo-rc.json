@@ -1,0 +1,7 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontello",
+    "customReadme": true,
+    "customSrc": true
+  }
+}

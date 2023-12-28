@@ -4181,6 +4181,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@react-native-vector-icons/fontello@workspace:*, @react-native-vector-icons/fontello@workspace:packages/fontello":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/fontello@workspace:packages/fontello"
+  dependencies:
+    "@react-native-vector-icons/common": "workspace:*"
+    del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
+    react-native-builder-bob: "npm:^0.23.2"
+    typescript: "npm:^5.3.3"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@react-native-vector-icons/fontisto@workspace:*, @react-native-vector-icons/fontisto@workspace:packages/fontisto":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontisto@workspace:packages/fontisto"
@@ -6277,6 +6292,7 @@ __metadata:
     "@react-native-vector-icons/fontawesome5-pro": "workspace:*"
     "@react-native-vector-icons/fontawesome6": "workspace:*"
     "@react-native-vector-icons/fontawesome6-pro": "workspace:*"
+    "@react-native-vector-icons/fontello": "workspace:*"
     "@react-native-vector-icons/fontisto": "workspace:*"
     "@react-native-vector-icons/foundation": "workspace:*"
     "@react-native-vector-icons/ionicons": "workspace:*"
