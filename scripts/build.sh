@@ -23,7 +23,7 @@ for package in *; do
     git restore README.md > /dev/null || true
   fi
 
-  yo react-native-vector-icons --force
+  yo react-native-vector-icons --force --skip-install
 
   cd -
 done
