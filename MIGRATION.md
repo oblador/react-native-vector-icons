@@ -23,9 +23,6 @@ Expo
   * getStyledIconSet
 * Major upgrade for all fonts
 * materialcommunityicons now material-design-icons
-* Things to undo
-  * Remove font assets from react-native.config.js
-
 
 # Migration from react-native-vector-icons
 
