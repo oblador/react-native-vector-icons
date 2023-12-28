@@ -1,6 +1,6 @@
 ![Vector Icons for React Native](https://cloud.githubusercontent.com/assets/378279/12009887/33f4ae1c-ac8d-11e5-8666-7a87458753ee.png)
 
-[![Travis](https://img.shields.io/travis/oblador/react-native-vector-icons.svg)](https://travis-ci.org/oblador/react-native-vector-icons) [![npm](https://img.shields.io/npm/v/react-native-vector-icons.svg)](https://npmjs.com/package/react-native-vector-icons) [![npm](https://img.shields.io/npm/dm/react-native-vector-icons.svg)](https://npmjs.com/package/react-native-vector-icons)
+[![Travis](https://img.shields.io/travis/react-native-vector-icons/react-native-vector-icons.svg)](https://travis-ci.org/react-native-vector-icons/react-native-vector-icons) [![npm](https://img.shields.io/npm/v/react-native-vector-icons.svg)](https://npmjs.com/package/react-native-vector-icons) [![npm](https://img.shields.io/npm/dm/react-native-vector-icons.svg)](https://npmjs.com/package/react-native-vector-icons)
 
 # React Native Vector Icons
 
@@ -16,26 +16,22 @@ For the integration of `.svg` files natively, you can explore [`react-native-vec
 
 ## Table of Contents
 
-- [Bundled Icon Sets](#bundled-icon-sets)
+- [Sponsorship](#sponsorship)
+- [Available Icon Sets](#available-icon-sets)
 - [Installation](#installation)
   - [iOS Setup](#ios-setup)
-  - [Android Setup](#android-setup)
   - [macOS Setup](#macos-setup)
   - [Windows Setup](#windows-setup)
   - [React-native-web Setup](#react-native-web-setup)
   - [Web Setup](#web-setup)
-- [Upgrading](#upgrading)
 - [Icon Component](#icon-component)
-- [Icon.Button Component](#iconbutton-component)
 - [Usage as PNG Image/Source Object](#usage-as-png-imagesource-object)
 - [Multi-Style Fonts](#multi-style-fonts)
 - [Custom Fonts](#custom-fonts)
 - [Animation](#animation)
 - [Usage Examples](#usage-examples)
-- [TabBar](#tabbar)
-- [Generating Your Own Icon Set from a CSS File](#generating-your-own-icon-set-from-a-css-file)
-- [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
-- [Troubleshooting](#troubleshooting)
+- [Generating Your Own Icon Package](#generating-your-own-icon-package)
+- [Changelog](https://github.com/react-native-vector-icons/react-native-vector-icons/releases)
 - [License](#license)
 
 ## Sponsorship
@@ -49,7 +45,7 @@ sponsorship plays a pivotal role in materializing these advancements.
 
 ## Available Icon Sets
 
-[Explore all icons](https://oblador.github.io/react-native-vector-icons/).
+[Explore all icons](https://react-native-vector-icons.github.io/react-native-vector-icons/).
 
 RNVI comes with the following supported icons. You can [search NPM](https://www.npmjs.com/search?q=keywords%3Areact-native-vector-icons-icon) for third party icons.
 
@@ -465,7 +461,7 @@ function ExampleView(props) {
 
 See [CREATE_FONT_PACKAGE.md] to learn how to create your own font packages.
 
-## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
+## [Changelog](https://github.com/react-native-vector-icons/react-native-vector-icons/releases)
 
 ## License
 
