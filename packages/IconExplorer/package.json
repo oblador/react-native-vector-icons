@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-vector-icons/common": "workspace:*",
     "@react-native-vector-icons/ant-design": "workspace:*",
     "@react-native-vector-icons/entypo": "workspace:*",
     "@react-native-vector-icons/evil-icons": "workspace:*",
@@ -18,6 +19,7 @@
     "@react-native-vector-icons/fontawesome5-pro": "workspace:*",
     "@react-native-vector-icons/fontawesome6": "workspace:*",
     "@react-native-vector-icons/fontawesome6-pro": "workspace:*",
+    "@react-native-vector-icons/fontello": "workspace:*",
     "@react-native-vector-icons/fontisto": "workspace:*",
     "@react-native-vector-icons/foundation": "workspace:*",
     "@react-native-vector-icons/ionicons": "workspace:*",

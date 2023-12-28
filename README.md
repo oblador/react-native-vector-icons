@@ -72,12 +72,21 @@ FIXME: update all of these
 
 ## Installation
 
+1. Install the common package
+   ```sh
+   npm install --save @react-native-vector-icons/common
+   ```
 1. Install the packages for the icons you want use
    ```sh
    npm install --save @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evilicons
    ```
-2. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions.
-3. If you're planning to use FontAwesome 5 or 6 icons, refer to these guides: [FontAwesome 5](packages/fontawesome5/README.md) | [FontAwesome 6](packages/fontawesome6/README.md)
+1. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions.
+1. If you are using one of the following fonts refer to their guides for further instructions
+  * [FontAwesome 5](packages/fontawesome5/README.md)
+  * [FontAwesome 5 Pro](packages/fontawesome5-pro/README.md)
+  * [FontAwesome 6](packages/fontawesome6/README.md)
+  * [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
+  * [Fontello](packages/fontello/README.md)
 
 ### iOS Setup
 
@@ -299,19 +308,6 @@ name.
 import { createIconSet } from 'react-native-vector-icons';
 const glyphMap = { 'icon-name': 1234, test: '∆' };
 const Icon = createIconSet(glyphMap, 'FontName', 'font-name.ttf');
-```
-
-### `createIconSetFromFontello(config[, fontFamily[, fontFile]])`
-
-Convenience method to create a custom font based on a
-[fontello](http://fontello.com) config file. Don't forget to import the font as
-described above and drop the `config.json` somewhere convenient in your
-project.
-
-```js
-import { createIconSetFromFontello } from 'react-native-vector-icons';
-import fontelloConfig from './config.json';
-const Icon = createIconSetFromFontello(fontelloConfig);
 ```
 
 ### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
