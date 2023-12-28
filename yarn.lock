@@ -3938,12 +3938,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-vector-icons/ant-design@npm:^0, @react-native-vector-icons/ant-design@workspace:packages/ant-design":
+"@react-native-vector-icons/ant-design@workspace:*, @react-native-vector-icons/ant-design@workspace:packages/ant-design":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/ant-design@workspace:packages/ant-design"
   dependencies:
     "@ant-design/icons-svg": "npm:^4.3.1"
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -3969,7 +3969,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/common@npm:^0, @react-native-vector-icons/common@workspace:packages/common":
+"@react-native-vector-icons/common@workspace:*, @react-native-vector-icons/common@workspace:packages/common":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/common@workspace:packages/common"
   dependencies:
@@ -4033,12 +4033,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/entypo@npm:^0, @react-native-vector-icons/entypo@workspace:packages/entypo":
+"@react-native-vector-icons/entypo@workspace:*, @react-native-vector-icons/entypo@workspace:packages/entypo":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/entypo@workspace:packages/entypo"
   dependencies:
     "@entypo-icons/core": "npm:^1.0.1"
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -4048,11 +4048,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/evil-icons@npm:^0, @react-native-vector-icons/evil-icons@workspace:packages/evil-icons":
+"@react-native-vector-icons/evil-icons@workspace:*, @react-native-vector-icons/evil-icons@workspace:packages/evil-icons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/evil-icons@workspace:packages/evil-icons"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     evil-icons: "npm:^1.10.1"
     react-native-builder-bob: "npm:^0.23.2"
@@ -4063,11 +4063,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/feather@npm:^0, @react-native-vector-icons/feather@workspace:packages/feather":
+"@react-native-vector-icons/feather@workspace:*, @react-native-vector-icons/feather@workspace:packages/feather":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/feather@workspace:packages/feather"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     feather-icons: "npm:^4.29.1"
     react-native-builder-bob: "npm:^0.23.2"
@@ -4082,7 +4082,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome-common@workspace:packages/fontawesome-common"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
@@ -4102,11 +4102,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/fontawesome5-pro@npm:^0, @react-native-vector-icons/fontawesome5-pro@workspace:packages/fontawesome5-pro":
+"@react-native-vector-icons/fontawesome5-pro@workspace:*, @react-native-vector-icons/fontawesome5-pro@workspace:packages/fontawesome5-pro":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome5-pro@workspace:packages/fontawesome5-pro"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -4116,12 +4116,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/fontawesome5@npm:^0, @react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5":
+"@react-native-vector-icons/fontawesome5@workspace:*, @react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome5@workspace:packages/fontawesome5"
   dependencies:
     "@fortawesome/fontawesome-free": "npm:^5.15.4"
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -4131,11 +4131,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/fontawesome6-pro@npm:^0, @react-native-vector-icons/fontawesome6-pro@workspace:packages/fontawesome6-pro":
+"@react-native-vector-icons/fontawesome6-pro@workspace:*, @react-native-vector-icons/fontawesome6-pro@workspace:packages/fontawesome6-pro":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome6-pro@workspace:packages/fontawesome6-pro"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -4145,12 +4145,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/fontawesome6@npm:^0, @react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6":
+"@react-native-vector-icons/fontawesome6@workspace:*, @react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6"
   dependencies:
     "@fortawesome/fontawesome-free": "npm:^6.5.1"
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -4160,11 +4160,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/fontawesome@npm:^0, @react-native-vector-icons/fontawesome@workspace:packages/fontawesome":
+"@react-native-vector-icons/fontawesome@workspace:*, @react-native-vector-icons/fontawesome@workspace:packages/fontawesome":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome@workspace:packages/fontawesome"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     font-awesome: "npm:^4.7.0"
     react-native-builder-bob: "npm:^0.23.2"
@@ -4181,11 +4181,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/fontisto@npm:^0, @react-native-vector-icons/fontisto@workspace:packages/fontisto":
+"@react-native-vector-icons/fontisto@workspace:*, @react-native-vector-icons/fontisto@workspace:packages/fontisto":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontisto@workspace:packages/fontisto"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     fontisto: "npm:^3.0.4"
     react-native-builder-bob: "npm:^0.23.2"
@@ -4196,11 +4196,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/foundation@npm:^0, @react-native-vector-icons/foundation@workspace:packages/foundation":
+"@react-native-vector-icons/foundation@workspace:*, @react-native-vector-icons/foundation@workspace:packages/foundation":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/foundation@workspace:packages/foundation"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     foundation-icon-fonts: "npm:^0.1.1"
     react-native-builder-bob: "npm:^0.23.2"
@@ -4211,11 +4211,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/ionicons@npm:^0, @react-native-vector-icons/ionicons@workspace:packages/ionicons":
+"@react-native-vector-icons/ionicons@workspace:*, @react-native-vector-icons/ionicons@workspace:packages/ionicons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/ionicons@workspace:packages/ionicons"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     ionicons: "npm:^7.2.2"
     react-native-builder-bob: "npm:^0.23.2"
@@ -4226,12 +4226,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/material-design-icons@npm:^0, @react-native-vector-icons/material-design-icons@workspace:packages/material-design-icons":
+"@react-native-vector-icons/material-design-icons@workspace:*, @react-native-vector-icons/material-design-icons@workspace:packages/material-design-icons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/material-design-icons@workspace:packages/material-design-icons"
   dependencies:
     "@mdi/font": "npm:^7.3.67"
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -4241,12 +4241,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/material-icons@npm:^0, @react-native-vector-icons/material-icons@workspace:packages/material-icons":
+"@react-native-vector-icons/material-icons@workspace:*, @react-native-vector-icons/material-icons@workspace:packages/material-icons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/material-icons@workspace:packages/material-icons"
   dependencies:
     "@mdi/font": "npm:^7.3.67"
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -4256,12 +4256,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/octicons@npm:^0, @react-native-vector-icons/octicons@workspace:packages/octicons":
+"@react-native-vector-icons/octicons@workspace:*, @react-native-vector-icons/octicons@workspace:packages/octicons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/octicons@workspace:packages/octicons"
   dependencies:
     "@primer/octicons": "npm:^19.8.0"
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -4271,11 +4271,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/simple-line-icons@npm:^0, @react-native-vector-icons/simple-line-icons@workspace:packages/simple-line-icons":
+"@react-native-vector-icons/simple-line-icons@workspace:*, @react-native-vector-icons/simple-line-icons@workspace:packages/simple-line-icons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/simple-line-icons@workspace:packages/simple-line-icons"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     simple-line-icons: "npm:^2.5.5"
@@ -4286,11 +4286,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/zocial@npm:^0, @react-native-vector-icons/zocial@workspace:packages/zocial":
+"@react-native-vector-icons/zocial@workspace:*, @react-native-vector-icons/zocial@workspace:packages/zocial":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/zocial@workspace:packages/zocial"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0"
+    "@react-native-vector-icons/common": "workspace:*"
     css-social-buttons: "npm:^1.1.1"
     del-cli: "npm:^5.1.0"
     react-native-builder-bob: "npm:^0.23.2"
@@ -6268,24 +6268,23 @@ __metadata:
     "@babel/core": "npm:^7.23.6"
     "@babel/preset-env": "npm:^7.23.6"
     "@babel/runtime": "npm:^7.23.6"
-    "@react-native-vector-icons/ant-design": "npm:^0"
-    "@react-native-vector-icons/common": "npm:^0"
-    "@react-native-vector-icons/entypo": "npm:^0"
-    "@react-native-vector-icons/evil-icons": "npm:^0"
-    "@react-native-vector-icons/feather": "npm:^0"
-    "@react-native-vector-icons/fontawesome": "npm:^0"
-    "@react-native-vector-icons/fontawesome5": "npm:^0"
-    "@react-native-vector-icons/fontawesome5-pro": "npm:^0"
-    "@react-native-vector-icons/fontawesome6": "npm:^0"
-    "@react-native-vector-icons/fontawesome6-pro": "npm:^0"
-    "@react-native-vector-icons/fontisto": "npm:^0"
-    "@react-native-vector-icons/foundation": "npm:^0"
-    "@react-native-vector-icons/ionicons": "npm:^0"
-    "@react-native-vector-icons/material-design-icons": "npm:^0"
-    "@react-native-vector-icons/material-icons": "npm:^0"
-    "@react-native-vector-icons/octicons": "npm:^0"
-    "@react-native-vector-icons/simple-line-icons": "npm:^0"
-    "@react-native-vector-icons/zocial": "npm:^0"
+    "@react-native-vector-icons/ant-design": "workspace:*"
+    "@react-native-vector-icons/entypo": "workspace:*"
+    "@react-native-vector-icons/evil-icons": "workspace:*"
+    "@react-native-vector-icons/feather": "workspace:*"
+    "@react-native-vector-icons/fontawesome": "workspace:*"
+    "@react-native-vector-icons/fontawesome5": "workspace:*"
+    "@react-native-vector-icons/fontawesome5-pro": "workspace:*"
+    "@react-native-vector-icons/fontawesome6": "workspace:*"
+    "@react-native-vector-icons/fontawesome6-pro": "workspace:*"
+    "@react-native-vector-icons/fontisto": "workspace:*"
+    "@react-native-vector-icons/foundation": "workspace:*"
+    "@react-native-vector-icons/ionicons": "workspace:*"
+    "@react-native-vector-icons/material-design-icons": "workspace:*"
+    "@react-native-vector-icons/material-icons": "workspace:*"
+    "@react-native-vector-icons/octicons": "workspace:*"
+    "@react-native-vector-icons/simple-line-icons": "workspace:*"
+    "@react-native-vector-icons/zocial": "workspace:*"
     "@react-native/babel-preset": "npm:^0.73.18"
     "@react-native/eslint-config": "npm:^0.73.1"
     "@react-native/metro-config": "npm:^0.73.2"
@@ -21411,11 +21410,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.3.3#optional!builtin<compat/typescript>":
   version: 5.3.3
-  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=29ae49"
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: e22df47df9b2b2f2617b8bf511a29aea3d177f9f7a0756818230a76b01cbd7da988bf55f9463aaa1a4c1ff90b80f8dc5676460d4e9dfc010572cbba59b822b0c
+  checksum: 1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
   languageName: node
   linkType: hard
 

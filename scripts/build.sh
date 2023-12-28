@@ -27,3 +27,6 @@ for package in *; do
 
   cd -
 done
+
+cd -
+yarn
