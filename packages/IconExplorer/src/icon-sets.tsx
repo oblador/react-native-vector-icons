@@ -8,6 +8,7 @@ import FontAwesome5Pro from '@react-native-vector-icons/fontawesome5-pro';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
 import createFontelloIconSet from '@react-native-vector-icons/fontello';
+import createIcoMoonIconSet from '@react-native-vector-icons/icomoon';
 import Fontisto from '@react-native-vector-icons/fontisto';
 import Foundation from '@react-native-vector-icons/foundation';
 import Ionicons from '@react-native-vector-icons/ionicons';
@@ -40,11 +41,20 @@ import SimpleLineIconsGlyphs from '@react-native-vector-icons/simple-line-icons/
 import ZocialGlyphs from '@react-native-vector-icons/zocial/glyphmaps/Zocial.json';
 
 import FontelloConfig from '../fontello.config.json';
+import IcoMoonConfig from '../icomoon.config.json';
 
 const Fontello = createFontelloIconSet(FontelloConfig);
 const FontelloGlyphs: Record<string, number> = {};
 FontelloConfig.glyphs.forEach((glyph) => {
   FontelloGlyphs[glyph.css] = glyph.code;
+});
+
+const IcoMoon = createIcoMoonIconSet(IcoMoonConfig);
+const IcoMoonGlyphs: Record<string, number> = {};
+IcoMoonConfig.icons.forEach((icon) => {
+  icon.properties.name.split(/\s*,\s*/g).forEach((name) => {
+    IcoMoonGlyphs[name] = icon.properties.code;
+  });
 });
 
 const groupGlyphNames = (glyphMap: Record<string, number>) => {
@@ -119,6 +129,11 @@ const iconSets = [
     name: 'Foundation',
     component: Foundation,
     glyphNames: groupGlyphNames(FoundationGlyphs),
+  },
+  {
+    name: 'IcoMoon',
+    component: IcoMoon,
+    glyphNames: groupGlyphNames(IcoMoonGlyphs),
   },
   {
     name: 'Ionicons',

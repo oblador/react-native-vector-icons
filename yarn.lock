@@ -4226,6 +4226,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@react-native-vector-icons/icomoon@workspace:*, @react-native-vector-icons/icomoon@workspace:packages/icomoon":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/icomoon@workspace:packages/icomoon"
+  dependencies:
+    "@react-native-vector-icons/common": "workspace:*"
+    del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
+    react-native-builder-bob: "npm:^0.23.2"
+    typescript: "npm:^5.3.3"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@react-native-vector-icons/ionicons@workspace:*, @react-native-vector-icons/ionicons@workspace:packages/ionicons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/ionicons@workspace:packages/ionicons"
@@ -6284,6 +6299,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.23.6"
     "@babel/runtime": "npm:^7.23.6"
     "@react-native-vector-icons/ant-design": "workspace:*"
+    "@react-native-vector-icons/common": "workspace:*"
     "@react-native-vector-icons/entypo": "workspace:*"
     "@react-native-vector-icons/evil-icons": "workspace:*"
     "@react-native-vector-icons/feather": "workspace:*"
@@ -6295,6 +6311,7 @@ __metadata:
     "@react-native-vector-icons/fontello": "workspace:*"
     "@react-native-vector-icons/fontisto": "workspace:*"
     "@react-native-vector-icons/foundation": "workspace:*"
+    "@react-native-vector-icons/icomoon": "workspace:*"
     "@react-native-vector-icons/ionicons": "workspace:*"
     "@react-native-vector-icons/material-design-icons": "workspace:*"
     "@react-native-vector-icons/material-icons": "workspace:*"

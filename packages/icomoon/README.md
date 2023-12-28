@@ -1,13 +1,13 @@
-# React Native Vector Icons - Fontello
+# React Native Vector Icons - IcoMoon
 
-React Native Vector Icons font package to support using custom fonts created with [Fontello](https://fontello.com)
+React Native Vector Icons font package to support [IcoMoon fonts](https://icomoon.io/app)
 
 See the [React Native Vector Icons README](../../README.md) for more details.
 
 ## Installation
 
 ```sh
-npm install @react-native-vector-icons/fontello
+npm install @react-native-vector-icons/icomoon
 ```
 
 ## Usage
@@ -22,9 +22,9 @@ yarn instal @react-native-vector-icons/fontello
 4. Create the component in your project and use it
 
 ```js
-import createIconSet from '@react-native-vector-icons/fontello';
-import fontelloConfig from './config.json';
-const Icon = createIconSet(fontelloConfig);
+import createIconSet from '@react-native-vector-icons/icomoon';
+import icoMoonConfig from './IcoMoon-Free.json';
+const Icon = createIconSet(icoMoonConfig);
 
 cont icon = <Icon name="comments" />;
 ```
@@ -32,9 +32,9 @@ cont icon = <Icon name="comments" />;
 If you want to customise the font postscript name and filename you can pass extra arguments.
 
 ```js
-import createIconSet from '@react-native-vector-icons/fontello';
-import fontelloConfig from './config.json';
-const Icon = createIconSet(fontelloConfig, 'Font Family', 'FontFamily.ttf');
+import createIconSet from '@react-native-vector-icons/icomoon';
+import icoMoonConfig from './IcoMoon-Free.json';
+const Icon = createIconSet(icoMoonConfig, 'Font Family', 'FontFamily.ttf');
 ```
 
 ## Contributing

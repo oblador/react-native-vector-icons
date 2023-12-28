@@ -295,121 +295,32 @@ All static methods from `Icon` is supported by multi-styled fonts.
 
 ## Custom Fonts
 
-### `createIconSet(glyphMap, fontFamily[, fontFile])`
+The best approach is to use our icon generator to create your own icon package.
 
-Returns your own custom font based on the `glyphMap` where the key is the icon
+See [CREATE_FONT_PACKAGE.md] to learn how to create your own font packages.
+
+You can also use `createIconSet(glyphMap, fontFamily[, fontFile])` directly in your project. This
+returns your own custom font based on the `glyphMap` where the key is the icon
 name and the value is either a UTF-8 character or it's character code.
-`fontFamily` is the name of the font **NOT** the filename. Open the font in
+`fontFamily` is the name of the postscript font **NOT** the filename. Open the font in
 Font Book.app or similar to learn the name. Optionally pass the third
 `fontFile` argument for android support, it should be the custom font file
 name.
 
 ```js
-import { createIconSet } from 'react-native-vector-icons';
+import { createIconSet } from '@react-native-vector-icons/common';
 const glyphMap = { 'icon-name': 1234, test: '∆' };
 const Icon = createIconSet(glyphMap, 'FontName', 'font-name.ttf');
 ```
 
-### `createIconSetFromIcoMoon(config[, fontFamily[, fontFile]])`
-
-```js
-import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
-import icoMoonConfig from './selection.json';
-const Icon = createIconSetFromIcoMoon(
-  icoMoonConfig,
-  'LineAwesome',
-  'line-awesome.ttf'
-);
-```
-
-Make sure you're using the _Download_ option in
-[IcoMoon](https://icomoon.io/app), and use the `.json` file that's included in
-the `.zip` you've downloaded. You'll also need to import the `.ttf` font file
-into your project, following the instructions above.
-
-### `createMultiStyleIconSet(styles [, options])`
-
-```jsx
-import { createMultiStyleIconSet } from 'react-native-vector-icons';
-
-/*
- * This is just example code, you are free to
- * design your glyphmap and styles to your liking
- */
-
-import glyphmap from './glyphmap.json';
-/*
- * glyphmap = {
- *   "style1": [
- *     "hello",
- *     "world"
- *   ],
- *   "style2": [
- *     "foo",
- *     "bar"
- *   ]
- * }
- */
-
-const glyphKeys = Object.keys(glyphmap); /* ["style1", "style2"] */
-const options = {
-  defaultStyle: 'style1',
-  glyphValidator: (name, style) => glyphKeys.indexOf(name) !== -1,
-  fallbackFamily: (name) => {
-    for (let i = 0; i < glyphKeys.length; i++) {
-      const style = glyphKeys[i];
-      if (glyphmap[style].indexOf(name) !== -1) {
-        return style;
-      }
-    }
-
-    /* Always return some family */
-    return glyphKeys[0];
+You should place the font ttf file into `rnvi-fonts`. You can customise this location by adding the following snippet to your package.json
+```json
+{
+  "reactNativeVectorIcons": {
+    "fontDir": "src/assets/fonts"
   }
-};
-
-/*
- * The styles object consits of keys, which will be
- * used as the styles later, and objects which are
- * used as style objects for the font. The style
- * should have unique characteristics for each font
- * in order to ensure that the right one will be
- * chosen. FontAwesome 5 uses font weight since
- * 5.7.0 in order to diffirentiate the styles but
- * other properties (like fontFamily) can be used.
- * It's just a standard RN style object.
- */
-const styles = {
-  style1: {
-    fontWeight: '700'
-  },
-  style2: {
-    fontWeight: '100'
-  }
-};
-
-const Icon = createMultiStyleIconSet(styles, options);
-
-/* Uses default style (style1) */
-<Icon name={'hello'} />
-<Icon name={'world'} style1 />
-/* Default style is style1 but this will fall back to style2 */
-<Icon name={'foo'} />
-/* This will also fall back to style2 */
-<Icon name={'foo'} style1 />
-/* Regular use of style2 */
-<Icon name={'bar'} style2 />
-```
-
-| option         | Description                                                                                                                                                                                | default                            |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
-| defaultStyle   | The name of the style to be used if no style is supplied during rendering.                                                                                                                 | `Object.keys(styles)[0]`           |
-| fallbackFamily | Function for selecting a family if a glyph is not available. The function should accept the `name` of the glyph as a parameter. Returns the name if the family.                            | `(name) => Object.keys(styles)[0]` |
-| glyphValidator | Function for validating that a glyph is available for a chosen style. It has `name` and `style` as parameters, in that order. Returns `true` if the glyph is valid or `false` if it's not. | `(name, style) => true`            |
-
-#### iOS
-
-You have to manually make a reference of your `.ttf` on your xcodeproj `Resources` folder and in `Info.plist`.
+}
+  ```
 
 ## Animation
 
@@ -452,10 +363,6 @@ function ExampleView(props) {
   );
 }
 ```
-
-## Generating Your Own Icon Package
-
-See [CREATE_FONT_PACKAGE.md] to learn how to create your own font packages.
 
 ## [Changelog](https://github.com/react-native-vector-icons/react-native-vector-icons/releases)
 
