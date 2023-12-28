@@ -1,6 +1,5 @@
 # TODO
 * Explore better android font loading
-* Support fontello
 * Support icomoon
 * getImageSync for fontawesome 5/6
 * Export types?
