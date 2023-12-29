@@ -9,4 +9,3 @@ import glyphMap from '../glyphmaps/MaterialDesignIcons.json';
 const Icon = createIconSet(glyphMap, 'MaterialDesignIcons', 'MaterialDesignIcons.ttf');
 
 export default Icon;
-export const { getImageSource, getImageSourceSync } = Icon;

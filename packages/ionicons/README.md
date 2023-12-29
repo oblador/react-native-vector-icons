@@ -27,7 +27,3 @@ See the [contributing guide](../../CONTRIBUTING.md) to learn how to contribute t
 ## License
 
 MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

@@ -18,6 +18,7 @@ interface Data {
   customSrc?: string | boolean,
   customAssets?: boolean,
   commonPackage?: string,
+  meta: Record<string, object>,
   buildSteps: {
     preScript?: {
       script: string,
@@ -95,7 +96,7 @@ export default class extends Generator<Arguments> {
     if (data.customSrc === true) {
       // Do nothing
     } else if (data.customSrc) {
-      files.push([data.customSrc, 'src/index.ts']);
+      files.push([data.customSrc, data.customSrc.endsWith('.tsx') ? 'src/index.tsx' : 'src/index.ts']);
     } else {
       files.push('src/index.ts');
     }

@@ -3,8 +3,29 @@
     "packageName": "fontawesome5",
     "className": "FontAwesome5",
     "commonPackage": "fontawesome-common/fontawesome5",
-    "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.ts",
+    "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.tsx",
     "customReadme": true,
+    "meta": {
+      "defaultStyleName": "regular",
+      "styleNames": ["regular", "solid", "brand"],
+      "styles": {
+        "regular": {
+          "family": "FontAwesome5-Regular",
+          "name": "FontAwesome5_Regular.ttf",
+          "weight": 400
+        },
+        "solid": {
+          "family": "FontAwesome5-Solid",
+          "name": "FontAwesome5_Solid.ttf",
+          "weight": 900
+        },
+        "brand": {
+          "family": "FontAwesome5Brands-Regular",
+          "name": "FontAwesome5_Brands.ttf",
+          "weight": 400
+        }
+      }
+    },
     "packageJSON": {
       "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.15.4"

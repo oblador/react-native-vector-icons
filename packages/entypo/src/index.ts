@@ -9,4 +9,3 @@ import glyphMap from '../glyphmaps/Entypo.json';
 const Icon = createIconSet(glyphMap, 'Entypo', 'Entypo.ttf');
 
 export default Icon;
-export const { getImageSource, getImageSourceSync } = Icon;

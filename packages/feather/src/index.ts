@@ -9,4 +9,3 @@ import glyphMap from '../glyphmaps/Feather.json';
 const Icon = createIconSet(glyphMap, 'Feather', 'Feather.ttf');
 
 export default Icon;
-export const { getImageSource, getImageSourceSync } = Icon;

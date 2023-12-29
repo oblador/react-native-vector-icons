@@ -9,4 +9,3 @@ import glyphMap from '../glyphmaps/Fontisto.json';
 const Icon = createIconSet(glyphMap, 'Fontisto', 'Fontisto.ttf');
 
 export default Icon;
-export const { getImageSource, getImageSourceSync } = Icon;
