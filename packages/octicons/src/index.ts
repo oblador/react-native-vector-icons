@@ -9,4 +9,3 @@ import glyphMap from '../glyphmaps/Octicons.json';
 const Icon = createIconSet(glyphMap, 'Octicons', 'Octicons.ttf');
 
 export default Icon;
-export const { getImageSource, getImageSourceSync } = Icon;

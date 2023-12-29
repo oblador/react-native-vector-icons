@@ -2,55 +2,6 @@
   "name": "@react-native-vector-icons/fontawesome-common",
   "version": "0.0.1-alpha.1",
   "description": "Fontawesome 5 & 6 Pro  Common library for react native vector icons",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "exports": {
-    ".": {
-      "import": "./lib/module/index.js",
-      "require": "./lib/commonjs/index.js",
-      "types": "./lib/typescript/src/index.d.ts"
-    },
-    "./fontawesome5": {
-      "import": "./lib/module/fontawesome5.js",
-      "require": "./lib/commonjs/fontawesome5.js",
-      "types": "./lib/typescript/src/fontawesome5.d.ts"
-    },
-    "./fontawesome5-pro": {
-      "import": "./lib/module/fontawesome5-pro.js",
-      "require": "./lib/commonjs/fontawesome5-pro.js",
-      "types": "./lib/typescript/src/fontawesome5-pro.d.ts"
-    },
-    "./fontawesome6": {
-      "import": "./lib/module/fontawesome6.js",
-      "require": "./lib/commonjs/fontawesome6.js",
-      "types": "./lib/typescript/src/fontawesome6.d.ts"
-    },
-    "./fontawesome6-pro": {
-      "import": "./lib/module/fontawesome6-pro.js",
-      "require": "./lib/commonjs/fontawesome6-pro.js",
-      "types": "./lib/typescript/src/fontawesome6-pro.d.ts"
-    }
-  },
-  "types": "lib/typescript/src/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "lib/typescript/index.d.ts"
-      ],
-      "fontawesome5": [
-        "lib/typescript/src/fontawesome5.d.ts"
-      ],
-      "fontawesome5-pro": [
-        "lib/typescript/src/fontawesome5-pro.d.ts"
-      ],
-      "fontawesome6": [
-        "lib/typescript/src/fontawesome6.d.ts"
-      ],
-      "fontawesome6-pro": [
-        "lib/typescript/src/fontawesome6-pro.d.ts"
-      ]
-    }
-  },
   "react-native": "src/index",
   "source": "src/index",
   "files": [
@@ -74,9 +25,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "clean": "del-cli android/build ios/build lib",
-    "prepare": "bob build",
-    "watch": "onchange 'src/**' --initial -- yarn run prepare"
+    "clean": "del-cli android/build ios/build lib"
   },
   "keywords": [
     "react-native",
@@ -118,35 +67,10 @@
   },
   "devDependencies": {
     "del-cli": "^5.1.0",
-    "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.23.2",
-    "turbo": "^1.11.2",
     "typescript": "^5.3.3"
-  },
-  "peerDependencies": {
-    "@react-native-vector-icons/fontawesome5": "*",
-    "@react-native-vector-icons/fontawesome5-pro": "*",
-    "@react-native-vector-icons/fontawesome6": "*",
-    "@react-native-vector-icons/fontawesome6-pro": "*",
-    "react": "*",
-    "react-native": "*"
   },
   "engines": {
     "node": ">= 18.0.0"
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.json"
-        }
-      ]
-    ]
   },
   "packageManager": "yarn@4.0.1",
   "bin": {

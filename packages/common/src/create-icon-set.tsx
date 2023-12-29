@@ -11,7 +11,6 @@ import {
 
 import ensureNativeModuleAvailable from './ensure-native-module-available';
 import createIconSourceCache from './create-icon-source-cache';
-// import createIconButtonComponent from './icon-button';
 import NativeIconAPI from './NativeVectorIcons';
 
 export const DEFAULT_ICON_SIZE = 12;
@@ -81,7 +80,6 @@ export const createIconSet = <GM extends Record<string, number>>(
       allowFontScaling,
     };
 
-    // TODO: Why do we disable selectability?
     return (
       <Text ref={innerRef} selectable={false} {...newProps}>
         {glyph}
@@ -98,7 +96,7 @@ export const createIconSet = <GM extends Record<string, number>>(
   const getImageSourceSync = (
     name: keyof GM,
     size = DEFAULT_ICON_SIZE,
-    color = DEFAULT_ICON_COLOR
+    color: TextStyle['color'] = DEFAULT_ICON_COLOR
   ) => {
     ensureNativeModuleAvailable();
 
@@ -131,7 +129,7 @@ export const createIconSet = <GM extends Record<string, number>>(
   const getImageSource = async (
     name: keyof GM,
     size = DEFAULT_ICON_SIZE,
-    color = DEFAULT_ICON_COLOR
+    color: TextStyle['color'] = DEFAULT_ICON_COLOR
   ) => {
     ensureNativeModuleAvailable();
 

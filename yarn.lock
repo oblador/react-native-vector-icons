@@ -3945,6 +3945,7 @@ __metadata:
     "@ant-design/icons-svg": "npm:^4.3.1"
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4040,6 +4041,7 @@ __metadata:
     "@entypo-icons/core": "npm:^1.0.1"
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4055,6 +4057,7 @@ __metadata:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     evil-icons: "npm:^1.10.1"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4070,6 +4073,7 @@ __metadata:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     feather-icons: "npm:^4.29.1"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4084,17 +4088,7 @@ __metadata:
   dependencies:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
-    onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.23.2"
-    turbo: "npm:^1.11.2"
     typescript: "npm:^5.3.3"
-  peerDependencies:
-    "@react-native-vector-icons/fontawesome5": "*"
-    "@react-native-vector-icons/fontawesome5-pro": "*"
-    "@react-native-vector-icons/fontawesome6": "*"
-    "@react-native-vector-icons/fontawesome6-pro": "*"
-    react: "*"
-    react-native: "*"
   bin:
     fa-upgrade.sh: ./bin/fa-upgrade.sh
     fa-upgrade5.sh: ./bin/fa-upgrade5.sh
@@ -4108,6 +4102,7 @@ __metadata:
   dependencies:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4123,6 +4118,7 @@ __metadata:
     "@fortawesome/fontawesome-free": "npm:^5.15.4"
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4137,6 +4133,7 @@ __metadata:
   dependencies:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4152,6 +4149,7 @@ __metadata:
     "@fortawesome/fontawesome-free": "npm:^6.5.1"
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4167,6 +4165,7 @@ __metadata:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     font-awesome: "npm:^4.7.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4203,6 +4202,7 @@ __metadata:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     fontisto: "npm:^3.0.4"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4218,6 +4218,7 @@ __metadata:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     foundation-icon-fonts: "npm:^0.1.1"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4248,6 +4249,7 @@ __metadata:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
     ionicons: "npm:^7.2.2"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4263,6 +4265,7 @@ __metadata:
     "@mdi/font": "npm:^7.3.67"
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4278,6 +4281,7 @@ __metadata:
     "@mdi/font": "npm:^7.3.67"
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4293,6 +4297,7 @@ __metadata:
     "@primer/octicons": "npm:^19.8.0"
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
@@ -4307,6 +4312,7 @@ __metadata:
   dependencies:
     "@react-native-vector-icons/common": "workspace:*"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     simple-line-icons: "npm:^2.5.5"
     typescript: "npm:^5.3.3"
@@ -4323,6 +4329,7 @@ __metadata:
     "@react-native-vector-icons/common": "workspace:*"
     css-social-buttons: "npm:^1.1.1"
     del-cli: "npm:^5.1.0"
+    onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   peerDependencies:

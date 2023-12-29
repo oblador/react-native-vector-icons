@@ -3,8 +3,64 @@
     "packageName": "fontawesome6-pro",
     "className": "FontAwesome6Pro",
     "commonPackage": "fontawesome-common/fontawesome6-pro",
-    "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.ts",
+    "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.tsx",
     "customReadme": true,
+    "meta": {
+      "defaultStyleName": "regular",
+      "styleNames": ["thin", "light", "regular", "solid", "sharpThin", "sharpLight", "sharp", "sharpSolid", "duotone", "brand"],
+      "styles": {
+        "thin": {
+          "family": "FontAwesome6Pro-Thin",
+          "name": "FontAwesome6_Pro_Thin.ttf",
+          "weight": 100
+        },
+        "light": {
+          "family": "FontAwesome6Pro-Light",
+          "name": "FontAwesome6_Pro_Light.ttf",
+          "weight": 300
+        },
+        "regular": {
+          "family": "FontAwesome6Pro-Regular",
+          "name": "FontAwesome6_Pro_Regular.ttf",
+          "weight": 400
+        },
+        "solid": {
+          "family": "FontAwesome6Pro-Solid",
+          "name": "FontAwesome6_Pro_Solid.ttf",
+          "weight": 900
+        },
+        "sharpThin": {
+          "family": "FontAwesome6Sharp-Thin",
+          "name": "FontAwesome6_Pro_Sharp_Thin.ttf",
+          "weight": 100
+        },
+        "sharpLight": {
+          "family": "FontAwesome6Sharp-Light",
+          "name": "FontAwesome6_Pro_Sharp_Light.ttf",
+          "weight": 300
+        },
+        "sharp": {
+          "family": "FontAwesome6Sharp-Regular",
+          "name": "FontAwesome6_Pro_Sharp_Regular.ttf",
+          "weight": 400
+        },
+        "sharpSolid": {
+          "family": "FontAwesome6Sharp-Solid",
+          "name": "FontAwesome6_Pro_Sharp_Solid.ttf",
+          "weight": 900
+        },
+        "duotone": {
+          "family": "FontAwesome6Duotone-Solid",
+          "name": "FontAwesome6_Pro_Duotone.ttf",
+          "weight": 900
+        },
+        "brand": {
+          "family": "FontAwesome6Brands-Regular",
+          "name": "FontAwesome6_Pro_Brands.ttf",
+          "weight": 400
+        }
+      }
+    },
     "buildSteps": {
       "preScript": {
         "script": "../fontawesome-common/scripts/fetch-pro.sh 6"
