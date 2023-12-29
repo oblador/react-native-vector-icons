@@ -9,4 +9,3 @@ import glyphMap from '../glyphmaps/AntDesign.json';
 const Icon = createIconSet(glyphMap, 'AntDesign', 'AntDesign.ttf');
 
 export default Icon;
-export const { getImageSource, getImageSourceSync } = Icon;

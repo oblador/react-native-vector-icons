@@ -9,4 +9,3 @@ import glyphMap from '../glyphmaps/EvilIcons.json';
 const Icon = createIconSet(glyphMap, 'EvilIcons', 'EvilIcons.ttf');
 
 export default Icon;
-export const { getImageSource, getImageSourceSync } = Icon;

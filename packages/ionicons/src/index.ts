@@ -9,4 +9,3 @@ import glyphMap from '../glyphmaps/Ionicons.json';
 const Icon = createIconSet(glyphMap, 'Ionicons', 'Ionicons.ttf');
 
 export default Icon;
-export const { getImageSource, getImageSourceSync } = Icon;

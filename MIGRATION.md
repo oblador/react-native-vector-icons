@@ -1,7 +1,5 @@
 # TODO
-* Explore better android font loading
-* Support icomoon
-* getImageSync for fontawesome 5/6
+* Does the function signature for getImageSource for Fontawesome make sense, should we move the style icon earlier?
 * Export types?
 * Test the other targets
   * macOS

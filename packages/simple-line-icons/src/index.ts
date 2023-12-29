@@ -9,4 +9,3 @@ import glyphMap from '../glyphmaps/SimpleLineIcons.json';
 const Icon = createIconSet(glyphMap, 'SimpleLineIcons', 'SimpleLineIcons.ttf');
 
 export default Icon;
-export const { getImageSource, getImageSourceSync } = Icon;

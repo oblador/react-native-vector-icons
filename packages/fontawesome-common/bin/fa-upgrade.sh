@@ -90,7 +90,7 @@ copy_ttf_fonts_to_dest_dir()
     cp "$font_dir_path/fa-sharp-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Sharp_Solid.ttf"
     cp "$font_dir_path/fa-sharp-thin-100.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Sharp_Thin.ttf"
     cp "$font_dir_path/fa-solid-900.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Solid.ttf" &&
-    cp "$font_dir_path/fa-thin-100.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Thin.ttf" &&
+    cp "$font_dir_path/fa-thin-100.ttf" "$DEST_DIR_PATH/FontAwesome6_Pro_Thin.ttf"
   else
     echo "[FAIL] Unsupported version [$VERSION]";
     exit 1
