@@ -54,7 +54,24 @@ type Props =
   | ({ iconStyle?: 'brand' } & brandIconProps)
   | ({ iconStyle?: never } & regularIconProps);
 
-const Icons = {
+type ValueData = { uri: string; scale: number };
+type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData | undefined;
+type GetImageSourceIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => Promise<ValueData | undefined>;
+
+type Icons = {
+  thin: React.FC<thinIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof thinGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof thinGM> };
+  light: React.FC<lightIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof lightGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof lightGM> };
+  regular: React.FC<regularIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof regularGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof regularGM> };
+  solid: React.FC<solidIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof solidGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof solidGM> };
+  sharpThin: React.FC<sharpThinIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof sharpThinGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof sharpThinGM> };
+  sharpLight: React.FC<sharpLightIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof sharpLightGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof sharpLightGM> };
+  sharp: React.FC<sharpIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof sharpGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof sharpGM> };
+  sharpSolid: React.FC<sharpSolidIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof sharpSolidGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof sharpSolidGM> };
+  duotone: React.FC<duotoneIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof duotoneGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof duotoneGM> };
+  brand: React.FC<brandIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof brandGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof brandGM> };
+};
+
+const Icons: Icons = {
   thin: commonCreateIconSet(thinGM, 'FontAwesome6Pro-Thin', 'FontAwesome6_Pro_Thin.ttf', fontStyle('100')),
   light: commonCreateIconSet(lightGM, 'FontAwesome6Pro-Light', 'FontAwesome6_Pro_Light.ttf', fontStyle('300')),
   regular: commonCreateIconSet(regularGM, 'FontAwesome6Pro-Regular', 'FontAwesome6_Pro_Regular.ttf', fontStyle('400')),
