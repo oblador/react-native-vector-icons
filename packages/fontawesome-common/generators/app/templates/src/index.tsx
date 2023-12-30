@@ -33,7 +33,17 @@ type Props =
 <% }) -%>
   | ({ iconStyle?: never } & <%= meta.defaultStyleName %>IconProps);
 
-const Icons = {
+type ValueData = { uri: string; scale: number };
+type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData | undefined;
+type GetImageSourceIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => Promise<ValueData | undefined>;
+
+type Icons = {
+<% meta.styleNames.forEach((styleName) => { -%>
+  <%= styleName %>: React.FC<<%= styleName %>IconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof <%= styleName %>GM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof <%= styleName %>GM> };
+<% }) -%>
+};
+
+const Icons: Icons = {
 <% Object.entries(meta.styles).forEach(([styleName, { family, name, weight }]) => { -%>
   <%= styleName %>: commonCreateIconSet(<%= styleName %>GM, '<%= family %>', '<%= name %>', fontStyle('<%= weight %>')),
 <% }) -%>
