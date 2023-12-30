@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "yarn workspaces foreach --all run prepare",
+    "prepare": "lerna run prepare",
     "build": "scripts/build.sh",
     "clean": "yarn workspaces foreach --all run clean",
     "format": "prettier **/*.{ts,tsx} --write",
@@ -22,6 +22,7 @@
     "eslint": "^8.56.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
+    "lerna": "^8.0.1",
     "typescript": "^5.3.3"
   },
   "eslintConfig": {
