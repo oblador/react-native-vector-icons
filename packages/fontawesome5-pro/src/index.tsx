@@ -39,7 +39,19 @@ type Props =
   | ({ iconStyle?: 'duotone' } & duotoneIconProps)
   | ({ iconStyle?: never } & regularIconProps);
 
-const Icons = {
+type ValueData = { uri: string; scale: number };
+type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData | undefined;
+type GetImageSourceIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => Promise<ValueData | undefined>;
+
+type Icons = {
+  light: React.FC<lightIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof lightGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof lightGM> };
+  regular: React.FC<regularIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof regularGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof regularGM> };
+  solid: React.FC<solidIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof solidGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof solidGM> };
+  brand: React.FC<brandIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof brandGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof brandGM> };
+  duotone: React.FC<duotoneIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof duotoneGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof duotoneGM> };
+};
+
+const Icons: Icons = {
   light: commonCreateIconSet(lightGM, 'FontAwesome5Pro-Light', 'FontAwesome5_Pro_Light.ttf', fontStyle('300')),
   regular: commonCreateIconSet(regularGM, 'FontAwesome5Pro-Regular', 'FontAwesome5_Pro_Regular.ttf', fontStyle('400')),
   solid: commonCreateIconSet(solidGM, 'FontAwesome5Pro-Solid', 'FontAwesome5_Pro_Solid.ttf', fontStyle('900')),

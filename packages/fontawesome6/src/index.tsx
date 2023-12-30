@@ -33,7 +33,17 @@ type Props =
   | ({ iconStyle?: 'brand' } & brandIconProps)
   | ({ iconStyle?: never } & regularIconProps);
 
-const Icons = {
+type ValueData = { uri: string; scale: number };
+type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData | undefined;
+type GetImageSourceIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => Promise<ValueData | undefined>;
+
+type Icons = {
+  regular: React.FC<regularIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof regularGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof regularGM> };
+  solid: React.FC<solidIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof solidGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof solidGM> };
+  brand: React.FC<brandIconProps> & { getImageSource: GetImageSourceIconFunc<keyof typeof brandGM>; getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof brandGM> };
+};
+
+const Icons: Icons = {
   regular: commonCreateIconSet(regularGM, 'FontAwesome6-Regular', 'FontAwesome6_Regular.ttf', fontStyle('400')),
   solid: commonCreateIconSet(solidGM, 'FontAwesome6-Solid', 'FontAwesome6_Solid.ttf', fontStyle('900')),
   brand: commonCreateIconSet(brandGM, 'FontAwesome6Brands-Regular', 'FontAwesome6_Brands.ttf', fontStyle('400')),
