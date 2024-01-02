@@ -6856,6 +6856,7 @@ __metadata:
     "@types/react": "npm:^18.2.46"
     "@types/react-test-renderer": "npm:^18.0.7"
     babel-jest: "npm:^29.7.0"
+    del-cli: "npm:^5.1.0"
     jest: "npm:^29.7.0"
     react: "npm:18.2.0"
     react-native: "npm:0.73.1"

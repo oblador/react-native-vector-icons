@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "clean": "del-cli android/build android/app/build ios/build lib",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest"
@@ -48,6 +49,7 @@
     "@types/react": "^18.2.46",
     "@types/react-test-renderer": "^18.0.7",
     "babel-jest": "^29.7.0",
+    "del-cli": "^5.1.0",
     "jest": "^29.7.0",
     "react-test-renderer": "18.2.0",
     "typescript": "5.3.3"
