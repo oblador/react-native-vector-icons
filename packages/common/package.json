@@ -28,6 +28,8 @@
   "scripts": {
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
     "prepare": "bob build",
+    "preinstall": "cp ../../README.md .",
+    "postinstall": "rm README.md",
     "watch": "onchange 'src/**' --initial -- yarn run prepare"
   },
   "keywords": [
