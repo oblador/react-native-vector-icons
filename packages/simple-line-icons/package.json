@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/simple-line-icons",
-  "version": "0.0.1-alpha.1",
+  "version": "2.5.5",
   "description": "Simple Line Icons font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -75,7 +75,7 @@
     "del-cli": "^5.1.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",
-    "simple-line-icons": "^2.5.5",
+    "simple-line-icons": "2.5.5",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {

@@ -27,7 +27,7 @@ for package in *; do
     git restore src > /dev/null || true
   fi
 
-  yo react-native-vector-icons --force --skip-install
+  yo react-native-vector-icons --force
 
   cd -
 done

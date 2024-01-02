@@ -1,11 +1,7 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "ionicons",
-    "packageJSON": {
-      "devDependencies": {
-        "ionicons": "^7.2.2"
-      }
-    },
+    "upstreamFont": "ionicons",
     "buildSteps": {
       "fixSVGPaths": {
         "location": "../../node_modules/ionicons/dist/svg"

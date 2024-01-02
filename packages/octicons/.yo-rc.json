@@ -1,11 +1,7 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "octicons",
-    "packageJSON": {
-      "devDependencies": {
-        "@primer/octicons": "^19.8.0"
-      }
-    },
+    "upstreamFont": "@primer/octicons",
     "buildSteps": {
       "fixSVGPaths": {
         "location": "../../node_modules/@primer/octicons/build/svg",
