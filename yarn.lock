@@ -4357,6 +4357,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@react-native-vector-icons/common@npm:0.0.1-alpha.1":
+  version: 0.0.1-alpha.1
+  resolution: "@react-native-vector-icons/common@npm:0.0.1-alpha.1"
+  dependencies:
+    prop-types: "npm:^15.8.1"
+    yargs: "npm:^17.7.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 957eaaefb1b1bc6547b94555bf150bfbd421ab2c1692bc8cb05a23ef89de48decc6439a338bd1c10e5429de1535421c2e57aa07a8ccb3e8bb9a6436643a1a4ef
+  languageName: node
+  linkType: hard
+
 "@react-native-vector-icons/common@npm:^0.0.1-alpha.3, @react-native-vector-icons/common@workspace:*, @react-native-vector-icons/common@workspace:packages/common":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/common@workspace:packages/common"
@@ -4602,9 +4615,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/foundation@workspace:packages/foundation"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0.0.1-alpha.3"
+    "@react-native-vector-icons/common": "npm:0.0.1-alpha.1"
     del-cli: "npm:^5.1.0"
-    foundation-icon-fonts: "npm:0.1.1"
+    foundation-icons: "npm:2.0.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
@@ -12154,10 +12167,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"foundation-icon-fonts@npm:0.1.1":
-  version: 0.1.1
-  resolution: "foundation-icon-fonts@npm:0.1.1"
-  checksum: 537ee696dc1be83899065a749714bbd969fccea097884d86a9cc0e4e583ecc8a518a968c0f7bf19dddb26b3e758c77603ebf356c97a6546c296ac963d75e952a
+"foundation-icons@npm:2.0.0":
+  version: 2.0.0
+  resolution: "foundation-icons@npm:2.0.0"
+  checksum: 1dec8974f711bb0c2cd832ac92f7031878c6b35f09ad4129f7de2c4a41a5c813d31312697026bb316cb0212bcd5a6241835155333952bea4ab7c0593a85cb81f
   languageName: node
   linkType: hard
 
