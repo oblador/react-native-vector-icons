@@ -4353,7 +4353,7 @@ __metadata:
     react-native-builder-bob: "npm:^0.23.2"
     typescript: "npm:^5.3.3"
   bin:
-    react-vector-icons-codemod: ./lib/index.js
+    react-vector-icons-codemod: ./lib/commonjs/index.js
   languageName: unknown
   linkType: soft
 
