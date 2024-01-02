@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/material-design-icons",
-  "version": "7.4.47-alpha.2",
+  "version": "7.4.47-alpha.3",
   "description": "Material Design Icons font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -70,7 +70,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^0.0.1-alpha.2"
+    "@react-native-vector-icons/common": "^0.0.1-alpha.3"
   },
   "devDependencies": {
     "@mdi/font": "7.4.47",
