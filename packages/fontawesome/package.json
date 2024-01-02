@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome",
-  "version": "0.0.1-alpha.1",
+  "version": "4.7.0",
   "description": "Fontawesome font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -73,7 +73,7 @@
   },
   "devDependencies": {
     "del-cli": "^5.1.0",
-    "font-awesome": "^4.7.0",
+    "font-awesome": "4.7.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",
     "typescript": "^5.3.3"

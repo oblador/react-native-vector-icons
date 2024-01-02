@@ -1,52 +1,53 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
-import { spawnSync } from 'node:child_process';
+import semver from 'semver';
 
 import Generator from 'yeoman-generator';
 
 import { generateGlyphmap } from './generateGlyphmap.js';
 
 interface Data {
-  name: string,
-  packageName: string,
-  className: string,
-  fontName: string,
-  fontFile: string,
-  packageJSON: Record<string, Record<string, string>>,
-  customReadme?: boolean,
-  customSrc?: string | boolean,
-  customAssets?: boolean,
-  commonPackage?: string,
-  meta: Record<string, object>,
+  name: string;
+  packageName: string;
+  className: string;
+  fontName: string;
+  fontFile: string;
+  upstreamFont?: string;
+  packageJSON?: Record<string, Record<string, string>>;
+  customReadme?: boolean;
+  customSrc?: string | boolean;
+  customAssets?: boolean;
+  commonPackage?: string;
+  meta: Record<string, object>;
   buildSteps: {
     preScript?: {
-      script: string,
-    },
+      script: string;
+    };
     fixSVGPaths?: {
-      location: string,
-      keepPostfix?: string,
-    },
+      location: string;
+      keepPostfix?: string;
+    };
     fontCustom?: {
-      location: string,
-      cleanup?: boolean,
-    },
+      location: string;
+      cleanup?: boolean;
+    };
     glyphmap?: {
-      mode: 'css' | 'codepoints',
-      location: string | [string, string][]
-      prefix?: string,
-      cleanup?: boolean,
-    },
+      mode: 'css' | 'codepoints';
+      location: string | [string, string][];
+      prefix?: string;
+      cleanup?: boolean;
+    };
     copyFont?: {
-      location: string | [string, string][]
-    },
+      location: string | [string, string][];
+    };
     postScript?: {
-      script: string,
-    },
-  },
+      script: string;
+    };
+  };
 }
 
-interface Arguments { }
+interface Arguments {}
 
 const { uid, gid } = os.userInfo();
 
@@ -64,34 +65,38 @@ export default class extends Generator<Arguments> {
   }
 
   install() {
-    this._writePackageJSON();
+    return this._writePackageJSON();
+  }
+
+  end() {
     this._buildSteps();
   }
 
   _docker(image: string, args: string[]) {
-    const { status } = spawnSync('docker', [
-      'run',
-      '--rm',
-      `--volume=${process.cwd()}:/usr/src/app`,
-      `--volume=${process.cwd()}/../../node_modules:/usr/src/app/node_modules`,
-      `--user=${uid}:${gid}`,
-      '--env=SOURCE_DATE_EPOCH=1702622477', // TODO: Should we use something more sensible as the date for the fonts
-      image,
-      ...args,
-    ], { stdio: 'inherit' });
+    const { exitCode } = this.spawnSync(
+      'docker',
+      [
+        'run',
+        '--rm',
+        `--volume=${process.cwd()}:/usr/src/app`,
+        `--volume=${process.cwd()}/../../node_modules:/usr/src/app/node_modules`,
+        `--user=${uid}:${gid}`,
+        '--env=SOURCE_DATE_EPOCH=1702622477', // TODO: Should we use something more sensible as the date for the fonts
+        image,
+        ...args,
+      ],
+      { stdio: 'inherit' },
+    );
 
-    if (status !== 0) {
-      throw new Error(`${image} exited with status ${status}`);
+    if (exitCode !== 0) {
+      throw new Error(`${image} exited with exitCode ${exitCode}`);
     }
   }
 
   _writeTemplates() {
     const data = this.data;
 
-    const files: Array<string | [string, string]> = [
-      'package.json',
-      'tsconfig.json',
-    ];
+    const files: Array<string | [string, string]> = ['package.json', 'tsconfig.json'];
 
     if (data.customSrc === true) {
       // Do nothing
@@ -107,31 +112,55 @@ export default class extends Generator<Arguments> {
 
     files.forEach((file) => {
       if (typeof file === 'string') {
-        this.fs.copyTpl(
-          this.templatePath(file),
-          this.destinationPath(file),
-          data
-        )
+        this.fs.copyTpl(this.templatePath(file), this.destinationPath(file), data);
       } else {
         const [from, to] = file;
 
-        this.fs.copyTpl(
-          this.templatePath(from),
-          this.destinationPath(to),
-          data
-        )
+        this.fs.copyTpl(this.templatePath(from), this.destinationPath(to), data);
       }
     });
   }
 
-  _writePackageJSON() {
+  async _writePackageJSON() {
     const data = this.data;
+
+    if (!data.upstreamFont) {
+      return;
+    }
 
     const packageFile = this.destinationPath('package.json');
     const packageJSON = JSON.parse(fs.readFileSync(packageFile, 'utf8'));
-    Object.entries(data.packageJSON || {}).forEach(([key, value]) => {
-      packageJSON[key] = { ...packageJSON[key], ...value };
-    });
+
+    let packageName: string;
+    let version: string;
+    const md = data.upstreamFont.match(/^(@?[^@\s]+)@(\S+)$/);
+    if (md) {
+      if (!md[1]) {
+        throw new Error(`Invalid upstreamFont ${data.upstreamFont}`);
+      }
+      packageName = md[1];
+
+      const versionRange = md[2];
+      if (!versionRange) {
+        throw new Error(`Invalid upstreamFont ${data.upstreamFont}`);
+      }
+      const response = await fetch(`https://registry.npmjs.org/${packageName}`);
+      const packageInfo = await response.json();
+      const versions = Object.keys(packageInfo.versions);
+      const possibleVersion = semver.maxSatisfying(versions, versionRange);
+      if (!possibleVersion) {
+        throw new Error(`Invalid upstreamFont ${data.upstreamFont}: no matching version`);
+      }
+      version = possibleVersion;
+    } else {
+      const response = await fetch(`https://registry.npmjs.org/${data.upstreamFont}/latest`);
+      const packageInfo = await response.json();
+      version = packageInfo.version;
+      packageName = data.upstreamFont;
+    }
+
+    packageJSON.devDependencies[packageName] = version;
+    packageJSON.version = version;
 
     fs.writeFileSync(packageFile, JSON.stringify(packageJSON, null, 2));
   }
@@ -151,15 +180,11 @@ export default class extends Generator<Arguments> {
       return;
     }
 
-    const { status } = spawnSync('bash', [
-      '-c',
-      preScript.script
-    ], { stdio: 'inherit' });
+    const { exitCode } = this.spawnSync('bash', ['-c', preScript.script], { stdio: 'inherit' });
 
-    if (status !== 0) {
-      throw new Error(`preScript exited with status ${status}`);
+    if (exitCode !== 0) {
+      throw new Error(`preScript exited with exitCode ${exitCode}`);
     }
-
   }
 
   _fixSVGPaths() {
@@ -170,13 +195,10 @@ export default class extends Generator<Arguments> {
 
     fs.mkdirSync('fixedSvg');
 
-    const { status } = spawnSync('../../node_modules/.bin/oslllo-svg-fixer', [
-      '-s', fixSVGPaths.location,
-      '-d', 'fixedSvg',
-    ], { stdio: 'inherit' });
+    const { exitCode } = this.spawnSync('../../node_modules/.bin/oslllo-svg-fixer', ['-s', fixSVGPaths.location, '-d', 'fixedSvg'], { stdio: 'inherit' });
 
-    if (status !== 0) {
-      throw new Error(`oslllo-svg-fixer exited with status ${status}`);
+    if (exitCode !== 0) {
+      throw new Error(`oslllo-svg-fixer exited with exitCode ${exitCode}`);
     }
 
     const { keepPostfix } = fixSVGPaths;
@@ -203,14 +225,7 @@ export default class extends Generator<Arguments> {
       return;
     }
 
-    const args = [
-      'compile',
-      fontCustom.location,
-      '--templates', 'css',
-      '--name', data.className,
-      '--force',
-      '--no-hash',
-    ];
+    const args = ['compile', fontCustom.location, '--templates', 'css', '--name', data.className, '--force', '--no-hash'];
 
     this._docker('johnf/fontcustom', args);
 
@@ -249,7 +264,7 @@ export default class extends Generator<Arguments> {
     }
 
     locations.forEach(([from, to]) => {
-      const json = generateGlyphmap(glyphmap.mode, [from], glyphmap.prefix)
+      const json = generateGlyphmap(glyphmap.mode, [from], glyphmap.prefix);
 
       fs.writeFileSync(`glyphmaps/${to}.json`, json);
 
@@ -283,16 +298,13 @@ export default class extends Generator<Arguments> {
       return;
     }
 
-    const { status } = spawnSync('bash', [
-      '-c',
-      postScript.script
-    ], { stdio: 'inherit' });
+    const { exitCode } = this.spawnSync('bash', ['-c', postScript.script], { stdio: 'inherit' });
 
-    if (status !== 0) {
-      throw new Error(`postScript exited with status ${status}`);
+    if (exitCode !== 0) {
+      throw new Error(`postScript exited with exitCode ${exitCode}`);
     }
-
   }
+
   _data() {
     // TODO: Use zod to vaidate the .yo-rc.json data
     const data = this.config.getAll() as unknown as Data;
@@ -300,15 +312,27 @@ export default class extends Generator<Arguments> {
       throw new Error('packageName is required');
     }
 
-    data.name ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join(' ');
+    data.name ||= data.packageName
+      .split('-')
+      .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+      .join(' ');
     data.buildSteps ||= {};
-    data.className ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
-    data.fontName ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
-    data.fontFile ||= data.packageName.split('-').map((x) => x.charAt(0).toUpperCase() + x.slice(1)).join('');
+    data.className ||= data.packageName
+      .split('-')
+      .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+      .join('');
+    data.fontName ||= data.packageName
+      .split('-')
+      .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+      .join('');
+    data.fontFile ||= data.packageName
+      .split('-')
+      .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+      .join('');
     data.customReadme ||= false;
     data.customAssets ||= false;
     data.commonPackage ||= 'common';
 
     return data;
   }
-};
+}

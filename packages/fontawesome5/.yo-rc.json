@@ -5,6 +5,7 @@
     "commonPackage": "fontawesome-common/fontawesome5",
     "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.tsx",
     "customReadme": true,
+    "upstreamFont": "@fortawesome/fontawesome-free@^5",
     "meta": {
       "defaultStyleName": "regular",
       "styleNames": ["regular", "solid", "brand"],
@@ -24,11 +25,6 @@
           "name": "FontAwesome5_Brands.ttf",
           "weight": 400
         }
-      }
-    },
-    "packageJSON": {
-      "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.4"
       }
     },
     "buildSteps": {

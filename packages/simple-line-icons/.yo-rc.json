@@ -1,11 +1,7 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "simple-line-icons",
-    "packageJSON": {
-      "devDependencies": {
-        "simple-line-icons": "^2.5.5"
-      }
-    },
+    "upstreamFont": "simple-line-icons",
     "buildSteps": {
       "glyphmap": {
         "location": "../../node_modules/simple-line-icons/css/simple-line-icons.css",

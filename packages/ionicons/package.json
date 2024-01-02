@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/ionicons",
-  "version": "0.0.1-alpha.1",
+  "version": "7.2.2",
   "description": "Ionicons font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -73,7 +73,7 @@
   },
   "devDependencies": {
     "del-cli": "^5.1.0",
-    "ionicons": "^7.2.2",
+    "ionicons": "7.2.2",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",
     "typescript": "^5.3.3"
