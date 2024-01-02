@@ -5,7 +5,10 @@
     "commonPackage": "fontawesome-common/fontawesome5",
     "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.tsx",
     "customReadme": true,
-    "upstreamFont": "@fortawesome/fontawesome-free@^5",
+    "upstreamFont": {
+      "packageName": "@fortawesome/fontawesome-free",
+      "versionRange": "^5"
+    },
     "meta": {
       "defaultStyleName": "regular",
       "styleNames": ["regular", "solid", "brand"],
