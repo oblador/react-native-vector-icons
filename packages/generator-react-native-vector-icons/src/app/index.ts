@@ -17,6 +17,7 @@ interface Data {
   fontFile: string;
   upstreamFont?: string | { registry?: string; packageName: string; versionRange: string, versionOnly?: boolean }
   packageJSON?: Record<string, Record<string, string>>;
+  versionSuffix?: string;
   customReadme?: boolean;
   customSrc?: string | boolean;
   customAssets?: boolean;
@@ -156,7 +157,7 @@ export default class extends Generator<Arguments> {
       packageName = data.upstreamFont;
     }
 
-    packageJSON.version = version;
+    packageJSON.version = `${version}${data.versionSuffix}`;
     if (!versionOnly) {
       packageJSON.devDependencies[packageName] = version;
     }

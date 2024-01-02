@@ -2,6 +2,7 @@
   "generator-react-native-vector-icons": {
     "packageName": "foundation",
     "upstreamFont": "foundation-icon-fonts",
+    "versionSuffix": "-alpha.1",
     "buildSteps": {
       "glyphmap": {
         "location": "../../node_modules/foundation-icon-fonts/foundation-icons.css",

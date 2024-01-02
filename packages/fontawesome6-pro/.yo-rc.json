@@ -11,6 +11,7 @@
       "versionRange": "^6",
       "versionOnly": true
     },
+    "versionSuffix": "-alpha.1",
     "meta": {
       "defaultStyleName": "regular",
       "styleNames": ["thin", "light", "regular", "solid", "sharpThin", "sharpLight", "sharp", "sharpSolid", "duotone", "brand"],

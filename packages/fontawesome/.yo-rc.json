@@ -5,6 +5,7 @@
     "fontFile": "FontAwesome",
     "className": "FontAwesome",
     "upstreamFont": "font-awesome",
+    "versionSuffix": "-alpha.1",
     "buildSteps": {
       "glyphmap": {
         "location": "../../node_modules/font-awesome/css/font-awesome.css",
