@@ -5,6 +5,12 @@
     "commonPackage": "fontawesome-common/fontawesome6-pro",
     "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.tsx",
     "customReadme": true,
+    "upstreamFont": {
+      "registry": "https://npm.fontawesome.com",
+      "packageName": "@fortawesome/fontawesome-pro",
+      "versionRange": "^6",
+      "versionOnly": true
+    },
     "meta": {
       "defaultStyleName": "regular",
       "styleNames": ["thin", "light", "regular", "solid", "sharpThin", "sharpLight", "sharp", "sharpSolid", "duotone", "brand"],
