@@ -7,7 +7,7 @@
   "types": "lib/typescript/src/index.d.ts",
   "source": "src/index",
   "bin": {
-    "react-vector-icons-codemod": "./lib/commonjs/index.js"
+    "react-native-vector-icons-codemod": "./lib/commonjs/index.js"
   },
   "files": [
     "src",
