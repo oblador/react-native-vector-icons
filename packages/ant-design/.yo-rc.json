@@ -2,6 +2,7 @@
   "generator-react-native-vector-icons": {
     "packageName": "ant-design",
     "upstreamFont": "@ant-design/icons-svg",
+    "versionSuffix": "-alpha.1",
     "buildSteps": {
       "fixSVGPaths": {
         "location": "../../node_modules/@ant-design/icons-svg/inline-namespaced-svg/outlined"
