@@ -9,6 +9,7 @@
       "packageName": "@fortawesome/fontawesome-free",
       "versionRange": "^6"
     },
+    "versionSuffix": "-alpha.1",
     "meta": {
       "defaultStyleName": "regular",
       "styleNames": ["regular", "solid", "brand"],
