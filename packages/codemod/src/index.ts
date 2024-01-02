@@ -12,7 +12,7 @@ if (!dir) {
 }
 
 const transformFilePath = path.join(__dirname, 'transform.js');
-const cmd = `jscodeshift --transform ${transformFilePath}  --extensions js,ts,jsx,tsx --parser tsx --ignore-pattern **/node_modules/** ${dir}`;
+const cmd = `jscodeshift --transform ${transformFilePath}  --extensions js,ts,jsx,tsx --parser tsx --ignore-pattern '**/node_modules/**' ${dir}`;
 
 const proc = exec(cmd, { env: { ...process.env, FORCE_COLOR: 'true' } });
 
