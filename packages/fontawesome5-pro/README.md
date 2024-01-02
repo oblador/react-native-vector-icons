@@ -1,14 +1,14 @@
-# FontAwesome 6 Pro
+# FontAwesome 5 Pro
 
 ## Installing the Pro Fonts
 
 You need your FontAwesome npm token which can be obtained by logging into your
 account and then access the `Services` tab.
 
-Run `yarn fa6-upgrade` and enter the token
+Run `yarn fa5-upgrade` and enter the token
 when asked to in order to upgrade to the Pro version. It will install the fonts
 in your repo in the `rnvi-fonts` directory but the folder can be customized by
-setting it when executing the command: `yarn fa6-upgrade [destination]`.
+setting it when executing the command: `yarn fa5-upgrade [destination]`.
 
 ### Manually
 
@@ -20,19 +20,19 @@ All you really need to do is adding the Pro fonts to the `rnvi-fonts` directory.
 Using the standard icons works just like the standard icons in this library.
 
 ```javascript
-import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
+import FontAwesome5Pro from '@react-native-vector-icons/fontawesome5-pro';
 
-const icon = <FontAwesome6Pro name="comments" />;
+const icon = <FontAwesome5Pro name="comments" />;
 ```
 
-Something special about the FontAwesome6Pro class is that you can also pass props
+Something special about the FontAwesome5Pro class is that you can also pass props
 to change the style of the icon:
 
 ```javascript
-import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
+import FontAwesome5Pro from '@react-native-vector-icons/fontawesome5-pro';
 
-const icon = <FontAwesome6Pro name="comments" solid />;
-const icon = <FontAwesome6Pro name="git" brand />;
+const icon = <FontAwesome5Pro name="comments" solid />;
+const icon = <FontAwesome5Pro name="git" brand />;
 ```
 
 **Valid types**
@@ -42,42 +42,32 @@ const icon = <FontAwesome6Pro name="git" brand />;
 | **brand**      | Uses the Brands font      |
 | **solid**      | Uses the Solid font       |
 | **light**      | Uses the Light font       |
-| **thin**       | Uses the Thin font        |
 | **duotone**    | Uses the Duotone font     |
-| **sharpSolid** | Uses the Sharp Solid font |
-| **sharpThin**  | Uses the Sharp Thin font  |
-| **sharpLight** | Uses the Sharp Light font |
-| **sharp**      | Uses the Sharp font       |
 
 No specified type indicates Regular font.
 
 ### getImageSource
 
 `getImageSource` works a little different due to its native backend and how
-the font is separated into different files. Therefore, the enum FA6Style is
+the font is separated into different files. Therefore, the enum FA5Style is
 defined to help setting the style of the font:
 
 ```javascript
-const FA6Style = {
+const FA5Style = {
   regular: 'regular',
   light: 'light',
   solid: 'solid',
   brand: 'brand',
-  sharp: 'sharp',
-  sharpThin: 'sharpThin',
-  sharpLight: 'sharpLight',
-  sharpSolif: 'sharpSolid',
   duotone: 'duotone',
-  thin: 'thin',
 };
 ```
 
 Use this to select which style the generated image should have:
 
 ```javascript
-import FontAwesome6, { FA6Style } from 'react-native-vector-icons/FontAwesome6';
+import FontAwesome5, { FA5Style } from 'react-native-vector-icons/FontAwesome5';
 
-FontAwesome6.getImageSource('comments', 30, '#000', FA6Style.solid).then(
+FontAwesome5.getImageSource('comments', 30, '#000', FA5Style.solid).then(
   (source) => this.setState({ image: source })
 );
 ```

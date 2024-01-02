@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import semver from 'semver';
+import npmFetch from 'npm-registry-fetch';
+import getAuthToken from 'registry-auth-token';
 
 import Generator from 'yeoman-generator';
 
@@ -13,7 +15,7 @@ interface Data {
   className: string;
   fontName: string;
   fontFile: string;
-  upstreamFont?: string;
+  upstreamFont?: string | { registry?: string; packageName: string; versionRange: string, versionOnly?: boolean }
   packageJSON?: Record<string, Record<string, string>>;
   customReadme?: boolean;
   customSrc?: string | boolean;
@@ -47,7 +49,7 @@ interface Data {
   };
 }
 
-interface Arguments {}
+interface Arguments { }
 
 const { uid, gid } = os.userInfo();
 
@@ -133,19 +135,15 @@ export default class extends Generator<Arguments> {
 
     let packageName: string;
     let version: string;
-    const md = data.upstreamFont.match(/^(@?[^@\s]+)@(\S+)$/);
-    if (md) {
-      if (!md[1]) {
-        throw new Error(`Invalid upstreamFont ${data.upstreamFont}`);
-      }
-      packageName = md[1];
+    let versionOnly = false;
+    if (typeof data.upstreamFont === 'object') {
+      const registry = data.upstreamFont.registry ?? 'https://registry.npmjs.org';
+      packageName = data.upstreamFont.packageName;
+      const versionRange = data.upstreamFont.versionRange || '*';
+      versionOnly = data.upstreamFont.versionOnly || false;
+      const authToken = getAuthToken(registry.replace(/^https?:/, ''));
 
-      const versionRange = md[2];
-      if (!versionRange) {
-        throw new Error(`Invalid upstreamFont ${data.upstreamFont}`);
-      }
-      const response = await fetch(`https://registry.npmjs.org/${packageName}`);
-      const packageInfo = await response.json();
+      const packageInfo = await npmFetch.json(`${registry}/${packageName}`, { forceAuth: { _authToken: authToken?.token } });
       const versions = Object.keys(packageInfo.versions);
       const possibleVersion = semver.maxSatisfying(versions, versionRange);
       if (!possibleVersion) {
@@ -153,14 +151,15 @@ export default class extends Generator<Arguments> {
       }
       version = possibleVersion;
     } else {
-      const response = await fetch(`https://registry.npmjs.org/${data.upstreamFont}/latest`);
-      const packageInfo = await response.json();
+      const packageInfo = await npmFetch.json(`https://registry.npmjs.org/${data.upstreamFont}/latest`);
       version = packageInfo.version;
       packageName = data.upstreamFont;
     }
 
-    packageJSON.devDependencies[packageName] = version;
     packageJSON.version = version;
+    if (!versionOnly) {
+      packageJSON.devDependencies[packageName] = version;
+    }
 
     fs.writeFileSync(packageFile, JSON.stringify(packageJSON, null, 2));
   }

@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome6-pro",
-  "version": "0.0.1-alpha.1",
+  "version": "6.5.1",
   "description": "Fontawesome6 Pro font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
