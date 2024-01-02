@@ -6,10 +6,13 @@ import packageJsonTransform from './package-json';
 import infoPlistTransform from './info-plist';
 import removeFonts from './remove-fonts';
 
-const dir = process.argv[2] || '.';
+const dir = process.argv[2];
+if (!dir) {
+  throw new Error('Please specify a directory to transform');
+}
 
 const transformFilePath = path.join(__dirname, 'transform.js');
-const cmd = `jscodeshift --extensions=js,ts,jsx,tsx --parser tsx -t ${transformFilePath} ${dir}`;
+const cmd = `jscodeshift --transform ${transformFilePath}  --extensions js,ts,jsx,tsx --parser tsx --ignore-pattern **/node_modules/** ${dir}`;
 
 const proc = exec(cmd, { env: { ...process.env, FORCE_COLOR: 'true' } });
 
