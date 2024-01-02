@@ -23,6 +23,7 @@ const fonts = [
   'Zocial.ttf',
   'FontAwesome5_Pro_Light.ttf',
   'FontAwesome5_Pro_Brands.ttf',
+  'FontAwesome5Pro_Brands.ttf',
   'FontAwesome5_Pro_Regular.ttf',
   'FontAwesome5_Pro_Solid.ttf"',
   'FontAwesome6_Pro_Light.ttf',
