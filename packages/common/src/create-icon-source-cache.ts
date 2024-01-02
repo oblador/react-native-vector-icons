@@ -19,11 +19,12 @@ export default function createIconSourceCache() {
   const has = (key: string) => cache.has(key);
 
   const get = (key: string) => {
-    if (!cache.has(key)) {
+    const value = cache.get(key);
+    if (!value) {
       return undefined;
     }
 
-    const { type, data } = cache.get(key)!;
+    const { type, data } = value;
     if (type === TYPE_ERROR) {
       throw data;
     }
