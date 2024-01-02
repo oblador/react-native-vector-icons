@@ -12,6 +12,7 @@ export default (pkgs: Set<string>) => {
 
   if (pkgs.size > 0 && dependencies['react-native-vector-icons']) {
     dependencies['react-native-vector-icons'] = undefined;
+    dependencies['@react-native-vector-icons/common'] = 'latest';
     fs.writeFileSync('package.json', JSON.stringify(packageJson, null, 2));
   }
 };
