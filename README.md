@@ -49,26 +49,25 @@ sponsorship plays a pivotal role in materializing these advancements.
 
 RNVI comes with the following supported icons. You can [search NPM](https://www.npmjs.com/search?q=keywords%3Areact-native-vector-icons-icon) for third party icons.
 
-FIXME: update all of these
-FIXME: update all of these
-FIXME: update all of these
-FIXME: update all of these
-
-- [`AntDesign`](https://ant.design/) from AntFinance (_298_ icons)
+- [`AntDesign`](https://ant.design/components/icon) from Ant Group (v4.3.1 with _421_ icons)
 - [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 with _411_ icons)
 - [`EvilIcons`](http://evil-icons.io) designed by Alexander Madyankin & Roman Shamin (v1.10.1 with _70_ icons)
-- [`Feather`](http://feathericons.com) created by Cole Bemis & Contributors (v4.28.0 featuring _286_ icons)
-- [`FontAwesome`](http://fortawesome.github.io/Font-Awesome/icons/) by Dave Gandy (v4.7.0 containing _675_ icons)
-- [`FontAwesome 5`](https://fontawesome.com/v5/icons/) from Fonticons, Inc. (v5.15.3 offering _1598_ free and _7848_ pro icons)
-- [`FontAwesome 6`](https://fontawesome.com) designed by Fonticons, Inc. (v6.6.0 featuring _2016_ free and _16150_ pro icons)
-- [`Fontisto`](https://github.com/kenangundogan/fontisto) created by Kenan Gündoğan (v3.0.4 featuring _615_ icons)
+- [`Feather`](http://feathericons.com) created by Cole Bemis & Contributors (v4.29.1 featuring _287_ icons)
+- [`FontAwesome`](https://fontawesome.com/v4/icons) by Fonticons, Inc. (v4.7.0 containing _785_ icons)
+- [`FontAwesome 5`](https://fontawesome.com/v5/search) from Fonticons, Inc. (v5.15.4 offering _1608_ free and _7864_ pro icons)
+- [`FontAwesome 6`](https://fontawesome.com) designed by Fonticons, Inc. (v6.6.0 featuring _2037_ free and _30013_ pro icons)
+- [`Fontisto`](https://github.com/kenangundogan/fontisto) created by Kenan Gündoğan (v3.0.4 featuring _617_ icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0 with _283_ icons)
-- [`Ionicons`](https://ionicons.com/) crafted by Ionic (v7.1.0 containing _1338_ icons)
-- [`MaterialIcons`](https://fonts.google.com/icons/) by Google, Inc. (v4.0.0 featuring _2189_ icons)
-- [`MaterialCommunityIcons`](https://materialdesignicons.com/) from MaterialDesignIcons.com (v6.5.95 including _6596_ icons)
-- [`Octicons`](http://octicons.github.com) designed by Github, Inc. (v16.3.1 with _250_ icons)
-- [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.4.0 with _100_ icons)
+- [`Ionicons`](https://ionic.io/ionicons) crafted by Ionic (v7.2.2 containing _1338_ icons)
+- [`MaterialIcons`](https://fonts.google.com/icons?icon.set=Material+Icons) by Google, Inc. (v4.0.0 featuring _2234_ icons)
+- [`MaterialCommunityIcons`](https://pictogrammers.com/library/mdi/) from MaterialDesignIcons.com (v7.4.47 including _7447_ icons)
+- [`Octicons`](https://primer.style/foundations/icons) designed by Github, Inc. (v19.8.0 with _320_ icons)
 - [`SimpleLineIcons`](https://simplelineicons.github.io/) crafted by Sabbir & Contributors (v2.5.5 with _189_ icons)
+- [`Zocial`](https://smcllns.github.io/css-social-buttons) by Sam Collins (v1.1.1 with _100_ icons)
+
+## Migration
+
+See [MIGRATION.md](./MIGRATION.md) if you are migrating from `react-native-vector-icons`
 
 ## Installation
 
