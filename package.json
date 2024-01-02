@@ -12,6 +12,7 @@
     "test": "yarn workspaces foreach run test",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "publish": "lerna publish --no-private from-package",
+    "version": "lerna version --no-private --no-push",
     "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps"
   },
   "devDependencies": {
