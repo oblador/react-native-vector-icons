@@ -5,11 +5,10 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "lerna run prepare",
     "build": "scripts/build.sh",
-    "clean": "yarn workspaces foreach --all run clean",
+    "clean": "lerna run run clean",
     "format": "prettier **/*.{ts,tsx} --write",
-    "test": "yarn workspaces foreach run test",
+    "test": "lerna run test",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "release": "lerna publish --no-private from-package",
     "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps"
