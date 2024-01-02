@@ -38,14 +38,14 @@
     "react-native-screens": "^3.29.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.6",
-    "@babel/preset-env": "^7.23.6",
-    "@babel/runtime": "^7.23.6",
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
+    "@babel/runtime": "^7.23.7",
     "@react-native/babel-preset": "^0.73.18",
     "@react-native/eslint-config": "^0.73.1",
     "@react-native/metro-config": "^0.73.2",
     "@react-native/typescript-config": "^0.73.1",
-    "@types/react": "^18.2.45",
+    "@types/react": "^18.2.46",
     "@types/react-test-renderer": "^18.0.7",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",

@@ -4,11 +4,7 @@
     "fontName": "FontAwesome",
     "fontFile": "FontAwesome",
     "className": "FontAwesome",
-    "packageJSON": {
-      "devDependencies": {
-        "font-awesome": "^4.7.0"
-      }
-    },
+    "upstreamFont": "font-awesome",
     "buildSteps": {
       "glyphmap": {
         "location": "../../node_modules/font-awesome/css/font-awesome.css",

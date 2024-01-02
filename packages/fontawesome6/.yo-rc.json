@@ -5,6 +5,7 @@
     "commonPackage": "fontawesome-common/fontawesome6",
     "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.tsx",
     "customReadme": true,
+    "upstreamFont": "@fortawesome/fontawesome-free",
     "meta": {
       "defaultStyleName": "regular",
       "styleNames": ["regular", "solid", "brand"],
@@ -26,15 +27,7 @@
         }
       }
     },
-    "packageJSON": {
-      "devDependencies": {
-        "@fortawesome/fontawesome-free": "^6.5.1"
-      }
-    },
     "buildSteps": {
-      "preScript": {
-        "script": "yarn"
-      },
       "glyphmap": {
         "location": "node_modules/@fortawesome/fontawesome-free/css/all.css",
         "mode": "css",
