@@ -15,6 +15,13 @@ For fonts we track upstream versions. Ocassionally we'll need to make changes ou
 | 1.0.0    | Code change          | 1.0.1-really-1.0.0-v2 |
 | 1.0.1    | Font and code update | 1.0.1                 |
 
+## Publishing
+
+This will auto detect which packages need to be published on NPM and ask which versions you want to set the packages to.
+```sh
+yarn release
+```
+
 ## Building
 
 ```sh
