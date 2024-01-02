@@ -1,4 +1,4 @@
-#!/uar/bin/env node
+#!/usr/bin/env node
 
 import path from 'node:path';
 import { exec } from 'node:child_process';
