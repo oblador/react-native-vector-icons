@@ -145,7 +145,7 @@ export default class extends Generator<Arguments> {
       const authToken = getAuthToken(registry.replace(/^https?:/, ''));
 
       const packageInfo = await npmFetch.json(`${registry}/${packageName}`, { forceAuth: { _authToken: authToken?.token } });
-      const versions = Object.keys(packageInfo.versions);
+      const versions = Object.keys(packageInfo.versions as string[]);
       const possibleVersion = semver.maxSatisfying(versions, versionRange);
       if (!possibleVersion) {
         throw new Error(`Invalid upstreamFont ${data.upstreamFont}: no matching version`);
@@ -153,7 +153,7 @@ export default class extends Generator<Arguments> {
       version = possibleVersion;
     } else {
       const packageInfo = await npmFetch.json(`https://registry.npmjs.org/${data.upstreamFont}/latest`);
-      version = packageInfo.version;
+      version = packageInfo.version as string;
       packageName = data.upstreamFont;
     }
 

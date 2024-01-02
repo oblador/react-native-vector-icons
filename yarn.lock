@@ -6077,6 +6077,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node-fetch@npm:*":
+  version: 3.0.2
+  resolution: "@types/node-fetch@npm:3.0.2"
+  dependencies:
+    node-fetch: "npm:*"
+  checksum: 2fedd8ff347c0d1fcd0491a3408087a1d8306a38a2425464ec72049ab3353debdec99d988e2a5ab5b32ee9f275aab30c1e10a250f2b6c3b91824b7aa26653700
+  languageName: node
+  linkType: hard
+
 "@types/node-forge@npm:^1.3.0":
   version: 1.3.10
   resolution: "@types/node-forge@npm:1.3.10"
@@ -6115,6 +6124,35 @@ __metadata:
   version: 2.4.4
   resolution: "@types/normalize-package-data@npm:2.4.4"
   checksum: aef7bb9b015883d6f4119c423dd28c4bdc17b0e8a0ccf112c78b4fe0e91fbc4af7c6204b04bba0e199a57d2f3fbbd5b4a14bf8739bf9d2a39b2a0aad545e0f86
+  languageName: node
+  linkType: hard
+
+"@types/npm-package-arg@npm:*":
+  version: 6.1.4
+  resolution: "@types/npm-package-arg@npm:6.1.4"
+  checksum: aa881ce030580fcf7fa64c0e47171a7b2d6053253b6ee14c4fa1d779017a797f4865939cdcbd4095d8afc82b78c16532e67caea7aa7561a9c2a669a695121b36
+  languageName: node
+  linkType: hard
+
+"@types/npm-registry-fetch@npm:^8.0.7":
+  version: 8.0.7
+  resolution: "@types/npm-registry-fetch@npm:8.0.7"
+  dependencies:
+    "@types/node": "npm:*"
+    "@types/node-fetch": "npm:*"
+    "@types/npm-package-arg": "npm:*"
+    "@types/npmlog": "npm:*"
+    "@types/ssri": "npm:*"
+  checksum: 45ea6be32c711f791ac416bc76f6f78fd5d014c19d7064cc16390f12bfe903fc523d08eac5ed9397fad0a9ab6e0856cf5ecbbaf861780583e583f5b4f9c5ac71
+  languageName: node
+  linkType: hard
+
+"@types/npmlog@npm:*":
+  version: 7.0.0
+  resolution: "@types/npmlog@npm:7.0.0"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: e94cb1d7dc6b1251d58d0a3cbf0c5b9e9b7c7649774cf816b9277fc10e1a09e65f2854357c4972d04d477f8beca3c8accb5e8546d594776e59e35ddfee79aff2
   languageName: node
   linkType: hard
 
@@ -6274,6 +6312,15 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: b20b7820ee813f22de4f2ce98bdd12c68c930e016a8912b1ed967595ac0d8a4cbbff44f4d486dd97f77f5927e7b5725bdac7472c9ec5b27f53a5a13179f0612f
+  languageName: node
+  linkType: hard
+
+"@types/ssri@npm:*":
+  version: 7.1.5
+  resolution: "@types/ssri@npm:7.1.5"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 84ff3d2cabe673fa6610564f5c3f5ddba9938feb7c836d73eac826d031983e1ca528b779962eca651d33f65b11b7164b25c6bb81c40456e29af7cd459274f72f
   languageName: node
   linkType: hard
 
@@ -12277,6 +12324,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "generator-react-native-vector-icons@workspace:packages/generator-react-native-vector-icons"
   dependencies:
+    "@types/npm-registry-fetch": "npm:^8.0.7"
     copyfiles: "npm:^2.4.1"
     mem-fs: "npm:^4.0.0"
     npm-registry-fetch: "npm:^16.1.0"
@@ -17468,6 +17516,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-fetch@npm:*, node-fetch@npm:3.3.2":
+  version: 3.3.2
+  resolution: "node-fetch@npm:3.3.2"
+  dependencies:
+    data-uri-to-buffer: "npm:^4.0.0"
+    fetch-blob: "npm:^3.1.4"
+    formdata-polyfill: "npm:^4.0.10"
+  checksum: f3d5e56190562221398c9f5750198b34cf6113aa304e34ee97c94fd300ec578b25b2c2906edba922050fce983338fde0d5d34fcb0fc3336ade5bd0e429ad7538
+  languageName: node
+  linkType: hard
+
 "node-fetch@npm:2.6.7":
   version: 2.6.7
   resolution: "node-fetch@npm:2.6.7"
@@ -17479,17 +17538,6 @@ __metadata:
     encoding:
       optional: true
   checksum: fcae80f5ac52fbf5012f5e19df2bd3915e67d3b3ad51cb5942943df2238d32ba15890fecabd0e166876a9f98a581ab50f3f10eb942b09405c49ef8da36b826c7
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:3.3.2":
-  version: 3.3.2
-  resolution: "node-fetch@npm:3.3.2"
-  dependencies:
-    data-uri-to-buffer: "npm:^4.0.0"
-    fetch-blob: "npm:^3.1.4"
-    formdata-polyfill: "npm:^4.0.10"
-  checksum: f3d5e56190562221398c9f5750198b34cf6113aa304e34ee97c94fd300ec578b25b2c2906edba922050fce983338fde0d5d34fcb0fc3336ade5bd0e429ad7538
   languageName: node
   linkType: hard
 
