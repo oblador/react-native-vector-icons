@@ -248,6 +248,11 @@ To set up the library on your macOS project using `react-native-macos`, follow t
 
 2. Edit your `Info.plist` and include a new property named **Application fonts resource path** (or `ATSApplicationFontsPath` if Xcode's autocomplete isn't functioning or you're not using Xcode). Set the value of this property to `Fonts`.
 
+3. Update the pod. From your project's `/ios` folder run:
+```sh
+pod update
+```
+   
 _Please note that after adding new fonts, you need to recompile your project. Also, make sure that the `Fonts` folder is present under the **Copy Bundle Resources** section within the **Build Phases** of your Xcode project._
 
 These steps will effectively integrate the vector icons library into your macOS project while utilizing the `react-native-macos` framework.
