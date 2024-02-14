@@ -237,6 +237,17 @@ The following steps are optional and are only necessary if you intend to utilize
       }
     ```
 
+- Kotlin:MainApplication.kt
+    ```diff
+       override fun getPackages(): List<ReactPackage> =
+            PackageList(this).packages.apply {
+              // Packages that cannot be autolinked yet can be added manually here, for example:
+              // add(MyReactNativePackage())
+          +     add(VectorIconsPackage())
+            }
+
+    ```
+
 Please note that this optional step is necessary only if your **react-native app doesn't support auto-linking**; otherwise, you can skip this.
 
 ### macOS Setup
