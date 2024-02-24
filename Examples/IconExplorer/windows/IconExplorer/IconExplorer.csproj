@@ -190,8 +190,20 @@
       <Link>Assets\Ionicons.ttf</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\MaterialIcons.ttf">
-      <Link>Assets\MaterialIcons.ttf</Link>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\MaterialIcons_Regular.ttf">
+      <Link>Assets\MaterialIcons_Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\MaterialIcons_Outlined.otf">
+      <Link>Assets\MaterialIcons_Outlined.otf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\MaterialIcons_Round.otf">
+      <Link>Assets\MaterialIcons_Round.otf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\MaterialIcons_Sharp.otf">
+      <Link>Assets\MaterialIcons_Sharp.otf</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\node_modules\react-native-vector-icons\Fonts\Octicons.ttf">
