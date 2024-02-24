@@ -90,7 +90,10 @@ To use the bundled icons on iOS, follow these steps:
       <string>FontAwesome6_Solid.ttf</string>
       <string>Foundation.ttf</string>
       <string>Ionicons.ttf</string>
-      <string>MaterialIcons.ttf</string>
+      <string>MaterialIcons_Outlined.otf</string>
+      <string>MaterialIcons_Regular.ttf</string>
+      <string>MaterialIcons_Round.otf</string>
+      <string>MaterialIcons_Sharp.otf</string>
       <string>MaterialCommunityIcons.ttf</string>
       <string>SimpleLineIcons.ttf</string>
       <string>Octicons.ttf</string>
@@ -140,7 +143,7 @@ To make font management smoother on Android, use this method:
 
   ```gradle
   project.ext.vectoricons = [
-      iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Specify font files
+      iconFontNames: [ 'MaterialIcons_Regular.ttf', 'EvilIcons.ttf' ] // Specify font files
   ]
 
   apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
