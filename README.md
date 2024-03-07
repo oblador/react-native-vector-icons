@@ -16,6 +16,7 @@ For the integration of `.svg` files natively, you can explore [`react-native-vec
   - [Android Setup](#android-setup)
   - [macOS Setup](#macos-setup)
   - [Windows Setup](#windows-setup)
+  - [React-native-web Setup](#react-native-web-setup)
   - [Web Setup](#web-setup)
 - [Upgrading](#upgrading)
 - [Icon Component](#icon-component)
@@ -269,6 +270,68 @@ To set up the library on your Windows project using `react-native-windows`, foll
 _Please note that after adding new fonts, you need to recompile your project._
 
 By following these steps, you'll seamlessly integrate the vector icons library into your Windows project, leveraging the `react-native-windows` framework.
+
+### React-native-web Setup
+
+To port a react-native mobile app to web using `react-native-web` you just need to ensure the fonts are known on the web-app side.
+
+You will need add the font-family for each font you use to your css
+
+You can debug missing font-families by looking in the Developer console in your web browser when debugging your web app.
+
+NOTE: if you're using webpack or similar you *may* need to configure webpack to handle loading of ttf fonts, using url-loader or file-loader. See [Web Setup](#web-setup) for more details.
+
+In your `App.css` or similar add the font-family specifications:
+
+```css
+@font-face {
+  src: url(path/to/fonts/Ionicons.ttf);
+  font-family: "Ionicons";
+}
+
+@font-face {
+  src: url(path/to/fonts/FontAwesome.ttf);
+  font-family: "FontAwesome";
+}
+
+@font-face {
+  src: url(path/to/fonts/FontAwesome5_Brands.ttf);
+  font-family: "FontAwesome5_Brands";
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+@font-face {
+  src: url(path/to/fonts/FontAwesome5_Regular.ttf);
+  font-family: "FontAwesome5_Regular";
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+@font-face {
+  src: url(path/to/fonts/FontAwesome5_Solid.ttf);
+  font-family: "FontAwesome5_Solid";
+  font-weight: 900; /* Bold weight for solid */
+  font-style: normal;
+}
+
+@font-face {
+  src: url(path/to/fonts/MaterialIcons.ttf);
+  font-family: "MaterialIcons";
+}
+
+@font-face {
+  src: url(path/to/fonts/Feather.ttf);
+  font-family: "Feather";
+}
+
+@font-face {
+  src: url(path/to/fonts/MaterialCommunityIcons.ttf);
+  font-family: "MaterialCommunityIcons";
+}
+
+/* TODO: Add other icons fonts here */
+```
 
 ### Web Setup
 
@@ -766,6 +829,57 @@ You probably didn't update the font files linked to your native project after up
 #### Some icons are missing after upgrading this package
 
 Sometimes vendors decides to remove some icons from newer releases, this has nothing to do with this package. If you depend on an older version of a font you can add it as a [custom font](#custom-fonts).
+
+#### Web-pack complains about unsupport JSX Syntax
+
+You will need to add JSX support for react-native-vector-icons to your transpiler configuration e.g. babel. the list of modules that support JSX (if using webpack)
+
+This may look something like the following:
+
+```js
+// Process application JS with Babel.
+// The preset includes JSX, Flow, TypeScript, and some ESnext features.
+{
+  test: /\.(js|mjs|jsx|ts|tsx)$/,
+  include: [
+    paths.appSrc,
+    // START - support for JSX in react-native-vector-icons
+    path.resolve(
+      __dirname,
+      // modify this path to be relative to you webpack config.
+      "../../../node_modules/react-native-vector-icons",
+    ),
+    // END - support got react-native-vector-icons
+  ],
+  loader: require.resolve("babel-loader"),
+  options: {
+    customize: require.resolve(
+      "babel-preset-react-app/webpack-overrides",
+    ),
+    presets: [
+      [
+        require.resolve("babel-preset-react-app"),
+        {
+          runtime: hasJsxRuntime ? "automatic" : "classic",
+        },
+      ],
+    ],
+
+    plugins: [
+      isEnvDevelopment &&
+        shouldUseReactRefresh &&
+        require.resolve("react-refresh/babel"),
+    ].filter(Boolean),
+    // This is a feature of `babel-loader` for webpack (not Babel itself).
+    // It enables caching results in ./node_modules/.cache/babel-loader/
+    // directory for faster rebuilds.
+    cacheDirectory: true,
+    // See #6846 for context on why cacheCompression is disabled
+    cacheCompression: false,
+    compact: isEnvProduction,
+  },
+},
+```
 
 ## License
 
