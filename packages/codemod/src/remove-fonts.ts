@@ -1,5 +1,7 @@
-import fs from 'node:fs';
+/* eslint-disable no-console */
+
 import { execSync } from 'node:child_process';
+import fs from 'node:fs';
 
 const fonts = [
   'AntDesign.ttf',
@@ -39,7 +41,10 @@ const fonts = [
 
 export default () => {
   console.log('Removing unused fonts');
-  const files = execSync('find android/app/src/main/assets/fonts -name "*.ttf"').toString().split("\n").map((line)=> line.trim());
+  const files = execSync('find android/app/src/main/assets/fonts -name "*.ttf"')
+    .toString()
+    .split('\n')
+    .map((line) => line.trim());
 
   const toDelete = files.filter((file) => fonts.includes(file.replace(/.*\//, '')));
 

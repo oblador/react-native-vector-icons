@@ -4,11 +4,6 @@
     "rootDir": "./src",
     "outDir": "./generators"
   },
-  "include": [
-    "./src"
-  ],
-  "exclude": [
-    "node_modules",
-    "src/*/templates"
-  ]
+  "include": ["./src"],
+  "exclude": ["node_modules", "src/*/templates"]
 }

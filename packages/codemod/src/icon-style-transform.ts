@@ -17,7 +17,9 @@ export default (j: JSCodeshift, root: Collection) =>
 
       const { node } = path;
       iconStyles.forEach((style) => {
-        const styleAttr = node.attributes?.find((attr) => attr.type === 'JSXAttribute' && attr.name.name === style) as JSXAttribute | undefined;
+        const styleAttr = node.attributes?.find((attr) => attr.type === 'JSXAttribute' && attr.name.name === style) as
+          | JSXAttribute
+          | undefined;
         if (!styleAttr) {
           return;
         }

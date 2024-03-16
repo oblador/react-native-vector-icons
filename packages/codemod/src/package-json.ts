@@ -2,9 +2,9 @@ import fs from 'node:fs';
 
 export default (pkgs: Set<string>) => {
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  const dependencies = packageJson.dependencies;
+  const { dependencies } = packageJson;
 
-  pkgs.forEach(pkg => {
+  pkgs.forEach((pkg) => {
     if (!dependencies[pkg]) {
       dependencies[pkg] = 'latest';
     }
