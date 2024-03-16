@@ -51,7 +51,9 @@ const App = () => (
         name="IconSet"
         component={IconSetScreen}
         options={({ route }) => ({
-          title: route.params.iconName,
+          title: route.params.iconStyle
+            ? route.params.iconName
+            : `${route.params.iconName} - ${route.params.iconStyle}`,
           headerStyle: styles.header,
         })}
       />
