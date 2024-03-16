@@ -1,6 +1,7 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "fontello",
+    "versionSuffix": "-alpha",
     "customReadme": true,
     "customSrc": true
   }

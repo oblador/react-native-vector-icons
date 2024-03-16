@@ -2,7 +2,7 @@
   "generator-react-native-vector-icons": {
     "fontName": "MaterialIcons-Regular",
     "packageName": "material-icons",
-    "versionSuffix": "-alpha.1",
+    "versionSuffix": "-alpha",
     "buildSteps": {
       "preScript": {
         "script": "mkdir -p fonts\nREF='f7bd4f25f3764883717c09a1fd867f560c9a9581' # Sep 19, 2022 update\ncurl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIcons-Regular.codepoints -Ls > MaterialIcons-Regular.codepoints\ncurl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIcons-Regular.ttf -Ls > fonts/MaterialIcons.ttf"
