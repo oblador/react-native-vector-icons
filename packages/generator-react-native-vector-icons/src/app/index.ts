@@ -10,7 +10,7 @@ import semver from 'semver';
 
 import Generator, { type BaseOptions } from 'yeoman-generator';
 
-import { generateGlyphmap } from './generateGlyphmap';
+import { generateGlyphmap } from './generateGlyphmap.js';
 
 interface Data {
   name: string;
@@ -55,11 +55,17 @@ interface Data {
 
 const { uid, gid } = os.userInfo();
 
-export default class extends Generator {
+type Arguments = BaseOptions & {
+  currentVersion: string;
+};
+
+export default class extends Generator<Arguments> {
   data: Data;
 
-  constructor(args: string | string[], opts: BaseOptions) {
+  constructor(args: string | string[], opts: Arguments) {
     super(args, opts);
+
+    this.option('current-version', { type: String, description: 'Current package version' });
 
     this.data = this._data();
   }
@@ -128,14 +134,10 @@ export default class extends Generator {
   async _writePackageJSON() {
     const { data } = this;
 
-    if (!data.upstreamFont) {
-      return;
-    }
-
     const packageFile = this.destinationPath('package.json');
     const packageJSON = JSON.parse(fs.readFileSync(packageFile, 'utf8'));
 
-    let packageName: string;
+    let packageName = '';
     let version: string;
     let versionOnly = false;
     if (typeof data.upstreamFont === 'object') {
@@ -154,14 +156,31 @@ export default class extends Generator {
         throw new Error(`Invalid upstreamFont ${data.upstreamFont}: no matching version`);
       }
       version = possibleVersion;
-    } else {
+    } else if (typeof data.upstreamFont === 'string') {
       const packageInfo = await npmFetch.json(`https://registry.npmjs.org/${data.upstreamFont}/latest`);
       version = packageInfo.version as string;
       packageName = data.upstreamFont;
+    } else {
+      version = '0.0.1';
     }
 
-    packageJSON.version = `${version}${data.versionSuffix}`;
-    if (!versionOnly) {
+    const { currentVersion } = this.options;
+    let versionSuffix = '';
+    if (currentVersion && data.versionSuffix && currentVersion.match(data.versionSuffix)) {
+      const preRelease = currentVersion.split(data.versionSuffix)[1];
+      versionSuffix = `${data.versionSuffix}${preRelease}`;
+    } else {
+      versionSuffix = data.versionSuffix ? `${data.versionSuffix}.1` : '';
+    }
+
+    packageJSON.version = `${version}${versionSuffix}`;
+
+    const commonPackageFile = this.destinationPath('../common/package.json');
+    const commonPackageJSON = JSON.parse(fs.readFileSync(commonPackageFile, 'utf8'));
+
+    packageJSON.dependencies['@react-native-vector-icons/common'] = `^${commonPackageJSON.version}`;
+
+    if (!versionOnly && packageName) {
       packageJSON.devDependencies[packageName] = version;
     }
 

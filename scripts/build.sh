@@ -17,6 +17,8 @@ for package in *; do
 
   cd $package
 
+  CURRENT_VERSION=$(jq -r '.version' package.json)
+
   rm -rf *
 
   if [ "$(jq -r '."generator-react-native-vector-icons".customReadme' .yo-rc.json)" == "true" ]; then
@@ -27,7 +29,7 @@ for package in *; do
     git restore src > /dev/null || true
   fi
 
-  yo react-native-vector-icons --force
+  yo react-native-vector-icons --force --current-version=$CURRENT_VERSION
 
   cd -
 done
