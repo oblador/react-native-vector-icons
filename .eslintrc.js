@@ -44,13 +44,11 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
+    'import/prefer-default-export': 'off',
     // Prefer the typescript unsed vars rule
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
-    'import/prefer-default-export': 'off',
-    // 'react/static-property-placement': 0,
-    // 'react/state-in-constructor': 0,
-    // 'import/no-extraneous-dependencies': 0,
-    // 'import/no-unresolved': [2, { ignore: ['^react(-native)?$'] }],
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
   },
 };

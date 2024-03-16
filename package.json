@@ -7,6 +7,7 @@
   "scripts": {
     "build": "scripts/build.sh",
     "clean": "lerna run run clean",
+    "prepare": "lerna run prepare",
     "format": "prettier **/*.{ts,tsx} --write",
     "test": "lerna run test",
     "lint": "eslint \"**/*.{js,ts,tsx}\"; biome check .",
