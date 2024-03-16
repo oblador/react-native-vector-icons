@@ -79,12 +79,12 @@ android {
     main {
       if (isNewArchitectureEnabled()) {
         java.srcDirs += [
-          'src/newarch',
+          "src/newarch",
           // This is needed to build Kotlin project with NewArch enabled
           "${project.buildDir}/generated/source/codegen/java"
         ]
       } else {
-        java.srcDirs += ['src/oldarch']
+        java.srcDirs += ["src/oldarch"]
       }
     }
   }

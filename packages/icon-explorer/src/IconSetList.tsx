@@ -1,14 +1,6 @@
-import React from 'react';
+import React, { type ReactNode } from 'react';
 
-import {
-  Image,
-  SectionList,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View,
-  type ViewProps,
-} from 'react-native';
+import { Image, SectionList, StyleSheet, Text, TouchableHighlight, View, type ViewProps } from 'react-native';
 
 import { createAnimatableComponent } from 'react-native-animatable';
 
@@ -64,8 +56,7 @@ const INLINE = [
     name: 'inline',
     children: (
       <Text>
-        This text has <FontAwesome name="rocket" /> inline{' '}
-        <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
+        This text has <FontAwesome name="rocket" /> inline <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
       </Text>
     ),
   },
@@ -76,17 +67,9 @@ const SYNCHROUNOUS = [
     name: 'synchronous',
     children: (
       <>
-        <Image
-          source={FontAwesome.getImageSourceSync('check', 40, 'green')}
-          width={40}
-          height={40}
-        />
+        <Image source={FontAwesome.getImageSourceSync('check', 40, 'green')} width={40} height={40} />
 
-        <Image
-          source={FontAwesome6.getImageSourceSync('check', 40, 'green', 'solid')}
-          width={40}
-          height={40}
-        />
+        <Image source={FontAwesome6.getImageSourceSync('check', 40, 'green', 'solid')} width={40} height={40} />
       </>
     ),
   },
@@ -138,13 +121,12 @@ const styles = StyleSheet.create({
   },
 });
 
-export type IconSet = (typeof ICON_SETS)[number];
+export type IconName = keyof typeof ICON_SETS;
+export type IconSet = (typeof ICON_SETS)[IconName];
 
 const ItemSeparator = () => <View style={styles.separator} />;
 
-const renderRow = (item: { children: JSX.Element }) => (
-  <View style={styles.row}>{item.children}</View>
-);
+const renderRow = (item: { children: ReactNode }) => <View style={styles.row}>{item.children}</View>;
 
 const renderStyling = (item: (typeof STYLING)[number]) => (
   <View style={styles.row}>
@@ -158,27 +140,33 @@ export const IconSetList = ({
   navigator,
   multiNavigator,
 }: {
-  navigator: (iconSet: IconSet, title: string) => void;
-  multiNavigator: (iconSet: IconSet, title: string) => void;
+  navigator: (iconName: IconName) => void;
+  multiNavigator: (iconName: IconName) => void;
 }) => {
-  const renderIcon = (item: (typeof ICON_SETS)[number]) => (
-    <TouchableHighlight
-      onPress={() =>
-        item.meta ? multiNavigator(item, item.name) : navigator(item, item.name)
-      }
-      underlayColor="#eee"
-    >
-      <View style={styles.row}>
-        <Text style={styles.text}>{item.name}</Text>
-        <Text style={styles.glyphCount}>{item.glyphNames.length}</Text>
-      </View>
-    </TouchableHighlight>
-  );
+  const renderIcon = (itemName: IconName) => {
+    const item = ICON_SETS[itemName];
 
+    return (
+      <TouchableHighlight
+        onPress={() => (item.meta ? multiNavigator(itemName) : navigator(itemName))}
+        underlayColor="#eee"
+      >
+        <View style={styles.row}>
+          <Text style={styles.text}>{itemName}</Text>
+          <Text style={styles.glyphCount}>{item.glyphNames.length}</Text>
+        </View>
+      </TouchableHighlight>
+    );
+  };
+
+  const iconNames = Object.keys(ICON_SETS) as IconName[];
   return (
     <SectionList
       sections={[
-        { title: 'ICON SETS', data: ICON_SETS.map((item) => renderIcon(item)) },
+        {
+          title: 'ICON SETS',
+          data: iconNames.map((itemName) => renderIcon(itemName)),
+        },
         { title: 'INLINE', data: INLINE.map((item) => renderRow(item)) },
         {
           title: 'SYNCHROUNOUS',

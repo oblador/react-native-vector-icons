@@ -40,8 +40,8 @@ import OcticonsGlyphs from '@react-native-vector-icons/octicons/glyphmaps/Octico
 import SimpleLineIconsGlyphs from '@react-native-vector-icons/simple-line-icons/glyphmaps/SimpleLineIcons.json';
 import ZocialGlyphs from '@react-native-vector-icons/zocial/glyphmaps/Zocial.json';
 
-import FontelloConfig from '../fontello.config.json';
-import IcoMoonConfig from '../icomoon.config.json';
+import FontelloConfig from './configs/fontello.config.json';
+import IcoMoonConfig from './configs/icomoon.config.json';
 
 const Fontello = createFontelloIconSet(FontelloConfig);
 const FontelloGlyphs: Record<string, number> = {};
@@ -69,102 +69,38 @@ const groupGlyphNames = (glyphMap: Record<string, number>) => {
   return Object.values(result);
 };
 
-const iconSets = [
-  { name: 'AntD', component: AntD, glyphNames: groupGlyphNames(AntDGlyphs) },
-  {
-    name: 'Entypo',
-    component: Entypo,
-    glyphNames: groupGlyphNames(EntypoGlyphs),
-  },
-  {
-    name: 'EvilIcons',
-    component: EvilIcons,
-    glyphNames: groupGlyphNames(EvilIconsGlyphs),
-  },
-  {
-    name: 'Feather',
-    component: Feather,
-    glyphNames: groupGlyphNames(FeatherGlyphs),
-  },
-  {
-    name: 'FontAwesome',
-    component: FontAwesome,
-    glyphNames: groupGlyphNames(FontAwesomeGlyphs),
-  },
-  {
-    name: 'FontAwesome5',
-    component: FontAwesome5,
-    glyphNames: groupGlyphNames(FontAwesome5Glyphs),
-    meta: FontAwesome5Meta,
-  },
-  {
-    name: 'FontAwesome5Pro',
+const iconSets = {
+  AntD: { component: AntD, glyphNames: groupGlyphNames(AntDGlyphs), meta: undefined },
+  Entypo: { component: Entypo, glyphNames: groupGlyphNames(EntypoGlyphs), meta: undefined },
+  EvilIcons: { component: EvilIcons, glyphNames: groupGlyphNames(EvilIconsGlyphs), meta: undefined },
+  Feather: { component: Feather, glyphNames: groupGlyphNames(FeatherGlyphs), meta: undefined },
+  FontAwesome: { component: FontAwesome, glyphNames: groupGlyphNames(FontAwesomeGlyphs), meta: undefined },
+  FontAwesome5: { component: FontAwesome5, glyphNames: groupGlyphNames(FontAwesome5Glyphs), meta: FontAwesome5Meta },
+  FontAwesome5Pro: {
     component: FontAwesome5Pro,
     glyphNames: groupGlyphNames(FontAwesome5ProGlyphs),
     meta: FontAwesome5ProMeta,
   },
-  {
-    name: 'FontAwesome6',
-    component: FontAwesome6,
-    glyphNames: groupGlyphNames(FontAwesome6Glyphs),
-    meta: FontAwesome6Meta,
-  },
-  {
-    name: 'FontAwesome6Pro',
+  FontAwesome6: { component: FontAwesome6, glyphNames: groupGlyphNames(FontAwesome6Glyphs), meta: FontAwesome6Meta },
+  FontAwesome6Pro: {
     component: FontAwesome6Pro,
     glyphNames: groupGlyphNames(FontAwesome6ProGlyphs),
     meta: FontAwesome6ProMeta,
   },
-  {
-    name: 'Fontello',
-    component: Fontello,
-    glyphNames: groupGlyphNames(FontelloGlyphs),
-  },
-  {
-    name: 'Fontisto',
-    component: Fontisto,
-    glyphNames: groupGlyphNames(FontistoGlyphs),
-  },
-  {
-    name: 'Foundation',
-    component: Foundation,
-    glyphNames: groupGlyphNames(FoundationGlyphs),
-  },
-  {
-    name: 'IcoMoon',
-    component: IcoMoon,
-    glyphNames: groupGlyphNames(IcoMoonGlyphs),
-  },
-  {
-    name: 'Ionicons',
-    component: Ionicons,
-    glyphNames: groupGlyphNames(IoniconsGlyphs),
-  },
-  {
-    name: 'MaterialIcons',
-    component: MaterialIcons,
-    glyphNames: groupGlyphNames(MaterialIconsGlyphs),
-  },
-  {
-    name: 'MaterialCommunityIcons',
+  Fontello: { component: Fontello, glyphNames: groupGlyphNames(FontelloGlyphs), meta: undefined },
+  Fontisto: { component: Fontisto, glyphNames: groupGlyphNames(FontistoGlyphs), meta: undefined },
+  Foundation: { component: Foundation, glyphNames: groupGlyphNames(FoundationGlyphs), meta: undefined },
+  IcoMoon: { component: IcoMoon, glyphNames: groupGlyphNames(IcoMoonGlyphs), meta: undefined },
+  Ionicons: { component: Ionicons, glyphNames: groupGlyphNames(IoniconsGlyphs), meta: undefined },
+  MaterialIcons: { component: MaterialIcons, glyphNames: groupGlyphNames(MaterialIconsGlyphs), meta: undefined },
+  MaterialCommunityIcons: {
     component: MaterialDesignIcons,
     glyphNames: groupGlyphNames(MaterialDesignIconsGlyphs),
+    meta: undefined,
   },
-  {
-    name: 'Octicons',
-    component: Octicons,
-    glyphNames: groupGlyphNames(OcticonsGlyphs),
-  },
-  {
-    name: 'SimpleLineIcons',
-    component: SimpleLineIcons,
-    glyphNames: groupGlyphNames(SimpleLineIconsGlyphs),
-  },
-  {
-    name: 'Zocial',
-    component: Zocial,
-    glyphNames: groupGlyphNames(ZocialGlyphs),
-  },
-];
+  Octicons: { component: Octicons, glyphNames: groupGlyphNames(OcticonsGlyphs), meta: undefined },
+  SimpleLineIcons: { component: SimpleLineIcons, glyphNames: groupGlyphNames(SimpleLineIconsGlyphs), meta: undefined },
+  Zocial: { component: Zocial, glyphNames: groupGlyphNames(ZocialGlyphs), meta: undefined },
+};
 
 export default iconSets;
