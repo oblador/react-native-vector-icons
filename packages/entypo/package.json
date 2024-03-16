@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/entypo",
-  "version": "1.0.1-alpha.3",
+  "version": "1.0.1-alpha.4",
   "description": "Entypo font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
