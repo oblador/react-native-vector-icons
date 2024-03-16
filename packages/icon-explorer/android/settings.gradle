@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        google()
+    }
+}
+
+rootProject.name = "IconExplorer"
+
+apply(from: {
+    def searchDir = rootDir.toPath()
+    do {
+        def p = searchDir.resolve("node_modules/react-native-test-app/test-app.gradle")
+        if (p.toFile().exists()) {
+            return p.toRealPath().toString()
+        }
+    } while (searchDir = searchDir.getParent())
+    throw new GradleException("Could not find `react-native-test-app`");
+}())
+applyTestAppSettings(settings)
