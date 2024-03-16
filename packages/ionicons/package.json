@@ -53,8 +53,9 @@
     "ionicons"
   ],
   "repository": {
+    "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git",
-    "url": "git://github.com/oblador/react-native-vector-icons.git"
+    "directory": "packages/ionicons"
   },
   "author": {
     "name": "Joel Arvidsson",

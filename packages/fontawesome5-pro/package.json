@@ -53,8 +53,9 @@
     "fontawesome5-pro"
   ],
   "repository": {
+    "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git",
-    "url": "git://github.com/oblador/react-native-vector-icons.git"
+    "directory": "packages/fontawesome5-pro"
   },
   "author": {
     "name": "Joel Arvidsson",
