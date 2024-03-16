@@ -87,12 +87,13 @@ const Icons: Icons = {
   ),
 };
 
-const Icon = ({ iconStyle, ...props }: Props) => {
+const Icon = (props: Props) => {
+  const { iconStyle, name } = props;
   if (!iconStyle) {
     return <Icons.regular {...(props as regularIconProps)} />;
   }
 
-  if (!glyphValidator(props.name as string, iconStyle)) {
+  if (!glyphValidator(name as string, iconStyle)) {
     console.warn(
       `noSuchGlyph: glyph ${String(props.name)} does not exist for '${iconStyle}' icon type for FontAwesome6`,
     );
