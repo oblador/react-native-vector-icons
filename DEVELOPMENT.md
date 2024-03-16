@@ -6,7 +6,7 @@ Things we use
 
 ## Versioning
 
-For fonts we track upstream versions. Ocassionally we'll need to make changes out of step with upstream for example updating the javascript.
+For fonts we track upstream versions. Occasionally we'll need to make changes out of step with upstream for example updating the Javascript.
 
 | Upstream | Action               | Our Version           |
 | -------- | -------------------- | --------------------- |
