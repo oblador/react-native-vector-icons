@@ -53,8 +53,9 @@
     "foundation"
   ],
   "repository": {
+    "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git",
-    "url": "git://github.com/oblador/react-native-vector-icons.git"
+    "directory": "packages/foundation"
   },
   "author": {
     "name": "Joel Arvidsson",
