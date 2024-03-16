@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/simple-line-icons",
-  "version": "2.5.5-alpha.6",
+  "version": "2.5.5-alpha.7",
   "description": "Simple Line Icons font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
