@@ -1,0 +1,47 @@
+{
+  "name": "IconExplorer",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "build:android": "mkdirp dist/res && react-native bundle --entry-file index.js --platform android --dev true --bundle-output dist/main.android.jsbundle --assets-dest dist/res",
+    "build:ios": "mkdirp dist && react-native bundle --entry-file index.js --platform ios --dev true --bundle-output dist/main.ios.jsbundle --assets-dest dist",
+    "build:macos": "mkdirp dist && react-native bundle --entry-file index.js --platform macos --dev true --bundle-output dist/main.macos.jsbundle --assets-dest dist",
+    "build:windows": "mkdirp dist && react-native bundle --entry-file index.js --platform windows --dev true --bundle-output dist/main.windows.bundle --assets-dest dist",
+    "ios": "react-native run-ios",
+    "lint": "eslint .",
+    "macos": "react-native run-macos --scheme IconExplorer",
+    "start": "react-native start",
+    "test": "jest",
+    "windows": "react-native run-windows --sln windows/IconExplorer.sln"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.73.1",
+    "react-native-macos": "^0.73.0",
+    "react-native-windows": "^0.73.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@react-native/babel-preset": "^0.73.18",
+    "@react-native/eslint-config": "^0.73.1",
+    "@react-native/metro-config": "^0.73.2",
+    "@react-native/typescript-config": "^0.73.1",
+    "@rnx-kit/metro-config": "^1.3.14",
+    "@types/react": "^18.2.6",
+    "@types/react-test-renderer": "^18.0.0",
+    "babel-jest": "^29.6.3",
+    "eslint": "^8.19.0",
+    "jest": "^29.6.3",
+    "mkdirp": "^1.0.0",
+    "prettier": "2.8.8",
+    "react-native-test-app": "^3.3.6",
+    "react-test-renderer": "18.2.0",
+    "typescript": "5.0.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
