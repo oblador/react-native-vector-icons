@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
+
 import {
   DeviceEventEmitter,
   FlatList,
-  NativeSyntheticEvent,
   Platform,
   StyleSheet,
   Text,
   TextInput,
-  TextInputChangeEventData,
+  type TextInputChangeEventData,
+  type NativeSyntheticEvent,
   TouchableHighlight,
   View,
 } from 'react-native';
-import { IconSet } from './IconSetList';
+
+import type { IconName, IconSet } from './IconSetList';
+import ICON_SETS from './icon-sets';
 
 const styles = StyleSheet.create({
   container: {
@@ -58,29 +61,22 @@ const styles = StyleSheet.create({
   },
 });
 
-const getFilteredGlyphNames = (
-  iconStyle: string | undefined,
-  iconSet: IconSet,
-  query: string
-) => {
+const getFilteredGlyphNames = (iconStyle: string | undefined, iconSet: IconSet, query: string) => {
   const icons = iconStyle
-    ? (iconSet.meta?.[iconStyle as keyof typeof iconSet.meta] || []).map(
-        (name) => [name]
-      )
+    ? (iconSet.meta?.[iconStyle as keyof typeof iconSet.meta] || []).map((name) => [name])
     : iconSet.glyphNames;
 
-  return icons.filter((glyphNames) =>
-    glyphNames.find((glyphName) => glyphName.indexOf(query) !== -1)
-  );
+  return icons.filter((glyphNames) => glyphNames.find((glyphName) => glyphName.indexOf(query) !== -1));
 };
 
 export const IconList = ({
-  iconSet,
+  iconName,
   iconStyle = undefined,
 }: {
-  iconSet: IconSet;
+  iconName: IconName;
   iconStyle?: string;
 }) => {
+  const iconSet = ICON_SETS[iconName];
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
@@ -88,16 +84,13 @@ export const IconList = ({
       return undefined;
     }
 
-    const searchListner = DeviceEventEmitter.addListener('onSearchIcons', (e) =>
-      setFilter(e.query.toLowerCase())
-    );
+    const searchListner = DeviceEventEmitter.addListener('onSearchIcons', (e) => setFilter(e.query.toLowerCase()));
 
     return searchListner.remove;
   }, []);
 
-  const handleSearchChange = (
-    event: NativeSyntheticEvent<TextInputChangeEventData>
-  ) => setFilter(event.nativeEvent.text.toLowerCase());
+  const handleSearchChange = (event: NativeSyntheticEvent<TextInputChangeEventData>) =>
+    setFilter(event.nativeEvent.text.toLowerCase());
 
   const glyphNames = getFilteredGlyphNames(iconStyle, iconSet, filter);
 
@@ -123,12 +116,7 @@ export const IconList = ({
         style={styles.list}
         renderItem={({ item }) => (
           <View style={styles.row}>
-            <Icon
-              iconStyle={iconStyle}
-              name={item[0]}
-              size={20}
-              style={styles.icon}
-            />
+            <Icon iconStyle={iconStyle} name={item[0]} size={20} style={styles.icon} />
             <Text style={styles.text}>{item.join(', ')}</Text>
           </View>
         )}
@@ -144,12 +132,13 @@ export const IconList = ({
 };
 
 export const MultiIconList = ({
-  iconSet,
+  iconName,
   navigator,
 }: {
-  iconSet: IconSet;
-  navigator: (iconStyle: string, iconSet: IconSet, title: string) => void;
+  iconName: IconName;
+  navigator: (iconStyle: string, iconName: IconName) => void;
 }) => {
+  const iconSet = ICON_SETS[iconName];
   if (!iconSet.meta) {
     throw new Error('Icon has no Meta how did we get here?');
   }
@@ -159,18 +148,11 @@ export const MultiIconList = ({
       <FlatList
         data={Object.keys(iconSet.meta)}
         style={styles.list}
-        renderItem={({ item }) => (
-          <TouchableHighlight
-            onPress={() =>
-              navigator(item, iconSet, `${iconSet.name} - ${item}`)
-            }
-            underlayColor="#eee"
-          >
+        renderItem={({ item: iconStyle }) => (
+          <TouchableHighlight onPress={() => navigator(iconStyle, iconName)} underlayColor="#eee">
             <View style={styles.row}>
-              <Text style={styles.text}>{item}</Text>
-              <Text style={styles.glyphCount}>
-                {iconSet.meta[item as keyof typeof iconSet.meta].length}
-              </Text>
+              <Text style={styles.text}>{iconStyle}</Text>
+              <Text style={styles.glyphCount}>{iconSet.meta[iconStyle as keyof typeof iconSet.meta].length}</Text>
             </View>
           </TouchableHighlight>
         )}

@@ -16,8 +16,5 @@ packages/fontawesome-common/generators
 # Ignore built code
 packages/*/lib
 
-# Temp ignore IconExplorer for now
-packages/IconExplorer
-
 # Temp ignore directory for now
 packages/directory

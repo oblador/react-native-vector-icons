@@ -13,7 +13,6 @@
       "packages/*/lib",
       // Temp
       "packages/directory",
-      "packages/IconExplorer"
     ]
   },
   "organizeImports": {
