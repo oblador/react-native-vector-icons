@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontisto",
-  "version": "3.0.4-alpha.5",
+  "version": "3.0.4-alpha.6",
   "description": "Fontisto font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -71,7 +71,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^0.0.1-alpha.4"
+    "@react-native-vector-icons/common": "^0.0.1-alpha.5"
   },
   "devDependencies": {
     "del-cli": "^5.1.0",
