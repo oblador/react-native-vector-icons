@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
-import path from 'node:path';
+/* eslint-disable no-console */
+
 import { exec } from 'node:child_process';
-import packageJsonTransform from './package-json';
+import path from 'node:path';
+
 import infoPlistTransform from './info-plist';
+import packageJsonTransform from './package-json';
 import removeFonts from './remove-fonts';
 
 const dir = process.argv[2];

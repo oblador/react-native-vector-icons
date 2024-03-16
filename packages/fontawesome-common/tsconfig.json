@@ -22,7 +22,5 @@
     "target": "esnext",
     "verbatimModuleSyntax": true
   },
-  "exclude": [
-    "generators/**"
-  ],
+  "exclude": ["generators/**"]
 }

@@ -3,18 +3,14 @@ const TYPE_ERROR = 'error';
 
 type ValueData = { uri: string; scale: number };
 
-type Value =
-  | { type: typeof TYPE_VALUE; data: ValueData }
-  | { type: typeof TYPE_ERROR; data: Error };
+type Value = { type: typeof TYPE_VALUE; data: ValueData } | { type: typeof TYPE_ERROR; data: Error };
 
 export default function createIconSourceCache() {
   const cache = new Map<string, Value>();
 
-  const setValue = (key: string, value: ValueData) =>
-    cache.set(key, { type: TYPE_VALUE, data: value });
+  const setValue = (key: string, value: ValueData) => cache.set(key, { type: TYPE_VALUE, data: value });
 
-  const setError = (key: string, error: Error) =>
-    cache.set(key, { type: TYPE_ERROR, data: error });
+  const setError = (key: string, error: Error) => cache.set(key, { type: TYPE_ERROR, data: error });
 
   const has = (key: string) => cache.has(key);
 

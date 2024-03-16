@@ -6,25 +6,21 @@
 import { createIconSet } from '@react-native-vector-icons/common';
 
 type FontelloConfig = {
-  name: string,
-  css_prefix_text: string,
-  css_use_suffix: boolean,
-  hinting: boolean,
-  units_per_em: number,
-  ascent: number,
+  name: string;
+  css_prefix_text: string;
+  css_use_suffix: boolean;
+  hinting: boolean;
+  units_per_em: number;
+  ascent: number;
   glyphs: Array<{
-    uid: string,
-    css: string,
-    code: number,
-    src: string,
-  }>,
+    uid: string;
+    css: string;
+    code: number;
+    src: string;
+  }>;
 };
 
-export default (
-  config: FontelloConfig,
-  fontFamilyArg?: string,
-  fontFile?: string,
-) => {
+export default (config: FontelloConfig, fontFamilyArg?: string, fontFile?: string) => {
   const glyphMap: Record<string, number> = {};
   config.glyphs.forEach((glyph) => {
     glyphMap[glyph.css] = glyph.code;

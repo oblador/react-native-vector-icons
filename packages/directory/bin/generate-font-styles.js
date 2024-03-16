@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const path = require('path');
-const { globSync } = require('glob');
+const path = require('node:path');
+const { globSync } = require('node:glob');
 
 const customFontMap = {
   'FontAwesome5_Solid.ttf': 'FontAwesome5',
@@ -24,7 +24,7 @@ const styles = fontFiles
   font-family: '${fontFamily}';
   src: url('./fonts/${file}') format('truetype');
 }
-`
+`,
   )
   .join('\n');
 

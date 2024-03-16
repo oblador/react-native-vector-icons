@@ -1,0 +1,23 @@
+##############
+# yeoman
+##############
+
+# Ignore the templates with <%= %> tags, we'll pickup the errors in the generated code
+packages/generator-react-native-vector-icons/src/app/templates/src/index.ts
+
+# Ignore yeomenan generated template
+packages/generator-react-native-vector-icons/generators
+packages/fontawesome-common/generators
+
+##############
+# packages
+##############
+
+# Ignore built code
+packages/*/lib
+
+# Temp ignore IconExplorer for now
+packages/IconExplorer
+
+# Temp ignore directory for now
+packages/directory

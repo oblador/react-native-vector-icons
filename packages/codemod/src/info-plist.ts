@@ -1,5 +1,6 @@
-import fs from 'node:fs';
 import { execSync } from 'node:child_process';
+import fs from 'node:fs';
+
 import plist from 'plist';
 
 const fonts = [
@@ -39,7 +40,7 @@ const fonts = [
 
 export default () => {
   const file = execSync('find ios -name Info.plist | grep -v Tests').toString().trim();
-  const obj = plist.parse(fs.readFileSync(file, 'utf8')) as { UIAppFonts: string[] }
+  const obj = plist.parse(fs.readFileSync(file, 'utf8')) as { UIAppFonts: string[] };
 
   // delete fonts that match list
   obj.UIAppFonts = obj.UIAppFonts.filter((font) => !fonts.includes(font));

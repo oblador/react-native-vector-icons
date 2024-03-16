@@ -1,17 +1,23 @@
-import React, { useCallback, useLayoutEffect } from 'react';
+import React, { useCallback, useLayoutEffect, useRef } from 'react';
 import './App.css';
 
 import IconFamilies from './generated/glyphmapIndex.json';
 
 const WAITING_INTERVAL = 300;
 
-type Match = { family: string, names: string[] };
+type Match = { family: string; names: string[] };
 
-const Icon = React.memo(({ family, name, ...props }: { family: string, name: string } & React.HTMLProps<HTMLSpanElement>) => (
-  <span style={{ fontFamily: family }} {...props}>
-    {String.fromCodePoint(IconFamilies[family as keyof typeof IconFamilies][name as keyof ((typeof IconFamilies)[keyof typeof IconFamilies])])}
-  </span>
-));
+const Icon = React.memo(
+  ({ family, name, ...props }: { family: string; name: string } & React.HTMLProps<HTMLSpanElement>) => (
+    <span style={{ fontFamily: family }} {...props}>
+      {String.fromCodePoint(
+        IconFamilies[family as keyof typeof IconFamilies][
+          name as keyof (typeof IconFamilies)[keyof typeof IconFamilies]
+        ],
+      )}
+    </span>
+  ),
+);
 
 const FamiliesLinks = ({matches = []}) => {
   return (
@@ -30,20 +36,18 @@ const FamiliesLinks = ({matches = []}) => {
   )
 }
 
-const HeaderBar = () => {
-  return (
-    <div className="Header-Container">
-      <div className="Header-Content">
-        <h1 className="Header-Title">react-native-vector-icons directory</h1>
-      </div>
+const HeaderBar = () => (
+  <div className="Header-Container">
+    <div className="Header-Content">
+      <h1 className="Header-Title">react-native-vector-icons directory</h1>
     </div>
-  );
-};
+  </div>
+);
 
 const SearchBar = ({ onSubmit }: { onSubmit: (text?: string) => void }) => {
-  const inputRef = React.useRef<HTMLInputElement>(null);
-  const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
-  const handleSubmit = React.useCallback(
+  const inputRef = useRef<HTMLInputElement>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
@@ -51,22 +55,19 @@ const SearchBar = ({ onSubmit }: { onSubmit: (text?: string) => void }) => {
         onSubmit(inputRef.current.value);
       }
     },
-    [inputRef, onSubmit]
+    [onSubmit],
   );
 
-  const handleChange = React.useCallback(
+  const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       e.preventDefault();
       if (timerRef.current) {
         clearInterval(timerRef.current);
       }
 
-      timerRef.current = setTimeout(
-        () => onSubmit(inputRef.current?.value),
-        WAITING_INTERVAL
-      );
+      timerRef.current = setTimeout(() => onSubmit(inputRef.current?.value), WAITING_INTERVAL);
     },
-    [timerRef, inputRef, onSubmit]
+    [onSubmit],
   );
 
   return (
@@ -102,9 +103,7 @@ const renderMatch = ({ family, names }: Match) => (
   <div className="Result-Row" key={family}>
     <h2 className="Result-Title" id={family}>{family}</h2>
 
-    <div className="Result-List">
-      {names.map((name) => renderIcon(family, name))}
-    </div>
+    <div className="Result-List">{names.map((name) => renderIcon(family, name))}</div>
   </div>
 );
 
@@ -127,7 +126,7 @@ const getMatches = (query: string) =>
 
 const App = () => {
   const [matches, setMatches] = React.useState<Match[]>([]);
-  const handleSubmit = useCallback((text: string = '') => {
+  const handleSubmit = useCallback((text = '') => {
     setMatches(getMatches(text));
   }, []);
   useLayoutEffect(() => handleSubmit(''), [handleSubmit]);
@@ -137,9 +136,7 @@ const App = () => {
       <HeaderBar />
       <SearchBar onSubmit={handleSubmit} />
       <FamiliesLinks matches={matches} />
-      <div className="Container">
-        {matches.length === 0 ? renderNotFound() : matches.map(renderMatch)}
-      </div>
+      <div className="Container">{matches.length === 0 ? renderNotFound() : matches.map(renderMatch)}</div>
     </div>
   );
 };

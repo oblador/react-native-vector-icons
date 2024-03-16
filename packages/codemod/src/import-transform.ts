@@ -1,4 +1,4 @@
-import type {  Collection, JSCodeshift } from 'jscodeshift';
+import type { Collection, JSCodeshift } from 'jscodeshift';
 
 const imports: [string, string][] = [
   ['react-native-vector-icons/AntDesign', '@react-native-vector-icons/ant-design'],
@@ -24,17 +24,17 @@ export default (j: JSCodeshift, root: Collection, r: (msg: string) => void) => {
   const pkgs = new Set<string>();
 
   root
-  .find(j.ImportDeclaration)
-  .forEach((path) => {
-    imports.forEach(([from, to]) => {
-      if (path.node.source.value === from) {
-        path.node.source.value = to;
+    .find(j.ImportDeclaration)
+    .forEach((path) => {
+      imports.forEach(([from, to]) => {
+        if (path.node.source.value === from) {
+          path.node.source.value = to;
 
-        pkgs.add(to);
-      }
-    });
-  })
-  .toSource();
+          pkgs.add(to);
+        }
+      });
+    })
+    .toSource();
 
   pkgs.forEach((pkg) => r(`DEP_FOUND: ${pkg}`));
 };

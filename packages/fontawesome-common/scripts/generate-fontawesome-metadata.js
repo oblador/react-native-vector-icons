@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 
-const fs = require('fs');
+const fs = require('node:fs');
 const yargs = require('yargs');
 
 const { argv } = yargs
@@ -46,11 +46,7 @@ fs.readdirSync(path)
     generatedJSON[name] = icons.map((icon) => icon.split('.')[0]);
   });
 
-fs.writeFileSync(
-  argv.output,
-  `${JSON.stringify(generatedJSON, null, 2)}\r\n`,
-  'utf8'
-);
+fs.writeFileSync(argv.output, `${JSON.stringify(generatedJSON, null, 2)}\r\n`, 'utf8');
 
 const glyphMaps = {};
 const iconTypes = Object.keys(generatedJSON);
@@ -60,11 +56,9 @@ const mainMap = JSON.parse(fs.readFileSync(mainMapFilename, 'utf8'));
 iconTypes.forEach((iconType) => {
   const glyphs = generatedJSON[iconType];
   glyphMaps[iconType] = {};
-  glyphs.forEach((glyph) => { glyphMaps[iconType][glyph] = mainMap[glyph]; });
+  glyphs.forEach((glyph) => {
+    glyphMaps[iconType][glyph] = mainMap[glyph];
+  });
 
-  fs.writeFileSync(
-    argv.output.replace('_meta', `_${iconType}`),
-    JSON.stringify(glyphMaps[iconType]),
-    'utf8'
-  );
+  fs.writeFileSync(argv.output.replace('_meta', `_${iconType}`), JSON.stringify(glyphMaps[iconType]), 'utf8');
 });
