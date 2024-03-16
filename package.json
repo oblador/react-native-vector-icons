@@ -14,6 +14,7 @@
     "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.6.1",
     "@testing-library/dom": "^9.3.3",
     "@types/eslint": "^8.56.0",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
