@@ -20,7 +20,7 @@ This project is a monorepo managed using [Yarn workspaces](https://yarnpkg.com/f
 
 - The library package in `packages/common`
 - An example app in `packages/IconExplorer`
-- Fonts in `packages\fontname` e.g. `packages/fontawesome6`
+- Fonts in `packages/fontname` e.g. `packages/fontawesome6`
 
 To get started with the project, run `yarn` in the root directory to install the required dependencies for each package:
 

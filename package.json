@@ -66,5 +66,9 @@
     "trailingComma": "es5",
     "useTabs": false
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "repository": {
+    "url": "https://github.com/oblador/react-native-vector-icons",
+    "type": "git"
+  }
 }
