@@ -53,8 +53,9 @@
     "ant-design"
   ],
   "repository": {
+    "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git",
-    "url": "git://github.com/oblador/react-native-vector-icons.git"
+    "directory": "packages/ant-design"
   },
   "author": {
     "name": "Joel Arvidsson",

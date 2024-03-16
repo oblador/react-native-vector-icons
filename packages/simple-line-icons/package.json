@@ -53,8 +53,9 @@
     "simple-line-icons"
   ],
   "repository": {
+    "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git",
-    "url": "git://github.com/oblador/react-native-vector-icons.git"
+    "directory": "packages/simple-line-icons"
   },
   "author": {
     "name": "Joel Arvidsson",
