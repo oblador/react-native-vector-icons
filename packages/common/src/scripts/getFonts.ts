@@ -44,7 +44,7 @@ const getFonts = (dir: string) => {
     }
 
     const fonts = fs.readdirSync(fontDir);
-    fonts.forEach((font) => console.log(`${fontDir}/${font}`));
+    fonts.forEach((font) => console.log(`${fontDir}/${font}`)); // eslint-disable-line no-console
   });
 };
 

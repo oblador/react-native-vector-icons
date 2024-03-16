@@ -27,12 +27,6 @@
     "generate-font-index": "mkdir -p src/generated/fonts && cp ../*/fonts/*.ttf src/generated/fonts && node bin/generate-font-styles.js > src/generated/fonts.css",
     "postinstall": "echo FIXME yarn generate-glyphmap-index && echo FIXME yarn generate-font-index"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",

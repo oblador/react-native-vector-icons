@@ -16,10 +16,12 @@
     "npm-registry-fetch": "^16.1.0",
     "oslllo-svg-fixer": "^3.0.0",
     "registry-auth-token": "^5.0.2",
+    "semver": "^7.6.0",
     "yeoman-generator": "^7.1.1"
   },
   "devDependencies": {
     "@types/npm-registry-fetch": "^8.0.7",
+    "@types/semver": "^7",
     "copyfiles": "^2.4.1",
     "onchange": "^7.1.0",
     "typescript": "^5.3.3"

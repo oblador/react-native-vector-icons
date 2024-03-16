@@ -1,5 +1,21 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
+  "files": {
+    "ignore": [
+      "package.json",
+      "packages/*/glyphmaps",
+      "packages/*/.fontcustom-manifest.json",
+      "packages/*/package.json",
+      //  Duplicating eslint ignore
+      "packages/generator-react-native-vector-icons/src/app/templates/src/index.ts",
+      "packages/generator-react-native-vector-icons/generators",
+      "packages/fontawesome-common/generators",
+      "packages/*/lib",
+      // Temp
+      "packages/directory",
+      "packages/IconExplorer"
+    ]
+  },
   "organizeImports": {
     "enabled": true
   },

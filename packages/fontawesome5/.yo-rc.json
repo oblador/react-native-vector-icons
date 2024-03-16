@@ -39,18 +39,9 @@
       },
       "copyFont": {
         "location": [
-          [
-            "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf",
-            "FontAwesome5_Brands"
-          ],
-          [
-            "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf",
-            "FontAwesome5_Regular"
-          ],
-          [
-            "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf",
-            "FontAwesome5_Solid"
-          ]
+          ["../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf", "FontAwesome5_Brands"],
+          ["../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf", "FontAwesome5_Regular"],
+          ["../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf", "FontAwesome5_Solid"]
         ]
       },
       "postScript": {

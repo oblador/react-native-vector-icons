@@ -1,17 +1,10 @@
 import React, { forwardRef, type Ref } from 'react';
 
-import {
-  Platform,
-  PixelRatio,
-  processColor,
-  Text,
-  type TextProps,
-  type TextStyle,
-} from 'react-native';
+import { PixelRatio, Platform, Text, type TextProps, type TextStyle, processColor } from 'react-native';
 
-import ensureNativeModuleAvailable from './ensure-native-module-available';
-import createIconSourceCache from './create-icon-source-cache';
 import NativeIconAPI from './NativeVectorIcons';
+import createIconSourceCache from './create-icon-source-cache';
+import ensureNativeModuleAvailable from './ensure-native-module-available';
 
 export const DEFAULT_ICON_SIZE = 12;
 export const DEFAULT_ICON_COLOR = 'black';
@@ -27,12 +20,10 @@ export const createIconSet = <GM extends Record<string, number>>(
   glyphMap: GM,
   fontFamily: string,
   fontFile: string,
-  fontStyle?: TextProps['style']
+  fontStyle?: TextProps['style'],
 ) => {
   // Android doesn't care about actual fontFamily name, it will only look in fonts folder.
-  const fontBasename = fontFile
-    ? fontFile.replace(/\.(otf|ttf)$/, '')
-    : fontFamily;
+  const fontBasename = fontFile ? fontFile.replace(/\.(otf|ttf)$/, '') : fontFamily;
 
   const fontReference = Platform.select({
     windows: `/Assets/${fontFile}#${fontFamily}`,
@@ -88,7 +79,9 @@ export const createIconSet = <GM extends Record<string, number>>(
     );
   };
 
-  const WrappedIcon = forwardRef<Text, IconProps<keyof typeof glyphMap>>((props, ref) => <Icon innerRef={ref} {...props} />);
+  const WrappedIcon = forwardRef<Text, IconProps<keyof typeof glyphMap>>((props, ref) => (
+    <Icon innerRef={ref} {...props} />
+  ));
   WrappedIcon.displayName = 'Icon';
 
   const imageSourceCache = createIconSourceCache();
@@ -96,7 +89,7 @@ export const createIconSet = <GM extends Record<string, number>>(
   const getImageSourceSync = (
     name: keyof GM,
     size = DEFAULT_ICON_SIZE,
-    color: TextStyle['color'] = DEFAULT_ICON_COLOR
+    color: TextStyle['color'] = DEFAULT_ICON_COLOR,
   ) => {
     ensureNativeModuleAvailable();
 
@@ -110,13 +103,12 @@ export const createIconSet = <GM extends Record<string, number>>(
     }
 
     try {
-      const imagePath =
-        NativeIconAPI.getImageForFontSync(
-          fontReference,
-          glyph,
-          size,
-          processedColor as number // FIXME what if a non existant colour was passed in?
-        );
+      const imagePath = NativeIconAPI.getImageForFontSync(
+        fontReference,
+        glyph,
+        size,
+        processedColor as number, // FIXME what if a non existant colour was passed in?
+      );
       const value = { uri: imagePath, scale: PixelRatio.get() };
       imageSourceCache.setValue(cacheKey, value);
       return value;
@@ -129,7 +121,7 @@ export const createIconSet = <GM extends Record<string, number>>(
   const getImageSource = async (
     name: keyof GM,
     size = DEFAULT_ICON_SIZE,
-    color: TextStyle['color'] = DEFAULT_ICON_COLOR
+    color: TextStyle['color'] = DEFAULT_ICON_COLOR,
   ) => {
     ensureNativeModuleAvailable();
 
@@ -147,7 +139,7 @@ export const createIconSet = <GM extends Record<string, number>>(
         fontReference,
         glyph,
         size,
-        processedColor as number // FIXME what if a non existant colour was passed in?
+        processedColor as number, // FIXME what if a non existant colour was passed in?
       );
       const value = { uri: imagePath, scale: PixelRatio.get() };
       imageSourceCache.setValue(cacheKey, value);
@@ -165,18 +157,22 @@ export const createIconSet = <GM extends Record<string, number>>(
     ensureNativeModuleAvailable();
 
     const [filename, extension] = fontFile.split('.'); // FIXME: what if filename has two dots?
+    if (!filename) {
+      // NOTE: Thie is impossible but TypeScript doesn't know that
+      throw new Error('Font needs a filename.');
+    }
     if (!extension) {
       throw new Error('Font needs a filename extensison.');
     }
 
-    await NativeIconAPI.loadFontWithFileName(filename!, extension, 'react-native-vector-icons');
+    await NativeIconAPI.loadFontWithFileName(filename, extension, 'react-native-vector-icons');
   };
 
   loadFont();
 
   const IconNamespace = Object.assign(WrappedIcon, {
-    getImageSource: getImageSource,
-    getImageSourceSync: getImageSourceSync,
+    getImageSource,
+    getImageSourceSync,
   });
 
   return IconNamespace;

@@ -1,13 +1,16 @@
+/* eslint-disable no-underscore-dangle */
+
 import fs from 'node:fs';
-import path from 'node:path';
 import os from 'node:os';
-import semver from 'semver';
+import path from 'node:path';
+
 import npmFetch from 'npm-registry-fetch';
 import getAuthToken from 'registry-auth-token';
+import semver from 'semver';
 
-import Generator from 'yeoman-generator';
+import Generator, { type BaseOptions } from 'yeoman-generator';
 
-import { generateGlyphmap } from './generateGlyphmap.js';
+import { generateGlyphmap } from './generateGlyphmap';
 
 interface Data {
   name: string;
@@ -15,7 +18,7 @@ interface Data {
   className: string;
   fontName: string;
   fontFile: string;
-  upstreamFont?: string | { registry?: string; packageName: string; versionRange: string, versionOnly?: boolean }
+  upstreamFont?: string | { registry?: string; packageName: string; versionRange: string; versionOnly?: boolean };
   packageJSON?: Record<string, Record<string, string>>;
   versionSuffix?: string;
   customReadme?: boolean;
@@ -50,14 +53,12 @@ interface Data {
   };
 }
 
-interface Arguments { }
-
 const { uid, gid } = os.userInfo();
 
-export default class extends Generator<Arguments> {
+export default class extends Generator {
   data: Data;
 
-  constructor(args: string | string[], opts: Arguments) {
+  constructor(args: string | string[], opts: BaseOptions) {
     super(args, opts);
 
     this.data = this._data();
@@ -97,7 +98,7 @@ export default class extends Generator<Arguments> {
   }
 
   _writeTemplates() {
-    const data = this.data;
+    const { data } = this;
 
     const files: Array<string | [string, string]> = ['package.json', 'tsconfig.json'];
 
@@ -125,7 +126,7 @@ export default class extends Generator<Arguments> {
   }
 
   async _writePackageJSON() {
-    const data = this.data;
+    const { data } = this;
 
     if (!data.upstreamFont) {
       return;
@@ -144,7 +145,9 @@ export default class extends Generator<Arguments> {
       versionOnly = data.upstreamFont.versionOnly || false;
       const authToken = getAuthToken(registry.replace(/^https?:/, ''));
 
-      const packageInfo = await npmFetch.json(`${registry}/${packageName}`, { forceAuth: { _authToken: authToken?.token } });
+      const packageInfo = await npmFetch.json(`${registry}/${packageName}`, {
+        forceAuth: { _authToken: authToken?.token },
+      });
       const versions = Object.keys(packageInfo.versions as string[]);
       const possibleVersion = semver.maxSatisfying(versions, versionRange);
       if (!possibleVersion) {
@@ -195,7 +198,11 @@ export default class extends Generator<Arguments> {
 
     fs.mkdirSync('fixedSvg');
 
-    const { exitCode } = this.spawnSync('../../node_modules/.bin/oslllo-svg-fixer', ['-s', fixSVGPaths.location, '-d', 'fixedSvg'], { stdio: 'inherit' });
+    const { exitCode } = this.spawnSync(
+      '../../node_modules/.bin/oslllo-svg-fixer',
+      ['-s', fixSVGPaths.location, '-d', 'fixedSvg'],
+      { stdio: 'inherit' },
+    );
 
     if (exitCode !== 0) {
       throw new Error(`oslllo-svg-fixer exited with exitCode ${exitCode}`);
@@ -218,14 +225,23 @@ export default class extends Generator<Arguments> {
   }
 
   _buildFontCustom() {
-    const data = this.data;
+    const { data } = this;
 
     const { fontCustom } = this.data.buildSteps;
     if (!fontCustom) {
       return;
     }
 
-    const args = ['compile', fontCustom.location, '--templates', 'css', '--name', data.className, '--force', '--no-hash'];
+    const args = [
+      'compile',
+      fontCustom.location,
+      '--templates',
+      'css',
+      '--name',
+      data.className,
+      '--force',
+      '--no-hash',
+    ];
 
     this._docker('johnf/fontcustom', args);
 
@@ -243,7 +259,7 @@ export default class extends Generator<Arguments> {
   }
 
   _buildGlyphmap() {
-    const data = this.data;
+    const { data } = this;
 
     const { glyphmap } = this.data.buildSteps;
     if (!glyphmap) {
@@ -275,7 +291,7 @@ export default class extends Generator<Arguments> {
   }
 
   _copyFont() {
-    const data = this.data;
+    const { data } = this;
 
     const { copyFont } = this.data.buildSteps;
     if (!copyFont) {
