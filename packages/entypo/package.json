@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/entypo",
-  "version": "1.0.1-alpha.4",
+  "version": "1.0.1-alpha.5",
   "description": "Entypo font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -71,7 +71,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^0.0.1-alpha.3"
+    "@react-native-vector-icons/common": "^0.0.1-alpha.4"
   },
   "devDependencies": {
     "@entypo-icons/core": "1.0.1",
