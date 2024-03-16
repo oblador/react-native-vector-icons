@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/feather",
-  "version": "4.29.1-alpha.3",
+  "version": "4.29.1-alpha.4",
   "description": "Feather font for react native vector icons",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
