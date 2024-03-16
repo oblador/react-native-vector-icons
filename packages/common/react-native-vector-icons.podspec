@@ -19,16 +19,35 @@ Pod::Spec.new do |s|
   s.script_phase = {
     :name => 'Copy Fonts',
     :script => "
-      echo $PODS_ROOT
-      APP_NAME=\"$(echo $PODS_ROOT | sed 's#/ios/Pods##;s#.*/##').app\"
-      echo $APP_NAME
+      set -e
 
-      mkdir ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}/react-native-vector-icons
-      FONTS=$(node #{__dir__}/lib/commonjs/scripts/getFonts.js ${SRCROOT}/../..)
-      for font in $FONTS; do
+      # NOTE: This whole script is a bit of a hack
+      # We need two key bits of information
+      # Project Root - Always above the pods dir
+      # Xcode Build Dir to copy the fonts into - We look for the directory that ends in .app
+
+      echo START:RNVI_COPY_FONTS
+
+      echo PWD: $(pwd)
+      echo PODS_ROOT: \"$PODS_ROOT\"
+      echo PODS_CONFIGURATION_BUILD_DIR: \"$PODS_CONFIGURATION_BUILD_DIR\"
+
+      PROJECT_ROOT=\"${PODS_ROOT}/../..\"
+      echo \"PROJECT_ROOT: $PROJECT_ROOT\"
+
+      XCODE_DIR=$(ls -d \"$PODS_CONFIGURATION_BUILD_DIR\"/*.app)
+      DEST_DIR=\"${XCODE_DIR}/react-native-vector-icons\"
+      echo XCODE_DIR: \"$XCODE_DIR\"
+      echo DEST_DIR: \"$DEST_DIR\"
+      mkdir -p \"$DEST_DIR\"
+
+      FONT_LIST=$(node \"#{__dir__}/lib/commonjs/scripts/getFonts.js\" \"$PROJECT_ROOT\")
+      for font in $FONT_LIST; do
         echo Copying font $font
-        cp $font ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/../${APP_NAME}/react-native-vector-icons
+        cp $font \"$DEST_DIR\"
       done
+
+      echo END:RNVI_COPY_FONTS
     ",
   }
 
