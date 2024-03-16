@@ -12,7 +12,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "mem-fs": "^4.0.0",
+    "mem-fs": "^4.1.0",
     "npm-registry-fetch": "^16.1.0",
     "oslllo-svg-fixer": "^3.0.0",
     "registry-auth-token": "^5.0.2",
@@ -21,10 +21,11 @@
   },
   "devDependencies": {
     "@types/npm-registry-fetch": "^8.0.7",
-    "@types/semver": "^7",
+    "@types/semver": "^7.5.8",
+    "@yeoman/types": "^1.2.0",
     "copyfiles": "^2.4.1",
     "onchange": "^7.1.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "scripts": {
     "build": "npm run clean && tsc && npm run copydeps",
