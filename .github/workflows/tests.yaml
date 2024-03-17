@@ -35,7 +35,8 @@ jobs:
           yarn build:android
           nohup yarn start &
 
-      # - uses: malinskiy/action-android/install-sdk@release/0.1.6
+      - uses: malinskiy/action-android/install-sdk@release/0.1.6
+
       - run: sdkmanager platform-tools
 
       - name: build-app2
