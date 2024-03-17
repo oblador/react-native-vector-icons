@@ -1,10 +1,12 @@
 import React from 'react';
+
 import { StyleSheet } from 'react-native';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { type NativeStackScreenProps, createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { type IconName, IconSetList } from './IconSetList';
 import { IconList, MultiIconList } from './IconList';
+import { type IconName, IconSetList } from './IconSetList';
 
 const styles = StyleSheet.create({
   header: {
