@@ -18,6 +18,9 @@ jobs:
       - uses: bahmutov/npm-install@v1
         with:
           install-command: yarn --immutable
+      - name: Build
+        run: |
+          yarn prepare
       - name: Lint files
         run: yarn eslint
 
@@ -34,5 +37,8 @@ jobs:
       - uses: bahmutov/npm-install@v1
         with:
           install-command: yarn --immutable
+      - name: Build
+        run: |
+          yarn prepare
       - name: Lint files
         run: yarn biome
