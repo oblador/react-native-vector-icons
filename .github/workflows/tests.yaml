@@ -33,6 +33,7 @@ jobs:
         run: |
           cd packages/icon-explorer
           yarn build:android
+          nohup yarn start &
 
       - name: build-app2
         run: |
