@@ -1,0 +1,8 @@
+appId: com.microsoft.reacttestapp
+---
+- launchApp
+- tapOn: "FontAwesome5"
+- assertVisible: "regular"
+- tapOn: "regular"
+- assertVisible: "arrow-alt-circle-right"
+- takeScreenshot: "fontawesome5"
