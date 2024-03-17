@@ -11,7 +11,7 @@ if [ -z "$CI" ]; then
     maestro test --no-color $i
   done
 else
-  echo maestro test --format=JUNIT --color tests
+  maestro test --format=JUNIT --color tests
 fi
 
 mkdir -p diff
