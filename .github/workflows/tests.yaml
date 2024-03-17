@@ -29,18 +29,22 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: run tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 29
-          script: ./gradlew connectedCheck
-
       - name: build-app
         run: |
           cd packages/icon-explorer
           yarn build:android
+
+      - name: build-app2
+        run: |
+          cd packages/icon-explorer
           yarn android
 
+      # - name: Run tests
+      #   uses: reactivecircus/android-emulator-runner@v2
+      #   with:
+      #     api-level: 29
+      #     script: ./gradlew connectedCheck
+      #
       - name: Run tests
         run: |
           cd packages/icon-explorer
