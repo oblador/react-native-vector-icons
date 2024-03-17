@@ -67,10 +67,10 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
-          script: |
-            cd packages/icon-explorer
-            yarn android
-            yarn test
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: cd packages/icon-explorer && yarn android && yarn test
 
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
