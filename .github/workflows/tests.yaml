@@ -18,18 +18,33 @@ jobs:
       - uses: bahmutov/npm-install@v1
         with:
           install-command: yarn --immutable
+
       - name: Build
         run: |
           yarn prepare
+
+      - name: Enable KVM group perms
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+
       - name: build-app
         run: |
           cd packages/icon-explorer
           yarn build:android
           yarn android
+
       - name: Run tests
         run: |
           cd packages/icon-explorer
           yarn test
+
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
