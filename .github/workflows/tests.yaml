@@ -40,7 +40,7 @@ jobs:
           cd packages/icon-explorer
           yarn build:android
           nohup yarn start &
-          mkdir -p /home/runner/.android/avd/test.avd/
+          mkdir -p /home/runner/.android/avd/test.avd
 
       - uses: malinskiy/action-android/install-sdk@release/0.1.6
 
