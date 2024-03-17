@@ -31,47 +31,8 @@
     "lerna": "^8.1.2",
     "typescript": "^5.4.2"
   },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@react-native",
-      "airbnb",
-      "airbnb-typescript",
-      "prettier",
-      "plugin:import/typescript"
-    ],
-    "rules": {
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error"
-      ],
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ],
-      "react/function-component-definition": "off",
-      "FIXME: Something wrong above": "off",
-      "import/prefer-default-export": "off",
-      "react/jsx-props-no-spreading": "off",
-      "react/require-default-props": "off"
-    }
-  },
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/"
-  ],
-  "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
+  "engines": {
+    "node": ">= 18.0.0"
   },
   "packageManager": "yarn@4.1.1",
   "repository": {
