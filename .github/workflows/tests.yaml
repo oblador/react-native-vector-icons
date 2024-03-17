@@ -42,7 +42,7 @@ jobs:
 
       - name: Maestro cache
         uses: actions/cache@v4
-        id: avd-cache
+        id: maestro
         with:
           path: |
             ~/.maestro/bin
