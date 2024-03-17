@@ -16,14 +16,32 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - uses: actions/setup-node@v4
-      - uses: burrunan/gradle-cache-action@v1
-        name: Cache .gradle
+      - name: Gradle cache
+        uses: gradle/actions/setup-gradle@v3
       - name: Setup yarn
         run: |
           corepack enable
       - uses: bahmutov/npm-install@v1
         with:
           install-command: yarn --immutable
+
+      - name: AVD cache
+        uses: actions/cache@v4
+        id: avd-cache
+        with:
+          path: |
+            ~/.android/avd/*
+            ~/.android/adb*
+          key: avd #-${{ matrix.api-level }}
+
+      - name: create AVD and generate snapshot for caching
+        if: steps.avd-cache.outputs.cache-hit != 'true'
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29 #${{ matrix.api-level }}
+          force-avd-creation: false
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: echo "Generated AVD snapshot for caching."
 
       - name: Build
         run: |
@@ -43,7 +61,7 @@ jobs:
 
       # - uses: malinskiy/action-android/install-sdk@release/0.1.6
 
-      - run: sdkmanager platform-tools
+      # - run: sdkmanager platform-tools
 
       - name: Run tests
         uses: reactivecircus/android-emulator-runner@v2
