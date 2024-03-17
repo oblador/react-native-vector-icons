@@ -25,7 +25,7 @@ for i in *.png; do
   if [ -z "$CI" ]; then
     echo $i: $pixels
   fi
-  if [ "$pixels" -gt 0 ]; then
+  if [ "$pixels" != "0" ]; then
     echo "    <testcase id=\"$i\" name=\"$i\" time=\"1\" status=\"FAILURE\">" >> diff.xml
     echo "      <failure message=\"$pixels pixels different\"/>" >> diff.xml
     echo "      <properties>" >> diff.xml
