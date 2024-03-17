@@ -16,6 +16,8 @@ jobs:
         run: |
           corepack enable
       - uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --immutable
       - name: Lint files
         run: yarn eslint
 
@@ -30,5 +32,7 @@ jobs:
         run: |
           corepack enable
       - uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --immutable
       - name: Lint files
         run: yarn biome
