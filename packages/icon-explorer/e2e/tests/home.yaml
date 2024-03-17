@@ -5,5 +5,7 @@ appId: com.microsoft.reacttestapp
 - takeScreenshot: "home-1"
 - scroll
 - scroll
+- scroll
+- scroll
 - assertVisible: "Footer"
 - takeScreenshot: "home-2"
