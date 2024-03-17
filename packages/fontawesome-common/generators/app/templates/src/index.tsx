@@ -77,7 +77,7 @@ const Icon = (props: Props) => {
 
   if (!glyphValidator(name as string, iconStyle)) {
     console.warn(
-      `noSuchGlyph: glyph ${String(props.name)} does not exist for '${iconStyle}' icon type for FontAwesome6`,
+      `noSuchGlyph: glyph ${String(name)} does not exist for '${iconStyle}' icon type for FontAwesome6`,
     );
 
     return <Icons.<%= meta.defaultStyleName %> {...(props as <%= meta.defaultStyleName %>IconProps)} />;
