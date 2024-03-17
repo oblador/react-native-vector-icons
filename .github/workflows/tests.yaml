@@ -95,10 +95,11 @@ jobs:
         if: always()
         with:
           files: |
-            'packages/icon-exporer/e2e/*.xml'
+            'packages/icon-explorer/e2e/*.xml'
+
       - name: Publish Diff Images
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: image-diffs
-          path: packages/icon-exporer/e2e/diff
+          path: packages/icon-explorer/e2e/diff
