@@ -12,6 +12,9 @@ if [ -z "$CI" ]; then
   done
 else
   maestro test --format=JUNIT --color tests || true
+  ls
+  echo MOO
+  ls ..
 fi
 
 mkdir -p diff
