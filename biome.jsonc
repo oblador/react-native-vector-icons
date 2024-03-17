@@ -6,13 +6,16 @@
       "packages/*/glyphmaps",
       "packages/*/.fontcustom-manifest.json",
       "packages/*/package.json",
-      //  Duplicating eslint ignore
+      "packages/common/android/build",
+      "packages/icon-explorer/android/app/build",
+      "packages/icon-explorer/src/configs/icomoon.config.json",
       "packages/generator-react-native-vector-icons/src/app/templates/src/index.ts",
       "packages/generator-react-native-vector-icons/generators",
       "packages/fontawesome-common/generators",
       "packages/*/lib",
-      // Temp
-      "packages/directory",
+      "packages/icon-explorer/*.js",
+      "packages/icon-explorer/*.json",
+      "packages/directory"
     ]
   },
   "organizeImports": {

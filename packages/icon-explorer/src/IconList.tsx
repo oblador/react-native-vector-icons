@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import {
   DeviceEventEmitter,
   FlatList,
+  type NativeSyntheticEvent,
   Platform,
   StyleSheet,
   Text,
   TextInput,
   type TextInputChangeEventData,
-  type NativeSyntheticEvent,
   TouchableHighlight,
   View,
 } from 'react-native';
