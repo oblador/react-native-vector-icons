@@ -16,6 +16,8 @@ jobs:
         run: |
           corepack enable
       - uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --immutable
       - name: build-app
         run: |
           cd packages/icon-explorer
