@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "macos": "react-native run-macos --scheme IconExplorer",
     "start": "react-native start",
-    "test": "jest",
+    "test": "./bin/test.sh",
     "windows": "react-native run-windows --sln windows/IconExplorer.sln"
   },
   "dependencies": {

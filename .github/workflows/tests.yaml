@@ -5,17 +5,32 @@ on:
   - pull_request
 
 jobs:
-  lint:
-    name: Static analysis
+  android:
+    name: Android
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - uses: bahmutov/npm-install@v1
+      - name: build-app
+        run: |
+          cd packages/icon-explorer
+          yarn build:android
+          yarn android
+      - name: Run tests
+        run: |
+          cd packages/icon-explorer
+          yarn test
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
         with:
-          node-version-file: ".node-version"
-      - name: Install dependencies
-        run: yarn --frozen-lockfile --non-interactive --silent --ignore-scripts
-      - name: Lint files
-        run: yarn test
+          files: |
+            'packages/icon-exporer/e2e/*.xml'
+      - name: Publish Diff Images
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: image-diffs
+          path: packages/icon-exporer/e2e/diff

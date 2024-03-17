@@ -1,0 +1,6 @@
+appId: com.microsoft.reacttestapp
+---
+- launchApp
+- tapOn: "Fontello"
+- assertVisible: "emo-devil"
+- takeScreenshot: "fontello"

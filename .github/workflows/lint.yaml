@@ -1,0 +1,28 @@
+name: Lint
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  eslint:
+    name: eslint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - uses: bahmutov/npm-install@v1
+      - name: Lint files
+        run: yarn eslint
+
+  biome:
+    name: biome
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - uses: bahmutov/npm-install@v1
+      - name: Lint files
+        run: yarn biome

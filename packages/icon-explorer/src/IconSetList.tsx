@@ -91,6 +91,13 @@ const ANIMATED = [
   },
 ];
 
+const FOOTER = [
+  {
+    name: 'footer',
+    children: <Text>Footer to help with tests</Text>,
+  },
+];
+
 const styles = StyleSheet.create({
   sectionHeader: {
     paddingVertical: 5,
@@ -174,6 +181,7 @@ export const IconSetList = ({
         },
         { title: 'ANIMATED', data: ANIMATED.map((item) => renderRow(item)) },
         { title: 'STYLING', data: STYLING.map((item) => renderStyling(item)) },
+        { title: 'FOOTER', data: FOOTER.map((item) => renderRow(item)) },
       ]}
       renderItem={({ item }) => item}
       renderSectionHeader={({ section }) => (
