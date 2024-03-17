@@ -16,6 +16,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - uses: actions/setup-node@v4
+      - uses: burrunan/gradle-cache-action@v1
+        name: Cache .gradle
       - name: Setup yarn
         run: |
           corepack enable
@@ -43,21 +45,14 @@ jobs:
 
       - run: sdkmanager platform-tools
 
-      - name: build-app2
-        run: |
-          cd packages/icon-explorer
-          yarn android
-
-      # - name: Run tests
-      #   uses: reactivecircus/android-emulator-runner@v2
-      #   with:
-      #     api-level: 29
-      #     script: ./gradlew connectedCheck
-      #
       - name: Run tests
-        run: |
-          cd packages/icon-explorer
-          yarn test
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          script: |
+            cd packages/icon-explorer
+            yarn android
+            yarn test
 
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
