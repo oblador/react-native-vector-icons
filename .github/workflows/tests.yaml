@@ -18,6 +18,9 @@ jobs:
       - uses: actions/setup-node@v4
       - name: Gradle cache
         uses: gradle/actions/setup-gradle@v3
+        with:
+          cache-read-only: ${{ github.ref != 'refs/heads/master' && github.ref != 'refs/heads/monorepo' }}
+
       - name: Setup yarn
         run: |
           corepack enable
@@ -33,6 +36,19 @@ jobs:
             ~/.android/avd/*
             ~/.android/adb*
           key: avd #-${{ matrix.api-level }}
+
+      - name: Maestro install
+        run: curl -Ls "https://get.maestro.mobile.dev" | bash
+
+      - name: Maestro cache
+        uses: actions/cache@v4
+        id: avd-cache
+        with:
+          path: |
+            ~/.maestro/bin
+            ~/.maestro/lib
+            ~/.maestro/deps
+          key: maestro
 
       - name: create AVD and generate snapshot for caching
         if: steps.avd-cache.outputs.cache-hit != 'true'
