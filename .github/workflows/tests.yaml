@@ -89,7 +89,7 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: cd packages/icon-explorer && adb uninstall "com.microsoft.reacttestapp" && yarn android --main-activity .MainActivity && yarn test
+          script: cd packages/icon-explorer && (adb uninstall "com.microsoft.reacttestapp" || true) && yarn android --main-activity .MainActivity && yarn test
           # https://github.com/react-native-community/cli/issues/2268
 
       - name: Publish Test Results
