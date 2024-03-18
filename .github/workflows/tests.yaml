@@ -36,7 +36,7 @@ jobs:
           path: |
             ~/.android/avd/*
             ~/.android/adb*
-          key: avd #-${{ matrix.api-level }}
+          key: avd2 #-${{ matrix.api-level }}
 
       - name: Maestro install
         run: curl -Ls "https://get.maestro.mobile.dev" | bash
@@ -55,6 +55,7 @@ jobs:
         if: steps.avd-cache.outputs.cache-hit != 'true'
         uses: reactivecircus/android-emulator-runner@v2
         with:
+          profile: pixel_6_pro
           api-level: 29 #${{ matrix.api-level }}
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
@@ -69,7 +70,6 @@ jobs:
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
-          avdmanager list device || true
 
       - name: build-app
         run: |
@@ -84,11 +84,12 @@ jobs:
       - name: Run tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
+          profile: pixel_6_pro
           api-level: 29
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: avdmanager list device && cd packages/icon-explorer && adb uninstall "com.microsoft.reacttestapp" && yarn android --main-activity .MainActivity && yarn test
+          script: cd packages/icon-explorer && adb uninstall "com.microsoft.reacttestapp" && yarn android --main-activity .MainActivity && yarn test
           # https://github.com/react-native-community/cli/issues/2268
 
       - name: Publish Test Results
