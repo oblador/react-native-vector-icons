@@ -78,6 +78,11 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
+      # TODO Not sure if this should re really needed but seems to fix things
+      - name: Start Metro
+        run: |
+          nohup yarn start &
+
       - name: Run tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
