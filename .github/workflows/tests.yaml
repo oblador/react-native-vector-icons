@@ -81,6 +81,7 @@ jobs:
       # TODO Not sure if this should re really needed but seems to fix things
       - name: Start Metro
         run: |
+          cd packages/icon-explorer
           nohup yarn start &
 
       - name: Run tests
