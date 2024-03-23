@@ -89,6 +89,12 @@ jobs:
           disable-animations: true
           script: cd packages/icon-explorer && yarn test --loglevel=trace
 
+      - name: Debug
+        if: always()
+        run: |
+          adb logcat || true
+          /usr/local/lib/android/sdk/platform-tools/adb logcat
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
