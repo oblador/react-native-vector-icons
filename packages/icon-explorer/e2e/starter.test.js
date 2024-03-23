@@ -4,17 +4,16 @@ import { mkdirSync, cpSync } from 'node:fs';
 const takeAndCheckScreenshot = async (name) => {
   const screenshot = await device.takeScreenshot(name);
   const file = `${name}.png`;
-  mkdirSync('e2e/output', { recursive: true });
-  mkdirSync('e2e/diff', { recursive: true });
+  mkdirSync('e2e/output/diff', { recursive: true });
   cpSync(screenshot, `e2e/output/${file}`);
-  const pixels = execSync(`compare -crop 1440x3120+0+100 -metric AE e2e/snapshot/${file} e2e/output/${file} e2e/diff/${file} 2>&1 || true`);
+  const pixels = execSync(`compare -crop 1440x3120+0+100 -metric AE e2e/snapshot/${file} e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`);
 
   if (pixels.toString().trim() !== '0') {
     throw new Error(`Image ${name} has changed by ${pixels} pixels!`);
   }
 }
 
-describe('Example', () => {
+describe('RNVI', () => {
   beforeAll(async () => {
     await device.launchApp();
   });
