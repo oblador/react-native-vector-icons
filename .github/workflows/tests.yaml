@@ -87,7 +87,7 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: cd packages/icon-explorer && yarn test --loglevel=trace
+          script: cd packages/icon-explorer && yarn test --loglevel=trace || adb logcat || /usr/local/lib/android/sdk/platform-tools/adb logcat
 
       - name: Debug
         if: always()
