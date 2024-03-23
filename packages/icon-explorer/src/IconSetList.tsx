@@ -1,11 +1,24 @@
 import React, { type ReactNode } from 'react';
 
-import { Image, SectionList, StyleSheet, Text, TouchableHighlight, View, type ViewProps } from 'react-native';
-
-import { createAnimatableComponent } from 'react-native-animatable';
+import {
+  Image,
+  Pressable,
+  SectionList,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
+  type ViewProps,
+} from 'react-native';
 
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
+
+import { isDetoxSync } from 'react-native-is-detox';
+
+// Import locally so we can mov it out
+// Detox doesn't work when things are animating
+import { createAnimatableComponent } from './animaitable';
 
 import ICON_SETS from './icon-sets';
 
@@ -91,13 +104,6 @@ const ANIMATED = [
   },
 ];
 
-const FOOTER = [
-  {
-    name: 'footer',
-    children: <Text>Footer to help with tests</Text>,
-  },
-];
-
 const styles = StyleSheet.create({
   sectionHeader: {
     paddingVertical: 5,
@@ -126,6 +132,12 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     textAlign: 'right',
   },
+  button: {
+    padding: 4,
+    backgroundColor: '#ADA6EA',
+    width: 100,
+  },
+  buttonText: { color: 'white' },
 });
 
 export type IconName = keyof typeof ICON_SETS;
@@ -150,11 +162,14 @@ export const IconSetList = ({
   navigator: (iconName: IconName) => void;
   multiNavigator: (iconName: IconName) => void;
 }) => {
+  const ref = React.useRef<SectionList>(null);
+
   const renderIcon = (itemName: IconName) => {
     const item = ICON_SETS[itemName];
 
     return (
       <TouchableHighlight
+        testID={itemName}
         onPress={() => (item.meta ? multiNavigator(itemName) : navigator(itemName))}
         underlayColor="#eee"
       >
@@ -167,22 +182,41 @@ export const IconSetList = ({
   };
 
   const iconNames = Object.keys(ICON_SETS) as IconName[];
+  const scrollToEnd = () => {
+    ref.current?.scrollToLocation({ animated: true, itemIndex: 0, sectionIndex: 6 });
+  };
+
+  const sections = [
+    {
+      title: 'ICON SETS',
+      data: iconNames.map((itemName) => renderIcon(itemName)),
+    },
+    { title: 'INLINE', data: INLINE.map((item) => renderRow(item)) },
+    {
+      title: 'SYNCHROUNOUS',
+      data: SYNCHROUNOUS.map((item) => renderRow(item)),
+    },
+    { title: 'ANIMATED', data: ANIMATED.map((item) => renderRow(item)) },
+    { title: 'STYLING', data: STYLING.map((item) => renderStyling(item)) },
+  ];
+
+  if (isDetoxSync()) {
+    sections.unshift({
+      title: 'SCROLL',
+      data: [
+        <Pressable testID="scroll" onPress={scrollToEnd} style={styles.button}>
+          <Text style={styles.buttonText}>Scroll to End</Text>
+        </Pressable>,
+      ],
+    });
+
+    sections.push({ title: 'FOOTER', data: [<Text testID="footer">Footer</Text>] });
+  }
+
   return (
     <SectionList
-      sections={[
-        {
-          title: 'ICON SETS',
-          data: iconNames.map((itemName) => renderIcon(itemName)),
-        },
-        { title: 'INLINE', data: INLINE.map((item) => renderRow(item)) },
-        {
-          title: 'SYNCHROUNOUS',
-          data: SYNCHROUNOUS.map((item) => renderRow(item)),
-        },
-        { title: 'ANIMATED', data: ANIMATED.map((item) => renderRow(item)) },
-        { title: 'STYLING', data: STYLING.map((item) => renderStyling(item)) },
-        { title: 'FOOTER', data: FOOTER.map((item) => renderRow(item)) },
-      ]}
+      ref={ref}
+      sections={sections}
       renderItem={({ item }) => item}
       renderSectionHeader={({ section }) => (
         <View style={styles.sectionHeader}>

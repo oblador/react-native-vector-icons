@@ -149,7 +149,7 @@ export const MultiIconList = ({
         data={Object.keys(iconSet.meta)}
         style={styles.list}
         renderItem={({ item: iconStyle }) => (
-          <TouchableHighlight onPress={() => navigator(iconStyle, iconName)} underlayColor="#eee">
+          <TouchableHighlight testID={iconStyle} onPress={() => navigator(iconStyle, iconName)} underlayColor="#eee">
             <View style={styles.row}>
               <Text style={styles.text}>{iconStyle}</Text>
               <Text style={styles.glyphCount}>{iconSet.meta[iconStyle as keyof typeof iconSet.meta].length}</Text>

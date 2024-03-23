@@ -19,11 +19,19 @@ module.exports = {
       },
     },
     {
-      files: '*.test.tsx',
+      files: '*.test.js',
       env: {
         jest: true,
       },
-    },
+      globals: {
+        detox: false,
+        device: false,
+        expect: false,
+        waitFor: false,
+        element: false,
+        by: false
+      }
+    }
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {

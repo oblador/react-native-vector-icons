@@ -39,5 +39,39 @@ allprojects {
         }
         mavenCentral()
         google()
+        // START:detox
+        maven {
+          url("$rootDir/../../../node_modules/detox/Detox-android")
+        }
+        // END:detox
     }
+
+    // START:detox
+    afterEvaluate { project ->
+        def androidExtension = project.extensions.findByName('android')
+        if (androidExtension != null && project.name == 'app') {
+            androidExtension.defaultConfig {
+                // testBuildType System.getProperty('testBuildType', 'debug')
+                testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+                ndk {
+                    abiFilters 'arm64-v8a', 'x86', 'x86_64'
+                }
+            }
+
+            androidExtension.buildTypes {
+              release {
+                proguardFile "${rootProject.projectDir}/../node_modules/detox/android/detox/proguard-rules-app.pro"
+              }
+            }
+
+            androidExtension.sourceSets.androidTest.java.srcDirs += "$rootDir/app/src/androidTest/java"
+
+            project.dependencies {
+                androidTestImplementation('com.wix:detox:+')
+                implementation 'androidx.appcompat:appcompat:1.1.0'
+            }
+        }
+    }
+    // END:detox
 }
