@@ -25,6 +25,7 @@ jobs:
       - name: Setup yarn
         run: |
           corepack enable
+
       - uses: bahmutov/npm-install@v1
         with:
           install-command: yarn --immutable
@@ -37,19 +38,6 @@ jobs:
             ~/.android/avd/*
             ~/.android/adb*
           key: avd2 #-${{ matrix.api-level }}
-
-      - name: Maestro install
-        run: curl -Ls "https://get.maestro.mobile.dev" | bash
-
-      - name: Maestro cache
-        uses: actions/cache@v4
-        id: maestro
-        with:
-          path: |
-            ~/.maestro/bin
-            ~/.maestro/lib
-            ~/.maestro/deps
-          key: maestro
 
       - name: create AVD and generate snapshot for caching
         if: steps.avd-cache.outputs.cache-hit != 'true'
@@ -71,16 +59,6 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: build-app
-        run: |
-          cd packages/icon-explorer
-          yarn build:android
-          nohup yarn start &
-
-      # - uses: malinskiy/action-android/install-sdk@release/0.1.6
-
-      # - run: sdkmanager platform-tools
-
       - name: Run tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -89,26 +67,18 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: cd packages/icon-explorer && (adb uninstall "com.microsoft.reacttestapp" || true) && yarn android --main-activity .MainActivity && yarn test
-          # https://github.com/react-native-community/cli/issues/2268
+          script: yarn test
 
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
-          files: |
-            packages/icon-explorer/e2e/*.xml
+          name: test-results
+          path: e2e/output
 
-      - name: Publish Diff Images
-        uses: actions/upload-artifact@v4
+      - uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: image-diffs
-          path: packages/icon-explorer/e2e/diff
-
-      - name: Publish New Images
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: new-images
-          path: packages/icon-explorer/e2e/*.png
+          artifact: test-results
+          name: JEST Tests
+          path: e2e/output/*.xml
+          reporter: jest-junit

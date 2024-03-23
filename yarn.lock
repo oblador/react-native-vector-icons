@@ -7752,6 +7752,7 @@ __metadata:
     eslint: "npm:^8.19.0"
     get-yarn-workspaces: "npm:^1.0.2"
     jest: "npm:^29.6.3"
+    jest-junit: "npm:^16.0.0"
     mkdirp: "npm:^1.0.0"
     prettier: "npm:2.8.8"
     react: "npm:18.2.0"
@@ -16290,6 +16291,18 @@ __metadata:
     pretty-format: "npm:^27.5.1"
     throat: "npm:^6.0.1"
   checksum: 10c0/028172d5d65abf7e8da89c30894112efdd18007a934f30b89e3f35def3764824a9680917996d5e551caa2087589a372a2539777d5554fa3bae6c7e36afec6d4c
+  languageName: node
+  linkType: hard
+
+"jest-junit@npm:^16.0.0":
+  version: 16.0.0
+  resolution: "jest-junit@npm:16.0.0"
+  dependencies:
+    mkdirp: "npm:^1.0.4"
+    strip-ansi: "npm:^6.0.1"
+    uuid: "npm:^8.3.2"
+    xml: "npm:^1.0.1"
+  checksum: 10c0/d813d4d142341c2b51b634db7ad6ceb9849514cb58f96ec5e7e4cf4031a557133490452710c2d9dec9b1dd546334d9ca663e042d3070c3e8f102ce6217bd8e2e
   languageName: node
   linkType: hard
 
@@ -26787,6 +26800,13 @@ __metadata:
     sax: "npm:>=0.6.0"
     xmlbuilder: "npm:~11.0.0"
   checksum: 10c0/a3f41c9afc46d5bd0bea4070e5108777b605fd5ce2ebb978a68fd4c75513978ad5939f8135664ffea6f1adb342f391b1ba1584ed7955123b036e9ab8a1d26566
+  languageName: node
+  linkType: hard
+
+"xml@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "xml@npm:1.0.1"
+  checksum: 10c0/04bcc9b8b5e7b49392072fbd9c6b0f0958bd8e8f8606fee460318e43991349a68cbc5384038d179ff15aef7d222285f69ca0f067f53d071084eb14c7fdb30411
   languageName: node
   linkType: hard
 
