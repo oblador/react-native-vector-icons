@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        api-level: [31, 32, 33, 34]
+        api-level: [31]
+        # TODO: Let's not care about different APIs for now
+        # api-level: [31, 32, 33, 34]
+        rn-version: ['latest', '0.72-stable', '0.71-stable', '0.70-stable']
 
     steps:
       - uses: actions/checkout@v4
@@ -29,6 +32,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - uses: actions/setup-node@v4
+
       - name: Gradle cache
         uses: gradle/actions/setup-gradle@v3
         with:
@@ -42,6 +46,11 @@ jobs:
       - uses: bahmutov/npm-install@v1
         with:
           install-command: yarn --immutable
+
+      - name: Set up RN version
+        run: |
+          cd packages/icon-explorer
+          yarn add react-native@-${{ matrix.rn-version }}
 
       - name: AVD Deps
         run: |
@@ -97,7 +106,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-results
+          name: test-results-${{ matrix.rn-version }}-${{ matrix.ap-level }}
           path: packages/icon-explorer/e2e/output
 
       - uses: dorny/test-reporter@v1
