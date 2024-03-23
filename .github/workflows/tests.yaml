@@ -30,6 +30,10 @@ jobs:
         with:
           install-command: yarn --immutable
 
+      - name: Build
+        run: |
+          yarn prepare
+
       - name: AVD cache
         uses: actions/cache@v4
         id: avd-cache
@@ -48,10 +52,6 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: echo "Generated AVD snapshot for caching."
-
-      - name: Build
-        run: |
-          yarn prepare
 
       - name: Enable KVM group perms
         run: |
