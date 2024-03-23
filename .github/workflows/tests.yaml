@@ -104,7 +104,6 @@ jobs:
       - uses: dorny/test-reporter@v1
         if: always()
         with:
-          artifact: test-results
           name: JEST Tests
-          path: '*.xml'
+          path: packages/icon-explorer/e2e/output/*.xml
           reporter: jest-junit
