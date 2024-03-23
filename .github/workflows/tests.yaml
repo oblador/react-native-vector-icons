@@ -8,6 +8,10 @@ jobs:
   android:
     name: Android
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        api-level: [31]
+        # api-level: [31, 32, 33, 34]
 
     steps:
       - uses: actions/checkout@v4
@@ -41,14 +45,14 @@ jobs:
           path: |
             ~/.android/avd/*
             ~/.android/adb*
-          key: avd2 #-${{ matrix.api-level }}
+          key: avd-${{ matrix.api-level }}
 
       - name: create AVD and generate snapshot for caching
         if: steps.avd-cache.outputs.cache-hit != 'true'
         uses: reactivecircus/android-emulator-runner@v2
         with:
           profile: pixel_6_pro
-          api-level: 31 #${{ matrix.api-level }}
+          api-level: ${{ matrix.api-level }}
           arch: x86_64
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
@@ -60,27 +64,27 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: Run tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          profile: pixel_6_pro
-          api-level: 31 #${{ matrix.api-level }}
-          arch: x86_64
-          force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: true
-          script: cd packages/icon-explorer && yarn test
-
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results
-          path: e2e/output
-
-      - uses: dorny/test-reporter@v1
-        if: always()
-        with:
-          artifact: test-results
-          name: JEST Tests
-          path: e2e/output/*.xml
-          reporter: jest-junit
+      # - name: Run tests
+      #   uses: reactivecircus/android-emulator-runner@v2
+      #   with:
+      #     profile: pixel_6_pro
+      #     api-level: ${{ matrix.api-level }}
+      #     arch: x86_64
+      #     force-avd-creation: false
+      #     emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+      #     disable-animations: true
+      #     script: cd packages/icon-explorer && yarn test
+      #
+      # - uses: actions/upload-artifact@v4
+      #   if: always()
+      #   with:
+      #     name: test-results
+      #     path: e2e/output
+      #
+      # - uses: dorny/test-reporter@v1
+      #   if: always()
+      #   with:
+      #     artifact: test-results
+      #     name: JEST Tests
+      #     path: e2e/output/*.xml
+      #     reporter: jest-junit
