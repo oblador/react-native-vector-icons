@@ -17,11 +17,11 @@
     "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.6.1",
+    "@biomejs/biome": "1.6.2",
     "@testing-library/dom": "^9.3.4",
-    "@types/eslint": "^8.56.5",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
+    "@types/eslint": "^8.56.6",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
@@ -31,7 +31,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "lerna": "^8.1.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "engines": {
     "node": ">= 18.0.0"

@@ -78,7 +78,7 @@
     "font-awesome": "4.7.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "peerDependencies": {
     "react": "*",
