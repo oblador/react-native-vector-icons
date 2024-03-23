@@ -1,17 +1,22 @@
+import { describe, it, beforeEach, beforeAll } from '@jest/globals'; // eslint-disable-line import/no-extraneous-dependencies
+import { expect, device, element, waitFor, by } from 'detox'; // eslint-disable-line import/no-extraneous-dependencies
+
 import { execSync } from 'node:child_process';
 import { mkdirSync, cpSync } from 'node:fs';
 
-const takeAndCheckScreenshot = async (name) => {
+const takeAndCheckScreenshot = async (name: string) => {
   const screenshot = await device.takeScreenshot(name);
   const file = `${name}.png`;
   mkdirSync('e2e/output/diff', { recursive: true });
   cpSync(screenshot, `e2e/output/${file}`);
-  const pixels = execSync(`compare -crop 1440x3120+0+100 -metric AE e2e/snapshot/${file} e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`);
+  const pixels = execSync(
+    `compare -crop 1440x3120+0+100 -metric AE e2e/snapshot/${file} e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
+  );
 
   if (pixels.toString().trim() !== '0') {
     throw new Error(`Image ${name} has changed by ${pixels} pixels!`);
   }
-}
+};
 
 describe('RNVI', () => {
   beforeAll(async () => {
@@ -29,7 +34,9 @@ describe('RNVI', () => {
     await element(by.id('scroll')).tap();
 
     // Make sure scrolling fully complete before taking the screenshot
-    await waitFor((element(by.id('footer')))).toBeVisible().withTimeout(2000);
+    await waitFor(element(by.id('footer')))
+      .toBeVisible()
+      .withTimeout(2000);
     await takeAndCheckScreenshot('home-bottom');
   });
 
