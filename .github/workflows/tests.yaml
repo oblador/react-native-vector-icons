@@ -50,7 +50,7 @@ jobs:
       - name: Set up RN version
         run: |
           cd packages/icon-explorer
-          yarn add react-native@-${{ matrix.rn-version }}
+          yarn add react-native@${{ matrix.rn-version }}
 
       - name: AVD Deps
         run: |
