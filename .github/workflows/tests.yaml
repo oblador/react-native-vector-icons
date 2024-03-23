@@ -46,7 +46,7 @@ jobs:
 
       - name: AVD Deps
         run: |
-          apt install libpulse0
+          sudo apt-get install -y libpulse0
 
       - name: Build
         run: |
