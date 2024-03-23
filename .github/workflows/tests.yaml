@@ -87,7 +87,7 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: cd packages/icon-explorer && yarn test
+          script: cd packages/icon-explorer && yarn test --loglevel=trace
 
       - uses: actions/upload-artifact@v4
         if: always()
