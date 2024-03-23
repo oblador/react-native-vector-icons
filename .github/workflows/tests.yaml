@@ -49,6 +49,7 @@ jobs:
         with:
           profile: pixel_6_pro
           api-level: 31 #${{ matrix.api-level }}
+          arch: x86_64
           force-avd-creation: false
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: echo "Generated AVD snapshot for caching."
@@ -63,7 +64,8 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           profile: pixel_6_pro
-          api-level: 29
+          api-level: 31 #${{ matrix.api-level }}
+          arch: x86_64
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
