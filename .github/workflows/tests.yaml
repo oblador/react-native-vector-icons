@@ -105,31 +105,31 @@ jobs:
           fi
 
       # TODO Not sure if this should re really needed but seems to fix things
-      # - name: Start Metro
-      #   run: |
-      #     cd packages/icon-explorer
-      #     nohup yarn start &
+      - name: Start Metro
+        run: |
+          cd packages/icon-explorer
+          nohup yarn start &
 
-      # - name: Run tests
-      #   uses: reactivecircus/android-emulator-runner@v2
-      #   with:
-      #     profile: pixel_6_pro
-      #     api-level: ${{ matrix.api-level }}
-      #     arch: x86_64
-      #     force-avd-creation: false
-      #     emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-      #     disable-animations: true
-      #     script: cd packages/icon-explorer && yarn test
-      #
-      # - uses: actions/upload-artifact@v4
-      #   if: always()
-      #   with:
-      #     name: test-results-${{ matrix.rn-version }}-${{ matrix.ap-level }}
-      #     path: packages/icon-explorer/e2e/output
-      #
-      # - uses: dorny/test-reporter@v1
-      #   if: always()
-      #   with:
-      #     name: JEST Tests
-      #     path: packages/icon-explorer/e2e/output/*.xml
-      #     reporter: jest-junit
+      - name: Run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          profile: pixel_6_pro
+          api-level: ${{ matrix.api-level }}
+          arch: x86_64
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: cd packages/icon-explorer && yarn test
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-${{ matrix.rn-version }}-${{ matrix.ap-level }}
+          path: packages/icon-explorer/e2e/output
+
+      - uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: JEST Tests
+          path: packages/icon-explorer/e2e/output/*.xml
+          reporter: jest-junit
