@@ -9,6 +9,7 @@ jobs:
     name: Android
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         api-level: [31]
         # TODO: Let's not care about different APIs for now
