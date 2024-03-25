@@ -13,7 +13,8 @@ jobs:
         api-level: [31]
         # TODO: Let's not care about different APIs for now
         # api-level: [31, 32, 33, 34]
-        rn-version: ['latest', '0.72-stable', '0.71-stable', '0.70-stable']
+        # rn-version: ['latest', '0.72-stable', '0.71-stable', '0.70-stable']
+        rn-version: ['latest', '0.71-stable', '0.70-stable']
 
     steps:
       - uses: actions/checkout@v4
@@ -46,11 +47,6 @@ jobs:
       - uses: bahmutov/npm-install@v1
         with:
           install-command: yarn --immutable
-
-      - name: Set up RN version
-        run: |
-          cd packages/icon-explorer
-          yarn add react-native@${{ matrix.rn-version }}
 
       - name: AVD Deps
         run: |
@@ -86,11 +82,25 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      # TODO Not sure if this should re really needed but seems to fix things
-      - name: Start Metro
+      - name: Set up RN version
         run: |
           cd packages/icon-explorer
-          nohup yarn start &
+
+          yarn add react-native@${{ matrix.rn-version }}
+
+          if [ "${{ matrix.rn-version }}" != "latest" ]; then # < 0.73
+            sed -i 's/8.6/7.6.3/' android/gradle/wrapper/gradle-wrapper.properties
+          fi
+
+          if [ "${{ matrix.rn-version }}" != "latest" && "${{ matrix.rn-version }}" != "0.72-stable" ]; then # < 0.72
+            sed -i 's/:detox:/:detox-legacy:/' android/build.gradle
+          fi
+
+      # TODO Not sure if this should re really needed but seems to fix things
+      # - name: Start Metro
+      #   run: |
+      #     cd packages/icon-explorer
+      #     nohup yarn start &
 
       - name: Run tests
         uses: reactivecircus/android-emulator-runner@v2
