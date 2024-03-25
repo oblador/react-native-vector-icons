@@ -2,7 +2,13 @@ const path = require('node:path');
 
 const getWorkspaces = require('get-yarn-workspaces');
 
-const workspaces = getWorkspaces(__dirname);
+const workspaces = getWorkspaces(__dirname).filter(
+  (workspace) =>
+    !workspace.match(
+      /\/(generator-react-native-vector-icons|icon-explorer|codemod|directory|fontcustom-docker)$/,
+    ),
+);
+console.log(workspaces);
 
 const { makeMetroConfig } = require("@rnx-kit/metro-config");
 module.exports = makeMetroConfig({
