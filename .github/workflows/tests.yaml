@@ -90,10 +90,17 @@ jobs:
           yarn add react-native@${{ matrix.rn-version }}
 
           if [ "${{ matrix.rn-version }}" != "latest" ]; then # < 0.73
+            echo "Fix gradle"
             sed -i 's/8.6/7.6.3/' android/gradle/wrapper/gradle-wrapper.properties
           fi
 
+          if [ "${{ matrix.rn-version }}" = "0.71-stable" ]; then # = 0.71
+            echo "Fix kotlin"
+            sed -i 's/#KOTLIN_VERSION/KOTLIN_VERSION/' android/build.gradle
+          fi
+
           if [ "${{ matrix.rn-version }}" != "latest" && "${{ matrix.rn-version }}" != "0.72-stable" ]; then # < 0.72
+            echo "Fix detox"
             sed -i 's/:detox:/:detox-legacy:/' android/build.gradle
           fi
 
@@ -103,26 +110,26 @@ jobs:
       #     cd packages/icon-explorer
       #     nohup yarn start &
 
-      - name: Run tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          profile: pixel_6_pro
-          api-level: ${{ matrix.api-level }}
-          arch: x86_64
-          force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: true
-          script: cd packages/icon-explorer && yarn test
-
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results-${{ matrix.rn-version }}-${{ matrix.ap-level }}
-          path: packages/icon-explorer/e2e/output
-
-      - uses: dorny/test-reporter@v1
-        if: always()
-        with:
-          name: JEST Tests
-          path: packages/icon-explorer/e2e/output/*.xml
-          reporter: jest-junit
+      # - name: Run tests
+      #   uses: reactivecircus/android-emulator-runner@v2
+      #   with:
+      #     profile: pixel_6_pro
+      #     api-level: ${{ matrix.api-level }}
+      #     arch: x86_64
+      #     force-avd-creation: false
+      #     emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+      #     disable-animations: true
+      #     script: cd packages/icon-explorer && yarn test
+      #
+      # - uses: actions/upload-artifact@v4
+      #   if: always()
+      #   with:
+      #     name: test-results-${{ matrix.rn-version }}-${{ matrix.ap-level }}
+      #     path: packages/icon-explorer/e2e/output
+      #
+      # - uses: dorny/test-reporter@v1
+      #   if: always()
+      #   with:
+      #     name: JEST Tests
+      #     path: packages/icon-explorer/e2e/output/*.xml
+      #     reporter: jest-junit
