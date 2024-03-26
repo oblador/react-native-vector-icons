@@ -73,7 +73,6 @@
   "engines": {
     "node": ">= 18.0.0"
   },
-  "packageManager": "yarn@4.0.1",
   "bin": {
     "fa-upgrade.sh": "./bin/fa-upgrade.sh",
     "fa-upgrade5.sh": "./bin/fa-upgrade5.sh",
