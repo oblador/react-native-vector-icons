@@ -155,6 +155,5 @@
     "android": {
       "javaPackageName": "com.reactnativevectoricons.common"
     }
-  },
-  "packageManager": "yarn@4.0.1"
+  }
 }

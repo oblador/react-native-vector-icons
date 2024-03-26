@@ -109,7 +109,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-results-${{ matrix.rn-version }}-${{ matrix.ap-level }}
+          name: test-results-${{ matrix.rn-version }}-${{ matrix.api-level }}
           path: packages/icon-explorer/e2e/output
 
       - uses: dorny/test-reporter@v1
