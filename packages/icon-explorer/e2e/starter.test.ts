@@ -10,7 +10,9 @@ const takeAndCheckScreenshot = async (name: string) => {
   mkdirSync('e2e/output/diff', { recursive: true });
   cpSync(screenshot, `e2e/output/${file}`);
   const pixels = execSync(
-    `compare -crop 1440x3120+0+100 -metric AE e2e/snapshot/${file} e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
+    // Shave top to ignore lock
+    // Shave right side to ignore scrollbar
+    `compare -crop 1400x3120+0+100 -metric AE e2e/snapshot/${file} e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
   );
 
   if (pixels.toString().trim() !== '0') {
