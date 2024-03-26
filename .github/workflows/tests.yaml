@@ -86,22 +86,8 @@ jobs:
         run: |
           cd packages/icon-explorer
 
-          yarn add react-native@${{ matrix.rn-version }}
+          ./set-rn-version.sh ${{ matrix.rn-version }}
 
-          if [ "${{ matrix.rn-version }}" != "latest" ]; then # < 0.73
-            echo "Fix gradle"
-            sed -i 's/8.6/7.6.3/' android/gradle/wrapper/gradle-wrapper.properties
-          fi
-
-          if [ "${{ matrix.rn-version }}" = "0.71-stable" ]; then # = 0.71
-            echo "Fix kotlin"
-            sed -i 's/#KOTLIN_VERSION/KOTLIN_VERSION/' android/build.gradle
-          fi
-
-          if [ "${{ matrix.rn-version }}" != "latest" && "${{ matrix.rn-version }}" != "0.72-stable" ]; then # < 0.72
-            echo "Fix detox"
-            sed -i 's/:detox:/:detox-legacy:/' android/build.gradle
-          fi
 
       # TODO Not sure if this should re really needed but seems to fix things
       - name: Start Metro
