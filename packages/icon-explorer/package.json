@@ -57,6 +57,7 @@
     "@react-native/eslint-config": "^0.73.2",
     "@react-native/metro-config": "^0.73.5",
     "@react-native/typescript-config": "^0.73.1",
+    "@rnx-kit/align-deps": "^2.4.0",
     "@rnx-kit/metro-config": "^1.3.15",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.30",
@@ -80,5 +81,27 @@
   },
   "reactNativeVectorIcons": {
     "fontDir": "src/rnvi-fonts"
+  },
+  "rnx-kit": {
+    "kitType": "app",
+    "alignDeps": {
+      "requirements": [
+        "react-native@0.70"
+      ],
+      "capabilities": [
+        "core",
+        "core-android",
+        "core-ios",
+        "core-macos",
+        "core-windows",
+        "jest",
+        "navigation/native",
+        "react",
+        "react-test-renderer",
+        "safe-area",
+        "screens",
+        "test-app"
+      ]
+    }
   }
 }

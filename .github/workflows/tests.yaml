@@ -14,8 +14,7 @@ jobs:
         api-level: [31]
         # TODO: Let's not care about different APIs for now
         # api-level: [31, 32, 33, 34]
-        # rn-version: ['latest', '0.72-stable', '0.71-stable', '0.70-stable']
-        rn-version: ['latest', '0.71-stable', '0.70-stable']
+        rn-version: ['latest', '0.72-stable', '0.71-stable', '0.70-stable']
 
     steps:
       - uses: actions/checkout@v4
