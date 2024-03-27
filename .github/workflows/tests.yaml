@@ -118,3 +118,66 @@ jobs:
           name: JEST Tests
           path: packages/icon-explorer/e2e/output/*.xml
           reporter: jest-junit
+
+  ios:
+    name: iOS
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        api-level: [31]
+        # api-level: [31, 32, 33, 34] TODO: Let's not care about different APIs for now
+        rn-version: ['latest', '0.72-stable', '0.71-stable', '0.70-stable']
+
+    steps:
+      - uses: actions/checkout@v4
+
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - uses: actions/setup-node@v4
+
+      - name: Setup yarn
+        run: |
+          corepack enable
+
+      - uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --immutable
+
+      - name: Build
+        run: |
+          yarn prepare
+
+      - name: Set up RN version
+        run: |
+          cd packages/icon-explorer
+
+          ./set-rn-version.sh ${{ matrix.rn-version }}
+
+      # TODO Not sure if this should re really needed but seems to fix things
+      - name: Start Metro
+        run: |
+          cd packages/icon-explorer
+          nohup yarn start &
+
+      - name: Run tests
+        run: |
+          cd packages/icon-explorer
+          yarn test
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-${{ matrix.rn-version }}-${{ matrix.api-level }}
+          path: packages/icon-explorer/e2e/output
+
+      - uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: JEST Tests
+          path: packages/icon-explorer/e2e/output/*.xml
+          reporter: jest-junit
