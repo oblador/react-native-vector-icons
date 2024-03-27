@@ -1909,18 +1909,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@biomejs/biome@npm:1.6.2"
+"@biomejs/biome@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@biomejs/biome@npm:1.6.3"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:1.6.2"
-    "@biomejs/cli-darwin-x64": "npm:1.6.2"
-    "@biomejs/cli-linux-arm64": "npm:1.6.2"
-    "@biomejs/cli-linux-arm64-musl": "npm:1.6.2"
-    "@biomejs/cli-linux-x64": "npm:1.6.2"
-    "@biomejs/cli-linux-x64-musl": "npm:1.6.2"
-    "@biomejs/cli-win32-arm64": "npm:1.6.2"
-    "@biomejs/cli-win32-x64": "npm:1.6.2"
+    "@biomejs/cli-darwin-arm64": "npm:1.6.3"
+    "@biomejs/cli-darwin-x64": "npm:1.6.3"
+    "@biomejs/cli-linux-arm64": "npm:1.6.3"
+    "@biomejs/cli-linux-arm64-musl": "npm:1.6.3"
+    "@biomejs/cli-linux-x64": "npm:1.6.3"
+    "@biomejs/cli-linux-x64-musl": "npm:1.6.3"
+    "@biomejs/cli-win32-arm64": "npm:1.6.3"
+    "@biomejs/cli-win32-x64": "npm:1.6.3"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -1940,62 +1940,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/a1b0c5a557469c7f8c8501a2d78a8eb91fc678d639faf0566ccaf84be7b8ee38956a1a47d10b227b60004217cad80e44730a55505a2d00b01327921a421706ca
+  checksum: 10c0/5dd7a08e8c05eea2f687257c0d14c5fa0b433803ca9a003c447d501bc5167fb1a9d7daad12a7d177e1894666144d4c4897ec3efdfa78489d9606f08f222a5f60
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@biomejs/cli-darwin-arm64@npm:1.6.2"
+"@biomejs/cli-darwin-arm64@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@biomejs/cli-darwin-arm64@npm:1.6.3"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@biomejs/cli-darwin-x64@npm:1.6.2"
+"@biomejs/cli-darwin-x64@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@biomejs/cli-darwin-x64@npm:1.6.3"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:1.6.2"
+"@biomejs/cli-linux-arm64-musl@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:1.6.3"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@biomejs/cli-linux-arm64@npm:1.6.2"
+"@biomejs/cli-linux-arm64@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@biomejs/cli-linux-arm64@npm:1.6.3"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@biomejs/cli-linux-x64-musl@npm:1.6.2"
+"@biomejs/cli-linux-x64-musl@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@biomejs/cli-linux-x64-musl@npm:1.6.3"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@biomejs/cli-linux-x64@npm:1.6.2"
+"@biomejs/cli-linux-x64@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@biomejs/cli-linux-x64@npm:1.6.3"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@biomejs/cli-win32-arm64@npm:1.6.2"
+"@biomejs/cli-win32-arm64@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@biomejs/cli-win32-arm64@npm:1.6.3"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:1.6.2":
-  version: 1.6.2
-  resolution: "@biomejs/cli-win32-x64@npm:1.6.2"
+"@biomejs/cli-win32-x64@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@biomejs/cli-win32-x64@npm:1.6.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -4677,7 +4677,7 @@ __metadata:
     "@react-native-community/cli-tools": "npm:^13.6.3"
     "@release-it/conventional-changelog": "npm:^8.0.1"
     "@types/jest": "npm:^29.5.12"
-    "@types/react": "npm:~18.2.69"
+    "@types/react": "npm:~18.2.72"
     "@types/react-native": "npm:0.73.0"
     commitlint: "npm:^19.2.1"
     css-social-buttons: "npm:^1.1.1"
@@ -4712,7 +4712,7 @@ __metadata:
     "@testing-library/user-event": "npm:^14.5.2"
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.11.30"
-    "@types/react": "npm:^18.2.69"
+    "@types/react": "npm:^18.2.72"
     "@types/react-dom": "npm:^18.2.22"
     glob: "npm:^10.3.10"
     react: "npm:^18.2.0"
@@ -6629,7 +6629,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.2.69, @types/react@npm:~18.2.69":
+"@types/react@npm:*":
   version: 18.2.69
   resolution: "@types/react@npm:18.2.69"
   dependencies:
@@ -6637,6 +6637,16 @@ __metadata:
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10c0/239b947ed8576a271057a6f571d0967098074b101a2bece244e88093dc8fb2f020872c463b8e78b2049334ba99158f6eef5960e51f73a389f86eee39b835d846
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^18.2.72, @types/react@npm:~18.2.72":
+  version: 18.2.72
+  resolution: "@types/react@npm:18.2.72"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/fe8a17a4067ab9d432ab1034967a8b2a773125e47ae84ee00e428a8b6c48912ab22d244ae6128663b119a38716a642bc5be019fcd2b3b2f4ab3c9b0200a6cc2d
   languageName: node
   linkType: hard
 
@@ -6816,15 +6826,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^7.3.1":
-  version: 7.3.1
-  resolution: "@typescript-eslint/eslint-plugin@npm:7.3.1"
+"@typescript-eslint/eslint-plugin@npm:^7.4.0":
+  version: 7.4.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:7.4.0"
   dependencies:
     "@eslint-community/regexpp": "npm:^4.5.1"
-    "@typescript-eslint/scope-manager": "npm:7.3.1"
-    "@typescript-eslint/type-utils": "npm:7.3.1"
-    "@typescript-eslint/utils": "npm:7.3.1"
-    "@typescript-eslint/visitor-keys": "npm:7.3.1"
+    "@typescript-eslint/scope-manager": "npm:7.4.0"
+    "@typescript-eslint/type-utils": "npm:7.4.0"
+    "@typescript-eslint/utils": "npm:7.4.0"
+    "@typescript-eslint/visitor-keys": "npm:7.4.0"
     debug: "npm:^4.3.4"
     graphemer: "npm:^1.4.0"
     ignore: "npm:^5.2.4"
@@ -6837,7 +6847,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/446c36801ee434854c935fd09f267bd68d537c1e422cfca87237230313b2ea40b512bb2357bcf489225df10a6d2f14dcd3ac8db80517b982abe0b609dd606c6c
+  checksum: 10c0/840da6536da48e95602ee11450485bdba34d357f2b6dbbad4cc80d2491a3ee4eda35bd23345f4c9cfc0e3c3b05bd1257bb40ea32fe27b023252bb3177668c642
   languageName: node
   linkType: hard
 
@@ -6869,21 +6879,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^7.3.1":
-  version: 7.3.1
-  resolution: "@typescript-eslint/parser@npm:7.3.1"
+"@typescript-eslint/parser@npm:^7.4.0":
+  version: 7.4.0
+  resolution: "@typescript-eslint/parser@npm:7.4.0"
   dependencies:
-    "@typescript-eslint/scope-manager": "npm:7.3.1"
-    "@typescript-eslint/types": "npm:7.3.1"
-    "@typescript-eslint/typescript-estree": "npm:7.3.1"
-    "@typescript-eslint/visitor-keys": "npm:7.3.1"
+    "@typescript-eslint/scope-manager": "npm:7.4.0"
+    "@typescript-eslint/types": "npm:7.4.0"
+    "@typescript-eslint/typescript-estree": "npm:7.4.0"
+    "@typescript-eslint/visitor-keys": "npm:7.4.0"
     debug: "npm:^4.3.4"
   peerDependencies:
     eslint: ^8.56.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/c524e7021ea551cb83e19c7f1a697664171a6b227e16e33912243af659905a7effeaf9fc05e3c160cb99d8ba17552fa87e27be38261280daa733d4d4d4876eec
+  checksum: 10c0/70ae32d406685e83fc26b4f4d3eb90c59965e0ff4fec4fd89ecd3cb386376bedb75cd8c11691b9de4743243d61a7d17ae242fe6c689a7c443a8977bc9755700b
   languageName: node
   linkType: hard
 
@@ -6897,13 +6907,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:7.3.1":
-  version: 7.3.1
-  resolution: "@typescript-eslint/scope-manager@npm:7.3.1"
+"@typescript-eslint/scope-manager@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@typescript-eslint/scope-manager@npm:7.4.0"
   dependencies:
-    "@typescript-eslint/types": "npm:7.3.1"
-    "@typescript-eslint/visitor-keys": "npm:7.3.1"
-  checksum: 10c0/08dd466b19445a8e2b093df7fcc59767289843d1cdc423b2f402a2a2c69a53e3cdf52dcc1497311346a45e875d77826a831b5b9a9fb7f709679f221344051c74
+    "@typescript-eslint/types": "npm:7.4.0"
+    "@typescript-eslint/visitor-keys": "npm:7.4.0"
+  checksum: 10c0/d1dddf6819d753063fbbcae2cd01e861d0162a9755c6c786901654ccb9d316ca1dcc5887a61fb70e72372db4c2e67c6d1890f09d8b0270971c18b48808765ba9
   languageName: node
   linkType: hard
 
@@ -6924,12 +6934,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/type-utils@npm:7.3.1":
-  version: 7.3.1
-  resolution: "@typescript-eslint/type-utils@npm:7.3.1"
+"@typescript-eslint/type-utils@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@typescript-eslint/type-utils@npm:7.4.0"
   dependencies:
-    "@typescript-eslint/typescript-estree": "npm:7.3.1"
-    "@typescript-eslint/utils": "npm:7.3.1"
+    "@typescript-eslint/typescript-estree": "npm:7.4.0"
+    "@typescript-eslint/utils": "npm:7.4.0"
     debug: "npm:^4.3.4"
     ts-api-utils: "npm:^1.0.1"
   peerDependencies:
@@ -6937,7 +6947,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/0e9ad41fe9eac135e1f6b448a2e1660df83e93bd2c370f1aaabe8bbdd376cda0e00d02b884793a3ce3a51c962c1f5cac543bcc1f02e4d1de2af757031aa6cbed
+  checksum: 10c0/17cc4159095f978fe885dba7299fc3bdb89b74068f2c30aff55b3281a2920ab0a8f5ebb15276bd3dd22ae5504e15dc6ac5021c8f0a5c05cf3f5e514f90049c96
   languageName: node
   linkType: hard
 
@@ -6948,10 +6958,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:7.3.1":
-  version: 7.3.1
-  resolution: "@typescript-eslint/types@npm:7.3.1"
-  checksum: 10c0/d3b579829db901b2ea52000a6e343b7e3814fa06f62ba42711df2533365a247e97699f64fc15482cc433302ff81e8a0eed1ed2b0478d0709171d57910d46bdd5
+"@typescript-eslint/types@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@typescript-eslint/types@npm:7.4.0"
+  checksum: 10c0/685df163cdd6d546de8a2d22896e461777a89756faf1f34342c959e7d3f4cc75b1f47a96da50483fe1da75d06515bb105f58339d277ad7e02c15ab61c90ad097
   languageName: node
   linkType: hard
 
@@ -6973,12 +6983,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:7.3.1":
-  version: 7.3.1
-  resolution: "@typescript-eslint/typescript-estree@npm:7.3.1"
+"@typescript-eslint/typescript-estree@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@typescript-eslint/typescript-estree@npm:7.4.0"
   dependencies:
-    "@typescript-eslint/types": "npm:7.3.1"
-    "@typescript-eslint/visitor-keys": "npm:7.3.1"
+    "@typescript-eslint/types": "npm:7.4.0"
+    "@typescript-eslint/visitor-keys": "npm:7.4.0"
     debug: "npm:^4.3.4"
     globby: "npm:^11.1.0"
     is-glob: "npm:^4.0.3"
@@ -6988,7 +6998,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/52dbfc590b01a43fae906dadd383c185b93fea5c8ac90aa2369f6c36d53a5d465fac02315a903a3b291974626045547ab53f346dc2271e93c8179deaad7a3961
+  checksum: 10c0/31910f9283bcb2db7d3dd77b5a3b0c52e9769cd296e78a5ba742360f9e1971a6a3e1b5eb31109b4d584a62c2caa3075a346c5413b55e28cda0226a73865d62b7
   languageName: node
   linkType: hard
 
@@ -7010,20 +7020,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:7.3.1":
-  version: 7.3.1
-  resolution: "@typescript-eslint/utils@npm:7.3.1"
+"@typescript-eslint/utils@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@typescript-eslint/utils@npm:7.4.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.4.0"
     "@types/json-schema": "npm:^7.0.12"
     "@types/semver": "npm:^7.5.0"
-    "@typescript-eslint/scope-manager": "npm:7.3.1"
-    "@typescript-eslint/types": "npm:7.3.1"
-    "@typescript-eslint/typescript-estree": "npm:7.3.1"
+    "@typescript-eslint/scope-manager": "npm:7.4.0"
+    "@typescript-eslint/types": "npm:7.4.0"
+    "@typescript-eslint/typescript-estree": "npm:7.4.0"
     semver: "npm:^7.5.4"
   peerDependencies:
     eslint: ^8.56.0
-  checksum: 10c0/1d7b049b2c4de1937832ae8ed681bbcd3b06b0d0b476cce67af96b2f65ff606413cc7dfdaad1e01057d24ba39bf5f6d4ba2923d23dab784d2bed5a217ab7b825
+  checksum: 10c0/347897e0c20e752b62988cbc6477a3788140671692f383355c1fa21e21272561a1bb81927cf99b4ec6fe6094fdb4d010e330ef58674020513e9209992db8aac1
   languageName: node
   linkType: hard
 
@@ -7037,13 +7047,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/visitor-keys@npm:7.3.1":
-  version: 7.3.1
-  resolution: "@typescript-eslint/visitor-keys@npm:7.3.1"
+"@typescript-eslint/visitor-keys@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@typescript-eslint/visitor-keys@npm:7.4.0"
   dependencies:
-    "@typescript-eslint/types": "npm:7.3.1"
+    "@typescript-eslint/types": "npm:7.4.0"
     eslint-visitor-keys: "npm:^3.4.1"
-  checksum: 10c0/1765d9ee31adaa1cfaaa72a1acc987bba6cc382b5c6785ffcc2706a776c115e9310ea6761f70fe9b83bc7edf5ecb3cb6814c83704bd2bb807a6a35cf52f36958
+  checksum: 10c0/bd2ca99f4a771494b89124a1e4cd7f3c817ca4916b8a0168c5c226a245f25cf646b10095100fb8cb6d97134f63fa5bb15098daa94f48657b65332e8671ffdb52
   languageName: node
   linkType: hard
 
@@ -7325,10 +7335,10 @@ __metadata:
     "@rnx-kit/metro-config": "npm:^1.3.15"
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.11.30"
-    "@types/react": "npm:^18.2.69"
+    "@types/react": "npm:^18.2.72"
     "@types/react-test-renderer": "npm:^18.0.7"
     babel-jest: "npm:^29.7.0"
-    detox: "npm:^20.19.3"
+    detox: "npm:^20.19.4"
     eslint: "npm:^8.57.0"
     get-yarn-workspaces: "npm:^1.0.2"
     jest: "npm:^29.7.0"
@@ -7339,10 +7349,10 @@ __metadata:
     react-native: "npm:^0.73.6"
     react-native-animatable: "npm:^1.4.0"
     react-native-is-detox: "npm:^1.2.3"
-    react-native-macos: "npm:^0.73.22"
+    react-native-macos: "npm:^0.73.23"
     react-native-safe-area-context: "npm:^4.9.0"
-    react-native-screens: "npm:^3.29.0"
-    react-native-test-app: "npm:^3.3.6"
+    react-native-screens: "npm:^3.30.1"
+    react-native-test-app: "npm:^3.5.0"
     react-native-windows: "npm:^0.73.11"
     react-test-renderer: "npm:18.2.0"
     ts-jest: "npm:^29.1.2"
@@ -10964,9 +10974,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detox@npm:^20.19.3":
-  version: 20.19.3
-  resolution: "detox@npm:20.19.3"
+"detox@npm:^20.19.4":
+  version: 20.19.4
+  resolution: "detox@npm:20.19.4"
   dependencies:
     ajv: "npm:^8.6.3"
     bunyan: "npm:^1.8.12"
@@ -11010,7 +11020,7 @@ __metadata:
       optional: true
   bin:
     detox: local-cli/cli.js
-  checksum: 10c0/69cd50f7efc62232a428b0955d2d79672e0cb49e66588507c01b4d63b0c4623a9911051f19aaf303321d15a45ac1a003f33650df473ca673e54ff0a13fbe3054
+  checksum: 10c0/8f63d89a594f24ebe7fab573b66fe021d4b454aaf830f8b5499577ac7f39dc88108174776ccf5a1fd3bc5a2bf20d2f0025122974200500375fd4a116ced85852
   languageName: node
   linkType: hard
 
@@ -21704,9 +21714,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-macos@npm:^0.73.22":
-  version: 0.73.22
-  resolution: "react-native-macos@npm:0.73.22"
+"react-native-macos@npm:^0.73.23":
+  version: 0.73.23
+  resolution: "react-native-macos@npm:0.73.23"
   dependencies:
     "@jest/create-cache-key-function": "npm:^29.6.3"
     "@react-native-community/cli": "npm:12.3.6"
@@ -21750,7 +21760,7 @@ __metadata:
     react: 18.2.0
   bin:
     react-native-macos: cli.js
-  checksum: 10c0/3260c51e4416e087e0465e3a522fec3ba63cccc0e2b83669729d22d4d81f7e55aa78a44fe63658af835c33c161a5d79e2b9e8beb3f45b7dbdd89e2023cf7f8e2
+  checksum: 10c0/6ad0e5ccc2de579fd20d7389781c0209a5f9c6bc2394729ecabd499f62d0a1d0d98409164df0a5cf6db658880c812d569d4b34fcb09d944cfdbc3c245039f137
   languageName: node
   linkType: hard
 
@@ -21764,22 +21774,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-screens@npm:^3.29.0":
-  version: 3.29.0
-  resolution: "react-native-screens@npm:3.29.0"
+"react-native-screens@npm:^3.30.1":
+  version: 3.30.1
+  resolution: "react-native-screens@npm:3.30.1"
   dependencies:
     react-freeze: "npm:^1.0.0"
     warn-once: "npm:^0.1.0"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/90c32eb5452007f64c2f56412c671de98b4b89f09cf09cc7a7dca1cb23b1ac6de9bc726c67e774c7cb68dbd05bb329c053c1c2f071f534ad4e27d9d60be76eb0
+  checksum: 10c0/3a9930524a44bfd5554908ff616ee757b638ea4a25b45d0a2abd5c800baee36c69d17fed67096066740945962996df9d3302db170fe273d6b13a46bd46e5da19
   languageName: node
   linkType: hard
 
-"react-native-test-app@npm:^3.3.6":
-  version: 3.4.7
-  resolution: "react-native-test-app@npm:3.4.7"
+"react-native-test-app@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "react-native-test-app@npm:3.5.0"
   dependencies:
     "@rnx-kit/react-native-host": "npm:^0.4.5"
     ajv: "npm:^8.0.0"
@@ -21810,7 +21820,7 @@ __metadata:
     init: scripts/init.mjs
     init-test-app: scripts/init.mjs
     install-windows-test-app: windows/test-app.mjs
-  checksum: 10c0/0193eb7010c9019514c60b3e2ce1c3310c4d8f3d0d6dd6ee10c05e168f691d66f70a1e1c25cdbaf9719b11b5a5b9b5a0269f4e809e5c3aee8468bd1478568679
+  checksum: 10c0/f6469d3e393320eded7b972bc8e2427827b5a574e87a577b90084cf30f358f27664472dc2a56da868f7b91fbac80b5d0229a7a82024f081244b30da82edf6229
   languageName: node
   linkType: hard
 
@@ -22837,11 +22847,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:1.6.2"
+    "@biomejs/biome": "npm:1.6.3"
     "@testing-library/dom": "npm:^9.3.4"
     "@types/eslint": "npm:^8.56.6"
-    "@typescript-eslint/eslint-plugin": "npm:^7.3.1"
-    "@typescript-eslint/parser": "npm:^7.3.1"
+    "@typescript-eslint/eslint-plugin": "npm:^7.4.0"
+    "@typescript-eslint/parser": "npm:^7.4.0"
     eslint: "npm:^8.57.0"
     eslint-config-airbnb: "npm:^19.0.4"
     eslint-config-airbnb-typescript: "npm:^18.0.0"
