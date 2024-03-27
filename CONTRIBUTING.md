@@ -106,6 +106,17 @@ Remember to add tests for your change if possible. Run the unit tests by:
 yarn test
 ```
 
+### Detox
+
+TODO: Expand on detox here
+
+To runthe detox tests you should create an avd called test whch is based on the Pixel 6 Pro profile. This is essential for the screenshot diffs to work
+```sh
+sdkmanager --install 'system-images;android-31;default;x86_64' --channel=0
+avdmanager create avd --force -n test --abi 'default/x86_64' --package 'system-images;android-31;default;x86_64' --device 'pixel_6_pro'
+
+```
+
 ### Linting and tests
 
 [ESLint](https://eslint.org/), [Prettier](https://prettier.io/), [TypeScript](https://www.typescriptlang.org/)

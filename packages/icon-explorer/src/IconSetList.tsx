@@ -80,9 +80,12 @@ const SYNCHROUNOUS = [
     name: 'synchronous',
     children: (
       <>
-        <Image source={FontAwesome.getImageSourceSync('check', 40, 'green')} width={40} height={40} />
+        <Image source={FontAwesome.getImageSourceSync('check', 40, 'green')} style={{ width: 40, height: 40 }} />
 
-        <Image source={FontAwesome6.getImageSourceSync('check', 40, 'green', 'solid')} width={40} height={40} />
+        <Image
+          source={FontAwesome6.getImageSourceSync('check', 40, 'green', 'solid')}
+          style={{ width: 40, height: 40 }}
+        />
       </>
     ),
   },
