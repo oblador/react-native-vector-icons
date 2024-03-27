@@ -13,9 +13,12 @@
     "macos": "react-native run-macos --scheme IconExplorer",
     "mkdist": "node -e \"require('node:fs').mkdirSync('dist', { recursive: true, mode: 0o755 })\"",
     "start": "react-native start",
-    "test": "yarn test:build && yarn test:run",
-    "test:build": "detox build --configuration android.emu.debug",
-    "test:run": "detox test --configuration android.emu.debug",
+    "test:android": "yarn test:android:build && yarn test:android:run",
+    "test:android:build": "detox build --configuration android.emu.debug",
+    "test:android:run": "detox test --configuration android.emu.debug",
+    "test:ios": "yarn test:ios:build && yarn test:ios:run",
+    "test:ios:build": "detox build --configuration ios.sim.debug",
+    "test:ios:run": "detox test --configuration ios.sim.debug",
     "windows": "react-native run-windows --sln windows/IconExplorer.sln"
   },
   "dependencies": {
