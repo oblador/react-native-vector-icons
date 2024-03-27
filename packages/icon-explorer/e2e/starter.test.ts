@@ -24,7 +24,7 @@ const takeAndCheckScreenshot = async (name: string) => {
       const pixels2 = execSync(
         `compare -crop 1400x3120+0+100 -metric AE e2e/snapshot/${platform}/home-bottom-old.png e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
       );
-      if (pixels.toString().trim() !== '0') {
+      if (pixels2.toString().trim() !== '0') {
         throw new Error(`Image ${name} has changed by ${pixels2} pixels!`);
       }
 
