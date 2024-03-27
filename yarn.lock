@@ -7347,7 +7347,6 @@ __metadata:
     get-yarn-workspaces: "npm:^1.0.2"
     jest: "npm:^29.7.0"
     jest-junit: "npm:^16.0.0"
-    mkdirp: "npm:^1.0.4"
     prettier: "npm:2.8.8"
     react: "npm:18.2.0"
     react-native: "npm:^0.73.6"
