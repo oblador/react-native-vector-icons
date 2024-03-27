@@ -60,15 +60,19 @@ allprojects {
             }
 
             androidExtension.buildTypes {
-              release {
-                proguardFile "${rootProject.projectDir}/../node_modules/detox/android/detox/proguard-rules-app.pro"
-              }
+                release {
+                    proguardFile "${rootProject.projectDir}/../node_modules/detox/android/detox/proguard-rules-app.pro"
+                }
             }
 
             androidExtension.sourceSets.androidTest.java.srcDirs += "$rootDir/app/src/androidTest/java"
 
             project.dependencies {
-                androidTestImplementation('com.wix:detox:+')
+                if (reactNativeVersion > 0 && reactNativeVersion < v(0, 73, 0)) {
+                    androidTestImplementation('com.wix:detox-legacy:+')
+                } else {
+                    androidTestImplementation('com.wix:detox:+')
+                }
                 implementation 'androidx.appcompat:appcompat:1.1.0'
             }
         }
