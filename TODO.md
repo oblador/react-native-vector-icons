@@ -25,6 +25,7 @@ The major changes are
 * Typescript support
 * All fonts updated
 * Font package generator - easily ship new fonts
+* codemod for easy migration
 
 We've released alpha version and would love feedback on any issues before we go GA.
 
