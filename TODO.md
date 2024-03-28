@@ -30,6 +30,8 @@ We've released alpha version and would love feedback on any issues before we go 
 
 Check out the migration guide in MIGRATION.md
 
+*Help Needed!* Can someone help with making installation for OSX and Windows projects fully automated as well.
+
 More detail on all of the changes below
 
 ## Simple setup
