@@ -24,6 +24,7 @@ The major changes are
 * Package per font - Only install the fonts you need for smaller bundle sizes
 * Typescript support
 * All fonts updated
+* Font package generator - easily ship new fonts
 
 We've released alpha version and would love feedback on any issues before we go GA.
 
@@ -78,6 +79,15 @@ of icon names, including support for multi style icons like FontAwesome 5 and
 All fonts have been updated to the very latest versions. In the future we
 intend to have automation via GitHub actions to automatically track upstream
 fonts and release new versions.
+
+## Font template generator
+
+We have created a [Yeoman](https://yeoman.io/) generator,
+`@react-native-vector-icons/generator-react-native-vector-icons` that you can
+use to create packages for your own fonts. We use this to generate all the
+internal font packages. See the documentation for more details. We will also
+welcome pull requests for new fonts. In the future we'll write some GitHub
+actions to auto update and publish based on upstream changes.
 
 ## Other changes
 
