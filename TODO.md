@@ -52,10 +52,14 @@ const App = () => <Fontisto name="comments" />
 ## Package per font
 
 Each font has it's own npm package, this means you only get the fonts you want
-in you final build. For example `@react-native-vector-icons/fontisto`. They
+in you final build. For example `@react-native-vector-icons/evil-icons`. They
 version numbers for the individual packages will track the upstream versions.
 This should provide more stability for your projects in terms of knowing
 exactly which glyphs will be supported in the font.
+
+The should have a significant improvement on bundle sizes. For example if you
+only need the evil icons font, instead of including 2.8MB of fonts you would
+only include 14kB.
 
 ## New npm scope
 
