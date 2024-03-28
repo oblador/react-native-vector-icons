@@ -20,6 +20,16 @@ We have been working on a major refactor of React Native Vector Icons to move
 it to a monorepo structure with individual packages for each font.
 
 The major changes are
+* Simple setup - only npm install needed
+* Package per font - Only install the fonts you need for smaller bundle sizes
+* Typescript support
+* All fonts updated
+
+We've released alpha version and would love feedback on any issues before we go GA.
+
+Check out the migration guide in MIGRATION.md
+
+More detail on all of the changes below
 
 ## Simple setup
 
@@ -47,11 +57,9 @@ version numbers for the individual packages will track the upstream versions.
 This should provide more stability for your projects in terms of knowing
 exactly which glyphs will be supported in the font.
 
-## New organisations
+## New npm scope
 
-The source code has moved to
-https://github.com/react-native-vector-icons/react-native-vector-icons and the
-npm modules are now hosted under `@react-native-vector-icons`
+The npm modules are now hosted under `@react-native-vector-icons`.
 
 ## Native typescript support and autocompletion
 
