@@ -48,7 +48,7 @@ fi
 
 if [ -n "$GRADLE_VERSION" ]; then
   echo "Setting gradle version to $GRADLE_VERSION"
-  sed -i "s/8.6/$GRADLE_VERSION/" android/gradle/wrapper/gradle-wrapper.properties
+  sed -i'' -e "s/8.6/$GRADLE_VERSION/" android/gradle/wrapper/gradle-wrapper.properties
 fi
 
 yarn rnx-align-deps --write
