@@ -168,6 +168,7 @@ jobs:
       - name: Run tests
         run: |
           cd packages/icon-explorer
+          pod install --project-directory=ios
           yarn test:ios
 
       - uses: actions/upload-artifact@v4
