@@ -94,8 +94,6 @@
         "core",
         "core-android",
         "core-ios",
-        "core-macos",
-        "core-windows",
         "jest",
         "navigation/native",
         "react",
