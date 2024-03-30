@@ -14,13 +14,13 @@ module.exports = {
       type: 'ios.app',
       binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/ReactTestApp.app',
       build:
-        'xcodebuild -workspace ios/IconExplorer.xcworkspace -scheme ReactTestApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build',
+        'xcodebuild -workspace ios/IconExplorer.xcworkspace -scheme IconExplorer -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build',
     },
     'ios.release': {
       type: 'ios.app',
       binaryPath: 'ios/build/Build/Products/Release-iphonesimulatorReactTestApp.app',
       build:
-        'xcodebuild -workspace ios/IconExplorer.xcworkspace -scheme ReactTestApp -configuration Release -sdk iphonesimulator -derivedDataPath ios/build',
+        'xcodebuild -workspace ios/IconExplorer.xcworkspace -scheme IconExplorer -configuration Release -sdk iphonesimulator -derivedDataPath ios/build',
     },
     'android.debug': {
       type: 'android.apk',
