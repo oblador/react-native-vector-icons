@@ -159,6 +159,11 @@ jobs:
 
           ./set-rn-version.sh ${{ matrix.rn-version }}
 
+      - name: Set up build tools
+        run: |
+          brew tap wix/brew
+          brew install applesimutils
+
       # TODO Not sure if this should re really needed but seems to fix things
       - name: Start Metro
         run: |
