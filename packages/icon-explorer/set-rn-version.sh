@@ -53,4 +53,4 @@ fi
 
 yarn rnx-align-deps --write
 
-yarn
+CI=0 yarn
