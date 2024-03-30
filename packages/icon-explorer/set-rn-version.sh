@@ -48,15 +48,9 @@ fi
 
 if [ -n "$GRADLE_VERSION" ]; then
   echo "Setting gradle version to $GRADLE_VERSION"
-  sed -i'' "s/8.6/$GRADLE_VERSION/" android/gradle/wrapper/gradle-wrapper.properties
+  sed -i'' -e "s/8.6/$GRADLE_VERSION/" android/gradle/wrapper/gradle-wrapper.properties
 fi
-
 
 yarn rnx-align-deps --write
-
-if [ "$VERSION" = "0.72" ]; then
-  # align deps does the wrong thing there was no macos 0.72 release
-  yarn add react-native-macos@^0.71
-fi
 
 yarn
