@@ -163,7 +163,6 @@ jobs:
         run: |
           brew tap wix/brew
           brew install applesimutils
-          applesimutils --list
 
       # TODO Not sure if this should re really needed but seems to fix things
       - name: Start Metro
