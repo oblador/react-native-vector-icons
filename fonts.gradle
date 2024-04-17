@@ -31,6 +31,12 @@ afterEvaluate {
         if (lintVitalAnalyzeTask) {
         lintVitalAnalyzeTask.dependsOn(fontCopyTask)
         }
+
+        def lintAnalyzeTask = tasks.findByName("lintAnalyze${targetName}")
+      
+        if (lintAnalyzeTask) {
+        lintAnalyzeTask.dependsOn(fontCopyTask)
+        }
       
         def generateAssetsTask = tasks.findByName("generate${targetName}Assets")
         generateAssetsTask.dependsOn(fontCopyTask)
