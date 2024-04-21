@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "mem-fs": "^4.1.0",
-    "npm-registry-fetch": "^16.1.0",
+    "npm-registry-fetch": "^16.2.1",
     "oslllo-svg-fixer": "^3.0.0",
     "registry-auth-token": "^5.0.2",
     "semver": "^7.6.0",
@@ -25,7 +25,7 @@
     "@yeoman/types": "^1.2.0",
     "copyfiles": "^2.4.1",
     "onchange": "^7.1.0",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   },
   "scripts": {
     "build": "npm run clean && tsc && npm run copydeps",
