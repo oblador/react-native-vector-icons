@@ -2366,10 +2366,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-free@npm:6.5.1":
-  version: 6.5.1
-  resolution: "@fortawesome/fontawesome-free@npm:6.5.1"
-  checksum: 10c0/dc359ede1ddfc6d91915345143008420001c56b164a6fe95d81bcca631eecca41009bfacf794d55bdb9d927c112119ce90a11cb4f576a815ed69ec681e5eb824
+"@fortawesome/fontawesome-free@npm:6.5.2":
+  version: 6.5.2
+  resolution: "@fortawesome/fontawesome-free@npm:6.5.2"
+  checksum: 10c0/932a8119376eab45da6c0702e955dcea55b916bbd7e118a365a8b3356a6322e725536f28f78e039bd47f4e1650b69bf9a85c2e40d0fdd69f9f0c138a5ef07e67
   languageName: node
   linkType: hard
 
@@ -4284,12 +4284,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@primer/octicons@npm:19.8.0":
-  version: 19.8.0
-  resolution: "@primer/octicons@npm:19.8.0"
+"@primer/octicons@npm:19.9.0":
+  version: 19.9.0
+  resolution: "@primer/octicons@npm:19.9.0"
   dependencies:
     object-assign: "npm:^4.1.1"
-  checksum: 10c0/f7081e768a59e1ee481ed874c7fc11a972f4fe9510b7706353979d0a4f42280fce0a6281be8a5a9df265b17d78b106a5af3279ec6314d99b2719535b82770c3b
+  checksum: 10c0/296599e25a68a08728a2ac7a902e17c0b1c77ca826ca9124c6b5fea94b6fb7d03131b510cc0752f10c75a2f2299ed66acb95332da03c50668c97c2554ffeb9f9
   languageName: node
   linkType: hard
 
@@ -4498,7 +4498,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4585,7 +4585,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4601,7 +4601,7 @@ __metadata:
     evil-icons: "npm:1.10.1"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4617,7 +4617,7 @@ __metadata:
     feather-icons: "npm:4.29.1"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4646,7 +4646,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4662,7 +4662,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4677,7 +4677,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4688,12 +4688,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6"
   dependencies:
-    "@fortawesome/fontawesome-free": "npm:6.5.1"
+    "@fortawesome/fontawesome-free": "npm:6.5.2"
     "@react-native-vector-icons/common": "npm:^0.0.1-alpha.5"
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4709,7 +4709,7 @@ __metadata:
     font-awesome: "npm:4.7.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4730,7 +4730,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4746,7 +4746,7 @@ __metadata:
     fontisto: "npm:3.0.4"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4762,7 +4762,7 @@ __metadata:
     foundation-icons: "npm:2.0.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4777,7 +4777,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4790,10 +4790,10 @@ __metadata:
   dependencies:
     "@react-native-vector-icons/common": "npm:^0.0.1-alpha.5"
     del-cli: "npm:^5.1.0"
-    ionicons: "npm:7.2.2"
+    ionicons: "npm:7.3.1"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4809,7 +4809,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4824,7 +4824,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4835,12 +4835,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/octicons@workspace:packages/octicons"
   dependencies:
-    "@primer/octicons": "npm:19.8.0"
+    "@primer/octicons": "npm:19.9.0"
     "@react-native-vector-icons/common": "npm:^0.0.1-alpha.5"
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4856,7 +4856,7 @@ __metadata:
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     simple-line-icons: "npm:2.5.5"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4872,7 +4872,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.3"
+    typescript: "npm:^5.4.5"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -14115,12 +14115,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ionicons@npm:7.2.2":
-  version: 7.2.2
-  resolution: "ionicons@npm:7.2.2"
+"ionicons@npm:7.3.1":
+  version: 7.3.1
+  resolution: "ionicons@npm:7.3.1"
   dependencies:
     "@stencil/core": "npm:^4.0.3"
-  checksum: 10c0/9d5810f1b580756c52e06ba846c6518c91588843273a7b68104c7622f4a82b0f560aa7ef66e06e26e01400cfbe37ba8348731a2bab27a0d86d6d334225735bf3
+  checksum: 10c0/d089cef3600a976d48f59b94fcf021064d623d24045fee284664c90893926c901080d3db5a11eebd1fdfe99a31961eabb066cc539080866d1e7b801ad7cce1c4
   languageName: node
   linkType: hard
 
@@ -24321,7 +24321,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.4.5, typescript@npm:>=3 < 6, typescript@npm:^5.4.3, typescript@npm:^5.4.5":
+"typescript@npm:5.4.5, typescript@npm:>=3 < 6, typescript@npm:^5.4.5":
   version: 5.4.5
   resolution: "typescript@npm:5.4.5"
   bin:
@@ -24331,7 +24331,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A>=3 < 6#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.4.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A>=3 < 6#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>":
   version: 5.4.5
   resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"
   bin:
