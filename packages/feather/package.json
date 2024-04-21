@@ -78,7 +78,7 @@
     "feather-icons": "4.29.1",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "react": "*",
