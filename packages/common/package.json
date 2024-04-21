@@ -84,7 +84,7 @@
     "del-cli": "^5.1.0",
     "jest": "^29.7.0",
     "onchange": "^7.1.0",
-    "oslllo-svg-fixer": "^3.0.0",
+    "oslllo-svg-fixer": "^4.0.1",
     "pod-install": "^0.2.1",
     "prettier": "^3.2.5",
     "react": "18.2.0",
