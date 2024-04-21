@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "d7019d1d620d8df85343401d5ac1a373b3de1c8c01ec2209a90b0596b7f11e57",
-    "current": "d7019d1d620d8df85343401d5ac1a373b3de1c8c01ec2209a90b0596b7f11e57"
+    "previous": "9cc9c8718020aa39ff681baba6d45a4bf40edae78f692585a1e730baa00026be",
+    "current": "9cc9c8718020aa39ff681baba6d45a4bf40edae78f692585a1e730baa00026be"
   },
   "fonts": [
     "Ionicons/Ionicons.ttf",
@@ -207,9 +207,33 @@
       "codepoint": 61744,
       "source": "fixedSvg/arrow-down-circle-sharp.svg"
     },
+    "arrow-down-left-box": {
+      "codepoint": 63034,
+      "source": "fixedSvg/arrow-down-left-box.svg"
+    },
+    "arrow-down-left-box-outline": {
+      "codepoint": 63035,
+      "source": "fixedSvg/arrow-down-left-box-outline.svg"
+    },
+    "arrow-down-left-box-sharp": {
+      "codepoint": 63036,
+      "source": "fixedSvg/arrow-down-left-box-sharp.svg"
+    },
     "arrow-down-outline": {
       "codepoint": 61745,
       "source": "fixedSvg/arrow-down-outline.svg"
+    },
+    "arrow-down-right-box": {
+      "codepoint": 63037,
+      "source": "fixedSvg/arrow-down-right-box.svg"
+    },
+    "arrow-down-right-box-outline": {
+      "codepoint": 63038,
+      "source": "fixedSvg/arrow-down-right-box-outline.svg"
+    },
+    "arrow-down-right-box-sharp": {
+      "codepoint": 63039,
+      "source": "fixedSvg/arrow-down-right-box-sharp.svg"
     },
     "arrow-down-sharp": {
       "codepoint": 61746,
@@ -303,9 +327,33 @@
       "codepoint": 61768,
       "source": "fixedSvg/arrow-up-circle-sharp.svg"
     },
+    "arrow-up-left-box": {
+      "codepoint": 63040,
+      "source": "fixedSvg/arrow-up-left-box.svg"
+    },
+    "arrow-up-left-box-outline": {
+      "codepoint": 63041,
+      "source": "fixedSvg/arrow-up-left-box-outline.svg"
+    },
+    "arrow-up-left-box-sharp": {
+      "codepoint": 63042,
+      "source": "fixedSvg/arrow-up-left-box-sharp.svg"
+    },
     "arrow-up-outline": {
       "codepoint": 61769,
       "source": "fixedSvg/arrow-up-outline.svg"
+    },
+    "arrow-up-right-box": {
+      "codepoint": 63043,
+      "source": "fixedSvg/arrow-up-right-box.svg"
+    },
+    "arrow-up-right-box-outline": {
+      "codepoint": 63044,
+      "source": "fixedSvg/arrow-up-right-box-outline.svg"
+    },
+    "arrow-up-right-box-sharp": {
+      "codepoint": 63045,
+      "source": "fixedSvg/arrow-up-right-box-sharp.svg"
     },
     "arrow-up-sharp": {
       "codepoint": 61770,
@@ -622,6 +670,18 @@
     "bicycle-sharp": {
       "codepoint": 61848,
       "source": "fixedSvg/bicycle-sharp.svg"
+    },
+    "binoculars": {
+      "codepoint": 63046,
+      "source": "fixedSvg/binoculars.svg"
+    },
+    "binoculars-outline": {
+      "codepoint": 63047,
+      "source": "fixedSvg/binoculars-outline.svg"
+    },
+    "binoculars-sharp": {
+      "codepoint": 63048,
+      "source": "fixedSvg/binoculars-sharp.svg"
     },
     "bluetooth": {
       "codepoint": 61849,
@@ -2923,6 +2983,10 @@
       "codepoint": 62423,
       "source": "fixedSvg/logo-angular.svg"
     },
+    "logo-appflow": {
+      "codepoint": 63049,
+      "source": "fixedSvg/logo-appflow.svg"
+    },
     "logo-apple": {
       "codepoint": 62424,
       "source": "fixedSvg/logo-apple.svg"
@@ -3182,6 +3246,10 @@
     "logo-tiktok": {
       "codepoint": 62488,
       "source": "fixedSvg/logo-tiktok.svg"
+    },
+    "logo-trapeze": {
+      "codepoint": 63050,
+      "source": "fixedSvg/logo-trapeze.svg"
     },
     "logo-tumblr": {
       "codepoint": 62489,
