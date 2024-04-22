@@ -73,13 +73,9 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^19.2.2",
-    "@evilmartians/lefthook": "^1.6.10",
-    "@release-it/conventional-changelog": "^8.0.1",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.2.79",
     "@types/react-native": "0.73.0",
-    "commitlint": "^19.2.2",
     "css-social-buttons": "^1.1.1",
     "del-cli": "^5.1.0",
     "jest": "^29.7.0",
@@ -111,28 +107,6 @@
       "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
   },
   "react-native-builder-bob": {
     "source": "src",
