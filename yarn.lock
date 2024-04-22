@@ -4855,7 +4855,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/metro-config@npm:^0.73.5":
+"@react-native/metro-config@npm:^0.73.0":
   version: 0.73.5
   resolution: "@react-native/metro-config@npm:0.73.5"
   dependencies:
@@ -4937,7 +4937,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/native@npm:^6.1.17":
+"@react-navigation/native@npm:^6.0.8":
   version: 6.1.17
   resolution: "@react-navigation/native@npm:6.1.17"
   dependencies:
@@ -5148,12 +5148,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rnx-kit/react-native-host@npm:^0.4.6":
-  version: 0.4.7
-  resolution: "@rnx-kit/react-native-host@npm:0.4.7"
+"@rnx-kit/react-native-host@npm:^0.2.9":
+  version: 0.2.9
+  resolution: "@rnx-kit/react-native-host@npm:0.2.9"
   peerDependencies:
-    react-native: ">=0.66"
-  checksum: 10c0/c162abde5595e14b580e1d5bfe7500f777a8b26988873f4376a6e2f98d051ff2a0dc9fae17172813e2aecfcc3a7adf03ac16f396ee12342d46a50895b66f6cd3
+    react-native: ">=0.64"
+  checksum: 10c0/5a0fdfc6550d329d6c6569b8fbcbde2a5e82bc5acb0ea47925a18055b5c27f50bc68d1c3112719679e50ada78f2a84acecbc9da88d3c0bf012f7e69a7686b802
   languageName: node
   linkType: hard
 
@@ -6844,9 +6844,9 @@ __metadata:
     "@react-native-vector-icons/zocial": "workspace:^"
     "@react-native/babel-preset": "npm:^0.73.21"
     "@react-native/eslint-config": "npm:^0.73.2"
-    "@react-native/metro-config": "npm:^0.73.5"
+    "@react-native/metro-config": "npm:^0.73.0"
     "@react-native/typescript-config": "npm:^0.73.1"
-    "@react-navigation/native": "npm:^6.1.17"
+    "@react-navigation/native": "npm:^6.0.8"
     "@react-navigation/native-stack": "npm:^6.9.26"
     "@rnx-kit/align-deps": "npm:^2.4.4"
     "@rnx-kit/babel-preset-metro-react-native": "npm:^1.1.8"
@@ -6859,16 +6859,16 @@ __metadata:
     detox: "npm:^20.20.2"
     eslint: "npm:^8.57.0"
     get-yarn-workspaces: "npm:^1.0.2"
-    jest: "npm:^29.7.0"
+    jest: "npm:^29.2.1"
     jest-junit: "npm:^16.0.0"
     prettier: "npm:3.2.5"
     react: "npm:18.2.0"
-    react-native: "npm:^0.73.7"
+    react-native: "npm:^0.73.0"
     react-native-animatable: "npm:^1.4.0"
     react-native-is-detox: "npm:^1.2.3"
-    react-native-safe-area-context: "npm:^4.9.0"
-    react-native-screens: "npm:^3.30.1"
-    react-native-test-app: "npm:^3.5.8"
+    react-native-safe-area-context: "npm:^4.8.2"
+    react-native-screens: "npm:^3.28.0"
+    react-native-test-app: "npm:^2.5.34"
     react-test-renderer: "npm:18.2.0"
     ts-jest: "npm:^29.1.2"
     typescript: "npm:5.4.5"
@@ -15490,7 +15490,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^29.7.0":
+"jest@npm:^29.2.1, jest@npm:^29.7.0":
   version: 29.7.0
   resolution: "jest@npm:29.7.0"
   dependencies:
@@ -20488,7 +20488,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-safe-area-context@npm:^4.9.0":
+"react-native-safe-area-context@npm:^4.8.2":
   version: 4.9.0
   resolution: "react-native-safe-area-context@npm:4.9.0"
   peerDependencies:
@@ -20498,7 +20498,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-screens@npm:^3.30.1":
+"react-native-screens@npm:^3.28.0":
   version: 3.30.1
   resolution: "react-native-screens@npm:3.30.1"
   dependencies:
@@ -20511,28 +20511,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-test-app@npm:^3.5.8":
-  version: 3.5.8
-  resolution: "react-native-test-app@npm:3.5.8"
+"react-native-test-app@npm:^2.5.34":
+  version: 2.5.35
+  resolution: "react-native-test-app@npm:2.5.35"
   dependencies:
-    "@rnx-kit/react-native-host": "npm:^0.4.6"
+    "@rnx-kit/react-native-host": "npm:^0.2.9"
     ajv: "npm:^8.0.0"
+    chalk: "npm:^4.1.0"
     cliui: "npm:^8.0.0"
     fast-xml-parser: "npm:^4.0.0"
+    minimist: "npm:^1.2.8"
     prompts: "npm:^2.4.0"
     semver: "npm:^7.3.5"
-    uuid: "npm:^9.0.0"
-    yoctocolors: "npm:^2.0.0"
+    uuid: "npm:^8.3.2"
   peerDependencies:
-    "@callstack/react-native-visionos": 0.73 - 0.74
     "@expo/config-plugins": ">=5.0"
     react: 17.0.1 - 18.2
-    react-native: 0.66 - 0.74 || >=0.75.0-0 <0.75.0
-    react-native-macos: ^0.0.0-0 || 0.66 || 0.68 || 0.71 - 0.73
-    react-native-windows: ^0.0.0-0 || 0.66 - 0.74
+    react-native: ^0.0.0-0 || 0.64 - 0.73 || 1000.0.0
+    react-native-macos: ^0.0.0-0 || 0.64 || 0.66 || 0.68 || 0.71 - 0.73
+    react-native-windows: ^0.0.0-0 || 0.64 - 0.73
   peerDependenciesMeta:
-    "@callstack/react-native-visionos":
-      optional: true
     "@expo/config-plugins":
       optional: true
     react-native-macos:
@@ -20540,15 +20538,15 @@ __metadata:
     react-native-windows:
       optional: true
   bin:
-    configure-test-app: scripts/configure.mjs
-    init: scripts/init.mjs
-    init-test-app: scripts/init.mjs
-    install-windows-test-app: windows/test-app.mjs
-  checksum: 10c0/0066a3fb3886d5163a8864cf13e78f6d17c33c75dceee6a52d645eee0cbafbfe4bcf12be5f2aac62f97641352d67c316310340dee59652d4bb7ed4d6480e9299
+    configure-test-app: scripts/configure.js
+    init: scripts/init.js
+    init-test-app: scripts/init.js
+    install-windows-test-app: windows/test-app.js
+  checksum: 10c0/1880018afc6db7aff63456581479fd05cb0b18d3440b68e5d0714641bb2999f3689d2f02c19053b42ef4923201b5f43858aac12ab3d65bb76b42079e57817e59
   languageName: node
   linkType: hard
 
-"react-native@npm:*, react-native@npm:0.73.7, react-native@npm:^0.73.7":
+"react-native@npm:*, react-native@npm:0.73.7, react-native@npm:^0.73.0":
   version: 0.73.7
   resolution: "react-native@npm:0.73.7"
   dependencies:
@@ -25148,12 +25146,5 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10c0/dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
-  languageName: node
-  linkType: hard
-
-"yoctocolors@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "yoctocolors@npm:2.0.0"
-  checksum: 10c0/994f5d99e7647a1b333331ffecbbf7c4463d9c2823e371b44e21146a4496cad0f14fbe2f73f44383312a6f843d93523f830f1360009f0ac93027b167ef5c63be
   languageName: node
   linkType: hard
