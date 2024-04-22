@@ -87,7 +87,7 @@ jobs:
         run: |
           cd packages/icon-explorer
 
-          ./set-rn-version.sh ${{ matrix.rn-version }}
+          ./set-rn-version.sh android ${{ matrix.rn-version }}
 
 
       # TODO Not sure if this should re really needed but seems to fix things
@@ -157,7 +157,7 @@ jobs:
         run: |
           cd packages/icon-explorer
 
-          ./set-rn-version.sh ${{ matrix.rn-version }}
+          ./set-rn-version.sh ios ${{ matrix.rn-version }}
 
       - name: Set up build tools
         run: |
