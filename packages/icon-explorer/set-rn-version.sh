@@ -37,8 +37,6 @@ fi
 
 echo "Switching to $VERSION"
 
-yarn add "react-native@$TAG"
-
 if [ "$VERSION" = "0.70" ]; then
   GRADLE_VERSION=7.5.1
 fi
