@@ -5,6 +5,8 @@ set -e
 PLATFORM=$1
 if [ -z "$PLATFORM" ]; then
   echo "Please provide a valid platform: ios|android"
+  exit 1
+fi
 
 TAG=$2
 if [ -z "$TAG" ]; then
