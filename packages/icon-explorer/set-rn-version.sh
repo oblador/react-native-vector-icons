@@ -2,8 +2,11 @@
 
 set -e
 
-TAG=$1
+PLATFORM=$1
+if [ -z "$PLATFORM" ]; then
+  echo "Please provide a valid platform: ios|android"
 
+TAG=$2
 if [ -z "$TAG" ]; then
   echo "Please provide a valid RN tag"
   exit 1
@@ -46,11 +49,11 @@ if [ "$VERSION" = "0.72" ]; then
   GRADLE_VERSION=8.0.1
 fi
 
-if [ -n "$GRADLE_VERSION" ]; then
+if [ "$PLATFORM" = "android" -a -n "$GRADLE_VERSION" ]; then
   echo "Setting gradle version to $GRADLE_VERSION"
   sed -i'' -e "s/8.6/$GRADLE_VERSION/" android/gradle/wrapper/gradle-wrapper.properties
 fi
 
 yarn rnx-align-deps --write
 
-CI=0 yarn
+yarn --no-immutable
