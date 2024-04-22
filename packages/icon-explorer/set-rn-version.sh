@@ -56,6 +56,8 @@ if [ "$PLATFORM" = "android" -a -n "$GRADLE_VERSION" ]; then
   sed -i'' -e "s/8.6/$GRADLE_VERSION/" android/gradle/wrapper/gradle-wrapper.properties
 fi
 
-yarn rnx-align-deps --write
+yarn rnx-align-deps --set-version $VERSION
+
+yarn add react-native-test-app@latest
 
 yarn --no-immutable
