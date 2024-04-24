@@ -23,6 +23,7 @@ interface Data {
   versionSuffix?: string;
   customReadme?: boolean;
   customSrc?: string | boolean;
+  source: string;
   customAssets?: boolean;
   commonPackage?: string;
   meta: Record<string, object>;
@@ -367,6 +368,10 @@ export default class extends Generator<Arguments> {
     data.customReadme ||= false;
     data.customAssets ||= false;
     data.commonPackage ||= 'common';
+    data.source = 'src/index.ts';
+    if (typeof data.customSrc === 'string') {
+      data.source = data.customSrc.endsWith('.tsx') ? 'src/index.tsx' : 'src/index.ts';
+    }
 
     return data;
   }
