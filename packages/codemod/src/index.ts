@@ -11,7 +11,8 @@ import removeFonts from './remove-fonts';
 
 const dir = process.argv[2];
 if (!dir) {
-  throw new Error('Please specify a directory to transform');
+  console.error('Please specify a directory to transform');
+  process.exit(1);
 }
 
 const transformFilePath = path.join(__dirname, 'transform.js');
