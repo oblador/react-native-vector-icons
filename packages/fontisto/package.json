@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontisto",
-  "version": "3.0.4-alpha.8",
+  "version": "3.0.4-alpha.9",
   "description": "Fontisto font for react native vector icons",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
