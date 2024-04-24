@@ -61,6 +61,6 @@ export default () => {
   fs.mkdirSync('rnvi-fonts', { recursive: true });
   toMove.forEach((file) => {
     console.log(` - Removing ${file}`);
-    fs.renameSync(file, 'rnvi-fonts/');
+    fs.renameSync(file, `rnvi-fonts/${file.replace(/.*\//, '')}`);
   });
 };
