@@ -3,7 +3,7 @@
 import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 
-const fonts = [
+const deletableFonts = [
   'AntDesign.ttf',
   'Entypo.ttf',
   'EvilIcons.ttf',
@@ -23,6 +23,9 @@ const fonts = [
   'Octicons.ttf',
   'SimpleLineIcons.ttf',
   'Zocial.ttf',
+];
+
+const moveableFonts = [
   'FontAwesome5_Pro_Light.ttf',
   'FontAwesome5_Pro_Brands.ttf',
   'FontAwesome5Pro_Brands.ttf',
@@ -40,16 +43,24 @@ const fonts = [
 ];
 
 export default () => {
-  console.log('Removing unused fonts');
   const files = execSync('find android/app/src/main/assets/fonts -name "*.ttf"')
     .toString()
     .split('\n')
     .map((line) => line.trim());
 
-  const toDelete = files.filter((file) => fonts.includes(file.replace(/.*\//, '')));
-
+  console.log('Removing unused fonts');
+  const toDelete = files.filter((file) => deletableFonts.includes(file.replace(/.*\//, '')));
   toDelete.forEach((file) => {
     console.log(` - Removing ${file}`);
     fs.rmSync(file);
+  });
+
+  console.log('Moving Pro fonts');
+
+  const toMove = files.filter((file) => moveableFonts.includes(file.replace(/.*\//, '')));
+  fs.mkdirSync('rnvi-fonts', { recursive: true });
+  toMove.forEach((file) => {
+    console.log(` - Removing ${file}`);
+    fs.renameSync(file, 'rnvi-fonts/');
   });
 };
