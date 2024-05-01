@@ -1,10 +1,12 @@
 {
   "name": "react-native-vector-icons",
-  "version": "9.2.0",
+  "version": "10.0.3",
   "description": "Customizable Icons for React Native with support for NavBar/TabBar, image source and full styling.",
   "main": "dist/index.js",
   "bin": {
+    "fa-upgrade.sh": "./bin/fa-upgrade.sh",
     "fa5-upgrade": "./bin/fa5-upgrade.sh",
+    "fa6-upgrade": "./bin/fa6-upgrade.sh",
     "generate-icon": "./bin/generate-icon.js"
   },
   "scripts": {
@@ -19,6 +21,7 @@
     "build-evilicons": "./scripts/evilicons.sh",
     "build-fontawesome": "./scripts/fontawesome.sh",
     "build-fontawesome5": "./scripts/fontawesome5.sh",
+    "build-fontawesome6": "./scripts/fontawesome6.sh",
     "build-fontisto": "./scripts/fontisto.sh",
     "build-feather": "./scripts/feather.sh",
     "build-foundation": "./scripts/foundation.sh",
@@ -84,11 +87,14 @@
     "feather-icons": "^4.28.0",
     "font-awesome": "^4.7.0",
     "fontisto": "^3.0.4",
-    "ionicons": "^5.0.1",
+    "ionicons": "^7.1.0",
     "metro-react-native-babel-preset": "^0.66.2",
+    "oslllo-svg-fixer": "^2.2.0",
     "prettier": "^1.19.1",
     "react": "^17.0.2",
-    "simple-line-icons": "^2.5.5"
+    "simple-line-icons": "^2.5.5",
+    "svg2ttf": "^6.0.3",
+    "svgicons2svgfont": "^12.0.0"
   },
   "codegenConfig": {
     "name": "RNVectorIconsSpec",
