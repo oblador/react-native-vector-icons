@@ -13,6 +13,23 @@ const Icon = React.memo(({ family, name, ...props }) => (
   </span>
 ));
 
+const FamiliesLinks = ({matches = []}) => {
+  return (
+    <div className="Family-Links-Container">
+      <div className="Family-Links-Content">
+        <h2 className="Family-Links-Title">Icon Families:</h2>
+        <div className="Family-Links-List">
+          {matches.map(match => {
+            const { family } = match;
+
+            return <a className="Family-Links-Link" href={`#${family}`}>{family}</a>;
+          })}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const HeaderBar = () => {
   return (
     <div className="Header-Container">
@@ -80,7 +97,7 @@ const renderMatch = match => {
   const { family, names } = match;
   return (
     <div className="Result-Row" key={family}>
-      <h2 className="Result-Title">{family}</h2>
+      <h2 className="Result-Title" id={family}>{family}</h2>
 
       <div className="Result-List">
         {names.map(name => renderIcon(family, name))}
@@ -117,6 +134,7 @@ const App = () => {
     <div className="App">
       <HeaderBar />
       <SearchBar onSubmit={handleSubmit} />
+      <FamiliesLinks matches={matches} />
       <div className="Container">
         {matches.length === 0 ? renderNotFound() : matches.map(renderMatch)}
       </div>

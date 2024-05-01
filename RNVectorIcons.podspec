@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage       = package["homepage"]
   s.license        = package["license"]
   s.author         = { package["author"]["name"] => package["author"]["email"] }
-  s.platforms      = { :ios => "12.0", :tvos => "9.0" }
+  s.platforms      = { :ios => "12.0", :tvos => "9.0" ,:visionos => "1.0"}
   s.source         = { :git => package["repository"]["url"], :tag => "v#{s.version}" }
 
   s.source_files   = 'RNVectorIconsManager/**/*.{h,m,mm,swift}'
@@ -18,5 +18,7 @@ Pod::Spec.new do |s|
   # React Native Core dependency
   if defined? install_modules_dependencies
     install_modules_dependencies(s)
+  else
+    s.dependency 'React-Core'
   end
 end
