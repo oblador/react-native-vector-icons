@@ -125,6 +125,8 @@ To use the bundled icons on iOS, follow these steps:
 
 _Note: Recompile your project after adding new fonts._
 
+_Note 2: If you're getting problems with `duplicate outputs file` for fonts on ios build, try running `cd ios && pod install` after the `react-native.config.js` configuration._
+
 ### Android Setup
 
 #### Option: With Gradle (recommended)
