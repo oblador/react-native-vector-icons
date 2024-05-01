@@ -830,6 +830,10 @@ You probably didn't update the font files linked to your native project after up
 
 Sometimes vendors decides to remove some icons from newer releases, this has nothing to do with this package. If you depend on an older version of a font you can add it as a [custom font](#custom-fonts).
 
+#### Unable to resolve module @expo/vector-icons/XXXFont
+
+You are probably trying to use `@expo/vector-icons` and `react-native-vector-icons` at the same time. The expo package aliases this one and will take precedence. Use only one of these libraries in your project.
+
 #### Web-pack complains about unsupported JSX Syntax
 
 You will need to add JSX support for `react-native-vector-icons` to your transpiler configuration e.g. babel.
