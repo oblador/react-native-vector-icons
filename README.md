@@ -16,6 +16,7 @@ For the integration of `.svg` files natively, you can explore [`react-native-vec
   - [Android Setup](#android-setup)
   - [macOS Setup](#macos-setup)
   - [Windows Setup](#windows-setup)
+  - [React-native-web Setup](#react-native-web-setup)
   - [Web Setup](#web-setup)
 - [Upgrading](#upgrading)
 - [Icon Component](#icon-component)
@@ -123,6 +124,8 @@ To use the bundled icons on iOS, follow these steps:
     ```
 
 _Note: Recompile your project after adding new fonts._
+
+_Note 2: If you're getting problems with `duplicate outputs file` for fonts on ios build, try running `cd ios && pod install` after the `react-native.config.js` configuration._
 
 ### Android Setup
 
@@ -269,6 +272,68 @@ To set up the library on your Windows project using `react-native-windows`, foll
 _Please note that after adding new fonts, you need to recompile your project._
 
 By following these steps, you'll seamlessly integrate the vector icons library into your Windows project, leveraging the `react-native-windows` framework.
+
+### React-native-web Setup
+
+To port a react-native mobile app to web using `react-native-web` you just need to ensure the fonts are known on the web-app side.
+
+You will need add the font-family for each font you use to your css
+
+You can debug missing font-families by looking in the Developer console in your web browser when debugging your web app.
+
+NOTE: if you're using webpack or similar you *may* need to configure webpack to handle loading of ttf fonts, using url-loader or file-loader. See [Web Setup](#web-setup) for more details.
+
+In your `App.css` or similar add the font-family specifications:
+
+```css
+@font-face {
+  src: url(path/to/fonts/Ionicons.ttf);
+  font-family: "Ionicons";
+}
+
+@font-face {
+  src: url(path/to/fonts/FontAwesome.ttf);
+  font-family: "FontAwesome";
+}
+
+@font-face {
+  src: url(path/to/fonts/FontAwesome5_Brands.ttf);
+  font-family: "FontAwesome5_Brands";
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+@font-face {
+  src: url(path/to/fonts/FontAwesome5_Regular.ttf);
+  font-family: "FontAwesome5_Regular";
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+@font-face {
+  src: url(path/to/fonts/FontAwesome5_Solid.ttf);
+  font-family: "FontAwesome5_Solid";
+  font-weight: 900; /* Bold weight for solid */
+  font-style: normal;
+}
+
+@font-face {
+  src: url(path/to/fonts/MaterialIcons.ttf);
+  font-family: "MaterialIcons";
+}
+
+@font-face {
+  src: url(path/to/fonts/Feather.ttf);
+  font-family: "Feather";
+}
+
+@font-face {
+  src: url(path/to/fonts/MaterialCommunityIcons.ttf);
+  font-family: "MaterialCommunityIcons";
+}
+
+/* TODO: Add other icons fonts here */
+```
 
 ### Web Setup
 
@@ -766,6 +831,37 @@ You probably didn't update the font files linked to your native project after up
 #### Some icons are missing after upgrading this package
 
 Sometimes vendors decides to remove some icons from newer releases, this has nothing to do with this package. If you depend on an older version of a font you can add it as a [custom font](#custom-fonts).
+
+#### Unable to resolve module @expo/vector-icons/XXXFont
+
+You are probably trying to use `@expo/vector-icons` and `react-native-vector-icons` at the same time. The expo package aliases this one and will take precedence. Use only one of these libraries in your project.
+
+#### Web-pack complains about unsupported JSX Syntax
+
+You will need to add JSX support for `react-native-vector-icons` to your transpiler configuration e.g. babel.
+
+For example, to add `react-native-vector-icons` to the list of modules that support JSX (if using webpack) you may need to add the relative path to `react-native-vector-icons` in the include section of your JSX config.
+
+This may look something like the following if you are using Babel in webpack:
+
+```diff
+ // Process application JS with Babel.
+ // The preset includes JSX, Flow, TypeScript, and some ESnext features.
+ {
+   test: /\.(js|mjs|jsx|ts|tsx)$/,
+   include: [
+     paths.appSrc,
++    // START - support for JSX in react-native-vector-icons
++    path.resolve(
++      __dirname,
++      // modify this path to be relative to you webpack config,
++      // "../node_modules/react-native-vector-icons", // <- most common
++      "../../../node_modules/react-native-vector-icons", // <- if using workspaces
++    ),
++    // END - support got react-native-vector-icons
+   ],
+   loader: require.resolve("babel-loader"),
+```
 
 ## License
 
