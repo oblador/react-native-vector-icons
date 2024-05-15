@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const path = require('node:path');
-const { globSync } = require('node:glob');
+const path = require('node:path'); // eslint-disable-line @typescript-eslint/no-var-requires
+const { globSync } = require('glob'); // eslint-disable-line @typescript-eslint/no-var-requires
 
 const customFontMap = {
   'FontAwesome5_Solid.ttf': 'FontAwesome5',

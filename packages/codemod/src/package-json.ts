@@ -3,7 +3,8 @@ import fs from 'node:fs';
 const getVersion = async (pkg: string) => {
   const packageJson = await fetch(`https://registry.npmjs.org/${pkg}/latest`).then((res) => res.json());
   return `^${packageJson.version}`;
-}
+};
+
 export default async (pkgs: Set<string>) => {
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   const { dependencies } = packageJson;

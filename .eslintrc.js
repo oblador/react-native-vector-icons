@@ -3,6 +3,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   overrides: [
     {
@@ -29,9 +30,9 @@ module.exports = {
         expect: false,
         waitFor: false,
         element: false,
-        by: false
-      }
-    }
+        by: false,
+      },
+    },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
