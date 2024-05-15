@@ -33,11 +33,7 @@ For the integration of `.svg` files natively, you can explore [`react-native-vec
 ## Sponsorship
 
 Should you find this library beneficial, kindly contemplate the option of
-[sponsoring](https://github.com/sponsors/oblador). Our envisioned endeavors
-encompass the restructuring of the repository into a monorepo architecture.
-This transition will empower independent versioning of icon sets, enhance
-performance, reduce bundle size, and simplify community contributions. Your
-sponsorship plays a pivotal role in materializing these advancements.
+[sponsoring](https://github.com/sponsors/oblador).
 
 ## Available Icon Sets
 
@@ -66,7 +62,7 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 
 ## Migration
 
-See [MIGRATION.md](./MIGRATION.md) if you are migrating from `react-native-vector-icons`
+See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-icons`
 
 ## Installation
 
@@ -85,8 +81,13 @@ See [MIGRATION.md](./MIGRATION.md) if you are migrating from `react-native-vecto
   * [FontAwesome 6](packages/fontawesome6/README.md)
   * [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
   * [Fontello](packages/fontello/README.md)
+  * [Icomoon](packages/icomoon/README.md)
 
-### iOS Setup
+### android
+
+Nothing else needed.
+
+### iOS
 
 To use the bundled icons on iOS, follow these steps:
 
@@ -95,11 +96,11 @@ To use the bundled icons on iOS, follow these steps:
   cd ios && pod update
   ```
 
-### macOS Setup
+### macOS
 
 TBA: It should just work???
 
-### Windows Setup
+### Windows
 
 TBA: It should just work???
 
