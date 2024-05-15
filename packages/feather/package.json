@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/feather",
-  "version": "4.29.1-alpha.9",
+  "version": "4.29.2-alpha.9",
   "description": "Feather font for react native vector icons",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -76,7 +76,7 @@
   },
   "devDependencies": {
     "del-cli": "^5.1.0",
-    "feather-icons": "4.29.1",
+    "feather-icons": "4.29.2",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",
     "typescript": "^5.4.5"

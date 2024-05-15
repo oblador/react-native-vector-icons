@@ -43,10 +43,10 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 
 ### Actively maintained fonts
 - [`AntDesign`](https://ant.design/components/icon) from Ant Group (v4.4.2 with _449_ icons)
-- [`Feather`](http://feathericons.com) created by Cole Bemis & Contributors (v4.29.1 featuring _287_ icons)
+- [`Feather`](http://feathericons.com) created by Cole Bemis & Contributors (v4.29.2 featuring _287_ icons)
 - [`FontAwesome 6`](https://fontawesome.com/search) designed by Fonticons, Inc. (v6.5.2 featuring _2045_ free and _30199_ pro icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0 with _283_ icons)
-- [`Ionicons`](https://ionic.io/ionicons) crafted by Ionic (v7.3.1 containing _1355_ icons)
+- [`Ionicons`](https://ionic.io/ionicons) crafted by Ionic (v7.4.0 containing _1356_ icons)
 - [`MaterialDesignIcons`](https://pictogrammers.com/library/mdi/) from MaterialDesignIcons.com (v7.4.47 including _7448_ icons)
 - [`Octicons`](https://primer.style/foundations/icons) designed by Github, Inc. (v19.9.0 with _321_ icons)
 
