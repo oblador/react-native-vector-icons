@@ -1,16 +1,16 @@
 const project = (() => {
   try {
-    const { configureProjects } = require("react-native-test-app");
+    const { configureProjects } = require('react-native-test-app');
     return configureProjects({
       android: {
-        sourceDir: "android",
+        sourceDir: 'android',
       },
       ios: {
-        sourceDir: "ios",
+        sourceDir: 'ios',
       },
       windows: {
-        sourceDir: "windows",
-        solutionFile: "windows/IconExplorer.sln",
+        sourceDir: 'windows',
+        solutionFile: 'windows/IconExplorer.sln',
       },
     });
   } catch (_) {

@@ -1,8 +1,10 @@
-import { describe, it, beforeEach, beforeAll } from '@jest/globals'; // eslint-disable-line import/no-extraneous-dependencies
-import { expect, device, element, waitFor, by } from 'detox'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+
+import { beforeAll, beforeEach, describe, it } from '@jest/globals';
+import { by, device, element, expect, waitFor } from 'detox';
 
 import { execSync } from 'node:child_process';
-import { mkdirSync, cpSync } from 'node:fs';
+import { cpSync, mkdirSync } from 'node:fs';
 
 const takeAndCheckScreenshot = async (name: string) => {
   const screenshot = await device.takeScreenshot(name);

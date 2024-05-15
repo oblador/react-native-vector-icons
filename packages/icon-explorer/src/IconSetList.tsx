@@ -207,13 +207,20 @@ export const IconSetList = ({
     sections.unshift({
       title: 'SCROLL',
       data: [
-        <Pressable testID="scroll" onPress={scrollToEnd} style={styles.button}>
+        <Pressable key="scroll" testID="scroll" onPress={scrollToEnd} style={styles.button}>
           <Text style={styles.buttonText}>Scroll to End</Text>
         </Pressable>,
       ],
     });
 
-    sections.push({ title: 'FOOTER', data: [<Text testID="footer">Footer</Text>] });
+    sections.push({
+      title: 'FOOTER',
+      data: [
+        <Text key="footer" testID="footer">
+          Footer
+        </Text>,
+      ],
+    });
   }
 
   return (
