@@ -2,20 +2,35 @@
   "$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
   "files": {
     "ignore": [
-      "package.json",
+      // Generated files
+      "packages/generator-react-native-vector-icons/generators",
+      "packages/*/lib",
       "packages/*/glyphmaps",
       "packages/*/.fontcustom-manifest.json",
-      "packages/*/package.json",
-      "packages/common/android/build",
-      "packages/icon-explorer/android/app/build",
+      "packages/ant-design/src/index.ts",
+      "packages/entypo/src/index.ts",
+      "packages/evil-icons/src/index.ts",
+      "packages/feather/src/index.ts",
+      "packages/fontawesome5-pro/src/index.tsx",
+      "packages/fontawesome5/src/index.tsx",
+      "packages/fontawesome6-pro/src/index.tsx",
+      "packages/fontawesome6/src/index.tsx",
+      "packages/fontawesome/src/index.ts",
+      "packages/fontisto/src/index.ts",
+      "packages/foundation/src/index.ts",
+      "packages/ionicons/src/index.ts",
+      "packages/material-design-icons/src/index.ts",
+      "packages/material-icons/src/index.ts",
+      "packages/octicons/src/index.ts",
+      "packages/simple-line-icons/src/index.ts",
+      "packages/zocial/src/index.ts",
+      // Templates that have ejs
+      "packages/fontawesome-common/generators/app/templates/src/index.tsx",
+      // Upstream files
       "packages/icon-explorer/src/configs/icomoon.config.json",
-      "packages/generator-react-native-vector-icons/src/app/templates/src/index.ts",
-      "packages/generator-react-native-vector-icons/generators",
-      "packages/fontawesome-common/generators",
-      "packages/*/lib",
-      "packages/icon-explorer/*.js",
-      "packages/icon-explorer/*.json",
-      "packages/directory"
+      // yarn keeps this formatted
+      "package.json",
+      "packages/*/package.json"
     ]
   },
   "organizeImports": {

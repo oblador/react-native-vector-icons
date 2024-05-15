@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-const path = require('node:path');
-const { globSync } = require('node:glob');
+const path = require('node:path'); // eslint-disable-line @typescript-eslint/no-var-requires
+const { globSync } = require('glob'); // eslint-disable-line @typescript-eslint/no-var-requires
 
 const glyphMapFiles = globSync('../*/glyphmaps/*.json', { ignore: '../fontawesome[56]*/**' });
 
-const fontAwesome5Glyphmap = require(path.join(__dirname, '../../fontawesome5/glyphmaps/', 'FontAwesome5Free.json'));
-const fontAwesome5Meta = require(path.join(__dirname, '../../fontawesome5/glyphmaps/', 'FontAwesome5Free_meta.json'));
+const fontAwesome5Glyphmap = require(path.join(__dirname, '../../fontawesome5/glyphmaps/', 'FontAwesome5Free.json')); // eslint-disable-line @typescript-eslint/no-var-requires,import/no-dynamic-require
+const fontAwesome5Meta = require(path.join(__dirname, '../../fontawesome5/glyphmaps/', 'FontAwesome5Free_meta.json')); // eslint-disable-line @typescript-eslint/no-var-requires,import/no-dynamic-require
 
-const fontAwesome6Glyphmap = require(path.join(__dirname, '../../fontawesome6/glyphmaps/', 'FontAwesome6Free.json'));
-const fontAwesome6Meta = require(path.join(__dirname, '../../fontawesome6/glyphmaps/', 'FontAwesome6Free_meta.json'));
+const fontAwesome6Glyphmap = require(path.join(__dirname, '../../fontawesome6/glyphmaps/', 'FontAwesome6Free.json')); // eslint-disable-line @typescript-eslint/no-var-requires,import/no-dynamic-require
+const fontAwesome6Meta = require(path.join(__dirname, '../../fontawesome6/glyphmaps/', 'FontAwesome6Free_meta.json')); // eslint-disable-line @typescript-eslint/no-var-requires,import/no-dynamic-require
 
 const pickGlyps = (glyps, glyphmap) =>
   glyps.reduce((acc, glyp) => {
@@ -20,7 +20,7 @@ const pickGlyps = (glyps, glyphmap) =>
 const index = glyphMapFiles.reduce(
   (acc, file) => {
     const name = path.basename(file, '.json');
-    acc[name] = require(path.join(__dirname, '..', file));
+    acc[name] = require(path.join(__dirname, '..', file)); // eslint-disable-line @typescript-eslint/no-var-requires,import/no-dynamic-require,global-require
     return acc;
   },
   {
