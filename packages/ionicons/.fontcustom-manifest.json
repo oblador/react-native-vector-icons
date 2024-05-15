@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "9cc9c8718020aa39ff681baba6d45a4bf40edae78f692585a1e730baa00026be",
-    "current": "9cc9c8718020aa39ff681baba6d45a4bf40edae78f692585a1e730baa00026be"
+    "previous": "08c2f95273fd5fde8de4d60a9715e61c32da4c040c3080b91b9b7e8f301a6234",
+    "current": "08c2f95273fd5fde8de4d60a9715e61c32da4c040c3080b91b9b7e8f301a6234"
   },
   "fonts": [
     "Ionicons/Ionicons.ttf",
@@ -3310,6 +3310,10 @@
     "logo-wordpress": {
       "codepoint": 62503,
       "source": "fixedSvg/logo-wordpress.svg"
+    },
+    "logo-x": {
+      "codepoint": 63051,
+      "source": "fixedSvg/logo-x.svg"
     },
     "logo-xbox": {
       "codepoint": 62504,

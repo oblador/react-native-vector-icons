@@ -28,7 +28,7 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
-    "build": "npm run clean && tsc && npm run copydeps",
+    "prepare": "npm run clean && tsc && npm run copydeps",
     "copydeps": "copyfiles --up 1 'src/*/templates/**' generators",
     "lint": "eslint ./src --ext .js,.ts",
     "clean": "rm -rf ./generators",
