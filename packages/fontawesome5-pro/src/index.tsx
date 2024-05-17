@@ -148,46 +148,41 @@ const Icon = (props: Props) => {
 
 type GetImageSourceFunc = {
   (
-    name: keyof typeof brandGM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: 'brand',
+    name: keyof typeof brandGM,
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.brand)['getImageSource']>;
   (
-    name: keyof typeof duotoneGM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: 'duotone',
+    name: keyof typeof duotoneGM,
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.duotone)['getImageSource']>;
   (
-    name: keyof typeof lightGM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: 'light',
+    name: keyof typeof lightGM,
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.light)['getImageSource']>;
   (
-    name: keyof typeof regularGM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: 'regular',
-  ): ReturnType<(typeof Icons.regular)['getImageSource']>;
-  (
-    name: keyof typeof solidGM,
-    size: number,
-    color: TextStyle['color'],
-    iconStyle: 'solid',
-  ): ReturnType<(typeof Icons.solid)['getImageSource']>;
-  (
     name: keyof typeof regularGM,
-    size: number,
-    color: TextStyle['color'],
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.regular)['getImageSource']>;
+  (
+    iconStyle: 'solid',
+    name: keyof typeof solidGM,
+    size?: number,
+    color?: TextStyle['color'],
+  ): ReturnType<(typeof Icons.solid)['getImageSource']>;
 };
 const getImageSource: GetImageSourceFunc = (
+  iconStyle,
   name,
   size = DEFAULT_ICON_SIZE,
   color = DEFAULT_ICON_COLOR,
-  iconStyle = 'regular',
 ) => {
   switch (iconStyle) {
     case 'brand':
@@ -209,46 +204,41 @@ Icon.getImageSource = getImageSource;
 
 type GetImageSourceSyncFunc = {
   (
-    name: keyof typeof brandGM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: 'brand',
+    name: keyof typeof brandGM,
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.brand)['getImageSourceSync']>;
   (
-    name: keyof typeof duotoneGM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: 'duotone',
+    name: keyof typeof duotoneGM,
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.duotone)['getImageSourceSync']>;
   (
-    name: keyof typeof lightGM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: 'light',
+    name: keyof typeof lightGM,
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.light)['getImageSourceSync']>;
   (
-    name: keyof typeof regularGM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: 'regular',
-  ): ReturnType<(typeof Icons.regular)['getImageSourceSync']>;
-  (
-    name: keyof typeof solidGM,
-    size: number,
-    color: TextStyle['color'],
-    iconStyle: 'solid',
-  ): ReturnType<(typeof Icons.solid)['getImageSourceSync']>;
-  (
     name: keyof typeof regularGM,
-    size: number,
-    color: TextStyle['color'],
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.regular)['getImageSourceSync']>;
+  (
+    iconStyle: 'solid',
+    name: keyof typeof solidGM,
+    size?: number,
+    color?: TextStyle['color'],
+  ): ReturnType<(typeof Icons.solid)['getImageSourceSync']>;
 };
 const getImageSourceSync: GetImageSourceSyncFunc = (
+  iconStyle,
   name,
   size = DEFAULT_ICON_SIZE,
   color = DEFAULT_ICON_COLOR,
-  iconStyle = 'regular',
 ) => {
   switch (iconStyle) {
     case 'brand':

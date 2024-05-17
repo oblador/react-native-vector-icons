@@ -31,8 +31,8 @@ to change the style of the icon:
 ```javascript
 import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
 
-const icon = <FontAwesome6Pro name="comments" solid />;
-const icon = <FontAwesome6Pro name="git" brand />;
+const icon = <FontAwesome6Pro name="comments" iconStyle="solid" />;
+const icon = <FontAwesome6Pro name="git" iconStyle="brand" />;
 ```
 
 **Valid types**
@@ -53,33 +53,14 @@ No specified type indicates Regular font.
 
 ### getImageSource
 
-`getImageSource` works a little different due to its native backend and how
-the font is separated into different files. Therefore, the enum FA6Style is
-defined to help setting the style of the font:
+`getImageSource` works a little different due to its native backend and how the
+font is separated into different files. An extra argument to specify the font
+style is required.
 
 ```javascript
-const FA6Style = {
-  regular: 'regular',
-  light: 'light',
-  solid: 'solid',
-  brand: 'brand',
-  sharp: 'sharp',
-  sharpThin: 'sharpThin',
-  sharpLight: 'sharpLight',
-  sharpSolif: 'sharpSolid',
-  duotone: 'duotone',
-  thin: 'thin',
-};
-```
+import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
 
-Use this to select which style the generated image should have:
-
-```javascript
-import FontAwesome6, { FA6Style } from 'react-native-vector-icons/FontAwesome6';
-
-FontAwesome6.getImageSource('comments', 30, '#000', FA6Style.solid).then(
+FontAwesome6Pro.getImageSource('solid', 'comments', 30, '#000').then(
   (source) => this.setState({ image: source })
 );
 ```
-
-Not passing a style will result in Regular style.

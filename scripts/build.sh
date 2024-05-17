@@ -4,7 +4,9 @@ set -e
 
 cd packages
 
-for package in *; do
+PACKAGES=${@:-$(ls -d */)}
+
+for package in $PACKAGES; do
   if [ ! -f "$package/.yo-rc.json" ]; then
     continue
   fi
