@@ -83,7 +83,7 @@ const SYNCHROUNOUS = [
         <Image source={FontAwesome.getImageSourceSync('check', 40, 'green')} style={{ width: 40, height: 40 }} />
 
         <Image
-          source={FontAwesome6.getImageSourceSync('check', 40, 'green', 'solid')}
+          source={FontAwesome6.getImageSourceSync('solid', 'check', 40, 'green')}
           style={{ width: 40, height: 40 }}
         />
       </>
