@@ -13,10 +13,10 @@
   ],
   "dependencies": {
     "mem-fs": "^4.1.0",
-    "npm-registry-fetch": "^16.2.1",
+    "npm-registry-fetch": "^17.0.1",
     "oslllo-svg-fixer": "^4.0.1",
     "registry-auth-token": "^5.0.2",
-    "semver": "^7.6.0",
+    "semver": "^7.6.2",
     "yeoman-generator": "^7.1.1"
   },
   "devDependencies": {
