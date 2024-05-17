@@ -4,14 +4,14 @@
   "private": true,
   "homepage": "https://oblador.github.io/react-native-vector-icons",
   "dependencies": {
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^15.0.2",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^15.0.7",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.7",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "glob": "^10.3.12",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "glob": "^10.3.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -40,6 +40,6 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/dom": "^10.0.0"
+    "@testing-library/dom": "^10.1.0"
   }
 }
