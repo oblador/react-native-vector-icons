@@ -31,45 +31,34 @@ to change the style of the icon:
 ```javascript
 import FontAwesome5Pro from '@react-native-vector-icons/fontawesome5-pro';
 
-const icon = <FontAwesome5Pro name="comments" solid />;
-const icon = <FontAwesome5Pro name="git" brand />;
+const icon = <FontAwesome5Pro name="comments" iconStyle="solid" />;
+const icon = <FontAwesome5Pro name="git" iconStyle="brand" />;
 ```
 
 **Valid types**
 
-| Type           | Description               |
-| -------------- | ------------------------- |
-| **brand**      | Uses the Brands font      |
-| **solid**      | Uses the Solid font       |
-| **light**      | Uses the Light font       |
-| **duotone**    | Uses the Duotone font     |
+| Type         | Description               |
+| ------------ | --------------------- |
+| **regular**  | Uses the Regular font |
+| **brand**    | Uses the Brands font  |
+| **solid**    | Uses the Solid font   |
+| **light**    | Uses the Light font   |
+| **duotone**  | Uses the Duotone font |
 
 No specified type indicates Regular font.
 
 ### getImageSource
 
-`getImageSource` works a little different due to its native backend and how
-the font is separated into different files. Therefore, the enum FA5Style is
-defined to help setting the style of the font:
-
-```javascript
-const FA5Style = {
-  regular: 'regular',
-  light: 'light',
-  solid: 'solid',
-  brand: 'brand',
-  duotone: 'duotone',
-};
-```
+`getImageSource` works a little different due to its native backend and how the
+font is separated into different files. An extra argument to specify the font
+style is required.
 
 Use this to select which style the generated image should have:
 
 ```javascript
-import FontAwesome5, { FA5Style } from 'react-native-vector-icons/FontAwesome5';
+import FontAwesome5Pro from '@react-native-vector-icons/fontawesome5-pro';
 
-FontAwesome5.getImageSource('comments', 30, '#000', FA5Style.solid).then(
+FontAwesome5Pro.getImageSource('solid', 'comments', 30, '#000').then(
   (source) => this.setState({ image: source })
 );
 ```
-
-Not passing a style will result in Regular style.

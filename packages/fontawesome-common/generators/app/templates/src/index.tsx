@@ -97,23 +97,18 @@ const Icon = (props: Props) => {
 type GetImageSourceFunc = {
 <% meta.styleNames.forEach((styleName) => { -%>
   (
-    name: keyof typeof <%= styleName %>GM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: '<%= styleName %>',
+    name: keyof typeof <%= styleName %>GM,
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.<%= styleName %>)['getImageSource']>;
 <% }) -%>
-  (
-    name: keyof typeof <%= meta.defaultStyleName %>GM,
-    size: number,
-    color: TextStyle['color'],
-  ): ReturnType<(typeof Icons.<%= meta.defaultStyleName %>)['getImageSource']>;
 };
 const getImageSource: GetImageSourceFunc = (
+  iconStyle,
   name,
   size = DEFAULT_ICON_SIZE,
   color = DEFAULT_ICON_COLOR,
-  iconStyle = '<%= meta.defaultStyleName %>',
 ) => {
   switch (iconStyle) {
 <% meta.styleNames.forEach((styleName) => { -%>
@@ -130,23 +125,18 @@ Icon.getImageSource = getImageSource;
 type GetImageSourceSyncFunc = {
 <% meta.styleNames.forEach((styleName) => { -%>
   (
-    name: keyof typeof <%= styleName %>GM,
-    size: number,
-    color: TextStyle['color'],
     iconStyle: '<%= styleName %>',
+    name: keyof typeof <%= styleName %>GM,
+    size?: number,
+    color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.<%= styleName %>)['getImageSourceSync']>;
 <% }) -%>
-  (
-    name: keyof typeof <%= meta.defaultStyleName %>GM,
-    size: number,
-    color: TextStyle['color'],
-  ): ReturnType<(typeof Icons.<%= meta.defaultStyleName %>)['getImageSourceSync']>;
 };
 const getImageSourceSync: GetImageSourceSyncFunc = (
+  iconStyle,
   name,
   size = DEFAULT_ICON_SIZE,
   color = DEFAULT_ICON_COLOR,
-  iconStyle = 'regular',
 ) => {
   switch (iconStyle) {
 <% meta.styleNames.forEach((styleName) => { -%>
