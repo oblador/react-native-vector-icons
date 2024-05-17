@@ -8,6 +8,9 @@ Elevate your React Native applications with the power of customizable vector ico
 
 For the integration of `.svg` files natively, you can explore [`react-native-vector-image`](https://github.com/oblador/react-native-vector-image).
 
+> [!TIP]
+> A new version of RNVI is coming soon. It has almost a zero config setup. Feedback welcome, please try it out on the [monorepo branch](https://github.com/oblador/react-native-vector-icons/tree/monorepo)
+
 ## Table of Contents
 
 - [Bundled Icon Sets](#bundled-icon-sets)
