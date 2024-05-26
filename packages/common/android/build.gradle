@@ -119,7 +119,7 @@ task copyFonts(type: Exec) {
   standardOutput = fonts
 
   doLast {
-    def files = fonts.toString().trim().split('\n')
+    def files = fonts.toString().trim().split('\n').findAll { it }
     copy {
       from files
 
