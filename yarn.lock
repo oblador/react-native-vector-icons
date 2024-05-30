@@ -7151,7 +7151,7 @@ __metadata:
     "@types/react": "npm:^18.2.79"
     "@types/react-test-renderer": "npm:^18.0.7"
     babel-jest: "npm:^29.7.0"
-    detox: "npm:^20.21.0"
+    detox: "npm:^20.22.2"
     eslint: "npm:^8.57.0"
     get-yarn-workspaces: "npm:^1.0.2"
     jest: "npm:^29.2.1"
@@ -10876,9 +10876,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detox@npm:^20.21.0":
-  version: 20.21.0
-  resolution: "detox@npm:20.21.0"
+"detox@npm:^20.22.2":
+  version: 20.22.2
+  resolution: "detox@npm:20.22.2"
   dependencies:
     ajv: "npm:^8.6.3"
     bunyan: "npm:^1.8.12"
@@ -10892,7 +10892,7 @@ __metadata:
     funpermaproxy: "npm:^1.1.0"
     glob: "npm:^8.0.3"
     ini: "npm:^1.3.4"
-    jest-environment-emit: "npm:^1.0.5"
+    jest-environment-emit: "npm:^1.0.8"
     json-cycle: "npm:^1.3.0"
     lodash: "npm:^4.17.11"
     multi-sort-stream: "npm:^1.0.3"
@@ -10922,7 +10922,7 @@ __metadata:
       optional: true
   bin:
     detox: local-cli/cli.js
-  checksum: 10c0/bff6d7e0cab1e5283e685fc4d6eb33baec3a3a39003d35d96923812f3dca2a4369ad076ec719b53d9c6db5f69bc3d3597426a21b6042ca24ae209b20aeac96c8
+  checksum: 10c0/d188aa8290e3107fc317d1c6d9f347beac3fef2517d7e483c5fc9b28c2aa20cdacdc158696f06d979bc237590c32fb5130c7215e41d945a5e5a6c68f87ce0c75
   languageName: node
   linkType: hard
 
@@ -15943,9 +15943,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-environment-emit@npm:^1.0.5":
-  version: 1.0.7
-  resolution: "jest-environment-emit@npm:1.0.7"
+"jest-environment-emit@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "jest-environment-emit@npm:1.0.8"
   dependencies:
     bunyamin: "npm:^1.5.2"
     bunyan: "npm:^2.0.5"
@@ -15972,7 +15972,7 @@ __metadata:
       optional: true
     jest-environment-node:
       optional: true
-  checksum: 10c0/2fcd2c0640233da6e6752bc83532764c0a76e85d02632e7ac9c3909a139a0a3b65ae8a6ffe5b473c685e9b06e2f8979ec3c085c4fa95bd2efe17bbee233d8401
+  checksum: 10c0/4221467aff6d683be6c62b5603c71a2e85ba0565b1d2ff86b373052fb0fa4cc4c63d6d854b931c6ae831f1b7ba4ab76a1e9a9467bd24cabab92f6de967f785ea
   languageName: node
   linkType: hard
 
