@@ -216,7 +216,7 @@ export const IconSetList = ({
     sections.push({
       title: 'FOOTER',
       data: [
-        <Text key="footer" testID="footer">
+        <Text key="footer2" testID="footer">
           Footer
         </Text>,
       ],
