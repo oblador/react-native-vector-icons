@@ -67,7 +67,7 @@
     "@types/react": "^18.2.79",
     "@types/react-test-renderer": "^18.0.7",
     "babel-jest": "^29.7.0",
-    "detox": "^20.21.0",
+    "detox": "^20.22.2",
     "eslint": "^8.57.0",
     "get-yarn-workspaces": "^1.0.2",
     "jest": "^29.2.1",
