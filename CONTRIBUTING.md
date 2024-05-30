@@ -110,11 +110,19 @@ yarn test
 
 TODO: Expand on detox here
 
-To runthe detox tests you should create an avd called test whch is based on the Pixel 6 Pro profile. This is essential for the screenshot diffs to work
+To run the detox tests you should create an avd called test which is based on the Pixel 6 Pro profile. This is essential for the screenshot diffs to work
 ```sh
 sdkmanager --install 'system-images;android-31;default;x86_64' --channel=0
 avdmanager create avd --force -n test --abi 'default/x86_64' --package 'system-images;android-31;default;x86_64' --device 'pixel_6_pro'
+```
 
+You can then run the tests
+```
+cd packages/icon-explorer
+yarn run test:android:build
+yarn run test:android:run
+yarn run test:ios:build
+yarn run test:ios:run
 ```
 
 ### Linting and tests

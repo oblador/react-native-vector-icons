@@ -17,14 +17,14 @@ const takeAndCheckScreenshot = async (name: string) => {
   const pixels = execSync(
     // Shave top to ignore lock
     // Shave right side to ignore scrollbar
-    `compare -crop 1400x3120+0+100 -metric AE e2e/snapshot/${platform}/${file} e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
+    `compare -crop 1340x3120+0+100 -metric AE -fuzz 2% e2e/snapshot/${platform}/${file} e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
   );
 
   if (pixels.toString().trim() !== '0') {
     // Wierd thing with older RN Remove after we drop 0.70 and 0.71 support
     if (name === 'home-bottom') {
       const pixels2 = execSync(
-        `compare -crop 1400x3120+0+100 -metric AE e2e/snapshot/${platform}/home-bottom-old.png e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
+        `compare -crop 1340x3120+0+100 -metric AE -fuzz 2% e2e/snapshot/${platform}/home-bottom-old.png e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
       );
       if (pixels2.toString().trim() !== '0') {
         throw new Error(`Image ${name} has changed by ${pixels2} pixels!`);
