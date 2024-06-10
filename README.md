@@ -102,7 +102,7 @@ To use the bundled icons on iOS, perform the following step:
 
 ### macOS
 
-TBA: It should just work???
+This needs more work, see details in #1624
 
 ### Windows
 
