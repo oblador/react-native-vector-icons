@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/ionicons",
-  "version": "7.4.0-alpha.11",
+  "version": "7.4.0-alpha.12",
   "description": "Ionicons font for react native vector icons",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
