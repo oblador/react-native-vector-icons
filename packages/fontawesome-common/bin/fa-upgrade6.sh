@@ -2,4 +2,4 @@
 
 set -e
 
-fa-upgrade.sh 5 $@
+fa-upgrade.sh 6 $@
