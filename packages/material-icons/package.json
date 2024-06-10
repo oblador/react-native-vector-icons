@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/material-icons",
-  "version": "0.0.1-alpha.9",
+  "version": "0.0.1-alpha.10",
   "description": "Material Icons font for react native vector icons",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -72,7 +72,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^0.0.1-alpha.6"
+    "@react-native-vector-icons/common": "^0.0.1-alpha.7"
   },
   "devDependencies": {
     "del-cli": "^5.1.0",
