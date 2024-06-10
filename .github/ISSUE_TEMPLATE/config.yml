@@ -1,3 +1,4 @@
+blank_issues_enabled: false
 contact_links:
   - name: Community Support
     url: https://github.com/react-native-vector-icons/discussions
