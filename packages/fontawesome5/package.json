@@ -11,6 +11,7 @@
     "src",
     "lib",
     "glyphmaps",
+    "fonts",
     "android",
     "ios",
     "cpp",
