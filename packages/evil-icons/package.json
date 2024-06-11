@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/evil-icons",
-  "version": "1.10.1-alpha.12",
+  "version": "1.10.1-alpha.13",
   "description": "Evil Icons font for react native vector icons",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -73,7 +73,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^0.0.1-alpha.8"
+    "@react-native-vector-icons/common": "^0.0.1-alpha.9"
   },
   "devDependencies": {
     "del-cli": "^5.1.0",
