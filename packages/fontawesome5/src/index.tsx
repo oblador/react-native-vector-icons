@@ -67,14 +67,14 @@ const Icons: Icons = {
   // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
   regular: commonCreateIconSet(
     regularGM,
-    'FontAwesome5-Regular',
+    'FontAwesome5Free-Regular',
     'FontAwesome5_Regular.ttf',
     fontStyle('400'),
   ),
   // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
   solid: commonCreateIconSet(
     solidGM,
-    'FontAwesome5-Solid',
+    'FontAwesome5Free-Solid',
     'FontAwesome5_Solid.ttf',
     fontStyle('900'),
   ),

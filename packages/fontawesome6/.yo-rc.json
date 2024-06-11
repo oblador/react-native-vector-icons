@@ -15,12 +15,12 @@
       "styleNames": ["regular", "solid", "brand"],
       "styles": {
         "regular": {
-          "family": "FontAwesome6-Regular",
+          "family": "FontAwesome6Free-Regular",
           "name": "FontAwesome6_Regular.ttf",
           "weight": 400
         },
         "solid": {
-          "family": "FontAwesome6-Solid",
+          "family": "FontAwesome6Free-Solid",
           "name": "FontAwesome6_Solid.ttf",
           "weight": 900
         },
