@@ -250,7 +250,7 @@ To set up the library on your macOS project using `react-native-macos`, follow t
 
 3. Update the pod. From your project's `/ios` folder run:
 ```sh
-pod update
+bundle exec pod install
 ```
    
 _Please note that after adding new fonts, you need to recompile your project. Also, make sure that the `Fonts` folder is present under the **Copy Bundle Resources** section within the **Build Phases** of your Xcode project._
