@@ -248,7 +248,7 @@ To set up the library on your macOS project using `react-native-macos`, follow t
 
 2. Edit your `Info.plist` and include a new property named **Application fonts resource path** (or `ATSApplicationFontsPath` if Xcode's autocomplete isn't functioning or you're not using Xcode). Set the value of this property to `Fonts`.
 
-3. Update the pod. From your project's `/ios` folder run:
+3. From your project's `/ios` folder run:
 ```sh
 bundle exec pod install
 ```
