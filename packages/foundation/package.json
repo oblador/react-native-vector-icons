@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/foundation",
-  "version": "2.0.0-alpha.13",
+  "version": "2.0.0-alpha.14",
   "description": "Foundation font for react native vector icons",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
