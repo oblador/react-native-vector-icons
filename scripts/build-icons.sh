@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-rm -rf {Fonts,AntDesign.js,Entypo.js,EvilIcons.js,FontAwesome.js,Fontisto.js,Foundation.js,Ionicons.js,MaterialIcons.js,MaterialCommunityIcons.js,Octicons.js,Zocial.js,SimpleLineIcons.js,glyphmaps}
+rm -rf {Fonts,AntDesign.js,Entypo.js,EvilIcons.js,FontAwesome.js,Fontisto.js,Foundation.js,Ionicons.js,MaterialIcons.js,MaterialCommunityIcons.js,Octicons.js,Zocial.js,SimpleLineIcons.js,Lucide.js,glyphmaps}
 mkdir Fonts glyphmaps
 ./scripts/antdesign.sh
 ./scripts/entypo.sh
@@ -15,3 +15,4 @@ mkdir Fonts glyphmaps
 ./scripts/octicons.sh
 ./scripts/zocial.sh
 ./scripts/simplelineicons.sh
+./scripts/lucide.sh

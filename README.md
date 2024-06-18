@@ -53,6 +53,7 @@ Should you find this library beneficial, kindly contemplate the option of [spons
 - [`Fontisto`](https://github.com/kenangundogan/fontisto) created by Kenan Gündoğan (v3.0.4 featuring *615* icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0 with *283* icons)
 - [`Ionicons`](https://ionicons.com/) crafted by Ionic (v7.1.0 containing *1338* icons)
+- [`Lucide`](https://lucide.dev/) crafted by Eric Fennis, Karsa Rigó, Jakob Guddas (v0.395.0 containing *1468* icons)
 - [`MaterialIcons`](https://fonts.google.com/icons/) by Google, Inc. (v4.0.0 featuring *2189* icons)
 - [`MaterialCommunityIcons`](https://materialdesignicons.com/) from MaterialDesignIcons.com (v6.5.95 including *6596* icons)
 - [`Octicons`](http://octicons.github.com) designed by Github, Inc. (v16.3.1 with *250* icons)
@@ -94,6 +95,7 @@ To use the bundled icons on iOS, follow these steps:
       <string>FontAwesome6_Solid.ttf</string>
       <string>Foundation.ttf</string>
       <string>Ionicons.ttf</string>
+      <string>Lucide.ttf</string>
       <string>MaterialIcons.ttf</string>
       <string>MaterialCommunityIcons.ttf</string>
       <string>SimpleLineIcons.ttf</string>
