@@ -8,6 +8,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Foundation from 'react-native-vector-icons/Foundation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Lucide from 'react-native-vector-icons/Lucide';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
@@ -22,6 +23,7 @@ import FontAwesome5Glyphs from 'react-native-vector-icons/glyphmaps/FontAwesome5
 import FontistoGlyphs from 'react-native-vector-icons/glyphmaps/Fontisto.json';
 import FoundationGlyphs from 'react-native-vector-icons/glyphmaps/Foundation.json';
 import IoniconsGlyphs from 'react-native-vector-icons/glyphmaps/Ionicons.json';
+import LucideGlyphs from 'react-native-vector-icons/glyphmaps/Lucide.json';
 import MaterialIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialIcons.json';
 import MaterialCommunityIconsGlyphs from 'react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json';
 import OcticonsGlyphs from 'react-native-vector-icons/glyphmaps/Octicons.json';
@@ -38,6 +40,7 @@ const GLYPH_MAPS = {
   Fontisto: FontistoGlyphs,
   Foundation: FoundationGlyphs,
   Ionicons: IoniconsGlyphs,
+  Lucide: LucideGlyphs,
   MaterialIcons: MaterialIconsGlyphs,
   MaterialCommunityIcons: MaterialCommunityIconsGlyphs,
   Octicons: OcticonsGlyphs,
@@ -55,6 +58,7 @@ const ICON_SETS = {
   Fontisto,
   Foundation,
   Ionicons,
+  Lucide,
   MaterialIcons,
   MaterialCommunityIcons,
   Octicons,
