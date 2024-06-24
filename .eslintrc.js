@@ -50,6 +50,7 @@ module.exports = {
   rules: {
     'import/extensions': ['error', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never', json: 'always' }],
     'react/require-default-props': 'off',
+    'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
