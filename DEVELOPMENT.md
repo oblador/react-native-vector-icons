@@ -2,7 +2,6 @@
 
 Things we use
 * lerna - for building and releasing (all behind yarn scripts)
-*
 
 ## Versioning
 
@@ -25,6 +24,9 @@ yarn release
 ## Building
 
 ```sh
+# Regenerate and update the font packages
+yarn generate
+
 # Build everything
 yarn prepare
 ```

@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "scripts/build.sh",
+    "generate": "scripts/generate-fonts.sh",
     "clean": "lerna run run clean",
     "prepare": "lerna run prepare",
     "format": "prettier **/*.{ts,tsx} --write",
