@@ -15,6 +15,7 @@ packages/fontawesome-common/generators
 
 # Ignore built code
 packages/*/lib
+packages/directory/build
 
 # Files we don't manage (react-native-test-app)
 packages/icon-explorer/metro.config.js

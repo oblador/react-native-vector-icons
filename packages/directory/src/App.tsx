@@ -1,7 +1,6 @@
 import React, { useCallback, useLayoutEffect, useRef } from 'react';
 import './App.css';
 
-// @ts-expect-error Not generated
 import IconFamilies from './generated/glyphmapIndex.json'; // eslint-disable-line import/no-unresolved
 
 const WAITING_INTERVAL = 300;
@@ -20,22 +19,24 @@ const Icon = React.memo(
   ),
 );
 
-const FamiliesLinks = ({matches = []}) => {
-  return (
-    <div className="Family-Links-Container">
-      <div className="Family-Links-Content">
-        <h2 className="Family-Links-Title">Icon Families:</h2>
-        <div className="Family-Links-List">
-          {matches.map(match => {
-            const { family } = match;
+const FamiliesLinks = ({ matches = [] }: { matches: Match[] }) => (
+  <div className="Family-Links-Container">
+    <div className="Family-Links-Content">
+      <h2 className="Family-Links-Title">Icon Families:</h2>
+      <div className="Family-Links-List">
+        {matches.map((match) => {
+          const { family } = match;
 
-            return <a className="Family-Links-Link" href={`#${family}`}>{family}</a>;
-          })}
-        </div>
+          return (
+            <a key={family} className="Family-Links-Link" href={`#${family}`}>
+              {family}
+            </a>
+          );
+        })}
       </div>
     </div>
-  )
-}
+  </div>
+);
 
 const HeaderBar = () => (
   <div className="Header-Container">
@@ -103,7 +104,9 @@ const renderIcon = (family: string, name: string) => (
 
 const renderMatch = ({ family, names }: Match) => (
   <div className="Result-Row" key={family}>
-    <h2 className="Result-Title" id={family}>{family}</h2>
+    <h2 className="Result-Title" id={family}>
+      {family}
+    </h2>
 
     <div className="Result-List">{names.map((name) => renderIcon(family, name))}</div>
   </div>
