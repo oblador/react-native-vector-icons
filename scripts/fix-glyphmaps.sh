@@ -4,5 +4,5 @@
 
 set -e
 
-sed -i '' 's/..\/glyphmaps/..\/..\/glyphmaps/' lib/commonjs/index.js
-sed -i '' 's/..\/glyphmaps/..\/..\/glyphmaps/' lib/module/index.js
+sed -i'' 's/..\/glyphmaps/..\/..\/glyphmaps/' lib/commonjs/index.js
+sed -i'' 's/..\/glyphmaps/..\/..\/glyphmaps/' lib/module/index.js
