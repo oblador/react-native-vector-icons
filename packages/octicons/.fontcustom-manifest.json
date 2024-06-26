@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "141495689af6e039c33072db35a4c1ed590c2d95041838a6a5da5c0fecb66780",
-    "current": "141495689af6e039c33072db35a4c1ed590c2d95041838a6a5da5c0fecb66780"
+    "previous": "b9a0236427df788a7a1cd4301f3bfa566cc449cfeeb895aae26ed9756b5fa0f7",
+    "current": "b9a0236427df788a7a1cd4301f3bfa566cc449cfeeb895aae26ed9756b5fa0f7"
   },
   "fonts": [
     "Octicons/Octicons.ttf",
@@ -107,9 +107,17 @@
       "codepoint": 61719,
       "source": "fixedSvg/bookmark.svg"
     },
+    "bookmark-filled": {
+      "codepoint": 62017,
+      "source": "fixedSvg/bookmark-filled.svg"
+    },
     "bookmark-slash": {
       "codepoint": 61720,
       "source": "fixedSvg/bookmark-slash.svg"
+    },
+    "bookmark-slash-fill": {
+      "codepoint": 62018,
+      "source": "fixedSvg/bookmark-slash-fill.svg"
     },
     "briefcase": {
       "codepoint": 61721,
@@ -491,6 +499,10 @@
       "codepoint": 61815,
       "source": "fixedSvg/file-directory-symlink.svg"
     },
+    "file-media": {
+      "codepoint": 62019,
+      "source": "fixedSvg/file-media.svg"
+    },
     "file-moved": {
       "codepoint": 61816,
       "source": "fixedSvg/file-moved.svg"
@@ -618,6 +630,10 @@
     "home": {
       "codepoint": 61847,
       "source": "fixedSvg/home.svg"
+    },
+    "home-fill": {
+      "codepoint": 62020,
+      "source": "fixedSvg/home-fill.svg"
     },
     "horizontal-rule": {
       "codepoint": 61848,
@@ -1138,6 +1154,10 @@
     "sync": {
       "codepoint": 61977,
       "source": "fixedSvg/sync.svg"
+    },
+    "tab": {
+      "codepoint": 62021,
+      "source": "fixedSvg/tab.svg"
     },
     "tab-external": {
       "codepoint": 61978,
