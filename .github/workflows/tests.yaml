@@ -14,7 +14,7 @@ jobs:
         api-level: [31]
         # TODO: Let's not care about different APIs for now
         # api-level: [31, 32, 33, 34]
-        rn-version: ['latest', '0.72-stable', '0.71-stable', '0.70-stable']
+        rn-version: ['0.73', '0.72', '0.71']
 
     steps:
       - uses: actions/checkout@v4
@@ -116,7 +116,7 @@ jobs:
       - uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: JEST Tests
+          name: JEST Tests android - ${{ matrix.rn-version }}
           path: packages/icon-explorer/e2e/output/*.xml
           reporter: jest-junit
 
