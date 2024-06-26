@@ -12,6 +12,9 @@
       "versionOnly": true
     },
     "versionSuffix": "-alpha",
+    "dependencies": {
+      "@react-native-vector-icons/fontawesome-common": "LOOKUP"
+    },
     "meta": {
       "defaultStyleName": "regular",
       "styleNames": ["light", "regular", "solid", "brand", "duotone"],
