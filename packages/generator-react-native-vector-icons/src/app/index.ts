@@ -182,20 +182,22 @@ export default class extends Generator<Arguments> {
 
     packageJSON.dependencies['@react-native-vector-icons/common'] = `^${commonPackageJSON.version}`;
 
-    Object.entries(data.dependencies).forEach(([depName, depVersion]) => {
-      if (!depName.startsWith('@react-native-vector-icons')) {
-        packageJSON.dependencies[depName] = depVersion;
+    if (data.dependencies) {
+      Object.entries(data.dependencies).forEach(([depName, depVersion]) => {
+        if (!depName.startsWith('@react-native-vector-icons')) {
+          packageJSON.dependencies[depName] = depVersion;
 
-        return;
-      }
+          return;
+        }
 
-      const dep = depName.split('/')[1];
+        const dep = depName.split('/')[1];
 
-      const depFile = this.destinationPath(`../${dep}/package.json`);
-      const depJSON = JSON.parse(fs.readFileSync(depFile, 'utf8'));
+        const depFile = this.destinationPath(`../${dep}/package.json`);
+        const depJSON = JSON.parse(fs.readFileSync(depFile, 'utf8'));
 
-      packageJSON.dependencies[depName] = `^${depJSON.version}`;
-    });
+        packageJSON.dependencies[depName] = `^${depJSON.version}`;
+      });
+    }
 
     if (!versionOnly && packageName) {
       packageJSON.devDependencies[packageName] = version;

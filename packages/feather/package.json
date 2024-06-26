@@ -76,6 +76,7 @@
     "@react-native-vector-icons/common": "^0.0.1-alpha.10"
   },
   "devDependencies": {
+    "@types/react-native": "^0.73.0",
     "del-cli": "^5.1.0",
     "feather-icons": "4.29.2",
     "onchange": "^7.1.0",
