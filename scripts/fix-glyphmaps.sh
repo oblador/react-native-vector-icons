@@ -4,5 +4,11 @@
 
 set -e
 
-sed -i'' 's/..\/glyphmaps/..\/..\/glyphmaps/' lib/commonjs/index.js
-sed -i'' 's/..\/glyphmaps/..\/..\/glyphmaps/' lib/module/index.js
+if [ "$OSTYPE" == "osx" ]; then
+  ISED='sed -i ""'
+else # $OSTYPE == linux64
+  ISED='sed -i""'
+fi
+
+$ISED 's/..\/glyphmaps/..\/..\/glyphmaps/' lib/commonjs/index.js
+$ISED 's/..\/glyphmaps/..\/..\/glyphmaps/' lib/module/index.js
