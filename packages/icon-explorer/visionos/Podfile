@@ -1,0 +1,9 @@
+ws_dir = Pathname.new(__dir__)
+ws_dir = ws_dir.parent until
+  File.exist?("#{ws_dir}/node_modules/react-native-test-app/visionos/test_app.rb") ||
+  ws_dir.expand_path.to_s == '/'
+require "#{ws_dir}/node_modules/react-native-test-app/visionos/test_app.rb"
+
+workspace 'Example.xcworkspace'
+
+use_test_app!
