@@ -18,6 +18,7 @@ interface Data {
   className: string;
   fontName: string;
   fontFile: string;
+  dependencies: Record<string, string>;
   upstreamFont?: string | { registry?: string; packageName: string; versionRange: string; versionOnly?: boolean };
   packageJSON?: Record<string, Record<string, string>>;
   versionSuffix?: string;
@@ -180,6 +181,21 @@ export default class extends Generator<Arguments> {
     const commonPackageJSON = JSON.parse(fs.readFileSync(commonPackageFile, 'utf8'));
 
     packageJSON.dependencies['@react-native-vector-icons/common'] = `^${commonPackageJSON.version}`;
+
+    Object.entries(data.dependencies).forEach(([depName, depVersion]) => {
+      if (!depName.startsWith('@react-native-vector-icons')) {
+        packageJSON.dependencies[depName] = depVersion;
+
+        return;
+      }
+
+      const dep = depName.split('/')[1];
+
+      const depFile = this.destinationPath(`../${dep}/package.json`);
+      const depJSON = JSON.parse(fs.readFileSync(depFile, 'utf8'));
+
+      packageJSON.dependencies[depName] = `^${depJSON.version}`;
+    });
 
     if (!versionOnly && packageName) {
       packageJSON.devDependencies[packageName] = version;
