@@ -26,18 +26,28 @@ afterEvaluate {
 
     android.applicationVariants.all { def variant ->
         def targetName = variant.name.capitalize()
+
         def lintVitalAnalyzeTask = tasks.findByName("lintVitalAnalyze${targetName}")
-      
         if (lintVitalAnalyzeTask) {
-        lintVitalAnalyzeTask.dependsOn(fontCopyTask)
+            lintVitalAnalyzeTask.dependsOn(fontCopyTask)
         }
 
-        def generateReportTask = tasks.findByName("generate${targetName}LintVitalReportModel")
+        def lintAnalyzeTask = tasks.findByName("lintAnalyze${targetName}")
+        if (lintAnalyzeTask) {
+            lintAnalyzeTask.dependsOn(fontCopyTask)
+        }
+
+        def generateVitalReportTask = tasks.findByName("generate${targetName}LintVitalReportModel")
+        if (generateVitalReportTask) {
+            generateVitalReportTask.dependsOn(fontCopyTask)
+        }
+
+        def generateReportTask = tasks.findByName("generate${targetName}LintReportModel")
         if (generateReportTask) {
             generateReportTask.dependsOn(fontCopyTask)
         }
-      
+
         def generateAssetsTask = tasks.findByName("generate${targetName}Assets")
         generateAssetsTask.dependsOn(fontCopyTask)
-      }
+    }
 }
