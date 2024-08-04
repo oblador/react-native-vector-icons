@@ -29,11 +29,11 @@
   },
   "scripts": {
     "prepare": "npm run clean && tsc && npm run copydeps",
-    "copydeps": "copyfiles --up 1 'src/*/templates/**' generators",
+    "copydeps": "copyfiles --up 1 'src/*/templates/**' 'src/*/fontforge/**' generators",
     "lint": "eslint ./src --ext .js,.ts",
     "clean": "rm -rf ./generators",
     "watch": "npm run watch-tsc --silent & npm run watch-deps --silent",
-    "watch-deps": "onchange 'src/*/templates/**' --initial -- npm run copydeps",
+    "watch-deps": "onchange 'src/*/templates/**' 'src/*/fontforge/**' --initial -- npm run copydeps",
     "watch-tsc": "tsc -w"
   }
 }

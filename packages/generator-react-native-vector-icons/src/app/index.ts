@@ -49,6 +49,9 @@ interface Data {
     copyFont?: {
       location: string | [string, string][];
     };
+    fontforgeScript?: {
+      script: string;
+    };
     postScript?: {
       script: string;
     };
@@ -84,7 +87,7 @@ export default class extends Generator<Arguments> {
     this._buildSteps();
   }
 
-  _docker(image: string, args: string[]) {
+  _docker(image: string, args: string[], options: string[] = []) {
     const { exitCode } = this.spawnSync(
       'docker',
       [
@@ -94,6 +97,7 @@ export default class extends Generator<Arguments> {
         `--volume=${process.cwd()}/../../node_modules:/usr/src/app/node_modules`,
         `--user=${uid}:${gid}`,
         '--env=SOURCE_DATE_EPOCH=1702622477', // TODO: Should we use something more sensible as the date for the fonts
+        ...options,
         image,
         ...args,
       ],
@@ -212,6 +216,7 @@ export default class extends Generator<Arguments> {
     this._buildFontCustom();
     this._buildGlyphmap();
     this._copyFont();
+    this._fontForgeScript();
     this._postScript();
   }
 
@@ -294,6 +299,28 @@ export default class extends Generator<Arguments> {
     if (fontCustom.cleanup) {
       fs.rmSync(fontCustom.location, { recursive: true });
     }
+  }
+
+  _fontForgeScript() {
+    const { data } = this;
+
+    const { fontforgeScript } = this.data.buildSteps;
+    if (!fontforgeScript) {
+      return;
+    }
+
+    const options = [
+      '--entrypoint=/usr/local/bin/fontforge',
+      `--volume=${process.cwd()}/../../node_modules/generator-react-native-vector-icons/generators/app/fontforge/${fontforgeScript.script}:/script.py`,
+    ];
+
+    const args = [
+      '-script',
+      '/script.py',
+      `fonts/${data.className}.ttf`
+    ];
+
+    this._docker('johnf/fontcustom', args, options);
   }
 
   _buildGlyphmap() {
