@@ -4,8 +4,15 @@
     "upstreamFont": "ionicons",
     "versionSuffix": "-alpha",
     "buildSteps": {
+      "fixSVGPaths": {
+        "location": "../../node_modules/ionicons/dist/svg"
+      },
       "fontCustom": {
-        "location": "node_modules/ionicons/dist/svg"
+        "location": "fixedSvg",
+        "cleanup": true
+      },
+      "fontforgeScript": {
+        "script": "correct-direction.py"
       },
       "glyphmap": {
         "mode": "css",
