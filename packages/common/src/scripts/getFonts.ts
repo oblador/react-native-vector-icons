@@ -16,7 +16,7 @@ const getPackageJson = (dir: string) => {
   return packageJson;
 };
 
-const getPackages = () => {
+const getPackageFontDirectories = () => {
   const rootPackageJson = getPackageJson(rootDir);
   const dependencies = Object.keys(rootPackageJson.dependencies || {});
 
@@ -25,28 +25,29 @@ const getPackages = () => {
     const dir = resolveNodeModuleDir(rootDir, dependency);
     const packageJson = getPackageJson(dir);
     if (packageJson.keywords?.includes?.('react-native-vector-icons-icon')) {
-      packageDirs.push(dir);
+      packageDirs.push(`${dir}/fonts`);
     }
   });
+
   return packageDirs;
 };
 
-const getFonts = (dir: string) => {
-  const fontDirs = [`${dir}/fonts`];
-
+const getLocalFontsDir = () => {
   const rootPackageJson = getPackageJson(rootDir);
   const config = rootPackageJson.reactNativeVectorIcons || {};
-  fontDirs.push(`${rootDir}/${config.fontDir || 'rnvi-fonts'}`);
 
-  fontDirs.forEach((fontDir) => {
-    if (!fs.existsSync(fontDir)) {
-      return;
-    }
-
-    const fonts = fs.readdirSync(fontDir);
-    fonts.forEach((font) => console.log(`${fontDir}/${font}`)); // eslint-disable-line no-console
-  });
+  return `${rootDir}/${config.fontDir || 'rnvi-fonts'}`;
 };
 
-const packageDirs = getPackages();
+const getFonts = (fontDir: string) => {
+  if (!fs.existsSync(fontDir)) {
+    return;
+  }
+
+  const fonts = fs.readdirSync(fontDir);
+  fonts.forEach((font) => console.log(`${fontDir}/${font}`)); // eslint-disable-line no-console
+};
+
+const packageDirs = getPackageFontDirectories();
+packageDirs.push(getLocalFontsDir());
 packageDirs.forEach((dir) => getFonts(dir));
