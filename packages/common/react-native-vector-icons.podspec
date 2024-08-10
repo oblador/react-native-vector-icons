@@ -21,33 +21,58 @@ Pod::Spec.new do |s|
     :script => "
       set -e
 
-      # NOTE: This whole script is a bit of a hack
+      # This script borrows from the standard resource copy script https://gist.github.com/vonovak/d8f1a37804438f05bae22be1e8cd53c1
       # We need two key bits of information
-      # Project Root - Always above the pods dir
+      # Project Root - Where the package.json for the RN app lives
       # Xcode Build Dir to copy the fonts into - We look for the directory that ends in .app
 
-      echo START:RNVI_COPY_FONTS
+      echo \"(RNVI) START_COPY_FONTS\"
 
-      echo PWD: $(pwd)
-      echo PODS_ROOT: \"$PODS_ROOT\"
-      echo PODS_CONFIGURATION_BUILD_DIR: \"$PODS_CONFIGURATION_BUILD_DIR\"
+      echo \"(RNVI) PWD: $(pwd)\"
 
+      #############
+      # Find the fonts we need to copy
+      #############
+ 
+      # Assume the project root is always two directories above the POD_ROOT
+      echo \"(RNVI) PODS_ROOT: $PODS_ROOT\"
       PROJECT_ROOT=\"${PODS_ROOT}/../..\"
-      echo \"PROJECT_ROOT: $PROJECT_ROOT\"
+      echo \"(RNVI) PROJECT_ROOT: $PROJECT_ROOT\"
 
+      # Items we need to copy for rsync
+      RESOURCES_TO_COPY=${PODS_ROOT}/resources-to-copy-${TARGETNAME}.txt
+
+      node \"#{__dir__}/lib/commonjs/scripts/getFonts.js\" \"$PROJECT_ROOT\" > \"$RESOURCES_TO_COPY\"
+
+      #############
+      # Find the destination we copy to
+      #############
+
+      echo \"(RNVI) PODS_CONFIGURATION_BUILD_DIR: $PODS_CONFIGURATION_BUILD_DIR\"
       XCODE_DIR=$(ls -d \"$PODS_CONFIGURATION_BUILD_DIR\"/*.app)
+      echo \"(RNVI) XCODE_DIR: $XCODE_DIR\"
       DEST_DIR=\"${XCODE_DIR}/react-native-vector-icons\"
-      echo XCODE_DIR: \"$XCODE_DIR\"
-      echo DEST_DIR: \"$DEST_DIR\"
+      echo \"(RNVI) DEST_DIR: $DEST_DIR\"
+      echo I $INSTALL_DIR
       mkdir -p \"$DEST_DIR\"
 
-      FONT_LIST=$(node \"#{__dir__}/lib/commonjs/scripts/getFonts.js\" \"$PROJECT_ROOT\")
-      for font in $FONT_LIST; do
-        echo Copying font $font
-        cp $font \"$DEST_DIR\"
-      done
+      #############
+      # Copy the fonts
+      #############
+      echo \"(RNVI) Copying the following files to $DEST_DIR\"
+      cat \"$RESOURCES_TO_COPY\" | sed 's/^/(RNVI) /'
 
-      echo END:RNVI_COPY_FONTS
+      # NOTE: Should we add --delete and remove old fonts automagically? NOt doing it yet as it feels risky
+      rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from=\"$RESOURCES_TO_COPY\" / \"$DEST_DIR\"
+      # TODO: How do we test this is right?
+      if [[ \"${ACTION}\" == \"install\" ]] && [[ \"${SKIP_INSTALL}\" == \"NO\" ]]; then
+        mkdir -p \"${INSTALL_DIR}/react-native-vector-icons\"
+        rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from=\"$RESOURCES_TO_COPY\" / \"${INSTALL_DIR}/react-native-vector-icons\"
+      fi
+
+      rm -f \"$RESOURCES_TO_COPY\"
+
+      echo \"(RNVI) END:RNVI_COPY_FONTS\"
     ",
   }
 
