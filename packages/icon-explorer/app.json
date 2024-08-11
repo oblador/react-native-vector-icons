@@ -11,7 +11,7 @@
   ],
   "resources": {
     "android": ["dist/res", "dist/main.android.jsbundle"],
-    "ios": ["dist/assets", "dist/main.ios.jsbundle"],
+    "ios": ["dist/assets", "dist/main.ios.jsbundle", "dist/AntDesign.ttf"],
     "macos": ["dist/assets", "dist/main.macos.jsbundle"],
     "visionos": ["dist/assets", "dist/main.visionos.jsbundle"],
     "windows": ["dist/assets", "dist/main.windows.bundle"]
