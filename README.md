@@ -1,6 +1,6 @@
 ![Vector Icons for React Native](https://cloud.githubusercontent.com/assets/378279/12009887/33f4ae1c-ac8d-11e5-8666-7a87458753ee.png)
 
-[![Travis](https://img.shields.io/travis/react-native-vector-icons/react-native-vector-icons.svg)](https://travis-ci.org/react-native-vector-icons/react-native-vector-icons) [![npm](https://img.shields.io/npm/v/react-native-vector-icons.svg)](https://npmjs.com/package/react-native-vector-icons) [![npm](https://img.shields.io/npm/dm/react-native-vector-icons.svg)](https://npmjs.com/package/react-native-vector-icons)
+[![npm](https://img.shields.io/npm/v/@react-native-vector-icons/common.svg)](https://npmjs.com/package/@react-native-vector-icons/common.svg) [![npm](https://img.shields.io/npm/dm/@react-native-vector-icons/common.svg)](https://npmjs.com/package/@react-native-vector-icons/common)
 
 # React Native Vector Icons
 
