@@ -47,5 +47,6 @@ export const getFontPaths = (packageJsonFilename: string) => {
   const packageDirs = getPackageFontDirectories(packageJsonFilename);
   packageDirs.push(getLocalFontsDir(packageJsonFilename));
   const fonts = packageDirs.map(getFonts);
+
   return fonts.flat();
 };

@@ -8,4 +8,4 @@ if (!packageJsonFilename) {
 }
 
 const fonts = getFontPaths(packageJsonFilename);
-fonts.flatMap(console.log); // eslint-disable-line no-console
+fonts.map((font) => console.log(font)); // eslint-disable-line no-console
