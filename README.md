@@ -45,7 +45,7 @@ Should you find this library beneficial, kindly contemplate the option of
 
 RNVI comes with the following supported icons. You can [search NPM](https://www.npmjs.com/search?q=keywords%3Areact-native-vector-icons-icon) for third party icons.
 
-### Actively maintained fonts
+### Actively maintained
 - [`AntDesign`](https://ant.design/components/icon) from Ant Group (v4.4.2 with _449_ icons)
 - [`Feather`](http://feathericons.com) created by Cole Bemis & Contributors (v4.29.2 featuring _287_ icons)
 - [`FontAwesome 6`](https://fontawesome.com/search) designed by Fonticons, Inc. (v6.5.2 featuring _2045_ free and _30199_ pro icons)
@@ -78,16 +78,16 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
    ```sh
    npm install --save @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evilicons
    ```
-1. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions.
+1. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
 1. If you are using one of the following fonts refer to their guides for further instructions
-  * [FontAwesome 5](packages/fontawesome5/README.md)
-  * [FontAwesome 5 Pro](packages/fontawesome5-pro/README.md)
   * [FontAwesome 6](packages/fontawesome6/README.md)
   * [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
+  * [FontAwesome 5](packages/fontawesome5/README.md)
+  * [FontAwesome 5 Pro](packages/fontawesome5-pro/README.md)
   * [Fontello](packages/fontello/README.md)
   * [Icomoon](packages/icomoon/README.md)
 
-### android
+### Android
 
 Nothing else needed.
 
