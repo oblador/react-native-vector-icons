@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "b9a0236427df788a7a1cd4301f3bfa566cc449cfeeb895aae26ed9756b5fa0f7",
-    "current": "b9a0236427df788a7a1cd4301f3bfa566cc449cfeeb895aae26ed9756b5fa0f7"
+    "previous": "0556e9d9a65085ae473fb813dcad9d78e9d3949bbfd1728012442a1ab6ff8ae0",
+    "current": "0556e9d9a65085ae473fb813dcad9d78e9d3949bbfd1728012442a1ab6ff8ae0"
   },
   "fonts": [
     "Octicons/Octicons.ttf",
@@ -18,6 +18,10 @@
     "accessibility-inset": {
       "codepoint": 61697,
       "source": "fixedSvg/accessibility-inset.svg"
+    },
+    "ai-model": {
+      "codepoint": 62022,
+      "source": "fixedSvg/ai-model.svg"
     },
     "alert": {
       "codepoint": 61698,
