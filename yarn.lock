@@ -2287,10 +2287,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-free@npm:6.5.2":
-  version: 6.5.2
-  resolution: "@fortawesome/fontawesome-free@npm:6.5.2"
-  checksum: 10c0/932a8119376eab45da6c0702e955dcea55b916bbd7e118a365a8b3356a6322e725536f28f78e039bd47f4e1650b69bf9a85c2e40d0fdd69f9f0c138a5ef07e67
+"@fortawesome/fontawesome-free@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@fortawesome/fontawesome-free@npm:6.6.0"
+  checksum: 10c0/35c55bfecac9eb4943cf94f4380093dbe286fa29ce593488252644322b83e28eecbac757cef3eabdff7b3df67fc531c4f6dce6a3b00236f5de0174e186a9b5bb
   languageName: node
   linkType: hard
 
@@ -4374,12 +4374,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@primer/octicons@npm:19.10.0":
-  version: 19.10.0
-  resolution: "@primer/octicons@npm:19.10.0"
+"@primer/octicons@npm:19.11.0":
+  version: 19.11.0
+  resolution: "@primer/octicons@npm:19.11.0"
   dependencies:
     object-assign: "npm:^4.1.1"
-  checksum: 10c0/0553ce43d7362a4991e39436d50d59fa7dce50ba23016edd52f89fce5f27e07b148d6db2f5acd7bbca6b52b830cb54055f8a1bafb71b0731fa5560e68e0230a5
+  checksum: 10c0/aba3bd71b1d3611a512aaf23d791ecb781f9524f15ac3c86e1b0311770d297570b5206a6abd091d9a337e7dc6157a8285066f213f2ec8e8ee15a02fe0639ab1e
   languageName: node
   linkType: hard
 
@@ -5016,6 +5016,8 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: "*"
+  bin:
+    rnvi-update-plist: lib/commonjs/scripts/updatePlist.js
   languageName: unknown
   linkType: soft
 
@@ -5160,7 +5162,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome6@workspace:packages/fontawesome6"
   dependencies:
-    "@fortawesome/fontawesome-free": "npm:6.5.2"
+    "@fortawesome/fontawesome-free": "npm:6.6.0"
     "@react-native-vector-icons/common": "npm:^0.0.1-alpha.11"
     "@types/react-native": "npm:^0.73.0"
     del-cli: "npm:^5.1.0"
@@ -5316,7 +5318,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/octicons@workspace:packages/octicons"
   dependencies:
-    "@primer/octicons": "npm:19.10.0"
+    "@primer/octicons": "npm:19.11.0"
     "@react-native-vector-icons/common": "npm:^0.0.1-alpha.11"
     "@types/react-native": "npm:^0.73.0"
     del-cli: "npm:^5.1.0"
