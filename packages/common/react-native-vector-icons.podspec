@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
       #############
       # Find the fonts we need to copy
       #############
- 
+
       # Assume the project root is always two directories above the POD_ROOT
       echo \"(RNVI) PODS_ROOT: $PODS_ROOT\"
       PROJECT_ROOT=\"${PODS_ROOT}/../..\"
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
       # Items we need to copy for rsync
       RESOURCES_TO_COPY=${PODS_ROOT}/resources-to-copy-${TARGETNAME}.txt
 
-      node \"#{__dir__}/lib/commonjs/scripts/getFonts.js\" \"$PROJECT_ROOT\" > \"$RESOURCES_TO_COPY\"
+    node \"#{__dir__}/lib/commonjs/scripts/getFonts.js\" \"$PROJECT_ROOT\"/package.json > \"$RESOURCES_TO_COPY\"
 
       #############
       # Find the destination we copy to
