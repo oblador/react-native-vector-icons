@@ -3,10 +3,10 @@
 
 import fs from 'node:fs';
 import * as path from 'node:path';
-import chalk from 'chalk';
+import pc from 'picocolors';
 import * as plist from 'plist';
 
-import { getFontPaths } from "./common";
+import { getFontPaths } from './common';
 
 const getFontName = (fontPath: string) => path.basename(fontPath);
 
@@ -26,8 +26,6 @@ console.log(`Found ${fonts.length} fonts`);
 const infoPlistContent = fs.readFileSync(infoPlistFilename, 'utf8');
 const infoPlist = plist.parse(infoPlistContent) as Record<string, string[]>;
 
-
-
 const plistFonts = new Set(infoPlist.UIAppFonts || []);
 const providedFonts = new Set(fonts.map(getFontName));
 
@@ -37,7 +35,7 @@ let hasChanges = false;
 providedFonts.forEach((font) => {
   if (!plistFonts.has(font)) {
     plistFonts.add(font);
-    console.log(chalk.green(`Added ${font}`));
+    console.log(pc.green(`Added ${font}`));
     hasChanges = true;
   } else {
     console.log(`Existing ${font}`);
@@ -47,7 +45,7 @@ providedFonts.forEach((font) => {
 // Check for extra fonts in Info.plist
 plistFonts.forEach((font) => {
   if (!providedFonts.has(font)) {
-    console.log(chalk.red(`Extra ${font} (Please remove manually if not needed)`));
+    console.log(pc.red(`Extra ${font} (Please remove manually if not needed)`));
   }
 });
 
