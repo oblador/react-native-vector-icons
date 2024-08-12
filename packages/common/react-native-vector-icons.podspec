@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
       # Items we need to copy for rsync
       RESOURCES_TO_COPY=${PODS_ROOT}/resources-to-copy-${TARGETNAME}.txt
 
-      node \"${PODS_TARGET_SOURCE_ROOT}/lib/commonjs/scripts/getFonts.js\" \"$PROJECT_ROOT\"/package.json > \"$RESOURCES_TO_COPY\"
+      node \"${PODS_TARGET_SRCROOT}/lib/commonjs/scripts/getFonts.js\" \"$PROJECT_ROOT\"/package.json > \"$RESOURCES_TO_COPY\"
 
       #############
       # Find the destination we copy to
