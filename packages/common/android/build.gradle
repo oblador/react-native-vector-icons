@@ -114,7 +114,7 @@ if (isNewArchitectureEnabled()) {
 android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVI")
 
 task copyFonts(type: Exec) {
-  commandLine 'node', '../lib/commonjs/scripts/getFonts.js', rootDir.parentFile.absolutePath
+  commandLine 'node', '../lib/commonjs/scripts/getFonts.js', "${rootDir.parentFile.absolutePath}/package.json"
   def fonts = new ByteArrayOutputStream()
   standardOutput = fonts
 
