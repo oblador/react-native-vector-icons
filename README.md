@@ -370,7 +370,7 @@ animation library
 
 ## Usage Examples
 
-### IconExplorer
+### Icon Explorer
 
 Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can also search for any icon.
 
