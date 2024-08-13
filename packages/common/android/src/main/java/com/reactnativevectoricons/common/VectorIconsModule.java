@@ -44,11 +44,6 @@ public class VectorIconsModule extends VectorIconsSpec {
   }
 
   @ReactMethod
-  public void loadFontWithFileName(String fontFileName, String extension, Promise promise) {
-    promise.reject(Errors.E_NOT_IMPLEMENTED);
-  }
-
-  @ReactMethod
   public void getImageForFont(String fontFamily, String glyph, double fontSize, double color, final Promise promise) {
     try {
       String imagePath = getImageForFontSync(fontFamily, glyph, fontSize, color);

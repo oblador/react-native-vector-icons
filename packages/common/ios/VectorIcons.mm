@@ -129,57 +129,6 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getImageForFontSync
                                  withError:&error];
 }
 
-RCT_EXPORT_METHOD(loadFontWithFileName
-                  : (NSString *)fontFileName extension
-                  : (NSString *)extension subdirectory
-                  : (NSString *)subdirectory resolve
-                  : (RCTPromiseResolveBlock)resolve reject
-                  : (RCTPromiseRejectBlock)reject) {
-  NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-  NSURL *fontURL = [bundle URLForResource:fontFileName
-                            withExtension:extension
-                             subdirectory:subdirectory];
-  NSData *fontData = [NSData dataWithContentsOfURL:fontURL];
-
-  CGDataProviderRef provider =
-      CGDataProviderCreateWithCFData((CFDataRef)fontData);
-  CGFontRef font = CGFontCreateWithDataProvider(provider);
-
-  if (font) {
-    CFErrorRef errorRef = NULL;
-    if (CTFontManagerRegisterGraphicsFont(font, &errorRef) == NO) {
-      NSError *error = (__bridge NSError *)errorRef;
-      if (error.code == kCTFontManagerErrorAlreadyRegistered ||
-          error.code == kCTFontManagerErrorDuplicatedName) {
-        // NSLog(@"Loaded font already %@/%@.%@", subdirectory, fontFileName,
-        // extension);
-        resolve(nil);
-      } else {
-        NSString *errorMessage = [NSString
-            stringWithFormat:@"Font '%@' failed to load", fontFileName];
-        reject(@"font_load_failed", errorMessage, error);
-      }
-    } else {
-      // NSLog(@"Loaded font %@/%@.%@", subdirectory, fontFileName, extension);
-      resolve(nil);
-    }
-
-    if (errorRef) {
-      CFRelease(errorRef);
-    }
-
-    CFRelease(font);
-  } else {
-    // TODO: Should we reject back to javascript?
-    NSLog(@"RNVI: failed to find font %@/%@.%@", subdirectory, fontFileName,
-          extension);
-  }
-
-  if (provider) {
-    CFRelease(provider);
-  }
-}
-
 // Don't compile this code when we build for the old architecture.
 #ifdef RCT_NEW_ARCH_ENABLED
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
