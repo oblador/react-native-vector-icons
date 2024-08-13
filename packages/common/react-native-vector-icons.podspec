@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
       echo \"(RNVI) PODS_CONFIGURATION_BUILD_DIR: $PODS_CONFIGURATION_BUILD_DIR\"
       XCODE_DIR=$(ls -d \"$PODS_CONFIGURATION_BUILD_DIR\"/*.app)
       echo \"(RNVI) XCODE_DIR: $XCODE_DIR\"
-      DEST_DIR=\"${XCODE_DIR}/react-native-vector-icons\"
+      DEST_DIR=\"${XCODE_DIR}\"
       echo \"(RNVI) DEST_DIR: $DEST_DIR\"
       echo I $INSTALL_DIR
       mkdir -p \"$DEST_DIR\"
