@@ -14,5 +14,4 @@ abstract class VectorIconsSpec extends ReactContextBaseJavaModule {
 
   public abstract void getImageForFont(String fontFamily, String glyph, double fontSize, double color, final Promise promise);
   public abstract String getImageForFontSync(String fontFamily, String glyph, double fontSize, double color) throws IOException, FileNotFoundException;
-  public abstract void loadFontWithFileName(String fontFileName, String extension, Promise promise);
 }
