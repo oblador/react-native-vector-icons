@@ -1,13 +1,24 @@
-import React, { forwardRef, type Ref } from 'react';
+import React, { forwardRef, type Ref, useEffect } from 'react';
 
 import { PixelRatio, Platform, Text, type TextProps, type TextStyle, processColor } from 'react-native';
 
 import NativeIconAPI from './NativeVectorIcons';
 import createIconSourceCache from './create-icon-source-cache';
+import { isDynamicLoadingEnabled } from './dynamicLoading/dynamic-loading-setting';
+import { dynamicLoader } from './dynamicLoading/dynamic-font-loading';
+import type { FontSource } from './dynamicLoading/types';
 import ensureNativeModuleAvailable from './ensure-native-module-available';
 
 export const DEFAULT_ICON_SIZE = 12;
 export const DEFAULT_ICON_COLOR = 'black';
+
+type ValueData = { uri: string; scale: number };
+type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData | undefined;
+type GetImageSourceIconFunc<GM> = (
+  name: GM,
+  size?: number,
+  color?: TextStyle['color'],
+) => Promise<ValueData | undefined>;
 
 export type IconProps<T> = TextProps & {
   name: T;
@@ -16,20 +27,53 @@ export type IconProps<T> = TextProps & {
   innerRef?: Ref<Text>;
 };
 
-export const createIconSet = <GM extends Record<string, number>>(
+type IconComponent<GM extends Record<string, number>> = React.FC<
+  TextProps & {
+    name: keyof GM;
+    size?: number;
+    color?: TextStyle['color'];
+    innerRef?: Ref<Text>;
+  } & React.RefAttributes<Text>
+> & {
+  getImageSource: GetImageSourceIconFunc<keyof GM>;
+  getImageSourceSync: GetImageSourceSyncIconFunc<keyof GM>;
+};
+
+export type CreateIconSetOptions = {
+  postScriptName: string;
+  fontFilename: string;
+  fontSource?: FontSource;
+  fontStyle?: TextProps['style'];
+};
+
+export function createIconSet<GM extends Record<string, number>>(
   glyphMap: GM,
-  fontFamily: string,
-  fontFile: string,
+  postScriptName: string,
+  fontFilename: string,
   fontStyle?: TextProps['style'],
-) => {
-  // Android doesn't care about actual fontFamily name, it will only look in fonts folder.
-  const fontBasename = fontFile ? fontFile.replace(/\.(otf|ttf)$/, '') : fontFamily;
+): IconComponent<GM>;
+export function createIconSet<GM extends Record<string, number>>(
+  glyphMap: GM,
+  options: CreateIconSetOptions,
+): IconComponent<GM>;
+export function createIconSet<GM extends Record<string, number>>(
+  glyphMap: GM,
+  postScriptNameOrOptions: string | CreateIconSetOptions,
+  fontFilenameParam?: string,
+  fontStyleParam?: TextProps['style'],
+): IconComponent<GM> {
+  const { postScriptName, fontFilename, fontStyle } =
+    typeof postScriptNameOrOptions === 'string'
+      ? { postScriptName: postScriptNameOrOptions, fontFilename: fontFilenameParam, fontStyle: fontStyleParam }
+      : postScriptNameOrOptions;
+
+  const fontBasename = fontFilename ? fontFilename.replace(/\.(otf|ttf)$/, '') : postScriptName;
 
   const fontReference = Platform.select({
-    windows: `/Assets/${fontFile}#${fontFamily}`,
+    windows: `/Assets/${fontFilename}#${postScriptName}`,
     android: fontBasename,
     web: fontBasename,
-    default: fontFamily,
+    default: postScriptName,
   });
 
   const resolveGlyph = (name: keyof GM) => {
@@ -52,7 +96,30 @@ export const createIconSet = <GM extends Record<string, number>>(
     innerRef,
     ...props
   }: IconProps<keyof GM>) => {
-    const glyph = name ? resolveGlyph(name as string) : '';
+    const [isFontLoaded, setIsFontLoaded] = React.useState(
+      isDynamicLoadingEnabled() ? dynamicLoader.isLoaded(fontReference) : true,
+    );
+    const glyph = isFontLoaded && name ? resolveGlyph(name) : '';
+
+    // biome-ignore lint/correctness/useExhaustiveDependencies: the dependencies never change
+    useEffect(() => {
+      let isMounted = true;
+
+      if (
+        !isFontLoaded &&
+        typeof postScriptNameOrOptions === 'object' &&
+        typeof postScriptNameOrOptions.fontSource !== 'undefined'
+      ) {
+        dynamicLoader.loadFontAsync(fontReference, postScriptNameOrOptions.fontSource).finally(() => {
+          if (isMounted) {
+            setIsFontLoaded(true);
+          }
+        });
+      }
+      return () => {
+        isMounted = false;
+      };
+    }, []);
 
     const styleDefaults = {
       fontSize: size,
@@ -156,4 +223,4 @@ export const createIconSet = <GM extends Record<string, number>>(
   });
 
   return IconNamespace;
-};
+}

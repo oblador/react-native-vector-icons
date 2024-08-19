@@ -19,18 +19,14 @@ For the integration of `.svg` files natively, you can explore [`react-native-vec
 - [Sponsorship](#sponsorship)
 - [Available Icon Sets](#available-icon-sets)
 - [Installation](#installation)
-  - [iOS Setup](#ios-setup)
-  - [macOS Setup](#macos-setup)
-  - [Windows Setup](#windows-setup)
-  - [React-native-web Setup](#react-native-web-setup)
-  - [Web Setup](#web-setup)
+- [Setup](#setup)
 - [Icon Component](#icon-component)
 - [Usage as PNG Image/Source Object](#usage-as-png-imagesource-object)
 - [Multi-Style Fonts](#multi-style-fonts)
 - [Custom Fonts](#custom-fonts)
 - [Animation](#animation)
+- [Dynamic icon font loading](#dynamic-icon-font-loading)
 - [Usage Examples](#usage-examples)
-- [Generating Your Own Icon Package](#generating-your-own-icon-package)
 - [Changelog](https://github.com/react-native-vector-icons/react-native-vector-icons/releases)
 - [License](#license)
 
@@ -52,7 +48,7 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0 with _283_ icons)
 - [`Ionicons`](https://ionic.io/ionicons) crafted by Ionic (v7.4.0 containing _1356_ icons)
 - [`MaterialDesignIcons`](https://pictogrammers.com/library/mdi/) from MaterialDesignIcons.com (v7.4.47 including _7448_ icons)
-- [`Octicons`](https://primer.style/foundations/icons) designed by Github, Inc. (v19.11.0 with _331_ icons)
+- [`Octicons`](https://primer.style/foundations/icons) designed by GitHub, Inc. (v19.11.0 with _331_ icons)
 
 ### No longer maintained upstream
 - [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 with _411_ icons)
@@ -66,7 +62,7 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 
 ## Migration
 
-See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-icons`
+See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-icons` to the package-per-icon-set approach.
 
 ## Installation
 
@@ -74,12 +70,12 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
    ```sh
    npm install --save @react-native-vector-icons/common
    ```
-1. Install the packages for the icons you want use
+2. Install the packages for the icons you want use
    ```sh
    npm install --save @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evilicons
    ```
-1. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
-1. If you are using one of the following fonts refer to their guides for further instructions
+3. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
+4. If you are using one of the following fonts refer to their guides for further instructions
   * [FontAwesome 6](packages/fontawesome6/README.md)
   * [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
   * [FontAwesome 5](packages/fontawesome5/README.md)
@@ -87,169 +83,9 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
   * [Fontello](packages/fontello/README.md)
   * [Icomoon](packages/icomoon/README.md)
 
-### Android
+## Setup
 
-Nothing else needed.
-
-### iOS
-
-To use the bundled icons on iOS, follow these steps:
-
-1. Edit `Info.plist` and add a property called **Fonts provided by application** (or **UIAppFonts** if Xcode autocomplete is not working):
-<details>
-<summary>List of all available fonts to copy & paste in Info.plist</summary>
-```xml
-    <key>UIAppFonts</key>
-    <array>
-      <string>AntDesign.ttf</string>
-      <string>Entypo.ttf</string>
-      <string>EvilIcons.ttf</string>
-      <string>Feather.ttf</string>
-      <string>FontAwesome.ttf</string>
-      <string>FontAwesome5_Brands.ttf</string>
-      <string>FontAwesome5_Regular.ttf</string>
-      <string>FontAwesome5_Solid.ttf</string>
-      <string>FontAwesome6_Brands.ttf</string>
-      <string>FontAwesome6_Regular.ttf</string>
-      <string>FontAwesome6_Solid.ttf</string>
-      <string>Fontisto.ttf</string>
-      <string>Foundation.ttf</string>
-      <string>Ionicons.ttf</string>
-      <string>MaterialDesignIcons.ttf</string>
-      <string>MaterialIcons.ttf</string>
-      <string>Octicons.ttf</string>
-      <string>SimpleLineIcons.ttf</string>
-      <string>Zocial.ttf</string>
-    </array>
-```
-</details>
-
-Alternatively you can use the included script to update it for you.
-```sh
-npm run rnvi-update-plist packages.json ios/AppName/Info.plist
-```
-
-1. Update your pods
-  ```sh
-  cd ios && pod update
-  ```
-
-### macOS
-
-This needs more work, see details in #1624
-
-### Windows
-
-TBA: It should just work???
-
-### React-native-web Setup
-
-To port a react-native mobile app to web using `react-native-web` you just need to ensure the fonts are known on the web-app side.
-
-You will need add the font-family for each font you use to your css
-
-You can debug missing font-families by looking in the Developer console in your web browser when debugging your web app.
-
-NOTE: if you're using webpack or similar you *may* need to configure webpack to handle loading of ttf fonts, using url-loader or file-loader. See [Web Setup](#web-setup) for more details.
-
-In your `App.css` or similar add the font-family specifications:
-
-```css
-@font-face {
-  src: url(path/to/fonts/Ionicons.ttf);
-  font-family: "Ionicons";
-}
-
-@font-face {
-  src: url(path/to/fonts/FontAwesome.ttf);
-  font-family: "FontAwesome";
-}
-
-@font-face {
-  src: url(path/to/fonts/FontAwesome5_Brands.ttf);
-  font-family: "FontAwesome5_Brands";
-  font-weight: 400; /* Regular weight */
-  font-style: normal;
-}
-
-@font-face {
-  src: url(path/to/fonts/FontAwesome5_Regular.ttf);
-  font-family: "FontAwesome5_Regular";
-  font-weight: 400; /* Regular weight */
-  font-style: normal;
-}
-
-@font-face {
-  src: url(path/to/fonts/FontAwesome5_Solid.ttf);
-  font-family: "FontAwesome5_Solid";
-  font-weight: 900; /* Bold weight for solid */
-  font-style: normal;
-}
-
-@font-face {
-  src: url(path/to/fonts/MaterialIcons.ttf);
-  font-family: "MaterialIcons";
-}
-
-@font-face {
-  src: url(path/to/fonts/Feather.ttf);
-  font-family: "Feather";
-}
-
-@font-face {
-  src: url(path/to/fonts/MaterialCommunityIcons.ttf);
-  font-family: "MaterialCommunityIcons";
-}
-
-/* TODO: Add other icons fonts here */
-```
-
-### Web Setup
-
-FIXME: Can we improve on this?
-
-To integrate the library with your web project using [webpack](https://webpack.js.org/), follow these steps:
-
-1.  In your webpack configuration file, add a section to handle TTF files using `url-loader` or `file-loader`:
-
-    ```js
-    {
-      test: /\.ttf$/,
-      loader: "url-loader", // or directly file-loader
-      include: path.resolve(__dirname, "node_modules/react-native-vector-icons"),
-    }
-    ```
-
-2.  In your JavaScript entry point, consume the font files and inject the necessary style tag:
-
-        ```js
-          import Icon from '@react-native-vector-icons/fontAwesome';
-
-          // Generate the required CSS
-          import iconFont from '@react-native-vector-icons/fontawesome/fonts/FontAwesome.ttf';
-          const iconFontStyles = `@font-face {
-            src: url(${iconFont});
-            font-family: FontAwesome;
-          }`;
-
-          // Create a stylesheet
-          const style = document.createElement('style');
-          style.type = 'text/css';
-
-          // Append the iconFontStyles to the stylesheet
-          if (style.styleSheet) {
-            style.styleSheet.cssText = iconFontStyles;
-          } else {
-            style.appendChild(document.createTextNode(iconFontStyles));
-          }
-
-          // Inject the stylesheet into the document head
-          document.head.appendChild(style);
-          ```
-
-    By following these steps, you will seamlessly integrate the vector icons
-    library into your web project using [webpack](https://webpack.js.org/),
-    enabling you to effortlessly use the icons within your web application.
+Please refer to the guide for [Expo](./docs/SETUP-EXPO.md), [React Native](./docs/SETUP-REACT-NATIVE.md) or [Web](./docs/SETUP-WEB.md) for further instructions.
 
 ## `Icon` Component
 
@@ -260,9 +96,9 @@ import Icon from '@react-native-vector-icons/fontawesome';
 const myIcon = <Icon name="rocket" size={30} color="#900" />;
 ```
 
-### Properties
+### Props
 
-Any [Text property](https://reactnative.dev/docs/text.html) and the following:
+Any [Text props](https://reactnative.dev/docs/text.html#props) and the following:
 
 | Prop        | Description                                                             | Default     |
 | ----------- | ----------------------------------------------------------------------- | ----------- |
@@ -334,20 +170,25 @@ All static methods from `Icon` is supported by multi-styled fonts.
 
 The best approach is to use our icon generator to create your own icon package.
 
-See [CREATE_FONT_PACKAGE.md] to learn how to create your own font packages.
+See [CREATE_FONT_PACKAGE.md](./docs/CREATE_FONT_PACKAGE.md) to learn how to create your own font packages.
 
-You can also use `createIconSet(glyphMap, fontFamily[, fontFile])` directly in your project. This
+You can also use `createIconSet()` directly in your project. This
 returns your own custom font based on the `glyphMap` where the key is the icon
 name and the value is either a UTF-8 character or it's character code.
-`fontFamily` is the name of the postscript font **NOT** the filename. Open the font in
-Font Book.app or similar to learn the name. Optionally pass the third
-`fontFile` argument for android support, it should be the custom font file
-name.
+`postScriptName` is the name of the postscript font. Open the font in https://fontdrop.info/, 
+Font Book.app or similar to learn the name. Also pass the `fontFilename` argument for Android support.
 
 ```js
 import { createIconSet } from '@react-native-vector-icons/common';
 const glyphMap = { 'icon-name': 1234, test: '∆' };
-const Icon = createIconSet(glyphMap, 'FontName', 'font-name.ttf');
+
+// use createIconSet() with object parameter
+// or use positional parameters for compatibility with version <= 10: `createIconSet(glyphMap, fontFamily[, fontFile])`
+const Icon = createIconSet(glyphMap, {
+    postScriptName: 'FontName',
+    fontFilename: 'font-name.ttf',
+    fontSource: require('../fonts/font-name.ttf') // optional, for dynamic loading. Can also be a local file uri.
+})
 ```
 
 You should place the font ttf file into `rnvi-fonts`. You can customise this location by adding the following snippet to your package.json
@@ -367,6 +208,23 @@ icon, simply create an animated component with this line: `const AnimatedIcon =
 Animated.createAnimatedComponent(Icon)`. You can also use the higher level
 animation library
 [react-native-animatable](https://github.com/oblador/react-native-animatable).
+
+## Dynamic icon font loading
+
+> At the moment, dynamic loading is supported on native platforms (not on web) only if you use Expo. In the future, it should become available for all React Native projects via React Native core.
+
+Fonts can be available in an app statically (since build time) or loaded dynamically at runtime. The latter can be useful e.g. for apps that use over-the-air updates and want to load new fonts with an update, or when you need to use a font from a remote location.
+
+Dynamic loading in react-native-vector-icons is currently limited to those fonts that are bundled within the provided packages: it doesn't support Pro fonts (such as FontAwesome 5 Pro). However, loading of custom fonts is not difficult to implement: see any of the free font packages for reference.
+
+By default, dynamic loading is enabled if supported by the version of Expo that you're using. It doesn't change the way you work with the package: If rendering an icon requires a font that is not known to the app, it will be loaded automatically and icon will render as expected.
+
+`@react-native-vector-icons/common` exports several functions which you can use to control dynamic loading: 
+
+- `isDynamicLoadingEnabled`: Returns whether dynamic loading is enabled.
+- `isDynamicLoadingSupported`: Returns whether dynamic loading is supported by your runtime (checks that necessary Expo features are present).
+- `setDynamicLoadingEnabled`: Enables or disables dynamic loading.
+- `setDynamicLoadingErrorCallback`: Sets a callback that is called (in the unlikely case) when an error occurs during dynamic loading. An example of when an error might happen is loading a misconfigured OTA update which doesn't include a necessary font file.
 
 ## Usage Examples
 
