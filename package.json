@@ -31,7 +31,7 @@
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
     "lerna": "^8.1.5",
-    "typescript": "^5.4.2",
+    "typescript": "^5.5.4",
     "yo": "^5.0.0"
   },
   "engines": {
