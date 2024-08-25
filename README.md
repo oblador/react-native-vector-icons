@@ -131,7 +131,7 @@ npm run rnvi-update-plist packages.json ios/AppName/Info.plist
 
 1. Update your pods
   ```sh
-  cd ios && pod update
+  cd ios && pod install
   ```
 
 ### macOS
