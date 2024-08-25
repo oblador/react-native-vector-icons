@@ -51,7 +51,7 @@ allprojects {
         def androidExtension = project.extensions.findByName('android')
         if (androidExtension != null && project.name == 'app') {
             androidExtension.defaultConfig {
-                // testBuildType System.getProperty('testBuildType', 'debug')
+                androidExtension.testBuildType System.getProperty('testBuildType', 'debug')
                 testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
                 ndk {
