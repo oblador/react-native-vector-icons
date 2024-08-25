@@ -8099,7 +8099,7 @@ __metadata:
     "@types/react": "npm:^18.2.79"
     "@types/react-test-renderer": "npm:^18.0.7"
     babel-jest: "npm:^29.7.0"
-    detox: "npm:^20.23.0"
+    detox: "npm:^20.25.5"
     eslint: "npm:^8.57.0"
     get-yarn-workspaces: "npm:^1.0.2"
     jest: "npm:^29.2.1"
@@ -11889,7 +11889,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detox@npm:^20.23.0":
+"detox@npm:^20.25.5":
   version: 20.25.5
   resolution: "detox@npm:20.25.5"
   dependencies:
