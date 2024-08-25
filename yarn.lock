@@ -4964,7 +4964,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -4981,7 +4981,7 @@ __metadata:
     onchange: "npm:^7.1.0"
     plist: "npm:^3.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   bin:
     react-native-vector-icons-codemod: ./lib/commonjs/index.js
   languageName: unknown
@@ -5011,7 +5011,7 @@ __metadata:
     release-it: "npm:^17.4.0"
     svg2ttf: "npm:^6.0.3"
     svgicons2svgfont: "npm:^12.0.0"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
     yargs: "npm:^17.7.2"
   peerDependencies:
     react: "*"
@@ -5037,7 +5037,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-scripts: "npm:5.0.1"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
     web-vitals: "npm:^4.2.0"
   languageName: unknown
   linkType: soft
@@ -5052,7 +5052,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5069,7 +5069,7 @@ __metadata:
     evil-icons: "npm:1.10.1"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5086,7 +5086,7 @@ __metadata:
     feather-icons: "npm:4.29.2"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5099,7 +5099,7 @@ __metadata:
   dependencies:
     "@react-native-vector-icons/common": "npm:^0.0.1-alpha.20"
     del-cli: "npm:^5.1.0"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   bin:
     fa-upgrade.sh: ./bin/fa-upgrade.sh
     fa-upgrade5.sh: ./bin/fa-upgrade5.sh
@@ -5117,7 +5117,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5134,7 +5134,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5151,7 +5151,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5168,7 +5168,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5185,7 +5185,7 @@ __metadata:
     font-awesome: "npm:4.7.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5207,7 +5207,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5224,7 +5224,7 @@ __metadata:
     fontisto: "npm:3.0.4"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5241,7 +5241,7 @@ __metadata:
     foundation-icons: "npm:2.0.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5257,7 +5257,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5274,7 +5274,7 @@ __metadata:
     ionicons: "npm:7.4.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5291,7 +5291,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5307,7 +5307,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5324,7 +5324,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5341,7 +5341,7 @@ __metadata:
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
     simple-line-icons: "npm:2.5.5"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -5358,7 +5358,7 @@ __metadata:
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
     react-native-builder-bob: "npm:^0.23.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -8116,7 +8116,7 @@ __metadata:
     react-native-windows: "npm:^0.73.0"
     react-test-renderer: "npm:18.2.0"
     ts-jest: "npm:^29.1.2"
-    typescript: "npm:5.4.5"
+    typescript: "npm:^5.5.4"
   languageName: unknown
   linkType: soft
 
@@ -11890,8 +11890,8 @@ __metadata:
   linkType: hard
 
 "detox@npm:^20.23.0":
-  version: 20.23.0
-  resolution: "detox@npm:20.23.0"
+  version: 20.25.5
+  resolution: "detox@npm:20.25.5"
   dependencies:
     ajv: "npm:^8.6.3"
     bunyan: "npm:^1.8.12"
@@ -11935,7 +11935,7 @@ __metadata:
       optional: true
   bin:
     detox: local-cli/cli.js
-  checksum: 10c0/b73aaed5127009e90cade33feb29383274f4838c9d5bfe51361a2e3cdaea0938f66228f84c62a8a255cded425a9e3f807635cea8bc5354201e960d238be145bd
+  checksum: 10c0/29632d77e2cd9dddc8b7170657b5164e6ddf79ca79fa3e47e5e2f23631bac7f3e35361ee3c04d956c42daa32f8208980b506a177fbbd0c57f15f1a0e199cd5e9
   languageName: node
   linkType: hard
 
@@ -14231,7 +14231,7 @@ __metadata:
     oslllo-svg-fixer: "npm:^4.0.1"
     registry-auth-token: "npm:^5.0.2"
     semver: "npm:^7.6.2"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
     yeoman-generator: "npm:^7.3.2"
   languageName: unknown
   linkType: soft
@@ -24558,7 +24558,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^4.6.2"
     generator-react-native-vector-icons: "workspace:^"
     lerna: "npm:^8.1.5"
-    typescript: "npm:^5.4.2"
+    typescript: "npm:^5.5.4"
     yo: "npm:^5.0.0"
   languageName: unknown
   linkType: soft
@@ -26998,23 +26998,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.4.5, typescript@npm:>=3 < 6, typescript@npm:^5.4.2":
-  version: 5.4.5
-  resolution: "typescript@npm:5.4.5"
+"typescript@npm:>=3 < 6, typescript@npm:^5.5.4":
+  version: 5.5.4
+  resolution: "typescript@npm:5.5.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/2954022ada340fd3d6a9e2b8e534f65d57c92d5f3989a263754a78aba549f7e6529acc1921913560a4b816c46dce7df4a4d29f9f11a3dc0d4213bb76d043251e
+  checksum: 10c0/422be60f89e661eab29ac488c974b6cc0a660fb2228003b297c3d10c32c90f3bcffc1009b43876a082515a3c376b1eefcce823d6e78982e6878408b9a923199c
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A>=3 < 6#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.4.2#optional!builtin<compat/typescript>":
-  version: 5.4.5
-  resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"
+"typescript@patch:typescript@npm%3A>=3 < 6#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.5.4#optional!builtin<compat/typescript>":
+  version: 5.5.4
+  resolution: "typescript@patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=b45daf"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/db2ad2a16ca829f50427eeb1da155e7a45e598eec7b086d8b4e8ba44e5a235f758e606d681c66992230d3fc3b8995865e5fd0b22a2c95486d0b3200f83072ec9
+  checksum: 10c0/10dd9881baba22763de859e8050d6cb6e2db854197495c6f1929b08d1eb2b2b00d0b5d9b0bcee8472f1c3f4a7ef6a5d7ebe0cfd703f853aa5ae465b8404bc1ba
   languageName: node
   linkType: hard
 

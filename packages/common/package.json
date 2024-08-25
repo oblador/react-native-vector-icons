@@ -94,7 +94,7 @@
     "release-it": "^17.4.0",
     "svg2ttf": "^6.0.3",
     "svgicons2svgfont": "^12.0.0",
-    "typescript": "^5.4.2"
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
     "react": "*",
