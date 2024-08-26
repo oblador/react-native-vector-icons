@@ -4,11 +4,15 @@ declare global {
   interface ExpoGlobal {
     modules: {
       ExpoAsset: {
-        downloadAsync: (uri: string, path: string, type: string) => Promise<string>;
+        // definition from
+        // https://github.com/expo/expo/blob/1f5a5991d14aad09282d1ce1612b44d30e7e7d3d/packages/expo-asset/ios/AssetModule.swift#L23
+        downloadAsync: (uri: string, hash: string | undefined, type: string) => Promise<string>;
       };
       ExpoFontLoader: {
-        loadAsync: (fontFamilyAlias: string, fileUri: string) => Promise<void>;
+        // definition from
+        // https://github.com/expo/expo/blob/1f5a5991d14aad09282d1ce1612b44d30e7e7d3d/packages/expo-font/ios/FontLoaderModule.swift#L18
         getLoadedFonts: () => string[];
+        loadAsync: (fontFamilyAlias: string, fileUri: string) => Promise<void>;
       };
     };
   }
@@ -35,19 +39,17 @@ export const isDynamicLoadingSupported = () => hasNecessaryExpoFeatures;
  * @returns `true` if dynamic loading of fonts was successfully set. `false` otherwise.
  * */
 export const setDynamicLoadingEnabled = (value: boolean): boolean => {
-  dynamicFontLoadingEnabled = !!value;
   if (!hasNecessaryExpoFeatures) {
-    // if expo features are not present, dynamic loading cannot work
-    dynamicFontLoadingEnabled = false;
-
     if (process.env.NODE_ENV !== 'production' && !!value) {
       const message = hasNecessaryExpoModules
-        ? 'Expo is installed, but does not support dynamic font loading. Make sure to use the latest version of Expo SDK.'
+        ? 'Expo is installed, but does not support dynamic font loading. Make sure to use Expo SDK 52 or newer.'
         : 'Necessary Expo modules not found. Dynamic font loading is not available on Web or when necessary Expo modules are not present.';
       console.error(message);
     }
+    return false;
   }
-  return dynamicFontLoadingEnabled === value;
+  dynamicFontLoadingEnabled = !!value;
+  return true;
 };
 
 /**

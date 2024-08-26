@@ -8,7 +8,7 @@ import { getAssetByID } from '@react-native/assets-registry/registry';
 import type { Image } from 'react-native';
 // @ts-expect-error missing types
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
-import type { FontSource } from './types';
+import type {DynamicLoader, FontSource} from './types';
 import { getErrorCallback } from './dynamic-loading-setting';
 
 const loadPromises: { [fontSource: string]: Promise<void> } = {};
@@ -81,11 +81,7 @@ const isLoadedNative = (fontFamily: string) => {
   return fontFamily in loadedFontsCache;
 };
 
-type DynamicLoaderRequiredShape = typeof import('./dynamic-font-loading.web');
-
-export const { dynamicLoader }: DynamicLoaderRequiredShape = {
-  dynamicLoader: {
-    loadFontAsync,
-    isLoaded: isLoadedNative,
-  },
+export const dynamicLoader: DynamicLoader = {
+  isLoaded: isLoadedNative,
+  loadFontAsync,
 };
