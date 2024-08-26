@@ -4,8 +4,8 @@ import { PixelRatio, Platform, Text, type TextProps, type TextStyle, processColo
 
 import NativeIconAPI from './NativeVectorIcons';
 import createIconSourceCache from './create-icon-source-cache';
-import { isDynamicLoadingEnabled } from './dynamicLoading/dynamic-loading-setting';
 import { dynamicLoader } from './dynamicLoading/dynamic-font-loading';
+import { isDynamicLoadingEnabled } from './dynamicLoading/dynamic-loading-setting';
 import type { FontSource } from './dynamicLoading/types';
 import ensureNativeModuleAvailable from './ensure-native-module-available';
 

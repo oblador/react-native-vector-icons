@@ -8,8 +8,8 @@ import { getAssetByID } from '@react-native/assets-registry/registry';
 import type { Image } from 'react-native';
 // @ts-expect-error missing types
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
-import type {DynamicLoader, FontSource} from './types';
 import { getErrorCallback } from './dynamic-loading-setting';
+import type { DynamicLoader, FontSource } from './types';
 
 const loadPromises: { [fontSource: string]: Promise<void> } = {};
 
@@ -18,7 +18,7 @@ const loadFontAsync = async (fontFamily: string, fontSource: FontSource): Promis
   if (!expoModules) {
     throw new Error('Expo is not available. Dynamic font loading is not available.');
   }
-  if (Object.prototype.hasOwnProperty.call(loadPromises, fontFamily)) {
+  if (loadPromises[fontFamily]) {
     return loadPromises[fontFamily];
   }
   loadPromises[fontFamily] = (async function LoadFont() {
