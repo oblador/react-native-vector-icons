@@ -1,6 +1,6 @@
 # Creating a font package
 
-You can create a new font package either via a PR to this repository or by publishing you're own font package on NPM.
+You can create a new font package either via a PR to this repository or by publishing your own font package on NPM.
 
 We use a yeoman generator to fully automate the generation the fonts from a configuration file.
 
