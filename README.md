@@ -71,6 +71,8 @@ Should you find this library beneficial, kindly contemplate the option of [spons
 ### iOS Setup
 To use the bundled icons on iOS, perform the following step:
 
+- run `npx pod-install` in the iOS directory
+
 - Edit `Info.plist` and add a property called **Fonts provided by application** (or **UIAppFonts** if Xcode autocomplete is not working):
   - <details><summary>List of all available fonts to copy & paste in Info.plist</summary>
   
@@ -105,7 +107,7 @@ To use the bundled icons on iOS, perform the following step:
 
   ![XCode screenshot](https://cloud.githubusercontent.com/assets/378279/12421498/2db1f93a-be88-11e5-89c8-2e563ba6251a.png)
 
-_Note: Recompile your project after adding new fonts._
+_Note: Recompile your project after adding or removing fonts._
 
 ### Android Setup
 
