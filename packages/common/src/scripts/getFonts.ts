@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { getFontPaths } from "./common";
+import { getFontPaths } from './common';
 
 const packageJsonFilename = process.argv[2];
 if (!packageJsonFilename) {
