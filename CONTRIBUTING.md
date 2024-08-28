@@ -1,6 +1,6 @@
 # Contributing
 
-Thank for taking the time to check out the repo and be willing to contribute!
+Thanks for taking the time to check out the repo and be willing to contribute!
 
 We want this community to be friendly and respectful to each other. Please follow it in all your interactions with the project. Before contributing, please read the [code of conduct](./CODE_OF_CONDUCT.md).
 
