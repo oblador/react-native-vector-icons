@@ -98,18 +98,15 @@ export const IconList = ({
 
   return (
     <View style={styles.container}>
-      {Platform.OS === 'macos' && (
-        <View style={styles.searchBar}>
-          <TextInput
-            autoCapitalize="none"
-            autoCorrect={false}
-            autoFocus
-            onChange={handleSearchChange}
-            placeholder="Search an icon..."
-            style={styles.searchBarInput}
-          />
-        </View>
-      )}
+      <View style={styles.searchBar}>
+        <TextInput
+          autoCapitalize="none"
+          autoCorrect={false}
+          onChange={handleSearchChange}
+          placeholder="Search an icon..."
+          style={styles.searchBarInput}
+        />
+      </View>
 
       <FlatList
         data={glyphNames}
@@ -117,7 +114,9 @@ export const IconList = ({
         renderItem={({ item }) => (
           <View style={styles.row}>
             <Icon iconStyle={iconStyle} name={item[0]} size={20} style={styles.icon} />
-            <Text style={styles.text}>{item.join(', ')}</Text>
+            <Text selectable style={styles.text}>
+              {item.join(', ')}
+            </Text>
           </View>
         )}
         automaticallyAdjustContentInsets={false}
