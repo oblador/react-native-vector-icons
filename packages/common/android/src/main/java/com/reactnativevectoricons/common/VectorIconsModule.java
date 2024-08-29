@@ -83,6 +83,8 @@ public class VectorIconsModule extends NativeVectorIconsSpec {
       fos.flush();
       return cacheFileUrl;
     } catch (IOException e) {
+      // we're rethrowing this as a runtime exception because we can't change the method signature to `throws IOException`
+      // that would be at odds with the codegen-generated spec
       throw new RuntimeException(e);
     }
   }
