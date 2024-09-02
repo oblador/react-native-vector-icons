@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.source         = { :git => package["repository"]["url"], :tag => "v#{s.version}" }
 
   s.source_files   = 'ios/**/*.{h,m,mm,swift}'
-  s.resources      = "Fonts/*.ttf"
   s.preserve_paths = "**/*.js"
   # React Native Core dependency
   if defined? install_modules_dependencies

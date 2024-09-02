@@ -72,6 +72,14 @@ RCT_EXPORT_MODULE()
                                 withError:(NSError **)error {
   UIColor *parsedColor = [RCTConvert UIColor:@(color)];
   UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+  if (!font) {
+    *error = [NSError errorWithDomain:RNVIErrorDomain
+                                 code:RNVIGenericError
+                             userInfo:@{
+      NSLocalizedDescriptionKey: [NSString stringWithFormat:@"No font found for fontName \"%@\". Make sure to the font is included in info.plist.", fontName]
+    }];
+    return nil;
+  }
   NSString *filePath = [self generateFilePath:glyph
                                  withFontName:fontName
                                  withFontSize:fontSize
@@ -122,11 +130,20 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getImageForFontSync
                                        : (CGFloat)fontSize color
                                        : (double)color) {
   NSError *error = nil;
-  return [self createGlyphImagePathForFont:fontName
+  NSString* glyphImage = [self createGlyphImagePathForFont:fontName
                                  withGlyph:glyph
                               withFontSize:fontSize
                                  withColor:color
                                  withError:&error];
+  if (error == nil && glyphImage != nil) {
+    return glyphImage;
+  } else {
+    NSString *reason = error ? error.localizedDescription : @"Failed to create glyph image";
+
+    @throw [NSException exceptionWithName:@"RNVectorIconsException"
+                                   reason:reason
+                                 userInfo:nil];
+  }
 }
 
 // Don't compile this code when we build for the old architecture.
