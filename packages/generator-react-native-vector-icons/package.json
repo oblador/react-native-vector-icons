@@ -14,15 +14,15 @@
   "dependencies": {
     "mem-fs": "^4.1.0",
     "npm-registry-fetch": "^17.1.0",
-    "oslllo-svg-fixer": "^4.0.1",
+    "oslllo-svg-fixer": "^5.0.0",
     "registry-auth-token": "^5.0.2",
-    "semver": "^7.6.2",
+    "semver": "^7.6.3",
     "yeoman-generator": "^7.3.2"
   },
   "devDependencies": {
     "@types/npm-registry-fetch": "^8.0.7",
     "@types/semver": "^7.5.8",
-    "@yeoman/types": "^1.2.0",
+    "@yeoman/types": "^1.4.0",
     "copyfiles": "^2.4.1",
     "onchange": "^7.1.0",
     "typescript": "^5.5.4"
