@@ -2,49 +2,48 @@
 
 set -e
 
-PLATFORM=$1
-if [ -z "$PLATFORM" ]; then
-  echo "Please provide a valid platform: ios|android"
-  exit 1
-fi
-
-VERSION=$2
+VERSION=$1
 if [ -z "$VERSION" ]; then
   echo "Please provide a valid RN version"
   exit 1
 fi
 
-LATEST=0.73
-case "$VERSION" in
-0.73)
-  TAG=0.73
-  ;;
-0.*)
-  TAG="${VERSION}-stable"
-  ;;
-*)
-  echo "Invalid RN tag: $VERSION"
-  exit 1
-  ;;
-esac
+TAG="${VERSION}-stable"
 
 rm -rf android/app/build/ android/.gradle/
 killall java 2>/dev/null || true
 
 echo "Switching to $VERSION"
 
-if [ "$VERSION" = "0.71" ]; then
+case $VERSION in
+0.71)
   GRADLE_VERSION=7.5.1
-fi
+  ;;
 
-if [ "$VERSION" = "0.72" ]; then
+0.72)
   GRADLE_VERSION=8.0.1
-fi
+  ;;
 
-if [ "$PLATFORM" = "android" -a -n "$GRADLE_VERSION" ]; then
-  echo "Setting gradle version to $GRADLE_VERSION"
-  sed -i'' -e "s/8.7/$GRADLE_VERSION/" android/gradle/wrapper/gradle-wrapper.properties
-fi
+0.73)
+  GRADLE_VERSION=8.3
+  ;;
+
+0.74)
+  GRADLE_VERSION=8.6
+  ;;
+
+0.75)
+  GRADLE_VERSION=8.8
+  ;;
+
+*)
+  echo "Unsupported version $VERSION"
+  exit 1
+  ;;
+esac
+
+echo "Setting gradle version to $GRADLE_VERSION"
+sed -i'' -e "s/gradle-[0-9.]*-bin.zip/gradle-$GRADLE_VERSION-bin.zip/" android/gradle/wrapper/gradle-wrapper.properties
 
 yarn rnx-align-deps --requirements react-native@$VERSION --write
 

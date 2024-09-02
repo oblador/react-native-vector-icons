@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     paddingLeft: 8,
     flexDirection: 'row',
     alignItems: 'center',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: '#ccc',
+    borderBottomWidth: 1,
+    borderColor: '#444',
   },
   searchBarInput: {
     fontSize: 15,
@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 10,
     overflow: 'hidden',
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: '#ccc',
+    borderBottomWidth: 1,
+    borderColor: '#ddd',
   },
   icon: {
     textAlign: 'center',
