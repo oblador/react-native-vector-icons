@@ -64,11 +64,10 @@ RCT_EXPORT_MODULE(RNVectorIcons);
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:glyph attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: color}];
 
     CGSize iconSize = [attributedString size];
-    UIGraphicsBeginImageContextWithOptions(iconSize, NO, 0.0);
-    [attributedString drawAtPoint:CGPointMake(0, 0)];
-
-    UIImage *iconImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    UIGraphicsImageRenderer *renderer = [[UIGraphicsImageRenderer alloc] initWithSize:iconSize];
+    UIImage *iconImage = [renderer imageWithActions:^(UIGraphicsImageRendererContext * _Nonnull rendererContext) {
+      [attributedString drawAtPoint:CGPointMake(0, 0)];
+    }];
 
     NSData *imageData = UIImagePNGRepresentation(iconImage);
     return [imageData writeToFile:filePath atomically:YES];
