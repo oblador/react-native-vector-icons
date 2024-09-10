@@ -74,7 +74,6 @@
     "@react-native-community/cli-tools": "^13.6.9",
     "picocolors": "^1.0.1",
     "plist": "^3.1.0",
-    "prop-types": "^15.8.1",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
@@ -89,7 +88,7 @@
     "pod-install": "^0.2.2",
     "prettier": "^3.3.2",
     "react": "18.3.1",
-    "react-native": "0.73.8",
+    "react-native": "^0.74.4",
     "react-native-builder-bob": "^0.23.2",
     "release-it": "^17.4.0",
     "svg2ttf": "^6.0.3",
