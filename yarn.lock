@@ -4986,7 +4986,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-native-vector-icons/common@npm:^0.0.1-alpha.20, @react-native-vector-icons/common@workspace:^, @react-native-vector-icons/common@workspace:packages/common":
+"@react-native-vector-icons/common@npm:^0.0.1-alpha.20, @react-native-vector-icons/common@workspace:*, @react-native-vector-icons/common@workspace:^, @react-native-vector-icons/common@workspace:packages/common":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/common@workspace:packages/common"
   dependencies:
@@ -5110,8 +5110,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/fontawesome5-pro@workspace:packages/fontawesome5-pro"
   dependencies:
-    "@react-native-vector-icons/common": "npm:^0.0.1-alpha.20"
-    "@react-native-vector-icons/fontawesome-common": "npm:^0.0.1-alpha.22"
+    "@react-native-vector-icons/common": "workspace:*"
     "@types/react-native": "npm:^0.73.0"
     del-cli: "npm:^5.1.0"
     onchange: "npm:^7.1.0"
