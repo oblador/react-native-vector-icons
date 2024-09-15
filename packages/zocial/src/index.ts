@@ -12,7 +12,7 @@ import glyphMap from '../glyphmaps/Zocial.json';
 const Icon = createIconSet(glyphMap, {
   postscriptName: 'zocial',
   fontFilename: 'Zocial.ttf',
-  fontSource: require('../fonts/Zocial.ttf'),
+  fontSource: require('../fonts/Zocial.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
 export default Icon;

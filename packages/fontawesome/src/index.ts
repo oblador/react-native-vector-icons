@@ -12,7 +12,7 @@ import glyphMap from '../glyphmaps/FontAwesome.json';
 const Icon = createIconSet(glyphMap, {
   postscriptName: 'FontAwesome',
   fontFilename: 'FontAwesome.ttf',
-  fontSource: require('../fonts/FontAwesome.ttf'),
+  fontSource: require('../fonts/FontAwesome.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
 export default Icon;

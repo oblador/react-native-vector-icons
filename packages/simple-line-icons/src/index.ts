@@ -12,7 +12,7 @@ import glyphMap from '../glyphmaps/SimpleLineIcons.json';
 const Icon = createIconSet(glyphMap, {
   postscriptName: 'simple-line-icons',
   fontFilename: 'SimpleLineIcons.ttf',
-  fontSource: require('../fonts/SimpleLineIcons.ttf'),
+  fontSource: require('../fonts/SimpleLineIcons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
 export default Icon;

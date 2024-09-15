@@ -12,7 +12,7 @@ import glyphMap from '../glyphmaps/Feather.json';
 const Icon = createIconSet(glyphMap, {
   postscriptName: 'Feather',
   fontFilename: 'Feather.ttf',
-  fontSource: require('../fonts/Feather.ttf'),
+  fontSource: require('../fonts/Feather.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
 export default Icon;

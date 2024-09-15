@@ -60,6 +60,5 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error'],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
-    'global-require': 'off',
   },
 };

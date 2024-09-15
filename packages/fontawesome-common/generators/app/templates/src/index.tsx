@@ -79,9 +79,7 @@ const Icon = (props: Props) => {
   }
 
   if (!glyphValidator(name as string, iconStyle)) {
-    console.warn(
-      `noSuchGlyph: glyph ${String(name)} does not exist for '${iconStyle}' icon type for FontAwesome6`,
-    );
+    console.warn(`noSuchGlyph: glyph ${String(name)} does not exist for '${iconStyle}' icon type for <%= className %>`);
 
     return <Icons.<%= meta.defaultStyleName %> {...(props as <%= meta.defaultStyleName %>IconProps)} />;
   }
@@ -107,12 +105,8 @@ type GetImageSourceFunc = {
   ): ReturnType<(typeof Icons.<%= styleName %>)['getImageSource']>;
 <% }) -%>
 };
-const getImageSource: GetImageSourceFunc = (
-  iconStyle,
-  name,
-  size = DEFAULT_ICON_SIZE,
-  color = DEFAULT_ICON_COLOR,
-) => {
+// biome-ignore format: We want these to be consistent and we are fine with single for all
+const getImageSource: GetImageSourceFunc = (iconStyle, name, size = DEFAULT_ICON_SIZE, color = DEFAULT_ICON_COLOR) => {
   switch (iconStyle) {
 <% meta.styleNames.forEach((styleName) => { -%>
     case '<%= styleName %>':
@@ -135,12 +129,8 @@ type GetImageSourceSyncFunc = {
   ): ReturnType<(typeof Icons.<%= styleName %>)['getImageSourceSync']>;
 <% }) -%>
 };
-const getImageSourceSync: GetImageSourceSyncFunc = (
-  iconStyle,
-  name,
-  size = DEFAULT_ICON_SIZE,
-  color = DEFAULT_ICON_COLOR,
-) => {
+// biome-ignore format: We want these to be consistent and we are fine with single for all
+const getImageSourceSync: GetImageSourceSyncFunc = (iconStyle, name, size = DEFAULT_ICON_SIZE, color = DEFAULT_ICON_COLOR) => {
   switch (iconStyle) {
 <% meta.styleNames.forEach((styleName) => { -%>
     case '<%= styleName %>':
