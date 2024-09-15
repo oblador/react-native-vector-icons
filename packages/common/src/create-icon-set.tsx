@@ -40,16 +40,16 @@ export type IconComponent<GM extends Record<string, number>> = React.FC<
 };
 
 export type CreateIconSetOptions = {
-  postScriptName: string;
-  fontFileName: string;
+  postscriptName: string;
+  fontFilename: string;
   fontSource?: FontSource;
   fontStyle?: TextProps['style'];
 };
 
 export function createIconSet<GM extends Record<string, number>>(
   glyphMap: GM,
-  postScriptName: string,
-  fontFileName: string,
+  postscriptName: string,
+  fontFilename: string,
   fontStyle?: TextProps['style'],
 ): IconComponent<GM>;
 export function createIconSet<GM extends Record<string, number>>(
@@ -58,22 +58,22 @@ export function createIconSet<GM extends Record<string, number>>(
 ): IconComponent<GM>;
 export function createIconSet<GM extends Record<string, number>>(
   glyphMap: GM,
-  postScriptNameOrOptions: string | CreateIconSetOptions,
+  postscriptNameOrOptions: string | CreateIconSetOptions,
   fontFilenameParam?: string,
   fontStyleParam?: TextProps['style'],
 ): IconComponent<GM> {
-  const { postScriptName, fontFileName, fontStyle } =
-    typeof postScriptNameOrOptions === 'string'
-      ? { postScriptName: postScriptNameOrOptions, fontFileName: fontFilenameParam, fontStyle: fontStyleParam }
-      : postScriptNameOrOptions;
+  const { postscriptName, fontFilename, fontStyle } =
+    typeof postscriptNameOrOptions === 'string'
+      ? { postscriptName: postscriptNameOrOptions, fontFilename: fontFilenameParam, fontStyle: fontStyleParam }
+      : postscriptNameOrOptions;
 
-  const fontBasename = fontFileName ? fontFileName.replace(/\.(otf|ttf)$/, '') : postScriptName;
+  const fontBasename = fontFilename ? fontFilename.replace(/\.(otf|ttf)$/, '') : postscriptName;
 
   const fontReference = Platform.select({
-    windows: `/Assets/${fontFileName}#${postScriptName}`,
+    windows: `/Assets/${fontFilename}#${postscriptName}`,
     android: fontBasename,
     web: fontBasename,
-    default: postScriptName,
+    default: postscriptName,
   });
 
   const resolveGlyph = (name: keyof GM) => {
@@ -107,10 +107,10 @@ export function createIconSet<GM extends Record<string, number>>(
 
       if (
         !isFontLoaded &&
-        typeof postScriptNameOrOptions === 'object' &&
-        typeof postScriptNameOrOptions.fontSource !== 'undefined'
+        typeof postscriptNameOrOptions === 'object' &&
+        typeof postscriptNameOrOptions.fontSource !== 'undefined'
       ) {
-        dynamicLoader.loadFontAsync(fontReference, postScriptNameOrOptions.fontSource).finally(() => {
+        dynamicLoader.loadFontAsync(fontReference, postscriptNameOrOptions.fontSource).finally(() => {
           if (isMounted) {
             setIsFontLoaded(true);
           }

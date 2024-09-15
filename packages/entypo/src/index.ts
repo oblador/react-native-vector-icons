@@ -10,8 +10,8 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Entypo.json';
 
 const Icon = createIconSet(glyphMap, {
-  postScriptName: 'Entypo',
-  fontFileName: 'Entypo.ttf',
+  postscriptName: 'Entypo',
+  fontFilename: 'Entypo.ttf',
   fontSource: require('../fonts/Entypo.ttf'),
 });
 

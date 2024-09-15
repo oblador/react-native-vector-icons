@@ -7,12 +7,12 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/<%= commonPackage %>';
-import glyphMap from '../glyphmaps/<%= fontFile %>.json';
+import glyphMap from '../glyphmaps/<%= fontFilename %>.json';
 
 const Icon = createIconSet(glyphMap, {
-  postScriptName: '<%= fontName %>',
-  fontFileName: '<%= fontFile %>.ttf',
-  fontSource: require('../fonts/<%= fontFile %>.ttf'),
+  postscriptName: '<%= postscriptName %>',
+  fontFilename: '<%= fontFilename %>.ttf',
+  fontSource: require('../fonts/<%= fontFilename %>.ttf'),
 });
 
 export default Icon;

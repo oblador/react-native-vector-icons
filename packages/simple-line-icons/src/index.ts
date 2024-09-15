@@ -10,8 +10,8 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/SimpleLineIcons.json';
 
 const Icon = createIconSet(glyphMap, {
-  postScriptName: 'simple-line-icons',
-  fontFileName: 'SimpleLineIcons.ttf',
+  postscriptName: 'simple-line-icons',
+  fontFilename: 'SimpleLineIcons.ttf',
   fontSource: require('../fonts/SimpleLineIcons.ttf'),
 });
 

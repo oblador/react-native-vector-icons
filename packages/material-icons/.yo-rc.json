@@ -1,7 +1,7 @@
 {
   "generator-react-native-vector-icons": {
-    "fontName": "Material Icons",
     "packageName": "material-icons",
+    "postscriptName": "MaterialIcons-Regular",
     "versionSuffix": "-alpha",
     "buildSteps": {
       "preScript": {

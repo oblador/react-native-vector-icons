@@ -1,6 +1,9 @@
 /* eslint-disable react/jsx-pascal-case, no-console */
 
 /**
+ * This is a generated file. If you modify it manually, your changes will be lost!
+ * Instead, modify the template in `fontawesome-common/generator`.
+ *
  * FontAwesome6Pro icon set component.
  * Usage: <FontAwesome6Pro name="icon-name" size={20} color="#4F8EF7" />
  */
@@ -113,70 +116,70 @@ type Icons = {
 };
 
 const Icons: Icons = {
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   thin: commonCreateIconSet(
     thinGM,
     'FontAwesome6Pro-Thin',
     'FontAwesome6_Pro_Thin.ttf',
     fontStyle('100'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   light: commonCreateIconSet(
     lightGM,
     'FontAwesome6Pro-Light',
     'FontAwesome6_Pro_Light.ttf',
     fontStyle('300'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   regular: commonCreateIconSet(
     regularGM,
     'FontAwesome6Pro-Regular',
     'FontAwesome6_Pro_Regular.ttf',
     fontStyle('400'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   solid: commonCreateIconSet(
     solidGM,
     'FontAwesome6Pro-Solid',
     'FontAwesome6_Pro_Solid.ttf',
     fontStyle('900'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   sharpThin: commonCreateIconSet(
     sharpThinGM,
     'FontAwesome6Sharp-Thin',
     'FontAwesome6_Pro_Sharp_Thin.ttf',
     fontStyle('100'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   sharpLight: commonCreateIconSet(
     sharpLightGM,
     'FontAwesome6Sharp-Light',
     'FontAwesome6_Pro_Sharp_Light.ttf',
     fontStyle('300'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   sharp: commonCreateIconSet(
     sharpGM,
     'FontAwesome6Sharp-Regular',
     'FontAwesome6_Pro_Sharp_Regular.ttf',
     fontStyle('400'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   sharpSolid: commonCreateIconSet(
     sharpSolidGM,
     'FontAwesome6Sharp-Solid',
     'FontAwesome6_Pro_Sharp_Solid.ttf',
     fontStyle('900'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   duotone: commonCreateIconSet(
     duotoneGM,
     'FontAwesome6Duotone-Solid',
     'FontAwesome6_Pro_Duotone.ttf',
     fontStyle('900'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   brand: commonCreateIconSet(
     brandGM,
     'FontAwesome6Brands-Regular',
