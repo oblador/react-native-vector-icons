@@ -86,13 +86,7 @@ jobs:
         run: |
           cd packages/icon-explorer
 
-          ./set-rn-version.sh ${{ matrix.rn-version }}
-
-      - name: Arch changes
-        if: matrix.arch == 'new'
-        run: |
-          echo "newArchEnabled=true" >> android/gradle.properties
-
+          ./set-rn-version.sh ${{ matrix.arch }} ${{ matrix.rn-version }}
 
       # TODO Not sure if this should re really needed but seems to fix things
       - name: Start Metro
@@ -161,7 +155,7 @@ jobs:
         run: |
           cd packages/icon-explorer
 
-          ./set-rn-version.sh ${{ matrix.rn-version }}
+          ./set-rn-version.sh ${{ matrix.arch }} ${{ matrix.rn-version }}
 
       - name: Set up build tools
         run: |
@@ -177,7 +171,6 @@ jobs:
       - name: Run tests
         run: |
           cd packages/icon-explorer
-          NO_FLIPPER=1 pod install --project-directory=ios
           yarn test:ios
 
       - uses: actions/upload-artifact@v4

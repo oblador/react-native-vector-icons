@@ -2,13 +2,17 @@
 
 set -e
 
-VERSION=$1
+ARCH=$1
+if [ -z "$ARCH" ]; then
+  echo "Please provide a new or old arch"
+  exit 1
+fi
+
+VERSION=$2
 if [ -z "$VERSION" ]; then
   echo "Please provide a valid RN version"
   exit 1
 fi
-
-TAG="${VERSION}-stable"
 
 rm -rf android/app/build/ android/.gradle/
 killall java 2>/dev/null || true
@@ -45,8 +49,20 @@ esac
 echo "Setting gradle version to $GRADLE_VERSION"
 sed -i'' -e "s/gradle-[0-9.]*-bin.zip/gradle-$GRADLE_VERSION-bin.zip/" android/gradle/wrapper/gradle-wrapper.properties
 
-yarn rnx-align-deps --requirements react-native@$VERSION --write
+yarn rnx-align-deps --requirements react-native@"$VERSION" --write
 
 yarn add react-native-test-app@latest
 
 yarn --no-immutable
+
+if [ "$ARCH" = "new" ]; then
+  echo "newArchEnabled=true" >>android/gradle.properties
+fi
+
+if command -v pod &>/dev/null; then
+  if [ "$ARCH" = "new" ]; then
+    NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=1 pod install --project-directory=ios
+  else
+    NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=0 pod install --project-directory=ios
+  fi
+fi
