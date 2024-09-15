@@ -90,6 +90,11 @@ jobs:
 
           ./set-rn-version.sh ${{ matrix.rn-version }}
 
+      - name: Arch changes
+        if: matrix.arch == 'new'
+        run: |
+          echo "newArchEnabled=true" >> android/gradle.properties
+
 
       # TODO Not sure if this should re really needed but seems to fix things
       - name: Start Metro
