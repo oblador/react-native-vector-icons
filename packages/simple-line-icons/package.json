@@ -80,7 +80,7 @@
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",
     "simple-line-icons": "2.5.5",
-    "typescript": "^5.5.4"
+    "typescript": "^5.6.2"
   },
   "peerDependencies": {
     "react": "*",
