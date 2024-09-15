@@ -18,9 +18,11 @@ const loadFontAsync = async (fontFamily: string, fontSource: FontSource): Promis
   if (!expoModules) {
     throw new Error('Expo is not available. Dynamic font loading is not available.');
   }
+
   if (loadPromises[fontFamily]) {
     return loadPromises[fontFamily];
   }
+
   loadPromises[fontFamily] = (async function LoadFont() {
     try {
       const localUri = await (() => {
@@ -32,9 +34,11 @@ const loadFontAsync = async (fontFamily: string, fontSource: FontSource): Promis
         const { uri, type, hash } = getLocalFontUrl(fontSource, fontFamily);
         return expoModules.ExpoAsset.downloadAsync(uri, hash, type);
       })();
+
       await expoModules.ExpoFontLoader.loadAsync(fontFamily, localUri);
     } catch (error) {
-      console.error(`Failed to load font ${fontFamily}`, error);
+      console.error(`Failed to load font ${fontFamily}`, error); // eslint-disable-line no-console
+
       getErrorCallback()?.({
         error: error as Error,
         fontFamily,
@@ -44,6 +48,7 @@ const loadFontAsync = async (fontFamily: string, fontSource: FontSource): Promis
       delete loadPromises[fontFamily];
     }
   })();
+
   return loadPromises[fontFamily];
 };
 
@@ -59,8 +64,10 @@ const getLocalFontUrl = (fontModuleId: number, fontFamily: string) => {
   if (!assetMeta) {
     throw new Error(`no asset found for font family "${fontFamily}", moduleId: ${String(fontModuleId)}`);
   }
+
   const resolver: typeof Image.resolveAssetSource = resolveAssetSource;
   const assetSource = resolver(fontModuleId);
+
   return { ...assetMeta, ...assetSource };
 };
 
@@ -70,14 +77,17 @@ const isLoadedNative = (fontFamily: string) => {
   if (fontFamily in loadedFontsCache) {
     return true;
   }
+
   const { expo } = globalThis;
   if (!expo) {
     throw new Error('Expo is not available. Dynamic font loading is not available.');
   }
+
   const loadedNativeFonts = expo.modules.ExpoFontLoader.getLoadedFonts();
   loadedNativeFonts.forEach((font) => {
     loadedFontsCache[font] = true;
   });
+
   return fontFamily in loadedFontsCache;
 };
 

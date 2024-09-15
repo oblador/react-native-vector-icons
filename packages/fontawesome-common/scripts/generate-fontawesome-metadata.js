@@ -1,10 +1,9 @@
 #!/usr/bin/env node
-/* eslint-disable no-console,@typescript-eslint/no-var-requires */
 
 // TODO: Rewrite this script in TypeScript
 
-const fs = require('node:fs');
-const yargs = require('yargs'); // eslint-disable-line import/no-extraneous-dependencies
+const fs = require('node:fs'); // eslint-disable-line @typescript-eslint/no-require-imports
+const yargs = require('yargs'); // eslint-disable-line @typescript-eslint/no-require-imports,import/no-extraneous-dependencies
 
 const { argv } = yargs
   .usage('')
