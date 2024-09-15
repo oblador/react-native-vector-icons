@@ -108,7 +108,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-results-${{ matrix.rn-version }}-${{ matrix.api-level }}-android
+          name: test-results-${{ matrix.rn-version }}-android
           path: packages/icon-explorer/e2e/output
 
       - uses: dorny/test-reporter@v1
@@ -124,9 +124,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        api-level: [31]
-        # api-level: [31, 32, 33, 34] TODO: Let's not care about different APIs for now
         rn-version: ['0.75', '0.74', '0.73', '0.72', '0.71']
+        arch: ['new', 'old']
 
     steps:
       - uses: actions/checkout@v4
@@ -176,7 +175,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-results-${{ matrix.rn-version }}-${{ matrix.api-level }}-ios
+          name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-ios
           path: packages/icon-explorer/e2e/output
 
       - uses: dorny/test-reporter@v1
