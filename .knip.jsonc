@@ -1,0 +1,100 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema-jsonc.json",
+  "ignore": ["**/*.web.ts"],
+  "workspaces": {
+    ".": {
+      "ignoreDependencies": ["yo", "eslint-config-airbnb-typescript"],
+      "ignoreBinaries": ["scripts/generate-fonts.sh", "build", "test:ios"]
+    },
+    "packages/*": {
+      "entry": [
+        "{index,cli,main}.{js,mjs,cjs,jsx,ts,tsx,mts,cts}!",
+        "src/{index,cli,main}.{js,mjs,cjs,jsx,ts,tsx,mts,cts}!"
+      ]
+    },
+    "packages/common": {
+      "entry": ["src/index.ts", "src/scripts/{getFonts,updatePlist}.ts"],
+      "ignoreDependencies": ["@react-native/assets-registry"],
+      "ignore": ["src/NativeVectorIcons.ts"]
+    },
+    "packages/fontawesome-common": {
+      "entry": ["src/index.ts", "scripts/generate-fontawesome-metadata.js"],
+      "ignore": ["generators/app/templates/src/index.tsx"],
+      "ignoreDependencies": ["@react-native-vector-icons/common"]
+    },
+    "packages/fontawesome5-pro": {
+      "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common"]
+    },
+    "packages/fontawesome6-pro": {
+      "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common"]
+    },
+    "packages/codemod": {
+      "entry": ["src/{index,transform}.ts"]
+    },
+    "packages/directory": {
+      "entry": ["src/index.tsx", "src/App.test.tsx", "src/reportWebVitals.ts", "src/setupTests.js"],
+      "ignoreDependencies": ["@testing-library/user-event"]
+    },
+    "packages/icon-explorer": {
+      "entry": ["index.js", ".detoxrc.js", "metro.config.js", "react-native.config.js", "e2e/jest.config.js"],
+      "ignoreDependencies": [
+        "@react-native-vector-icons/common",
+        "@babel/preset-env",
+        "@react-native/eslint-config",
+        "@rnx-kit/align-deps",
+        "react-test-renderer",
+        "@types/react-test-renderer",
+        "babel-jest",
+        "jest-junit",
+        "ts-jest"
+      ]
+    },
+    "packages/generator-react-native-vector-icons": {
+      "entry": ["src/app/index.ts"],
+      "ignore": ["src/app/templates/src/index.ts", "generators/app/templates/src/index.tsx"],
+      "ignoreDependencies": ["oslllo-svg-fixer"]
+    },
+    "packages/ant-design": {
+      "ignoreDependencies": ["@ant-design/icons-svg"]
+    },
+    "packages/entypo": {
+      "ignoreDependencies": ["@entypo-icons/core"]
+    },
+    "packages/evil-icons": {
+      "ignoreDependencies": ["evil-icons"]
+    },
+    "packages/feather": {
+      "ignoreDependencies": ["feather-icons"]
+    },
+    "packages/fontawesome": {
+      "ignoreDependencies": ["font-awesome"]
+    },
+    "packages/fontawesome5": {
+      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
+    },
+    "packages/fontawesome6": {
+      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
+    },
+    "packages/fontisto": {
+      "ignoreDependencies": ["fontisto"]
+    },
+    "packages/foundation": {
+      "ignoreDependencies": ["foundation-icons"]
+    },
+    "packages/ionicons": {
+      "ignoreDependencies": ["ionicons"]
+    },
+    "packages/material-design-icons": {
+      "ignoreDependencies": ["@mdi/font"]
+    },
+    "packages/simple-line-icons": {
+      "ignoreDependencies": ["simple-line-icons"]
+    },
+    "packages/octicons": {
+      "ignoreDependencies": ["@primer/octicons"]
+    },
+    "packages/zocial": {
+      "ignoreDependencies": ["css-social-buttons"]
+    }
+  }
+}
