@@ -54,8 +54,6 @@ body {
   border-right: 1px solid #eee;
 }
 
-.Search-Icon {}
-
 .Search-Input {
   flex-grow: 1;
   padding: 10px;
@@ -91,7 +89,8 @@ body {
   background-color: #f66;
 }
 
-.Result-Title > a, .Result-Title > a:link {
+.Result-Title > a,
+.Result-Title > a:link {
   color: #fff;
 }
 
@@ -143,7 +142,6 @@ body {
   margin: 10px 0 0 0;
 }
 
-
 .Family-Links-Container {
   padding: 10px 20px 20px 20px;
   background-color: #23527c;
@@ -155,13 +153,14 @@ body {
 }
 
 .Family-Links-Title {
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
   margin-top: 0;
 }
 
-.Family-Links-Link, .Family-Links-Link:link {
-  color: #FFF;
+.Family-Links-Link,
+.Family-Links-Link:link {
+  color: #fff;
   font-size: 16px;
 }
 
