@@ -12,7 +12,7 @@ import glyphMap from '../glyphmaps/AntDesign.json';
 const Icon = createIconSet(glyphMap, {
   postscriptName: 'AntDesign',
   fontFilename: 'AntDesign.ttf',
-  fontSource: require('../fonts/AntDesign.ttf'),
+  fontSource: require('../fonts/AntDesign.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
 export default Icon;

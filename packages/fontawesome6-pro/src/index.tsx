@@ -195,9 +195,7 @@ const Icon = (props: Props) => {
   }
 
   if (!glyphValidator(name as string, iconStyle)) {
-    console.warn(
-      `noSuchGlyph: glyph ${String(name)} does not exist for '${iconStyle}' icon type for FontAwesome6`,
-    );
+    console.warn(`noSuchGlyph: glyph ${String(name)} does not exist for '${iconStyle}' icon type for FontAwesome6Pro`);
 
     return <Icons.regular {...(props as regularIconProps)} />;
   }
@@ -291,12 +289,8 @@ type GetImageSourceFunc = {
     color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.thin)['getImageSource']>;
 };
-const getImageSource: GetImageSourceFunc = (
-  iconStyle,
-  name,
-  size = DEFAULT_ICON_SIZE,
-  color = DEFAULT_ICON_COLOR,
-) => {
+// biome-ignore format: We want these to be consistent and we are fine with single for all
+const getImageSource: GetImageSourceFunc = (iconStyle, name, size = DEFAULT_ICON_SIZE, color = DEFAULT_ICON_COLOR) => {
   switch (iconStyle) {
     case 'brand':
       return Icons.brand.getImageSource(name as keyof typeof brandGM, size, color);
@@ -387,12 +381,8 @@ type GetImageSourceSyncFunc = {
     color?: TextStyle['color'],
   ): ReturnType<(typeof Icons.thin)['getImageSourceSync']>;
 };
-const getImageSourceSync: GetImageSourceSyncFunc = (
-  iconStyle,
-  name,
-  size = DEFAULT_ICON_SIZE,
-  color = DEFAULT_ICON_COLOR,
-) => {
+// biome-ignore format: We want these to be consistent and we are fine with single for all
+const getImageSourceSync: GetImageSourceSyncFunc = (iconStyle, name, size = DEFAULT_ICON_SIZE, color = DEFAULT_ICON_COLOR) => {
   switch (iconStyle) {
     case 'brand':
       return Icons.brand.getImageSourceSync(name as keyof typeof brandGM, size, color);

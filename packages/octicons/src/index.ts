@@ -12,7 +12,7 @@ import glyphMap from '../glyphmaps/Octicons.json';
 const Icon = createIconSet(glyphMap, {
   postscriptName: 'Octicons',
   fontFilename: 'Octicons.ttf',
-  fontSource: require('../fonts/Octicons.ttf'),
+  fontSource: require('../fonts/Octicons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
 export default Icon;

@@ -12,7 +12,7 @@ import glyphMap from '../glyphmaps/Entypo.json';
 const Icon = createIconSet(glyphMap, {
   postscriptName: 'Entypo',
   fontFilename: 'Entypo.ttf',
-  fontSource: require('../fonts/Entypo.ttf'),
+  fontSource: require('../fonts/Entypo.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
 export default Icon;

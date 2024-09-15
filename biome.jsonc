@@ -2,42 +2,28 @@
   "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
   "files": {
     "ignore": [
-      // Generated files
-      "packages/generator-react-native-vector-icons/generators",
-      "packages/*/lib",
-      "packages/*/glyphmaps",
-      "packages/*/.fontcustom-manifest.json",
-      "packages/ant-design/src/index.ts",
-      "packages/common/android",
-      "packages/directory/build",
-      "packages/directory/src/generated",
-      "packages/entypo/src/index.ts",
-      "packages/evil-icons/src/index.ts",
-      "packages/feather/src/index.ts",
-      "packages/fontawesome5-pro/src/index.tsx",
-      "packages/fontawesome5/src/index.tsx",
-      "packages/fontawesome6-pro/src/index.tsx",
-      "packages/fontawesome6/src/index.tsx",
-      "packages/fontawesome/src/index.ts",
-      "packages/fontisto/src/index.ts",
-      "packages/foundation/src/index.ts",
-      "packages/icon-explorer/android",
-      "packages/ionicons/src/index.ts",
-      "packages/material-design-icons/src/index.ts",
-      "packages/material-icons/src/index.ts",
-      "packages/octicons/src/index.ts",
-      "packages/simple-line-icons/src/index.ts",
-      "packages/zocial/src/index.ts",
-      // Templates that have ejs
-      "packages/fontawesome-common/generators/app/templates/src/index.tsx",
-      // Upstream files
-      "packages/icon-explorer/src/configs/icomoon.config.json",
       // yarn keeps this formatted
       "package.json",
       "packages/*/package.json",
+
+      // Generated files
+      "packages/*/lib",
+      "packages/*/glyphmaps",
+      "packages/generator-react-native-vector-icons/generators",
+      "packages/*/.fontcustom-manifest.json",
+      "packages/directory/src/generated",
+
+      // Templates that have ejs
+      "packages/fontawesome-common/generators/app/templates/src/index.tsx",
+
+      // Upstream files
+      "packages/icon-explorer/src/configs/icomoon.config.json",
+
       // native files
       "packages/icon-explorer/ios",
-      "packages/icon-explorer/android"
+      "packages/icon-explorer/android",
+      "packages/common/android",
+      "packages/common/ios"
     ]
   },
   "organizeImports": {
