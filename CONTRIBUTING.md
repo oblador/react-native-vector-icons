@@ -69,7 +69,7 @@ By default, the example is configured to build with the old architecture. To run
 2. For iOS, run:
 
    ```sh
-   RCT_NEW_ARCH_ENABLED=1 yarn pod-install example/ios
+   RCT_NEW_ARCH_ENABLED=1 yarn pod install example/ios
    yarn example ios
    ```
 

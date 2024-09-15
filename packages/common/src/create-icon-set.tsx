@@ -27,7 +27,7 @@ export type IconProps<T> = TextProps & {
   innerRef?: Ref<Text>;
 };
 
-export type IconComponent<GM extends Record<string, number>> = React.FC<
+type IconComponent<GM extends Record<string, number>> = React.FC<
   TextProps & {
     name: keyof GM;
     size?: number;
