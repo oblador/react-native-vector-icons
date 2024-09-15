@@ -108,13 +108,13 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: test-results-${{ matrix.rn-version }}-android
+          name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-android
           path: packages/icon-explorer/e2e/output
 
       - uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: JEST Tests android - ${{ matrix.rn-version }}
+          name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
           path: packages/icon-explorer/e2e/output/*.xml
           reporter: jest-junit
 
@@ -181,6 +181,6 @@ jobs:
       - uses: dorny/test-reporter@v1
         if: always()
         with:
-          name: JEST Tests
+          name: JEST Tests ios - ${{ matrix.arch }} ${{ matrix.rn-version }}
           path: packages/icon-explorer/e2e/output/*.xml
           reporter: jest-junit
