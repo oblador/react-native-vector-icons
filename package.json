@@ -9,10 +9,10 @@
     "clean": "lerna run run clean",
     "prepare": "lerna run prepare",
     "format": "biome format . --write",
+    "format:check": "biome check .",
     "test": "lerna run test",
     "lint": "eslint \"**/*.{js,ts,tsx}\"; biome check .",
     "eslint": "eslint \"**/*.{js,ts,tsx}\"",
-    "biome": "biome check .",
     "release": "lerna publish --no-private",
     "knip": "knip"
   },
