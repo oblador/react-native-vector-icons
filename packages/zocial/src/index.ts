@@ -10,8 +10,8 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Zocial.json';
 
 const Icon = createIconSet(glyphMap, {
-  postScriptName: 'Zocial',
-  fontFileName: 'Zocial.ttf',
+  postscriptName: 'zocial',
+  fontFilename: 'Zocial.ttf',
   fontSource: require('../fonts/Zocial.ttf'),
 });
 

@@ -1,6 +1,7 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "zocial",
+    "postscriptName": "zocial",
     "upstreamFont": "css-social-buttons",
     "versionSuffix": "-alpha",
     "buildSteps": {

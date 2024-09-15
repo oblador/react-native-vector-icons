@@ -10,8 +10,8 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Feather.json';
 
 const Icon = createIconSet(glyphMap, {
-  postScriptName: 'Feather',
-  fontFileName: 'Feather.ttf',
+  postscriptName: 'Feather',
+  fontFilename: 'Feather.ttf',
   fontSource: require('../fonts/Feather.ttf'),
 });
 
