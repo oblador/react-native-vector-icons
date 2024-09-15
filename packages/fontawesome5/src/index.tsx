@@ -1,6 +1,9 @@
 /* eslint-disable react/jsx-pascal-case, no-console */
 
 /**
+ * This is a generated file. If you modify it manually, your changes will be lost!
+ * Instead, modify the template in `fontawesome-common/generator`.
+ *
  * FontAwesome5 icon set component.
  * Usage: <FontAwesome5 name="icon-name" size={20} color="#4F8EF7" />
  */
@@ -64,21 +67,21 @@ type Icons = {
 };
 
 const Icons: Icons = {
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   regular: commonCreateIconSet(
     regularGM,
     'FontAwesome5Free-Regular',
     'FontAwesome5_Regular.ttf',
     fontStyle('400'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   solid: commonCreateIconSet(
     solidGM,
     'FontAwesome5Free-Solid',
     'FontAwesome5_Solid.ttf',
     fontStyle('900'),
   ),
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   brand: commonCreateIconSet(
     brandGM,
     'FontAwesome5Brands-Regular',

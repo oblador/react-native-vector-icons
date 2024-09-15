@@ -27,7 +27,7 @@ export type IconProps<T> = TextProps & {
   innerRef?: Ref<Text>;
 };
 
-type IconComponent<GM extends Record<string, number>> = React.FC<
+export type IconComponent<GM extends Record<string, number>> = React.FC<
   TextProps & {
     name: keyof GM;
     size?: number;
@@ -41,7 +41,7 @@ type IconComponent<GM extends Record<string, number>> = React.FC<
 
 export type CreateIconSetOptions = {
   postScriptName: string;
-  fontFilename: string;
+  fontFileName: string;
   fontSource?: FontSource;
   fontStyle?: TextProps['style'];
 };
@@ -49,7 +49,7 @@ export type CreateIconSetOptions = {
 export function createIconSet<GM extends Record<string, number>>(
   glyphMap: GM,
   postScriptName: string,
-  fontFilename: string,
+  fontFileName: string,
   fontStyle?: TextProps['style'],
 ): IconComponent<GM>;
 export function createIconSet<GM extends Record<string, number>>(
@@ -62,15 +62,15 @@ export function createIconSet<GM extends Record<string, number>>(
   fontFilenameParam?: string,
   fontStyleParam?: TextProps['style'],
 ): IconComponent<GM> {
-  const { postScriptName, fontFilename, fontStyle } =
+  const { postScriptName, fontFileName, fontStyle } =
     typeof postScriptNameOrOptions === 'string'
-      ? { postScriptName: postScriptNameOrOptions, fontFilename: fontFilenameParam, fontStyle: fontStyleParam }
+      ? { postScriptName: postScriptNameOrOptions, fontFileName: fontFilenameParam, fontStyle: fontStyleParam }
       : postScriptNameOrOptions;
 
-  const fontBasename = fontFilename ? fontFilename.replace(/\.(otf|ttf)$/, '') : postScriptName;
+  const fontBasename = fontFileName ? fontFileName.replace(/\.(otf|ttf)$/, '') : postScriptName;
 
   const fontReference = Platform.select({
-    windows: `/Assets/${fontFilename}#${postScriptName}`,
+    windows: `/Assets/${fontFileName}#${postScriptName}`,
     android: fontBasename,
     web: fontBasename,
     default: postScriptName,
@@ -89,7 +89,7 @@ export function createIconSet<GM extends Record<string, number>>(
   const Icon = ({
     name,
     size = DEFAULT_ICON_SIZE,
-    color,
+    color = DEFAULT_ICON_COLOR,
     style,
     children,
     allowFontScaling = false,

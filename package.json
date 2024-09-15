@@ -13,6 +13,7 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"; biome check .",
     "eslint": "eslint \"**/*.{js,ts,tsx}\"",
     "biome": "biome check .",
+    "biome:format": "biome format . --write",
     "release": "lerna publish --no-private",
     "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps"
   },

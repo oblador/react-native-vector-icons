@@ -1,6 +1,7 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "material-design-icons",
+    "fontName": "Material Design Icons",
     "upstreamFont": "@mdi/font",
     "versionSuffix": "-alpha",
     "buildSteps": {

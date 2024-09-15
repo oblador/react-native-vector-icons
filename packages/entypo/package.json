@@ -77,7 +77,6 @@
   },
   "devDependencies": {
     "@entypo-icons/core": "1.0.1",
-    "@types/react-native": "^0.73.0",
     "del-cli": "^5.1.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.23.2",

@@ -1,6 +1,9 @@
 /* eslint-disable react/jsx-pascal-case, no-console */
 
 /**
+ * This is a generated file. If you modify it manually, your changes will be lost!
+ * Instead, modify the template in `fontawesome-common/generator`.
+ *
  * <%= className %> icon set component.
  * Usage: <<%= className %> name="icon-name" size={20} color="#4F8EF7" />
  */
@@ -59,7 +62,7 @@ type Icons = {
 
 const Icons: Icons = {
 <% Object.entries(meta.styles).forEach(([styleName, { family, name, weight }]) => { -%>
-  // biome-ignore format: We want these to be consistent adn we are fine with multiline for all
+  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
   <%= styleName %>: commonCreateIconSet(
     <%= styleName %>GM,
     '<%= family %>',
