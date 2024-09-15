@@ -34,7 +34,10 @@
       "packages/icon-explorer/src/configs/icomoon.config.json",
       // yarn keeps this formatted
       "package.json",
-      "packages/*/package.json"
+      "packages/*/package.json",
+      // native files
+      "packages/icon-explorer/ios",
+      "packages/icon-explorer/android"
     ]
   },
   "organizeImports": {

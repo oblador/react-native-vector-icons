@@ -314,11 +314,7 @@ export default class extends Generator<Arguments> {
       `--volume=${process.cwd()}/../../node_modules/generator-react-native-vector-icons/generators/app/fontforge/${fontforgeScript.script}:/script.py`,
     ];
 
-    const args = [
-      '-script',
-      '/script.py',
-      `fonts/${data.className}.ttf`
-    ];
+    const args = ['-script', '/script.py', `fonts/${data.className}.ttf`];
 
     this._docker('johnf/fontcustom', args, options);
   }

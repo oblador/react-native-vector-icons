@@ -76,7 +76,7 @@ RCT_EXPORT_MODULE()
     *error = [NSError errorWithDomain:RNVIErrorDomain
                                  code:RNVIGenericError
                              userInfo:@{
-      NSLocalizedDescriptionKey: [NSString stringWithFormat:@"No font found for fontName \"%@\". Make sure to the font is included in info.plist.", fontName]
+      NSLocalizedDescriptionKey: [NSString stringWithFormat:@"No font found for font name \"%@\". Make sure the font is included in info.plist.", fontName]
     }];
     return nil;
   }
