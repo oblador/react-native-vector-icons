@@ -18,7 +18,7 @@ const takeAndCheckScreenshot = async (name: string) => {
     // Shave top to ignore lock
     // Shave right side to ignore scrollbar
     // Shave bottom to ignore buttons
-    `compare -crop 1340x3020+0+100 -metric AE -fuzz 2% e2e/snapshot/${platform}/${file} e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
+    `compare -crop 1340x2920+0+100 -metric AE -fuzz 2% e2e/snapshot/${platform}/${file} e2e/output/${file} e2e/output/diff/${file} 2>&1 || true`,
   );
 
   if (pixels.toString().trim() !== '0') {
