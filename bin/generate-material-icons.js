@@ -4,13 +4,15 @@
 const fs = require('fs');
 const path = require('path');
 const yargs = require('yargs');
-const { omit } = require('../lib/object-utils');
+const { omit, getMIStyleFromCodepointsFile } = require('../lib/object-utils');
 
 const { argv } = yargs
   .usage(
     'Usage: $0 [options] path/to/codepoints \nFor default template please provide --componentName and --fontFamily'
   )
   .demand(1)
+  .describe('a', 'Add another codepoints file')
+  .alias('a', 'addCodepoints')
   .default('t', path.resolve(__dirname, '..', 'templates/bundled-icon-set.tpl'))
   .describe('t', 'Template in JS template string format')
   .alias('t', 'template')
@@ -19,19 +21,43 @@ const { argv } = yargs
   .describe('g', 'Save glyphmap JSON to file')
   .alias('g', 'glyphmap');
 
-function extractGlyphMapFromCodepoints(fileName) {
-  const codepoints = fs
-    .readFileSync(fileName, { encoding: 'utf8' })
-    .split('\n');
+function extractGlyphMapFromCodepoints(files) {
   const glyphMap = {};
-  codepoints.forEach(point => {
-    const parts = point.split(' ');
-    if (parts.length === 2) {
-      glyphMap[parts[0].replace(/_/g, '-')] = parseInt(parts[1], 16);
+
+  files.forEach(filePath => {
+    const codepoints = fs
+      .readFileSync(filePath, { encoding: 'utf8' })
+      .split('\n');
+
+    const styleName = getMIStyleFromCodepointsFile(filePath);
+
+    /**
+     * For MaterialIcons, the glyphmap must have the codepoints for
+     * each style. This is because some icons may exist in one style
+     * and not exist in another. Another problem is that even if an
+     * icon is present in all styles, the icon's codepoint changes
+     * for each style.
+     */
+    for (let i = 0; i < codepoints.length; i += 1) {
+      const parts = codepoints[i].split(' ');
+      if (parts.length === 2) {
+        const glyphKey = parts[0].replace(/_/g, '-');
+        if (glyphMap[styleName] === undefined) {
+          glyphMap[styleName] = {};
+        }
+        if (glyphMap[styleName][glyphKey] === undefined) {
+          glyphMap[styleName][glyphKey] = parseInt(parts[1], 16);
+        }
+      }
     }
   });
 
   return glyphMap;
+}
+
+const addCodepoints = [argv._[0]];
+if (argv.addCodepoints) {
+  addCodepoints.push(...argv.addCodepoints);
 }
 
 let template;
@@ -39,8 +65,13 @@ if (argv.template) {
   template = fs.readFileSync(argv.template, { encoding: 'utf8' });
 }
 
-const data = omit(argv, '_ $0 o output t template g glyphmap'.split(' '));
-const glyphMap = extractGlyphMapFromCodepoints(argv._[0]);
+const data = omit(
+  argv,
+  '_ $0 a addCodepoints add-codepoints o output t template g glyphmap'.split(
+    ' '
+  )
+);
+const glyphMap = extractGlyphMapFromCodepoints(addCodepoints);
 
 let content = JSON.stringify(glyphMap, null, '  ');
 if (template) {
