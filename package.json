@@ -18,10 +18,13 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.0",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@evilmartians/lefthook": "^1.5.0",
     "@types/eslint": "^8.56.12",
     "@types/node": "^20.16.5",
     "@typescript-eslint/eslint-plugin": "^8.5.0",
     "@typescript-eslint/parser": "^8.5.0",
+    "commitlint": "^17.0.2",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
@@ -37,6 +40,11 @@
   },
   "engines": {
     "node": ">= 18.0.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "packageManager": "yarn@4.2.2",
   "repository": {

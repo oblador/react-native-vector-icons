@@ -24,7 +24,6 @@
     "windows": "react-native run-windows --sln windows/IconExplorer.sln"
   },
   "dependencies": {
-    "@callstack/react-native-visionos": "^0.75.0",
     "@react-native-vector-icons/ant-design": "workspace:^",
     "@react-native-vector-icons/common": "workspace:^",
     "@react-native-vector-icons/entypo": "workspace:^",
@@ -51,10 +50,8 @@
     "react-native": "^0.75.3",
     "react-native-animatable": "^1.4.0",
     "react-native-is-detox": "^1.2.3",
-    "react-native-macos": "^0.75.2",
     "react-native-safe-area-context": "^4.11.0",
-    "react-native-screens": "3.34.0",
-    "react-native-windows": "^0.75.2"
+    "react-native-screens": "3.34.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

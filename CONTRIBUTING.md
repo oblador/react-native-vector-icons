@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for taking the time to check out the repo and be willing to contribute!
+Contributions are always welcome, no matter how large or small!
 
 We want this community to be friendly and respectful to each other. Please follow it in all your interactions with the project. Before contributing, please read the [code of conduct](./CODE_OF_CONDUCT.md).
 
@@ -19,7 +19,7 @@ If you wish to submit a pull request for a new feature or issue, you should star
 This project is a monorepo managed using [Yarn workspaces](https://yarnpkg.com/features/workspaces). It contains the following packages:
 
 - The library package in `packages/common`
-- An example app in `packages/IconExplorer`
+- An example app in `packages/icon-explorer
 - Fonts in `packages/fontname` e.g. `packages/fontawesome6`
 
 To get started with the project, run `yarn` in the root directory to install the required dependencies for each package:
@@ -30,13 +30,13 @@ yarn
 
 > Since the project relies on Yarn workspaces, you cannot use [`npm`](https://github.com/npm/cli) for development.
 
-[IconExplorer](/packages/IconExplorer/) demonstrates usage of the library. You need to run it to test any changes you make.
+[IconExplorer](/packages/icon-explorer/) demonstrates usage of the library. You need to run it to test any changes you make.
 
 It is configured to use the local version of the library, so any changes you make to the library's source code will be reflected in the example app. Changes to the library's JavaScript code will be reflected in the example app without a rebuild, but native code changes will require a rebuild of the example app.
 
 If you want to use Android Studio or XCode to edit the native code, you can open the `packages/IconExplorer/android` or `packages/IconExplorer/ios` directories respectively in those editors. To edit the Objective-C or Swift files, open `packages/IconExplorer/ios/IconExplorer.xcworkspace` in XCode and find the source files at `Pods > Development Pods > @react-native-vector-icons/ant-design`.
 
-To edit the Java or Kotlin files, open `packages/IconExplorer/android` in Android studio and find the source files at `react-native-vector-icons-ant-design` under `Android`.
+To edit the Java or Kotlin files, open `packages/icon-explorer/android` in Android studio and find the source files at `react-native-vector-icons` under `Android`.
 
 You can use various commands from the root directory to work with the project.
 
@@ -69,7 +69,7 @@ By default, the example is configured to build with the old architecture. To run
 2. For iOS, run:
 
    ```sh
-   RCT_NEW_ARCH_ENABLED=1 yarn pod install example/ios
+   RCT_NEW_ARCH_ENABLED=1 pod install example/ios
    yarn example ios
    ```
 
@@ -125,6 +125,19 @@ yarn run test:ios:build
 yarn run test:ios:run
 ```
 
+### Commit message convention
+
+We follow the [conventional commits specification](https://www.conventionalcommits.org/en) for our commit messages:
+
+- `fix`: bug fixes, e.g. fix crash due to deprecated method.
+- `feat`: new features, e.g. add new method to the module.
+- `refactor`: code refactor, e.g. migrate from class components to hooks.
+- `docs`: changes into documentation, e.g. add usage example for the module..
+- `test`: adding or updating tests, e.g. add integration tests using detox.
+- `chore`: tooling changes, e.g. change CI config.
+
+Our pre-commit hooks verify that your commit message matches this format when committing.
+
 ### Linting and tests
 
 [ESLint](https://eslint.org/), [Prettier](https://prettier.io/), [TypeScript](https://www.typescriptlang.org/)
@@ -147,26 +160,13 @@ yarn release
 
 The `package.json` file contains various scripts for common tasks:
 
-- `yarn`: setup project by installing dependencies and pods - run with `POD_INSTALL=0` to skip installing pods.
+- `yarn`: setup project by installing dependencies.
 - `yarn typecheck`: type-check files with TypeScript.
 - `yarn lint`: lint files with ESLint.
 - `yarn test`: run unit tests with Jest.
 - `yarn example start`: start the Metro server for the example app.
 - `yarn example android`: run the example app on Android.
 - `yarn example ios`: run the example app on iOS.
-
-### Commit message convention
-
-We follow the [conventional commits specification](https://www.conventionalcommits.org/en) for our commit messages:
-
-- `fix`: bug fixes, e.g. fix crash due to deprecated method.
-- `feat`: new features, e.g. add new method to the module.
-- `refactor`: code refactor, e.g. migrate from class components to hooks.
-- `docs`: changes into documentation, e.g. add usage example for the module..
-- `test`: adding or updating tests, e.g. add integration tests using detox.
-- `chore`: tooling changes, e.g. change CI config.
-
-Our pre-commit hooks verify that your commit message matches this format when committing.
 
 ### Sending a pull request
 
