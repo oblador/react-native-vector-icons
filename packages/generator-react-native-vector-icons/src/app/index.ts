@@ -112,7 +112,7 @@ export default class extends Generator<Arguments> {
   _writeTemplates() {
     const { data } = this;
 
-    const files: Array<string | [string, string]> = ['package.json', 'tsconfig.json'];
+    const files: Array<string | [string, string]> = ['package.json', 'tsconfig.json', 'tsconfig.build.json', 'babel.config.js'];
 
     if (data.customSrc === true) {
       // Do nothing
@@ -409,9 +409,9 @@ export default class extends Generator<Arguments> {
     data.customReadme ||= false;
     data.customAssets ||= false;
     data.commonPackage ||= 'common';
-    data.source = 'src/index.ts';
+    data.source = './src/index.ts';
     if (typeof data.customSrc === 'string') {
-      data.source = data.customSrc.endsWith('.tsx') ? 'src/index.tsx' : 'src/index.ts';
+      data.source = data.customSrc.endsWith('.tsx') ? './src/index.tsx' : './src/index.ts';
     }
 
     return data;
