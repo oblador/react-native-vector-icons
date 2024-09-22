@@ -31,12 +31,16 @@ const VectorIcons = VectorIconsModule
         get() {
           throw new Error(LINKING_ERROR);
         },
-      }
+      },
     );
 
-
 // TODO: Do we want to expose this as a public API?
-export function getImageForFont(fontFamilyName: string, glyph: string, fontSize: number, color: number): Promise<string> {
+export function getImageForFont(
+  fontFamilyName: string,
+  glyph: string,
+  fontSize: number,
+  color: number,
+): Promise<string> {
   return VectorIcons.getImageForFont(fontFamilyName, glyph, fontSize, color);
 }
 

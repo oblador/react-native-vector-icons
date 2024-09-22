@@ -3,7 +3,12 @@
   "ignore": ["**/*.web.ts"],
   "workspaces": {
     ".": {
-      "ignoreDependencies": ["yo", "eslint-config-airbnb-typescript"],
+      "ignoreDependencies": [
+        "yo",
+        "eslint-config-airbnb-typescript",
+        "@commitlint/config-conventional",
+        "@evilmartians/lefthook"
+      ],
       "ignoreBinaries": ["scripts/generate-fonts.sh", "build", "test:ios"]
     },
     "packages/*": {
@@ -14,8 +19,8 @@
     },
     "packages/common": {
       "entry": ["src/index.ts", "src/scripts/{getFonts,updatePlist}.ts"],
-      "ignoreDependencies": ["@react-native/assets-registry"],
-      "ignore": ["src/NativeVectorIcons.ts"]
+      "ignoreDependencies": ["@react-native/assets-registry", "turbo"],
+      "ignore": ["src/NativeVectorIcons.ts", "babel.config.js", "react-native.config.js"]
     },
     "packages/fontawesome-common": {
       "entry": ["src/index.ts", "scripts/generate-fontawesome-metadata.js"],
