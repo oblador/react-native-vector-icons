@@ -112,7 +112,12 @@ export default class extends Generator<Arguments> {
   _writeTemplates() {
     const { data } = this;
 
-    const files: Array<string | [string, string]> = ['package.json', 'tsconfig.json', 'tsconfig.build.json', 'babel.config.js'];
+    const files: Array<string | [string, string]> = [
+      'package.json',
+      'tsconfig.json',
+      'tsconfig.build.json',
+      'babel.config.js',
+    ];
 
     if (data.customSrc === true) {
       // Do nothing
