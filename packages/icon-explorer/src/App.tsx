@@ -1,74 +1,77 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { StyleSheet } from 'react-native';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { type NativeStackScreenProps, createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StyleSheet, View, BackHandler } from 'react-native';
 
 import { IconList, MultiIconList } from './IconList';
-import { type IconName, IconSetList } from './IconSetList';
+import { IconSetList, type IconName } from './IconSetList';
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   header: {
     backgroundColor: 'white',
   },
 });
 
-type RootStackParamList = {
-  IconExplorer: undefined;
-  IconSet: { iconName: IconName; iconStyle?: string };
-  MultiIconSet: { iconName: IconName };
+const App = () => {
+  const [currentView, setCurrentView] = useState<'IconExplorer' | 'IconSet' | 'MultiIconSet'>('IconExplorer');
+  const [selectedIcon, setSelectedIcon] = useState<IconName | null>(null);
+  const [selectedIconStyle, setSelectedIconStyle] = useState<string | undefined>(undefined);
+
+  const navigateToIconSet = (iconName: IconName) => {
+    setSelectedIcon(iconName);
+    setCurrentView('IconSet');
+  };
+
+  const navigateToMultiIconSet = (iconName: IconName) => {
+    setSelectedIcon(iconName);
+    setCurrentView('MultiIconSet');
+  };
+
+  const navigateToIconSetWithStyle = (iconStyle: string, iconName: IconName) => {
+    setSelectedIcon(iconName);
+    setSelectedIconStyle(iconStyle);
+    setCurrentView('IconSet');
+  };
+
+  useEffect(() => {
+    const handleBackPress = () => {
+      if (currentView === 'IconSet' && selectedIconStyle) {
+        setCurrentView('MultiIconSet');
+
+        return true;
+      }
+
+
+      if (currentView === 'IconSet' || currentView === 'MultiIconSet') {
+        setCurrentView('IconExplorer');
+        setSelectedIcon(null);
+        setSelectedIconStyle(undefined);
+
+        return true;
+      }
+      return false;
+    };
+    const handler = BackHandler.addEventListener('hardwareBackPress', handleBackPress);
+
+    return handler.remove;
+  }, [currentView, selectedIconStyle]);
+
+  const renderContent = () => {
+    switch (currentView) {
+      case 'IconExplorer':
+        return <IconSetList navigator={navigateToIconSet} multiNavigator={navigateToMultiIconSet} />;
+      case 'IconSet':
+        return selectedIcon ? <IconList iconName={selectedIcon} iconStyle={selectedIconStyle} /> : null;
+      case 'MultiIconSet':
+        return selectedIcon ? <MultiIconList iconName={selectedIcon} navigator={navigateToIconSetWithStyle} /> : null;
+      default:
+        throw new Error('Invalid view');
+    }
+  };
+
+  return <View style={styles.container}>{renderContent()}</View>;
 };
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
-
-type IconExplorerProps = NativeStackScreenProps<RootStackParamList, 'IconExplorer', 'MyStack'>;
-const IconExplorer = ({ navigation: { navigate } }: IconExplorerProps) => (
-  <IconSetList
-    navigator={(iconName: IconName) => navigate('IconSet', { iconName })}
-    multiNavigator={(iconName: IconName) => navigate('MultiIconSet', { iconName })}
-  />
-);
-
-type IconSetScreenProps = NativeStackScreenProps<RootStackParamList, 'IconSet', 'MyStack'>;
-
-const IconSetScreen = ({ route }: IconSetScreenProps) => (
-  <IconList iconName={route.params.iconName} iconStyle={route.params.iconStyle} />
-);
-
-type MultiIconSetScreenProps = NativeStackScreenProps<RootStackParamList, 'MultiIconSet', 'MyStack'>;
-
-const MultiIconSetScreen = ({ route, navigation: { navigate } }: MultiIconSetScreenProps) => (
-  <MultiIconList
-    iconName={route.params.iconName}
-    navigator={(iconStyle: string, iconName: IconName) => navigate('IconSet', { iconStyle, iconName })}
-  />
-);
-
-const App = () => (
-  <NavigationContainer>
-    <Stack.Navigator initialRouteName="IconExplorer">
-      <Stack.Screen name="IconExplorer" component={IconExplorer} />
-      <Stack.Screen
-        name="IconSet"
-        component={IconSetScreen}
-        options={({ route }) => ({
-          title: route.params.iconStyle
-            ? `${route.params.iconName} - ${route.params.iconStyle}`
-            : route.params.iconName,
-          headerStyle: styles.header,
-        })}
-      />
-      <Stack.Screen
-        name="MultiIconSet"
-        component={MultiIconSetScreen}
-        options={({ route }) => ({
-          title: route.params.iconName,
-          headerStyle: styles.header,
-        })}
-      />
-    </Stack.Navigator>
-  </NavigationContainer>
-);
 
 export default App;
