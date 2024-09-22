@@ -7,7 +7,7 @@
  * FontAwesome6Pro icon set component.
  * Usage: <FontAwesome6Pro name="icon-name" size={20} color="#4F8EF7" />
  */
-import React, { type FC } from 'react';
+import type { FC } from 'react';
 
 import { Platform, type TextStyle } from 'react-native';
 

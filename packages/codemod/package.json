@@ -67,7 +67,7 @@
     "@types/plist": "^3.0.5",
     "del-cli": "^5.1.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.23.2",
+    "react-native-builder-bob": "^0.30.2",
     "typescript": "^5.6.2"
   },
   "engines": {
