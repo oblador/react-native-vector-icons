@@ -8,7 +8,6 @@
  * Usage: <<%= className %> name="icon-name" size={20} color="#4F8EF7" />
  */
 import type { FC } from 'react';
-
 import { Platform, type TextStyle } from 'react-native';
 
 import {

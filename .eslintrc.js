@@ -60,5 +60,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error'],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
+    'react/react-in-jsx-scope': 'off',
   },
 };
