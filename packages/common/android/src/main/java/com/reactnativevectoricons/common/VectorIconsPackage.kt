@@ -25,6 +25,7 @@ class VectorIconsPackage : TurboReactPackage() {
         VectorIconsModule.NAME, // className
         false,  // canOverrideExistingModule
         false,  // needsEagerInit
+        false, // hasConstants NOTE: This is deprecated but we need it to keep compatability with RN <= 0.72
         false,  // isCxxModule
         isTurboModule // isTurboModule
       )
