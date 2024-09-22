@@ -44,14 +44,10 @@
     "@react-native-vector-icons/octicons": "workspace:^",
     "@react-native-vector-icons/simple-line-icons": "workspace:^",
     "@react-native-vector-icons/zocial": "workspace:^",
-    "@react-navigation/native": "^6.1.18",
-    "@react-navigation/native-stack": "^6.11.0",
     "react": "18.3.1",
     "react-native": "^0.75.3",
     "react-native-animatable": "^1.4.0",
-    "react-native-is-detox": "^1.2.3",
-    "react-native-safe-area-context": "^4.11.0",
-    "react-native-screens": "3.34.0"
+    "react-native-is-detox": "^1.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
