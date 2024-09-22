@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import { StyleSheet, View, BackHandler } from 'react-native';
+import { BackHandler, StyleSheet, View } from 'react-native';
 
 import { IconList, MultiIconList } from './IconList';
-import { IconSetList, type IconName } from './IconSetList';
+import { type IconName, IconSetList } from './IconSetList';
 
 const styles = StyleSheet.create({
   container: {
@@ -42,7 +42,6 @@ const App = () => {
 
         return true;
       }
-
 
       if (currentView === 'IconSet' || currentView === 'MultiIconSet') {
         setCurrentView('IconExplorer');
