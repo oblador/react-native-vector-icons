@@ -2967,6 +2967,11 @@ min-document@^2.19.0:
   dependencies:
     dom-walk "^0.1.0"
 
+mingcute_icon@2.9.5:
+  version "2.9.5"
+  resolved "https://registry.npmjs.org/mingcute_icon/-/mingcute_icon-2.9.5.tgz#aaae3c1fcc260bd37202e46f4833b619a561800e"
+  integrity sha512-8tJ/XVRNrKDeQd2nY9MM+9MckgiVgGC3AEl2769Fs96HFiPOjkqjkwoj5clIrhEgNtyb8uJDNNbEqKbyhXue2w==
+
 minimatch@^3.0.4, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"

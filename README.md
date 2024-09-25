@@ -58,6 +58,7 @@ Should you find this library beneficial, kindly contemplate the option of [spons
 - [`Octicons`](http://octicons.github.com) designed by Github, Inc. (v16.3.1 with *250* icons)
 - [`Zocial`](http://zocial.smcllns.com/) by Sam Collins (v1.4.0 with *100* icons)
 - [`SimpleLineIcons`](https://simplelineicons.github.io/) crafted by Sabbir & Contributors (v2.5.5 with *189* icons)
+- [`MingCute`](https://github.com/Richard9394/MingCute/) crafted by Richard9394 & Contributors (v2.9.5 with *~3000* icons)
 
 ## Installation
 
@@ -98,6 +99,7 @@ To use the bundled icons on iOS, perform the following step:
       <string>Octicons.ttf</string>
       <string>Zocial.ttf</string>
       <string>Fontisto.ttf</string>
+      <string>MingCute.ttf</string>
     </array>
     ```
     
