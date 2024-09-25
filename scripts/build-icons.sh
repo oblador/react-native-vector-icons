@@ -15,3 +15,4 @@ mkdir Fonts glyphmaps
 ./scripts/octicons.sh
 ./scripts/zocial.sh
 ./scripts/simplelineicons.sh
+./scripts/mingcute.sh

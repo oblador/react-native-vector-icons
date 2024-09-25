@@ -13,6 +13,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Octicons from 'react-native-vector-icons/Octicons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Zocial from 'react-native-vector-icons/Zocial';
+import MingCute from 'react-native-vector-icons/MingCute';
 import AntDGlyphs from 'react-native-vector-icons/glyphmaps/AntDesign.json';
 import EntypoGlyphs from 'react-native-vector-icons/glyphmaps/Entypo.json';
 import EvilIconsGlyphs from 'react-native-vector-icons/glyphmaps/EvilIcons.json';
@@ -27,6 +28,7 @@ import MaterialCommunityIconsGlyphs from 'react-native-vector-icons/glyphmaps/Ma
 import OcticonsGlyphs from 'react-native-vector-icons/glyphmaps/Octicons.json';
 import SimpleLineIconsGlyphs from 'react-native-vector-icons/glyphmaps/SimpleLineIcons.json';
 import ZocialGlyphs from 'react-native-vector-icons/glyphmaps/Zocial.json';
+import MingCuteGlyphs from 'react-native-vector-icons/glyphmaps/MingCute.json';
 
 const GLYPH_MAPS = {
   AntD: AntDGlyphs,
@@ -43,6 +45,7 @@ const GLYPH_MAPS = {
   Octicons: OcticonsGlyphs,
   SimpleLineIcons: SimpleLineIconsGlyphs,
   Zocial: ZocialGlyphs,
+  MingCute: MingCuteGlyphs,
 };
 
 const ICON_SETS = {
@@ -60,6 +63,7 @@ const ICON_SETS = {
   Octicons,
   SimpleLineIcons,
   Zocial,
+  MingCute,
 };
 
 const groupGlyphNames = glyphMap =>
