@@ -10,8 +10,8 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Octicons.json';
 
 const Icon = createIconSet(glyphMap, {
-  postscriptName: 'Octicons',
-  fontFilename: 'Octicons.ttf',
+  postScriptName: 'Octicons',
+  fontFileName: 'Octicons.ttf',
   fontSource: require('../fonts/Octicons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 

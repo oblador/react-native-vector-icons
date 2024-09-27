@@ -176,7 +176,7 @@ You can also use `createIconSet()` directly in your project. This
 returns your own custom font based on the `glyphMap` where the key is the icon
 name and the value is either a UTF-8 character or it's character code.
 `postScriptName` is the name of the postscript font. Open the font in https://fontdrop.info/, 
-Font Book.app or similar to learn the name. Also pass the `fontFilename` argument for Android support.
+Font Book.app or similar to learn the name. Also pass the `fontFileName` argument for Android support.
 
 ```js
 import { createIconSet } from '@react-native-vector-icons/common';

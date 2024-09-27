@@ -16,8 +16,8 @@ interface Data {
   name: string;
   packageName: string;
   className: string;
-  postscriptName: string;
-  fontFilename: string;
+  postScriptName: string;
+  fontFileName: string;
   dependencies: Record<string, string>;
   upstreamFont?: string | { registry?: string; packageName: string; versionRange: string; versionOnly?: boolean };
   packageJSON?: Record<string, Record<string, string>>;
@@ -334,7 +334,7 @@ export default class extends Generator<Arguments> {
 
     let locations: [string, string][] = [];
     if (!glyphmap.location) {
-      locations.push([`${data.className}.css`, data.fontFilename]);
+      locations.push([`${data.className}.css`, data.fontFileName]);
     } else if (typeof glyphmap.location === 'string') {
       locations.push([glyphmap.location, data.className]);
     } else {
@@ -366,7 +366,7 @@ export default class extends Generator<Arguments> {
 
     let locations: [string, string][] = [];
     if (typeof copyFont.location === 'string') {
-      locations.push([copyFont.location, data.fontFilename]);
+      locations.push([copyFont.location, data.fontFileName]);
     } else {
       locations = copyFont.location;
     }
@@ -403,11 +403,11 @@ export default class extends Generator<Arguments> {
       .split('-')
       .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
       .join('');
-    data.postscriptName ||= data.packageName
+    data.postScriptName ||= data.packageName
       .split('-')
       .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
       .join('');
-    data.fontFilename ||= data.packageName
+    data.fontFileName ||= data.packageName
       .split('-')
       .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
       .join('');

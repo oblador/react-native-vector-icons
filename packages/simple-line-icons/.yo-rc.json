@@ -1,7 +1,7 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "simple-line-icons",
-    "postscriptName": "simple-line-icons",
+    "postScriptName": "simple-line-icons",
     "upstreamFont": "simple-line-icons",
     "versionSuffix": "-alpha",
     "buildSteps": {

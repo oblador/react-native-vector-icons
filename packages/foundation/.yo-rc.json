@@ -1,7 +1,7 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "foundation",
-    "postscriptName": "fontcustom",
+    "postScriptName": "fontcustom",
     "upstreamFont": "foundation-icons",
     "versionSuffix": "-alpha",
     "buildSteps": {

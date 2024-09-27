@@ -1,7 +1,7 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "fontisto",
-    "postscriptName": "fontisto",
+    "postScriptName": "fontisto",
     "upstreamFont": "fontisto",
     "versionSuffix": "-alpha",
     "buildSteps": {

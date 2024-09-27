@@ -1,8 +1,8 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "fontawesome",
-    "postscriptName": "FontAwesome",
-    "fontFilename": "FontAwesome",
+    "postScriptName": "FontAwesome",
+    "fontFileName": "FontAwesome",
     "className": "FontAwesome",
     "upstreamFont": "font-awesome",
     "versionSuffix": "-alpha",
