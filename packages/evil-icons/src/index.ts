@@ -10,8 +10,8 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/EvilIcons.json';
 
 const Icon = createIconSet(glyphMap, {
-  postscriptName: 'EvilIcons',
-  fontFilename: 'EvilIcons.ttf',
+  postScriptName: 'EvilIcons',
+  fontFileName: 'EvilIcons.ttf',
   fontSource: require('../fonts/EvilIcons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 

@@ -10,8 +10,8 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Fontisto.json';
 
 const Icon = createIconSet(glyphMap, {
-  postscriptName: 'fontisto',
-  fontFilename: 'Fontisto.ttf',
+  postScriptName: 'fontisto',
+  fontFileName: 'Fontisto.ttf',
   fontSource: require('../fonts/Fontisto.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 

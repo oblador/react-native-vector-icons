@@ -10,8 +10,8 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/MaterialIcons.json';
 
 const Icon = createIconSet(glyphMap, {
-  postscriptName: 'MaterialIcons-Regular',
-  fontFilename: 'MaterialIcons.ttf',
+  postScriptName: 'MaterialIcons-Regular',
+  fontFileName: 'MaterialIcons.ttf',
   fontSource: require('../fonts/MaterialIcons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 

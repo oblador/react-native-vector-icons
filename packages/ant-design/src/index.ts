@@ -10,8 +10,8 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/AntDesign.json';
 
 const Icon = createIconSet(glyphMap, {
-  postscriptName: 'AntDesign',
-  fontFilename: 'AntDesign.ttf',
+  postScriptName: 'AntDesign',
+  fontFileName: 'AntDesign.ttf',
   fontSource: require('../fonts/AntDesign.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
