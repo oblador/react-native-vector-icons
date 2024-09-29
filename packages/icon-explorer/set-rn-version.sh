@@ -77,8 +77,8 @@ fi
 
 if command -v pod &>/dev/null; then
   if [ "$ARCH" = "new" ]; then
-    NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=1 pod install --project-directory=ios
+    NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=1 pod update --project-directory=ios
   else
-    NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=0 pod install --project-directory=ios
+    NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=0 pod update --project-directory=ios
   fi
 fi
