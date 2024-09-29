@@ -118,6 +118,7 @@ jobs:
         with:
           name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-android
           path: packages/icon-explorer/.owl
+          include-hidden-files: true
 
       # - uses: dorny/test-reporter@v1
       #   if: always()
@@ -192,6 +193,7 @@ jobs:
         with:
           name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-ios
           path: packages/icon-explorer/.owl
+          include-hidden-files: true
 
       - uses: dorny/test-reporter@v1
         if: always()
