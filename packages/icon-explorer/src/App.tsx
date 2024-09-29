@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import { BackHandler, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
+import { Home, type IconName } from './Home';
 import { IconList, MultiIconList } from './IconList';
-import { type IconName, Home } from './Home';
 
 const styles = StyleSheet.create({
   container: {
@@ -15,9 +15,9 @@ const styles = StyleSheet.create({
 });
 
 type NavType = {
-  view: 'Home' | 'IconSet' | 'MultiIconSet',
-  iconName?: IconName,
-  iconStyle?: string,
+  view: 'Home' | 'IconSet' | 'MultiIconSet';
+  iconName?: IconName;
+  iconStyle?: string;
 };
 
 const App = () => {
@@ -36,7 +36,6 @@ const App = () => {
   };
 
   const handleBackPress = useCallback(() => {
-    console.log('RNVI: handleBackPress', state);
     if (state.view === 'IconSet' && state.iconStyle) {
       setState({ view: 'MultiIconSet', iconName: state.iconName, iconStyle: undefined });
 

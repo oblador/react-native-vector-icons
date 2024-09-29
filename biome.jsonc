@@ -12,6 +12,7 @@
       "packages/generator-react-native-vector-icons/generators",
       "packages/*/.fontcustom-manifest.json",
       "packages/directory/src/generated",
+      "packages/icon-explorer/.owl",
 
       // Templates that have ejs
       "packages/fontawesome-common/generators/app/templates/src/index.tsx",
