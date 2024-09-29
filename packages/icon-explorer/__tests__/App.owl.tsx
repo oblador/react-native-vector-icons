@@ -14,6 +14,7 @@ describe('App.tsx', () => {
     await scrollToEnd('scrollview');
 
     const screen = await takeScreenshot('home-bottom');
+
     expect(screen).toMatchBaseline();
   });
 
@@ -24,9 +25,10 @@ describe('App.tsx', () => {
     await toExist('search');
 
     const screen = await takeScreenshot('antd');
-    expect(screen).toMatchBaseline();
 
     await press('back');
+
+    expect(screen).toMatchBaseline();
   });
 
   it('should load FontAwesome6 font', async () => {
@@ -40,10 +42,11 @@ describe('App.tsx', () => {
     await toExist('search');
 
     const screen = await takeScreenshot('fontawesome6');
-    expect(screen).toMatchBaseline();
 
     await press('back');
     await press('back');
+
+    expect(screen).toMatchBaseline();
   });
 
   it('should load Fontello font', async () => {
@@ -53,8 +56,9 @@ describe('App.tsx', () => {
     await toExist('search');
 
     const screen = await takeScreenshot('fontello');
-    expect(screen).toMatchBaseline();
 
     await press('back');
+
+    expect(screen).toMatchBaseline();
   });
 });

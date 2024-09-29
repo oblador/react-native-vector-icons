@@ -36,6 +36,7 @@ const App = () => {
   };
 
   const handleBackPress = useCallback(() => {
+    console.log('RNVI: handleBackPress', state);
     if (state.view === 'IconSet' && state.iconStyle) {
       setState({ view: 'MultiIconSet', iconName: state.iconName, iconStyle: undefined });
 
