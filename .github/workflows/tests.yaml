@@ -175,7 +175,11 @@ jobs:
           cd packages/icon-explorer
           # Due to react-native-test-app not bundling
           yarn build:ios:owl
-          pod install --project-directory=ios
+          if [ "${{ matrix.arch }}" = "new" ]; then
+            NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=1 pod update --project-directory=ios
+          else
+            NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=0 pod update --project-directory=ios
+          fi
           yarn test:ios:build
 
       - name: Run tests
