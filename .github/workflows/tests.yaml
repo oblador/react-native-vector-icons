@@ -112,7 +112,7 @@ jobs:
         if: always()
         with:
           name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
-          path: packages/icon-explorer/.owl/*.json
+          path: packages/icon-explorer/.owl/report/*.json
           reporter: jest-junit
 
   ios:
@@ -182,5 +182,5 @@ jobs:
         if: always()
         with:
           name: JEST Tests ios - ${{ matrix.arch }} ${{ matrix.rn-version }}
-          path: packages/icon-explorer/.owl/*.json
+          path: packages/icon-explorer/.owl/report/*.json
           reporter: jest-junit
