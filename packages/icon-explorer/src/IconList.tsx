@@ -13,7 +13,7 @@ import {
   View,
 } from 'react-native';
 
-import type { IconName, IconSet } from './IconSetList';
+import type { IconName, IconSet } from './Home';
 import ICON_SETS from './icon-sets';
 
 const styles = StyleSheet.create({

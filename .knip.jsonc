@@ -9,7 +9,14 @@
         "@commitlint/config-conventional",
         "@evilmartians/lefthook"
       ],
-      "ignoreBinaries": ["scripts/generate-fonts.sh", "build", "test:ios"]
+      "ignoreBinaries": [
+        "scripts/generate-fonts.sh",
+        "test:ios:build",
+        "test:android:build",
+        "test:ios:run",
+        "build:ios:owl",
+        "build"
+      ]
     },
     "packages/*": {
       "entry": [
@@ -35,7 +42,7 @@
       "ignoreDependencies": ["@testing-library/user-event"]
     },
     "packages/icon-explorer": {
-      "entry": ["index.js", "metro.config.js", "react-native.config.js", "e2e/jest.config.js"],
+      "entry": ["index.js", "metro.config.js", "react-native.config.js", "configPlugin.js"],
       "ignoreDependencies": [
         "@react-native-vector-icons/common",
         "@babel/preset-env",
@@ -43,9 +50,7 @@
         "@rnx-kit/align-deps",
         "react-test-renderer",
         "@types/react-test-renderer",
-        "babel-jest",
-        "jest-junit",
-        "ts-jest"
+        "jest-junit"
       ]
     },
     "packages/generator-react-native-vector-icons": {
