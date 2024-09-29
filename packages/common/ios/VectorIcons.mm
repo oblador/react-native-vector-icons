@@ -7,6 +7,9 @@
 #import <React/RCTUtils.h>
 
 NSString *const RNVIErrorDomain = @"com.reactnativevectoricons.common";
+enum {
+  RNVIGenericError = 1000,
+};
 
 @implementation VectorIcons
 RCT_EXPORT_MODULE()

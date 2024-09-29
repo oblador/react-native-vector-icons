@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import { beforeAll, beforeEach, describe, it } from '@jest/globals';
-import { by, device, element, expect, waitFor } from 'detox';
 
 import { execSync } from 'node:child_process';
 import { cpSync, mkdirSync } from 'node:fs';

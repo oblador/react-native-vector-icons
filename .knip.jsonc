@@ -35,7 +35,7 @@
       "ignoreDependencies": ["@testing-library/user-event"]
     },
     "packages/icon-explorer": {
-      "entry": ["index.js", ".detoxrc.js", "metro.config.js", "react-native.config.js", "e2e/jest.config.js"],
+      "entry": ["index.js", "metro.config.js", "react-native.config.js", "e2e/jest.config.js"],
       "ignoreDependencies": [
         "@react-native-vector-icons/common",
         "@babel/preset-env",

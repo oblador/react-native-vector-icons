@@ -25,7 +25,6 @@ module.exports = {
         jest: true,
       },
       globals: {
-        detox: false,
         device: false,
         expect: false,
         waitFor: false,
