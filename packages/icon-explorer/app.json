@@ -9,7 +9,7 @@
       "slug": "IconExplorer"
     }
   ],
-  "plugins": ["configPlugin.js"],
+  "plugins": ["./configPlugin.js"],
   "resources": {
     "android": ["dist/res", "dist/main.android.jsbundle"],
     "ios": ["dist/assets", "dist/main.ios.jsbundle"],

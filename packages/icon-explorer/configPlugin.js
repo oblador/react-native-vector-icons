@@ -1,7 +1,7 @@
 const { withInfoPlist } = require('@expo/config-plugins'); // eslint-disable-line import/no-extraneous-dependencies, @typescript-eslint/no-require-imports
 
+// Add all our fonts to the plist
 module.exports = (config) =>
-  // Add all our fonts to the plist
   withInfoPlist(config, (c) => {
     c.ios ||= {};
     c.ios.infoPlist ||= {};
@@ -35,5 +35,5 @@ module.exports = (config) =>
 
     fonts.forEach((font) => c.ios.infoPlist.UIAppFonts.push(font));
 
-    return config;
+    return c;
   });
