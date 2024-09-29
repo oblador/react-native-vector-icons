@@ -54,6 +54,14 @@ jobs:
         run: |
           yarn prepare
 
+      - name: SDK cache
+        uses: actions/cache@v4
+        id: sdk-cache
+        with:
+          path: |
+            $ANDROID_HOME/system-images
+          key: sdk-${{ matrix.api-level }}
+
       - name: AVD cache
         uses: actions/cache@v4
         id: avd-cache
@@ -63,22 +71,19 @@ jobs:
             ~/.android/adb*
           key: avd-${{ matrix.api-level }}
 
-      - name: create AVD and generate snapshot for caching
-        if: steps.avd-cache.outputs.cache-hit != 'true'
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          profile: pixel_6_pro
-          api-level: ${{ matrix.api-level }}
-          arch: x86_64
-          force-avd-creation: false
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          script: echo "Generated AVD snapshot for caching."
-
-      - name: Enable KVM group perms
+      - name: SKDs
         run: |
-          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
-          sudo udevadm control --reload-rules
-          sudo udevadm trigger --name-match=kvm
+          $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-${{ matrix.api-level }};default;x86_64"
+          y | $ANDROID_HOME/tools/bin/sdkmanager --licenses
+
+      - name: Emulator
+        run: |
+          $ANDROID_HOME/tools/bin/avdmanager create avd -n Pixel_API_${{ matrix.api-level }} --device 'Pixel 7 Pro' --package "system-images;android-${{ matrix.api-level }};default;x86_64" --sdcard 512M
+          $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none &
+
+      - name: ADB Wait For Device
+        run: adb wait-for-any-device
+        timeout-minutes: 3
 
       - name: Set up RN version
         run: |
@@ -92,26 +97,9 @@ jobs:
           yarn test:android:build
 
       - name: Run tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          profile: pixel_6_pro
-          api-level: ${{ matrix.api-level }}
-          arch: x86_64
-          force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: true
-          script: cd packages/icon-explorer && yarn test:android:run
-
-      - name: Build App
         run: |
-          echo MOO
-          ls -al || true
-          echo MOO
-          ls -al packages || true
-          echo MOO
-          ls -al packages/icon-explorer || true
-          echo MOO
-          ls -al packages/icon-explorer/.owl || true
+          cd packages/icon-explorer
+          yarn test:android:run
 
       - uses: actions/upload-artifact@v4
         if: always()
