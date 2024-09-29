@@ -17,7 +17,7 @@ fi
 rm -rf android/app/build/ android/.gradle/
 killall java 2>/dev/null || true
 
-echo "Switching to $VERSION"
+echo "Switching to $VERSION (arch: $ARCH)"
 
 case $VERSION in
 0.71)
@@ -51,7 +51,7 @@ sed -i.bak "s/gradle-[0-9.]*-bin.zip/gradle-$GRADLE_VERSION-bin.zip/" android/gr
 rm android/gradle/wrapper/gradle-wrapper.properties.bak
 
 yarn rnx-align-deps --requirements react-native@"$VERSION" --write
-LATEST_VERSION="^$(npm info react-native@^0.75 version --json 2>/dev/null | jq -r '.[-1]')"
+LATEST_VERSION="^$(npm info react-native@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
 yarn add react-native@"$LATEST_VERSION" @react-native/babel-preset@"$LATEST_VERSION" @react-native/metro-config@"$LATEST_VERSION"
 
 ## align-deps rolls this back, so force the latest
