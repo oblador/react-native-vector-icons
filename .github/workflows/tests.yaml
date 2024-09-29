@@ -108,12 +108,12 @@ jobs:
           name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-android
           path: packages/icon-explorer/.owl
 
-      - uses: dorny/test-reporter@v1
-        if: always()
-        with:
-          name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
-          path: packages/icon-explorer/.owl/report/*.json
-          reporter: jest-junit
+      # - uses: dorny/test-reporter@v1
+      #   if: always()
+      #   with:
+      #     name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
+      #     path: packages/icon-explorer/.owl/report/*.json
+      #     reporter: jest-junit
 
   ios:
     name: iOS
