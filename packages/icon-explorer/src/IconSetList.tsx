@@ -2,7 +2,7 @@ import React, { type ReactNode } from 'react';
 
 import {
   Image,
-  Pressable,
+  ScrollView,
   SectionList,
   StyleSheet,
   Text,
@@ -14,11 +14,9 @@ import {
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 
-import { isDetoxSync } from 'react-native-is-detox';
-
 // Import locally so we can mov it out
 // Detox doesn't work when things are animating
-import { createAnimatableComponent } from './animaitable';
+import { createAnimatableComponent } from './animatable';
 
 import ICON_SETS from './icon-sets';
 
@@ -185,9 +183,6 @@ export const IconSetList = ({
   };
 
   const iconNames = Object.keys(ICON_SETS) as IconName[];
-  const scrollToEnd = () => {
-    ref.current?.scrollToLocation({ animated: true, itemIndex: 0, sectionIndex: 6 });
-  };
 
   const sections = [
     {
@@ -203,34 +198,15 @@ export const IconSetList = ({
     { title: 'STYLING', data: STYLING.map((item) => renderStyling(item)) },
   ];
 
-  if (isDetoxSync()) {
-    sections.unshift({
-      title: 'SCROLL',
-      data: [
-        <Pressable key="scroll" testID="scroll" onPress={scrollToEnd} style={styles.button}>
-          <Text style={styles.buttonText}>Scroll to End</Text>
-        </Pressable>,
-      ],
-    });
-
-    sections.push({
-      title: 'FOOTER',
-      data: [
-        <Text key="footer2" testID="footer">
-          Footer
-        </Text>,
-      ],
-    });
-  }
-
   return (
     <SectionList
+      renderScrollComponent={(props) => <ScrollView {...props} testID="scrollview" />}
       ref={ref}
       sections={sections}
       renderItem={({ item }) => item}
       renderSectionHeader={({ section }) => (
         <View style={styles.sectionHeader}>
-          <Text style={styles.sectionHeaderTitle}>{section.title}</Text>
+          <Text testID="title" style={styles.sectionHeaderTitle}>{section.title}</Text>
         </View>
       )}
       ItemSeparatorComponent={ItemSeparator}

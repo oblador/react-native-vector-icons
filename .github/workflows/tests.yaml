@@ -88,11 +88,10 @@ jobs:
 
           ./set-rn-version.sh ${{ matrix.arch }} ${{ matrix.rn-version }}
 
-      # TODO Not sure if this should re really needed but seems to fix things
-      - name: Start Metro
+      - name: Build App
         run: |
           cd packages/icon-explorer
-          nohup yarn start &
+          yarn test:android:build
 
       - name: Run tests
         uses: reactivecircus/android-emulator-runner@v2
@@ -103,19 +102,19 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: cd packages/icon-explorer && yarn test:android
+          script: cd packages/icon-explorer && yarn test:android:run
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-android
-          path: packages/icon-explorer/e2e/output
+          path: packages/icon-explorer/.owl
 
       - uses: dorny/test-reporter@v1
         if: always()
         with:
           name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
-          path: packages/icon-explorer/e2e/output/*.xml
+          path: packages/icon-explorer/.owl/*.xml
           reporter: jest-junit
 
   ios:
@@ -156,31 +155,32 @@ jobs:
 
           ./set-rn-version.sh ${{ matrix.arch }} ${{ matrix.rn-version }}
 
-      - name: Set up build tools
-        run: |
-          brew tap wix/brew
-          brew install applesimutils
+      - name: Run simulatpr
+        uses: futureware-tech/simulator-action@v1
+        with:
+          model: 'iPhone 15'
+          os_version: '>=15.0'
 
-      # TODO Not sure if this should re really needed but seems to fix things
-      - name: Start Metro
+      - name: Build App
         run: |
           cd packages/icon-explorer
-          nohup yarn start &
+          pod install --project-directory=ios
+          yarn test:ios:build
 
       - name: Run tests
         run: |
           cd packages/icon-explorer
-          yarn test:ios
+          yarn test:ios:run
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-ios
-          path: packages/icon-explorer/e2e/output
+          path: packages/icon-explorer/.owl
 
       - uses: dorny/test-reporter@v1
         if: always()
         with:
           name: JEST Tests ios - ${{ matrix.arch }} ${{ matrix.rn-version }}
-          path: packages/icon-explorer/e2e/output/*.xml
+          path: packages/icon-explorer/.owl/*.json
           reporter: jest-junit

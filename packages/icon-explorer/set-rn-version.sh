@@ -50,8 +50,16 @@ echo "Setting gradle version to $GRADLE_VERSION"
 sed -i'' -e "s/gradle-[0-9.]*-bin.zip/gradle-$GRADLE_VERSION-bin.zip/" android/gradle/wrapper/gradle-wrapper.properties
 
 yarn rnx-align-deps --requirements react-native@"$VERSION" --write
+LATEST_VERSION="^$(npm info react-native@^0.75 version --json 2>/dev/null | jq -r '.[-1]')"
+yarn add react-native@"$LATEST_VERSION" @react-native/babel-preset@"$LATEST_VERSION" @react-native/metro-config@"$LATEST_VERSION"
 
+## align-deps rolls this back, so force the latest
 yarn add react-native-test-app@latest
+
+## test-app doesn't bundle but we need it for react-native-owl
+sed -i'' \
+  -e 's/task.enabled = false/task.enabled = true/;s/bundleInRelease      : false/bundleInRelease      : true/' \
+  ../../node_modules/react-native-test-app/android/app/build.gradle
 
 yarn --no-immutable
 
