@@ -7106,7 +7106,6 @@ __metadata:
     "@babel/preset-env": "npm:^7.25.4"
     "@babel/runtime": "npm:^7.25.6"
     "@expo/config-plugins": "npm:^8.0.9"
-    "@jest/globals": "npm:^29.7.0"
     "@jest/types": "npm:^29.6.3"
     "@react-native-vector-icons/ant-design": "workspace:^"
     "@react-native-vector-icons/common": "workspace:^"
@@ -22459,7 +22458,6 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^4.6.2"
     knip: "npm:^5.30.2"
     lerna: "npm:^8.1.8"
-    ts-jest: "npm:^29.2.5"
     typescript: "npm:^5.6.2"
     yo: "npm:^5.0.0"
   languageName: unknown
