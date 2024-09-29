@@ -206,7 +206,9 @@ export const Home = ({
       renderItem={({ item }) => item}
       renderSectionHeader={({ section }) => (
         <View style={styles.sectionHeader}>
-          <Text testID="title" style={styles.sectionHeaderTitle}>{section.title}</Text>
+          <Text testID="title" style={styles.sectionHeaderTitle}>
+            {section.title}
+          </Text>
         </View>
       )}
       ItemSeparatorComponent={ItemSeparator}
