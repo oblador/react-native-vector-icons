@@ -51,8 +51,10 @@ sed -i.bak "s/gradle-[0-9.]*-bin.zip/gradle-$GRADLE_VERSION-bin.zip/" android/gr
 rm android/gradle/wrapper/gradle-wrapper.properties.bak
 
 yarn rnx-align-deps --requirements react-native@"$VERSION" --write
-LATEST_VERSION="^$(npm info react-native@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
-yarn add react-native@"$LATEST_VERSION" @react-native/babel-preset@"$LATEST_VERSION" @react-native/metro-config@"$LATEST_VERSION"
+RN_VERSION="^$(npm info react-native@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
+BABEL_VERSION="^$(npm info @react-native/babel-preset@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
+METRO_VERSION="^$(npm info @react-native/metro-config@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
+yarn add react-native@"$RN_VERSION" @react-native/babel-preset@"$BABEL_VERSION" @react-native/metro-config@"$METRO_VERSION"
 
 ## align-deps rolls this back, so force the latest
 yarn add react-native-test-app@latest
@@ -67,8 +69,8 @@ yarn --no-immutable
 
 mkdir -p node_modules
 cd node_modules
-ln -s ../../../node_modules/react-native-owl react-native-owl
-ln -s ../../../node_modules/react-native react-native
+ln -nfs ../../../node_modules/react-native-owl react-native-owl
+ln -nfs ../../../node_modules/react-native react-native
 cd -
 
 if [ "$ARCH" = "new" ]; then
