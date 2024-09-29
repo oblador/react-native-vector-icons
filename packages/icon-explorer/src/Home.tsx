@@ -156,7 +156,7 @@ const renderStyling = (item: (typeof STYLING)[number]) => (
   </View>
 );
 
-export const IconSetList = ({
+export const Home = ({
   navigator,
   multiNavigator,
 }: {

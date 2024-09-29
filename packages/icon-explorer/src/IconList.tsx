@@ -98,8 +98,10 @@ export const IconList = ({
 
   return (
     <View style={styles.container}>
+      <Text>{iconName}{iconStyle ? ` - ${iconStyle}` : ''}</Text>
       <View style={styles.searchBar}>
         <TextInput
+          testID="search"
           autoCapitalize="none"
           autoCorrect={false}
           onChange={handleSearchChange}
@@ -139,11 +141,12 @@ export const MultiIconList = ({
 }) => {
   const iconSet = ICON_SETS[iconName];
   if (!iconSet.meta) {
-    throw new Error('Icon has no Meta how did we get here?');
+    throw new Error(`Icon ${iconName} has no Meta how did we get here?`);
   }
 
   return (
     <View style={styles.container}>
+      <Text>{iconName}</Text>
       <FlatList
         data={Object.keys(iconSet.meta)}
         style={styles.list}

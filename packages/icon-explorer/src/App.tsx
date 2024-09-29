@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
-import { BackHandler, StyleSheet, View } from 'react-native';
+import { BackHandler, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
 import { IconList, MultiIconList } from './IconList';
-import { type IconName, IconSetList } from './IconSetList';
+import { type IconName, Home } from './Home';
 
 const styles = StyleSheet.create({
   container: {
@@ -14,63 +14,69 @@ const styles = StyleSheet.create({
   },
 });
 
+type NavType = {
+  view: 'Home' | 'IconSet' | 'MultiIconSet',
+  iconName?: IconName,
+  iconStyle?: string,
+};
+
 const App = () => {
-  const [currentView, setCurrentView] = useState<'IconExplorer' | 'IconSet' | 'MultiIconSet'>('IconExplorer');
-  const [selectedIcon, setSelectedIcon] = useState<IconName | null>(null);
-  const [selectedIconStyle, setSelectedIconStyle] = useState<string | undefined>(undefined);
+  const [state, setState] = useState<NavType>({ view: 'Home' });
 
   const navigateToIconSet = (iconName: IconName) => {
-    setSelectedIcon(iconName);
-    setCurrentView('IconSet');
+    setState({ view: 'IconSet', iconName, iconStyle: undefined });
   };
 
   const navigateToMultiIconSet = (iconName: IconName) => {
-    setSelectedIcon(iconName);
-    setCurrentView('MultiIconSet');
+    setState({ view: 'MultiIconSet', iconName, iconStyle: undefined });
   };
 
   const navigateToIconSetWithStyle = (iconStyle: string, iconName: IconName) => {
-    setSelectedIcon(iconName);
-    setSelectedIconStyle(iconStyle);
-    setCurrentView('IconSet');
+    setState({ view: 'IconSet', iconName, iconStyle });
   };
 
+  const handleBackPress = useCallback(() => {
+    if (state.view === 'IconSet' && state.iconStyle) {
+      setState({ view: 'MultiIconSet', iconName: state.iconName, iconStyle: undefined });
+
+      return true;
+    }
+
+    if (state.view === 'IconSet' || state.view === 'MultiIconSet') {
+      setState({ view: 'Home', iconName: undefined, iconStyle: undefined });
+
+      return true;
+    }
+
+    return false;
+  }, [state]);
+
   useEffect(() => {
-    const handleBackPress = () => {
-      if (currentView === 'IconSet' && selectedIconStyle) {
-        setCurrentView('MultiIconSet');
-
-        return true;
-      }
-
-      if (currentView === 'IconSet' || currentView === 'MultiIconSet') {
-        setCurrentView('IconExplorer');
-        setSelectedIcon(null);
-        setSelectedIconStyle(undefined);
-
-        return true;
-      }
-      return false;
-    };
     const handler = BackHandler.addEventListener('hardwareBackPress', handleBackPress);
-
     return handler.remove;
-  }, [currentView, selectedIconStyle]);
+  }, [handleBackPress]);
 
   const renderContent = () => {
-    switch (currentView) {
-      case 'IconExplorer':
-        return <IconSetList navigator={navigateToIconSet} multiNavigator={navigateToMultiIconSet} />;
+    switch (state.view) {
+      case 'Home':
+        return <Home navigator={navigateToIconSet} multiNavigator={navigateToMultiIconSet} />;
       case 'IconSet':
-        return selectedIcon ? <IconList iconName={selectedIcon} iconStyle={selectedIconStyle} /> : null;
+        return <IconList iconName={state.iconName} iconStyle={state.iconStyle} />;
       case 'MultiIconSet':
-        return selectedIcon ? <MultiIconList iconName={selectedIcon} navigator={navigateToIconSetWithStyle} /> : null;
+        return <MultiIconList iconName={state.iconName} navigator={navigateToIconSetWithStyle} />;
       default:
         throw new Error('Invalid view');
     }
   };
 
-  return <View style={styles.container}>{renderContent()}</View>;
+  return (
+    <View style={styles.container}>
+      <TouchableHighlight testID="back" onPress={handleBackPress} underlayColor="#eee">
+        <Text>Go Back</Text>
+      </TouchableHighlight>
+      {renderContent()}
+    </View>
+  );
 };
 
 export default App;

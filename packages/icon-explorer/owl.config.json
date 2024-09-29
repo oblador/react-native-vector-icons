@@ -1,5 +1,4 @@
 {
-  "debug": true,
   "ios": {
     "workspace": "ios/IconExplorer.xcworkspace",
     "scheme": "ReactTestApp",
