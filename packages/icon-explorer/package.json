@@ -51,6 +51,7 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
     "@babel/runtime": "^7.25.6",
+    "@expo/config-plugins": "^8.0.9",
     "@jest/globals": "^29.7.0",
     "@jest/types": "^29.6.3",
     "@react-native/babel-preset": "^0.75.3",
