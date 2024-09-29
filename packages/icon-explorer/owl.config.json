@@ -2,9 +2,8 @@
   "debug": true,
   "ios": {
     "workspace": "ios/IconExplorer.xcworkspace",
-    "scheme": "IconExplorer",
-    "configuration": "Release",
-    "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/ReactTestApp.app",
+    "scheme": "ReactTestApp",
+    "configuration": "Debug",
     "device": "iPhone 15"
   },
   "android": {
