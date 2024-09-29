@@ -52,9 +52,7 @@ rm android/gradle/wrapper/gradle-wrapper.properties.bak
 
 yarn rnx-align-deps --requirements react-native@"$VERSION" --write
 RN_VERSION="^$(npm info react-native@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
-BABEL_VERSION="^$(npm info @react-native/babel-preset@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
-METRO_VERSION="^$(npm info @react-native/metro-config@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
-yarn add react-native@"$RN_VERSION" @react-native/babel-preset@"$BABEL_VERSION" @react-native/metro-config@"$METRO_VERSION"
+yarn add react-native@"$RN_VERSION"
 
 ## align-deps rolls this back, so force the latest
 yarn add react-native-test-app@latest
