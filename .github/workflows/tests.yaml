@@ -73,12 +73,12 @@ jobs:
 
       - name: SKDs
         run: |
-          $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-${{ matrix.api-level }};default;x86_64"
-          y | $ANDROID_HOME/tools/bin/sdkmanager --licenses
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "system-images;android-${{ matrix.api-level }};default;x86_64"
+          y | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
 
       - name: Emulator
         run: |
-          $ANDROID_HOME/tools/bin/avdmanager create avd -n Pixel_API_${{ matrix.api-level }} --device 'Pixel 7 Pro' --package "system-images;android-${{ matrix.api-level }};default;x86_64" --sdcard 512M
+          $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n Pixel_API_${{ matrix.api-level }} --device 'Pixel 7 Pro' --package "system-images;android-${{ matrix.api-level }};default;x86_64" --sdcard 512M
           $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none &
 
       - name: ADB Wait For Device
@@ -108,12 +108,12 @@ jobs:
           path: packages/icon-explorer/.owl
           include-hidden-files: true
 
-      # - uses: dorny/test-reporter@v1
-      #   if: always()
-      #   with:
-      #     name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
-      #     path: packages/icon-explorer/.owl/report/*.json
-      #     reporter: jest-junit
+      - uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
+          path: packages/icon-explorer/.owl/report/*.xml
+          reporter: jest-junit
 
   ios:
     name: iOS
@@ -187,5 +187,5 @@ jobs:
         if: always()
         with:
           name: JEST Tests ios - ${{ matrix.arch }} ${{ matrix.rn-version }}
-          path: packages/icon-explorer/.owl/report/*.json
+          path: packages/icon-explorer/.owl/report/*.xml
           reporter: jest-junit
