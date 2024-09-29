@@ -102,6 +102,17 @@ jobs:
           disable-animations: true
           script: cd packages/icon-explorer && yarn test:android:run
 
+      - name: Build App
+        run: |
+          echo MOO
+          ls -al || true
+          echo MOO
+          ls -al packages || true
+          echo MOO
+          ls -al packages/icon-explorer || true
+          echo MOO
+          ls -al packages/icon-explorer/.owl || true
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
