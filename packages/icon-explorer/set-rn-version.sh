@@ -65,6 +65,12 @@ rm ../../node_modules/react-native-test-app/android/app/build.gradle.bak
 
 yarn --no-immutable
 
+mkdir -p node_modules
+cd node_modules
+ln -s ../../../node_modules/react-native-owl react-native-owl
+ln -s ../../../node_modules/react-native react-native
+cd -
+
 if [ "$ARCH" = "new" ]; then
   echo "newArchEnabled=true" >>android/gradle.properties
 fi

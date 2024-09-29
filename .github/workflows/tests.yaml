@@ -164,6 +164,8 @@ jobs:
       - name: Build App
         run: |
           cd packages/icon-explorer
+          # Due to react-native-test-app not bundling
+          yarn build:ios:owl
           pod install --project-directory=ios
           yarn test:ios:build
 
