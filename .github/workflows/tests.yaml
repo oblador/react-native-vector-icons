@@ -76,7 +76,7 @@ jobs:
       - name: SKDs
         run: |
           $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "system-images;android-${{ matrix.api-level }};default;x86_64"
-          y | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
 
       - name: Emulator
         run: |
@@ -84,7 +84,7 @@ jobs:
           $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none &
 
       - name: ADB Wait For Device
-        run: adb wait-for-any-device
+        run: $ANDROID_HOME/platform-tools/adb wait-for-any-device
         timeout-minutes: 3
 
       - name: Set up RN version
