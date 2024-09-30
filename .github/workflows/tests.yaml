@@ -89,18 +89,17 @@ jobs:
       - name: SKDs
         run: |
           $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "system-images;android-${{ matrix.api-level }};default;x86_64"
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager platform-tools
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
 
       - name: Emulator
         run: |
-          echo $ANDROID_HOME
-          ls $ANDROID_HOME
           $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n Pixel_API_${{ matrix.api-level }} --device 'pixel_6_pro' --package "system-images;android-${{ matrix.api-level }};default;x86_64" --sdcard 512M
           $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none &
 
       - name: ADB Wait For Device
         run: |
-          adb wait-for-any-device
+          $ANDROID_HOME/platform-tools/adb
         timeout-minutes: 3
 
       - name: Set up RN version
