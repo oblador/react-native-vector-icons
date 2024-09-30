@@ -11,8 +11,9 @@
       ],
       "ignoreBinaries": [
         "scripts/generate-fonts.sh",
-        "test:ios:build",
         "test:android:build",
+        "test:android:run",
+        "test:ios:build",
         "test:ios:run",
         "build:ios:owl",
         "build"
@@ -49,8 +50,7 @@
         "@react-native/eslint-config",
         "@rnx-kit/align-deps",
         "react-test-renderer",
-        "@types/react-test-renderer",
-        "jest-junit"
+        "@types/react-test-renderer"
       ]
     },
     "packages/generator-react-native-vector-icons": {
