@@ -84,7 +84,12 @@ jobs:
           $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none &
 
       - name: ADB Wait For Device
-        run: $ANDROID_HOME/platform-tools/adb wait-for-any-device
+        run: |
+          echo "MOO"
+          ls $ANDROID_HOME || true
+          echo "MOO"
+          ls $ANDROID_HOME/platform-tools/|| true
+          $ANDROID_HOME/platform-tools/adb wait-for-any-device
         timeout-minutes: 3
 
       - name: Set up RN version
