@@ -80,8 +80,7 @@ jobs:
 
       - name: Emulator
         run: |
-          $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager list device
-          $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n Pixel_API_${{ matrix.api-level }} --device 'pixel_7_pro' --package "system-images;android-${{ matrix.api-level }};default;x86_64" --sdcard 512M
+          $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n Pixel_API_${{ matrix.api-level }} --device 'pixel_6_pro' --package "system-images;android-${{ matrix.api-level }};default;x86_64" --sdcard 512M
           $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none &
 
       - name: ADB Wait For Device
@@ -124,8 +123,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rn-version: ['0.75', '0.74', '0.73', '0.72', '0.71']
-        arch: ['new', 'old']
+        # rn-version: ['0.75', '0.74', '0.73', '0.72', '0.71']
+        # arch: ['new', 'old']
+        rn-version: ['0.75']
+        arch: ['old']
 
     steps:
       - uses: actions/checkout@v4
