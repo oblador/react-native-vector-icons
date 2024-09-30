@@ -27,7 +27,9 @@ jobs:
       - name: ADB Wait For Device
         run: |
           echo "MOO"
-          find $ANDROID_HOME -name adb
+          echo $ANDROID_HOME
+          ls $ANDROID_HOME || true
+          printenv
 
         timeout-minutes: 3
 
@@ -91,6 +93,8 @@ jobs:
 
       - name: Emulator
         run: |
+          echo $ANDROID_HOME
+          ls $ANDROID_HOME
           $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n Pixel_API_${{ matrix.api-level }} --device 'pixel_6_pro' --package "system-images;android-${{ matrix.api-level }};default;x86_64" --sdcard 512M
           $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none &
 
