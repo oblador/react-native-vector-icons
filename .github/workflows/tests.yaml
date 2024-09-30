@@ -75,7 +75,7 @@ jobs:
 
       - name: ADB Wait For Device
         run: |
-          $ANDROID_HOME/platform-tools/adb
+          $ANDROID_HOME/platform-tools/adb wait-for-any-device
         timeout-minutes: 3
 
       - name: Setup yarn
