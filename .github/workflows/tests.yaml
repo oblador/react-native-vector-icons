@@ -117,7 +117,7 @@ jobs:
         if: always()
         run: |
           cat /tmp/avd_log
-          $ANDROID_HOME/platform-tools/adb logcat
+          $ANDROID_HOME/platform-tools/adb install -r /home/runner/work/react-native-vector-icons/react-native-vector-icons/packages/icon-explorer/android/app/build/outputs/apk/release/app-release.apk
 
       - uses: actions/upload-artifact@v4
         if: always()
