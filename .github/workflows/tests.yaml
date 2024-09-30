@@ -20,19 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: df
-        run: |
-          df -h
-
-      - name: ADB Wait For Device
-        run: |
-          echo "MOO"
-          echo $ANDROID_HOME
-          ls $ANDROID_HOME || true
-          printenv
-
-        timeout-minutes: 3
-
       # - name: Free Disk Space (Ubuntu)
       #   uses: jlumbroso/free-disk-space@main
       #   with:
@@ -40,7 +27,8 @@ jobs:
       #     # large-packages: true
       #     # swap-storage: true
 
-      - uses: actions/setup-java@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -52,22 +40,10 @@ jobs:
           # TODO: Remove this after we merge
           cache-read-only: ${{ github.ref != 'refs/heads/master' && github.ref != 'refs/heads/monorepo' }}
 
-      - name: Setup yarn
-        run: |
-          corepack enable
-
-      - uses: bahmutov/npm-install@v1
-        with:
-          install-command: yarn --immutable
-
       - name: AVD Deps
         run: |
           sudo apt update
-          sudo apt-get install -y libpulse0 libgl1 adb
-
-      - name: Build
-        run: |
-          yarn prepare
+          sudo apt-get install -y libpulse0 libgl1
 
       - name: SDK cache
         uses: actions/cache@v4
@@ -101,6 +77,18 @@ jobs:
         run: |
           $ANDROID_HOME/platform-tools/adb
         timeout-minutes: 3
+
+      - name: Setup yarn
+        run: |
+          corepack enable
+
+      - name: Setup npm
+        uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --immutable
+      - name: Build
+        run: |
+          yarn prepare
 
       - name: Set up RN version
         run: |
