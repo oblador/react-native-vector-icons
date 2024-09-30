@@ -77,7 +77,8 @@ jobs:
       - name: Emulator
         run: |
           $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n Pixel_API_${{ matrix.api-level }} --device 'pixel_6_pro' --package "system-images;android-${{ matrix.api-level }};default;x86_64" --sdcard 512M
-          $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none &
+          $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} \
+            -no-metrics -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none 2>&1 | tee /tmp/avd_log &
 
       - name: ADB Wait For Device
         run: |
@@ -111,6 +112,11 @@ jobs:
         run: |
           cd packages/icon-explorer
           yarn test:android:run
+
+      - name: Build App
+        if: always()
+        run: |
+          cat /tmp/avd_log
 
       - uses: actions/upload-artifact@v4
         if: always()
