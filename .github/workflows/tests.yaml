@@ -117,6 +117,7 @@ jobs:
         if: always()
         run: |
           cat /tmp/avd_log
+          adb logcat
 
       - uses: actions/upload-artifact@v4
         if: always()
