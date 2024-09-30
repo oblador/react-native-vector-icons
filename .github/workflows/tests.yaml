@@ -27,20 +27,16 @@ jobs:
       - name: ADB Wait For Device
         run: |
           echo "MOO"
-          find $ANDROID_HOME --name adb
+          find $ANDROID_HOME -name adb
 
         timeout-minutes: 3
-      - name: Free Disk Space (Ubuntu)
-        uses: jlumbroso/free-disk-space@main
-        with:
-          android: false
-          # large-packages: true
-          # swap-storage: true
 
-      - name: ADB Wait For Device
-        run: |
-          echo "MOO"
-          find $ANDROID_HOME --name adb
+      # - name: Free Disk Space (Ubuntu)
+      #   uses: jlumbroso/free-disk-space@main
+      #   with:
+      #     android: false
+      #     # large-packages: true
+      #     # swap-storage: true
 
       - uses: actions/setup-java@v4
         with:
