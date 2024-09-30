@@ -96,8 +96,7 @@ jobs:
 
       - name: ADB Wait For Device
         run: |
-          df -h
-          $ANDROID_HOME/platform-tools/adb wait-for-any-device
+          adb wait-for-any-device
         timeout-minutes: 3
 
       - name: Set up RN version
