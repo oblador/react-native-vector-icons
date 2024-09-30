@@ -149,6 +149,7 @@ jobs:
 
       - name: Build
         run: |
+          xcodebuild -version
           yarn prepare
 
       - name: Set up RN version
