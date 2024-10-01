@@ -20,13 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # - name: Free Disk Space (Ubuntu)
-      #   uses: jlumbroso/free-disk-space@main
-      #   with:
-      #     android: false
-      #     # large-packages: true
-      #     # swap-storage: true
-
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -50,7 +43,8 @@ jobs:
         id: sdk-cache
         with:
           path: |
-            $ANDROID_HOME/system-images
+            ${{ env.ANDROID_HOME }}/system-images
+            ${{ env.ANDROID_HOME }}/platform-tools
           key: sdk-${{ matrix.api-level }}
 
       - name: AVD cache
@@ -62,7 +56,7 @@ jobs:
             ~/.android/adb*
           key: avd-${{ matrix.api-level }}
 
-      - name: SKDs
+      - name: SDKs
         run: |
           $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "system-images;android-${{ matrix.api-level }};default;x86_64"
           $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager platform-tools
