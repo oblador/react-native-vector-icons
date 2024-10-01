@@ -79,6 +79,14 @@ jobs:
       - name: ADB Wait For Device
         run: |
           $ANDROID_HOME/platform-tools/adb wait-for-any-device
+
+          echo -n "Waiting for emulator to boot"
+          while [ "$(adb shell getprop sys.boot_completed | tr -d '\r')" != "1" ]; do
+            echo -n "."
+            sleep 5
+          done
+          echo "Emulator has fully booted."
+
           # Disable the notification about immersive mode
           $ANDROID_HOME/platform-tools/adb shell settings put secure immersive_mode_confirmations confirmed
         timeout-minutes: 3
