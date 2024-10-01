@@ -44,8 +44,8 @@ jobs:
         id: sdk-cache
         with:
           path: |
-            ${{ env.ANDROID_HOME }}/system-images
-            ${{ env.ANDROID_HOME }}/platform-tools
+            /usr/local/lib/android/sdk/system-images
+            /usr/local/lib/android/sdk/platform-tools
           key: sdk-${{ matrix.api-level }}
 
       - name: AVD cache
@@ -82,21 +82,6 @@ jobs:
             -no-metrics -wipe-data -no-window -gpu swiftshader_indirect \
             -no-snapshot -noaudio -no-boot-anim -camera-back none 2>&1 | tee /tmp/avd_log &
 
-      - name: ADB Wait For Device
-        run: |
-          $ANDROID_HOME/platform-tools/adb wait-for-any-device
-
-          echo -n "Waiting for emulator to boot"
-          while [ "$($ANDROID_HOME/platform-tools/adb shell getprop sys.boot_completed | tr -d '\r')" != "1" ]; do
-            echo -n "."
-            sleep 5
-          done
-          echo "Emulator has fully booted."
-
-          # Disable the notification about immersive mode
-          $ANDROID_HOME/platform-tools/adb shell settings put secure immersive_mode_confirmations confirmed
-        timeout-minutes: 3
-
       - name: Setup yarn
         run: |
           corepack enable
@@ -119,6 +104,21 @@ jobs:
         run: |
           cd packages/icon-explorer
           yarn test:android:build
+
+      - name: ADB Wait For Device
+        run: |
+          $ANDROID_HOME/platform-tools/adb wait-for-any-device
+
+          echo -n "Waiting for emulator to boot"
+          while [ "$($ANDROID_HOME/platform-tools/adb shell getprop sys.boot_completed | tr -d '\r')" != "1" ]; do
+            echo -n "."
+            sleep 5
+          done
+          echo "Emulator has fully booted."
+
+          # Disable the notification about immersive mode
+          $ANDROID_HOME/platform-tools/adb shell settings put secure immersive_mode_confirmations confirmed
+        timeout-minutes: 3
 
       - name: Run tests
         run: |
