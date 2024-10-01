@@ -81,7 +81,7 @@ jobs:
           $ANDROID_HOME/platform-tools/adb wait-for-any-device
 
           echo -n "Waiting for emulator to boot"
-          while [ "$(adb shell getprop sys.boot_completed | tr -d '\r')" != "1" ]; do
+          while [ "$($ANDROID_HOME/platform-tools/adb shell getprop sys.boot_completed | tr -d '\r')" != "1" ]; do
             echo -n "."
             sleep 5
           done
