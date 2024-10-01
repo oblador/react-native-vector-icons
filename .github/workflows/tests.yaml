@@ -1,7 +1,6 @@
 ---
 name: Tests
 
-# yamllint disable-line rule:truthy
 on:
   - push
   - pull_request
@@ -60,21 +59,28 @@ jobs:
 
       - name: SDKs
         run: |
-          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "system-images;android-${{ matrix.api-level }};default;x86_64"
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager \
+            "system-images;android-${{ matrix.api-level }};default;x86_64"
           $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager platform-tools
           yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
 
       - name: Enable KVM group perms
         run: |
-          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | \
+            sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
       - name: Emulator
         run: |
-          $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd -n Pixel_API_${{ matrix.api-level }} --device 'pixel_6_pro' --package "system-images;android-${{ matrix.api-level }};default;x86_64" --sdcard 512M
+          $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd \
+            -n Pixel_API_${{ matrix.api-level }} \
+            --device 'pixel_6_pro' \
+            --package "system-images;android-${{ matrix.api-level }};default;x86_64" \
+            --sdcard 512M
           $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} \
-            -no-metrics -wipe-data -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none 2>&1 | tee /tmp/avd_log &
+            -no-metrics -wipe-data -no-window -gpu swiftshader_indirect \
+            -no-snapshot -noaudio -no-boot-anim -camera-back none 2>&1 | tee /tmp/avd_log &
 
       - name: ADB Wait For Device
         run: |
