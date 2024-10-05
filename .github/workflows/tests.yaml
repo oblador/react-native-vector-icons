@@ -37,14 +37,14 @@ jobs:
           sudo apt update
           sudo apt-get install -y libpulse0 libgl1
 
-      - name: SDK cache
-        uses: actions/cache@v4
-        id: sdk-cache
-        with:
-          path: |
-            /usr/local/lib/android/sdk/system-images
-            /usr/local/lib/android/sdk/platform-tools
-          key: sdk-${{ matrix.api-level }}
+      # - name: SDK cache
+      #   uses: actions/cache@v4
+      #   id: sdk-cache
+      #   with:
+      #     path: |
+      #       /usr/local/lib/android/sdk/system-images
+      #       /usr/local/lib/android/sdk/platform-tools
+      #     key: sdk-${{ matrix.api-level }}
 
       - name: AVD cache
         uses: actions/cache@v4
