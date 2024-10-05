@@ -3356,6 +3356,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@johnf/react-native-owl@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@johnf/react-native-owl@npm:1.4.0"
+  dependencies:
+    ajv: "npm:^7.2.4"
+    execa: "npm:^5.1.1"
+    handlebars: "npm:^4.7.8"
+    pixelmatch: "npm:^5.3.0"
+    pngjs: "npm:^7.0.0"
+    ws: "npm:^8.18.0"
+    yargs: "npm:^17.7.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  bin:
+    owl: lib/commonjs/cli/index.js
+  checksum: 10c0/1542672b14953d2acaa53d75eb38692d3d6acd6d12b3710960354a115452edd21645d8dbf7cc329b78096c512b78c24941e50b2abe3196c8d81d008f27911a8d
+  languageName: node
+  linkType: hard
+
 "@jridgewell/gen-mapping@npm:^0.3.2, @jridgewell/gen-mapping@npm:^0.3.5":
   version: 0.3.5
   resolution: "@jridgewell/gen-mapping@npm:0.3.5"
@@ -7107,6 +7127,7 @@ __metadata:
     "@babel/runtime": "npm:^7.25.6"
     "@expo/config-plugins": "npm:^8.0.9"
     "@jest/types": "npm:^29.6.3"
+    "@johnf/react-native-owl": "npm:^1.4.0"
     "@react-native-vector-icons/ant-design": "workspace:^"
     "@react-native-vector-icons/common": "workspace:^"
     "@react-native-vector-icons/entypo": "workspace:^"
@@ -7146,7 +7167,6 @@ __metadata:
     react: "npm:18.3.1"
     react-native: "npm:^0.75.3"
     react-native-animatable: "npm:^1.4.0"
-    react-native-owl: "npm:^1.3.0"
     react-native-test-app: "npm:^3.10.5"
     react-test-renderer: "npm:18.3.1"
     ts-jest: "npm:^29.2.5"
@@ -7369,7 +7389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^7.0.3":
+"ajv@npm:^7.2.4":
   version: 7.2.4
   resolution: "ajv@npm:7.2.4"
   dependencies:
@@ -13478,7 +13498,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars@npm:^4.7.7":
+"handlebars@npm:^4.7.7, handlebars@npm:^4.7.8":
   version: 4.7.8
   resolution: "handlebars@npm:4.7.8"
   dependencies:
@@ -19948,7 +19968,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pixelmatch@npm:^5.2.1":
+"pixelmatch@npm:^5.3.0":
   version: 5.3.0
   resolution: "pixelmatch@npm:5.3.0"
   dependencies:
@@ -20008,6 +20028,13 @@ __metadata:
   version: 6.0.0
   resolution: "pngjs@npm:6.0.0"
   checksum: 10c0/ac23ea329b1881d1a10575aff58116dc27b894ec3f5b84ba15c7f527d21e609fbce7ba16d48f8ccb86c7ce45ceed622472765476ab2875949d4bec55e153f87a
+  languageName: node
+  linkType: hard
+
+"pngjs@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "pngjs@npm:7.0.0"
+  checksum: 10c0/0d4c7a0fd476a9c33df7d0a2a73e1d56537628a668841f6995c2bca070cf30819f9254a64363266bc14ef2fee47659dd3b4f2b18eec7ab65143015139f497b38
   languageName: node
   linkType: hard
 
@@ -21401,26 +21428,6 @@ __metadata:
   bin:
     bob: bin/bob
   checksum: 10c0/775306f923aaf6aa9d39e0e78b1ab65bd4e0dd8998978eb634a84bfd4f9cc2e320965055d0d4b5615cc0d6df5885c195f582b3f2ceb7e849abf63566182cbbab
-  languageName: node
-  linkType: hard
-
-"react-native-owl@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "react-native-owl@npm:1.3.0"
-  dependencies:
-    ajv: "npm:^7.0.3"
-    execa: "npm:^5.1.1"
-    handlebars: "npm:^4.7.7"
-    pixelmatch: "npm:^5.2.1"
-    pngjs: "npm:^6.0.0"
-    ws: "npm:^8.2.3"
-    yargs: "npm:^17.2.1"
-  peerDependencies:
-    react: ^17 || ^18
-    react-native: ^0
-  bin:
-    owl: dist/cli/index.js
-  checksum: 10c0/4356f5710bb5d89c21fbf5c156fcaeedee1fdee6347609715ec81e29761910bd9e4be1578ee43dc28dbd1b06ff1a1a41a6cee8aa802ef09806ec1bd2f3629bc0
   languageName: node
   linkType: hard
 
@@ -26148,7 +26155,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.13.0, ws@npm:^8.2.3":
+"ws@npm:^8.13.0, ws@npm:^8.18.0":
   version: 8.18.0
   resolution: "ws@npm:8.18.0"
   peerDependencies:
@@ -26352,7 +26359,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:17.7.2, yargs@npm:^17.0.0, yargs@npm:^17.2.1, yargs@npm:^17.3.1, yargs@npm:^17.5.1, yargs@npm:^17.6.2, yargs@npm:^17.7.2":
+"yargs@npm:17.7.2, yargs@npm:^17.0.0, yargs@npm:^17.3.1, yargs@npm:^17.5.1, yargs@npm:^17.6.2, yargs@npm:^17.7.2":
   version: 17.7.2
   resolution: "yargs@npm:17.7.2"
   dependencies:
