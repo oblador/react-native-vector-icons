@@ -3356,9 +3356,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@johnf/react-native-owl@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "@johnf/react-native-owl@npm:1.4.0"
+"@johnf/react-native-owl@npm:^1.4.2":
+  version: 1.4.2
+  resolution: "@johnf/react-native-owl@npm:1.4.2"
   dependencies:
     ajv: "npm:^7.2.4"
     execa: "npm:^5.1.1"
@@ -3372,7 +3372,7 @@ __metadata:
     react-native: "*"
   bin:
     owl: lib/commonjs/cli/index.js
-  checksum: 10c0/1542672b14953d2acaa53d75eb38692d3d6acd6d12b3710960354a115452edd21645d8dbf7cc329b78096c512b78c24941e50b2abe3196c8d81d008f27911a8d
+  checksum: 10c0/0f1ef426fbd34e99dbe2f701f49158670b9a234da9b56c0d08c7e733186271d49a97bd3d8cc69e3aeb36803a5fb68bbf3e328d7f5077efc58dfb110c3f7ad475
   languageName: node
   linkType: hard
 
@@ -7127,7 +7127,7 @@ __metadata:
     "@babel/runtime": "npm:^7.25.6"
     "@expo/config-plugins": "npm:^8.0.9"
     "@jest/types": "npm:^29.6.3"
-    "@johnf/react-native-owl": "npm:^1.4.0"
+    "@johnf/react-native-owl": "npm:^1.4.2"
     "@react-native-vector-icons/ant-design": "workspace:^"
     "@react-native-vector-icons/common": "workspace:^"
     "@react-native-vector-icons/entypo": "workspace:^"

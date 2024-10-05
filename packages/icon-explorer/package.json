@@ -53,7 +53,7 @@
     "@babel/runtime": "^7.25.6",
     "@expo/config-plugins": "^8.0.9",
     "@jest/types": "^29.6.3",
-    "@johnf/react-native-owl": "^1.4.0",
+    "@johnf/react-native-owl": "^1.4.2",
     "@react-native/babel-preset": "^0.75.3",
     "@react-native/eslint-config": "^0.75.3",
     "@react-native/metro-config": "^0.75.3",
