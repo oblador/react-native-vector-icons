@@ -188,6 +188,12 @@ jobs:
       - name: Build App
         run: |
           cd packages/icon-explorer
+          # Work around mono repo
+          mkdir -p node_modules
+          cd node_modules
+          ln -nfs ../../../node_modules/@johnf/react-native-owl react-native-owl
+          ln -nfs ../../../node_modules/react-native react-native
+          cd -
           # Due to react-native-test-app not bundling
           yarn build:ios:owl
           if [ "${{ matrix.arch }}" = "new" ]; then
