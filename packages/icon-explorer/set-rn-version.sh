@@ -67,7 +67,7 @@ yarn --no-immutable
 
 mkdir -p node_modules
 cd node_modules
-ln -nfs ../../../node_modules/react-native-owl react-native-owl
+ln -nfs ../../../node_modules/@johnf/react-native-owl react-native-owl
 ln -nfs ../../../node_modules/react-native react-native
 cd -
 
