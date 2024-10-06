@@ -151,7 +151,7 @@ export const MultiIconList = ({
 
   return (
     <View style={styles.container}>
-      <Text>{iconName}</Text>
+      <Text style={{ color: '#000' }}>{iconName}</Text>
       <FlatList
         data={Object.keys(iconSet.meta)}
         style={styles.list}
