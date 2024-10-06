@@ -188,10 +188,10 @@ jobs:
       - name: Build App
         run: |
           cd packages/icon-explorer
-          # Work around mono repo
-          mkdir -p node_modules
+          # Work around mono repo issues with owl
+          mkdir -p node_modules/@johnf
           cd node_modules
-          ln -nfs ../../../node_modules/@johnf/react-native-owl react-native-owl
+          cp -ar ../../../node_modules/@johnf/react-native-owl @johnf/
           ln -nfs ../../../node_modules/react-native react-native
           cd -
           # Due to react-native-test-app not bundling
