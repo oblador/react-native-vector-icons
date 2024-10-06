@@ -52,14 +52,12 @@ const styles = StyleSheet.create({
   },
   text: {
     flex: 1,
-    color: '#000',
   },
   glyphCount: {
     flex: 1,
     fontSize: 11,
     fontWeight: '500',
     textAlign: 'right',
-    color: '#000',
   },
 });
 
@@ -100,10 +98,7 @@ export const IconList = ({
 
   return (
     <View style={styles.container}>
-      <Text style={{ color: '#000' }}>
-        {iconName}
-        {iconStyle ? ` - ${iconStyle}` : ''}
-      </Text>
+      <Text>{iconName}{iconStyle ? ` - ${iconStyle}` : ''}</Text>
       <View style={styles.searchBar}>
         <TextInput
           testID="search"
@@ -151,7 +146,7 @@ export const MultiIconList = ({
 
   return (
     <View style={styles.container}>
-      <Text style={{ color: '#000' }}>{iconName}</Text>
+      <Text style={styles.text}>{iconName}</Text>
       <FlatList
         data={Object.keys(iconSet.meta)}
         style={styles.list}
