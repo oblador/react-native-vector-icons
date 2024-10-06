@@ -145,9 +145,8 @@ jobs:
       fail-fast: false
       matrix:
         # rn-version: ['0.75', '0.74', '0.73', '0.72', '0.71']
-        # arch: ['new', 'old']
         rn-version: ['0.75']
-        arch: ['old']
+        arch: ['new', 'old']
 
     steps:
       - uses: actions/checkout@v4
