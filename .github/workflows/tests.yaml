@@ -191,7 +191,7 @@ jobs:
           # Work around mono repo issues with owl
           mkdir -p node_modules/@johnf
           cd node_modules
-          cp -ar ../../../node_modules/@johnf/react-native-owl @johnf/
+          cp -a ../../../node_modules/@johnf/react-native-owl @johnf/
           ln -nfs ../../../node_modules/react-native react-native
           cd -
           # Due to react-native-test-app not bundling
