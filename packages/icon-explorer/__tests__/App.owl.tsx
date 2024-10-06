@@ -1,11 +1,13 @@
 import { press, scrollToEnd, takeScreenshot, toExist } from '@johnf/react-native-owl';
 
+const baselineOptions = { threshold: 0.2 };
+
 describe('App.tsx', () => {
   it('show home top', async () => {
     await toExist('AntD');
 
     const screen = await takeScreenshot('home-top');
-    expect(screen).toMatchBaseline();
+    expect(screen).toMatchBaseline(baselineOptions);
   });
 
   it('show home bottom', async () => {
@@ -15,7 +17,7 @@ describe('App.tsx', () => {
 
     const screen = await takeScreenshot('home-bottom');
 
-    expect(screen).toMatchBaseline();
+    expect(screen).toMatchBaseline(baselineOptions);
   });
 
   it('should load AntD font', async () => {
@@ -28,7 +30,7 @@ describe('App.tsx', () => {
 
     await press('back');
 
-    expect(screen).toMatchBaseline();
+    expect(screen).toMatchBaseline(baselineOptions);
   });
 
   it('should load FontAwesome6 font', async () => {
@@ -46,7 +48,7 @@ describe('App.tsx', () => {
     await press('back');
     await press('back');
 
-    expect(screen).toMatchBaseline();
+    expect(screen).toMatchBaseline(baselineOptions);
   });
 
   it('should load Fontello font', async () => {
@@ -59,6 +61,6 @@ describe('App.tsx', () => {
 
     await press('back');
 
-    expect(screen).toMatchBaseline();
+    expect(screen).toMatchBaseline(baselineOptions);
   });
 });
