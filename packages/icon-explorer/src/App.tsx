@@ -72,7 +72,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <TouchableHighlight testID="back" onPress={handleBackPress} underlayColor="#eee">
-        <Text>Go Back</Text>
+        <Text style={{ color: '#000' }}>Go Back</Text>
       </TouchableHighlight>
       {renderContent()}
     </View>
