@@ -3376,9 +3376,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@johnf/react-native-owl@npm:^1.4.3":
-  version: 1.4.3
-  resolution: "@johnf/react-native-owl@npm:1.4.3"
+"@johnf/react-native-owl@npm:^1.4.4":
+  version: 1.4.4
+  resolution: "@johnf/react-native-owl@npm:1.4.4"
   dependencies:
     ajv: "npm:^7.2.4"
     execa: "npm:^5.1.1"
@@ -3392,7 +3392,7 @@ __metadata:
     react-native: "*"
   bin:
     owl: lib/commonjs/cli/index.js
-  checksum: 10c0/3d75e1ce073f9ead90dbdccced469c29f964810f64acde24082aecc267cba303b484a469d20ab03e698eb8c7e3eb06417e064743bea50e6a80fb732a6b075ae2
+  checksum: 10c0/1b2b8da654c554f635e6a56cd4a811ab31919670e75fde6b0ba4b4029d362b1a7de3fc6d89fd19bce96002ed7726a21155a52ad56e30f7479a35dcc72fd4f5a3
   languageName: node
   linkType: hard
 
@@ -22470,7 +22470,7 @@ __metadata:
     "@biomejs/biome": "npm:1.9.0"
     "@commitlint/config-conventional": "npm:^17.0.2"
     "@evilmartians/lefthook": "npm:^1.5.0"
-    "@johnf/react-native-owl": "npm:^1.4.3"
+    "@johnf/react-native-owl": "npm:^1.4.4"
     "@types/eslint": "npm:^8.56.12"
     "@types/node": "npm:^20.16.5"
     "@typescript-eslint/eslint-plugin": "npm:^8.5.0"
