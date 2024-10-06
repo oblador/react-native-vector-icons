@@ -1,4 +1,4 @@
-import { press, scrollToEnd, takeScreenshot, toExist } from 'react-native-owl';
+import { press, scrollToEnd, takeScreenshot, toExist } from '@johnf/react-native-owl';
 
 describe('App.tsx', () => {
   it('show home top', async () => {
