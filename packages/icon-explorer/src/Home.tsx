@@ -126,12 +126,14 @@ const styles = StyleSheet.create({
   },
   text: {
     flex: 6,
+    color: '#000'
   },
   glyphCount: {
     flex: 1,
     fontSize: 11,
     fontWeight: '500',
     textAlign: 'right',
+    color: '#000'
   },
   button: {
     padding: 4,
