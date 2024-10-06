@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
   },
   text: {
     flex: 1,
+    color: '#000',
   },
   glyphCount: {
     flex: 1,
@@ -98,7 +99,7 @@ export const IconList = ({
 
   return (
     <View style={styles.container}>
-      <Text>
+      <Text style={styles.text}>
         {iconName}
         {iconStyle ? ` - ${iconStyle}` : ''}
       </Text>
