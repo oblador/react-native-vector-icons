@@ -99,7 +99,7 @@ export const IconList = ({
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>
+      <Text style={{ color: '#000' }}>
         {iconName}
         {iconStyle ? ` - ${iconStyle}` : ''}
       </Text>
