@@ -66,7 +66,7 @@ const INLINE = [
   {
     name: 'inline',
     children: (
-      <Text>
+      <Text style={{ color: '#000' }}>
         This text has <FontAwesome name="rocket" /> inline <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
       </Text>
     ),
@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
   sectionHeaderTitle: {
     fontWeight: '500',
     fontSize: 11,
+    color: '#000',
   },
   row: {
     flexDirection: 'row',
