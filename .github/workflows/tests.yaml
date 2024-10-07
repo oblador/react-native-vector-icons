@@ -175,7 +175,7 @@ jobs:
           xcrun simctl || true
           xcrun simctl list || true
           xcrun simctl status_bar --help || true
-          xcrun simctl status_bar 2A200510-B52A-45A5-BAC1-7FE08C03EF21 override --time "9:41"
+          xcrun simctl status_bar 58E32105-8D8F-41F4-83F3-C7D88B1E7436 override --time "9:41"
           corepack enable
 
       - uses: bahmutov/npm-install@v1
