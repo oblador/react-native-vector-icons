@@ -164,7 +164,7 @@ jobs:
         run: |
           xcrun simctl || true
           xcrun simctl status_bar --help || true
-          xcrun simctl status_bar iPhone 15 override --time "9:41"
+          xcrun simctl status_bar "iPhone 15" override --time "9:41"
           corepack enable
 
       - uses: bahmutov/npm-install@v1
