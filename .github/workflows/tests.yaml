@@ -160,6 +160,10 @@ jobs:
 
       - uses: actions/setup-node@v4
 
+      - name: Setup yarn
+        run: |
+          xcrun simctl list || true
+
       - name: Run simulatpr
         uses: futureware-tech/simulator-action@v1
         with:
