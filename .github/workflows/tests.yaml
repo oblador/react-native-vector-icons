@@ -169,6 +169,7 @@ jobs:
       - name: Setup yarn
         run: |
           xcrun simctl || true
+          xcrun simctl list || true
           xcrun simctl status_bar --help || true
           xcrun simctl status_bar 2A200510-B52A-45A5-BAC1-7FE08C03EF21 override --time "9:41"
           corepack enable
