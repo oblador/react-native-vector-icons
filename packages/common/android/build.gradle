@@ -47,15 +47,17 @@ def supportsNamespace() {
   return (major == 7 && minor >= 3) || major >= 8
 }
 
-def supportsGenerated() {
-  def parsed = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')
-  def major = parsed[0].toInteger()
-  def minor = parsed[1].toInteger()
+import groovy.json.JsonSlurper
 
-  // Generation support was added in 7.4.0
-  return (major == 7 && minor >= 4) || major >= 8
+def generatedCompat() {
+  def rnviProject = rootProject.allprojects.find { it.name == 'react-native-vector-icons_common' }
+  if (rnviProject == null) return false
+
+  def reactNativeManifest = file("${rnviProject.projectDir}/../../../react-native/package.json")
+  def reactNativeVersion = new JsonSlurper().parseText(reactNativeManifest.text).version as String
+
+  reactNativeVersion.matches('(0.71.*|0.72.*|0.73.*)')
 }
-
 
 android {
   if (supportsNamespace()) {
@@ -102,14 +104,17 @@ android {
         java.srcDirs += [
           "src/newarch",
         ]
-        // if (supportsGenerated()) {
-        //   // NOTE: create-react-native-library has these here but it breaks <= 0.73
-        //   java.srcDirs += [
-        //     // Codegen specs
-        //     "generated/java",
-        //     "generated/jni"
-        //   ]
-        // }
+        if (!generatedCompat()) {
+          println("Adding generated directories")
+          println("Adding generated directories")
+          println("Adding generated directories")
+          // NOTE: create-react-native-library has these here but it breaks <= 0.73
+          java.srcDirs += [
+            // Codegen specs
+            "generated/java",
+            "generated/jni"
+          ]
+        }
       } else {
         java.srcDirs += ["src/oldarch"]
       }

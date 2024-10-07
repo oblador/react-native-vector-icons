@@ -13,7 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         api-level: [34]
-        rn-version: ['0.75', '0.74', '0.73', '0.72', '0.71']
+        rn-version: ['0.75', '0.74', '0.73']
         arch: ['new', 'old']
 
     steps:
