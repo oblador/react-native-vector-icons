@@ -20,14 +20,6 @@ killall java 2>/dev/null || true
 echo "Switching to $VERSION (arch: $ARCH)"
 
 case $VERSION in
-0.71)
-  GRADLE_VERSION=7.5.1
-  ;;
-
-0.72)
-  GRADLE_VERSION=8.0.1
-  ;;
-
 0.73)
   GRADLE_VERSION=8.3
   ;;
