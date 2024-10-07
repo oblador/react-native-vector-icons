@@ -96,7 +96,7 @@
     "turbo": "^1.10.7",
     "typescript": "^5.6.2"
   },
-    "resolutions": {
+  "resolutions": {
     "@types/react": "^18.2.44"
   },
   "peerDependencies": {

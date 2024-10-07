@@ -47,7 +47,7 @@
       "@commitlint/config-conventional"
     ]
   },
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "yarn@4.5.0",
   "repository": {
     "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git"
