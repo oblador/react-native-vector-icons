@@ -1,5 +1,5 @@
 const path = require('path');
-const pkg = require('../package.json');
+const pkg = require('../common/package.json');
 
 module.exports = {
   project: {
@@ -9,7 +9,7 @@ module.exports = {
   },
   dependencies: {
     [pkg.name]: {
-      root: path.join(__dirname, '..'),
+      root: path.join(__dirname, '../common'),
     },
   },
 };
