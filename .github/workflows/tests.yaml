@@ -168,7 +168,7 @@ jobs:
         uses: futureware-tech/simulator-action@v1
         with:
           # iPhone 15  ios 17.5
-          udid: '2A200510-B52A-45A5-BAC1-7FE08C03EF21'
+          udid: '58E32105-8D8F-41F4-83F3-C7D88B1E7436'
 
       - name: Setup yarn
         run: |
