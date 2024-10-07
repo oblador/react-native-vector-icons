@@ -164,12 +164,6 @@ jobs:
         run: |
           xcrun simctl list || true
 
-      - name: Run simulatpr
-        uses: futureware-tech/simulator-action@v1
-        with:
-          # iPhone 15  ios 17.5
-          udid: '58E32105-8D8F-41F4-83F3-C7D88B1E7436'
-
       - name: Setup yarn
         run: |
           corepack enable
@@ -189,7 +183,6 @@ jobs:
 
           ./set-rn-version.sh ${{ matrix.arch }} ${{ matrix.rn-version }}
 
-
       - name: Build App
         run: |
           cd packages/icon-explorer
@@ -207,6 +200,12 @@ jobs:
             NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=0 pod update --project-directory=ios
           fi
           yarn test:ios:build
+
+      - name: Run simulatpr
+        uses: futureware-tech/simulator-action@v1
+        with:
+          # iPhone 15  ios 17.5
+          udid: '58E32105-8D8F-41F4-83F3-C7D88B1E7436'
 
       - name: Run tests
         run: |
