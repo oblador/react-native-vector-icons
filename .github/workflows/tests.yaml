@@ -160,6 +160,12 @@ jobs:
 
       - uses: actions/setup-node@v4
 
+      - name: Run simulatpr
+        uses: futureware-tech/simulator-action@v1
+        with:
+          model: 'iPhone 15'
+          os_version: '>=15.0'
+
       - name: Setup yarn
         run: |
           xcrun simctl || true
@@ -182,11 +188,6 @@ jobs:
 
           ./set-rn-version.sh ${{ matrix.arch }} ${{ matrix.rn-version }}
 
-      - name: Run simulatpr
-        uses: futureware-tech/simulator-action@v1
-        with:
-          model: 'iPhone 15'
-          os_version: '>=15.0'
 
       - name: Build App
         run: |
