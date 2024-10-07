@@ -22,17 +22,7 @@ import com.facebook.react.turbomodule.core.interfaces.TurboModule
 abstract class VectorIconsSpec internal constructor(context: ReactApplicationContext) :
   ReactContextBaseJavaModule(context) {
 
-  companion object {
-    const val NAME = "VectorIcons"
-  }
-
-  override fun getName(): String = NAME
-
-  @ReactMethod
-  @DoNotStrip
   abstract fun getImageForFont(fontFamilyName: String, glyph: String, fontSize: Double, color: Double, promise: Promise)
 
-  @ReactMethod(isBlockingSynchronousMethod = true)
-  @DoNotStrip
   abstract fun getImageForFontSync(fontFamilyName: String, glyph: String, fontSize: Double, color: Double): String
 }
