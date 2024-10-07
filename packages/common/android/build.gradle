@@ -91,9 +91,10 @@ android {
       if (isNewArchitectureEnabled()) {
         java.srcDirs += [
           "src/newarch",
+          // NOTE: create-react-native-library has these here but it breaks <= 0.73
           // Codegen specs
-          "generated/java",
-          "generated/jni"
+          // "generated/java",
+          // "generated/jni"
         ]
       } else {
         java.srcDirs += ["src/oldarch"]
