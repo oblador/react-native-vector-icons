@@ -163,14 +163,14 @@ jobs:
       - name: Run simulatpr
         uses: futureware-tech/simulator-action@v1
         with:
-          model: 'iPhone 15'
-          os_version: '>=15.0'
+          # iPhone 15  ios 17.5
+          udid: '2A200510-B52A-45A5-BAC1-7FE08C03EF21'
 
       - name: Setup yarn
         run: |
           xcrun simctl || true
           xcrun simctl status_bar --help || true
-          xcrun simctl status_bar "iPhone 15" override --time "9:41"
+          xcrun simctl status_bar 2A200510-B52A-45A5-BAC1-7FE08C03EF21 override --time "9:41"
           corepack enable
 
       - uses: bahmutov/npm-install@v1
