@@ -91,11 +91,15 @@ android {
       if (isNewArchitectureEnabled()) {
         java.srcDirs += [
           "src/newarch",
-          // NOTE: create-react-native-library has these here but it breaks <= 0.73
-          // Codegen specs
-          // "generated/java",
-          // "generated/jni"
         ]
+        if (supportsNamespace()) {
+          // NOTE: create-react-native-library has these here but it breaks <= 0.73
+          java.srcDirs += [
+            // Codegen specs
+            "generated/java",
+            "generated/jni"
+          ]
+        }
       } else {
         java.srcDirs += ["src/oldarch"]
       }
