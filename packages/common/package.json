@@ -96,12 +96,12 @@
     "turbo": "^1.10.7",
     "typescript": "^5.6.2"
   },
+    "resolutions": {
+    "@types/react": "^18.2.44"
+  },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
-  },
-  "engines": {
-    "node": ">= 18.0.0"
   },
   "workspaces": [
     "packages/*"
@@ -149,7 +149,8 @@
     },
     "android": {
       "javaPackageName": "com.reactnativevectoricons.common"
-    }
+    },
+    "includesGeneratedCode": true
   },
   "create-react-native-library": {
     "type": "module-mixed",
