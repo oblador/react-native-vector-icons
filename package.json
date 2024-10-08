@@ -14,6 +14,7 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"; biome check .",
     "eslint": "eslint \"**/*.{js,ts,tsx}\"",
     "release": "lerna publish --no-private",
+    "prerelease": "lerna publish --no-private prerelease",
     "knip": "knip"
   },
   "devDependencies": {
