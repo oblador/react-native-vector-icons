@@ -106,6 +106,7 @@ jobs:
           yarn test:android:build
 
       - name: ADB Wait For Device
+        timeout-minutes: 3
         run: |
           $ANDROID_HOME/platform-tools/adb wait-for-any-device
 
@@ -118,14 +119,19 @@ jobs:
 
           # Disable the notification about immersive mode
           $ANDROID_HOME/platform-tools/adb shell settings put secure immersive_mode_confirmations confirmed
-        timeout-minutes: 3
 
       - name: Run tests
+        timeout-minutes: 10
         run: |
           export PATH=$ANDROID_HOME/platform-tools:$PATH
           cd packages/icon-explorer
           ln -s .owl/baseline baseline-${{ matrix.arch }}
           yarn test:android:run
+
+      - name: Stop Emulator
+        if: always()
+        run: |
+          $ANDROID_HOME/platform-tools/adb -s emulator-5554 emu kill || true
 
       - uses: actions/upload-artifact@v4
         if: always()
@@ -209,6 +215,7 @@ jobs:
           udid: '58E32105-8D8F-41F4-83F3-C7D88B1E7436'
 
       - name: Run tests
+        timeout-minutes: 10
         run: |
           cd packages/icon-explorer
           ln -s .owl/baseline baseline-${{ matrix.arch }}
