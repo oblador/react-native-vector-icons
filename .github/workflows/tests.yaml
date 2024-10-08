@@ -71,11 +71,13 @@ jobs:
 
       - name: Emulator
         run: |
-          $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd \
-            -n Pixel_API_${{ matrix.api-level }} \
-            --device 'pixel_6_pro' \
-            --package "system-images;android-${{ matrix.api-level }};default;x86_64" \
-            --sdcard 512M
+          if ! $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager list avd --compact | grep -q "Pixel_API_${{ matrix.api-level }}"; then
+            $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd \
+              -n Pixel_API_${{ matrix.api-level }} \
+              --device 'pixel_6_pro' \
+              --package "system-images;android-${{ matrix.api-level }};default;x86_64" \
+              --sdcard 512M
+          fi
           $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} \
             -no-metrics -wipe-data -no-window -gpu swiftshader_indirect \
             -no-snapshot -noaudio -no-boot-anim -camera-back none 2>&1 | tee /tmp/avd_log &
