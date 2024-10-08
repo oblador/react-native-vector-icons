@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome6-pro",
-  "version": "6.6.0-alpha.29",
+  "version": "6.6.0-alpha.30",
   "description": "Fontawesome6 Pro font for react native vector icons",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -82,8 +82,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^0.0.1-alpha.20",
-    "@react-native-vector-icons/fontawesome-common": "^0.0.1-alpha.22"
+    "@react-native-vector-icons/common": "^0.0.1-alpha.21",
+    "@react-native-vector-icons/fontawesome-common": "^0.0.1-alpha.23"
   },
   "devDependencies": {
     "del-cli": "^5.1.0",
