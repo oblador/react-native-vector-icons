@@ -80,7 +80,7 @@ jobs:
           fi
           $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} \
             -no-metrics -wipe-data -no-window -gpu swiftshader_indirect \
-            -no-snapshot -noaudio -no-boot-anim -camera-back none 2>&1 | tee /tmp/avd_log &
+            -no-snapshot -no-snapshot-save -noaudio -no-boot-anim -camera-back none 2>&1 | tee /tmp/avd_log &
 
       - name: Setup yarn
         run: |
