@@ -208,17 +208,21 @@ jobs:
           fi
           yarn test:ios:build
 
-      - name: Run simulatpr
+      - name: Run simulator
+        id: simulator
         uses: futureware-tech/simulator-action@v1
         with:
-          # iPhone 15  ios 17.5
-          udid: '58E32105-8D8F-41F4-83F3-C7D88B1E7436'
+          os: 'iOS'
+          os_version: "=17.5"
+          model: 'iPhone 15'
 
       - name: Run tests
         timeout-minutes: 10
         run: |
           cd packages/icon-explorer
           ln -s .owl/baseline baseline-${{ matrix.arch }}
+          tmp=$(mktemp)
+          jq '.ios.device = "{{ steps.simulator.outputs.udid }}"' owl.config.json > "$tmp" && mv "$tmp" owl.config.json
           yarn test:ios:run
 
       - uses: actions/upload-artifact@v4
