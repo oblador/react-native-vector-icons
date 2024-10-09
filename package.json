@@ -30,7 +30,8 @@
     "build-materialcommunityicons": "./scripts/materialcommunityicons.sh",
     "build-octicons": "./scripts/octicons.sh",
     "build-zocial": "./scripts/zocial.sh",
-    "build-simplelineicons": "./scripts/simplelineicons.sh"
+    "build-simplelineicons": "./scripts/simplelineicons.sh",
+    "build-iconsax": "./scripts/iconsax.sh"
   },
   "keywords": [
     "react-native",
