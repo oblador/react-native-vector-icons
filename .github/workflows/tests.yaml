@@ -222,7 +222,7 @@ jobs:
           cd packages/icon-explorer
           ln -s .owl/baseline baseline-${{ matrix.arch }}
           tmp=$(mktemp)
-          jq '.ios.device = "{{ steps.simulator.outputs.udid }}"' owl.config.json > "$tmp" && mv "$tmp" owl.config.json
+          jq '.ios.device = "${{ steps.simulator.outputs.udid }}"' owl.config.json > "$tmp" && mv "$tmp" owl.config.json
           yarn test:ios:run
 
       - uses: actions/upload-artifact@v4
