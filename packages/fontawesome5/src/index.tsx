@@ -7,15 +7,10 @@
  * FontAwesome5 icon set component.
  * Usage: <FontAwesome5 name="icon-name" size={20} color="#4F8EF7" />
  */
-import type { FC } from 'react';
+import type { ComponentProps } from 'react';
 import { Platform, type TextStyle } from 'react-native';
 
-import {
-  DEFAULT_ICON_COLOR,
-  DEFAULT_ICON_SIZE,
-  type IconProps,
-  createIconSet as commonCreateIconSet,
-} from '@react-native-vector-icons/common';
+import { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE, createIconSet } from '@react-native-vector-icons/common';
 
 import brandGM from '../glyphmaps/FontAwesome5_brand.json';
 import regularGM from '../glyphmaps/FontAwesome5_regular.json';
@@ -33,119 +28,76 @@ const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
     default: {},
   });
 
-type brandIconProps = IconProps<keyof typeof brandGM>;
-type regularIconProps = IconProps<keyof typeof regularGM>;
-type solidIconProps = IconProps<keyof typeof solidGM>;
+// biome-ignore format: We want these to be consistent and we are fine with single for all
+const RegularIcon = createIconSet(regularGM, 'FontAwesome5Free-Regular', 'FontAwesome5_Regular.ttf', fontStyle('400'));
+// biome-ignore format: We want these to be consistent and we are fine with single for all
+const SolidIcon = createIconSet(solidGM, 'FontAwesome5Free-Solid', 'FontAwesome5_Solid.ttf', fontStyle('900'));
+// biome-ignore format: We want these to be consistent and we are fine with single for all
+const BrandIcon = createIconSet(brandGM, 'FontAwesome5Brands-Regular', 'FontAwesome5_Brands.ttf', fontStyle('400'));
+
 type Props =
-  | ({ iconStyle?: 'brand' } & brandIconProps)
-  | ({ iconStyle?: 'regular' } & regularIconProps)
-  | ({ iconStyle?: 'solid' } & solidIconProps)
-  | ({ iconStyle?: never } & regularIconProps);
-
-type ValueData = { uri: string; scale: number };
-type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData | undefined;
-type GetImageSourceIconFunc<GM> = (
-  name: GM,
-  size?: number,
-  color?: TextStyle['color'],
-) => Promise<ValueData | undefined>;
-
-type Icons = {
-  brand: FC<brandIconProps> & {
-    getImageSource: GetImageSourceIconFunc<keyof typeof brandGM>;
-    getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof brandGM>;
-  };
-  regular: FC<regularIconProps> & {
-    getImageSource: GetImageSourceIconFunc<keyof typeof regularGM>;
-    getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof regularGM>;
-  };
-  solid: FC<solidIconProps> & {
-    getImageSource: GetImageSourceIconFunc<keyof typeof solidGM>;
-    getImageSourceSync: GetImageSourceSyncIconFunc<keyof typeof solidGM>;
-  };
-};
-
-const Icons: Icons = {
-  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
-  regular: commonCreateIconSet(
-    regularGM,
-    'FontAwesome5Free-Regular',
-    'FontAwesome5_Regular.ttf',
-    fontStyle('400'),
-  ),
-  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
-  solid: commonCreateIconSet(
-    solidGM,
-    'FontAwesome5Free-Solid',
-    'FontAwesome5_Solid.ttf',
-    fontStyle('900'),
-  ),
-  // biome-ignore format: We want these to be consistent and we are fine with multiline for all
-  brand: commonCreateIconSet(
-    brandGM,
-    'FontAwesome5Brands-Regular',
-    'FontAwesome5_Brands.ttf',
-    fontStyle('400'),
-  ),
-};
+  | ({ iconStyle: 'regular' } & ComponentProps<typeof RegularIcon>)
+  | ({ iconStyle: 'solid' } & ComponentProps<typeof SolidIcon>)
+  | ({ iconStyle: 'brand' } & ComponentProps<typeof BrandIcon>)
+  | ({ iconStyle?: never } & ComponentProps<typeof RegularIcon>);
 
 const Icon = (props: Props) => {
   const { iconStyle, name } = props;
   if (!iconStyle) {
-    return <Icons.regular {...(props as regularIconProps)} />;
+    return <RegularIcon {...props} />;
   }
 
-  if (!glyphValidator(name as string, iconStyle)) {
+  if (!glyphValidator(name, iconStyle)) {
     console.warn(`noSuchGlyph: glyph ${String(name)} does not exist for '${iconStyle}' icon type for FontAwesome5`);
 
-    return <Icons.regular {...(props as regularIconProps)} />;
+    return <RegularIcon {...(props as ComponentProps<typeof RegularIcon>)} />;
   }
 
   switch (iconStyle) {
     case 'brand':
-      return <Icons.brand {...props} />;
+      return <BrandIcon {...props} />;
     case 'regular':
-      return <Icons.regular {...props} />;
+      return <RegularIcon {...props} />;
     case 'solid':
-      return <Icons.solid {...props} />;
+      return <SolidIcon {...props} />;
     default:
       console.warn(`noSuchIconTypeName: '${iconStyle}' icon type does not exist for FontAwesome5`);
-      return <Icons.regular {...(props as regularIconProps)} />;
+      return <RegularIcon {...(props as ComponentProps<typeof RegularIcon>)} />;
   }
 };
 
 type GetImageSourceFunc = {
   (
     iconStyle: 'brand',
-    name: keyof typeof brandGM,
+    name: ComponentProps<typeof BrandIcon>['name'],
     size?: number,
     color?: TextStyle['color'],
-  ): ReturnType<(typeof Icons.brand)['getImageSource']>;
+  ): ReturnType<(typeof BrandIcon)['getImageSource']>;
   (
     iconStyle: 'regular',
-    name: keyof typeof regularGM,
+    name: ComponentProps<typeof RegularIcon>['name'],
     size?: number,
     color?: TextStyle['color'],
-  ): ReturnType<(typeof Icons.regular)['getImageSource']>;
+  ): ReturnType<(typeof RegularIcon)['getImageSource']>;
   (
     iconStyle: 'solid',
-    name: keyof typeof solidGM,
+    name: ComponentProps<typeof SolidIcon>['name'],
     size?: number,
     color?: TextStyle['color'],
-  ): ReturnType<(typeof Icons.solid)['getImageSource']>;
+  ): ReturnType<(typeof SolidIcon)['getImageSource']>;
 };
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const getImageSource: GetImageSourceFunc = (iconStyle, name, size = DEFAULT_ICON_SIZE, color = DEFAULT_ICON_COLOR) => {
   switch (iconStyle) {
     case 'brand':
-      return Icons.brand.getImageSource(name as keyof typeof brandGM, size, color);
+      return BrandIcon.getImageSource(name as keyof typeof brandGM, size, color);
     case 'regular':
-      return Icons.regular.getImageSource(name as keyof typeof regularGM, size, color);
+      return RegularIcon.getImageSource(name as keyof typeof regularGM, size, color);
     case 'solid':
-      return Icons.solid.getImageSource(name as keyof typeof solidGM, size, color);
+      return SolidIcon.getImageSource(name as keyof typeof solidGM, size, color);
     default:
       console.warn(`noSuchIconTypeName: '${iconStyle}' icon type does not exist for FontAwesome5`);
-      return Icons.regular.getImageSource(name as keyof typeof regularGM, size, color);
+      return RegularIcon.getImageSource(name as keyof typeof regularGM, size, color);
   }
 };
 Icon.getImageSource = getImageSource;
@@ -153,35 +105,35 @@ Icon.getImageSource = getImageSource;
 type GetImageSourceSyncFunc = {
   (
     iconStyle: 'brand',
-    name: keyof typeof brandGM,
+    name: ComponentProps<typeof BrandIcon>['name'],
     size?: number,
     color?: TextStyle['color'],
-  ): ReturnType<(typeof Icons.brand)['getImageSourceSync']>;
+  ): ReturnType<(typeof BrandIcon)['getImageSourceSync']>;
   (
     iconStyle: 'regular',
-    name: keyof typeof regularGM,
+    name: ComponentProps<typeof RegularIcon>['name'],
     size?: number,
     color?: TextStyle['color'],
-  ): ReturnType<(typeof Icons.regular)['getImageSourceSync']>;
+  ): ReturnType<(typeof RegularIcon)['getImageSourceSync']>;
   (
     iconStyle: 'solid',
-    name: keyof typeof solidGM,
+    name: ComponentProps<typeof SolidIcon>['name'],
     size?: number,
     color?: TextStyle['color'],
-  ): ReturnType<(typeof Icons.solid)['getImageSourceSync']>;
+  ): ReturnType<(typeof SolidIcon)['getImageSourceSync']>;
 };
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const getImageSourceSync: GetImageSourceSyncFunc = (iconStyle, name, size = DEFAULT_ICON_SIZE, color = DEFAULT_ICON_COLOR) => {
   switch (iconStyle) {
     case 'brand':
-      return Icons.brand.getImageSourceSync(name as keyof typeof brandGM, size, color);
+      return BrandIcon.getImageSourceSync(name as keyof typeof brandGM, size, color);
     case 'regular':
-      return Icons.regular.getImageSourceSync(name as keyof typeof regularGM, size, color);
+      return RegularIcon.getImageSourceSync(name as keyof typeof regularGM, size, color);
     case 'solid':
-      return Icons.solid.getImageSourceSync(name as keyof typeof solidGM, size, color);
+      return SolidIcon.getImageSourceSync(name as keyof typeof solidGM, size, color);
     default:
       console.warn(`noSuchIconTypeName: '${iconStyle}' icon type does not exist for FontAwesome5`);
-      return Icons.regular.getImageSourceSync(name as keyof typeof regularGM, size, color);
+      return RegularIcon.getImageSourceSync(name as keyof typeof regularGM, size, color);
   }
 };
 Icon.getImageSourceSync = getImageSourceSync;
