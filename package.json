@@ -21,7 +21,6 @@
     "@biomejs/biome": "1.9.3",
     "@commitlint/config-conventional": "^19.5.0",
     "@evilmartians/lefthook": "^1.7.18",
-    "@johnf/react-native-owl": "^1.4.4",
     "@types/eslint": "^8.56.12",
     "@types/node": "^20.16.10",
     "@typescript-eslint/eslint-plugin": "^8.8.0",
