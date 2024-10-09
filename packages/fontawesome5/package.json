@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome5",
-  "version": "5.15.4-alpha.31",
+  "version": "5.15.4-alpha.32",
   "description": "Fontawesome5 font for react native vector icons",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -82,7 +82,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^0.0.1-alpha.23"
+    "@react-native-vector-icons/common": "^0.0.1-alpha.24"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "5.15.4",
