@@ -98,7 +98,10 @@ export const IconList = ({
 
   return (
     <View style={styles.container}>
-      <Text>{iconName}{iconStyle ? ` - ${iconStyle}` : ''}</Text>
+      <Text>
+        {iconName}
+        {iconStyle ? ` - ${iconStyle}` : ''}
+      </Text>
       <View style={styles.searchBar}>
         <TextInput
           testID="search"
