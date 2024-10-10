@@ -9,6 +9,9 @@ on:
       skip-directory:
         type: boolean
         description: Skip directory website deployment
+      pre-release:
+        type: boolean
+        description: Create a pre-release
   release:
     types: [created]
 
@@ -18,16 +21,23 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.inputs.skip-npm != 'true'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+
       - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ".node-version"
-          registry-url: 'https://registry.npmjs.org'
+        uses: actions/setup-node@v4
+
       - name: Install dependencies
         run: yarn --frozen-lockfile --non-interactive --silent
+
       - name: Publish to NPM
-        run: npm publish
+        if: github.event.inputs.pre-release != 'true'
+        run: yarn release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish pre-release to NPM
+        if: github.event.inputs.pre-release = 'true'
+        run: yarn prerelease
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -36,19 +46,21 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.inputs.skip-directory != 'true'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+
       - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ".node-version"
+        uses: actions/setup-node@v4
+
       - name: Install dependencies
         run: yarn --frozen-lockfile --non-interactive --silent
-        working-directory: directory
+        working-directory: packages/directory
+
       - name: Build directory
         run: yarn build
-        working-directory: directory
+        working-directory: packages/directory
+
       - name: Publish static assets to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.0.0
+        uses: JamesIves/github-pages-deploy-action@4
         with:
           branch: gh-pages
-          folder: directory/build
+          folder: packages/directory/build
