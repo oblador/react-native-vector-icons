@@ -63,9 +63,11 @@ const styles = StyleSheet.create({
 
 const getFilteredGlyphNames = (iconStyle: string | undefined, iconSet: IconSet, query: string) => {
   const icons = iconStyle
+    // @ts-expect-error because we don't export the glyphmap
     ? (iconSet.meta?.[iconStyle as keyof typeof iconSet.meta] || []).map((name) => [name])
     : iconSet.glyphNames;
 
+  // @ts-expect-error because we don't export the glyphmap
   return icons.filter((glyphNames) => glyphNames.find((glyphName) => glyphName.indexOf(query) !== -1));
 };
 
@@ -118,6 +120,7 @@ export const IconList = ({
         style={styles.list}
         renderItem={({ item }) => (
           <View style={styles.row}>
+            {/* @ts-expect-error because we are doing magic */}
             <Icon iconStyle={iconStyle} name={item[0]} size={20} style={styles.icon} />
             <Text selectable style={styles.text}>
               {item.join(', ')}

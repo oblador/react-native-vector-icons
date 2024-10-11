@@ -19,26 +19,47 @@ import Zocial from '@react-native-vector-icons/zocial';
 import createFontelloIconSet from '@react-native-vector-icons/fontello';
 import createIcoMoonIconSet from '@react-native-vector-icons/icomoon';
 
+// @ts-expect-error: We don't really want to export this
 import AntDGlyphs from '@react-native-vector-icons/ant-design/glyphmaps/AntDesign.json';
+// @ts-expect-error: We don't really want to export this
 import EntypoGlyphs from '@react-native-vector-icons/entypo/glyphmaps/Entypo.json';
+// @ts-expect-error: We don't really want to export this
 import EvilIconsGlyphs from '@react-native-vector-icons/evil-icons/glyphmaps/EvilIcons.json';
+// @ts-expect-error: We don't really want to export this
 import FeatherGlyphs from '@react-native-vector-icons/feather/glyphmaps/Feather.json';
+// @ts-expect-error: We don't really want to export this
 import FontAwesomeGlyphs from '@react-native-vector-icons/fontawesome/glyphmaps/FontAwesome.json';
+// @ts-expect-error: We don't really want to export this
 import FontAwesome5ProGlyphs from '@react-native-vector-icons/fontawesome5-pro/glyphmaps/FontAwesome5Pro.json';
+// @ts-expect-error: We don't really want to export this
 import FontAwesome5ProMeta from '@react-native-vector-icons/fontawesome5-pro/glyphmaps/FontAwesome5Pro_meta.json';
+// @ts-expect-error: We don't really want to export this
 import FontAwesome5Glyphs from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5.json';
+// @ts-expect-error: We don't really want to export this
 import FontAwesome5Meta from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5_meta.json';
+// @ts-expect-error: We don't really want to export this
 import FontAwesome6ProGlyphs from '@react-native-vector-icons/fontawesome6-pro/glyphmaps/FontAwesome6Pro.json';
+// @ts-expect-error: We don't really want to export this
 import FontAwesome6ProMeta from '@react-native-vector-icons/fontawesome6-pro/glyphmaps/FontAwesome6Pro_meta.json';
+// @ts-expect-error: We don't really want to export this
 import FontAwesome6Glyphs from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6.json';
+// @ts-expect-error: We don't really want to export this
 import FontAwesome6Meta from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6_meta.json';
+// @ts-expect-error: We don't really want to export this
 import FontistoGlyphs from '@react-native-vector-icons/fontisto/glyphmaps/Fontisto.json';
+// @ts-expect-error: We don't really want to export this
 import FoundationGlyphs from '@react-native-vector-icons/foundation/glyphmaps/Foundation.json';
+// @ts-expect-error: We don't really want to export this
 import IoniconsGlyphs from '@react-native-vector-icons/ionicons/glyphmaps/Ionicons.json';
+// @ts-expect-error: We don't really want to export this
 import MaterialDesignIconsGlyphs from '@react-native-vector-icons/material-design-icons/glyphmaps/MaterialDesignIcons.json';
+// @ts-expect-error: We don't really want to export this
 import MaterialIconsGlyphs from '@react-native-vector-icons/material-icons/glyphmaps/MaterialIcons.json';
+// @ts-expect-error: We don't really want to export this
 import OcticonsGlyphs from '@react-native-vector-icons/octicons/glyphmaps/Octicons.json';
+// @ts-expect-error: We don't really want to export this
 import SimpleLineIconsGlyphs from '@react-native-vector-icons/simple-line-icons/glyphmaps/SimpleLineIcons.json';
+// @ts-expect-error: We don't really want to export this
 import ZocialGlyphs from '@react-native-vector-icons/zocial/glyphmaps/Zocial.json';
 
 import FontelloConfig from './configs/fontello.config.json';
