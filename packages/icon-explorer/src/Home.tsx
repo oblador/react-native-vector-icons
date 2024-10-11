@@ -14,12 +14,11 @@ import {
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 
-// Import locally so we can mov it out
-// Detox doesn't work when things are animating
 import { createAnimatableComponent } from './animatable';
 
 import ICON_SETS from './icon-sets';
 
+// @ts-expect-error: We don't care this is wrong for the tests
 const AnimatableIcon = createAnimatableComponent(FontAwesome);
 
 const STYLING: (Parameters<typeof FontAwesome>[0] & {
