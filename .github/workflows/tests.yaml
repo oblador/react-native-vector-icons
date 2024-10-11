@@ -169,10 +169,6 @@ jobs:
 
       - name: Setup yarn
         run: |
-          xcrun simctl list || true
-
-      - name: Setup yarn
-        run: |
           corepack enable
 
       - uses: bahmutov/npm-install@v1
@@ -181,7 +177,6 @@ jobs:
 
       - name: Build
         run: |
-          xcodebuild -version
           yarn prepare
 
       - name: Set up RN version
