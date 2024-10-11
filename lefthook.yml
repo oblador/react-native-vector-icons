@@ -5,9 +5,10 @@ pre-commit:
       run: yarn lint:eslint
     biome:
       run: yarn lint:biome
-    types:
-      glob: "*.{json,js,ts,tsx}"
-      run: yarn lint:types
+    # NOTE: Disabled because it is too slow
+    # types:
+    #   glob: "*.{json,js,ts,tsx}"
+    #   run: yarn lint:types
 commit-msg:
   parallel: true
   commands:
