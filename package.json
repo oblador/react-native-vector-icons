@@ -11,7 +11,7 @@
     "test": "lerna run test",
     "lint:eslint": "eslint .",
     "lint:biome": "biome check .",
-    "lint:types": "bash -c 'for i in packages/*; do if [ -f $i/tsconfig.json ]; then tsc -p $i/tsconfig.json; fi; done'",
+    "lint:types": "bash -c 'for i in packages/*; do if [ -f $i/tsconfig.json ]; then tsc --noEmit -p $i/tsconfig.json; fi; done'",
     "lint": "yarn lint:eslint; yarn lint:biome",
     "release": "lerna publish --no-private",
     "prerelease": "lerna publish --no-private prerelease",
