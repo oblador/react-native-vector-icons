@@ -38,8 +38,6 @@
     "!**/.*"
   ],
   "scripts": {
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build ios/build lib",
     "prepare": "bob build && ../../scripts/fix-glyphmaps.sh",
     "watch": "onchange 'src/**' --initial -- yarn run prepare"
