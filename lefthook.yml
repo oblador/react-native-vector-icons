@@ -1,12 +1,13 @@
 pre-commit:
   parallel: true
-  # commands:
-    # lint:
-    #   glob: "*.{js,ts,jsx,tsx}"
-    #   run: npx eslint {staged_files}
-    # types:
-    #   glob: "*.{js,ts, jsx, tsx}"
-    #   run: npx tsc
+  commands:
+    eslint:
+      run: yarn lint:eslint
+    biome:
+      run: yarn lint:biome
+    types:
+      glob: "*.{json,js,ts,tsx}"
+      run: yarn lint:types
 commit-msg:
   parallel: true
   commands:

@@ -61,10 +61,14 @@ const App = () => {
       case 'Home':
         return <Home navigator={navigateToIconSet} multiNavigator={navigateToMultiIconSet} />;
       case 'IconSet':
-        {/* @ts-expect-error We are doing some strange things */}
+        {
+          /* @ts-expect-error We are doing some strange things */
+        }
         return <IconList iconName={state.iconName} iconStyle={state.iconStyle} />;
       case 'MultiIconSet':
-        {/* @ts-expect-error We are doing some strange things */}
+        {
+          /* @ts-expect-error We are doing some strange things */
+        }
         return <MultiIconList iconName={state.iconName} navigator={navigateToIconSetWithStyle} />;
       default:
         throw new Error('Invalid view');
