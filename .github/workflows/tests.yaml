@@ -29,6 +29,7 @@ jobs:
       - name: Gradle cache
         uses: gradle/actions/setup-gradle@v3
         with:
+          add-job-summary: never
           # TODO: Remove this after we merge
           cache-read-only: ${{ github.ref != 'refs/heads/master' && github.ref != 'refs/heads/monorepo' }}
 
