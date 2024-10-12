@@ -206,7 +206,7 @@ jobs:
 
       - name: Run simulator
         id: simulator
-        uses: futureware-tech/simulator-action@v1
+        uses: futureware-tech/simulator-action@v3
         with:
           os: 'iOS'
           os_version: "=17.5"
