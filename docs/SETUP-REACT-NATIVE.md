@@ -11,7 +11,7 @@
 1. To use the icon packages you previously installed on iOS, run:
 
 ```sh
-npx rnvi-update-plist packages.json ios/AppName/Info.plist
+npx rnvi-update-plist package.json ios/AppName/Info.plist
 ```
 
 2. Open `ios/Info.plist` and verify that the property called **Fonts provided by application** (or **UIAppFonts** if opening the file in a text editor) is present and contains the expected entries. For example:
