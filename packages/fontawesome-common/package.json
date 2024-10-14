@@ -52,7 +52,6 @@
     "@react-native-vector-icons/common": "^11.0.0-alpha.0"
   },
   "devDependencies": {
-    "del-cli": "^6.0.0",
     "typescript": "^5.6.3",
     "yargs": "^17.7.2"
   },

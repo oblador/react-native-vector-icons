@@ -4555,7 +4555,6 @@ __metadata:
   resolution: "@react-native-vector-icons/fontawesome-common@workspace:packages/fontawesome-common"
   dependencies:
     "@react-native-vector-icons/common": "npm:^11.0.0-alpha.0"
-    del-cli: "npm:^6.0.0"
     typescript: "npm:^5.6.3"
     yargs: "npm:^17.7.2"
   bin:
