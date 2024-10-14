@@ -94,6 +94,8 @@ jobs:
       - name: Build
         run: |
           yarn prepare
+          # We don't package them so remove them
+          rm -rf android/generated
 
       - name: Set up RN version
         run: |
@@ -179,6 +181,8 @@ jobs:
       - name: Build
         run: |
           yarn prepare
+          # We don't package them so remove them
+          rm -rf ios/generated
 
       - name: Set up RN version
         run: |
@@ -193,17 +197,14 @@ jobs:
           mkdir -p node_modules/@johnf
           cd node_modules
           cp -a ../../../node_modules/@johnf/react-native-owl @johnf/
-          ln -nfs ../../../node_modules/react-native react-native
           cd -
           # Due to react-native-test-app not bundling
           yarn build:ios:owl
-          rm -rf ios/generated
           if [ "${{ matrix.arch }}" = "new" ]; then
             NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=1 pod update --project-directory=ios
           else
             NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=0 pod update --project-directory=ios
           fi
-          rm -rf ios/generated
           yarn test:ios:build
 
       - name: Run simulator
