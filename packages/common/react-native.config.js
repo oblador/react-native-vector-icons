@@ -5,7 +5,8 @@ module.exports = {
   dependency: {
     platforms: {
       android: {
-        cmakeListsPath: 'generated/jni/CMakeLists.txt',
+        // NOTE: We aren't shipping generated files as this eesm to break react 0.73 due to missing include paths for react-native
+        cmakeListsPath: 'build/generated/source/codegen/jni/CMakeLists.txt',
       },
     },
   },

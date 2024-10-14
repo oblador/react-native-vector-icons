@@ -151,7 +151,7 @@
     "android": {
       "javaPackageName": "com.reactnativevectoricons.common"
     },
-    "includesGeneratedCode": true
+    "includesGeneratedCode": false
   },
   "create-react-native-library": {
     "type": "module-mixed",
