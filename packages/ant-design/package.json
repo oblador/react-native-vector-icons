@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/ant-design",
-  "version": "4.4.2-alpha.31",
+  "version": "4.4.2-alpha.32",
   "description": "Ant Design font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
@@ -80,7 +80,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^11.0.0-alpha.1"
+    "@react-native-vector-icons/common": "^11.0.0-alpha.2"
   },
   "devDependencies": {
     "@ant-design/icons-svg": "4.4.2",
