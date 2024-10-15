@@ -12,12 +12,12 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "mem-fs": "^4.1.0",
+    "mem-fs": "^4.1.1",
     "npm-registry-fetch": "^18.0.1",
     "oslllo-svg-fixer": "^5.0.0",
     "registry-auth-token": "^5.0.2",
     "semver": "^7.6.3",
-    "yeoman-generator": "^7.3.2"
+    "yeoman-generator": "^7.3.3"
   },
   "devDependencies": {
     "@types/npm-registry-fetch": "^8.0.7",

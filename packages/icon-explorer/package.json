@@ -48,8 +48,8 @@
     "react-native-animatable": "^1.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.7",
-    "@babel/preset-env": "^7.25.7",
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
     "@babel/runtime": "^7.25.7",
     "@expo/config-plugins": "^8.0.10",
     "@jest/types": "^29.6.3",
@@ -60,7 +60,7 @@
     "@react-native/typescript-config": "^0.75.4",
     "@rnx-kit/align-deps": "^3.0.1",
     "@rnx-kit/babel-preset-metro-react-native": "^2.0.0",
-    "@rnx-kit/metro-config": "^2.0.0",
+    "@rnx-kit/metro-config": "^2.0.1",
     "@types/jest": "^29.5.13",
     "@types/node": "^20.16.11",
     "@types/react": "^18.3.11",
@@ -70,7 +70,7 @@
     "get-yarn-workspaces": "^1.0.2",
     "jest": "^29.7.0",
     "jest-junit": "^16.0.0",
-    "react-native-test-app": "^3.10.14",
+    "react-native-test-app": "^3.10.15",
     "react-test-renderer": "18.3.1",
     "ts-jest": "^29.2.5",
     "typescript": "^5.6.3"
