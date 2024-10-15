@@ -95,7 +95,7 @@ jobs:
         run: |
           yarn prepare
           # We don't package them so remove them
-          rm -rf packages/icon-explorer/android/generated
+          rm -rf packages/common/android/generated
 
       - name: Set up RN version
         run: |
@@ -182,7 +182,7 @@ jobs:
         run: |
           yarn prepare
           # We don't package them so remove them
-          rm -rf packages/icon-explorer/ios/generated
+          rm -rf packages/common/ios/generated
 
       - name: Set up RN version
         run: |
