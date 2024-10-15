@@ -194,10 +194,10 @@ jobs:
         run: |
           cd packages/icon-explorer
           # Work around mono repo issues with owl
-          mkdir -p node_modules/@johnf
-          cd node_modules
-          cp -a ../../../node_modules/@johnf/react-native-owl @johnf/
-          cd -
+          # mkdir -p node_modules/@johnf
+          # cd node_modules
+          # cp -a ../../../node_modules/@johnf/react-native-owl @johnf/
+          # cd -
           # Due to react-native-test-app not bundling
           yarn build:ios:owl
           if [ "${{ matrix.arch }}" = "new" ]; then
