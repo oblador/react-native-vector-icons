@@ -1,6 +1,6 @@
 ---
-name: Bug report
-description: Create a report to help us improve
+name: "\U0001F41B Bug report"
+description: Report a bug
 title: "[Bug]: "
 labels: ["bug", "triage"]
 body:
@@ -11,34 +11,56 @@ body:
         Before filing a bug report please:
         - Review the documentation: https://github.com/react-native-vector-icons/react-native-vector-icons
         - Search for existing issues (including closed issues): https://github.com/oblador/react-native-vector-icons/issues?q=is%3Aissue+
+
   - type: dropdown
     id: generation
     attributes:
-      label: Which packages are you using?
-      multiple: true
+      label: Which package are you using?
       options:
         - "@react-native-vector-icons/*"
         - react-native-vector-icons
     validations:
       required: true
+
+  - type: dropdown
+    attributes:
+      label: What platform(s) does this occur on?
+      multiple: true
+      options:
+        - Android
+        - iOS
+        - web
+    validations:
+      required: true
+
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      description: |
+        Explain the issue and the steps we need to take to reproduce the issue. Include a video or screenshots if you think it may help.
+        Clearly describe what the expected behavior is and what instead is actually happening.
     validations:
       required: true
+
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
+
   - type: textarea
     id: demo
     attributes:
-      label: Reproducible Demo
+      label: Minimal reproducible example
       description: |
         Let us know how to reproduce the issue. Include a code sample, share a project, or share an app that reproduces the issue using https://snack.expo.io/. Please follow the guidelines for providing a MCVE: https://stackoverflow.com/help/mcve
+
+  - type: textarea
+    attributes:
+      render: text
+      label: Your computer environment
+      description: Run the `npx react-native info` command and paste its output in the field below.
+    validations:
+      required: true
