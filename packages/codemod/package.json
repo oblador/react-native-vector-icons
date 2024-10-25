@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/codemod",
-  "version": "11.0.0-alpha.0",
+  "version": "11.0.0-alpha.1",
   "description": "Tool to help users migrate from react-native-vector-icons to @react-native-vector-icons/*",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

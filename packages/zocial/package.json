@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/zocial",
-  "version": "1.1.1-alpha.33",
+  "version": "1.1.1-alpha.34",
   "description": "Zocial font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
@@ -80,7 +80,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^11.0.0-alpha.3"
+    "@react-native-vector-icons/common": "^11.0.0-alpha.4"
   },
   "devDependencies": {
     "css-social-buttons": "1.1.1",
