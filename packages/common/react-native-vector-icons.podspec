@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
 
       WITH_ENVIRONMENT="$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh"
 
-      /bin/sh -c "$WITH_ENVIRONMENT" "${PODS_TARGET_SRCROOT}/scripts/copy-fonts.sh"
+      /bin/sh -c "\"$WITH_ENVIRONMENT\" \"${PODS_TARGET_SRCROOT}/scripts/copy-fonts.sh\""
     SCRIPT
   }
 end
