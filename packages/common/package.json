@@ -19,6 +19,7 @@
     }
   },
   "files": [
+    "scripts",
     "src",
     "lib",
     "android",
