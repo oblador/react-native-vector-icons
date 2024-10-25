@@ -7,7 +7,7 @@ set -e
 if [ "$OSTYPE" == "osx" ]; then
   ISED='sed -i ""'
 else # $OSTYPE == linux64
-  ISED='sed -i""'
+  ISED='sed -i'
 fi
 
 $ISED 's/..\/glyphmaps/..\/..\/glyphmaps/' lib/commonjs/index.js
