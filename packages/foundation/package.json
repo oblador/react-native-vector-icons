@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/foundation",
-  "version": "2.0.0-alpha.31",
+  "version": "2.0.0-alpha.32",
   "description": "Foundation font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
@@ -80,7 +80,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^11.0.0-alpha.2"
+    "@react-native-vector-icons/common": "^11.0.0-alpha.3"
   },
   "devDependencies": {
     "del-cli": "^6.0.0",
