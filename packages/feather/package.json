@@ -86,7 +86,7 @@
     "del-cli": "^6.0.0",
     "feather-icons": "4.29.2",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.30.2",
+    "react-native-builder-bob": "^0.30.3",
     "typescript": "^5.6.3"
   },
   "peerDependencies": {
