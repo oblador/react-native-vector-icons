@@ -72,7 +72,7 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
    ```
 2. Install the packages for the icons you want use
    ```sh
-   npm install --save @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evilicons
+   npm install --save @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evil-icons
    ```
 3. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
 4. If you are using one of the following fonts refer to their guides for further instructions
