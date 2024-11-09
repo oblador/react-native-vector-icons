@@ -59,7 +59,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "jscodeshift": "^17.0.0",
+    "jscodeshift": "^17.1.1",
     "plist": "^3.1.0"
   },
   "devDependencies": {
@@ -67,7 +67,7 @@
     "@types/plist": "^3.0.5",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.30.3",
+    "react-native-builder-bob": "^0.31.0",
     "typescript": "^5.6.3"
   },
   "engines": {

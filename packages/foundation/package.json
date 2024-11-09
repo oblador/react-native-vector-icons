@@ -86,7 +86,7 @@
     "del-cli": "^6.0.0",
     "foundation-icons": "2.0.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.30.3",
+    "react-native-builder-bob": "^0.31.0",
     "typescript": "^5.6.3"
   },
   "peerDependencies": {
