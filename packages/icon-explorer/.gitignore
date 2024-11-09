@@ -14,6 +14,3 @@ dist/*
 local.properties
 msbuild.binlog
 node_modules/
-e2e/output
-e2e/diff
-e2e/artifacts

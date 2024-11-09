@@ -21,15 +21,19 @@ echo "Switching to $VERSION (arch: $ARCH)"
 
 case $VERSION in
 0.73)
-  GRADLE_VERSION=8.3
+  GRADLE_VERSION=8.3-bin
   ;;
 
 0.74)
-  GRADLE_VERSION=8.6
+  GRADLE_VERSION=8.6-bin
   ;;
 
 0.75)
-  GRADLE_VERSION=8.8
+  GRADLE_VERSION=8.8-bin
+  ;;
+
+0.77)
+  GRADLE_VERSION=8.10.2-all
   ;;
 
 *)
@@ -39,7 +43,7 @@ case $VERSION in
 esac
 
 echo "Setting gradle version to $GRADLE_VERSION"
-sed -i.bak "s/gradle-[0-9.]*-bin.zip/gradle-$GRADLE_VERSION-bin.zip/" android/gradle/wrapper/gradle-wrapper.properties
+sed -i.bak "s/gradle-.*.zip/gradle-$GRADLE_VERSION.zip/" android/gradle/wrapper/gradle-wrapper.properties
 rm android/gradle/wrapper/gradle-wrapper.properties.bak
 
 yarn rnx-align-deps --requirements react-native@"$VERSION" --write
@@ -65,4 +69,6 @@ cd -
 
 if [ "$ARCH" = "new" ]; then
   echo "newArchEnabled=true" >>android/gradle.properties
+else
+  echo "newArchEnabled=false" >>android/gradle.properties
 fi
