@@ -17,7 +17,7 @@ const extractGlyphMapFromCodepoints = (fileName: string) => {
 
 const extractGlyphMapFromCss = (files: string[], selectorPattern: string) => {
   const styleRulePattern =
-    '(\\.[A-Za-z0-9_.:, \\n\\t-]+)\\{[^}]*content: ?["\\\'](?:\\\\([A-Fa-f0-9]+)|([^"\\\']+))["\\\'][^}]*\\}';
+    '(\\.[A-Za-z0-9_.:, \\n\\t-]+)\\{[^}]*(?:content|--fa): ?["\\\'](?:\\\\([A-Fa-f0-9]+)|([^"\\\']+))["\\\'][^}]*\\}';
   const allStyleRules = new RegExp(styleRulePattern, 'g');
   const singleStyleRules = new RegExp(styleRulePattern);
   const allSelectors = new RegExp(selectorPattern, 'g');
@@ -75,7 +75,7 @@ export const generateGlyphmap = (mode: 'css' | 'codepoints', files: string[], se
   if (!files[0]) {
     throw new Error('No files provided');
   }
-  const selectorPattern = `${escapeRegExp(selectorPrefix)}([A-Za-z0-9_-]+)::?before`;
+  const selectorPattern = `${escapeRegExp(selectorPrefix)}([A-Za-z0-9_-]+)(?:::?before)?`;
   const glyphMap =
     mode === 'css' ? extractGlyphMapFromCss(files, selectorPattern) : extractGlyphMapFromCodepoints(files[0]);
 
