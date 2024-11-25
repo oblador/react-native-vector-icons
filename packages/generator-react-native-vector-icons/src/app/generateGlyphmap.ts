@@ -22,7 +22,7 @@ const extractGlyphMapFromCss = (fileName: string, selectorPrefix: string) => {
   const css = fs.readFileSync(fileName, 'utf-8');
   const glyphMap: Record<string, number> = {};
 
-  const selectorPattern = `${escapeRegExp(selectorPrefix)}([A-Za-z0-9_-]+):?before`;
+  const selectorPattern = `${escapeRegExp(selectorPrefix)}([A-Za-z0-9_-]+)::?before`;
   postcss.parse(css).walkRules((rule) => {
     const iconNames: string[] = [];
     const transform = (selectors: parser.Root) => {
@@ -38,6 +38,38 @@ const extractGlyphMapFromCss = (fileName: string, selectorPrefix: string) => {
 
     const contents: string[] = [];
     rule.walkDecls('content', (decl) => {
+      const content = decl.value.replace(/['"]/g, ''); // Remove quotes
+      contents.push(content);
+    });
+
+    const content = contents[0];
+    if (!content || content === 'var(--fa)') {
+      return;
+    }
+    const codePoint = Number.parseInt(content.slice(1), 16);
+
+    iconNames.forEach((iconName) => {
+      glyphMap[iconName] = codePoint;
+    });
+  });
+
+  // TODO: Quick hack for fontawesome - refactor this to be more general
+  const selectorPatternFA = `${escapeRegExp(selectorPrefix)}([A-Za-z0-9_-]+)$`;
+  postcss.parse(css).walkRules((rule) => {
+    const iconNames: string[] = [];
+    const transform = (selectors: parser.Root) => {
+      selectors.walk((selector) => {
+        const md = selector.toString().match(selectorPatternFA);
+        if (md?.[1]) {
+          iconNames.push(md[1]);
+        }
+      });
+    };
+
+    parser(transform).processSync(rule.selector);
+
+    const contents: string[] = [];
+    rule.walkDecls('--fa', (decl) => {
       const content = decl.value.replace(/['"]/g, ''); // Remove quotes
       contents.push(content);
     });
