@@ -346,7 +346,7 @@ export default class extends Generator<Arguments> {
     }
 
     locations.forEach(([from, to]) => {
-      const json = generateGlyphmap(glyphmap.mode, [from], glyphmap.prefix);
+      const json = generateGlyphmap(glyphmap.mode, from, glyphmap.prefix);
 
       fs.writeFileSync(`glyphmaps/${to}.json`, json);
 
