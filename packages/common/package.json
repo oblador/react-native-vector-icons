@@ -99,7 +99,7 @@
     "react-native": "0.76.1",
     "react-native-builder-bob": "^0.31.0",
     "turbo": "^1.13.4",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "resolutions": {
     "@types/react": "^18.2.44"
