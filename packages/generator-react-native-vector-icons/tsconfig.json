@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "rootDir": "./src",
+    "outDir": "./generators"
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", "src/*/templates"]
+}

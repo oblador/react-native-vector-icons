@@ -1,0 +1,17 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "zocial",
+    "postScriptName": "zocial",
+    "upstreamFont": "css-social-buttons",
+    "buildSteps": {
+      "glyphmap": {
+        "location": "../../node_modules/css-social-buttons/css/zocial.css",
+        "mode": "css",
+        "prefix": ".zocial."
+      },
+      "copyFont": {
+        "location": "../../node_modules/css-social-buttons/css/zocial.ttf"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "feather",
+    "upstreamFont": "feather-icons",
+    "buildSteps": {
+      "fixSVGPaths": {
+        "location": "../../node_modules/feather-icons/dist/icons"
+      },
+      "fontCustom": {
+        "location": "fixedSvg",
+        "cleanup": true
+      },
+      "glyphmap": {
+        "mode": "css",
+        "cleanup": true
+      }
+    }
+  }
+}

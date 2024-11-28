@@ -1,0 +1,43 @@
+buildscript {
+    apply(from: {
+        def searchDir = rootDir.toPath()
+        do {
+            def p = searchDir.resolve("node_modules/react-native-test-app/android/dependencies.gradle")
+            if (p.toFile().exists()) {
+                return p.toRealPath().toString()
+            }
+        } while (searchDir = searchDir.getParent())
+        throw new GradleException("Could not find `react-native-test-app`");
+    }())
+
+    repositories {
+        mavenCentral()
+        google()
+    }
+
+    dependencies {
+        getReactNativeDependencies().each { dependency ->
+            classpath(dependency)
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url({
+                def searchDir = rootDir.toPath()
+                do {
+                    def p = searchDir.resolve("node_modules/react-native/android")
+                    if (p.toFile().exists()) {
+                        return p.toRealPath().toString()
+                    }
+                } while (searchDir = searchDir.getParent())
+                throw new GradleException("Could not find `react-native`");
+            }())
+        }
+        mavenCentral()
+        google()
+    }
+}

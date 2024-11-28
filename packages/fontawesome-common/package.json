@@ -1,0 +1,66 @@
+{
+  "name": "@react-native-vector-icons/fontawesome-common",
+  "version": "11.0.0",
+  "description": "Fontawesome 5 & 6 Pro  Common library for react native vector icons",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "osx",
+    "windows",
+    "macos",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ui",
+    "icon",
+    "icons",
+    "vector",
+    "retina",
+    "font",
+    "fontawesome"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oblador/react-native-vector-icons.git"
+  },
+  "author": {
+    "name": "Joel Arvidsson",
+    "email": "joel@oblador.se"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/oblador/react-native-vector-icons",
+  "bugs": {
+    "url": "https://github.com/oblador/react-native-vector-icons/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@react-native-vector-icons/common": "^11.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
+  },
+  "bin": {
+    "fa-upgrade.sh": "./bin/fa-upgrade.sh",
+    "fa-upgrade5.sh": "./bin/fa-upgrade5.sh",
+    "fa-upgrade6.sh": "./bin/fa-upgrade6.sh"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "evil-icons",
+    "upstreamFont": "evil-icons",
+    "buildSteps": {
+      "fontCustom": {
+        "location": "node_modules/evil-icons/assets/icons"
+      },
+      "glyphmap": {
+        "mode": "css",
+        "prefix": "icon-ei-",
+        "cleanup": true
+      }
+    }
+  }
+}

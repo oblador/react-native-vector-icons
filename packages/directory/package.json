@@ -1,0 +1,44 @@
+{
+  "name": "@react-native-vector-icons/directory",
+  "version": "11.0.0",
+  "private": true,
+  "homepage": "https://oblador.github.io/react-native-vector-icons",
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^20.17.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "glob": "^11.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^5.6.3",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "generate-glyphmap-index": "mkdir -p src/generated && node bin/generate-glyphmap-index.js > src/generated/glyphmapIndex.json",
+    "generate-font-index": "mkdir -p src/generated/fonts && cp ../*/fonts/*.ttf src/generated/fonts && node bin/generate-font-styles.js > src/generated/fonts.css",
+    "prepare": "yarn generate-glyphmap-index && yarn generate-font-index"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0"
+  }
+}

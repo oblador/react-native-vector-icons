@@ -1,0 +1,327 @@
+{
+  "checksum": {
+    "previous": "79a1752fda5ce7dab8867765a9f1cfc076fddef04009d50daf870a670d42365d",
+    "current": "79a1752fda5ce7dab8867765a9f1cfc076fddef04009d50daf870a670d42365d"
+  },
+  "fonts": [
+    "EvilIcons/EvilIcons.ttf",
+    "EvilIcons/EvilIcons.svg",
+    "EvilIcons/EvilIcons.woff",
+    "EvilIcons/EvilIcons.eot",
+    "EvilIcons/EvilIcons.woff2"
+  ],
+  "glyphs": {
+    "ei-archive": {
+      "codepoint": 61696,
+      "source": "node_modules/evil-icons/assets/icons/ei-archive.svg"
+    },
+    "ei-arrow-down": {
+      "codepoint": 61697,
+      "source": "node_modules/evil-icons/assets/icons/ei-arrow-down.svg"
+    },
+    "ei-arrow-left": {
+      "codepoint": 61698,
+      "source": "node_modules/evil-icons/assets/icons/ei-arrow-left.svg"
+    },
+    "ei-arrow-right": {
+      "codepoint": 61699,
+      "source": "node_modules/evil-icons/assets/icons/ei-arrow-right.svg"
+    },
+    "ei-arrow-up": {
+      "codepoint": 61700,
+      "source": "node_modules/evil-icons/assets/icons/ei-arrow-up.svg"
+    },
+    "ei-bell": {
+      "codepoint": 61701,
+      "source": "node_modules/evil-icons/assets/icons/ei-bell.svg"
+    },
+    "ei-calendar": {
+      "codepoint": 61702,
+      "source": "node_modules/evil-icons/assets/icons/ei-calendar.svg"
+    },
+    "ei-camera": {
+      "codepoint": 61703,
+      "source": "node_modules/evil-icons/assets/icons/ei-camera.svg"
+    },
+    "ei-cart": {
+      "codepoint": 61704,
+      "source": "node_modules/evil-icons/assets/icons/ei-cart.svg"
+    },
+    "ei-chart": {
+      "codepoint": 61705,
+      "source": "node_modules/evil-icons/assets/icons/ei-chart.svg"
+    },
+    "ei-check": {
+      "codepoint": 61706,
+      "source": "node_modules/evil-icons/assets/icons/ei-check.svg"
+    },
+    "ei-chevron-down": {
+      "codepoint": 61707,
+      "source": "node_modules/evil-icons/assets/icons/ei-chevron-down.svg"
+    },
+    "ei-chevron-left": {
+      "codepoint": 61708,
+      "source": "node_modules/evil-icons/assets/icons/ei-chevron-left.svg"
+    },
+    "ei-chevron-right": {
+      "codepoint": 61709,
+      "source": "node_modules/evil-icons/assets/icons/ei-chevron-right.svg"
+    },
+    "ei-chevron-up": {
+      "codepoint": 61710,
+      "source": "node_modules/evil-icons/assets/icons/ei-chevron-up.svg"
+    },
+    "ei-clock": {
+      "codepoint": 61711,
+      "source": "node_modules/evil-icons/assets/icons/ei-clock.svg"
+    },
+    "ei-close": {
+      "codepoint": 61712,
+      "source": "node_modules/evil-icons/assets/icons/ei-close.svg"
+    },
+    "ei-close-o": {
+      "codepoint": 61713,
+      "source": "node_modules/evil-icons/assets/icons/ei-close-o.svg"
+    },
+    "ei-comment": {
+      "codepoint": 61714,
+      "source": "node_modules/evil-icons/assets/icons/ei-comment.svg"
+    },
+    "ei-credit-card": {
+      "codepoint": 61715,
+      "source": "node_modules/evil-icons/assets/icons/ei-credit-card.svg"
+    },
+    "ei-envelope": {
+      "codepoint": 61716,
+      "source": "node_modules/evil-icons/assets/icons/ei-envelope.svg"
+    },
+    "ei-exclamation": {
+      "codepoint": 61717,
+      "source": "node_modules/evil-icons/assets/icons/ei-exclamation.svg"
+    },
+    "ei-external-link": {
+      "codepoint": 61718,
+      "source": "node_modules/evil-icons/assets/icons/ei-external-link.svg"
+    },
+    "ei-eye": {
+      "codepoint": 61719,
+      "source": "node_modules/evil-icons/assets/icons/ei-eye.svg"
+    },
+    "ei-gear": {
+      "codepoint": 61720,
+      "source": "node_modules/evil-icons/assets/icons/ei-gear.svg"
+    },
+    "ei-heart": {
+      "codepoint": 61721,
+      "source": "node_modules/evil-icons/assets/icons/ei-heart.svg"
+    },
+    "ei-image": {
+      "codepoint": 61722,
+      "source": "node_modules/evil-icons/assets/icons/ei-image.svg"
+    },
+    "ei-like": {
+      "codepoint": 61723,
+      "source": "node_modules/evil-icons/assets/icons/ei-like.svg"
+    },
+    "ei-link": {
+      "codepoint": 61724,
+      "source": "node_modules/evil-icons/assets/icons/ei-link.svg"
+    },
+    "ei-location": {
+      "codepoint": 61725,
+      "source": "node_modules/evil-icons/assets/icons/ei-location.svg"
+    },
+    "ei-lock": {
+      "codepoint": 61726,
+      "source": "node_modules/evil-icons/assets/icons/ei-lock.svg"
+    },
+    "ei-minus": {
+      "codepoint": 61727,
+      "source": "node_modules/evil-icons/assets/icons/ei-minus.svg"
+    },
+    "ei-navicon": {
+      "codepoint": 61728,
+      "source": "node_modules/evil-icons/assets/icons/ei-navicon.svg"
+    },
+    "ei-paperclip": {
+      "codepoint": 61729,
+      "source": "node_modules/evil-icons/assets/icons/ei-paperclip.svg"
+    },
+    "ei-pencil": {
+      "codepoint": 61730,
+      "source": "node_modules/evil-icons/assets/icons/ei-pencil.svg"
+    },
+    "ei-play": {
+      "codepoint": 61731,
+      "source": "node_modules/evil-icons/assets/icons/ei-play.svg"
+    },
+    "ei-plus": {
+      "codepoint": 61732,
+      "source": "node_modules/evil-icons/assets/icons/ei-plus.svg"
+    },
+    "ei-pointer": {
+      "codepoint": 61733,
+      "source": "node_modules/evil-icons/assets/icons/ei-pointer.svg"
+    },
+    "ei-question": {
+      "codepoint": 61734,
+      "source": "node_modules/evil-icons/assets/icons/ei-question.svg"
+    },
+    "ei-redo": {
+      "codepoint": 61735,
+      "source": "node_modules/evil-icons/assets/icons/ei-redo.svg"
+    },
+    "ei-refresh": {
+      "codepoint": 61736,
+      "source": "node_modules/evil-icons/assets/icons/ei-refresh.svg"
+    },
+    "ei-retweet": {
+      "codepoint": 61737,
+      "source": "node_modules/evil-icons/assets/icons/ei-retweet.svg"
+    },
+    "ei-sc-facebook": {
+      "codepoint": 61738,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-facebook.svg"
+    },
+    "ei-sc-github": {
+      "codepoint": 61739,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-github.svg"
+    },
+    "ei-sc-google-plus": {
+      "codepoint": 61740,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-google-plus.svg"
+    },
+    "ei-sc-instagram": {
+      "codepoint": 61741,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-instagram.svg"
+    },
+    "ei-sc-linkedin": {
+      "codepoint": 61742,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-linkedin.svg"
+    },
+    "ei-sc-odnoklassniki": {
+      "codepoint": 61743,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-odnoklassniki.svg"
+    },
+    "ei-sc-pinterest": {
+      "codepoint": 61744,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-pinterest.svg"
+    },
+    "ei-sc-skype": {
+      "codepoint": 61745,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-skype.svg"
+    },
+    "ei-sc-soundcloud": {
+      "codepoint": 61746,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-soundcloud.svg"
+    },
+    "ei-sc-telegram": {
+      "codepoint": 61747,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-telegram.svg"
+    },
+    "ei-sc-tumblr": {
+      "codepoint": 61748,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-tumblr.svg"
+    },
+    "ei-sc-twitter": {
+      "codepoint": 61749,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-twitter.svg"
+    },
+    "ei-sc-vimeo": {
+      "codepoint": 61750,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-vimeo.svg"
+    },
+    "ei-sc-vk": {
+      "codepoint": 61751,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-vk.svg"
+    },
+    "ei-sc-youtube": {
+      "codepoint": 61752,
+      "source": "node_modules/evil-icons/assets/icons/ei-sc-youtube.svg"
+    },
+    "ei-search": {
+      "codepoint": 61753,
+      "source": "node_modules/evil-icons/assets/icons/ei-search.svg"
+    },
+    "ei-share-apple": {
+      "codepoint": 61754,
+      "source": "node_modules/evil-icons/assets/icons/ei-share-apple.svg"
+    },
+    "ei-share-google": {
+      "codepoint": 61755,
+      "source": "node_modules/evil-icons/assets/icons/ei-share-google.svg"
+    },
+    "ei-spinner": {
+      "codepoint": 61756,
+      "source": "node_modules/evil-icons/assets/icons/ei-spinner.svg"
+    },
+    "ei-spinner-2": {
+      "codepoint": 61757,
+      "source": "node_modules/evil-icons/assets/icons/ei-spinner-2.svg"
+    },
+    "ei-spinner-3": {
+      "codepoint": 61758,
+      "source": "node_modules/evil-icons/assets/icons/ei-spinner-3.svg"
+    },
+    "ei-star": {
+      "codepoint": 61759,
+      "source": "node_modules/evil-icons/assets/icons/ei-star.svg"
+    },
+    "ei-tag": {
+      "codepoint": 61760,
+      "source": "node_modules/evil-icons/assets/icons/ei-tag.svg"
+    },
+    "ei-trash": {
+      "codepoint": 61761,
+      "source": "node_modules/evil-icons/assets/icons/ei-trash.svg"
+    },
+    "ei-trophy": {
+      "codepoint": 61762,
+      "source": "node_modules/evil-icons/assets/icons/ei-trophy.svg"
+    },
+    "ei-undo": {
+      "codepoint": 61763,
+      "source": "node_modules/evil-icons/assets/icons/ei-undo.svg"
+    },
+    "ei-unlock": {
+      "codepoint": 61764,
+      "source": "node_modules/evil-icons/assets/icons/ei-unlock.svg"
+    },
+    "ei-user": {
+      "codepoint": 61765,
+      "source": "node_modules/evil-icons/assets/icons/ei-user.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "copyright": "",
+    "css3": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "EvilIcons",
+    "force": true,
+    "input": {
+      "templates": "node_modules/evil-icons/assets/icons",
+      "vectors": "node_modules/evil-icons/assets/icons"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "EvilIcons",
+      "fonts": "EvilIcons",
+      "preview": "EvilIcons"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css"
+    ]
+  },
+  "templates": [
+    "EvilIcons/EvilIcons.css"
+  ]
+}

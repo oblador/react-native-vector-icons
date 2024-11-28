@@ -1,0 +1,83 @@
+name: Lint
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  eslint:
+    name: eslint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Setup yarn
+        run: corepack enable
+      - uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --immutable
+
+      - name: Build
+        run: |
+          yarn prepare
+
+      - name: Lint files
+        run: yarn lint:eslint
+
+  biome:
+    name: biome
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Setup yarn
+        run: corepack enable
+      - uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --immutable
+
+      - name: Build
+        run: |
+          yarn prepare
+
+      - name: Lint files
+        run: yarn lint:biome
+
+  types:
+    name: biome
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Setup yarn
+        run: corepack enable
+      - uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --immutable
+
+      - name: Build
+        run: |
+          yarn prepare
+
+      - name: Typecheck files
+        run: yarn lint:types
+
+
+  knip:
+    name: knip
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Setup yarn
+        run: corepack enable
+      - uses: bahmutov/npm-install@v1
+        with:
+          install-command: yarn --immutable
+
+      - name: Check for unused things
+        run: yarn knip

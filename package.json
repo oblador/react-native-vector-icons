@@ -1,107 +1,55 @@
 {
-  "name": "react-native-vector-icons",
-  "version": "10.2.0",
-  "description": "Customizable Icons for React Native with support for NavBar/TabBar, image source and full styling.",
-  "main": "dist/index.js",
-  "bin": {
-    "fa-upgrade.sh": "./bin/fa-upgrade.sh",
-    "fa5-upgrade": "./bin/fa5-upgrade.sh",
-    "fa6-upgrade": "./bin/fa6-upgrade.sh",
-    "generate-icon": "./bin/generate-icon.js"
-  },
-  "scripts": {
-    "test": "eslint index.js {bin,lib}/*.js",
-    "format": "prettier index.js *.md {bin,lib,directory,Examples}/**/*.js --write",
-    "prepublish": "npm run build-web && npm run build-flow",
-    "build": "./scripts/build-icons.sh",
-    "build-web": "rm -rf ./dist && babel *.js --out-dir ./dist && babel lib --out-dir ./dist/lib && cp -R ./glyphmaps ./dist/glyphmaps",
-    "build-flow": "./scripts/build-flow.sh",
-    "build-antd": "./scripts/antdesign.sh",
-    "build-entypo": "./scripts/entypo.sh",
-    "build-evilicons": "./scripts/evilicons.sh",
-    "build-fontawesome": "./scripts/fontawesome.sh",
-    "build-fontawesome5": "./scripts/fontawesome5.sh",
-    "build-fontawesome6": "./scripts/fontawesome6.sh",
-    "build-fontisto": "./scripts/fontisto.sh",
-    "build-feather": "./scripts/feather.sh",
-    "build-foundation": "./scripts/foundation.sh",
-    "build-ionicons": "./scripts/ionicons.sh",
-    "build-materialicons": "./scripts/materialicons.sh",
-    "build-materialcommunityicons": "./scripts/materialcommunityicons.sh",
-    "build-octicons": "./scripts/octicons.sh",
-    "build-zocial": "./scripts/zocial.sh",
-    "build-simplelineicons": "./scripts/simplelineicons.sh"
-  },
-  "keywords": [
-    "react-native",
-    "react-component",
-    "react-native-component",
-    "react",
-    "mobile",
-    "ios",
-    "android",
-    "osx",
-    "windows",
-    "macos",
-    "ui",
-    "icon",
-    "icons",
-    "vector",
-    "retina",
-    "font"
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": [
+    "packages/*"
   ],
-  "author": {
-    "name": "Joel Arvidsson",
-    "email": "joel@oblador.se"
-  },
-  "homepage": "https://github.com/oblador/react-native-vector-icons",
-  "bugs": {
-    "url": "https://github.com/oblador/react-native-vector-icons/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/oblador/react-native-vector-icons.git"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "yargs": "^16.1.1"
+  "scripts": {
+    "generate": "scripts/generate-fonts.sh",
+    "clean": "lerna run run clean",
+    "prepare": "lerna run prepare",
+    "test": "lerna run test",
+    "lint:eslint": "eslint .",
+    "lint:biome": "biome check .",
+    "lint:types": "bash -c 'for i in packages/*; do if [ -f $i/tsconfig.json ]; then tsc --noEmit -p $i/tsconfig.json; fi; done'",
+    "lint": "yarn lint:eslint; yarn lint:biome",
+    "release": "lerna publish --no-private",
+    "prerelease": "lerna publish --no-private prerelease",
+    "knip": "knip"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.9",
-    "@babel/core": "^7.12.9",
-    "@entypo-icons/core": "^1.0.1",
-    "@mdi/font": "^6.5.95",
-    "@primer/octicons": "^16.3.1",
-    "babel-eslint": "^10.1.0",
-    "css-social-buttons": "^1.1.1",
-    "eslint": "^7.2.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.3.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4",
-    "evil-icons": "^1.10.1",
-    "feather-icons": "^4.28.0",
-    "font-awesome": "^4.7.0",
-    "fontisto": "^3.0.4",
-    "ionicons": "^7.1.0",
-    "metro-react-native-babel-preset": "^0.66.2",
-    "oslllo-svg-fixer": "^2.2.0",
-    "prettier": "^1.19.1",
-    "react": "^17.0.2",
-    "simple-line-icons": "^2.5.5",
-    "svg2ttf": "^6.0.3",
-    "svgicons2svgfont": "^12.0.0"
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@evilmartians/lefthook": "^1.8.2",
+    "@types/eslint": "^8.56.12",
+    "@types/node": "^20.17.3",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "commitlint": "^19.5.0",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-biome": "^1.9.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "knip": "^5.36.3",
+    "lerna": "^8.1.9",
+    "typescript": "^5.6.3",
+    "yo": "^5.0.0"
   },
-  "codegenConfig": {
-    "name": "RNVectorIconsSpec",
-    "type": "modules",
-    "jsSrcsDir": "lib",
-    "android": {
-      "javaPackageName": "com.oblador.vectoricons"
-    }
+  "engines": {
+    "node": ">= 18.0.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "packageManager": "yarn@4.5.0",
+  "repository": {
+    "url": "https://github.com/oblador/react-native-vector-icons",
+    "type": "git"
   }
 }

@@ -1,0 +1,16 @@
+pre-commit:
+  parallel: true
+  commands:
+    eslint:
+      run: yarn lint:eslint
+    biome:
+      run: yarn lint:biome
+    # NOTE: Disabled because it is too slow
+    # types:
+    #   glob: "*.{json,js,ts,tsx}"
+    #   run: yarn lint:types
+commit-msg:
+  parallel: true
+  commands:
+    commitlint:
+      run: npx commitlint --edit

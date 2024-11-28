@@ -1,0 +1,22 @@
+##############
+# yeoman
+##############
+
+# Ignore the templates with <%= %> tags, we'll pickup the errors in the generated code
+packages/generator-react-native-vector-icons/src/app/templates/src/index.ts
+
+# Ignore yeomenan generated template
+packages/generator-react-native-vector-icons/generators
+packages/fontawesome-common/generators
+
+##############
+# packages
+##############
+
+# Ignore built code
+packages/*/lib
+packages/directory/build
+
+# Files we don't manage (react-native-test-app)
+packages/icon-explorer/metro.config.js
+packages/icon-explorer/react-native.config.js

@@ -1,0 +1,11 @@
+{
+  "ios": {
+    "workspace": "ios/IconExplorer.xcworkspace",
+    "scheme": "ReactTestApp",
+    "configuration": "Debug",
+    "device": "iPhone 15"
+  },
+  "android": {
+    "packageName": "com.microsoft.reacttestapp"
+  }
+}

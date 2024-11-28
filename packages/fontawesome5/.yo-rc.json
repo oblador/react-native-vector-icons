@@ -1,0 +1,51 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontawesome5",
+    "className": "FontAwesome5",
+    "commonPackage": "fontawesome-common/fontawesome5",
+    "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.tsx",
+    "customReadme": true,
+    "upstreamFont": {
+      "packageName": "@fortawesome/fontawesome-free",
+      "versionRange": "^5"
+    },
+    "meta": {
+      "defaultStyleName": "regular",
+      "styleNames": ["regular", "solid", "brand"],
+      "styles": {
+        "regular": {
+          "family": "FontAwesome5Free-Regular",
+          "name": "FontAwesome5_Regular.ttf",
+          "weight": 400
+        },
+        "solid": {
+          "family": "FontAwesome5Free-Solid",
+          "name": "FontAwesome5_Solid.ttf",
+          "weight": 900
+        },
+        "brand": {
+          "family": "FontAwesome5Brands-Regular",
+          "name": "FontAwesome5_Brands.ttf",
+          "weight": 400
+        }
+      }
+    },
+    "buildSteps": {
+      "glyphmap": {
+        "location": "../../node_modules/@fortawesome/fontawesome-free/css/all.css",
+        "mode": "css",
+        "prefix": ".fa-"
+      },
+      "copyFont": {
+        "location": [
+          ["../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf", "FontAwesome5_Brands"],
+          ["../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf", "FontAwesome5_Regular"],
+          ["../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf", "FontAwesome5_Solid"]
+        ]
+      },
+      "postScript": {
+        "script": "node ../fontawesome-common/scripts/generate-fontawesome-metadata --path ../../node_modules/@fortawesome/fontawesome-free --output glyphmaps/FontAwesome5_meta.json"
+      }
+    }
+  }
+}

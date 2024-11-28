@@ -1,0 +1,52 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
+  "files": {
+    "ignore": [
+      // yarn keeps this formatted
+      "package.json",
+      "packages/*/package.json",
+
+      // Generated files
+      "packages/*/lib",
+      "packages/*/glyphmaps",
+      "packages/generator-react-native-vector-icons/generators",
+      "packages/*/.fontcustom-manifest.json",
+      "packages/directory/src/generated",
+      "packages/icon-explorer/.owl",
+
+      // Templates that have ejs
+      "packages/fontawesome-common/generators/app/templates/src/index.tsx",
+
+      // Upstream files
+      "packages/icon-explorer/src/configs/icomoon.config.json",
+
+      // native files
+      "packages/icon-explorer/ios",
+      "packages/icon-explorer/android",
+      "packages/common/android",
+      "packages/common/ios"
+    ]
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noForEach": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 120
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  }
+}

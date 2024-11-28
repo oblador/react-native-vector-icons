@@ -1,0 +1,62 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontawesome5-pro",
+    "className": "FontAwesome5Pro",
+    "commonPackage": "fontawesome-common/fontawesome5-pro",
+    "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.tsx",
+    "customReadme": true,
+    "upstreamFont": {
+      "registry": "https://npm.fontawesome.com",
+      "packageName": "@fortawesome/fontawesome-pro",
+      "versionRange": "^5",
+      "versionOnly": true
+    },
+    "dependencies": {
+      "@react-native-vector-icons/fontawesome-common": "LOOKUP"
+    },
+    "meta": {
+      "defaultStyleName": "regular",
+      "styleNames": ["light", "regular", "solid", "brand", "duotone"],
+      "styles": {
+        "light": {
+          "family": "FontAwesome5Pro-Light",
+          "name": "FontAwesome5_Pro_Light.ttf",
+          "weight": 300
+        },
+        "regular": {
+          "family": "FontAwesome5Pro-Regular",
+          "name": "FontAwesome5_Pro_Regular.ttf",
+          "weight": 400
+        },
+        "solid": {
+          "family": "FontAwesome5Pro-Solid",
+          "name": "FontAwesome5_Pro_Solid.ttf",
+          "weight": 900
+        },
+        "duotone": {
+          "family": "FontAwesome5Duotone-Solid",
+          "name": "FontAwesome5_Pro_Duotone.ttf",
+          "weight": 900
+        },
+        "brand": {
+          "family": "FontAwesome5Brands-Regular",
+          "name": "FontAwesome5_Pro_Brands.ttf",
+          "weight": 400
+        }
+      }
+    },
+    "buildSteps": {
+      "preScript": {
+        "script": "../fontawesome-common/scripts/fetch-pro.sh 5"
+      },
+      "glyphmap": {
+        "location": "fa/pro/css/all.css",
+        "mode": "css",
+        "prefix": ".fa-"
+      },
+      "postScript": {
+        "script": "node ../fontawesome-common/scripts/generate-fontawesome-metadata --path fa/pro --output glyphmaps/FontAwesome5Pro_meta.json\nrm -rf fa"
+      }
+    }
+  }
+}
