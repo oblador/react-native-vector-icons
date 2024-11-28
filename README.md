@@ -12,7 +12,7 @@ extension and styling effortless.
 For the integration of `.svg` files natively, you can explore [`react-native-vector-image`](https://github.com/oblador/react-native-vector-image).
 
 > [!TIP]
-> If you are still using the old single package `react-native-vector-icons` please visit https://github.com/oblador/react-native-vector-icons/tree/legacy
+> If you are still using the old single package `react-native-vector-icons` please visit https://github.com/oblador/react-native-vector-icons/tree/10.x
 
 ## Table of Contents
 
