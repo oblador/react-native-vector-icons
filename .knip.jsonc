@@ -50,7 +50,10 @@
         "@react-native/eslint-config",
         "@rnx-kit/align-deps",
         "react-test-renderer",
-        "@types/react-test-renderer"
+        "@types/react-test-renderer",
+        "@react-native-community/cli",
+        "@react-native-community/cli-platform-android",
+        "@react-native-community/cli-platform-ios"
       ]
     },
     "packages/generator-react-native-vector-icons": {
