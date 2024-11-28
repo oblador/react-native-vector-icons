@@ -2,7 +2,6 @@
   "generator-react-native-vector-icons": {
     "packageName": "evil-icons",
     "upstreamFont": "evil-icons",
-    "versionSuffix": "-alpha",
     "buildSteps": {
       "fontCustom": {
         "location": "node_modules/evil-icons/assets/icons"

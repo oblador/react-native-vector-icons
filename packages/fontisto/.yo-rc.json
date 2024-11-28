@@ -3,7 +3,6 @@
     "packageName": "fontisto",
     "postScriptName": "fontisto",
     "upstreamFont": "fontisto",
-    "versionSuffix": "-alpha",
     "buildSteps": {
       "glyphmap": {
         "location": "../../node_modules/fontisto/css/fontisto/fontisto.css",

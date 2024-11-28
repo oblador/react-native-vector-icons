@@ -2,7 +2,6 @@
   "generator-react-native-vector-icons": {
     "packageName": "entypo",
     "upstreamFont": "@entypo-icons/core",
-    "versionSuffix": "-alpha",
     "buildSteps": {
       "fontCustom": {
         "location": "node_modules/@entypo-icons/core/icons"

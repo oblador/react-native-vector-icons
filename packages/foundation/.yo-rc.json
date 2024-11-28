@@ -3,7 +3,6 @@
     "packageName": "foundation",
     "postScriptName": "fontcustom",
     "upstreamFont": "foundation-icons",
-    "versionSuffix": "-alpha",
     "buildSteps": {
       "glyphmap": {
         "location": "../../node_modules/foundation-icons/foundation-icons.css",

@@ -3,7 +3,6 @@
     "packageName": "simple-line-icons",
     "postScriptName": "simple-line-icons",
     "upstreamFont": "simple-line-icons",
-    "versionSuffix": "-alpha",
     "buildSteps": {
       "glyphmap": {
         "location": "../../node_modules/simple-line-icons/css/simple-line-icons.css",

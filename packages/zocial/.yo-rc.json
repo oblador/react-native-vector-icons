@@ -3,7 +3,6 @@
     "packageName": "zocial",
     "postScriptName": "zocial",
     "upstreamFont": "css-social-buttons",
-    "versionSuffix": "-alpha",
     "buildSteps": {
       "glyphmap": {
         "location": "../../node_modules/css-social-buttons/css/zocial.css",

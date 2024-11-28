@@ -2,7 +2,6 @@
   "generator-react-native-vector-icons": {
     "packageName": "feather",
     "upstreamFont": "feather-icons",
-    "versionSuffix": "-alpha",
     "buildSteps": {
       "fixSVGPaths": {
         "location": "../../node_modules/feather-icons/dist/icons"

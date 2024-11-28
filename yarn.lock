@@ -4459,7 +4459,7 @@ __metadata:
     react-native: "npm:0.76.1"
     react-native-builder-bob: "npm:^0.31.0"
     turbo: "npm:^1.13.4"
-    typescript: "npm:^5.7.2"
+    typescript: "npm:^5.7.0"
   peerDependencies:
     react: "*"
     react-native: "*"
@@ -25105,7 +25105,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.6.3, typescript@npm:^5.7.2":
+"typescript@npm:^5.6.3, typescript@npm:^5.7.0":
   version: 5.7.2
   resolution: "typescript@npm:5.7.2"
   bin:
@@ -25125,7 +25125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.6.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.7.2#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.6.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.7.0#optional!builtin<compat/typescript>":
   version: 5.7.2
   resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=8c6c40"
   bin:
