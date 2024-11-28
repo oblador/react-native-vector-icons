@@ -4,7 +4,7 @@
 
 set -e
 
-if [ "$OSTYPE" == "osx" ]; then
+if [ "$(uname)" == "Darwin" ]; then
   ISED='sed -i ""'
 else # $OSTYPE == linux64
   ISED='sed -i'
