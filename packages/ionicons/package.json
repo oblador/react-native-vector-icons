@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/ionicons",
-  "version": "7.4.0-alpha.38",
+  "version": "7.4.0-alpha.39",
   "description": "Ionicons font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
@@ -81,7 +81,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^11.0.0-alpha.6"
+    "@react-native-vector-icons/common": "^11.0.0-alpha.7"
   },
   "devDependencies": {
     "del-cli": "^6.0.0",
