@@ -1,7 +1,7 @@
 # Handy reminders for developers
 
 Things we use
-* lerna - for building and releasing (all behind yarn scripts)
+* nx - for building and releasing (all behind yarn scripts)
 
 ## Versioning
 

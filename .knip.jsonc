@@ -7,7 +7,8 @@
         "yo",
         "eslint-config-airbnb-typescript",
         "@commitlint/config-conventional",
-        "@evilmartians/lefthook"
+        "@evilmartians/lefthook",
+        "@nx/js"
       ],
       "ignoreBinaries": [
         "scripts/generate-fonts.sh",

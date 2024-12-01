@@ -63,3 +63,7 @@ lib/
 # React Native Codegen
 ios/generated
 android/generated
+
+# Nx
+.nx/cache
+.nx/workspace-data
