@@ -6,13 +6,19 @@
       "package.json",
       "packages/*/package.json",
 
+      // nx keeps this formatted
+      "tsconfig.json",
+      "packages/*/tsconfig.json",
+
       // Generated files
       "packages/*/lib",
       "packages/*/glyphmaps",
       "packages/generator-react-native-vector-icons/generators",
       "packages/*/.fontcustom-manifest.json",
       "packages/directory/src/generated",
+      "packages/directory/build",
       "packages/icon-explorer/.owl",
+      ".nx",
 
       // Templates that have ejs
       "packages/fontawesome-common/generators/app/templates/src/index.tsx",
