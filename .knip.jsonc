@@ -1,6 +1,7 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema-jsonc.json",
   "ignore": ["**/*.web.ts"],
+  "babel": true,
   "workspaces": {
     ".": {
       "ignoreDependencies": [
@@ -29,7 +30,7 @@
     "packages/common": {
       "entry": ["src/index.ts", "src/scripts/{getFonts,updatePlist}.ts"],
       "ignoreDependencies": ["@react-native/assets-registry", "turbo"],
-      "ignore": ["src/NativeVectorIcons.ts", "babel.config.js", "react-native.config.js"]
+      "ignore": ["src/NativeVectorIcons.ts", "react-native.config.js"]
     },
     "packages/fontawesome-common": {
       "entry": ["src/index.ts", "scripts/generate-fontawesome-metadata.js"],
@@ -67,76 +68,51 @@
       "ignoreDependencies": ["oslllo-svg-fixer"]
     },
     "packages/ant-design": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["@ant-design/icons-svg"]
     },
     "packages/entypo": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["@entypo-icons/core"]
     },
     "packages/evil-icons": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["evil-icons"]
     },
     "packages/feather": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["feather-icons"]
     },
     "packages/fontawesome": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["font-awesome"]
     },
     "packages/fontawesome5": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["@fortawesome/fontawesome-free"]
     },
     "packages/fontawesome5-pro": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common"]
     },
     "packages/fontawesome6": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["@fortawesome/fontawesome-free"]
     },
     "packages/fontawesome6-pro": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common"]
     },
-    "packages/fontello": {
-      "ignore": ["babel.config.js"]
-    },
     "packages/fontisto": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["fontisto"]
     },
     "packages/foundation": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["foundation-icons"]
     },
-    "packages/icomoon": {
-      "ignore": ["babel.config.js"]
-    },
     "packages/ionicons": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["ionicons"]
     },
     "packages/material-design-icons": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["@mdi/font"]
     },
-    "packages/material-icons": {
-      "ignore": ["babel.config.js"]
-    },
     "packages/simple-line-icons": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["simple-line-icons"]
     },
     "packages/octicons": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["@primer/octicons"]
     },
     "packages/zocial": {
-      "ignore": ["babel.config.js"],
       "ignoreDependencies": ["css-social-buttons"]
     }
   }
