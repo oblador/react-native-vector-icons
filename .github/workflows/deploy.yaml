@@ -9,9 +9,9 @@ on:
       skip-directory:
         type: boolean
         description: Skip directory website deployment
-      pre-release:
-        type: boolean
-        description: Create a pre-release
+      # pre-release:
+      #   type: boolean
+      #   description: Create a pre-release
   release:
     types: [created]
 
@@ -35,11 +35,11 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Publish pre-release to NPM
-        if: github.event.inputs.pre-release = 'true'
-        run: yarn prerelease
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Publish pre-release to NPM
+      #   if: github.event.inputs.pre-release = 'true'
+      #   run: yarn prerelease
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   directory:
     name: Directory website
