@@ -37,7 +37,7 @@ Should you find this library beneficial, kindly contemplate the option of
 
 ## Available Icon Sets
 
-[Explore all icons](https://react-native-vector-icons.github.io/react-native-vector-icons/).
+[Explore all icons](https://oblador.github.io/react-native-vector-icons/).
 
 RNVI comes with the following supported icons. You can [search NPM](https://www.npmjs.com/search?q=keywords%3Areact-native-vector-icons-icon) for third party icons.
 
