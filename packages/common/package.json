@@ -92,14 +92,14 @@
   },
   "devDependencies": {
     "@types/plist": "^3.0.5",
-    "@types/react": "~18.3.12",
+    "@types/react": "~18.3.18",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
     "react": "18.3.1",
-    "react-native": "0.76.1",
-    "react-native-builder-bob": "^0.31.0",
+    "react-native": "0.76.5",
+    "react-native-builder-bob": "^0.35.2",
     "turbo": "^1.13.4",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.2"
   },
   "resolutions": {
     "@types/react": "^18.2.44"
