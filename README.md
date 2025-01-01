@@ -42,15 +42,17 @@ Should you find this library beneficial, kindly contemplate the option of
 RNVI comes with the following supported icons. You can [search NPM](https://www.npmjs.com/search?q=keywords%3Areact-native-vector-icons-icon) for third party icons.
 
 ### Actively maintained
+
 - [`AntDesign`](https://ant.design/components/icon) from Ant Group (v4.4.2 with _449_ icons)
 - [`Feather`](http://feathericons.com) created by Cole Bemis & Contributors (v4.29.2 featuring _287_ icons)
-- [`FontAwesome 6`](https://fontawesome.com/search) designed by Fonticons, Inc. (v6.7.1 featuring _2060_ free and _52663_ pro icons)
+- [`FontAwesome 6`](https://fontawesome.com/search) designed by Fonticons, Inc. (v6.7.2 featuring _2060_ free and _52663_ pro icons)
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0 with _283_ icons)
 - [`Ionicons`](https://ionic.io/ionicons) crafted by Ionic (v7.4.0 containing _1356_ icons)
 - [`MaterialDesignIcons`](https://pictogrammers.com/library/mdi/) from MaterialDesignIcons.com (v7.4.47 including _7448_ icons)
 - [`Octicons`](https://primer.style/foundations/icons) designed by GitHub, Inc. (v19.12.0 with _331_ icons)
 
 ### No longer maintained upstream
+
 - [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 with _411_ icons)
 - [`EvilIcons`](http://evil-icons.io) designed by Alexander Madyankin & Roman Shamin (v1.10.1 with _70_ icons)
 - [`FontAwesome`](https://fontawesome.com/v4/icons) by Fonticons, Inc. (v4.7.0 containing _785_ icons)
@@ -67,21 +69,26 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
 ## Installation
 
 1. Install the common package
+
    ```sh
    npm install --save @react-native-vector-icons/common
    ```
+
 2. Install the packages for the icons you want use
+
    ```sh
    npm install --save @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evil-icons
    ```
+
 3. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
 4. If you are using one of the following fonts refer to their guides for further instructions
-  * [FontAwesome 6](packages/fontawesome6/README.md)
-  * [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
-  * [FontAwesome 5](packages/fontawesome5/README.md)
-  * [FontAwesome 5 Pro](packages/fontawesome5-pro/README.md)
-  * [Fontello](packages/fontello/README.md)
-  * [Icomoon](packages/icomoon/README.md)
+
+- [FontAwesome 6](packages/fontawesome6/README.md)
+- [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
+- [FontAwesome 5](packages/fontawesome5/README.md)
+- [FontAwesome 5 Pro](packages/fontawesome5-pro/README.md)
+- [Fontello](packages/fontello/README.md)
+- [Icomoon](packages/icomoon/README.md)
 
 ## Setup
 
@@ -192,6 +199,7 @@ const Icon = createIconSet(glyphMap, {
 ```
 
 You should place the font ttf file into `rnvi-fonts`. You can customise this location by adding the following snippet to your package.json
+
 ```json
 {
   "reactNativeVectorIcons": {
@@ -219,7 +227,7 @@ Dynamic loading in react-native-vector-icons is currently limited to those fonts
 
 By default, dynamic loading is enabled if supported by the version of Expo that you're using. It doesn't change the way you work with the package: If rendering an icon requires a font that is not known to the app, it will be loaded automatically and icon will render as expected.
 
-`@react-native-vector-icons/common` exports several functions which you can use to control dynamic loading: 
+`@react-native-vector-icons/common` exports several functions which you can use to control dynamic loading:
 
 - `isDynamicLoadingEnabled`: Returns whether dynamic loading is enabled.
 - `isDynamicLoadingSupported`: Returns whether dynamic loading is supported by your runtime (checks that necessary Expo features are present).
