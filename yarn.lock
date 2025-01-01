@@ -4074,12 +4074,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@primer/octicons@npm:19.12.0":
-  version: 19.12.0
-  resolution: "@primer/octicons@npm:19.12.0"
+"@primer/octicons@npm:19.14.0":
+  version: 19.14.0
+  resolution: "@primer/octicons@npm:19.14.0"
   dependencies:
     object-assign: "npm:^4.1.1"
-  checksum: 10c0/cbbe9b9e8ee20850c70e83543e026cd3f1a44f404854baf1f7df534758b592d71e47106bd99aeebba293d8e01e18fa27ee7024fbc31825cae90775d04b44fd71
+  checksum: 10c0/30e95e9ca949738c8ebedc34b13fd7e9d91658ef7ec4b19feae0913ed4e15bbb8cb1c5c3b7d3196a7b361fa4fb21454ab58dc8f70f4ed31952a374c49e9dbac6
   languageName: node
   linkType: hard
 
@@ -4610,7 +4610,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/octicons@workspace:packages/octicons"
   dependencies:
-    "@primer/octicons": "npm:19.12.0"
+    "@primer/octicons": "npm:19.14.0"
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
