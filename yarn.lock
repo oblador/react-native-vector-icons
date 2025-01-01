@@ -4280,7 +4280,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4298,7 +4298,7 @@ __metadata:
     jscodeshift: "npm:^17.1.1"
     onchange: "npm:^7.1.0"
     plist: "npm:^3.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   bin:
     react-native-vector-icons-codemod: ./lib/commonjs/index.js
@@ -4318,7 +4318,7 @@ __metadata:
     plist: "npm:^3.1.0"
     react: "npm:18.3.1"
     react-native: "npm:0.76.5"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     turbo: "npm:^1.13.4"
     typescript: "npm:^5.7.2"
   peerDependencies:
@@ -4357,7 +4357,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4373,7 +4373,7 @@ __metadata:
     del-cli: "npm:^6.0.0"
     evil-icons: "npm:1.10.1"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4389,7 +4389,7 @@ __metadata:
     del-cli: "npm:^6.0.0"
     feather-icons: "npm:4.29.2"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4419,7 +4419,7 @@ __metadata:
     "@react-native-vector-icons/fontawesome-common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4435,7 +4435,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4451,7 +4451,7 @@ __metadata:
     "@react-native-vector-icons/fontawesome-common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4467,7 +4467,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4483,7 +4483,7 @@ __metadata:
     del-cli: "npm:^6.0.0"
     font-awesome: "npm:4.7.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4504,7 +4504,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4520,7 +4520,7 @@ __metadata:
     del-cli: "npm:^6.0.0"
     fontisto: "npm:3.0.4"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4536,7 +4536,7 @@ __metadata:
     del-cli: "npm:^6.0.0"
     foundation-icons: "npm:2.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4551,7 +4551,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4567,7 +4567,7 @@ __metadata:
     del-cli: "npm:^6.0.0"
     ionicons: "npm:7.4.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4583,7 +4583,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4598,7 +4598,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4614,7 +4614,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -4629,7 +4629,7 @@ __metadata:
     "@react-native-vector-icons/common": "npm:^11.0.0"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     simple-line-icons: "npm:2.5.5"
     typescript: "npm:^5.7.2"
   peerDependencies:
@@ -4646,7 +4646,7 @@ __metadata:
     css-social-buttons: "npm:1.1.1"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"
-    react-native-builder-bob: "npm:^0.31.0"
+    react-native-builder-bob: "npm:^0.35.2"
     typescript: "npm:^5.7.2"
   peerDependencies:
     react: "*"
@@ -20915,9 +20915,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-builder-bob@npm:^0.31.0":
-  version: 0.31.0
-  resolution: "react-native-builder-bob@npm:0.31.0"
+"react-native-builder-bob@npm:^0.35.2":
+  version: 0.35.2
+  resolution: "react-native-builder-bob@npm:0.35.2"
   dependencies:
     "@babel/core": "npm:^7.25.2"
     "@babel/plugin-transform-strict-mode": "npm:^7.24.7"
@@ -20943,7 +20943,7 @@ __metadata:
     yargs: "npm:^17.5.1"
   bin:
     bob: bin/bob
-  checksum: 10c0/f462f2fe58a177aad293fc29f2b25d4993cafad0f9965c3fce4c6ef734e12fa70bceea605ef9ce2f667627a745f68349aef150c1c7b41c69e101e9dd74913f80
+  checksum: 10c0/3875b61b0855b223567010893fa906ce962eb990e5bc0c8ac054b8bbfd762ed0f627a0d5be03f9630ea7d70883d0be5f95f8221f0bce9173f1018c2e00284e34
   languageName: node
   linkType: hard
 

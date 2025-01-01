@@ -87,7 +87,7 @@
     "del-cli": "^6.0.0",
     "fontisto": "3.0.4",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.31.0",
+    "react-native-builder-bob": "^0.35.2",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
