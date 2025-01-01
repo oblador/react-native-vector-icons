@@ -88,7 +88,7 @@
     "evil-icons": "1.10.1",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.31.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "react": "*",
