@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome6",
-  "version": "6.7.1",
+  "version": "6.7.2",
   "description": "Fontawesome6 font for react native vector icons",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -84,7 +84,7 @@
     "@react-native-vector-icons/common": "^11.0.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "6.7.1",
+    "@fortawesome/fontawesome-free": "6.7.2",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
