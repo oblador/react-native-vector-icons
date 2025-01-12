@@ -47,9 +47,11 @@ The FontAwesome 5 and 6 fonts now take an `iconStlye` prop instead of a style na
 Note: The codemod assumes you used the naming from the old README for your component e.g. FontAwesome5 etc or Icon
 If you have imported the component with another name you will need to modify the codemod or make the changes yourself.
 
-### Remove fonts from Info.plist (supported by codemod)
+### Remove unused fonts from Info.plist (supported by codemod)
 
-Fonts are now automatically loaded on iOS, so you can remove any fonts you have listed in `Info.plist`
+You still need to add fonts here but should limit it to the fonts you have installed.
+
+Check the [React Native Setup](./docs/SETUP-REACT-NATIVE.md) instructions for instructions on how update it with our included script.
 
 
 ### iOS
