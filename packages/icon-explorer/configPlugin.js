@@ -31,6 +31,7 @@ module.exports = (config) =>
       'Zocial.ttf',
       'fontello.ttf',
       'icomoon.ttf',
+      'Lucide.ttf',
     ];
 
     fonts.forEach((font) => c.ios.infoPlist.UIAppFonts.push(font));

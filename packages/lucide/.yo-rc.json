@@ -1,0 +1,19 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "lucide",
+    "upstreamFont": "lucide-static",
+    "buildSteps": {
+      "fixSVGPaths": {
+        "location": "../../node_modules/lucide-static/icons"
+      },
+      "fontCustom": {
+        "location": "fixedSvg",
+        "cleanup": true
+      },
+      "glyphmap": {
+        "mode": "css",
+        "cleanup": true
+      }
+    }
+  }
+}
