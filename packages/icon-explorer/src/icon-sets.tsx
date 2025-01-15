@@ -10,6 +10,7 @@ import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
 import Fontisto from '@react-native-vector-icons/fontisto';
 import Foundation from '@react-native-vector-icons/foundation';
 import Ionicons from '@react-native-vector-icons/ionicons';
+import Lucide from '@react-native-vector-icons/lucide';
 import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
 import MaterialIcons from '@react-native-vector-icons/material-icons';
 import Octicons from '@react-native-vector-icons/octicons';
@@ -51,6 +52,8 @@ import FontistoGlyphs from '@react-native-vector-icons/fontisto/glyphmaps/Fontis
 import FoundationGlyphs from '@react-native-vector-icons/foundation/glyphmaps/Foundation.json';
 // @ts-expect-error: We don't really want to export this
 import IoniconsGlyphs from '@react-native-vector-icons/ionicons/glyphmaps/Ionicons.json';
+// @ts-expect-error: We don't really want to export this
+import LucideGlyphs from '@react-native-vector-icons/lucide/glyphmaps/Lucide.json';
 // @ts-expect-error: We don't really want to export this
 import MaterialDesignIconsGlyphs from '@react-native-vector-icons/material-design-icons/glyphmaps/MaterialDesignIcons.json';
 // @ts-expect-error: We don't really want to export this
@@ -110,6 +113,7 @@ const iconSets = {
     meta: FontAwesome6ProMeta,
   },
   Fontello: { component: Fontello, glyphNames: groupGlyphNames(FontelloGlyphs), meta: undefined },
+  Lucide: { component: Lucide, glyphNames: groupGlyphNames(LucideGlyphs), meta: undefined },
   Fontisto: { component: Fontisto, glyphNames: groupGlyphNames(FontistoGlyphs), meta: undefined },
   Foundation: { component: Foundation, glyphNames: groupGlyphNames(FoundationGlyphs), meta: undefined },
   IcoMoon: { component: IcoMoon, glyphNames: groupGlyphNames(IcoMoonGlyphs), meta: undefined },
