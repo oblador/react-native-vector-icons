@@ -3442,6 +3442,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-design-icons/svg@npm:0.14.13":
+  version: 0.14.13
+  resolution: "@material-design-icons/svg@npm:0.14.13"
+  checksum: 10c0/373bb7f01d9a89530f4995109ab74bb550a56b86124e37c4c034a995944a2a1e492b06b238a12bcbe99262c6c1d129b8d2224fcb5066ad108f748ac97f1fe401
+  languageName: node
+  linkType: hard
+
 "@mdi/font@npm:7.4.47":
   version: 7.4.47
   resolution: "@mdi/font@npm:7.4.47"
@@ -4591,6 +4598,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@react-native-vector-icons/material-icons-round@workspace:^, @react-native-vector-icons/material-icons-round@workspace:packages/material-icons-round":
+  version: 0.0.0-use.local
+  resolution: "@react-native-vector-icons/material-icons-round@workspace:packages/material-icons-round"
+  dependencies:
+    "@material-design-icons/svg": "npm:0.14.13"
+    "@react-native-vector-icons/common": "npm:^11.0.0"
+    del-cli: "npm:^6.0.0"
+    onchange: "npm:^7.1.0"
+    react-native-builder-bob: "npm:^0.35.2"
+    typescript: "npm:^5.7.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@react-native-vector-icons/material-icons@workspace:^, @react-native-vector-icons/material-icons@workspace:packages/material-icons":
   version: 0.0.0-use.local
   resolution: "@react-native-vector-icons/material-icons@workspace:packages/material-icons"
@@ -5081,11 +5104,11 @@ __metadata:
   linkType: hard
 
 "@rnx-kit/react-native-host@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "@rnx-kit/react-native-host@npm:0.5.0"
+  version: 0.5.2
+  resolution: "@rnx-kit/react-native-host@npm:0.5.2"
   peerDependencies:
     react-native: ">=0.66"
-  checksum: 10c0/9dd55a8a02f7b8e0f7210387f10d8462f02bfb55225e911a98fefcdc43421ab6e5a07396ad88a3db5c8ed838cf7c97e4c8bf1ff392cb97500a029b465caadae2
+  checksum: 10c0/2e02137d9e1ae4110d0729e65780add84ef1aa08f81ee72bd9b97ea4f3c42c681dc20a3c2754ba1eac6fc4c19fd3f26cff4ac2c4fd421ac6b93caa89a176b87b
   languageName: node
   linkType: hard
 
@@ -6997,6 +7020,7 @@ __metadata:
     "@react-native-vector-icons/ionicons": "workspace:^"
     "@react-native-vector-icons/material-design-icons": "workspace:^"
     "@react-native-vector-icons/material-icons": "workspace:^"
+    "@react-native-vector-icons/material-icons-round": "workspace:^"
     "@react-native-vector-icons/octicons": "workspace:^"
     "@react-native-vector-icons/simple-line-icons": "workspace:^"
     "@react-native-vector-icons/zocial": "workspace:^"
