@@ -10,7 +10,7 @@ import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Lucide.json';
 
 const Icon = createIconSet(glyphMap, {
-  postScriptName: 'Lucide',
+  postScriptName: 'fontcustom',
   fontFileName: 'Lucide.ttf',
   fontSource: require('../fonts/Lucide.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });

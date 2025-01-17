@@ -38,12 +38,12 @@
     "@react-native-vector-icons/foundation": "workspace:^",
     "@react-native-vector-icons/icomoon": "workspace:^",
     "@react-native-vector-icons/ionicons": "workspace:^",
+    "@react-native-vector-icons/lucide": "workspace:^",
     "@react-native-vector-icons/material-design-icons": "workspace:^",
     "@react-native-vector-icons/material-icons": "workspace:^",
     "@react-native-vector-icons/octicons": "workspace:^",
     "@react-native-vector-icons/simple-line-icons": "workspace:^",
     "@react-native-vector-icons/zocial": "workspace:^",
-    "@react-native-vector-icons/lucide": "workspace:^",
     "react": "18.3.1",
     "react-native": "0.76.5",
     "react-native-animatable": "^1.4.0"
