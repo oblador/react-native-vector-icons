@@ -12,7 +12,7 @@ extension and styling effortless.
 For the integration of `.svg` files natively, you can explore [`react-native-vector-image`](https://github.com/oblador/react-native-vector-image).
 
 > [!TIP]
-> If you are still using the old single package `react-native-vector-icons` please visit https://github.com/oblador/react-native-vector-icons/tree/10.x
+> If you are still using the old single package `react-native-vector-icons` please visit <https://github.com/oblador/react-native-vector-icons/tree/10.x>
 
 ## Table of Contents
 
@@ -182,7 +182,7 @@ See [CREATE_FONT_PACKAGE.md](./docs/CREATE_FONT_PACKAGE.md) to learn how to crea
 You can also use `createIconSet()` directly in your project. This
 returns your own custom font based on the `glyphMap` where the key is the icon
 name and the value is either a UTF-8 character or it's character code.
-`postScriptName` is the name of the postscript font. Open the font in https://fontdrop.info/, 
+`postScriptName` is the name of the postscript font. Open the font in <https://fontdrop.info/>,
 Font Book.app or similar to learn the name. Also pass the `fontFileName` argument for Android support.
 
 ```js
@@ -266,6 +266,33 @@ function ExampleView(props) {
   );
 }
 ```
+
+## Testing
+
+When running tests with `jest` you will need to mock out the native code loading to prevent errors.
+
+In `jest.config.js` add
+
+```js
+// Mock out font loading
+moduleNameMapper: {
+  '\\.(ttf)$': '<rootDir>/__mocks__/file-mock.js',
+}
+```
+
+Create `__mocks__/file-mock.js`:
+
+```js
+module.exports = {};
+```
+
+Create `__mocks__/@react-native-vector-icons/common.js`:
+
+```js
+// Mock the entire common library so there are no native module loading errors
+module.exports = {
+  createIconSet: () => "icon"
+}
 
 ## [Changelog](https://github.com/react-native-vector-icons/react-native-vector-icons/releases)
 
