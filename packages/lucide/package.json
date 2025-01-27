@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/lucide",
-  "version": "0.471.0",
+  "version": "0.473.0",
   "description": "Lucide font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
@@ -85,10 +85,10 @@
   },
   "devDependencies": {
     "del-cli": "^6.0.0",
-    "lucide-static": "0.471.0",
+    "lucide-static": "0.473.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.35.2",
-    "typescript": "^5.7.2"
+    "react-native-builder-bob": "^0.31.0",
+    "typescript": "^5.6.3"
   },
   "peerDependencies": {
     "react": "*",

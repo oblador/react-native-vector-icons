@@ -15,7 +15,6 @@ const imports: [string, string][] = [
   ['react-native-vector-icons/Ionicons', '@react-native-vector-icons/ionicons'],
   ['react-native-vector-icons/MaterialCommunityIcons', '@react-native-vector-icons/material-design-icons'],
   ['react-native-vector-icons/MaterialIcons', '@react-native-vector-icons/material-icons'],
-  ['react-native-vector-icons/LucideIcons', '@react-native-vector-icons/lucide'],
   ['react-native-vector-icons/Octicons', '@react-native-vector-icons/octicons'],
   ['react-native-vector-icons/SimpleLineIcons', '@react-native-vector-icons/SimpleLineIcons'],
   ['react-native-vector-icons/Zocial', '@react-native-vector-icons/zocial'],

@@ -1,7 +1,6 @@
 {
   "generator-react-native-vector-icons": {
     "packageName": "lucide",
-    "postScriptName": "fontcustom",
     "upstreamFont": "lucide-static",
     "buildSteps": {
       "glyphmap": {
