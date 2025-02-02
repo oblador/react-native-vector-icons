@@ -50,7 +50,7 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 - [`Ionicons`](https://ionic.io/ionicons) crafted by Ionic (v7.4.0 containing _1356_ icons)
 - [`MaterialDesignIcons`](https://pictogrammers.com/library/mdi/) from MaterialDesignIcons.com (v7.4.47 including _7448_ icons)
 - [`Octicons`](https://primer.style/foundations/icons) designed by GitHub, Inc. (v19.14.0 with _332_ icons)
-- [`Lucide`](https://lucide.dev/) designed by Lucide, (v0.473.0 with _1548 icons)
+- [`Lucide`](https://lucide.dev/) designed by Lucide, (v0.473.0 with _1548_ icons)
 
 ### No longer maintained upstream
 
