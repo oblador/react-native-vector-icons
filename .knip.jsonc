@@ -103,6 +103,9 @@
     "packages/ionicons": {
       "ignoreDependencies": ["ionicons"]
     },
+    "packages/lucide": {
+      "ignoreDependencies": ["lucide-static"]
+    },
     "packages/material-design-icons": {
       "ignoreDependencies": ["@mdi/font"]
     },

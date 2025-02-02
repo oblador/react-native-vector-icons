@@ -38,6 +38,7 @@
     "@react-native-vector-icons/foundation": "workspace:^",
     "@react-native-vector-icons/icomoon": "workspace:^",
     "@react-native-vector-icons/ionicons": "workspace:^",
+    "@react-native-vector-icons/lucide": "workspace:^",
     "@react-native-vector-icons/material-design-icons": "workspace:^",
     "@react-native-vector-icons/material-icons": "workspace:^",
     "@react-native-vector-icons/octicons": "workspace:^",

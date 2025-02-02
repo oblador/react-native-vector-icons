@@ -1,0 +1,6231 @@
+{
+  "checksum": {
+    "previous": "1b61ddc1f5212d4c0c5562bc99b8e333392f9371b35e39158720f24f120246b4",
+    "current": "1b61ddc1f5212d4c0c5562bc99b8e333392f9371b35e39158720f24f120246b4"
+  },
+  "fonts": [
+    "Lucide/Lucide.ttf",
+    "Lucide/Lucide.svg",
+    "Lucide/Lucide.woff",
+    "Lucide/Lucide.eot",
+    "Lucide/Lucide.woff2"
+  ],
+  "glyphs": {
+    "a-arrow-down": {
+      "codepoint": 61696,
+      "source": "fixedSvg/a-arrow-down.svg"
+    },
+    "a-arrow-up": {
+      "codepoint": 61697,
+      "source": "fixedSvg/a-arrow-up.svg"
+    },
+    "a-large-small": {
+      "codepoint": 61698,
+      "source": "fixedSvg/a-large-small.svg"
+    },
+    "accessibility": {
+      "codepoint": 61699,
+      "source": "fixedSvg/accessibility.svg"
+    },
+    "activity": {
+      "codepoint": 61700,
+      "source": "fixedSvg/activity.svg"
+    },
+    "air-vent": {
+      "codepoint": 61701,
+      "source": "fixedSvg/air-vent.svg"
+    },
+    "airplay": {
+      "codepoint": 61702,
+      "source": "fixedSvg/airplay.svg"
+    },
+    "alarm-clock": {
+      "codepoint": 61703,
+      "source": "fixedSvg/alarm-clock.svg"
+    },
+    "alarm-clock-check": {
+      "codepoint": 61704,
+      "source": "fixedSvg/alarm-clock-check.svg"
+    },
+    "alarm-clock-minus": {
+      "codepoint": 61705,
+      "source": "fixedSvg/alarm-clock-minus.svg"
+    },
+    "alarm-clock-off": {
+      "codepoint": 61706,
+      "source": "fixedSvg/alarm-clock-off.svg"
+    },
+    "alarm-clock-plus": {
+      "codepoint": 61707,
+      "source": "fixedSvg/alarm-clock-plus.svg"
+    },
+    "alarm-smoke": {
+      "codepoint": 61708,
+      "source": "fixedSvg/alarm-smoke.svg"
+    },
+    "album": {
+      "codepoint": 61709,
+      "source": "fixedSvg/album.svg"
+    },
+    "align-center": {
+      "codepoint": 61710,
+      "source": "fixedSvg/align-center.svg"
+    },
+    "align-center-horizontal": {
+      "codepoint": 61711,
+      "source": "fixedSvg/align-center-horizontal.svg"
+    },
+    "align-center-vertical": {
+      "codepoint": 61712,
+      "source": "fixedSvg/align-center-vertical.svg"
+    },
+    "align-end-horizontal": {
+      "codepoint": 61713,
+      "source": "fixedSvg/align-end-horizontal.svg"
+    },
+    "align-end-vertical": {
+      "codepoint": 61714,
+      "source": "fixedSvg/align-end-vertical.svg"
+    },
+    "align-horizontal-distribute-center": {
+      "codepoint": 61715,
+      "source": "fixedSvg/align-horizontal-distribute-center.svg"
+    },
+    "align-horizontal-distribute-end": {
+      "codepoint": 61716,
+      "source": "fixedSvg/align-horizontal-distribute-end.svg"
+    },
+    "align-horizontal-distribute-start": {
+      "codepoint": 61717,
+      "source": "fixedSvg/align-horizontal-distribute-start.svg"
+    },
+    "align-horizontal-justify-center": {
+      "codepoint": 61718,
+      "source": "fixedSvg/align-horizontal-justify-center.svg"
+    },
+    "align-horizontal-justify-end": {
+      "codepoint": 61719,
+      "source": "fixedSvg/align-horizontal-justify-end.svg"
+    },
+    "align-horizontal-justify-start": {
+      "codepoint": 61720,
+      "source": "fixedSvg/align-horizontal-justify-start.svg"
+    },
+    "align-horizontal-space-around": {
+      "codepoint": 61721,
+      "source": "fixedSvg/align-horizontal-space-around.svg"
+    },
+    "align-horizontal-space-between": {
+      "codepoint": 61722,
+      "source": "fixedSvg/align-horizontal-space-between.svg"
+    },
+    "align-justify": {
+      "codepoint": 61723,
+      "source": "fixedSvg/align-justify.svg"
+    },
+    "align-left": {
+      "codepoint": 61724,
+      "source": "fixedSvg/align-left.svg"
+    },
+    "align-right": {
+      "codepoint": 61725,
+      "source": "fixedSvg/align-right.svg"
+    },
+    "align-start-horizontal": {
+      "codepoint": 61726,
+      "source": "fixedSvg/align-start-horizontal.svg"
+    },
+    "align-start-vertical": {
+      "codepoint": 61727,
+      "source": "fixedSvg/align-start-vertical.svg"
+    },
+    "align-vertical-distribute-center": {
+      "codepoint": 61728,
+      "source": "fixedSvg/align-vertical-distribute-center.svg"
+    },
+    "align-vertical-distribute-end": {
+      "codepoint": 61729,
+      "source": "fixedSvg/align-vertical-distribute-end.svg"
+    },
+    "align-vertical-distribute-start": {
+      "codepoint": 61730,
+      "source": "fixedSvg/align-vertical-distribute-start.svg"
+    },
+    "align-vertical-justify-center": {
+      "codepoint": 61731,
+      "source": "fixedSvg/align-vertical-justify-center.svg"
+    },
+    "align-vertical-justify-end": {
+      "codepoint": 61732,
+      "source": "fixedSvg/align-vertical-justify-end.svg"
+    },
+    "align-vertical-justify-start": {
+      "codepoint": 61733,
+      "source": "fixedSvg/align-vertical-justify-start.svg"
+    },
+    "align-vertical-space-around": {
+      "codepoint": 61734,
+      "source": "fixedSvg/align-vertical-space-around.svg"
+    },
+    "align-vertical-space-between": {
+      "codepoint": 61735,
+      "source": "fixedSvg/align-vertical-space-between.svg"
+    },
+    "ambulance": {
+      "codepoint": 61736,
+      "source": "fixedSvg/ambulance.svg"
+    },
+    "ampersand": {
+      "codepoint": 61737,
+      "source": "fixedSvg/ampersand.svg"
+    },
+    "ampersands": {
+      "codepoint": 61738,
+      "source": "fixedSvg/ampersands.svg"
+    },
+    "amphora": {
+      "codepoint": 61739,
+      "source": "fixedSvg/amphora.svg"
+    },
+    "anchor": {
+      "codepoint": 61740,
+      "source": "fixedSvg/anchor.svg"
+    },
+    "angry": {
+      "codepoint": 61741,
+      "source": "fixedSvg/angry.svg"
+    },
+    "annoyed": {
+      "codepoint": 61742,
+      "source": "fixedSvg/annoyed.svg"
+    },
+    "antenna": {
+      "codepoint": 61743,
+      "source": "fixedSvg/antenna.svg"
+    },
+    "anvil": {
+      "codepoint": 61744,
+      "source": "fixedSvg/anvil.svg"
+    },
+    "aperture": {
+      "codepoint": 61745,
+      "source": "fixedSvg/aperture.svg"
+    },
+    "app-window": {
+      "codepoint": 61746,
+      "source": "fixedSvg/app-window.svg"
+    },
+    "app-window-mac": {
+      "codepoint": 61747,
+      "source": "fixedSvg/app-window-mac.svg"
+    },
+    "apple": {
+      "codepoint": 61748,
+      "source": "fixedSvg/apple.svg"
+    },
+    "archive": {
+      "codepoint": 61749,
+      "source": "fixedSvg/archive.svg"
+    },
+    "archive-restore": {
+      "codepoint": 61750,
+      "source": "fixedSvg/archive-restore.svg"
+    },
+    "archive-x": {
+      "codepoint": 61751,
+      "source": "fixedSvg/archive-x.svg"
+    },
+    "armchair": {
+      "codepoint": 61752,
+      "source": "fixedSvg/armchair.svg"
+    },
+    "arrow-big-down": {
+      "codepoint": 61753,
+      "source": "fixedSvg/arrow-big-down.svg"
+    },
+    "arrow-big-down-dash": {
+      "codepoint": 61754,
+      "source": "fixedSvg/arrow-big-down-dash.svg"
+    },
+    "arrow-big-left": {
+      "codepoint": 61755,
+      "source": "fixedSvg/arrow-big-left.svg"
+    },
+    "arrow-big-left-dash": {
+      "codepoint": 61756,
+      "source": "fixedSvg/arrow-big-left-dash.svg"
+    },
+    "arrow-big-right": {
+      "codepoint": 61757,
+      "source": "fixedSvg/arrow-big-right.svg"
+    },
+    "arrow-big-right-dash": {
+      "codepoint": 61758,
+      "source": "fixedSvg/arrow-big-right-dash.svg"
+    },
+    "arrow-big-up": {
+      "codepoint": 61759,
+      "source": "fixedSvg/arrow-big-up.svg"
+    },
+    "arrow-big-up-dash": {
+      "codepoint": 61760,
+      "source": "fixedSvg/arrow-big-up-dash.svg"
+    },
+    "arrow-down": {
+      "codepoint": 61761,
+      "source": "fixedSvg/arrow-down.svg"
+    },
+    "arrow-down-0-1": {
+      "codepoint": 61762,
+      "source": "fixedSvg/arrow-down-0-1.svg"
+    },
+    "arrow-down-1-0": {
+      "codepoint": 61763,
+      "source": "fixedSvg/arrow-down-1-0.svg"
+    },
+    "arrow-down-a-z": {
+      "codepoint": 61764,
+      "source": "fixedSvg/arrow-down-a-z.svg"
+    },
+    "arrow-down-from-line": {
+      "codepoint": 61765,
+      "source": "fixedSvg/arrow-down-from-line.svg"
+    },
+    "arrow-down-left": {
+      "codepoint": 61766,
+      "source": "fixedSvg/arrow-down-left.svg"
+    },
+    "arrow-down-narrow-wide": {
+      "codepoint": 61767,
+      "source": "fixedSvg/arrow-down-narrow-wide.svg"
+    },
+    "arrow-down-right": {
+      "codepoint": 61768,
+      "source": "fixedSvg/arrow-down-right.svg"
+    },
+    "arrow-down-to-dot": {
+      "codepoint": 61769,
+      "source": "fixedSvg/arrow-down-to-dot.svg"
+    },
+    "arrow-down-to-line": {
+      "codepoint": 61770,
+      "source": "fixedSvg/arrow-down-to-line.svg"
+    },
+    "arrow-down-up": {
+      "codepoint": 61771,
+      "source": "fixedSvg/arrow-down-up.svg"
+    },
+    "arrow-down-wide-narrow": {
+      "codepoint": 61772,
+      "source": "fixedSvg/arrow-down-wide-narrow.svg"
+    },
+    "arrow-down-z-a": {
+      "codepoint": 61773,
+      "source": "fixedSvg/arrow-down-z-a.svg"
+    },
+    "arrow-left": {
+      "codepoint": 61774,
+      "source": "fixedSvg/arrow-left.svg"
+    },
+    "arrow-left-from-line": {
+      "codepoint": 61775,
+      "source": "fixedSvg/arrow-left-from-line.svg"
+    },
+    "arrow-left-right": {
+      "codepoint": 61776,
+      "source": "fixedSvg/arrow-left-right.svg"
+    },
+    "arrow-left-to-line": {
+      "codepoint": 61777,
+      "source": "fixedSvg/arrow-left-to-line.svg"
+    },
+    "arrow-right": {
+      "codepoint": 61778,
+      "source": "fixedSvg/arrow-right.svg"
+    },
+    "arrow-right-from-line": {
+      "codepoint": 61779,
+      "source": "fixedSvg/arrow-right-from-line.svg"
+    },
+    "arrow-right-left": {
+      "codepoint": 61780,
+      "source": "fixedSvg/arrow-right-left.svg"
+    },
+    "arrow-right-to-line": {
+      "codepoint": 61781,
+      "source": "fixedSvg/arrow-right-to-line.svg"
+    },
+    "arrow-up": {
+      "codepoint": 61782,
+      "source": "fixedSvg/arrow-up.svg"
+    },
+    "arrow-up-0-1": {
+      "codepoint": 61783,
+      "source": "fixedSvg/arrow-up-0-1.svg"
+    },
+    "arrow-up-1-0": {
+      "codepoint": 61784,
+      "source": "fixedSvg/arrow-up-1-0.svg"
+    },
+    "arrow-up-a-z": {
+      "codepoint": 61785,
+      "source": "fixedSvg/arrow-up-a-z.svg"
+    },
+    "arrow-up-down": {
+      "codepoint": 61786,
+      "source": "fixedSvg/arrow-up-down.svg"
+    },
+    "arrow-up-from-dot": {
+      "codepoint": 61787,
+      "source": "fixedSvg/arrow-up-from-dot.svg"
+    },
+    "arrow-up-from-line": {
+      "codepoint": 61788,
+      "source": "fixedSvg/arrow-up-from-line.svg"
+    },
+    "arrow-up-left": {
+      "codepoint": 61789,
+      "source": "fixedSvg/arrow-up-left.svg"
+    },
+    "arrow-up-narrow-wide": {
+      "codepoint": 61790,
+      "source": "fixedSvg/arrow-up-narrow-wide.svg"
+    },
+    "arrow-up-right": {
+      "codepoint": 61791,
+      "source": "fixedSvg/arrow-up-right.svg"
+    },
+    "arrow-up-to-line": {
+      "codepoint": 61792,
+      "source": "fixedSvg/arrow-up-to-line.svg"
+    },
+    "arrow-up-wide-narrow": {
+      "codepoint": 61793,
+      "source": "fixedSvg/arrow-up-wide-narrow.svg"
+    },
+    "arrow-up-z-a": {
+      "codepoint": 61794,
+      "source": "fixedSvg/arrow-up-z-a.svg"
+    },
+    "arrows-up-from-line": {
+      "codepoint": 61795,
+      "source": "fixedSvg/arrows-up-from-line.svg"
+    },
+    "asterisk": {
+      "codepoint": 61796,
+      "source": "fixedSvg/asterisk.svg"
+    },
+    "at-sign": {
+      "codepoint": 61797,
+      "source": "fixedSvg/at-sign.svg"
+    },
+    "atom": {
+      "codepoint": 61798,
+      "source": "fixedSvg/atom.svg"
+    },
+    "audio-lines": {
+      "codepoint": 61799,
+      "source": "fixedSvg/audio-lines.svg"
+    },
+    "audio-waveform": {
+      "codepoint": 61800,
+      "source": "fixedSvg/audio-waveform.svg"
+    },
+    "award": {
+      "codepoint": 61801,
+      "source": "fixedSvg/award.svg"
+    },
+    "axe": {
+      "codepoint": 61802,
+      "source": "fixedSvg/axe.svg"
+    },
+    "axis-3d": {
+      "codepoint": 61803,
+      "source": "fixedSvg/axis-3d.svg"
+    },
+    "baby": {
+      "codepoint": 61804,
+      "source": "fixedSvg/baby.svg"
+    },
+    "backpack": {
+      "codepoint": 61805,
+      "source": "fixedSvg/backpack.svg"
+    },
+    "badge": {
+      "codepoint": 61806,
+      "source": "fixedSvg/badge.svg"
+    },
+    "badge-alert": {
+      "codepoint": 61807,
+      "source": "fixedSvg/badge-alert.svg"
+    },
+    "badge-cent": {
+      "codepoint": 61808,
+      "source": "fixedSvg/badge-cent.svg"
+    },
+    "badge-check": {
+      "codepoint": 61809,
+      "source": "fixedSvg/badge-check.svg"
+    },
+    "badge-dollar-sign": {
+      "codepoint": 61810,
+      "source": "fixedSvg/badge-dollar-sign.svg"
+    },
+    "badge-euro": {
+      "codepoint": 61811,
+      "source": "fixedSvg/badge-euro.svg"
+    },
+    "badge-help": {
+      "codepoint": 61812,
+      "source": "fixedSvg/badge-help.svg"
+    },
+    "badge-indian-rupee": {
+      "codepoint": 61813,
+      "source": "fixedSvg/badge-indian-rupee.svg"
+    },
+    "badge-info": {
+      "codepoint": 61814,
+      "source": "fixedSvg/badge-info.svg"
+    },
+    "badge-japanese-yen": {
+      "codepoint": 61815,
+      "source": "fixedSvg/badge-japanese-yen.svg"
+    },
+    "badge-minus": {
+      "codepoint": 61816,
+      "source": "fixedSvg/badge-minus.svg"
+    },
+    "badge-percent": {
+      "codepoint": 61817,
+      "source": "fixedSvg/badge-percent.svg"
+    },
+    "badge-plus": {
+      "codepoint": 61818,
+      "source": "fixedSvg/badge-plus.svg"
+    },
+    "badge-pound-sterling": {
+      "codepoint": 61819,
+      "source": "fixedSvg/badge-pound-sterling.svg"
+    },
+    "badge-russian-ruble": {
+      "codepoint": 61820,
+      "source": "fixedSvg/badge-russian-ruble.svg"
+    },
+    "badge-swiss-franc": {
+      "codepoint": 61821,
+      "source": "fixedSvg/badge-swiss-franc.svg"
+    },
+    "badge-x": {
+      "codepoint": 61822,
+      "source": "fixedSvg/badge-x.svg"
+    },
+    "baggage-claim": {
+      "codepoint": 61823,
+      "source": "fixedSvg/baggage-claim.svg"
+    },
+    "ban": {
+      "codepoint": 61824,
+      "source": "fixedSvg/ban.svg"
+    },
+    "banana": {
+      "codepoint": 61825,
+      "source": "fixedSvg/banana.svg"
+    },
+    "bandage": {
+      "codepoint": 61826,
+      "source": "fixedSvg/bandage.svg"
+    },
+    "banknote": {
+      "codepoint": 61827,
+      "source": "fixedSvg/banknote.svg"
+    },
+    "barcode": {
+      "codepoint": 61828,
+      "source": "fixedSvg/barcode.svg"
+    },
+    "baseline": {
+      "codepoint": 61829,
+      "source": "fixedSvg/baseline.svg"
+    },
+    "bath": {
+      "codepoint": 61830,
+      "source": "fixedSvg/bath.svg"
+    },
+    "battery": {
+      "codepoint": 61831,
+      "source": "fixedSvg/battery.svg"
+    },
+    "battery-charging": {
+      "codepoint": 61832,
+      "source": "fixedSvg/battery-charging.svg"
+    },
+    "battery-full": {
+      "codepoint": 61833,
+      "source": "fixedSvg/battery-full.svg"
+    },
+    "battery-low": {
+      "codepoint": 61834,
+      "source": "fixedSvg/battery-low.svg"
+    },
+    "battery-medium": {
+      "codepoint": 61835,
+      "source": "fixedSvg/battery-medium.svg"
+    },
+    "battery-warning": {
+      "codepoint": 61836,
+      "source": "fixedSvg/battery-warning.svg"
+    },
+    "beaker": {
+      "codepoint": 61837,
+      "source": "fixedSvg/beaker.svg"
+    },
+    "bean": {
+      "codepoint": 61838,
+      "source": "fixedSvg/bean.svg"
+    },
+    "bean-off": {
+      "codepoint": 61839,
+      "source": "fixedSvg/bean-off.svg"
+    },
+    "bed": {
+      "codepoint": 61840,
+      "source": "fixedSvg/bed.svg"
+    },
+    "bed-double": {
+      "codepoint": 61841,
+      "source": "fixedSvg/bed-double.svg"
+    },
+    "bed-single": {
+      "codepoint": 61842,
+      "source": "fixedSvg/bed-single.svg"
+    },
+    "beef": {
+      "codepoint": 61843,
+      "source": "fixedSvg/beef.svg"
+    },
+    "beer": {
+      "codepoint": 61844,
+      "source": "fixedSvg/beer.svg"
+    },
+    "beer-off": {
+      "codepoint": 61845,
+      "source": "fixedSvg/beer-off.svg"
+    },
+    "bell": {
+      "codepoint": 61846,
+      "source": "fixedSvg/bell.svg"
+    },
+    "bell-dot": {
+      "codepoint": 61847,
+      "source": "fixedSvg/bell-dot.svg"
+    },
+    "bell-electric": {
+      "codepoint": 61848,
+      "source": "fixedSvg/bell-electric.svg"
+    },
+    "bell-minus": {
+      "codepoint": 61849,
+      "source": "fixedSvg/bell-minus.svg"
+    },
+    "bell-off": {
+      "codepoint": 61850,
+      "source": "fixedSvg/bell-off.svg"
+    },
+    "bell-plus": {
+      "codepoint": 61851,
+      "source": "fixedSvg/bell-plus.svg"
+    },
+    "bell-ring": {
+      "codepoint": 61852,
+      "source": "fixedSvg/bell-ring.svg"
+    },
+    "between-horizontal-end": {
+      "codepoint": 61853,
+      "source": "fixedSvg/between-horizontal-end.svg"
+    },
+    "between-horizontal-start": {
+      "codepoint": 61854,
+      "source": "fixedSvg/between-horizontal-start.svg"
+    },
+    "between-vertical-end": {
+      "codepoint": 61855,
+      "source": "fixedSvg/between-vertical-end.svg"
+    },
+    "between-vertical-start": {
+      "codepoint": 61856,
+      "source": "fixedSvg/between-vertical-start.svg"
+    },
+    "biceps-flexed": {
+      "codepoint": 61857,
+      "source": "fixedSvg/biceps-flexed.svg"
+    },
+    "bike": {
+      "codepoint": 61858,
+      "source": "fixedSvg/bike.svg"
+    },
+    "binary": {
+      "codepoint": 61859,
+      "source": "fixedSvg/binary.svg"
+    },
+    "binoculars": {
+      "codepoint": 61860,
+      "source": "fixedSvg/binoculars.svg"
+    },
+    "biohazard": {
+      "codepoint": 61861,
+      "source": "fixedSvg/biohazard.svg"
+    },
+    "bird": {
+      "codepoint": 61862,
+      "source": "fixedSvg/bird.svg"
+    },
+    "bitcoin": {
+      "codepoint": 61863,
+      "source": "fixedSvg/bitcoin.svg"
+    },
+    "blend": {
+      "codepoint": 61864,
+      "source": "fixedSvg/blend.svg"
+    },
+    "blinds": {
+      "codepoint": 61865,
+      "source": "fixedSvg/blinds.svg"
+    },
+    "blocks": {
+      "codepoint": 61866,
+      "source": "fixedSvg/blocks.svg"
+    },
+    "bluetooth": {
+      "codepoint": 61867,
+      "source": "fixedSvg/bluetooth.svg"
+    },
+    "bluetooth-connected": {
+      "codepoint": 61868,
+      "source": "fixedSvg/bluetooth-connected.svg"
+    },
+    "bluetooth-off": {
+      "codepoint": 61869,
+      "source": "fixedSvg/bluetooth-off.svg"
+    },
+    "bluetooth-searching": {
+      "codepoint": 61870,
+      "source": "fixedSvg/bluetooth-searching.svg"
+    },
+    "bold": {
+      "codepoint": 61871,
+      "source": "fixedSvg/bold.svg"
+    },
+    "bolt": {
+      "codepoint": 61872,
+      "source": "fixedSvg/bolt.svg"
+    },
+    "bomb": {
+      "codepoint": 61873,
+      "source": "fixedSvg/bomb.svg"
+    },
+    "bone": {
+      "codepoint": 61874,
+      "source": "fixedSvg/bone.svg"
+    },
+    "book": {
+      "codepoint": 61875,
+      "source": "fixedSvg/book.svg"
+    },
+    "book-a": {
+      "codepoint": 61876,
+      "source": "fixedSvg/book-a.svg"
+    },
+    "book-audio": {
+      "codepoint": 61877,
+      "source": "fixedSvg/book-audio.svg"
+    },
+    "book-check": {
+      "codepoint": 61878,
+      "source": "fixedSvg/book-check.svg"
+    },
+    "book-copy": {
+      "codepoint": 61879,
+      "source": "fixedSvg/book-copy.svg"
+    },
+    "book-dashed": {
+      "codepoint": 61880,
+      "source": "fixedSvg/book-dashed.svg"
+    },
+    "book-down": {
+      "codepoint": 61881,
+      "source": "fixedSvg/book-down.svg"
+    },
+    "book-headphones": {
+      "codepoint": 61882,
+      "source": "fixedSvg/book-headphones.svg"
+    },
+    "book-heart": {
+      "codepoint": 61883,
+      "source": "fixedSvg/book-heart.svg"
+    },
+    "book-image": {
+      "codepoint": 61884,
+      "source": "fixedSvg/book-image.svg"
+    },
+    "book-key": {
+      "codepoint": 61885,
+      "source": "fixedSvg/book-key.svg"
+    },
+    "book-lock": {
+      "codepoint": 61886,
+      "source": "fixedSvg/book-lock.svg"
+    },
+    "book-marked": {
+      "codepoint": 61887,
+      "source": "fixedSvg/book-marked.svg"
+    },
+    "book-minus": {
+      "codepoint": 61888,
+      "source": "fixedSvg/book-minus.svg"
+    },
+    "book-open": {
+      "codepoint": 61889,
+      "source": "fixedSvg/book-open.svg"
+    },
+    "book-open-check": {
+      "codepoint": 61890,
+      "source": "fixedSvg/book-open-check.svg"
+    },
+    "book-open-text": {
+      "codepoint": 61891,
+      "source": "fixedSvg/book-open-text.svg"
+    },
+    "book-plus": {
+      "codepoint": 61892,
+      "source": "fixedSvg/book-plus.svg"
+    },
+    "book-text": {
+      "codepoint": 61893,
+      "source": "fixedSvg/book-text.svg"
+    },
+    "book-type": {
+      "codepoint": 61894,
+      "source": "fixedSvg/book-type.svg"
+    },
+    "book-up": {
+      "codepoint": 61895,
+      "source": "fixedSvg/book-up.svg"
+    },
+    "book-up-2": {
+      "codepoint": 61896,
+      "source": "fixedSvg/book-up-2.svg"
+    },
+    "book-user": {
+      "codepoint": 61897,
+      "source": "fixedSvg/book-user.svg"
+    },
+    "book-x": {
+      "codepoint": 61898,
+      "source": "fixedSvg/book-x.svg"
+    },
+    "bookmark": {
+      "codepoint": 61899,
+      "source": "fixedSvg/bookmark.svg"
+    },
+    "bookmark-check": {
+      "codepoint": 61900,
+      "source": "fixedSvg/bookmark-check.svg"
+    },
+    "bookmark-minus": {
+      "codepoint": 61901,
+      "source": "fixedSvg/bookmark-minus.svg"
+    },
+    "bookmark-plus": {
+      "codepoint": 61902,
+      "source": "fixedSvg/bookmark-plus.svg"
+    },
+    "bookmark-x": {
+      "codepoint": 61903,
+      "source": "fixedSvg/bookmark-x.svg"
+    },
+    "boom-box": {
+      "codepoint": 61904,
+      "source": "fixedSvg/boom-box.svg"
+    },
+    "bot": {
+      "codepoint": 61905,
+      "source": "fixedSvg/bot.svg"
+    },
+    "bot-message-square": {
+      "codepoint": 61906,
+      "source": "fixedSvg/bot-message-square.svg"
+    },
+    "bot-off": {
+      "codepoint": 61907,
+      "source": "fixedSvg/bot-off.svg"
+    },
+    "box": {
+      "codepoint": 61908,
+      "source": "fixedSvg/box.svg"
+    },
+    "boxes": {
+      "codepoint": 61909,
+      "source": "fixedSvg/boxes.svg"
+    },
+    "braces": {
+      "codepoint": 61910,
+      "source": "fixedSvg/braces.svg"
+    },
+    "brackets": {
+      "codepoint": 61911,
+      "source": "fixedSvg/brackets.svg"
+    },
+    "brain": {
+      "codepoint": 61912,
+      "source": "fixedSvg/brain.svg"
+    },
+    "brain-circuit": {
+      "codepoint": 61913,
+      "source": "fixedSvg/brain-circuit.svg"
+    },
+    "brain-cog": {
+      "codepoint": 61914,
+      "source": "fixedSvg/brain-cog.svg"
+    },
+    "brick-wall": {
+      "codepoint": 61915,
+      "source": "fixedSvg/brick-wall.svg"
+    },
+    "briefcase": {
+      "codepoint": 61916,
+      "source": "fixedSvg/briefcase.svg"
+    },
+    "briefcase-business": {
+      "codepoint": 61917,
+      "source": "fixedSvg/briefcase-business.svg"
+    },
+    "briefcase-conveyor-belt": {
+      "codepoint": 61918,
+      "source": "fixedSvg/briefcase-conveyor-belt.svg"
+    },
+    "briefcase-medical": {
+      "codepoint": 61919,
+      "source": "fixedSvg/briefcase-medical.svg"
+    },
+    "bring-to-front": {
+      "codepoint": 61920,
+      "source": "fixedSvg/bring-to-front.svg"
+    },
+    "brush": {
+      "codepoint": 61921,
+      "source": "fixedSvg/brush.svg"
+    },
+    "bug": {
+      "codepoint": 61922,
+      "source": "fixedSvg/bug.svg"
+    },
+    "bug-off": {
+      "codepoint": 61923,
+      "source": "fixedSvg/bug-off.svg"
+    },
+    "bug-play": {
+      "codepoint": 61924,
+      "source": "fixedSvg/bug-play.svg"
+    },
+    "building": {
+      "codepoint": 61925,
+      "source": "fixedSvg/building.svg"
+    },
+    "building-2": {
+      "codepoint": 61926,
+      "source": "fixedSvg/building-2.svg"
+    },
+    "bus": {
+      "codepoint": 61927,
+      "source": "fixedSvg/bus.svg"
+    },
+    "bus-front": {
+      "codepoint": 61928,
+      "source": "fixedSvg/bus-front.svg"
+    },
+    "cable": {
+      "codepoint": 61929,
+      "source": "fixedSvg/cable.svg"
+    },
+    "cable-car": {
+      "codepoint": 61930,
+      "source": "fixedSvg/cable-car.svg"
+    },
+    "cake": {
+      "codepoint": 61931,
+      "source": "fixedSvg/cake.svg"
+    },
+    "cake-slice": {
+      "codepoint": 61932,
+      "source": "fixedSvg/cake-slice.svg"
+    },
+    "calculator": {
+      "codepoint": 61933,
+      "source": "fixedSvg/calculator.svg"
+    },
+    "calendar": {
+      "codepoint": 61934,
+      "source": "fixedSvg/calendar.svg"
+    },
+    "calendar-1": {
+      "codepoint": 61935,
+      "source": "fixedSvg/calendar-1.svg"
+    },
+    "calendar-arrow-down": {
+      "codepoint": 61936,
+      "source": "fixedSvg/calendar-arrow-down.svg"
+    },
+    "calendar-arrow-up": {
+      "codepoint": 61937,
+      "source": "fixedSvg/calendar-arrow-up.svg"
+    },
+    "calendar-check": {
+      "codepoint": 61938,
+      "source": "fixedSvg/calendar-check.svg"
+    },
+    "calendar-check-2": {
+      "codepoint": 61939,
+      "source": "fixedSvg/calendar-check-2.svg"
+    },
+    "calendar-clock": {
+      "codepoint": 61940,
+      "source": "fixedSvg/calendar-clock.svg"
+    },
+    "calendar-cog": {
+      "codepoint": 61941,
+      "source": "fixedSvg/calendar-cog.svg"
+    },
+    "calendar-days": {
+      "codepoint": 61942,
+      "source": "fixedSvg/calendar-days.svg"
+    },
+    "calendar-fold": {
+      "codepoint": 61943,
+      "source": "fixedSvg/calendar-fold.svg"
+    },
+    "calendar-heart": {
+      "codepoint": 61944,
+      "source": "fixedSvg/calendar-heart.svg"
+    },
+    "calendar-minus": {
+      "codepoint": 61945,
+      "source": "fixedSvg/calendar-minus.svg"
+    },
+    "calendar-minus-2": {
+      "codepoint": 61946,
+      "source": "fixedSvg/calendar-minus-2.svg"
+    },
+    "calendar-off": {
+      "codepoint": 61947,
+      "source": "fixedSvg/calendar-off.svg"
+    },
+    "calendar-plus": {
+      "codepoint": 61948,
+      "source": "fixedSvg/calendar-plus.svg"
+    },
+    "calendar-plus-2": {
+      "codepoint": 61949,
+      "source": "fixedSvg/calendar-plus-2.svg"
+    },
+    "calendar-range": {
+      "codepoint": 61950,
+      "source": "fixedSvg/calendar-range.svg"
+    },
+    "calendar-search": {
+      "codepoint": 61951,
+      "source": "fixedSvg/calendar-search.svg"
+    },
+    "calendar-sync": {
+      "codepoint": 61952,
+      "source": "fixedSvg/calendar-sync.svg"
+    },
+    "calendar-x": {
+      "codepoint": 61953,
+      "source": "fixedSvg/calendar-x.svg"
+    },
+    "calendar-x-2": {
+      "codepoint": 61954,
+      "source": "fixedSvg/calendar-x-2.svg"
+    },
+    "camera": {
+      "codepoint": 61955,
+      "source": "fixedSvg/camera.svg"
+    },
+    "camera-off": {
+      "codepoint": 61956,
+      "source": "fixedSvg/camera-off.svg"
+    },
+    "candy": {
+      "codepoint": 61957,
+      "source": "fixedSvg/candy.svg"
+    },
+    "candy-cane": {
+      "codepoint": 61958,
+      "source": "fixedSvg/candy-cane.svg"
+    },
+    "candy-off": {
+      "codepoint": 61959,
+      "source": "fixedSvg/candy-off.svg"
+    },
+    "cannabis": {
+      "codepoint": 61960,
+      "source": "fixedSvg/cannabis.svg"
+    },
+    "captions": {
+      "codepoint": 61961,
+      "source": "fixedSvg/captions.svg"
+    },
+    "captions-off": {
+      "codepoint": 61962,
+      "source": "fixedSvg/captions-off.svg"
+    },
+    "car": {
+      "codepoint": 61963,
+      "source": "fixedSvg/car.svg"
+    },
+    "car-front": {
+      "codepoint": 61964,
+      "source": "fixedSvg/car-front.svg"
+    },
+    "car-taxi-front": {
+      "codepoint": 61965,
+      "source": "fixedSvg/car-taxi-front.svg"
+    },
+    "caravan": {
+      "codepoint": 61966,
+      "source": "fixedSvg/caravan.svg"
+    },
+    "carrot": {
+      "codepoint": 61967,
+      "source": "fixedSvg/carrot.svg"
+    },
+    "case-lower": {
+      "codepoint": 61968,
+      "source": "fixedSvg/case-lower.svg"
+    },
+    "case-sensitive": {
+      "codepoint": 61969,
+      "source": "fixedSvg/case-sensitive.svg"
+    },
+    "case-upper": {
+      "codepoint": 61970,
+      "source": "fixedSvg/case-upper.svg"
+    },
+    "cassette-tape": {
+      "codepoint": 61971,
+      "source": "fixedSvg/cassette-tape.svg"
+    },
+    "cast": {
+      "codepoint": 61972,
+      "source": "fixedSvg/cast.svg"
+    },
+    "castle": {
+      "codepoint": 61973,
+      "source": "fixedSvg/castle.svg"
+    },
+    "cat": {
+      "codepoint": 61974,
+      "source": "fixedSvg/cat.svg"
+    },
+    "cctv": {
+      "codepoint": 61975,
+      "source": "fixedSvg/cctv.svg"
+    },
+    "chart-area": {
+      "codepoint": 61976,
+      "source": "fixedSvg/chart-area.svg"
+    },
+    "chart-bar": {
+      "codepoint": 61977,
+      "source": "fixedSvg/chart-bar.svg"
+    },
+    "chart-bar-big": {
+      "codepoint": 61978,
+      "source": "fixedSvg/chart-bar-big.svg"
+    },
+    "chart-bar-decreasing": {
+      "codepoint": 61979,
+      "source": "fixedSvg/chart-bar-decreasing.svg"
+    },
+    "chart-bar-increasing": {
+      "codepoint": 61980,
+      "source": "fixedSvg/chart-bar-increasing.svg"
+    },
+    "chart-bar-stacked": {
+      "codepoint": 61981,
+      "source": "fixedSvg/chart-bar-stacked.svg"
+    },
+    "chart-candlestick": {
+      "codepoint": 61982,
+      "source": "fixedSvg/chart-candlestick.svg"
+    },
+    "chart-column": {
+      "codepoint": 61983,
+      "source": "fixedSvg/chart-column.svg"
+    },
+    "chart-column-big": {
+      "codepoint": 61984,
+      "source": "fixedSvg/chart-column-big.svg"
+    },
+    "chart-column-decreasing": {
+      "codepoint": 61985,
+      "source": "fixedSvg/chart-column-decreasing.svg"
+    },
+    "chart-column-increasing": {
+      "codepoint": 61986,
+      "source": "fixedSvg/chart-column-increasing.svg"
+    },
+    "chart-column-stacked": {
+      "codepoint": 61987,
+      "source": "fixedSvg/chart-column-stacked.svg"
+    },
+    "chart-gantt": {
+      "codepoint": 61988,
+      "source": "fixedSvg/chart-gantt.svg"
+    },
+    "chart-line": {
+      "codepoint": 61989,
+      "source": "fixedSvg/chart-line.svg"
+    },
+    "chart-network": {
+      "codepoint": 61990,
+      "source": "fixedSvg/chart-network.svg"
+    },
+    "chart-no-axes-column": {
+      "codepoint": 61991,
+      "source": "fixedSvg/chart-no-axes-column.svg"
+    },
+    "chart-no-axes-column-decreasing": {
+      "codepoint": 61992,
+      "source": "fixedSvg/chart-no-axes-column-decreasing.svg"
+    },
+    "chart-no-axes-column-increasing": {
+      "codepoint": 61993,
+      "source": "fixedSvg/chart-no-axes-column-increasing.svg"
+    },
+    "chart-no-axes-combined": {
+      "codepoint": 61994,
+      "source": "fixedSvg/chart-no-axes-combined.svg"
+    },
+    "chart-no-axes-gantt": {
+      "codepoint": 61995,
+      "source": "fixedSvg/chart-no-axes-gantt.svg"
+    },
+    "chart-pie": {
+      "codepoint": 61996,
+      "source": "fixedSvg/chart-pie.svg"
+    },
+    "chart-scatter": {
+      "codepoint": 61997,
+      "source": "fixedSvg/chart-scatter.svg"
+    },
+    "chart-spline": {
+      "codepoint": 61998,
+      "source": "fixedSvg/chart-spline.svg"
+    },
+    "check": {
+      "codepoint": 61999,
+      "source": "fixedSvg/check.svg"
+    },
+    "check-check": {
+      "codepoint": 62000,
+      "source": "fixedSvg/check-check.svg"
+    },
+    "chef-hat": {
+      "codepoint": 62001,
+      "source": "fixedSvg/chef-hat.svg"
+    },
+    "cherry": {
+      "codepoint": 62002,
+      "source": "fixedSvg/cherry.svg"
+    },
+    "chevron-down": {
+      "codepoint": 62003,
+      "source": "fixedSvg/chevron-down.svg"
+    },
+    "chevron-first": {
+      "codepoint": 62004,
+      "source": "fixedSvg/chevron-first.svg"
+    },
+    "chevron-last": {
+      "codepoint": 62005,
+      "source": "fixedSvg/chevron-last.svg"
+    },
+    "chevron-left": {
+      "codepoint": 62006,
+      "source": "fixedSvg/chevron-left.svg"
+    },
+    "chevron-right": {
+      "codepoint": 62007,
+      "source": "fixedSvg/chevron-right.svg"
+    },
+    "chevron-up": {
+      "codepoint": 62008,
+      "source": "fixedSvg/chevron-up.svg"
+    },
+    "chevrons-down": {
+      "codepoint": 62009,
+      "source": "fixedSvg/chevrons-down.svg"
+    },
+    "chevrons-down-up": {
+      "codepoint": 62010,
+      "source": "fixedSvg/chevrons-down-up.svg"
+    },
+    "chevrons-left": {
+      "codepoint": 62011,
+      "source": "fixedSvg/chevrons-left.svg"
+    },
+    "chevrons-left-right": {
+      "codepoint": 62012,
+      "source": "fixedSvg/chevrons-left-right.svg"
+    },
+    "chevrons-left-right-ellipsis": {
+      "codepoint": 62013,
+      "source": "fixedSvg/chevrons-left-right-ellipsis.svg"
+    },
+    "chevrons-right": {
+      "codepoint": 62014,
+      "source": "fixedSvg/chevrons-right.svg"
+    },
+    "chevrons-right-left": {
+      "codepoint": 62015,
+      "source": "fixedSvg/chevrons-right-left.svg"
+    },
+    "chevrons-up": {
+      "codepoint": 62016,
+      "source": "fixedSvg/chevrons-up.svg"
+    },
+    "chevrons-up-down": {
+      "codepoint": 62017,
+      "source": "fixedSvg/chevrons-up-down.svg"
+    },
+    "chrome": {
+      "codepoint": 62018,
+      "source": "fixedSvg/chrome.svg"
+    },
+    "church": {
+      "codepoint": 62019,
+      "source": "fixedSvg/church.svg"
+    },
+    "cigarette": {
+      "codepoint": 62020,
+      "source": "fixedSvg/cigarette.svg"
+    },
+    "cigarette-off": {
+      "codepoint": 62021,
+      "source": "fixedSvg/cigarette-off.svg"
+    },
+    "circle": {
+      "codepoint": 62022,
+      "source": "fixedSvg/circle.svg"
+    },
+    "circle-alert": {
+      "codepoint": 62023,
+      "source": "fixedSvg/circle-alert.svg"
+    },
+    "circle-arrow-down": {
+      "codepoint": 62024,
+      "source": "fixedSvg/circle-arrow-down.svg"
+    },
+    "circle-arrow-left": {
+      "codepoint": 62025,
+      "source": "fixedSvg/circle-arrow-left.svg"
+    },
+    "circle-arrow-out-down-left": {
+      "codepoint": 62026,
+      "source": "fixedSvg/circle-arrow-out-down-left.svg"
+    },
+    "circle-arrow-out-down-right": {
+      "codepoint": 62027,
+      "source": "fixedSvg/circle-arrow-out-down-right.svg"
+    },
+    "circle-arrow-out-up-left": {
+      "codepoint": 62028,
+      "source": "fixedSvg/circle-arrow-out-up-left.svg"
+    },
+    "circle-arrow-out-up-right": {
+      "codepoint": 62029,
+      "source": "fixedSvg/circle-arrow-out-up-right.svg"
+    },
+    "circle-arrow-right": {
+      "codepoint": 62030,
+      "source": "fixedSvg/circle-arrow-right.svg"
+    },
+    "circle-arrow-up": {
+      "codepoint": 62031,
+      "source": "fixedSvg/circle-arrow-up.svg"
+    },
+    "circle-check": {
+      "codepoint": 62032,
+      "source": "fixedSvg/circle-check.svg"
+    },
+    "circle-check-big": {
+      "codepoint": 62033,
+      "source": "fixedSvg/circle-check-big.svg"
+    },
+    "circle-chevron-down": {
+      "codepoint": 62034,
+      "source": "fixedSvg/circle-chevron-down.svg"
+    },
+    "circle-chevron-left": {
+      "codepoint": 62035,
+      "source": "fixedSvg/circle-chevron-left.svg"
+    },
+    "circle-chevron-right": {
+      "codepoint": 62036,
+      "source": "fixedSvg/circle-chevron-right.svg"
+    },
+    "circle-chevron-up": {
+      "codepoint": 62037,
+      "source": "fixedSvg/circle-chevron-up.svg"
+    },
+    "circle-dashed": {
+      "codepoint": 62038,
+      "source": "fixedSvg/circle-dashed.svg"
+    },
+    "circle-divide": {
+      "codepoint": 62039,
+      "source": "fixedSvg/circle-divide.svg"
+    },
+    "circle-dollar-sign": {
+      "codepoint": 62040,
+      "source": "fixedSvg/circle-dollar-sign.svg"
+    },
+    "circle-dot": {
+      "codepoint": 62041,
+      "source": "fixedSvg/circle-dot.svg"
+    },
+    "circle-dot-dashed": {
+      "codepoint": 62042,
+      "source": "fixedSvg/circle-dot-dashed.svg"
+    },
+    "circle-ellipsis": {
+      "codepoint": 62043,
+      "source": "fixedSvg/circle-ellipsis.svg"
+    },
+    "circle-equal": {
+      "codepoint": 62044,
+      "source": "fixedSvg/circle-equal.svg"
+    },
+    "circle-fading-arrow-up": {
+      "codepoint": 62045,
+      "source": "fixedSvg/circle-fading-arrow-up.svg"
+    },
+    "circle-fading-plus": {
+      "codepoint": 62046,
+      "source": "fixedSvg/circle-fading-plus.svg"
+    },
+    "circle-gauge": {
+      "codepoint": 62047,
+      "source": "fixedSvg/circle-gauge.svg"
+    },
+    "circle-help": {
+      "codepoint": 62048,
+      "source": "fixedSvg/circle-help.svg"
+    },
+    "circle-minus": {
+      "codepoint": 62049,
+      "source": "fixedSvg/circle-minus.svg"
+    },
+    "circle-off": {
+      "codepoint": 62050,
+      "source": "fixedSvg/circle-off.svg"
+    },
+    "circle-parking": {
+      "codepoint": 62051,
+      "source": "fixedSvg/circle-parking.svg"
+    },
+    "circle-parking-off": {
+      "codepoint": 62052,
+      "source": "fixedSvg/circle-parking-off.svg"
+    },
+    "circle-pause": {
+      "codepoint": 62053,
+      "source": "fixedSvg/circle-pause.svg"
+    },
+    "circle-percent": {
+      "codepoint": 62054,
+      "source": "fixedSvg/circle-percent.svg"
+    },
+    "circle-play": {
+      "codepoint": 62055,
+      "source": "fixedSvg/circle-play.svg"
+    },
+    "circle-plus": {
+      "codepoint": 62056,
+      "source": "fixedSvg/circle-plus.svg"
+    },
+    "circle-power": {
+      "codepoint": 62057,
+      "source": "fixedSvg/circle-power.svg"
+    },
+    "circle-slash": {
+      "codepoint": 62058,
+      "source": "fixedSvg/circle-slash.svg"
+    },
+    "circle-slash-2": {
+      "codepoint": 62059,
+      "source": "fixedSvg/circle-slash-2.svg"
+    },
+    "circle-stop": {
+      "codepoint": 62060,
+      "source": "fixedSvg/circle-stop.svg"
+    },
+    "circle-user": {
+      "codepoint": 62061,
+      "source": "fixedSvg/circle-user.svg"
+    },
+    "circle-user-round": {
+      "codepoint": 62062,
+      "source": "fixedSvg/circle-user-round.svg"
+    },
+    "circle-x": {
+      "codepoint": 62063,
+      "source": "fixedSvg/circle-x.svg"
+    },
+    "circuit-board": {
+      "codepoint": 62064,
+      "source": "fixedSvg/circuit-board.svg"
+    },
+    "citrus": {
+      "codepoint": 62065,
+      "source": "fixedSvg/citrus.svg"
+    },
+    "clapperboard": {
+      "codepoint": 62066,
+      "source": "fixedSvg/clapperboard.svg"
+    },
+    "clipboard": {
+      "codepoint": 62067,
+      "source": "fixedSvg/clipboard.svg"
+    },
+    "clipboard-check": {
+      "codepoint": 62068,
+      "source": "fixedSvg/clipboard-check.svg"
+    },
+    "clipboard-copy": {
+      "codepoint": 62069,
+      "source": "fixedSvg/clipboard-copy.svg"
+    },
+    "clipboard-list": {
+      "codepoint": 62070,
+      "source": "fixedSvg/clipboard-list.svg"
+    },
+    "clipboard-minus": {
+      "codepoint": 62071,
+      "source": "fixedSvg/clipboard-minus.svg"
+    },
+    "clipboard-paste": {
+      "codepoint": 62072,
+      "source": "fixedSvg/clipboard-paste.svg"
+    },
+    "clipboard-pen": {
+      "codepoint": 62073,
+      "source": "fixedSvg/clipboard-pen.svg"
+    },
+    "clipboard-pen-line": {
+      "codepoint": 62074,
+      "source": "fixedSvg/clipboard-pen-line.svg"
+    },
+    "clipboard-plus": {
+      "codepoint": 62075,
+      "source": "fixedSvg/clipboard-plus.svg"
+    },
+    "clipboard-type": {
+      "codepoint": 62076,
+      "source": "fixedSvg/clipboard-type.svg"
+    },
+    "clipboard-x": {
+      "codepoint": 62077,
+      "source": "fixedSvg/clipboard-x.svg"
+    },
+    "clock": {
+      "codepoint": 62078,
+      "source": "fixedSvg/clock.svg"
+    },
+    "clock-1": {
+      "codepoint": 62079,
+      "source": "fixedSvg/clock-1.svg"
+    },
+    "clock-10": {
+      "codepoint": 62080,
+      "source": "fixedSvg/clock-10.svg"
+    },
+    "clock-11": {
+      "codepoint": 62081,
+      "source": "fixedSvg/clock-11.svg"
+    },
+    "clock-12": {
+      "codepoint": 62082,
+      "source": "fixedSvg/clock-12.svg"
+    },
+    "clock-2": {
+      "codepoint": 62083,
+      "source": "fixedSvg/clock-2.svg"
+    },
+    "clock-3": {
+      "codepoint": 62084,
+      "source": "fixedSvg/clock-3.svg"
+    },
+    "clock-4": {
+      "codepoint": 62085,
+      "source": "fixedSvg/clock-4.svg"
+    },
+    "clock-5": {
+      "codepoint": 62086,
+      "source": "fixedSvg/clock-5.svg"
+    },
+    "clock-6": {
+      "codepoint": 62087,
+      "source": "fixedSvg/clock-6.svg"
+    },
+    "clock-7": {
+      "codepoint": 62088,
+      "source": "fixedSvg/clock-7.svg"
+    },
+    "clock-8": {
+      "codepoint": 62089,
+      "source": "fixedSvg/clock-8.svg"
+    },
+    "clock-9": {
+      "codepoint": 62090,
+      "source": "fixedSvg/clock-9.svg"
+    },
+    "clock-alert": {
+      "codepoint": 62091,
+      "source": "fixedSvg/clock-alert.svg"
+    },
+    "clock-arrow-down": {
+      "codepoint": 62092,
+      "source": "fixedSvg/clock-arrow-down.svg"
+    },
+    "clock-arrow-up": {
+      "codepoint": 62093,
+      "source": "fixedSvg/clock-arrow-up.svg"
+    },
+    "cloud": {
+      "codepoint": 62094,
+      "source": "fixedSvg/cloud.svg"
+    },
+    "cloud-alert": {
+      "codepoint": 62095,
+      "source": "fixedSvg/cloud-alert.svg"
+    },
+    "cloud-cog": {
+      "codepoint": 62096,
+      "source": "fixedSvg/cloud-cog.svg"
+    },
+    "cloud-download": {
+      "codepoint": 62097,
+      "source": "fixedSvg/cloud-download.svg"
+    },
+    "cloud-drizzle": {
+      "codepoint": 62098,
+      "source": "fixedSvg/cloud-drizzle.svg"
+    },
+    "cloud-fog": {
+      "codepoint": 62099,
+      "source": "fixedSvg/cloud-fog.svg"
+    },
+    "cloud-hail": {
+      "codepoint": 62100,
+      "source": "fixedSvg/cloud-hail.svg"
+    },
+    "cloud-lightning": {
+      "codepoint": 62101,
+      "source": "fixedSvg/cloud-lightning.svg"
+    },
+    "cloud-moon": {
+      "codepoint": 62102,
+      "source": "fixedSvg/cloud-moon.svg"
+    },
+    "cloud-moon-rain": {
+      "codepoint": 62103,
+      "source": "fixedSvg/cloud-moon-rain.svg"
+    },
+    "cloud-off": {
+      "codepoint": 62104,
+      "source": "fixedSvg/cloud-off.svg"
+    },
+    "cloud-rain": {
+      "codepoint": 62105,
+      "source": "fixedSvg/cloud-rain.svg"
+    },
+    "cloud-rain-wind": {
+      "codepoint": 62106,
+      "source": "fixedSvg/cloud-rain-wind.svg"
+    },
+    "cloud-snow": {
+      "codepoint": 62107,
+      "source": "fixedSvg/cloud-snow.svg"
+    },
+    "cloud-sun": {
+      "codepoint": 62108,
+      "source": "fixedSvg/cloud-sun.svg"
+    },
+    "cloud-sun-rain": {
+      "codepoint": 62109,
+      "source": "fixedSvg/cloud-sun-rain.svg"
+    },
+    "cloud-upload": {
+      "codepoint": 62110,
+      "source": "fixedSvg/cloud-upload.svg"
+    },
+    "cloudy": {
+      "codepoint": 62111,
+      "source": "fixedSvg/cloudy.svg"
+    },
+    "clover": {
+      "codepoint": 62112,
+      "source": "fixedSvg/clover.svg"
+    },
+    "club": {
+      "codepoint": 62113,
+      "source": "fixedSvg/club.svg"
+    },
+    "code": {
+      "codepoint": 62114,
+      "source": "fixedSvg/code.svg"
+    },
+    "code-xml": {
+      "codepoint": 62115,
+      "source": "fixedSvg/code-xml.svg"
+    },
+    "codepen": {
+      "codepoint": 62116,
+      "source": "fixedSvg/codepen.svg"
+    },
+    "codesandbox": {
+      "codepoint": 62117,
+      "source": "fixedSvg/codesandbox.svg"
+    },
+    "coffee": {
+      "codepoint": 62118,
+      "source": "fixedSvg/coffee.svg"
+    },
+    "cog": {
+      "codepoint": 62119,
+      "source": "fixedSvg/cog.svg"
+    },
+    "coins": {
+      "codepoint": 62120,
+      "source": "fixedSvg/coins.svg"
+    },
+    "columns-2": {
+      "codepoint": 62121,
+      "source": "fixedSvg/columns-2.svg"
+    },
+    "columns-3": {
+      "codepoint": 62122,
+      "source": "fixedSvg/columns-3.svg"
+    },
+    "columns-4": {
+      "codepoint": 62123,
+      "source": "fixedSvg/columns-4.svg"
+    },
+    "combine": {
+      "codepoint": 62124,
+      "source": "fixedSvg/combine.svg"
+    },
+    "command": {
+      "codepoint": 62125,
+      "source": "fixedSvg/command.svg"
+    },
+    "compass": {
+      "codepoint": 62126,
+      "source": "fixedSvg/compass.svg"
+    },
+    "component": {
+      "codepoint": 62127,
+      "source": "fixedSvg/component.svg"
+    },
+    "computer": {
+      "codepoint": 62128,
+      "source": "fixedSvg/computer.svg"
+    },
+    "concierge-bell": {
+      "codepoint": 62129,
+      "source": "fixedSvg/concierge-bell.svg"
+    },
+    "cone": {
+      "codepoint": 62130,
+      "source": "fixedSvg/cone.svg"
+    },
+    "construction": {
+      "codepoint": 62131,
+      "source": "fixedSvg/construction.svg"
+    },
+    "contact": {
+      "codepoint": 62132,
+      "source": "fixedSvg/contact.svg"
+    },
+    "contact-round": {
+      "codepoint": 62133,
+      "source": "fixedSvg/contact-round.svg"
+    },
+    "container": {
+      "codepoint": 62134,
+      "source": "fixedSvg/container.svg"
+    },
+    "contrast": {
+      "codepoint": 62135,
+      "source": "fixedSvg/contrast.svg"
+    },
+    "cookie": {
+      "codepoint": 62136,
+      "source": "fixedSvg/cookie.svg"
+    },
+    "cooking-pot": {
+      "codepoint": 62137,
+      "source": "fixedSvg/cooking-pot.svg"
+    },
+    "copy": {
+      "codepoint": 62138,
+      "source": "fixedSvg/copy.svg"
+    },
+    "copy-check": {
+      "codepoint": 62139,
+      "source": "fixedSvg/copy-check.svg"
+    },
+    "copy-minus": {
+      "codepoint": 62140,
+      "source": "fixedSvg/copy-minus.svg"
+    },
+    "copy-plus": {
+      "codepoint": 62141,
+      "source": "fixedSvg/copy-plus.svg"
+    },
+    "copy-slash": {
+      "codepoint": 62142,
+      "source": "fixedSvg/copy-slash.svg"
+    },
+    "copy-x": {
+      "codepoint": 62143,
+      "source": "fixedSvg/copy-x.svg"
+    },
+    "copyleft": {
+      "codepoint": 62144,
+      "source": "fixedSvg/copyleft.svg"
+    },
+    "copyright": {
+      "codepoint": 62145,
+      "source": "fixedSvg/copyright.svg"
+    },
+    "corner-down-left": {
+      "codepoint": 62146,
+      "source": "fixedSvg/corner-down-left.svg"
+    },
+    "corner-down-right": {
+      "codepoint": 62147,
+      "source": "fixedSvg/corner-down-right.svg"
+    },
+    "corner-left-down": {
+      "codepoint": 62148,
+      "source": "fixedSvg/corner-left-down.svg"
+    },
+    "corner-left-up": {
+      "codepoint": 62149,
+      "source": "fixedSvg/corner-left-up.svg"
+    },
+    "corner-right-down": {
+      "codepoint": 62150,
+      "source": "fixedSvg/corner-right-down.svg"
+    },
+    "corner-right-up": {
+      "codepoint": 62151,
+      "source": "fixedSvg/corner-right-up.svg"
+    },
+    "corner-up-left": {
+      "codepoint": 62152,
+      "source": "fixedSvg/corner-up-left.svg"
+    },
+    "corner-up-right": {
+      "codepoint": 62153,
+      "source": "fixedSvg/corner-up-right.svg"
+    },
+    "cpu": {
+      "codepoint": 62154,
+      "source": "fixedSvg/cpu.svg"
+    },
+    "creative-commons": {
+      "codepoint": 62155,
+      "source": "fixedSvg/creative-commons.svg"
+    },
+    "credit-card": {
+      "codepoint": 62156,
+      "source": "fixedSvg/credit-card.svg"
+    },
+    "croissant": {
+      "codepoint": 62157,
+      "source": "fixedSvg/croissant.svg"
+    },
+    "crop": {
+      "codepoint": 62158,
+      "source": "fixedSvg/crop.svg"
+    },
+    "cross": {
+      "codepoint": 62159,
+      "source": "fixedSvg/cross.svg"
+    },
+    "crosshair": {
+      "codepoint": 62160,
+      "source": "fixedSvg/crosshair.svg"
+    },
+    "crown": {
+      "codepoint": 62161,
+      "source": "fixedSvg/crown.svg"
+    },
+    "cuboid": {
+      "codepoint": 62162,
+      "source": "fixedSvg/cuboid.svg"
+    },
+    "cup-soda": {
+      "codepoint": 62163,
+      "source": "fixedSvg/cup-soda.svg"
+    },
+    "currency": {
+      "codepoint": 62164,
+      "source": "fixedSvg/currency.svg"
+    },
+    "cylinder": {
+      "codepoint": 62165,
+      "source": "fixedSvg/cylinder.svg"
+    },
+    "dam": {
+      "codepoint": 62166,
+      "source": "fixedSvg/dam.svg"
+    },
+    "database": {
+      "codepoint": 62167,
+      "source": "fixedSvg/database.svg"
+    },
+    "database-backup": {
+      "codepoint": 62168,
+      "source": "fixedSvg/database-backup.svg"
+    },
+    "database-zap": {
+      "codepoint": 62169,
+      "source": "fixedSvg/database-zap.svg"
+    },
+    "delete": {
+      "codepoint": 62170,
+      "source": "fixedSvg/delete.svg"
+    },
+    "dessert": {
+      "codepoint": 62171,
+      "source": "fixedSvg/dessert.svg"
+    },
+    "diameter": {
+      "codepoint": 62172,
+      "source": "fixedSvg/diameter.svg"
+    },
+    "diamond": {
+      "codepoint": 62173,
+      "source": "fixedSvg/diamond.svg"
+    },
+    "diamond-minus": {
+      "codepoint": 62174,
+      "source": "fixedSvg/diamond-minus.svg"
+    },
+    "diamond-percent": {
+      "codepoint": 62175,
+      "source": "fixedSvg/diamond-percent.svg"
+    },
+    "diamond-plus": {
+      "codepoint": 62176,
+      "source": "fixedSvg/diamond-plus.svg"
+    },
+    "dice-1": {
+      "codepoint": 62177,
+      "source": "fixedSvg/dice-1.svg"
+    },
+    "dice-2": {
+      "codepoint": 62178,
+      "source": "fixedSvg/dice-2.svg"
+    },
+    "dice-3": {
+      "codepoint": 62179,
+      "source": "fixedSvg/dice-3.svg"
+    },
+    "dice-4": {
+      "codepoint": 62180,
+      "source": "fixedSvg/dice-4.svg"
+    },
+    "dice-5": {
+      "codepoint": 62181,
+      "source": "fixedSvg/dice-5.svg"
+    },
+    "dice-6": {
+      "codepoint": 62182,
+      "source": "fixedSvg/dice-6.svg"
+    },
+    "dices": {
+      "codepoint": 62183,
+      "source": "fixedSvg/dices.svg"
+    },
+    "diff": {
+      "codepoint": 62184,
+      "source": "fixedSvg/diff.svg"
+    },
+    "disc": {
+      "codepoint": 62185,
+      "source": "fixedSvg/disc.svg"
+    },
+    "disc-2": {
+      "codepoint": 62186,
+      "source": "fixedSvg/disc-2.svg"
+    },
+    "disc-3": {
+      "codepoint": 62187,
+      "source": "fixedSvg/disc-3.svg"
+    },
+    "disc-album": {
+      "codepoint": 62188,
+      "source": "fixedSvg/disc-album.svg"
+    },
+    "divide": {
+      "codepoint": 62189,
+      "source": "fixedSvg/divide.svg"
+    },
+    "dna": {
+      "codepoint": 62190,
+      "source": "fixedSvg/dna.svg"
+    },
+    "dna-off": {
+      "codepoint": 62191,
+      "source": "fixedSvg/dna-off.svg"
+    },
+    "dock": {
+      "codepoint": 62192,
+      "source": "fixedSvg/dock.svg"
+    },
+    "dog": {
+      "codepoint": 62193,
+      "source": "fixedSvg/dog.svg"
+    },
+    "dollar-sign": {
+      "codepoint": 62194,
+      "source": "fixedSvg/dollar-sign.svg"
+    },
+    "donut": {
+      "codepoint": 62195,
+      "source": "fixedSvg/donut.svg"
+    },
+    "door-closed": {
+      "codepoint": 62196,
+      "source": "fixedSvg/door-closed.svg"
+    },
+    "door-open": {
+      "codepoint": 62197,
+      "source": "fixedSvg/door-open.svg"
+    },
+    "dot": {
+      "codepoint": 62198,
+      "source": "fixedSvg/dot.svg"
+    },
+    "download": {
+      "codepoint": 62199,
+      "source": "fixedSvg/download.svg"
+    },
+    "drafting-compass": {
+      "codepoint": 62200,
+      "source": "fixedSvg/drafting-compass.svg"
+    },
+    "drama": {
+      "codepoint": 62201,
+      "source": "fixedSvg/drama.svg"
+    },
+    "dribbble": {
+      "codepoint": 62202,
+      "source": "fixedSvg/dribbble.svg"
+    },
+    "drill": {
+      "codepoint": 62203,
+      "source": "fixedSvg/drill.svg"
+    },
+    "droplet": {
+      "codepoint": 62204,
+      "source": "fixedSvg/droplet.svg"
+    },
+    "droplet-off": {
+      "codepoint": 62205,
+      "source": "fixedSvg/droplet-off.svg"
+    },
+    "droplets": {
+      "codepoint": 62206,
+      "source": "fixedSvg/droplets.svg"
+    },
+    "drum": {
+      "codepoint": 62207,
+      "source": "fixedSvg/drum.svg"
+    },
+    "drumstick": {
+      "codepoint": 62208,
+      "source": "fixedSvg/drumstick.svg"
+    },
+    "dumbbell": {
+      "codepoint": 62209,
+      "source": "fixedSvg/dumbbell.svg"
+    },
+    "ear": {
+      "codepoint": 62210,
+      "source": "fixedSvg/ear.svg"
+    },
+    "ear-off": {
+      "codepoint": 62211,
+      "source": "fixedSvg/ear-off.svg"
+    },
+    "earth": {
+      "codepoint": 62212,
+      "source": "fixedSvg/earth.svg"
+    },
+    "earth-lock": {
+      "codepoint": 62213,
+      "source": "fixedSvg/earth-lock.svg"
+    },
+    "eclipse": {
+      "codepoint": 62214,
+      "source": "fixedSvg/eclipse.svg"
+    },
+    "egg": {
+      "codepoint": 62215,
+      "source": "fixedSvg/egg.svg"
+    },
+    "egg-fried": {
+      "codepoint": 62216,
+      "source": "fixedSvg/egg-fried.svg"
+    },
+    "egg-off": {
+      "codepoint": 62217,
+      "source": "fixedSvg/egg-off.svg"
+    },
+    "ellipsis": {
+      "codepoint": 62218,
+      "source": "fixedSvg/ellipsis.svg"
+    },
+    "ellipsis-vertical": {
+      "codepoint": 62219,
+      "source": "fixedSvg/ellipsis-vertical.svg"
+    },
+    "equal": {
+      "codepoint": 62220,
+      "source": "fixedSvg/equal.svg"
+    },
+    "equal-approximately": {
+      "codepoint": 62221,
+      "source": "fixedSvg/equal-approximately.svg"
+    },
+    "equal-not": {
+      "codepoint": 62222,
+      "source": "fixedSvg/equal-not.svg"
+    },
+    "eraser": {
+      "codepoint": 62223,
+      "source": "fixedSvg/eraser.svg"
+    },
+    "ethernet-port": {
+      "codepoint": 62224,
+      "source": "fixedSvg/ethernet-port.svg"
+    },
+    "euro": {
+      "codepoint": 62225,
+      "source": "fixedSvg/euro.svg"
+    },
+    "expand": {
+      "codepoint": 62226,
+      "source": "fixedSvg/expand.svg"
+    },
+    "external-link": {
+      "codepoint": 62227,
+      "source": "fixedSvg/external-link.svg"
+    },
+    "eye": {
+      "codepoint": 62228,
+      "source": "fixedSvg/eye.svg"
+    },
+    "eye-closed": {
+      "codepoint": 62229,
+      "source": "fixedSvg/eye-closed.svg"
+    },
+    "eye-off": {
+      "codepoint": 62230,
+      "source": "fixedSvg/eye-off.svg"
+    },
+    "facebook": {
+      "codepoint": 62231,
+      "source": "fixedSvg/facebook.svg"
+    },
+    "factory": {
+      "codepoint": 62232,
+      "source": "fixedSvg/factory.svg"
+    },
+    "fan": {
+      "codepoint": 62233,
+      "source": "fixedSvg/fan.svg"
+    },
+    "fast-forward": {
+      "codepoint": 62234,
+      "source": "fixedSvg/fast-forward.svg"
+    },
+    "feather": {
+      "codepoint": 62235,
+      "source": "fixedSvg/feather.svg"
+    },
+    "fence": {
+      "codepoint": 62236,
+      "source": "fixedSvg/fence.svg"
+    },
+    "ferris-wheel": {
+      "codepoint": 62237,
+      "source": "fixedSvg/ferris-wheel.svg"
+    },
+    "figma": {
+      "codepoint": 62238,
+      "source": "fixedSvg/figma.svg"
+    },
+    "file": {
+      "codepoint": 62239,
+      "source": "fixedSvg/file.svg"
+    },
+    "file-archive": {
+      "codepoint": 62240,
+      "source": "fixedSvg/file-archive.svg"
+    },
+    "file-audio": {
+      "codepoint": 62241,
+      "source": "fixedSvg/file-audio.svg"
+    },
+    "file-audio-2": {
+      "codepoint": 62242,
+      "source": "fixedSvg/file-audio-2.svg"
+    },
+    "file-axis-3d": {
+      "codepoint": 62243,
+      "source": "fixedSvg/file-axis-3d.svg"
+    },
+    "file-badge": {
+      "codepoint": 62244,
+      "source": "fixedSvg/file-badge.svg"
+    },
+    "file-badge-2": {
+      "codepoint": 62245,
+      "source": "fixedSvg/file-badge-2.svg"
+    },
+    "file-box": {
+      "codepoint": 62246,
+      "source": "fixedSvg/file-box.svg"
+    },
+    "file-chart-column": {
+      "codepoint": 62247,
+      "source": "fixedSvg/file-chart-column.svg"
+    },
+    "file-chart-column-increasing": {
+      "codepoint": 62248,
+      "source": "fixedSvg/file-chart-column-increasing.svg"
+    },
+    "file-chart-line": {
+      "codepoint": 62249,
+      "source": "fixedSvg/file-chart-line.svg"
+    },
+    "file-chart-pie": {
+      "codepoint": 62250,
+      "source": "fixedSvg/file-chart-pie.svg"
+    },
+    "file-check": {
+      "codepoint": 62251,
+      "source": "fixedSvg/file-check.svg"
+    },
+    "file-check-2": {
+      "codepoint": 62252,
+      "source": "fixedSvg/file-check-2.svg"
+    },
+    "file-clock": {
+      "codepoint": 62253,
+      "source": "fixedSvg/file-clock.svg"
+    },
+    "file-code": {
+      "codepoint": 62254,
+      "source": "fixedSvg/file-code.svg"
+    },
+    "file-code-2": {
+      "codepoint": 62255,
+      "source": "fixedSvg/file-code-2.svg"
+    },
+    "file-cog": {
+      "codepoint": 62256,
+      "source": "fixedSvg/file-cog.svg"
+    },
+    "file-diff": {
+      "codepoint": 62257,
+      "source": "fixedSvg/file-diff.svg"
+    },
+    "file-digit": {
+      "codepoint": 62258,
+      "source": "fixedSvg/file-digit.svg"
+    },
+    "file-down": {
+      "codepoint": 62259,
+      "source": "fixedSvg/file-down.svg"
+    },
+    "file-heart": {
+      "codepoint": 62260,
+      "source": "fixedSvg/file-heart.svg"
+    },
+    "file-image": {
+      "codepoint": 62261,
+      "source": "fixedSvg/file-image.svg"
+    },
+    "file-input": {
+      "codepoint": 62262,
+      "source": "fixedSvg/file-input.svg"
+    },
+    "file-json": {
+      "codepoint": 62263,
+      "source": "fixedSvg/file-json.svg"
+    },
+    "file-json-2": {
+      "codepoint": 62264,
+      "source": "fixedSvg/file-json-2.svg"
+    },
+    "file-key": {
+      "codepoint": 62265,
+      "source": "fixedSvg/file-key.svg"
+    },
+    "file-key-2": {
+      "codepoint": 62266,
+      "source": "fixedSvg/file-key-2.svg"
+    },
+    "file-lock": {
+      "codepoint": 62267,
+      "source": "fixedSvg/file-lock.svg"
+    },
+    "file-lock-2": {
+      "codepoint": 62268,
+      "source": "fixedSvg/file-lock-2.svg"
+    },
+    "file-minus": {
+      "codepoint": 62269,
+      "source": "fixedSvg/file-minus.svg"
+    },
+    "file-minus-2": {
+      "codepoint": 62270,
+      "source": "fixedSvg/file-minus-2.svg"
+    },
+    "file-music": {
+      "codepoint": 62271,
+      "source": "fixedSvg/file-music.svg"
+    },
+    "file-output": {
+      "codepoint": 62272,
+      "source": "fixedSvg/file-output.svg"
+    },
+    "file-pen": {
+      "codepoint": 62273,
+      "source": "fixedSvg/file-pen.svg"
+    },
+    "file-pen-line": {
+      "codepoint": 62274,
+      "source": "fixedSvg/file-pen-line.svg"
+    },
+    "file-plus": {
+      "codepoint": 62275,
+      "source": "fixedSvg/file-plus.svg"
+    },
+    "file-plus-2": {
+      "codepoint": 62276,
+      "source": "fixedSvg/file-plus-2.svg"
+    },
+    "file-question": {
+      "codepoint": 62277,
+      "source": "fixedSvg/file-question.svg"
+    },
+    "file-scan": {
+      "codepoint": 62278,
+      "source": "fixedSvg/file-scan.svg"
+    },
+    "file-search": {
+      "codepoint": 62279,
+      "source": "fixedSvg/file-search.svg"
+    },
+    "file-search-2": {
+      "codepoint": 62280,
+      "source": "fixedSvg/file-search-2.svg"
+    },
+    "file-sliders": {
+      "codepoint": 62281,
+      "source": "fixedSvg/file-sliders.svg"
+    },
+    "file-spreadsheet": {
+      "codepoint": 62282,
+      "source": "fixedSvg/file-spreadsheet.svg"
+    },
+    "file-stack": {
+      "codepoint": 62283,
+      "source": "fixedSvg/file-stack.svg"
+    },
+    "file-symlink": {
+      "codepoint": 62284,
+      "source": "fixedSvg/file-symlink.svg"
+    },
+    "file-terminal": {
+      "codepoint": 62285,
+      "source": "fixedSvg/file-terminal.svg"
+    },
+    "file-text": {
+      "codepoint": 62286,
+      "source": "fixedSvg/file-text.svg"
+    },
+    "file-type": {
+      "codepoint": 62287,
+      "source": "fixedSvg/file-type.svg"
+    },
+    "file-type-2": {
+      "codepoint": 62288,
+      "source": "fixedSvg/file-type-2.svg"
+    },
+    "file-up": {
+      "codepoint": 62289,
+      "source": "fixedSvg/file-up.svg"
+    },
+    "file-user": {
+      "codepoint": 62290,
+      "source": "fixedSvg/file-user.svg"
+    },
+    "file-video": {
+      "codepoint": 62291,
+      "source": "fixedSvg/file-video.svg"
+    },
+    "file-video-2": {
+      "codepoint": 62292,
+      "source": "fixedSvg/file-video-2.svg"
+    },
+    "file-volume": {
+      "codepoint": 62293,
+      "source": "fixedSvg/file-volume.svg"
+    },
+    "file-volume-2": {
+      "codepoint": 62294,
+      "source": "fixedSvg/file-volume-2.svg"
+    },
+    "file-warning": {
+      "codepoint": 62295,
+      "source": "fixedSvg/file-warning.svg"
+    },
+    "file-x": {
+      "codepoint": 62296,
+      "source": "fixedSvg/file-x.svg"
+    },
+    "file-x-2": {
+      "codepoint": 62297,
+      "source": "fixedSvg/file-x-2.svg"
+    },
+    "files": {
+      "codepoint": 62298,
+      "source": "fixedSvg/files.svg"
+    },
+    "film": {
+      "codepoint": 62299,
+      "source": "fixedSvg/film.svg"
+    },
+    "filter": {
+      "codepoint": 62300,
+      "source": "fixedSvg/filter.svg"
+    },
+    "filter-x": {
+      "codepoint": 62301,
+      "source": "fixedSvg/filter-x.svg"
+    },
+    "fingerprint": {
+      "codepoint": 62302,
+      "source": "fixedSvg/fingerprint.svg"
+    },
+    "fire-extinguisher": {
+      "codepoint": 62303,
+      "source": "fixedSvg/fire-extinguisher.svg"
+    },
+    "fish": {
+      "codepoint": 62304,
+      "source": "fixedSvg/fish.svg"
+    },
+    "fish-off": {
+      "codepoint": 62305,
+      "source": "fixedSvg/fish-off.svg"
+    },
+    "fish-symbol": {
+      "codepoint": 62306,
+      "source": "fixedSvg/fish-symbol.svg"
+    },
+    "flag": {
+      "codepoint": 62307,
+      "source": "fixedSvg/flag.svg"
+    },
+    "flag-off": {
+      "codepoint": 62308,
+      "source": "fixedSvg/flag-off.svg"
+    },
+    "flag-triangle-left": {
+      "codepoint": 62309,
+      "source": "fixedSvg/flag-triangle-left.svg"
+    },
+    "flag-triangle-right": {
+      "codepoint": 62310,
+      "source": "fixedSvg/flag-triangle-right.svg"
+    },
+    "flame": {
+      "codepoint": 62311,
+      "source": "fixedSvg/flame.svg"
+    },
+    "flame-kindling": {
+      "codepoint": 62312,
+      "source": "fixedSvg/flame-kindling.svg"
+    },
+    "flashlight": {
+      "codepoint": 62313,
+      "source": "fixedSvg/flashlight.svg"
+    },
+    "flashlight-off": {
+      "codepoint": 62314,
+      "source": "fixedSvg/flashlight-off.svg"
+    },
+    "flask-conical": {
+      "codepoint": 62315,
+      "source": "fixedSvg/flask-conical.svg"
+    },
+    "flask-conical-off": {
+      "codepoint": 62316,
+      "source": "fixedSvg/flask-conical-off.svg"
+    },
+    "flask-round": {
+      "codepoint": 62317,
+      "source": "fixedSvg/flask-round.svg"
+    },
+    "flip-horizontal": {
+      "codepoint": 62318,
+      "source": "fixedSvg/flip-horizontal.svg"
+    },
+    "flip-horizontal-2": {
+      "codepoint": 62319,
+      "source": "fixedSvg/flip-horizontal-2.svg"
+    },
+    "flip-vertical": {
+      "codepoint": 62320,
+      "source": "fixedSvg/flip-vertical.svg"
+    },
+    "flip-vertical-2": {
+      "codepoint": 62321,
+      "source": "fixedSvg/flip-vertical-2.svg"
+    },
+    "flower": {
+      "codepoint": 62322,
+      "source": "fixedSvg/flower.svg"
+    },
+    "flower-2": {
+      "codepoint": 62323,
+      "source": "fixedSvg/flower-2.svg"
+    },
+    "focus": {
+      "codepoint": 62324,
+      "source": "fixedSvg/focus.svg"
+    },
+    "fold-horizontal": {
+      "codepoint": 62325,
+      "source": "fixedSvg/fold-horizontal.svg"
+    },
+    "fold-vertical": {
+      "codepoint": 62326,
+      "source": "fixedSvg/fold-vertical.svg"
+    },
+    "folder": {
+      "codepoint": 62327,
+      "source": "fixedSvg/folder.svg"
+    },
+    "folder-archive": {
+      "codepoint": 62328,
+      "source": "fixedSvg/folder-archive.svg"
+    },
+    "folder-check": {
+      "codepoint": 62329,
+      "source": "fixedSvg/folder-check.svg"
+    },
+    "folder-clock": {
+      "codepoint": 62330,
+      "source": "fixedSvg/folder-clock.svg"
+    },
+    "folder-closed": {
+      "codepoint": 62331,
+      "source": "fixedSvg/folder-closed.svg"
+    },
+    "folder-code": {
+      "codepoint": 62332,
+      "source": "fixedSvg/folder-code.svg"
+    },
+    "folder-cog": {
+      "codepoint": 62333,
+      "source": "fixedSvg/folder-cog.svg"
+    },
+    "folder-dot": {
+      "codepoint": 62334,
+      "source": "fixedSvg/folder-dot.svg"
+    },
+    "folder-down": {
+      "codepoint": 62335,
+      "source": "fixedSvg/folder-down.svg"
+    },
+    "folder-git": {
+      "codepoint": 62336,
+      "source": "fixedSvg/folder-git.svg"
+    },
+    "folder-git-2": {
+      "codepoint": 62337,
+      "source": "fixedSvg/folder-git-2.svg"
+    },
+    "folder-heart": {
+      "codepoint": 62338,
+      "source": "fixedSvg/folder-heart.svg"
+    },
+    "folder-input": {
+      "codepoint": 62339,
+      "source": "fixedSvg/folder-input.svg"
+    },
+    "folder-kanban": {
+      "codepoint": 62340,
+      "source": "fixedSvg/folder-kanban.svg"
+    },
+    "folder-key": {
+      "codepoint": 62341,
+      "source": "fixedSvg/folder-key.svg"
+    },
+    "folder-lock": {
+      "codepoint": 62342,
+      "source": "fixedSvg/folder-lock.svg"
+    },
+    "folder-minus": {
+      "codepoint": 62343,
+      "source": "fixedSvg/folder-minus.svg"
+    },
+    "folder-open": {
+      "codepoint": 62344,
+      "source": "fixedSvg/folder-open.svg"
+    },
+    "folder-open-dot": {
+      "codepoint": 62345,
+      "source": "fixedSvg/folder-open-dot.svg"
+    },
+    "folder-output": {
+      "codepoint": 62346,
+      "source": "fixedSvg/folder-output.svg"
+    },
+    "folder-pen": {
+      "codepoint": 62347,
+      "source": "fixedSvg/folder-pen.svg"
+    },
+    "folder-plus": {
+      "codepoint": 62348,
+      "source": "fixedSvg/folder-plus.svg"
+    },
+    "folder-root": {
+      "codepoint": 62349,
+      "source": "fixedSvg/folder-root.svg"
+    },
+    "folder-search": {
+      "codepoint": 62350,
+      "source": "fixedSvg/folder-search.svg"
+    },
+    "folder-search-2": {
+      "codepoint": 62351,
+      "source": "fixedSvg/folder-search-2.svg"
+    },
+    "folder-symlink": {
+      "codepoint": 62352,
+      "source": "fixedSvg/folder-symlink.svg"
+    },
+    "folder-sync": {
+      "codepoint": 62353,
+      "source": "fixedSvg/folder-sync.svg"
+    },
+    "folder-tree": {
+      "codepoint": 62354,
+      "source": "fixedSvg/folder-tree.svg"
+    },
+    "folder-up": {
+      "codepoint": 62355,
+      "source": "fixedSvg/folder-up.svg"
+    },
+    "folder-x": {
+      "codepoint": 62356,
+      "source": "fixedSvg/folder-x.svg"
+    },
+    "folders": {
+      "codepoint": 62357,
+      "source": "fixedSvg/folders.svg"
+    },
+    "footprints": {
+      "codepoint": 62358,
+      "source": "fixedSvg/footprints.svg"
+    },
+    "forklift": {
+      "codepoint": 62359,
+      "source": "fixedSvg/forklift.svg"
+    },
+    "forward": {
+      "codepoint": 62360,
+      "source": "fixedSvg/forward.svg"
+    },
+    "frame": {
+      "codepoint": 62361,
+      "source": "fixedSvg/frame.svg"
+    },
+    "framer": {
+      "codepoint": 62362,
+      "source": "fixedSvg/framer.svg"
+    },
+    "frown": {
+      "codepoint": 62363,
+      "source": "fixedSvg/frown.svg"
+    },
+    "fuel": {
+      "codepoint": 62364,
+      "source": "fixedSvg/fuel.svg"
+    },
+    "fullscreen": {
+      "codepoint": 62365,
+      "source": "fixedSvg/fullscreen.svg"
+    },
+    "gallery-horizontal": {
+      "codepoint": 62366,
+      "source": "fixedSvg/gallery-horizontal.svg"
+    },
+    "gallery-horizontal-end": {
+      "codepoint": 62367,
+      "source": "fixedSvg/gallery-horizontal-end.svg"
+    },
+    "gallery-thumbnails": {
+      "codepoint": 62368,
+      "source": "fixedSvg/gallery-thumbnails.svg"
+    },
+    "gallery-vertical": {
+      "codepoint": 62369,
+      "source": "fixedSvg/gallery-vertical.svg"
+    },
+    "gallery-vertical-end": {
+      "codepoint": 62370,
+      "source": "fixedSvg/gallery-vertical-end.svg"
+    },
+    "gamepad": {
+      "codepoint": 62371,
+      "source": "fixedSvg/gamepad.svg"
+    },
+    "gamepad-2": {
+      "codepoint": 62372,
+      "source": "fixedSvg/gamepad-2.svg"
+    },
+    "gauge": {
+      "codepoint": 62373,
+      "source": "fixedSvg/gauge.svg"
+    },
+    "gavel": {
+      "codepoint": 62374,
+      "source": "fixedSvg/gavel.svg"
+    },
+    "gem": {
+      "codepoint": 62375,
+      "source": "fixedSvg/gem.svg"
+    },
+    "ghost": {
+      "codepoint": 62376,
+      "source": "fixedSvg/ghost.svg"
+    },
+    "gift": {
+      "codepoint": 62377,
+      "source": "fixedSvg/gift.svg"
+    },
+    "git-branch": {
+      "codepoint": 62378,
+      "source": "fixedSvg/git-branch.svg"
+    },
+    "git-branch-plus": {
+      "codepoint": 62379,
+      "source": "fixedSvg/git-branch-plus.svg"
+    },
+    "git-commit-horizontal": {
+      "codepoint": 62380,
+      "source": "fixedSvg/git-commit-horizontal.svg"
+    },
+    "git-commit-vertical": {
+      "codepoint": 62381,
+      "source": "fixedSvg/git-commit-vertical.svg"
+    },
+    "git-compare": {
+      "codepoint": 62382,
+      "source": "fixedSvg/git-compare.svg"
+    },
+    "git-compare-arrows": {
+      "codepoint": 62383,
+      "source": "fixedSvg/git-compare-arrows.svg"
+    },
+    "git-fork": {
+      "codepoint": 62384,
+      "source": "fixedSvg/git-fork.svg"
+    },
+    "git-graph": {
+      "codepoint": 62385,
+      "source": "fixedSvg/git-graph.svg"
+    },
+    "git-merge": {
+      "codepoint": 62386,
+      "source": "fixedSvg/git-merge.svg"
+    },
+    "git-pull-request": {
+      "codepoint": 62387,
+      "source": "fixedSvg/git-pull-request.svg"
+    },
+    "git-pull-request-arrow": {
+      "codepoint": 62388,
+      "source": "fixedSvg/git-pull-request-arrow.svg"
+    },
+    "git-pull-request-closed": {
+      "codepoint": 62389,
+      "source": "fixedSvg/git-pull-request-closed.svg"
+    },
+    "git-pull-request-create": {
+      "codepoint": 62390,
+      "source": "fixedSvg/git-pull-request-create.svg"
+    },
+    "git-pull-request-create-arrow": {
+      "codepoint": 62391,
+      "source": "fixedSvg/git-pull-request-create-arrow.svg"
+    },
+    "git-pull-request-draft": {
+      "codepoint": 62392,
+      "source": "fixedSvg/git-pull-request-draft.svg"
+    },
+    "github": {
+      "codepoint": 62393,
+      "source": "fixedSvg/github.svg"
+    },
+    "gitlab": {
+      "codepoint": 62394,
+      "source": "fixedSvg/gitlab.svg"
+    },
+    "glass-water": {
+      "codepoint": 62395,
+      "source": "fixedSvg/glass-water.svg"
+    },
+    "glasses": {
+      "codepoint": 62396,
+      "source": "fixedSvg/glasses.svg"
+    },
+    "globe": {
+      "codepoint": 62397,
+      "source": "fixedSvg/globe.svg"
+    },
+    "globe-lock": {
+      "codepoint": 62398,
+      "source": "fixedSvg/globe-lock.svg"
+    },
+    "goal": {
+      "codepoint": 62399,
+      "source": "fixedSvg/goal.svg"
+    },
+    "grab": {
+      "codepoint": 62400,
+      "source": "fixedSvg/grab.svg"
+    },
+    "graduation-cap": {
+      "codepoint": 62401,
+      "source": "fixedSvg/graduation-cap.svg"
+    },
+    "grape": {
+      "codepoint": 62402,
+      "source": "fixedSvg/grape.svg"
+    },
+    "grid-2x2": {
+      "codepoint": 62403,
+      "source": "fixedSvg/grid-2x2.svg"
+    },
+    "grid-2x2-check": {
+      "codepoint": 62404,
+      "source": "fixedSvg/grid-2x2-check.svg"
+    },
+    "grid-2x2-plus": {
+      "codepoint": 62405,
+      "source": "fixedSvg/grid-2x2-plus.svg"
+    },
+    "grid-2x2-x": {
+      "codepoint": 62406,
+      "source": "fixedSvg/grid-2x2-x.svg"
+    },
+    "grid-3x3": {
+      "codepoint": 62407,
+      "source": "fixedSvg/grid-3x3.svg"
+    },
+    "grip": {
+      "codepoint": 62408,
+      "source": "fixedSvg/grip.svg"
+    },
+    "grip-horizontal": {
+      "codepoint": 62409,
+      "source": "fixedSvg/grip-horizontal.svg"
+    },
+    "grip-vertical": {
+      "codepoint": 62410,
+      "source": "fixedSvg/grip-vertical.svg"
+    },
+    "group": {
+      "codepoint": 62411,
+      "source": "fixedSvg/group.svg"
+    },
+    "guitar": {
+      "codepoint": 62412,
+      "source": "fixedSvg/guitar.svg"
+    },
+    "ham": {
+      "codepoint": 62413,
+      "source": "fixedSvg/ham.svg"
+    },
+    "hammer": {
+      "codepoint": 62414,
+      "source": "fixedSvg/hammer.svg"
+    },
+    "hand": {
+      "codepoint": 62415,
+      "source": "fixedSvg/hand.svg"
+    },
+    "hand-coins": {
+      "codepoint": 62416,
+      "source": "fixedSvg/hand-coins.svg"
+    },
+    "hand-heart": {
+      "codepoint": 62417,
+      "source": "fixedSvg/hand-heart.svg"
+    },
+    "hand-helping": {
+      "codepoint": 62418,
+      "source": "fixedSvg/hand-helping.svg"
+    },
+    "hand-metal": {
+      "codepoint": 62419,
+      "source": "fixedSvg/hand-metal.svg"
+    },
+    "hand-platter": {
+      "codepoint": 62420,
+      "source": "fixedSvg/hand-platter.svg"
+    },
+    "handshake": {
+      "codepoint": 62421,
+      "source": "fixedSvg/handshake.svg"
+    },
+    "hard-drive": {
+      "codepoint": 62422,
+      "source": "fixedSvg/hard-drive.svg"
+    },
+    "hard-drive-download": {
+      "codepoint": 62423,
+      "source": "fixedSvg/hard-drive-download.svg"
+    },
+    "hard-drive-upload": {
+      "codepoint": 62424,
+      "source": "fixedSvg/hard-drive-upload.svg"
+    },
+    "hard-hat": {
+      "codepoint": 62425,
+      "source": "fixedSvg/hard-hat.svg"
+    },
+    "hash": {
+      "codepoint": 62426,
+      "source": "fixedSvg/hash.svg"
+    },
+    "haze": {
+      "codepoint": 62427,
+      "source": "fixedSvg/haze.svg"
+    },
+    "hdmi-port": {
+      "codepoint": 62428,
+      "source": "fixedSvg/hdmi-port.svg"
+    },
+    "heading": {
+      "codepoint": 62429,
+      "source": "fixedSvg/heading.svg"
+    },
+    "heading-1": {
+      "codepoint": 62430,
+      "source": "fixedSvg/heading-1.svg"
+    },
+    "heading-2": {
+      "codepoint": 62431,
+      "source": "fixedSvg/heading-2.svg"
+    },
+    "heading-3": {
+      "codepoint": 62432,
+      "source": "fixedSvg/heading-3.svg"
+    },
+    "heading-4": {
+      "codepoint": 62433,
+      "source": "fixedSvg/heading-4.svg"
+    },
+    "heading-5": {
+      "codepoint": 62434,
+      "source": "fixedSvg/heading-5.svg"
+    },
+    "heading-6": {
+      "codepoint": 62435,
+      "source": "fixedSvg/heading-6.svg"
+    },
+    "headphone-off": {
+      "codepoint": 62436,
+      "source": "fixedSvg/headphone-off.svg"
+    },
+    "headphones": {
+      "codepoint": 62437,
+      "source": "fixedSvg/headphones.svg"
+    },
+    "headset": {
+      "codepoint": 62438,
+      "source": "fixedSvg/headset.svg"
+    },
+    "heart": {
+      "codepoint": 62439,
+      "source": "fixedSvg/heart.svg"
+    },
+    "heart-crack": {
+      "codepoint": 62440,
+      "source": "fixedSvg/heart-crack.svg"
+    },
+    "heart-handshake": {
+      "codepoint": 62441,
+      "source": "fixedSvg/heart-handshake.svg"
+    },
+    "heart-off": {
+      "codepoint": 62442,
+      "source": "fixedSvg/heart-off.svg"
+    },
+    "heart-pulse": {
+      "codepoint": 62443,
+      "source": "fixedSvg/heart-pulse.svg"
+    },
+    "heater": {
+      "codepoint": 62444,
+      "source": "fixedSvg/heater.svg"
+    },
+    "hexagon": {
+      "codepoint": 62445,
+      "source": "fixedSvg/hexagon.svg"
+    },
+    "highlighter": {
+      "codepoint": 62446,
+      "source": "fixedSvg/highlighter.svg"
+    },
+    "history": {
+      "codepoint": 62447,
+      "source": "fixedSvg/history.svg"
+    },
+    "hop": {
+      "codepoint": 62448,
+      "source": "fixedSvg/hop.svg"
+    },
+    "hop-off": {
+      "codepoint": 62449,
+      "source": "fixedSvg/hop-off.svg"
+    },
+    "hospital": {
+      "codepoint": 62450,
+      "source": "fixedSvg/hospital.svg"
+    },
+    "hotel": {
+      "codepoint": 62451,
+      "source": "fixedSvg/hotel.svg"
+    },
+    "hourglass": {
+      "codepoint": 62452,
+      "source": "fixedSvg/hourglass.svg"
+    },
+    "house": {
+      "codepoint": 62453,
+      "source": "fixedSvg/house.svg"
+    },
+    "house-plug": {
+      "codepoint": 62454,
+      "source": "fixedSvg/house-plug.svg"
+    },
+    "house-plus": {
+      "codepoint": 62455,
+      "source": "fixedSvg/house-plus.svg"
+    },
+    "house-wifi": {
+      "codepoint": 62456,
+      "source": "fixedSvg/house-wifi.svg"
+    },
+    "ice-cream-bowl": {
+      "codepoint": 62457,
+      "source": "fixedSvg/ice-cream-bowl.svg"
+    },
+    "ice-cream-cone": {
+      "codepoint": 62458,
+      "source": "fixedSvg/ice-cream-cone.svg"
+    },
+    "id-card": {
+      "codepoint": 62459,
+      "source": "fixedSvg/id-card.svg"
+    },
+    "image": {
+      "codepoint": 62460,
+      "source": "fixedSvg/image.svg"
+    },
+    "image-down": {
+      "codepoint": 62461,
+      "source": "fixedSvg/image-down.svg"
+    },
+    "image-minus": {
+      "codepoint": 62462,
+      "source": "fixedSvg/image-minus.svg"
+    },
+    "image-off": {
+      "codepoint": 62463,
+      "source": "fixedSvg/image-off.svg"
+    },
+    "image-play": {
+      "codepoint": 62464,
+      "source": "fixedSvg/image-play.svg"
+    },
+    "image-plus": {
+      "codepoint": 62465,
+      "source": "fixedSvg/image-plus.svg"
+    },
+    "image-up": {
+      "codepoint": 62466,
+      "source": "fixedSvg/image-up.svg"
+    },
+    "image-upscale": {
+      "codepoint": 62467,
+      "source": "fixedSvg/image-upscale.svg"
+    },
+    "images": {
+      "codepoint": 62468,
+      "source": "fixedSvg/images.svg"
+    },
+    "import": {
+      "codepoint": 62469,
+      "source": "fixedSvg/import.svg"
+    },
+    "inbox": {
+      "codepoint": 62470,
+      "source": "fixedSvg/inbox.svg"
+    },
+    "indent-decrease": {
+      "codepoint": 62471,
+      "source": "fixedSvg/indent-decrease.svg"
+    },
+    "indent-increase": {
+      "codepoint": 62472,
+      "source": "fixedSvg/indent-increase.svg"
+    },
+    "indian-rupee": {
+      "codepoint": 62473,
+      "source": "fixedSvg/indian-rupee.svg"
+    },
+    "infinity": {
+      "codepoint": 62474,
+      "source": "fixedSvg/infinity.svg"
+    },
+    "info": {
+      "codepoint": 62475,
+      "source": "fixedSvg/info.svg"
+    },
+    "inspection-panel": {
+      "codepoint": 62476,
+      "source": "fixedSvg/inspection-panel.svg"
+    },
+    "instagram": {
+      "codepoint": 62477,
+      "source": "fixedSvg/instagram.svg"
+    },
+    "italic": {
+      "codepoint": 62478,
+      "source": "fixedSvg/italic.svg"
+    },
+    "iteration-ccw": {
+      "codepoint": 62479,
+      "source": "fixedSvg/iteration-ccw.svg"
+    },
+    "iteration-cw": {
+      "codepoint": 62480,
+      "source": "fixedSvg/iteration-cw.svg"
+    },
+    "japanese-yen": {
+      "codepoint": 62481,
+      "source": "fixedSvg/japanese-yen.svg"
+    },
+    "joystick": {
+      "codepoint": 62482,
+      "source": "fixedSvg/joystick.svg"
+    },
+    "kanban": {
+      "codepoint": 62483,
+      "source": "fixedSvg/kanban.svg"
+    },
+    "key": {
+      "codepoint": 62484,
+      "source": "fixedSvg/key.svg"
+    },
+    "key-round": {
+      "codepoint": 62485,
+      "source": "fixedSvg/key-round.svg"
+    },
+    "key-square": {
+      "codepoint": 62486,
+      "source": "fixedSvg/key-square.svg"
+    },
+    "keyboard": {
+      "codepoint": 62487,
+      "source": "fixedSvg/keyboard.svg"
+    },
+    "keyboard-music": {
+      "codepoint": 62488,
+      "source": "fixedSvg/keyboard-music.svg"
+    },
+    "keyboard-off": {
+      "codepoint": 62489,
+      "source": "fixedSvg/keyboard-off.svg"
+    },
+    "lamp": {
+      "codepoint": 62490,
+      "source": "fixedSvg/lamp.svg"
+    },
+    "lamp-ceiling": {
+      "codepoint": 62491,
+      "source": "fixedSvg/lamp-ceiling.svg"
+    },
+    "lamp-desk": {
+      "codepoint": 62492,
+      "source": "fixedSvg/lamp-desk.svg"
+    },
+    "lamp-floor": {
+      "codepoint": 62493,
+      "source": "fixedSvg/lamp-floor.svg"
+    },
+    "lamp-wall-down": {
+      "codepoint": 62494,
+      "source": "fixedSvg/lamp-wall-down.svg"
+    },
+    "lamp-wall-up": {
+      "codepoint": 62495,
+      "source": "fixedSvg/lamp-wall-up.svg"
+    },
+    "land-plot": {
+      "codepoint": 62496,
+      "source": "fixedSvg/land-plot.svg"
+    },
+    "landmark": {
+      "codepoint": 62497,
+      "source": "fixedSvg/landmark.svg"
+    },
+    "languages": {
+      "codepoint": 62498,
+      "source": "fixedSvg/languages.svg"
+    },
+    "laptop": {
+      "codepoint": 62499,
+      "source": "fixedSvg/laptop.svg"
+    },
+    "laptop-minimal": {
+      "codepoint": 62500,
+      "source": "fixedSvg/laptop-minimal.svg"
+    },
+    "laptop-minimal-check": {
+      "codepoint": 62501,
+      "source": "fixedSvg/laptop-minimal-check.svg"
+    },
+    "lasso": {
+      "codepoint": 62502,
+      "source": "fixedSvg/lasso.svg"
+    },
+    "lasso-select": {
+      "codepoint": 62503,
+      "source": "fixedSvg/lasso-select.svg"
+    },
+    "laugh": {
+      "codepoint": 62504,
+      "source": "fixedSvg/laugh.svg"
+    },
+    "layers": {
+      "codepoint": 62505,
+      "source": "fixedSvg/layers.svg"
+    },
+    "layers-2": {
+      "codepoint": 62506,
+      "source": "fixedSvg/layers-2.svg"
+    },
+    "layout-dashboard": {
+      "codepoint": 62507,
+      "source": "fixedSvg/layout-dashboard.svg"
+    },
+    "layout-grid": {
+      "codepoint": 62508,
+      "source": "fixedSvg/layout-grid.svg"
+    },
+    "layout-list": {
+      "codepoint": 62509,
+      "source": "fixedSvg/layout-list.svg"
+    },
+    "layout-panel-left": {
+      "codepoint": 62510,
+      "source": "fixedSvg/layout-panel-left.svg"
+    },
+    "layout-panel-top": {
+      "codepoint": 62511,
+      "source": "fixedSvg/layout-panel-top.svg"
+    },
+    "layout-template": {
+      "codepoint": 62512,
+      "source": "fixedSvg/layout-template.svg"
+    },
+    "leaf": {
+      "codepoint": 62513,
+      "source": "fixedSvg/leaf.svg"
+    },
+    "leafy-green": {
+      "codepoint": 62514,
+      "source": "fixedSvg/leafy-green.svg"
+    },
+    "lectern": {
+      "codepoint": 62515,
+      "source": "fixedSvg/lectern.svg"
+    },
+    "letter-text": {
+      "codepoint": 62516,
+      "source": "fixedSvg/letter-text.svg"
+    },
+    "library": {
+      "codepoint": 62517,
+      "source": "fixedSvg/library.svg"
+    },
+    "library-big": {
+      "codepoint": 62518,
+      "source": "fixedSvg/library-big.svg"
+    },
+    "life-buoy": {
+      "codepoint": 62519,
+      "source": "fixedSvg/life-buoy.svg"
+    },
+    "ligature": {
+      "codepoint": 62520,
+      "source": "fixedSvg/ligature.svg"
+    },
+    "lightbulb": {
+      "codepoint": 62521,
+      "source": "fixedSvg/lightbulb.svg"
+    },
+    "lightbulb-off": {
+      "codepoint": 62522,
+      "source": "fixedSvg/lightbulb-off.svg"
+    },
+    "link": {
+      "codepoint": 62523,
+      "source": "fixedSvg/link.svg"
+    },
+    "link-2": {
+      "codepoint": 62524,
+      "source": "fixedSvg/link-2.svg"
+    },
+    "link-2-off": {
+      "codepoint": 62525,
+      "source": "fixedSvg/link-2-off.svg"
+    },
+    "linkedin": {
+      "codepoint": 62526,
+      "source": "fixedSvg/linkedin.svg"
+    },
+    "list": {
+      "codepoint": 62527,
+      "source": "fixedSvg/list.svg"
+    },
+    "list-check": {
+      "codepoint": 62528,
+      "source": "fixedSvg/list-check.svg"
+    },
+    "list-checks": {
+      "codepoint": 62529,
+      "source": "fixedSvg/list-checks.svg"
+    },
+    "list-collapse": {
+      "codepoint": 62530,
+      "source": "fixedSvg/list-collapse.svg"
+    },
+    "list-end": {
+      "codepoint": 62531,
+      "source": "fixedSvg/list-end.svg"
+    },
+    "list-filter": {
+      "codepoint": 62532,
+      "source": "fixedSvg/list-filter.svg"
+    },
+    "list-filter-plus": {
+      "codepoint": 62533,
+      "source": "fixedSvg/list-filter-plus.svg"
+    },
+    "list-minus": {
+      "codepoint": 62534,
+      "source": "fixedSvg/list-minus.svg"
+    },
+    "list-music": {
+      "codepoint": 62535,
+      "source": "fixedSvg/list-music.svg"
+    },
+    "list-ordered": {
+      "codepoint": 62536,
+      "source": "fixedSvg/list-ordered.svg"
+    },
+    "list-plus": {
+      "codepoint": 62537,
+      "source": "fixedSvg/list-plus.svg"
+    },
+    "list-restart": {
+      "codepoint": 62538,
+      "source": "fixedSvg/list-restart.svg"
+    },
+    "list-start": {
+      "codepoint": 62539,
+      "source": "fixedSvg/list-start.svg"
+    },
+    "list-todo": {
+      "codepoint": 62540,
+      "source": "fixedSvg/list-todo.svg"
+    },
+    "list-tree": {
+      "codepoint": 62541,
+      "source": "fixedSvg/list-tree.svg"
+    },
+    "list-video": {
+      "codepoint": 62542,
+      "source": "fixedSvg/list-video.svg"
+    },
+    "list-x": {
+      "codepoint": 62543,
+      "source": "fixedSvg/list-x.svg"
+    },
+    "loader": {
+      "codepoint": 62544,
+      "source": "fixedSvg/loader.svg"
+    },
+    "loader-circle": {
+      "codepoint": 62545,
+      "source": "fixedSvg/loader-circle.svg"
+    },
+    "loader-pinwheel": {
+      "codepoint": 62546,
+      "source": "fixedSvg/loader-pinwheel.svg"
+    },
+    "locate": {
+      "codepoint": 62547,
+      "source": "fixedSvg/locate.svg"
+    },
+    "locate-fixed": {
+      "codepoint": 62548,
+      "source": "fixedSvg/locate-fixed.svg"
+    },
+    "locate-off": {
+      "codepoint": 62549,
+      "source": "fixedSvg/locate-off.svg"
+    },
+    "lock": {
+      "codepoint": 62550,
+      "source": "fixedSvg/lock.svg"
+    },
+    "lock-keyhole": {
+      "codepoint": 62551,
+      "source": "fixedSvg/lock-keyhole.svg"
+    },
+    "lock-keyhole-open": {
+      "codepoint": 62552,
+      "source": "fixedSvg/lock-keyhole-open.svg"
+    },
+    "lock-open": {
+      "codepoint": 62553,
+      "source": "fixedSvg/lock-open.svg"
+    },
+    "log-in": {
+      "codepoint": 62554,
+      "source": "fixedSvg/log-in.svg"
+    },
+    "log-out": {
+      "codepoint": 62555,
+      "source": "fixedSvg/log-out.svg"
+    },
+    "logs": {
+      "codepoint": 62556,
+      "source": "fixedSvg/logs.svg"
+    },
+    "lollipop": {
+      "codepoint": 62557,
+      "source": "fixedSvg/lollipop.svg"
+    },
+    "luggage": {
+      "codepoint": 62558,
+      "source": "fixedSvg/luggage.svg"
+    },
+    "magnet": {
+      "codepoint": 62559,
+      "source": "fixedSvg/magnet.svg"
+    },
+    "mail": {
+      "codepoint": 62560,
+      "source": "fixedSvg/mail.svg"
+    },
+    "mail-check": {
+      "codepoint": 62561,
+      "source": "fixedSvg/mail-check.svg"
+    },
+    "mail-minus": {
+      "codepoint": 62562,
+      "source": "fixedSvg/mail-minus.svg"
+    },
+    "mail-open": {
+      "codepoint": 62563,
+      "source": "fixedSvg/mail-open.svg"
+    },
+    "mail-plus": {
+      "codepoint": 62564,
+      "source": "fixedSvg/mail-plus.svg"
+    },
+    "mail-question": {
+      "codepoint": 62565,
+      "source": "fixedSvg/mail-question.svg"
+    },
+    "mail-search": {
+      "codepoint": 62566,
+      "source": "fixedSvg/mail-search.svg"
+    },
+    "mail-warning": {
+      "codepoint": 62567,
+      "source": "fixedSvg/mail-warning.svg"
+    },
+    "mail-x": {
+      "codepoint": 62568,
+      "source": "fixedSvg/mail-x.svg"
+    },
+    "mailbox": {
+      "codepoint": 62569,
+      "source": "fixedSvg/mailbox.svg"
+    },
+    "mails": {
+      "codepoint": 62570,
+      "source": "fixedSvg/mails.svg"
+    },
+    "map": {
+      "codepoint": 62571,
+      "source": "fixedSvg/map.svg"
+    },
+    "map-pin": {
+      "codepoint": 62572,
+      "source": "fixedSvg/map-pin.svg"
+    },
+    "map-pin-check": {
+      "codepoint": 62573,
+      "source": "fixedSvg/map-pin-check.svg"
+    },
+    "map-pin-check-inside": {
+      "codepoint": 62574,
+      "source": "fixedSvg/map-pin-check-inside.svg"
+    },
+    "map-pin-house": {
+      "codepoint": 62575,
+      "source": "fixedSvg/map-pin-house.svg"
+    },
+    "map-pin-minus": {
+      "codepoint": 62576,
+      "source": "fixedSvg/map-pin-minus.svg"
+    },
+    "map-pin-minus-inside": {
+      "codepoint": 62577,
+      "source": "fixedSvg/map-pin-minus-inside.svg"
+    },
+    "map-pin-off": {
+      "codepoint": 62578,
+      "source": "fixedSvg/map-pin-off.svg"
+    },
+    "map-pin-plus": {
+      "codepoint": 62579,
+      "source": "fixedSvg/map-pin-plus.svg"
+    },
+    "map-pin-plus-inside": {
+      "codepoint": 62580,
+      "source": "fixedSvg/map-pin-plus-inside.svg"
+    },
+    "map-pin-x": {
+      "codepoint": 62581,
+      "source": "fixedSvg/map-pin-x.svg"
+    },
+    "map-pin-x-inside": {
+      "codepoint": 62582,
+      "source": "fixedSvg/map-pin-x-inside.svg"
+    },
+    "map-pinned": {
+      "codepoint": 62583,
+      "source": "fixedSvg/map-pinned.svg"
+    },
+    "martini": {
+      "codepoint": 62584,
+      "source": "fixedSvg/martini.svg"
+    },
+    "maximize": {
+      "codepoint": 62585,
+      "source": "fixedSvg/maximize.svg"
+    },
+    "maximize-2": {
+      "codepoint": 62586,
+      "source": "fixedSvg/maximize-2.svg"
+    },
+    "medal": {
+      "codepoint": 62587,
+      "source": "fixedSvg/medal.svg"
+    },
+    "megaphone": {
+      "codepoint": 62588,
+      "source": "fixedSvg/megaphone.svg"
+    },
+    "megaphone-off": {
+      "codepoint": 62589,
+      "source": "fixedSvg/megaphone-off.svg"
+    },
+    "meh": {
+      "codepoint": 62590,
+      "source": "fixedSvg/meh.svg"
+    },
+    "memory-stick": {
+      "codepoint": 62591,
+      "source": "fixedSvg/memory-stick.svg"
+    },
+    "menu": {
+      "codepoint": 62592,
+      "source": "fixedSvg/menu.svg"
+    },
+    "merge": {
+      "codepoint": 62593,
+      "source": "fixedSvg/merge.svg"
+    },
+    "message-circle": {
+      "codepoint": 62594,
+      "source": "fixedSvg/message-circle.svg"
+    },
+    "message-circle-code": {
+      "codepoint": 62595,
+      "source": "fixedSvg/message-circle-code.svg"
+    },
+    "message-circle-dashed": {
+      "codepoint": 62596,
+      "source": "fixedSvg/message-circle-dashed.svg"
+    },
+    "message-circle-heart": {
+      "codepoint": 62597,
+      "source": "fixedSvg/message-circle-heart.svg"
+    },
+    "message-circle-more": {
+      "codepoint": 62598,
+      "source": "fixedSvg/message-circle-more.svg"
+    },
+    "message-circle-off": {
+      "codepoint": 62599,
+      "source": "fixedSvg/message-circle-off.svg"
+    },
+    "message-circle-plus": {
+      "codepoint": 62600,
+      "source": "fixedSvg/message-circle-plus.svg"
+    },
+    "message-circle-question": {
+      "codepoint": 62601,
+      "source": "fixedSvg/message-circle-question.svg"
+    },
+    "message-circle-reply": {
+      "codepoint": 62602,
+      "source": "fixedSvg/message-circle-reply.svg"
+    },
+    "message-circle-warning": {
+      "codepoint": 62603,
+      "source": "fixedSvg/message-circle-warning.svg"
+    },
+    "message-circle-x": {
+      "codepoint": 62604,
+      "source": "fixedSvg/message-circle-x.svg"
+    },
+    "message-square": {
+      "codepoint": 62605,
+      "source": "fixedSvg/message-square.svg"
+    },
+    "message-square-code": {
+      "codepoint": 62606,
+      "source": "fixedSvg/message-square-code.svg"
+    },
+    "message-square-dashed": {
+      "codepoint": 62607,
+      "source": "fixedSvg/message-square-dashed.svg"
+    },
+    "message-square-diff": {
+      "codepoint": 62608,
+      "source": "fixedSvg/message-square-diff.svg"
+    },
+    "message-square-dot": {
+      "codepoint": 62609,
+      "source": "fixedSvg/message-square-dot.svg"
+    },
+    "message-square-heart": {
+      "codepoint": 62610,
+      "source": "fixedSvg/message-square-heart.svg"
+    },
+    "message-square-lock": {
+      "codepoint": 62611,
+      "source": "fixedSvg/message-square-lock.svg"
+    },
+    "message-square-more": {
+      "codepoint": 62612,
+      "source": "fixedSvg/message-square-more.svg"
+    },
+    "message-square-off": {
+      "codepoint": 62613,
+      "source": "fixedSvg/message-square-off.svg"
+    },
+    "message-square-plus": {
+      "codepoint": 62614,
+      "source": "fixedSvg/message-square-plus.svg"
+    },
+    "message-square-quote": {
+      "codepoint": 62615,
+      "source": "fixedSvg/message-square-quote.svg"
+    },
+    "message-square-reply": {
+      "codepoint": 62616,
+      "source": "fixedSvg/message-square-reply.svg"
+    },
+    "message-square-share": {
+      "codepoint": 62617,
+      "source": "fixedSvg/message-square-share.svg"
+    },
+    "message-square-text": {
+      "codepoint": 62618,
+      "source": "fixedSvg/message-square-text.svg"
+    },
+    "message-square-warning": {
+      "codepoint": 62619,
+      "source": "fixedSvg/message-square-warning.svg"
+    },
+    "message-square-x": {
+      "codepoint": 62620,
+      "source": "fixedSvg/message-square-x.svg"
+    },
+    "messages-square": {
+      "codepoint": 62621,
+      "source": "fixedSvg/messages-square.svg"
+    },
+    "mic": {
+      "codepoint": 62622,
+      "source": "fixedSvg/mic.svg"
+    },
+    "mic-off": {
+      "codepoint": 62623,
+      "source": "fixedSvg/mic-off.svg"
+    },
+    "mic-vocal": {
+      "codepoint": 62624,
+      "source": "fixedSvg/mic-vocal.svg"
+    },
+    "microchip": {
+      "codepoint": 62625,
+      "source": "fixedSvg/microchip.svg"
+    },
+    "microscope": {
+      "codepoint": 62626,
+      "source": "fixedSvg/microscope.svg"
+    },
+    "microwave": {
+      "codepoint": 62627,
+      "source": "fixedSvg/microwave.svg"
+    },
+    "milestone": {
+      "codepoint": 62628,
+      "source": "fixedSvg/milestone.svg"
+    },
+    "milk": {
+      "codepoint": 62629,
+      "source": "fixedSvg/milk.svg"
+    },
+    "milk-off": {
+      "codepoint": 62630,
+      "source": "fixedSvg/milk-off.svg"
+    },
+    "minimize": {
+      "codepoint": 62631,
+      "source": "fixedSvg/minimize.svg"
+    },
+    "minimize-2": {
+      "codepoint": 62632,
+      "source": "fixedSvg/minimize-2.svg"
+    },
+    "minus": {
+      "codepoint": 62633,
+      "source": "fixedSvg/minus.svg"
+    },
+    "monitor": {
+      "codepoint": 62634,
+      "source": "fixedSvg/monitor.svg"
+    },
+    "monitor-check": {
+      "codepoint": 62635,
+      "source": "fixedSvg/monitor-check.svg"
+    },
+    "monitor-cog": {
+      "codepoint": 62636,
+      "source": "fixedSvg/monitor-cog.svg"
+    },
+    "monitor-dot": {
+      "codepoint": 62637,
+      "source": "fixedSvg/monitor-dot.svg"
+    },
+    "monitor-down": {
+      "codepoint": 62638,
+      "source": "fixedSvg/monitor-down.svg"
+    },
+    "monitor-off": {
+      "codepoint": 62639,
+      "source": "fixedSvg/monitor-off.svg"
+    },
+    "monitor-pause": {
+      "codepoint": 62640,
+      "source": "fixedSvg/monitor-pause.svg"
+    },
+    "monitor-play": {
+      "codepoint": 62641,
+      "source": "fixedSvg/monitor-play.svg"
+    },
+    "monitor-smartphone": {
+      "codepoint": 62642,
+      "source": "fixedSvg/monitor-smartphone.svg"
+    },
+    "monitor-speaker": {
+      "codepoint": 62643,
+      "source": "fixedSvg/monitor-speaker.svg"
+    },
+    "monitor-stop": {
+      "codepoint": 62644,
+      "source": "fixedSvg/monitor-stop.svg"
+    },
+    "monitor-up": {
+      "codepoint": 62645,
+      "source": "fixedSvg/monitor-up.svg"
+    },
+    "monitor-x": {
+      "codepoint": 62646,
+      "source": "fixedSvg/monitor-x.svg"
+    },
+    "moon": {
+      "codepoint": 62647,
+      "source": "fixedSvg/moon.svg"
+    },
+    "moon-star": {
+      "codepoint": 62648,
+      "source": "fixedSvg/moon-star.svg"
+    },
+    "mountain": {
+      "codepoint": 62649,
+      "source": "fixedSvg/mountain.svg"
+    },
+    "mountain-snow": {
+      "codepoint": 62650,
+      "source": "fixedSvg/mountain-snow.svg"
+    },
+    "mouse": {
+      "codepoint": 62651,
+      "source": "fixedSvg/mouse.svg"
+    },
+    "mouse-off": {
+      "codepoint": 62652,
+      "source": "fixedSvg/mouse-off.svg"
+    },
+    "mouse-pointer": {
+      "codepoint": 62653,
+      "source": "fixedSvg/mouse-pointer.svg"
+    },
+    "mouse-pointer-2": {
+      "codepoint": 62654,
+      "source": "fixedSvg/mouse-pointer-2.svg"
+    },
+    "mouse-pointer-ban": {
+      "codepoint": 62655,
+      "source": "fixedSvg/mouse-pointer-ban.svg"
+    },
+    "mouse-pointer-click": {
+      "codepoint": 62656,
+      "source": "fixedSvg/mouse-pointer-click.svg"
+    },
+    "move": {
+      "codepoint": 62657,
+      "source": "fixedSvg/move.svg"
+    },
+    "move-3d": {
+      "codepoint": 62658,
+      "source": "fixedSvg/move-3d.svg"
+    },
+    "move-diagonal": {
+      "codepoint": 62659,
+      "source": "fixedSvg/move-diagonal.svg"
+    },
+    "move-diagonal-2": {
+      "codepoint": 62660,
+      "source": "fixedSvg/move-diagonal-2.svg"
+    },
+    "move-down": {
+      "codepoint": 62661,
+      "source": "fixedSvg/move-down.svg"
+    },
+    "move-down-left": {
+      "codepoint": 62662,
+      "source": "fixedSvg/move-down-left.svg"
+    },
+    "move-down-right": {
+      "codepoint": 62663,
+      "source": "fixedSvg/move-down-right.svg"
+    },
+    "move-horizontal": {
+      "codepoint": 62664,
+      "source": "fixedSvg/move-horizontal.svg"
+    },
+    "move-left": {
+      "codepoint": 62665,
+      "source": "fixedSvg/move-left.svg"
+    },
+    "move-right": {
+      "codepoint": 62666,
+      "source": "fixedSvg/move-right.svg"
+    },
+    "move-up": {
+      "codepoint": 62667,
+      "source": "fixedSvg/move-up.svg"
+    },
+    "move-up-left": {
+      "codepoint": 62668,
+      "source": "fixedSvg/move-up-left.svg"
+    },
+    "move-up-right": {
+      "codepoint": 62669,
+      "source": "fixedSvg/move-up-right.svg"
+    },
+    "move-vertical": {
+      "codepoint": 62670,
+      "source": "fixedSvg/move-vertical.svg"
+    },
+    "music": {
+      "codepoint": 62671,
+      "source": "fixedSvg/music.svg"
+    },
+    "music-2": {
+      "codepoint": 62672,
+      "source": "fixedSvg/music-2.svg"
+    },
+    "music-3": {
+      "codepoint": 62673,
+      "source": "fixedSvg/music-3.svg"
+    },
+    "music-4": {
+      "codepoint": 62674,
+      "source": "fixedSvg/music-4.svg"
+    },
+    "navigation": {
+      "codepoint": 62675,
+      "source": "fixedSvg/navigation.svg"
+    },
+    "navigation-2": {
+      "codepoint": 62676,
+      "source": "fixedSvg/navigation-2.svg"
+    },
+    "navigation-2-off": {
+      "codepoint": 62677,
+      "source": "fixedSvg/navigation-2-off.svg"
+    },
+    "navigation-off": {
+      "codepoint": 62678,
+      "source": "fixedSvg/navigation-off.svg"
+    },
+    "network": {
+      "codepoint": 62679,
+      "source": "fixedSvg/network.svg"
+    },
+    "newspaper": {
+      "codepoint": 62680,
+      "source": "fixedSvg/newspaper.svg"
+    },
+    "nfc": {
+      "codepoint": 62681,
+      "source": "fixedSvg/nfc.svg"
+    },
+    "notebook": {
+      "codepoint": 62682,
+      "source": "fixedSvg/notebook.svg"
+    },
+    "notebook-pen": {
+      "codepoint": 62683,
+      "source": "fixedSvg/notebook-pen.svg"
+    },
+    "notebook-tabs": {
+      "codepoint": 62684,
+      "source": "fixedSvg/notebook-tabs.svg"
+    },
+    "notebook-text": {
+      "codepoint": 62685,
+      "source": "fixedSvg/notebook-text.svg"
+    },
+    "notepad-text": {
+      "codepoint": 62686,
+      "source": "fixedSvg/notepad-text.svg"
+    },
+    "notepad-text-dashed": {
+      "codepoint": 62687,
+      "source": "fixedSvg/notepad-text-dashed.svg"
+    },
+    "nut": {
+      "codepoint": 62688,
+      "source": "fixedSvg/nut.svg"
+    },
+    "nut-off": {
+      "codepoint": 62689,
+      "source": "fixedSvg/nut-off.svg"
+    },
+    "octagon": {
+      "codepoint": 62690,
+      "source": "fixedSvg/octagon.svg"
+    },
+    "octagon-alert": {
+      "codepoint": 62691,
+      "source": "fixedSvg/octagon-alert.svg"
+    },
+    "octagon-minus": {
+      "codepoint": 62692,
+      "source": "fixedSvg/octagon-minus.svg"
+    },
+    "octagon-pause": {
+      "codepoint": 62693,
+      "source": "fixedSvg/octagon-pause.svg"
+    },
+    "octagon-x": {
+      "codepoint": 62694,
+      "source": "fixedSvg/octagon-x.svg"
+    },
+    "omega": {
+      "codepoint": 62695,
+      "source": "fixedSvg/omega.svg"
+    },
+    "option": {
+      "codepoint": 62696,
+      "source": "fixedSvg/option.svg"
+    },
+    "orbit": {
+      "codepoint": 62697,
+      "source": "fixedSvg/orbit.svg"
+    },
+    "origami": {
+      "codepoint": 62698,
+      "source": "fixedSvg/origami.svg"
+    },
+    "package": {
+      "codepoint": 62699,
+      "source": "fixedSvg/package.svg"
+    },
+    "package-2": {
+      "codepoint": 62700,
+      "source": "fixedSvg/package-2.svg"
+    },
+    "package-check": {
+      "codepoint": 62701,
+      "source": "fixedSvg/package-check.svg"
+    },
+    "package-minus": {
+      "codepoint": 62702,
+      "source": "fixedSvg/package-minus.svg"
+    },
+    "package-open": {
+      "codepoint": 62703,
+      "source": "fixedSvg/package-open.svg"
+    },
+    "package-plus": {
+      "codepoint": 62704,
+      "source": "fixedSvg/package-plus.svg"
+    },
+    "package-search": {
+      "codepoint": 62705,
+      "source": "fixedSvg/package-search.svg"
+    },
+    "package-x": {
+      "codepoint": 62706,
+      "source": "fixedSvg/package-x.svg"
+    },
+    "paint-bucket": {
+      "codepoint": 62707,
+      "source": "fixedSvg/paint-bucket.svg"
+    },
+    "paint-roller": {
+      "codepoint": 62708,
+      "source": "fixedSvg/paint-roller.svg"
+    },
+    "paintbrush": {
+      "codepoint": 62709,
+      "source": "fixedSvg/paintbrush.svg"
+    },
+    "paintbrush-vertical": {
+      "codepoint": 62710,
+      "source": "fixedSvg/paintbrush-vertical.svg"
+    },
+    "palette": {
+      "codepoint": 62711,
+      "source": "fixedSvg/palette.svg"
+    },
+    "panel-bottom": {
+      "codepoint": 62712,
+      "source": "fixedSvg/panel-bottom.svg"
+    },
+    "panel-bottom-close": {
+      "codepoint": 62713,
+      "source": "fixedSvg/panel-bottom-close.svg"
+    },
+    "panel-bottom-dashed": {
+      "codepoint": 62714,
+      "source": "fixedSvg/panel-bottom-dashed.svg"
+    },
+    "panel-bottom-open": {
+      "codepoint": 62715,
+      "source": "fixedSvg/panel-bottom-open.svg"
+    },
+    "panel-left": {
+      "codepoint": 62716,
+      "source": "fixedSvg/panel-left.svg"
+    },
+    "panel-left-close": {
+      "codepoint": 62717,
+      "source": "fixedSvg/panel-left-close.svg"
+    },
+    "panel-left-dashed": {
+      "codepoint": 62718,
+      "source": "fixedSvg/panel-left-dashed.svg"
+    },
+    "panel-left-open": {
+      "codepoint": 62719,
+      "source": "fixedSvg/panel-left-open.svg"
+    },
+    "panel-right": {
+      "codepoint": 62720,
+      "source": "fixedSvg/panel-right.svg"
+    },
+    "panel-right-close": {
+      "codepoint": 62721,
+      "source": "fixedSvg/panel-right-close.svg"
+    },
+    "panel-right-dashed": {
+      "codepoint": 62722,
+      "source": "fixedSvg/panel-right-dashed.svg"
+    },
+    "panel-right-open": {
+      "codepoint": 62723,
+      "source": "fixedSvg/panel-right-open.svg"
+    },
+    "panel-top": {
+      "codepoint": 62724,
+      "source": "fixedSvg/panel-top.svg"
+    },
+    "panel-top-close": {
+      "codepoint": 62725,
+      "source": "fixedSvg/panel-top-close.svg"
+    },
+    "panel-top-dashed": {
+      "codepoint": 62726,
+      "source": "fixedSvg/panel-top-dashed.svg"
+    },
+    "panel-top-open": {
+      "codepoint": 62727,
+      "source": "fixedSvg/panel-top-open.svg"
+    },
+    "panels-left-bottom": {
+      "codepoint": 62728,
+      "source": "fixedSvg/panels-left-bottom.svg"
+    },
+    "panels-right-bottom": {
+      "codepoint": 62729,
+      "source": "fixedSvg/panels-right-bottom.svg"
+    },
+    "panels-top-left": {
+      "codepoint": 62730,
+      "source": "fixedSvg/panels-top-left.svg"
+    },
+    "paperclip": {
+      "codepoint": 62731,
+      "source": "fixedSvg/paperclip.svg"
+    },
+    "parentheses": {
+      "codepoint": 62732,
+      "source": "fixedSvg/parentheses.svg"
+    },
+    "parking-meter": {
+      "codepoint": 62733,
+      "source": "fixedSvg/parking-meter.svg"
+    },
+    "party-popper": {
+      "codepoint": 62734,
+      "source": "fixedSvg/party-popper.svg"
+    },
+    "pause": {
+      "codepoint": 62735,
+      "source": "fixedSvg/pause.svg"
+    },
+    "paw-print": {
+      "codepoint": 62736,
+      "source": "fixedSvg/paw-print.svg"
+    },
+    "pc-case": {
+      "codepoint": 62737,
+      "source": "fixedSvg/pc-case.svg"
+    },
+    "pen": {
+      "codepoint": 62738,
+      "source": "fixedSvg/pen.svg"
+    },
+    "pen-line": {
+      "codepoint": 62739,
+      "source": "fixedSvg/pen-line.svg"
+    },
+    "pen-off": {
+      "codepoint": 62740,
+      "source": "fixedSvg/pen-off.svg"
+    },
+    "pen-tool": {
+      "codepoint": 62741,
+      "source": "fixedSvg/pen-tool.svg"
+    },
+    "pencil": {
+      "codepoint": 62742,
+      "source": "fixedSvg/pencil.svg"
+    },
+    "pencil-line": {
+      "codepoint": 62743,
+      "source": "fixedSvg/pencil-line.svg"
+    },
+    "pencil-off": {
+      "codepoint": 62744,
+      "source": "fixedSvg/pencil-off.svg"
+    },
+    "pencil-ruler": {
+      "codepoint": 62745,
+      "source": "fixedSvg/pencil-ruler.svg"
+    },
+    "pentagon": {
+      "codepoint": 62746,
+      "source": "fixedSvg/pentagon.svg"
+    },
+    "percent": {
+      "codepoint": 62747,
+      "source": "fixedSvg/percent.svg"
+    },
+    "person-standing": {
+      "codepoint": 62748,
+      "source": "fixedSvg/person-standing.svg"
+    },
+    "philippine-peso": {
+      "codepoint": 62749,
+      "source": "fixedSvg/philippine-peso.svg"
+    },
+    "phone": {
+      "codepoint": 62750,
+      "source": "fixedSvg/phone.svg"
+    },
+    "phone-call": {
+      "codepoint": 62751,
+      "source": "fixedSvg/phone-call.svg"
+    },
+    "phone-forwarded": {
+      "codepoint": 62752,
+      "source": "fixedSvg/phone-forwarded.svg"
+    },
+    "phone-incoming": {
+      "codepoint": 62753,
+      "source": "fixedSvg/phone-incoming.svg"
+    },
+    "phone-missed": {
+      "codepoint": 62754,
+      "source": "fixedSvg/phone-missed.svg"
+    },
+    "phone-off": {
+      "codepoint": 62755,
+      "source": "fixedSvg/phone-off.svg"
+    },
+    "phone-outgoing": {
+      "codepoint": 62756,
+      "source": "fixedSvg/phone-outgoing.svg"
+    },
+    "pi": {
+      "codepoint": 62757,
+      "source": "fixedSvg/pi.svg"
+    },
+    "piano": {
+      "codepoint": 62758,
+      "source": "fixedSvg/piano.svg"
+    },
+    "pickaxe": {
+      "codepoint": 62759,
+      "source": "fixedSvg/pickaxe.svg"
+    },
+    "picture-in-picture": {
+      "codepoint": 62760,
+      "source": "fixedSvg/picture-in-picture.svg"
+    },
+    "picture-in-picture-2": {
+      "codepoint": 62761,
+      "source": "fixedSvg/picture-in-picture-2.svg"
+    },
+    "piggy-bank": {
+      "codepoint": 62762,
+      "source": "fixedSvg/piggy-bank.svg"
+    },
+    "pilcrow": {
+      "codepoint": 62763,
+      "source": "fixedSvg/pilcrow.svg"
+    },
+    "pilcrow-left": {
+      "codepoint": 62764,
+      "source": "fixedSvg/pilcrow-left.svg"
+    },
+    "pilcrow-right": {
+      "codepoint": 62765,
+      "source": "fixedSvg/pilcrow-right.svg"
+    },
+    "pill": {
+      "codepoint": 62766,
+      "source": "fixedSvg/pill.svg"
+    },
+    "pill-bottle": {
+      "codepoint": 62767,
+      "source": "fixedSvg/pill-bottle.svg"
+    },
+    "pin": {
+      "codepoint": 62768,
+      "source": "fixedSvg/pin.svg"
+    },
+    "pin-off": {
+      "codepoint": 62769,
+      "source": "fixedSvg/pin-off.svg"
+    },
+    "pipette": {
+      "codepoint": 62770,
+      "source": "fixedSvg/pipette.svg"
+    },
+    "pizza": {
+      "codepoint": 62771,
+      "source": "fixedSvg/pizza.svg"
+    },
+    "plane": {
+      "codepoint": 62772,
+      "source": "fixedSvg/plane.svg"
+    },
+    "plane-landing": {
+      "codepoint": 62773,
+      "source": "fixedSvg/plane-landing.svg"
+    },
+    "plane-takeoff": {
+      "codepoint": 62774,
+      "source": "fixedSvg/plane-takeoff.svg"
+    },
+    "play": {
+      "codepoint": 62775,
+      "source": "fixedSvg/play.svg"
+    },
+    "plug": {
+      "codepoint": 62776,
+      "source": "fixedSvg/plug.svg"
+    },
+    "plug-2": {
+      "codepoint": 62777,
+      "source": "fixedSvg/plug-2.svg"
+    },
+    "plug-zap": {
+      "codepoint": 62778,
+      "source": "fixedSvg/plug-zap.svg"
+    },
+    "plus": {
+      "codepoint": 62779,
+      "source": "fixedSvg/plus.svg"
+    },
+    "pocket": {
+      "codepoint": 62780,
+      "source": "fixedSvg/pocket.svg"
+    },
+    "pocket-knife": {
+      "codepoint": 62781,
+      "source": "fixedSvg/pocket-knife.svg"
+    },
+    "podcast": {
+      "codepoint": 62782,
+      "source": "fixedSvg/podcast.svg"
+    },
+    "pointer": {
+      "codepoint": 62783,
+      "source": "fixedSvg/pointer.svg"
+    },
+    "pointer-off": {
+      "codepoint": 62784,
+      "source": "fixedSvg/pointer-off.svg"
+    },
+    "popcorn": {
+      "codepoint": 62785,
+      "source": "fixedSvg/popcorn.svg"
+    },
+    "popsicle": {
+      "codepoint": 62786,
+      "source": "fixedSvg/popsicle.svg"
+    },
+    "pound-sterling": {
+      "codepoint": 62787,
+      "source": "fixedSvg/pound-sterling.svg"
+    },
+    "power": {
+      "codepoint": 62788,
+      "source": "fixedSvg/power.svg"
+    },
+    "power-off": {
+      "codepoint": 62789,
+      "source": "fixedSvg/power-off.svg"
+    },
+    "presentation": {
+      "codepoint": 62790,
+      "source": "fixedSvg/presentation.svg"
+    },
+    "printer": {
+      "codepoint": 62791,
+      "source": "fixedSvg/printer.svg"
+    },
+    "printer-check": {
+      "codepoint": 62792,
+      "source": "fixedSvg/printer-check.svg"
+    },
+    "projector": {
+      "codepoint": 62793,
+      "source": "fixedSvg/projector.svg"
+    },
+    "proportions": {
+      "codepoint": 62794,
+      "source": "fixedSvg/proportions.svg"
+    },
+    "puzzle": {
+      "codepoint": 62795,
+      "source": "fixedSvg/puzzle.svg"
+    },
+    "pyramid": {
+      "codepoint": 62796,
+      "source": "fixedSvg/pyramid.svg"
+    },
+    "qr-code": {
+      "codepoint": 62797,
+      "source": "fixedSvg/qr-code.svg"
+    },
+    "quote": {
+      "codepoint": 62798,
+      "source": "fixedSvg/quote.svg"
+    },
+    "rabbit": {
+      "codepoint": 62799,
+      "source": "fixedSvg/rabbit.svg"
+    },
+    "radar": {
+      "codepoint": 62800,
+      "source": "fixedSvg/radar.svg"
+    },
+    "radiation": {
+      "codepoint": 62801,
+      "source": "fixedSvg/radiation.svg"
+    },
+    "radical": {
+      "codepoint": 62802,
+      "source": "fixedSvg/radical.svg"
+    },
+    "radio": {
+      "codepoint": 62803,
+      "source": "fixedSvg/radio.svg"
+    },
+    "radio-receiver": {
+      "codepoint": 62804,
+      "source": "fixedSvg/radio-receiver.svg"
+    },
+    "radio-tower": {
+      "codepoint": 62805,
+      "source": "fixedSvg/radio-tower.svg"
+    },
+    "radius": {
+      "codepoint": 62806,
+      "source": "fixedSvg/radius.svg"
+    },
+    "rail-symbol": {
+      "codepoint": 62807,
+      "source": "fixedSvg/rail-symbol.svg"
+    },
+    "rainbow": {
+      "codepoint": 62808,
+      "source": "fixedSvg/rainbow.svg"
+    },
+    "rat": {
+      "codepoint": 62809,
+      "source": "fixedSvg/rat.svg"
+    },
+    "ratio": {
+      "codepoint": 62810,
+      "source": "fixedSvg/ratio.svg"
+    },
+    "receipt": {
+      "codepoint": 62811,
+      "source": "fixedSvg/receipt.svg"
+    },
+    "receipt-cent": {
+      "codepoint": 62812,
+      "source": "fixedSvg/receipt-cent.svg"
+    },
+    "receipt-euro": {
+      "codepoint": 62813,
+      "source": "fixedSvg/receipt-euro.svg"
+    },
+    "receipt-indian-rupee": {
+      "codepoint": 62814,
+      "source": "fixedSvg/receipt-indian-rupee.svg"
+    },
+    "receipt-japanese-yen": {
+      "codepoint": 62815,
+      "source": "fixedSvg/receipt-japanese-yen.svg"
+    },
+    "receipt-pound-sterling": {
+      "codepoint": 62816,
+      "source": "fixedSvg/receipt-pound-sterling.svg"
+    },
+    "receipt-russian-ruble": {
+      "codepoint": 62817,
+      "source": "fixedSvg/receipt-russian-ruble.svg"
+    },
+    "receipt-swiss-franc": {
+      "codepoint": 62818,
+      "source": "fixedSvg/receipt-swiss-franc.svg"
+    },
+    "receipt-text": {
+      "codepoint": 62819,
+      "source": "fixedSvg/receipt-text.svg"
+    },
+    "rectangle-ellipsis": {
+      "codepoint": 62820,
+      "source": "fixedSvg/rectangle-ellipsis.svg"
+    },
+    "rectangle-horizontal": {
+      "codepoint": 62821,
+      "source": "fixedSvg/rectangle-horizontal.svg"
+    },
+    "rectangle-vertical": {
+      "codepoint": 62822,
+      "source": "fixedSvg/rectangle-vertical.svg"
+    },
+    "recycle": {
+      "codepoint": 62823,
+      "source": "fixedSvg/recycle.svg"
+    },
+    "redo": {
+      "codepoint": 62824,
+      "source": "fixedSvg/redo.svg"
+    },
+    "redo-2": {
+      "codepoint": 62825,
+      "source": "fixedSvg/redo-2.svg"
+    },
+    "redo-dot": {
+      "codepoint": 62826,
+      "source": "fixedSvg/redo-dot.svg"
+    },
+    "refresh-ccw": {
+      "codepoint": 62827,
+      "source": "fixedSvg/refresh-ccw.svg"
+    },
+    "refresh-ccw-dot": {
+      "codepoint": 62828,
+      "source": "fixedSvg/refresh-ccw-dot.svg"
+    },
+    "refresh-cw": {
+      "codepoint": 62829,
+      "source": "fixedSvg/refresh-cw.svg"
+    },
+    "refresh-cw-off": {
+      "codepoint": 62830,
+      "source": "fixedSvg/refresh-cw-off.svg"
+    },
+    "refrigerator": {
+      "codepoint": 62831,
+      "source": "fixedSvg/refrigerator.svg"
+    },
+    "regex": {
+      "codepoint": 62832,
+      "source": "fixedSvg/regex.svg"
+    },
+    "remove-formatting": {
+      "codepoint": 62833,
+      "source": "fixedSvg/remove-formatting.svg"
+    },
+    "repeat": {
+      "codepoint": 62834,
+      "source": "fixedSvg/repeat.svg"
+    },
+    "repeat-1": {
+      "codepoint": 62835,
+      "source": "fixedSvg/repeat-1.svg"
+    },
+    "repeat-2": {
+      "codepoint": 62836,
+      "source": "fixedSvg/repeat-2.svg"
+    },
+    "replace": {
+      "codepoint": 62837,
+      "source": "fixedSvg/replace.svg"
+    },
+    "replace-all": {
+      "codepoint": 62838,
+      "source": "fixedSvg/replace-all.svg"
+    },
+    "reply": {
+      "codepoint": 62839,
+      "source": "fixedSvg/reply.svg"
+    },
+    "reply-all": {
+      "codepoint": 62840,
+      "source": "fixedSvg/reply-all.svg"
+    },
+    "rewind": {
+      "codepoint": 62841,
+      "source": "fixedSvg/rewind.svg"
+    },
+    "ribbon": {
+      "codepoint": 62842,
+      "source": "fixedSvg/ribbon.svg"
+    },
+    "rocket": {
+      "codepoint": 62843,
+      "source": "fixedSvg/rocket.svg"
+    },
+    "rocking-chair": {
+      "codepoint": 62844,
+      "source": "fixedSvg/rocking-chair.svg"
+    },
+    "roller-coaster": {
+      "codepoint": 62845,
+      "source": "fixedSvg/roller-coaster.svg"
+    },
+    "rotate-3d": {
+      "codepoint": 62846,
+      "source": "fixedSvg/rotate-3d.svg"
+    },
+    "rotate-ccw": {
+      "codepoint": 62847,
+      "source": "fixedSvg/rotate-ccw.svg"
+    },
+    "rotate-ccw-square": {
+      "codepoint": 62848,
+      "source": "fixedSvg/rotate-ccw-square.svg"
+    },
+    "rotate-cw": {
+      "codepoint": 62849,
+      "source": "fixedSvg/rotate-cw.svg"
+    },
+    "rotate-cw-square": {
+      "codepoint": 62850,
+      "source": "fixedSvg/rotate-cw-square.svg"
+    },
+    "route": {
+      "codepoint": 62851,
+      "source": "fixedSvg/route.svg"
+    },
+    "route-off": {
+      "codepoint": 62852,
+      "source": "fixedSvg/route-off.svg"
+    },
+    "router": {
+      "codepoint": 62853,
+      "source": "fixedSvg/router.svg"
+    },
+    "rows-2": {
+      "codepoint": 62854,
+      "source": "fixedSvg/rows-2.svg"
+    },
+    "rows-3": {
+      "codepoint": 62855,
+      "source": "fixedSvg/rows-3.svg"
+    },
+    "rows-4": {
+      "codepoint": 62856,
+      "source": "fixedSvg/rows-4.svg"
+    },
+    "rss": {
+      "codepoint": 62857,
+      "source": "fixedSvg/rss.svg"
+    },
+    "ruler": {
+      "codepoint": 62858,
+      "source": "fixedSvg/ruler.svg"
+    },
+    "russian-ruble": {
+      "codepoint": 62859,
+      "source": "fixedSvg/russian-ruble.svg"
+    },
+    "sailboat": {
+      "codepoint": 62860,
+      "source": "fixedSvg/sailboat.svg"
+    },
+    "salad": {
+      "codepoint": 62861,
+      "source": "fixedSvg/salad.svg"
+    },
+    "sandwich": {
+      "codepoint": 62862,
+      "source": "fixedSvg/sandwich.svg"
+    },
+    "satellite": {
+      "codepoint": 62863,
+      "source": "fixedSvg/satellite.svg"
+    },
+    "satellite-dish": {
+      "codepoint": 62864,
+      "source": "fixedSvg/satellite-dish.svg"
+    },
+    "save": {
+      "codepoint": 62865,
+      "source": "fixedSvg/save.svg"
+    },
+    "save-all": {
+      "codepoint": 62866,
+      "source": "fixedSvg/save-all.svg"
+    },
+    "save-off": {
+      "codepoint": 62867,
+      "source": "fixedSvg/save-off.svg"
+    },
+    "scale": {
+      "codepoint": 62868,
+      "source": "fixedSvg/scale.svg"
+    },
+    "scale-3d": {
+      "codepoint": 62869,
+      "source": "fixedSvg/scale-3d.svg"
+    },
+    "scaling": {
+      "codepoint": 62870,
+      "source": "fixedSvg/scaling.svg"
+    },
+    "scan": {
+      "codepoint": 62871,
+      "source": "fixedSvg/scan.svg"
+    },
+    "scan-barcode": {
+      "codepoint": 62872,
+      "source": "fixedSvg/scan-barcode.svg"
+    },
+    "scan-eye": {
+      "codepoint": 62873,
+      "source": "fixedSvg/scan-eye.svg"
+    },
+    "scan-face": {
+      "codepoint": 62874,
+      "source": "fixedSvg/scan-face.svg"
+    },
+    "scan-heart": {
+      "codepoint": 62875,
+      "source": "fixedSvg/scan-heart.svg"
+    },
+    "scan-line": {
+      "codepoint": 62876,
+      "source": "fixedSvg/scan-line.svg"
+    },
+    "scan-qr-code": {
+      "codepoint": 62877,
+      "source": "fixedSvg/scan-qr-code.svg"
+    },
+    "scan-search": {
+      "codepoint": 62878,
+      "source": "fixedSvg/scan-search.svg"
+    },
+    "scan-text": {
+      "codepoint": 62879,
+      "source": "fixedSvg/scan-text.svg"
+    },
+    "school": {
+      "codepoint": 62880,
+      "source": "fixedSvg/school.svg"
+    },
+    "scissors": {
+      "codepoint": 62881,
+      "source": "fixedSvg/scissors.svg"
+    },
+    "scissors-line-dashed": {
+      "codepoint": 62882,
+      "source": "fixedSvg/scissors-line-dashed.svg"
+    },
+    "screen-share": {
+      "codepoint": 62883,
+      "source": "fixedSvg/screen-share.svg"
+    },
+    "screen-share-off": {
+      "codepoint": 62884,
+      "source": "fixedSvg/screen-share-off.svg"
+    },
+    "scroll": {
+      "codepoint": 62885,
+      "source": "fixedSvg/scroll.svg"
+    },
+    "scroll-text": {
+      "codepoint": 62886,
+      "source": "fixedSvg/scroll-text.svg"
+    },
+    "search": {
+      "codepoint": 62887,
+      "source": "fixedSvg/search.svg"
+    },
+    "search-check": {
+      "codepoint": 62888,
+      "source": "fixedSvg/search-check.svg"
+    },
+    "search-code": {
+      "codepoint": 62889,
+      "source": "fixedSvg/search-code.svg"
+    },
+    "search-slash": {
+      "codepoint": 62890,
+      "source": "fixedSvg/search-slash.svg"
+    },
+    "search-x": {
+      "codepoint": 62891,
+      "source": "fixedSvg/search-x.svg"
+    },
+    "section": {
+      "codepoint": 62892,
+      "source": "fixedSvg/section.svg"
+    },
+    "send": {
+      "codepoint": 62893,
+      "source": "fixedSvg/send.svg"
+    },
+    "send-horizontal": {
+      "codepoint": 62894,
+      "source": "fixedSvg/send-horizontal.svg"
+    },
+    "send-to-back": {
+      "codepoint": 62895,
+      "source": "fixedSvg/send-to-back.svg"
+    },
+    "separator-horizontal": {
+      "codepoint": 62896,
+      "source": "fixedSvg/separator-horizontal.svg"
+    },
+    "separator-vertical": {
+      "codepoint": 62897,
+      "source": "fixedSvg/separator-vertical.svg"
+    },
+    "server": {
+      "codepoint": 62898,
+      "source": "fixedSvg/server.svg"
+    },
+    "server-cog": {
+      "codepoint": 62899,
+      "source": "fixedSvg/server-cog.svg"
+    },
+    "server-crash": {
+      "codepoint": 62900,
+      "source": "fixedSvg/server-crash.svg"
+    },
+    "server-off": {
+      "codepoint": 62901,
+      "source": "fixedSvg/server-off.svg"
+    },
+    "settings": {
+      "codepoint": 62902,
+      "source": "fixedSvg/settings.svg"
+    },
+    "settings-2": {
+      "codepoint": 62903,
+      "source": "fixedSvg/settings-2.svg"
+    },
+    "shapes": {
+      "codepoint": 62904,
+      "source": "fixedSvg/shapes.svg"
+    },
+    "share": {
+      "codepoint": 62905,
+      "source": "fixedSvg/share.svg"
+    },
+    "share-2": {
+      "codepoint": 62906,
+      "source": "fixedSvg/share-2.svg"
+    },
+    "sheet": {
+      "codepoint": 62907,
+      "source": "fixedSvg/sheet.svg"
+    },
+    "shell": {
+      "codepoint": 62908,
+      "source": "fixedSvg/shell.svg"
+    },
+    "shield": {
+      "codepoint": 62909,
+      "source": "fixedSvg/shield.svg"
+    },
+    "shield-alert": {
+      "codepoint": 62910,
+      "source": "fixedSvg/shield-alert.svg"
+    },
+    "shield-ban": {
+      "codepoint": 62911,
+      "source": "fixedSvg/shield-ban.svg"
+    },
+    "shield-check": {
+      "codepoint": 62912,
+      "source": "fixedSvg/shield-check.svg"
+    },
+    "shield-ellipsis": {
+      "codepoint": 62913,
+      "source": "fixedSvg/shield-ellipsis.svg"
+    },
+    "shield-half": {
+      "codepoint": 62914,
+      "source": "fixedSvg/shield-half.svg"
+    },
+    "shield-minus": {
+      "codepoint": 62915,
+      "source": "fixedSvg/shield-minus.svg"
+    },
+    "shield-off": {
+      "codepoint": 62916,
+      "source": "fixedSvg/shield-off.svg"
+    },
+    "shield-plus": {
+      "codepoint": 62917,
+      "source": "fixedSvg/shield-plus.svg"
+    },
+    "shield-question": {
+      "codepoint": 62918,
+      "source": "fixedSvg/shield-question.svg"
+    },
+    "shield-x": {
+      "codepoint": 62919,
+      "source": "fixedSvg/shield-x.svg"
+    },
+    "ship": {
+      "codepoint": 62920,
+      "source": "fixedSvg/ship.svg"
+    },
+    "ship-wheel": {
+      "codepoint": 62921,
+      "source": "fixedSvg/ship-wheel.svg"
+    },
+    "shirt": {
+      "codepoint": 62922,
+      "source": "fixedSvg/shirt.svg"
+    },
+    "shopping-bag": {
+      "codepoint": 62923,
+      "source": "fixedSvg/shopping-bag.svg"
+    },
+    "shopping-basket": {
+      "codepoint": 62924,
+      "source": "fixedSvg/shopping-basket.svg"
+    },
+    "shopping-cart": {
+      "codepoint": 62925,
+      "source": "fixedSvg/shopping-cart.svg"
+    },
+    "shovel": {
+      "codepoint": 62926,
+      "source": "fixedSvg/shovel.svg"
+    },
+    "shower-head": {
+      "codepoint": 62927,
+      "source": "fixedSvg/shower-head.svg"
+    },
+    "shrink": {
+      "codepoint": 62928,
+      "source": "fixedSvg/shrink.svg"
+    },
+    "shrub": {
+      "codepoint": 62929,
+      "source": "fixedSvg/shrub.svg"
+    },
+    "shuffle": {
+      "codepoint": 62930,
+      "source": "fixedSvg/shuffle.svg"
+    },
+    "sigma": {
+      "codepoint": 62931,
+      "source": "fixedSvg/sigma.svg"
+    },
+    "signal": {
+      "codepoint": 62932,
+      "source": "fixedSvg/signal.svg"
+    },
+    "signal-high": {
+      "codepoint": 62933,
+      "source": "fixedSvg/signal-high.svg"
+    },
+    "signal-low": {
+      "codepoint": 62934,
+      "source": "fixedSvg/signal-low.svg"
+    },
+    "signal-medium": {
+      "codepoint": 62935,
+      "source": "fixedSvg/signal-medium.svg"
+    },
+    "signal-zero": {
+      "codepoint": 62936,
+      "source": "fixedSvg/signal-zero.svg"
+    },
+    "signature": {
+      "codepoint": 62937,
+      "source": "fixedSvg/signature.svg"
+    },
+    "signpost": {
+      "codepoint": 62938,
+      "source": "fixedSvg/signpost.svg"
+    },
+    "signpost-big": {
+      "codepoint": 62939,
+      "source": "fixedSvg/signpost-big.svg"
+    },
+    "siren": {
+      "codepoint": 62940,
+      "source": "fixedSvg/siren.svg"
+    },
+    "skip-back": {
+      "codepoint": 62941,
+      "source": "fixedSvg/skip-back.svg"
+    },
+    "skip-forward": {
+      "codepoint": 62942,
+      "source": "fixedSvg/skip-forward.svg"
+    },
+    "skull": {
+      "codepoint": 62943,
+      "source": "fixedSvg/skull.svg"
+    },
+    "slack": {
+      "codepoint": 62944,
+      "source": "fixedSvg/slack.svg"
+    },
+    "slash": {
+      "codepoint": 62945,
+      "source": "fixedSvg/slash.svg"
+    },
+    "slice": {
+      "codepoint": 62946,
+      "source": "fixedSvg/slice.svg"
+    },
+    "sliders-horizontal": {
+      "codepoint": 62947,
+      "source": "fixedSvg/sliders-horizontal.svg"
+    },
+    "sliders-vertical": {
+      "codepoint": 62948,
+      "source": "fixedSvg/sliders-vertical.svg"
+    },
+    "smartphone": {
+      "codepoint": 62949,
+      "source": "fixedSvg/smartphone.svg"
+    },
+    "smartphone-charging": {
+      "codepoint": 62950,
+      "source": "fixedSvg/smartphone-charging.svg"
+    },
+    "smartphone-nfc": {
+      "codepoint": 62951,
+      "source": "fixedSvg/smartphone-nfc.svg"
+    },
+    "smile": {
+      "codepoint": 62952,
+      "source": "fixedSvg/smile.svg"
+    },
+    "smile-plus": {
+      "codepoint": 62953,
+      "source": "fixedSvg/smile-plus.svg"
+    },
+    "snail": {
+      "codepoint": 62954,
+      "source": "fixedSvg/snail.svg"
+    },
+    "snowflake": {
+      "codepoint": 62955,
+      "source": "fixedSvg/snowflake.svg"
+    },
+    "sofa": {
+      "codepoint": 62956,
+      "source": "fixedSvg/sofa.svg"
+    },
+    "soup": {
+      "codepoint": 62957,
+      "source": "fixedSvg/soup.svg"
+    },
+    "space": {
+      "codepoint": 62958,
+      "source": "fixedSvg/space.svg"
+    },
+    "spade": {
+      "codepoint": 62959,
+      "source": "fixedSvg/spade.svg"
+    },
+    "sparkle": {
+      "codepoint": 62960,
+      "source": "fixedSvg/sparkle.svg"
+    },
+    "sparkles": {
+      "codepoint": 62961,
+      "source": "fixedSvg/sparkles.svg"
+    },
+    "speaker": {
+      "codepoint": 62962,
+      "source": "fixedSvg/speaker.svg"
+    },
+    "speech": {
+      "codepoint": 62963,
+      "source": "fixedSvg/speech.svg"
+    },
+    "spell-check": {
+      "codepoint": 62964,
+      "source": "fixedSvg/spell-check.svg"
+    },
+    "spell-check-2": {
+      "codepoint": 62965,
+      "source": "fixedSvg/spell-check-2.svg"
+    },
+    "spline": {
+      "codepoint": 62966,
+      "source": "fixedSvg/spline.svg"
+    },
+    "split": {
+      "codepoint": 62967,
+      "source": "fixedSvg/split.svg"
+    },
+    "spray-can": {
+      "codepoint": 62968,
+      "source": "fixedSvg/spray-can.svg"
+    },
+    "sprout": {
+      "codepoint": 62969,
+      "source": "fixedSvg/sprout.svg"
+    },
+    "square": {
+      "codepoint": 62970,
+      "source": "fixedSvg/square.svg"
+    },
+    "square-activity": {
+      "codepoint": 62971,
+      "source": "fixedSvg/square-activity.svg"
+    },
+    "square-arrow-down": {
+      "codepoint": 62972,
+      "source": "fixedSvg/square-arrow-down.svg"
+    },
+    "square-arrow-down-left": {
+      "codepoint": 62973,
+      "source": "fixedSvg/square-arrow-down-left.svg"
+    },
+    "square-arrow-down-right": {
+      "codepoint": 62974,
+      "source": "fixedSvg/square-arrow-down-right.svg"
+    },
+    "square-arrow-left": {
+      "codepoint": 62975,
+      "source": "fixedSvg/square-arrow-left.svg"
+    },
+    "square-arrow-out-down-left": {
+      "codepoint": 62976,
+      "source": "fixedSvg/square-arrow-out-down-left.svg"
+    },
+    "square-arrow-out-down-right": {
+      "codepoint": 62977,
+      "source": "fixedSvg/square-arrow-out-down-right.svg"
+    },
+    "square-arrow-out-up-left": {
+      "codepoint": 62978,
+      "source": "fixedSvg/square-arrow-out-up-left.svg"
+    },
+    "square-arrow-out-up-right": {
+      "codepoint": 62979,
+      "source": "fixedSvg/square-arrow-out-up-right.svg"
+    },
+    "square-arrow-right": {
+      "codepoint": 62980,
+      "source": "fixedSvg/square-arrow-right.svg"
+    },
+    "square-arrow-up": {
+      "codepoint": 62981,
+      "source": "fixedSvg/square-arrow-up.svg"
+    },
+    "square-arrow-up-left": {
+      "codepoint": 62982,
+      "source": "fixedSvg/square-arrow-up-left.svg"
+    },
+    "square-arrow-up-right": {
+      "codepoint": 62983,
+      "source": "fixedSvg/square-arrow-up-right.svg"
+    },
+    "square-asterisk": {
+      "codepoint": 62984,
+      "source": "fixedSvg/square-asterisk.svg"
+    },
+    "square-bottom-dashed-scissors": {
+      "codepoint": 62985,
+      "source": "fixedSvg/square-bottom-dashed-scissors.svg"
+    },
+    "square-chart-gantt": {
+      "codepoint": 62986,
+      "source": "fixedSvg/square-chart-gantt.svg"
+    },
+    "square-check": {
+      "codepoint": 62987,
+      "source": "fixedSvg/square-check.svg"
+    },
+    "square-check-big": {
+      "codepoint": 62988,
+      "source": "fixedSvg/square-check-big.svg"
+    },
+    "square-chevron-down": {
+      "codepoint": 62989,
+      "source": "fixedSvg/square-chevron-down.svg"
+    },
+    "square-chevron-left": {
+      "codepoint": 62990,
+      "source": "fixedSvg/square-chevron-left.svg"
+    },
+    "square-chevron-right": {
+      "codepoint": 62991,
+      "source": "fixedSvg/square-chevron-right.svg"
+    },
+    "square-chevron-up": {
+      "codepoint": 62992,
+      "source": "fixedSvg/square-chevron-up.svg"
+    },
+    "square-code": {
+      "codepoint": 62993,
+      "source": "fixedSvg/square-code.svg"
+    },
+    "square-dashed": {
+      "codepoint": 62994,
+      "source": "fixedSvg/square-dashed.svg"
+    },
+    "square-dashed-bottom": {
+      "codepoint": 62995,
+      "source": "fixedSvg/square-dashed-bottom.svg"
+    },
+    "square-dashed-bottom-code": {
+      "codepoint": 62996,
+      "source": "fixedSvg/square-dashed-bottom-code.svg"
+    },
+    "square-dashed-kanban": {
+      "codepoint": 62997,
+      "source": "fixedSvg/square-dashed-kanban.svg"
+    },
+    "square-dashed-mouse-pointer": {
+      "codepoint": 62998,
+      "source": "fixedSvg/square-dashed-mouse-pointer.svg"
+    },
+    "square-divide": {
+      "codepoint": 62999,
+      "source": "fixedSvg/square-divide.svg"
+    },
+    "square-dot": {
+      "codepoint": 63000,
+      "source": "fixedSvg/square-dot.svg"
+    },
+    "square-equal": {
+      "codepoint": 63001,
+      "source": "fixedSvg/square-equal.svg"
+    },
+    "square-function": {
+      "codepoint": 63002,
+      "source": "fixedSvg/square-function.svg"
+    },
+    "square-kanban": {
+      "codepoint": 63003,
+      "source": "fixedSvg/square-kanban.svg"
+    },
+    "square-library": {
+      "codepoint": 63004,
+      "source": "fixedSvg/square-library.svg"
+    },
+    "square-m": {
+      "codepoint": 63005,
+      "source": "fixedSvg/square-m.svg"
+    },
+    "square-menu": {
+      "codepoint": 63006,
+      "source": "fixedSvg/square-menu.svg"
+    },
+    "square-minus": {
+      "codepoint": 63007,
+      "source": "fixedSvg/square-minus.svg"
+    },
+    "square-mouse-pointer": {
+      "codepoint": 63008,
+      "source": "fixedSvg/square-mouse-pointer.svg"
+    },
+    "square-parking": {
+      "codepoint": 63009,
+      "source": "fixedSvg/square-parking.svg"
+    },
+    "square-parking-off": {
+      "codepoint": 63010,
+      "source": "fixedSvg/square-parking-off.svg"
+    },
+    "square-pen": {
+      "codepoint": 63011,
+      "source": "fixedSvg/square-pen.svg"
+    },
+    "square-percent": {
+      "codepoint": 63012,
+      "source": "fixedSvg/square-percent.svg"
+    },
+    "square-pi": {
+      "codepoint": 63013,
+      "source": "fixedSvg/square-pi.svg"
+    },
+    "square-pilcrow": {
+      "codepoint": 63014,
+      "source": "fixedSvg/square-pilcrow.svg"
+    },
+    "square-play": {
+      "codepoint": 63015,
+      "source": "fixedSvg/square-play.svg"
+    },
+    "square-plus": {
+      "codepoint": 63016,
+      "source": "fixedSvg/square-plus.svg"
+    },
+    "square-power": {
+      "codepoint": 63017,
+      "source": "fixedSvg/square-power.svg"
+    },
+    "square-radical": {
+      "codepoint": 63018,
+      "source": "fixedSvg/square-radical.svg"
+    },
+    "square-scissors": {
+      "codepoint": 63019,
+      "source": "fixedSvg/square-scissors.svg"
+    },
+    "square-sigma": {
+      "codepoint": 63020,
+      "source": "fixedSvg/square-sigma.svg"
+    },
+    "square-slash": {
+      "codepoint": 63021,
+      "source": "fixedSvg/square-slash.svg"
+    },
+    "square-split-horizontal": {
+      "codepoint": 63022,
+      "source": "fixedSvg/square-split-horizontal.svg"
+    },
+    "square-split-vertical": {
+      "codepoint": 63023,
+      "source": "fixedSvg/square-split-vertical.svg"
+    },
+    "square-square": {
+      "codepoint": 63024,
+      "source": "fixedSvg/square-square.svg"
+    },
+    "square-stack": {
+      "codepoint": 63025,
+      "source": "fixedSvg/square-stack.svg"
+    },
+    "square-terminal": {
+      "codepoint": 63026,
+      "source": "fixedSvg/square-terminal.svg"
+    },
+    "square-user": {
+      "codepoint": 63027,
+      "source": "fixedSvg/square-user.svg"
+    },
+    "square-user-round": {
+      "codepoint": 63028,
+      "source": "fixedSvg/square-user-round.svg"
+    },
+    "square-x": {
+      "codepoint": 63029,
+      "source": "fixedSvg/square-x.svg"
+    },
+    "squircle": {
+      "codepoint": 63030,
+      "source": "fixedSvg/squircle.svg"
+    },
+    "squirrel": {
+      "codepoint": 63031,
+      "source": "fixedSvg/squirrel.svg"
+    },
+    "stamp": {
+      "codepoint": 63032,
+      "source": "fixedSvg/stamp.svg"
+    },
+    "star": {
+      "codepoint": 63033,
+      "source": "fixedSvg/star.svg"
+    },
+    "star-half": {
+      "codepoint": 63034,
+      "source": "fixedSvg/star-half.svg"
+    },
+    "star-off": {
+      "codepoint": 63035,
+      "source": "fixedSvg/star-off.svg"
+    },
+    "step-back": {
+      "codepoint": 63036,
+      "source": "fixedSvg/step-back.svg"
+    },
+    "step-forward": {
+      "codepoint": 63037,
+      "source": "fixedSvg/step-forward.svg"
+    },
+    "stethoscope": {
+      "codepoint": 63038,
+      "source": "fixedSvg/stethoscope.svg"
+    },
+    "sticker": {
+      "codepoint": 63039,
+      "source": "fixedSvg/sticker.svg"
+    },
+    "sticky-note": {
+      "codepoint": 63040,
+      "source": "fixedSvg/sticky-note.svg"
+    },
+    "store": {
+      "codepoint": 63041,
+      "source": "fixedSvg/store.svg"
+    },
+    "stretch-horizontal": {
+      "codepoint": 63042,
+      "source": "fixedSvg/stretch-horizontal.svg"
+    },
+    "stretch-vertical": {
+      "codepoint": 63043,
+      "source": "fixedSvg/stretch-vertical.svg"
+    },
+    "strikethrough": {
+      "codepoint": 63044,
+      "source": "fixedSvg/strikethrough.svg"
+    },
+    "subscript": {
+      "codepoint": 63045,
+      "source": "fixedSvg/subscript.svg"
+    },
+    "sun": {
+      "codepoint": 63046,
+      "source": "fixedSvg/sun.svg"
+    },
+    "sun-dim": {
+      "codepoint": 63047,
+      "source": "fixedSvg/sun-dim.svg"
+    },
+    "sun-medium": {
+      "codepoint": 63048,
+      "source": "fixedSvg/sun-medium.svg"
+    },
+    "sun-moon": {
+      "codepoint": 63049,
+      "source": "fixedSvg/sun-moon.svg"
+    },
+    "sun-snow": {
+      "codepoint": 63050,
+      "source": "fixedSvg/sun-snow.svg"
+    },
+    "sunrise": {
+      "codepoint": 63051,
+      "source": "fixedSvg/sunrise.svg"
+    },
+    "sunset": {
+      "codepoint": 63052,
+      "source": "fixedSvg/sunset.svg"
+    },
+    "superscript": {
+      "codepoint": 63053,
+      "source": "fixedSvg/superscript.svg"
+    },
+    "swatch-book": {
+      "codepoint": 63054,
+      "source": "fixedSvg/swatch-book.svg"
+    },
+    "swiss-franc": {
+      "codepoint": 63055,
+      "source": "fixedSvg/swiss-franc.svg"
+    },
+    "switch-camera": {
+      "codepoint": 63056,
+      "source": "fixedSvg/switch-camera.svg"
+    },
+    "sword": {
+      "codepoint": 63057,
+      "source": "fixedSvg/sword.svg"
+    },
+    "swords": {
+      "codepoint": 63058,
+      "source": "fixedSvg/swords.svg"
+    },
+    "syringe": {
+      "codepoint": 63059,
+      "source": "fixedSvg/syringe.svg"
+    },
+    "table": {
+      "codepoint": 63060,
+      "source": "fixedSvg/table.svg"
+    },
+    "table-2": {
+      "codepoint": 63061,
+      "source": "fixedSvg/table-2.svg"
+    },
+    "table-cells-merge": {
+      "codepoint": 63062,
+      "source": "fixedSvg/table-cells-merge.svg"
+    },
+    "table-cells-split": {
+      "codepoint": 63063,
+      "source": "fixedSvg/table-cells-split.svg"
+    },
+    "table-columns-split": {
+      "codepoint": 63064,
+      "source": "fixedSvg/table-columns-split.svg"
+    },
+    "table-of-contents": {
+      "codepoint": 63065,
+      "source": "fixedSvg/table-of-contents.svg"
+    },
+    "table-properties": {
+      "codepoint": 63066,
+      "source": "fixedSvg/table-properties.svg"
+    },
+    "table-rows-split": {
+      "codepoint": 63067,
+      "source": "fixedSvg/table-rows-split.svg"
+    },
+    "tablet": {
+      "codepoint": 63068,
+      "source": "fixedSvg/tablet.svg"
+    },
+    "tablet-smartphone": {
+      "codepoint": 63069,
+      "source": "fixedSvg/tablet-smartphone.svg"
+    },
+    "tablets": {
+      "codepoint": 63070,
+      "source": "fixedSvg/tablets.svg"
+    },
+    "tag": {
+      "codepoint": 63071,
+      "source": "fixedSvg/tag.svg"
+    },
+    "tags": {
+      "codepoint": 63072,
+      "source": "fixedSvg/tags.svg"
+    },
+    "tally-1": {
+      "codepoint": 63073,
+      "source": "fixedSvg/tally-1.svg"
+    },
+    "tally-2": {
+      "codepoint": 63074,
+      "source": "fixedSvg/tally-2.svg"
+    },
+    "tally-3": {
+      "codepoint": 63075,
+      "source": "fixedSvg/tally-3.svg"
+    },
+    "tally-4": {
+      "codepoint": 63076,
+      "source": "fixedSvg/tally-4.svg"
+    },
+    "tally-5": {
+      "codepoint": 63077,
+      "source": "fixedSvg/tally-5.svg"
+    },
+    "tangent": {
+      "codepoint": 63078,
+      "source": "fixedSvg/tangent.svg"
+    },
+    "target": {
+      "codepoint": 63079,
+      "source": "fixedSvg/target.svg"
+    },
+    "telescope": {
+      "codepoint": 63080,
+      "source": "fixedSvg/telescope.svg"
+    },
+    "tent": {
+      "codepoint": 63081,
+      "source": "fixedSvg/tent.svg"
+    },
+    "tent-tree": {
+      "codepoint": 63082,
+      "source": "fixedSvg/tent-tree.svg"
+    },
+    "terminal": {
+      "codepoint": 63083,
+      "source": "fixedSvg/terminal.svg"
+    },
+    "test-tube": {
+      "codepoint": 63084,
+      "source": "fixedSvg/test-tube.svg"
+    },
+    "test-tube-diagonal": {
+      "codepoint": 63085,
+      "source": "fixedSvg/test-tube-diagonal.svg"
+    },
+    "test-tubes": {
+      "codepoint": 63086,
+      "source": "fixedSvg/test-tubes.svg"
+    },
+    "text": {
+      "codepoint": 63087,
+      "source": "fixedSvg/text.svg"
+    },
+    "text-cursor": {
+      "codepoint": 63088,
+      "source": "fixedSvg/text-cursor.svg"
+    },
+    "text-cursor-input": {
+      "codepoint": 63089,
+      "source": "fixedSvg/text-cursor-input.svg"
+    },
+    "text-quote": {
+      "codepoint": 63090,
+      "source": "fixedSvg/text-quote.svg"
+    },
+    "text-search": {
+      "codepoint": 63091,
+      "source": "fixedSvg/text-search.svg"
+    },
+    "text-select": {
+      "codepoint": 63092,
+      "source": "fixedSvg/text-select.svg"
+    },
+    "theater": {
+      "codepoint": 63093,
+      "source": "fixedSvg/theater.svg"
+    },
+    "thermometer": {
+      "codepoint": 63094,
+      "source": "fixedSvg/thermometer.svg"
+    },
+    "thermometer-snowflake": {
+      "codepoint": 63095,
+      "source": "fixedSvg/thermometer-snowflake.svg"
+    },
+    "thermometer-sun": {
+      "codepoint": 63096,
+      "source": "fixedSvg/thermometer-sun.svg"
+    },
+    "thumbs-down": {
+      "codepoint": 63097,
+      "source": "fixedSvg/thumbs-down.svg"
+    },
+    "thumbs-up": {
+      "codepoint": 63098,
+      "source": "fixedSvg/thumbs-up.svg"
+    },
+    "ticket": {
+      "codepoint": 63099,
+      "source": "fixedSvg/ticket.svg"
+    },
+    "ticket-check": {
+      "codepoint": 63100,
+      "source": "fixedSvg/ticket-check.svg"
+    },
+    "ticket-minus": {
+      "codepoint": 63101,
+      "source": "fixedSvg/ticket-minus.svg"
+    },
+    "ticket-percent": {
+      "codepoint": 63102,
+      "source": "fixedSvg/ticket-percent.svg"
+    },
+    "ticket-plus": {
+      "codepoint": 63103,
+      "source": "fixedSvg/ticket-plus.svg"
+    },
+    "ticket-slash": {
+      "codepoint": 63104,
+      "source": "fixedSvg/ticket-slash.svg"
+    },
+    "ticket-x": {
+      "codepoint": 63105,
+      "source": "fixedSvg/ticket-x.svg"
+    },
+    "tickets": {
+      "codepoint": 63106,
+      "source": "fixedSvg/tickets.svg"
+    },
+    "tickets-plane": {
+      "codepoint": 63107,
+      "source": "fixedSvg/tickets-plane.svg"
+    },
+    "timer": {
+      "codepoint": 63108,
+      "source": "fixedSvg/timer.svg"
+    },
+    "timer-off": {
+      "codepoint": 63109,
+      "source": "fixedSvg/timer-off.svg"
+    },
+    "timer-reset": {
+      "codepoint": 63110,
+      "source": "fixedSvg/timer-reset.svg"
+    },
+    "toggle-left": {
+      "codepoint": 63111,
+      "source": "fixedSvg/toggle-left.svg"
+    },
+    "toggle-right": {
+      "codepoint": 63112,
+      "source": "fixedSvg/toggle-right.svg"
+    },
+    "toilet": {
+      "codepoint": 63113,
+      "source": "fixedSvg/toilet.svg"
+    },
+    "tornado": {
+      "codepoint": 63114,
+      "source": "fixedSvg/tornado.svg"
+    },
+    "torus": {
+      "codepoint": 63115,
+      "source": "fixedSvg/torus.svg"
+    },
+    "touchpad": {
+      "codepoint": 63116,
+      "source": "fixedSvg/touchpad.svg"
+    },
+    "touchpad-off": {
+      "codepoint": 63117,
+      "source": "fixedSvg/touchpad-off.svg"
+    },
+    "tower-control": {
+      "codepoint": 63118,
+      "source": "fixedSvg/tower-control.svg"
+    },
+    "toy-brick": {
+      "codepoint": 63119,
+      "source": "fixedSvg/toy-brick.svg"
+    },
+    "tractor": {
+      "codepoint": 63120,
+      "source": "fixedSvg/tractor.svg"
+    },
+    "traffic-cone": {
+      "codepoint": 63121,
+      "source": "fixedSvg/traffic-cone.svg"
+    },
+    "train-front": {
+      "codepoint": 63122,
+      "source": "fixedSvg/train-front.svg"
+    },
+    "train-front-tunnel": {
+      "codepoint": 63123,
+      "source": "fixedSvg/train-front-tunnel.svg"
+    },
+    "train-track": {
+      "codepoint": 63124,
+      "source": "fixedSvg/train-track.svg"
+    },
+    "tram-front": {
+      "codepoint": 63125,
+      "source": "fixedSvg/tram-front.svg"
+    },
+    "trash": {
+      "codepoint": 63126,
+      "source": "fixedSvg/trash.svg"
+    },
+    "trash-2": {
+      "codepoint": 63127,
+      "source": "fixedSvg/trash-2.svg"
+    },
+    "tree-deciduous": {
+      "codepoint": 63128,
+      "source": "fixedSvg/tree-deciduous.svg"
+    },
+    "tree-palm": {
+      "codepoint": 63129,
+      "source": "fixedSvg/tree-palm.svg"
+    },
+    "tree-pine": {
+      "codepoint": 63130,
+      "source": "fixedSvg/tree-pine.svg"
+    },
+    "trees": {
+      "codepoint": 63131,
+      "source": "fixedSvg/trees.svg"
+    },
+    "trello": {
+      "codepoint": 63132,
+      "source": "fixedSvg/trello.svg"
+    },
+    "trending-down": {
+      "codepoint": 63133,
+      "source": "fixedSvg/trending-down.svg"
+    },
+    "trending-up": {
+      "codepoint": 63134,
+      "source": "fixedSvg/trending-up.svg"
+    },
+    "trending-up-down": {
+      "codepoint": 63135,
+      "source": "fixedSvg/trending-up-down.svg"
+    },
+    "triangle": {
+      "codepoint": 63136,
+      "source": "fixedSvg/triangle.svg"
+    },
+    "triangle-alert": {
+      "codepoint": 63137,
+      "source": "fixedSvg/triangle-alert.svg"
+    },
+    "triangle-dashed": {
+      "codepoint": 63138,
+      "source": "fixedSvg/triangle-dashed.svg"
+    },
+    "triangle-right": {
+      "codepoint": 63139,
+      "source": "fixedSvg/triangle-right.svg"
+    },
+    "trophy": {
+      "codepoint": 63140,
+      "source": "fixedSvg/trophy.svg"
+    },
+    "truck": {
+      "codepoint": 63141,
+      "source": "fixedSvg/truck.svg"
+    },
+    "turtle": {
+      "codepoint": 63142,
+      "source": "fixedSvg/turtle.svg"
+    },
+    "tv": {
+      "codepoint": 63143,
+      "source": "fixedSvg/tv.svg"
+    },
+    "tv-minimal": {
+      "codepoint": 63144,
+      "source": "fixedSvg/tv-minimal.svg"
+    },
+    "tv-minimal-play": {
+      "codepoint": 63145,
+      "source": "fixedSvg/tv-minimal-play.svg"
+    },
+    "twitch": {
+      "codepoint": 63146,
+      "source": "fixedSvg/twitch.svg"
+    },
+    "twitter": {
+      "codepoint": 63147,
+      "source": "fixedSvg/twitter.svg"
+    },
+    "type": {
+      "codepoint": 63148,
+      "source": "fixedSvg/type.svg"
+    },
+    "type-outline": {
+      "codepoint": 63149,
+      "source": "fixedSvg/type-outline.svg"
+    },
+    "umbrella": {
+      "codepoint": 63150,
+      "source": "fixedSvg/umbrella.svg"
+    },
+    "umbrella-off": {
+      "codepoint": 63151,
+      "source": "fixedSvg/umbrella-off.svg"
+    },
+    "underline": {
+      "codepoint": 63152,
+      "source": "fixedSvg/underline.svg"
+    },
+    "undo": {
+      "codepoint": 63153,
+      "source": "fixedSvg/undo.svg"
+    },
+    "undo-2": {
+      "codepoint": 63154,
+      "source": "fixedSvg/undo-2.svg"
+    },
+    "undo-dot": {
+      "codepoint": 63155,
+      "source": "fixedSvg/undo-dot.svg"
+    },
+    "unfold-horizontal": {
+      "codepoint": 63156,
+      "source": "fixedSvg/unfold-horizontal.svg"
+    },
+    "unfold-vertical": {
+      "codepoint": 63157,
+      "source": "fixedSvg/unfold-vertical.svg"
+    },
+    "ungroup": {
+      "codepoint": 63158,
+      "source": "fixedSvg/ungroup.svg"
+    },
+    "university": {
+      "codepoint": 63159,
+      "source": "fixedSvg/university.svg"
+    },
+    "unlink": {
+      "codepoint": 63160,
+      "source": "fixedSvg/unlink.svg"
+    },
+    "unlink-2": {
+      "codepoint": 63161,
+      "source": "fixedSvg/unlink-2.svg"
+    },
+    "unplug": {
+      "codepoint": 63162,
+      "source": "fixedSvg/unplug.svg"
+    },
+    "upload": {
+      "codepoint": 63163,
+      "source": "fixedSvg/upload.svg"
+    },
+    "usb": {
+      "codepoint": 63164,
+      "source": "fixedSvg/usb.svg"
+    },
+    "user": {
+      "codepoint": 63165,
+      "source": "fixedSvg/user.svg"
+    },
+    "user-check": {
+      "codepoint": 63166,
+      "source": "fixedSvg/user-check.svg"
+    },
+    "user-cog": {
+      "codepoint": 63167,
+      "source": "fixedSvg/user-cog.svg"
+    },
+    "user-minus": {
+      "codepoint": 63168,
+      "source": "fixedSvg/user-minus.svg"
+    },
+    "user-pen": {
+      "codepoint": 63169,
+      "source": "fixedSvg/user-pen.svg"
+    },
+    "user-plus": {
+      "codepoint": 63170,
+      "source": "fixedSvg/user-plus.svg"
+    },
+    "user-round": {
+      "codepoint": 63171,
+      "source": "fixedSvg/user-round.svg"
+    },
+    "user-round-check": {
+      "codepoint": 63172,
+      "source": "fixedSvg/user-round-check.svg"
+    },
+    "user-round-cog": {
+      "codepoint": 63173,
+      "source": "fixedSvg/user-round-cog.svg"
+    },
+    "user-round-minus": {
+      "codepoint": 63174,
+      "source": "fixedSvg/user-round-minus.svg"
+    },
+    "user-round-pen": {
+      "codepoint": 63175,
+      "source": "fixedSvg/user-round-pen.svg"
+    },
+    "user-round-plus": {
+      "codepoint": 63176,
+      "source": "fixedSvg/user-round-plus.svg"
+    },
+    "user-round-search": {
+      "codepoint": 63177,
+      "source": "fixedSvg/user-round-search.svg"
+    },
+    "user-round-x": {
+      "codepoint": 63178,
+      "source": "fixedSvg/user-round-x.svg"
+    },
+    "user-search": {
+      "codepoint": 63179,
+      "source": "fixedSvg/user-search.svg"
+    },
+    "user-x": {
+      "codepoint": 63180,
+      "source": "fixedSvg/user-x.svg"
+    },
+    "users": {
+      "codepoint": 63181,
+      "source": "fixedSvg/users.svg"
+    },
+    "users-round": {
+      "codepoint": 63182,
+      "source": "fixedSvg/users-round.svg"
+    },
+    "utensils": {
+      "codepoint": 63183,
+      "source": "fixedSvg/utensils.svg"
+    },
+    "utensils-crossed": {
+      "codepoint": 63184,
+      "source": "fixedSvg/utensils-crossed.svg"
+    },
+    "utility-pole": {
+      "codepoint": 63185,
+      "source": "fixedSvg/utility-pole.svg"
+    },
+    "variable": {
+      "codepoint": 63186,
+      "source": "fixedSvg/variable.svg"
+    },
+    "vault": {
+      "codepoint": 63187,
+      "source": "fixedSvg/vault.svg"
+    },
+    "vegan": {
+      "codepoint": 63188,
+      "source": "fixedSvg/vegan.svg"
+    },
+    "venetian-mask": {
+      "codepoint": 63189,
+      "source": "fixedSvg/venetian-mask.svg"
+    },
+    "vibrate": {
+      "codepoint": 63190,
+      "source": "fixedSvg/vibrate.svg"
+    },
+    "vibrate-off": {
+      "codepoint": 63191,
+      "source": "fixedSvg/vibrate-off.svg"
+    },
+    "video": {
+      "codepoint": 63192,
+      "source": "fixedSvg/video.svg"
+    },
+    "video-off": {
+      "codepoint": 63193,
+      "source": "fixedSvg/video-off.svg"
+    },
+    "videotape": {
+      "codepoint": 63194,
+      "source": "fixedSvg/videotape.svg"
+    },
+    "view": {
+      "codepoint": 63195,
+      "source": "fixedSvg/view.svg"
+    },
+    "voicemail": {
+      "codepoint": 63196,
+      "source": "fixedSvg/voicemail.svg"
+    },
+    "volleyball": {
+      "codepoint": 63197,
+      "source": "fixedSvg/volleyball.svg"
+    },
+    "volume": {
+      "codepoint": 63198,
+      "source": "fixedSvg/volume.svg"
+    },
+    "volume-1": {
+      "codepoint": 63199,
+      "source": "fixedSvg/volume-1.svg"
+    },
+    "volume-2": {
+      "codepoint": 63200,
+      "source": "fixedSvg/volume-2.svg"
+    },
+    "volume-off": {
+      "codepoint": 63201,
+      "source": "fixedSvg/volume-off.svg"
+    },
+    "volume-x": {
+      "codepoint": 63202,
+      "source": "fixedSvg/volume-x.svg"
+    },
+    "vote": {
+      "codepoint": 63203,
+      "source": "fixedSvg/vote.svg"
+    },
+    "wallet": {
+      "codepoint": 63204,
+      "source": "fixedSvg/wallet.svg"
+    },
+    "wallet-cards": {
+      "codepoint": 63205,
+      "source": "fixedSvg/wallet-cards.svg"
+    },
+    "wallet-minimal": {
+      "codepoint": 63206,
+      "source": "fixedSvg/wallet-minimal.svg"
+    },
+    "wallpaper": {
+      "codepoint": 63207,
+      "source": "fixedSvg/wallpaper.svg"
+    },
+    "wand": {
+      "codepoint": 63208,
+      "source": "fixedSvg/wand.svg"
+    },
+    "wand-sparkles": {
+      "codepoint": 63209,
+      "source": "fixedSvg/wand-sparkles.svg"
+    },
+    "warehouse": {
+      "codepoint": 63210,
+      "source": "fixedSvg/warehouse.svg"
+    },
+    "washing-machine": {
+      "codepoint": 63211,
+      "source": "fixedSvg/washing-machine.svg"
+    },
+    "watch": {
+      "codepoint": 63212,
+      "source": "fixedSvg/watch.svg"
+    },
+    "waves": {
+      "codepoint": 63213,
+      "source": "fixedSvg/waves.svg"
+    },
+    "waves-ladder": {
+      "codepoint": 63214,
+      "source": "fixedSvg/waves-ladder.svg"
+    },
+    "waypoints": {
+      "codepoint": 63215,
+      "source": "fixedSvg/waypoints.svg"
+    },
+    "webcam": {
+      "codepoint": 63216,
+      "source": "fixedSvg/webcam.svg"
+    },
+    "webhook": {
+      "codepoint": 63217,
+      "source": "fixedSvg/webhook.svg"
+    },
+    "webhook-off": {
+      "codepoint": 63218,
+      "source": "fixedSvg/webhook-off.svg"
+    },
+    "weight": {
+      "codepoint": 63219,
+      "source": "fixedSvg/weight.svg"
+    },
+    "wheat": {
+      "codepoint": 63220,
+      "source": "fixedSvg/wheat.svg"
+    },
+    "wheat-off": {
+      "codepoint": 63221,
+      "source": "fixedSvg/wheat-off.svg"
+    },
+    "whole-word": {
+      "codepoint": 63222,
+      "source": "fixedSvg/whole-word.svg"
+    },
+    "wifi": {
+      "codepoint": 63223,
+      "source": "fixedSvg/wifi.svg"
+    },
+    "wifi-high": {
+      "codepoint": 63224,
+      "source": "fixedSvg/wifi-high.svg"
+    },
+    "wifi-low": {
+      "codepoint": 63225,
+      "source": "fixedSvg/wifi-low.svg"
+    },
+    "wifi-off": {
+      "codepoint": 63226,
+      "source": "fixedSvg/wifi-off.svg"
+    },
+    "wifi-zero": {
+      "codepoint": 63227,
+      "source": "fixedSvg/wifi-zero.svg"
+    },
+    "wind": {
+      "codepoint": 63228,
+      "source": "fixedSvg/wind.svg"
+    },
+    "wind-arrow-down": {
+      "codepoint": 63229,
+      "source": "fixedSvg/wind-arrow-down.svg"
+    },
+    "wine": {
+      "codepoint": 63230,
+      "source": "fixedSvg/wine.svg"
+    },
+    "wine-off": {
+      "codepoint": 63231,
+      "source": "fixedSvg/wine-off.svg"
+    },
+    "workflow": {
+      "codepoint": 63232,
+      "source": "fixedSvg/workflow.svg"
+    },
+    "worm": {
+      "codepoint": 63233,
+      "source": "fixedSvg/worm.svg"
+    },
+    "wrap-text": {
+      "codepoint": 63234,
+      "source": "fixedSvg/wrap-text.svg"
+    },
+    "wrench": {
+      "codepoint": 63235,
+      "source": "fixedSvg/wrench.svg"
+    },
+    "x": {
+      "codepoint": 63236,
+      "source": "fixedSvg/x.svg"
+    },
+    "youtube": {
+      "codepoint": 63237,
+      "source": "fixedSvg/youtube.svg"
+    },
+    "zap": {
+      "codepoint": 63238,
+      "source": "fixedSvg/zap.svg"
+    },
+    "zap-off": {
+      "codepoint": 63239,
+      "source": "fixedSvg/zap-off.svg"
+    },
+    "zoom-in": {
+      "codepoint": 63240,
+      "source": "fixedSvg/zoom-in.svg"
+    },
+    "zoom-out": {
+      "codepoint": 63241,
+      "source": "fixedSvg/zoom-out.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "copyright": "",
+    "css3": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "Lucide",
+    "force": true,
+    "input": {
+      "templates": "fixedSvg",
+      "vectors": "fixedSvg"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "Lucide",
+      "fonts": "Lucide",
+      "preview": "Lucide"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css"
+    ]
+  },
+  "templates": [
+    "Lucide/Lucide.css"
+  ]
+}

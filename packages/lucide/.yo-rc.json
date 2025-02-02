@@ -1,0 +1,17 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "lucide",
+    "upstreamFont": "lucide-static",
+    "buildSteps": {
+      "glyphmap": {
+        "location": "../../node_modules/lucide-static/font/lucide.css",
+        "mode": "css",
+        "prefix": ".icon-"
+      },
+      "copyFont": {
+        "location": "../../node_modules/lucide-static/font/lucide.ttf",
+        "cleanup": true
+      }
+    }
+  }
+}
