@@ -45,7 +45,7 @@ providedFonts.forEach((font) => {
 // Check for extra fonts in Info.plist
 plistFonts.forEach((font) => {
   if (!providedFonts.has(font)) {
-    console.log(pc.red(`Extra ${font} (Please remove manually if not needed)`));
+    console.log(pc.yellow(`Extra ${font} (Please remove manually if not needed)`));
   }
 });
 
