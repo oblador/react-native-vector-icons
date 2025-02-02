@@ -1,0 +1,129 @@
+{
+  "name": "@react-native-vector-icons/material-icons-round",
+  "version": "0.14.13",
+  "description": "Material Icons Round font for react native vector icons",
+  "source": "./src/index.ts",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/module/index.js",
+  "types": "./lib/typescript/commonjs/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/typescript/module/src/index.d.ts",
+        "default": "./lib/module/index.js"
+      },
+      "require": {
+        "types": "./lib/typescript/commonjs/src/index.d.ts",
+        "default": "./lib/commonjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "src",
+    "lib",
+    "glyphmaps",
+    "fonts",
+    "android",
+    "ios",
+    "cpp",
+    "*.podspec",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
+  ],
+  "scripts": {
+    "clean": "del-cli android/build ios/build lib",
+    "prepare": "bob build && ../../scripts/fix-glyphmaps.sh",
+    "watch": "onchange 'src/**' --initial -- yarn run prepare"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "osx",
+    "windows",
+    "macos",
+    "react-component",
+    "react-native-component",
+    "react",
+    "mobile",
+    "ui",
+    "icon",
+    "icons",
+    "vector",
+    "retina",
+    "font",
+    "react-native-vector-icons-icon",
+    "material-icons-round"
+  ],
+  "repository": {
+    "url": "https://github.com/oblador/react-native-vector-icons",
+    "type": "git",
+    "directory": "packages/material-icons-round"
+  },
+  "author": {
+    "name": "Joel Arvidsson",
+    "email": "joel@oblador.se"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oblador/react-native-vector-icons/issues"
+  },
+  "homepage": "https://github.com/oblador/react-native-vector-icons",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@react-native-vector-icons/common": "^11.0.0"
+  },
+  "devDependencies": {
+    "@material-design-icons/svg": "0.14.13",
+    "del-cli": "^6.0.0",
+    "onchange": "^7.1.0",
+    "react-native-builder-bob": "^0.35.2",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "engines": {
+    "node": ">= 18.0.0"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json",
+          "esm": true
+        }
+      ]
+    ]
+  },
+  "create-react-native-library": {
+    "type": "library",
+    "version": "0.41.2"
+  }
+}

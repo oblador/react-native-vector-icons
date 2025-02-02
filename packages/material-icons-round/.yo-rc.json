@@ -1,0 +1,22 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "material-icons-round",
+    "upstreamFont": "@material-design-icons/svg",
+    "buildSteps": {
+      "fixSVGPaths": {
+        "location": "../../node_modules/@material-design-icons/svg/round"
+      },
+      "fontCustom": {
+        "location": "fixedSvg",
+        "cleanup": true
+      },
+      "fontforgeScript": {
+        "script": "correct-direction.py"
+      },
+      "glyphmap": {
+        "mode": "css",
+        "cleanup": true
+      }
+    }
+  }
+}
