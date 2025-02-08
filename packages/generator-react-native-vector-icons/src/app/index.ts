@@ -117,7 +117,14 @@ export default class extends Generator<Arguments> {
       'tsconfig.json',
       'tsconfig.build.json',
       'babel.config.js',
+      'android/build.gradle',
+      'android/src/main/AndroidManifestNew.xml',
+      'android/src/main/AndroidManifest.xml',
     ];
+    files.push(['android/src/main/java/Module.kt', `android/src/main/java/VectorIcons${data.className}Module.kt`]);
+    files.push(['android/src/main/java/Package.kt', `android/src/main/java/VectorIcons${data.className}Package.kt`]);
+    files.push(['android/src/main/java/Spec.kt', `android/src/main/java/VectorIcons${data.className}Spec.kt`]);
+    files.push(['src/Native.ts', `src/NativeVectorIcons${data.className}.ts`]);
 
     if (data.customSrc === true) {
       // Do nothing
