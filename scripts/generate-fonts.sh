@@ -4,9 +4,13 @@ set -e
 
 cd packages
 
-PACKAGES=${@:-$(ls -d */)}
+if [ $# -gt 0 ]; then
+  PACKAGES=("$@")
+else
+  PACKAGES=(./*)
+fi
 
-for package in $PACKAGES; do
+for package in "${PACKAGES[@]}"; do
   if [ ! -f "$package/.yo-rc.json" ]; then
     continue
   fi
@@ -17,21 +21,21 @@ for package in $PACKAGES; do
   echo "######################"
   echo
 
-  cd $package
+  cd "$package"
 
   CURRENT_VERSION=$(jq -r '.version' package.json)
 
-  rm -rf *
+  rm -rf ./*
 
   if [ "$(jq -r '."generator-react-native-vector-icons".customReadme' .yo-rc.json)" == "true" ]; then
-    git restore README.md > /dev/null || true
+    git restore README.md >/dev/null || true
   fi
 
   if [ "$(jq -r '."generator-react-native-vector-icons".customSrc' .yo-rc.json)" == "true" ]; then
-    git restore src > /dev/null || true
+    git restore src >/dev/null || true
   fi
 
-  yo react-native-vector-icons --force --current-version=$CURRENT_VERSION
+  yo react-native-vector-icons --force --current-version="$CURRENT_VERSION"
 
   cd -
 done
