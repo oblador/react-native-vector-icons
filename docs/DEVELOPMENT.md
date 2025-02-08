@@ -1,6 +1,7 @@
 # Handy reminders for developers
 
 Things we use
+
 * nx - for building and releasing (all behind yarn scripts)
 
 ## Versioning
@@ -17,6 +18,7 @@ For fonts we track upstream versions. Occasionally we'll need to make changes ou
 ## Publishing
 
 This will auto detect which packages need to be published on NPM and ask which versions you want to set the packages to.
+
 ```sh
 yarn release
 ```
@@ -29,4 +31,12 @@ yarn generate
 
 # Build everything
 yarn prepare
+```
+
+## Alpha release
+
+```sh
+# Add --dry-run to test
+yarn nx release version --verbose --package @react-native-vector-icons/lucide --preid=alpha
+yarn nx release publish --verbose --package @react-native-vector-icons/lucide --tag alpha
 ```
