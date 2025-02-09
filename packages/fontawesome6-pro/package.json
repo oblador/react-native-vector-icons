@@ -64,8 +64,8 @@
     "fontawesome6-pro"
   ],
   "repository": {
-    "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git",
+    "url": "https://github.com/oblador/react-native-vector-icons.git",
     "directory": "packages/fontawesome6-pro"
   },
   "author": {
@@ -81,7 +81,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "workspace:^"
+    "@react-native-vector-icons/common": "workspace:^",
+    "@react-native-vector-icons/fontawesome-common": "workspace:^"
   },
   "devDependencies": {
     "del-cli": "^6.0.0",

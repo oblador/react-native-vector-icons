@@ -64,8 +64,8 @@
     "fontawesome"
   ],
   "repository": {
-    "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git",
+    "url": "https://github.com/oblador/react-native-vector-icons.git",
     "directory": "packages/fontawesome"
   },
   "author": {
@@ -85,10 +85,10 @@
   },
   "devDependencies": {
     "del-cli": "^6.0.0",
-    "font-awesome": "4.7.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "font-awesome": "4.7.0"
   },
   "peerDependencies": {
     "react": "*",

@@ -13,7 +13,7 @@
       "versionOnly": true
     },
     "dependencies": {
-      "@react-native-vector-icons/fontawesome-common": "LOOKUP"
+      "@react-native-vector-icons/fontawesome-common": "workspace:^"
     },
     "meta": {
       "defaultStyleName": "regular",
