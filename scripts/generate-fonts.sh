@@ -4,9 +4,13 @@ set -e
 
 cd packages
 
-PACKAGES=${@:-$(ls -d */)}
+if [ $# -gt 0 ]; then
+  PACKAGES=("$@")
+else
+  PACKAGES=(./*)
+fi
 
-for package in $PACKAGES; do
+for package in "${PACKAGES[@]}"; do
   if [ ! -f "$package/.yo-rc.json" ]; then
     continue
   fi
@@ -17,7 +21,7 @@ for package in $PACKAGES; do
   echo "######################"
   echo
 
-  cd $package
+  cd "$package"
 
   if [ -n "$DIFF" ]; then
     mkdir -p "diffenator/$package"
@@ -27,7 +31,7 @@ for package in $PACKAGES; do
 
   CURRENT_VERSION=$(jq -r '.version' package.json)
 
-  rm -rf *
+  rm -rf ./*
 
   if [ "$(jq -r '."generator-react-native-vector-icons".customReadme' .yo-rc.json)" == "true" ]; then
     git restore README.md >/dev/null || true
@@ -37,7 +41,7 @@ for package in $PACKAGES; do
     git restore src >/dev/null || true
   fi
 
-  yo react-native-vector-icons --force --current-version=$CURRENT_VERSION
+  yo react-native-vector-icons --force --current-version="$CURRENT_VERSION"
 
   if [ -n "$DIFF" ]; then
     mkdir -p "/tmp/$package/after"
