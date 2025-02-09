@@ -64,8 +64,8 @@
     "fontawesome6"
   ],
   "repository": {
-    "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git",
+    "url": "https://github.com/oblador/react-native-vector-icons.git",
     "directory": "packages/fontawesome6"
   },
   "author": {
