@@ -2,6 +2,7 @@
   "generator-react-native-vector-icons": {
     "packageName": "icomoon",
     "customReadme": true,
-    "customSrc": true
+    "customSrc": true,
+    "copyCustomFonts": true
   }
 }

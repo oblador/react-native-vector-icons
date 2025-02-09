@@ -6,7 +6,7 @@
 #import <React/RCTFont.h>
 #import <React/RCTUtils.h>
 
-NSString *const RNVIErrorDomain = @"com.reactnativevectoricons.common";
+NSString *const RNVIErrorDomain = @"com.reactnativevectoricons.get_image";
 enum {
   RNVIGenericError = 1000,
 };
@@ -76,11 +76,16 @@ RCT_EXPORT_MODULE()
   UIColor *parsedColor = [RCTConvert UIColor:@(color)];
   UIFont *font = [UIFont fontWithName:fontName size:fontSize];
   if (!font) {
-    *error = [NSError errorWithDomain:RNVIErrorDomain
-                                 code:RNVIGenericError
-                             userInfo:@{
-      NSLocalizedDescriptionKey: [NSString stringWithFormat:@"No font found for font name \"%@\". Make sure the font is included in info.plist.", fontName]
-    }];
+    *error = [NSError
+        errorWithDomain:RNVIErrorDomain
+                   code:RNVIGenericError
+               userInfo:@{
+                 NSLocalizedDescriptionKey :
+                     [NSString stringWithFormat:
+                                   @"No font found for font name \"%@\". Make "
+                                   @"sure the font is included in info.plist.",
+                                   fontName]
+               }];
     return nil;
   }
   NSString *filePath = [self generateFilePath:glyph
@@ -106,13 +111,10 @@ RCT_EXPORT_MODULE()
   return filePath;
 }
 
-RCT_EXPORT_METHOD(getImageForFont
-                  : (NSString *)fontName glyph
-                  : (NSString *)glyph fontSize
-                  : (CGFloat)fontSize color
-                  : (double)color resolve
-                  : (RCTPromiseResolveBlock)resolve reject
-                  : (RCTPromiseRejectBlock)reject) {
+RCT_EXPORT_METHOD(getImageForFont : (NSString *)fontName glyph : (NSString *)
+                      glyph fontSize : (CGFloat)fontSize color : (double)
+                          color resolve : (RCTPromiseResolveBlock)
+                              resolve reject : (RCTPromiseRejectBlock)reject) {
   NSError *error = nil;
   NSString *filePath = [self createGlyphImagePathForFont:fontName
                                                withGlyph:glyph
@@ -127,21 +129,20 @@ RCT_EXPORT_METHOD(getImageForFont
   }
 }
 
-RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getImageForFontSync
-                                       : (NSString *)fontName glyph
-                                       : (NSString *)glyph fontSize
-                                       : (CGFloat)fontSize color
-                                       : (double)color) {
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(
+    getImageForFontSync : (NSString *)fontName glyph : (NSString *)
+        glyph fontSize : (CGFloat)fontSize color : (double)color) {
   NSError *error = nil;
-  NSString* glyphImage = [self createGlyphImagePathForFont:fontName
-                                 withGlyph:glyph
-                              withFontSize:fontSize
-                                 withColor:color
-                                 withError:&error];
+  NSString *glyphImage = [self createGlyphImagePathForFont:fontName
+                                                 withGlyph:glyph
+                                              withFontSize:fontSize
+                                                 withColor:color
+                                                 withError:&error];
   if (error == nil && glyphImage != nil) {
     return glyphImage;
   } else {
-    NSString *reason = error ? error.localizedDescription : @"Failed to create glyph image";
+    NSString *reason =
+        error ? error.localizedDescription : @"Failed to create glyph image";
 
     @throw [NSException exceptionWithName:@"RNVectorIconsException"
                                    reason:reason
@@ -152,9 +153,8 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getImageForFontSync
 // Don't compile this code when we build for the old architecture.
 #ifdef RCT_NEW_ARCH_ENABLED
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
-    (const facebook::react::ObjCTurboModule::InitParams &)params
-{
-    return std::make_shared<facebook::react::NativeVectorIconsSpecJSI>(params);
+    (const facebook::react::ObjCTurboModule::InitParams &)params {
+  return std::make_shared<facebook::react::NativeVectorIconsSpecJSI>(params);
 }
 #endif
 

@@ -41,7 +41,7 @@ for package in "${PACKAGES[@]}"; do
     git restore src >/dev/null || true
   fi
 
-  yo react-native-vector-icons --force --current-version="$CURRENT_VERSION"
+  yo react-native-vector-icons --force --skip-install --current-version="$CURRENT_VERSION"
 
   if [ -n "$DIFF" ]; then
     mkdir -p "/tmp/$package/after"

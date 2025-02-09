@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.common
+package com.reactnativevectoricons.get_image
 
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod
@@ -15,10 +15,6 @@ import java.io.IOException
 
 class VectorIconsModule internal constructor(context: ReactApplicationContext) :
   VectorIconsSpec(context) {
-
-  override fun getName(): String {
-    return NAME
-  }
 
   @ReactMethod
   override fun getImageForFont(fontFamilyName: String, glyph: String, fontSize: Double, color: Double, promise: Promise) {

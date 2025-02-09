@@ -50,7 +50,7 @@ def supportsNamespace() {
 import groovy.json.JsonSlurper
 
 def generatedCompat() {
-  def rnviProject = rootProject.allprojects.find { it.name == 'react-native-vector-icons_common' }
+  def rnviProject = rootProject.allprojects.find { it.name == 'react-native-vector-icons_get-image' }
   if (rnviProject == null) return false
 
   def reactNativeManifest = file("${rnviProject.projectDir}/../../../react-native/package.json")
@@ -61,7 +61,7 @@ def generatedCompat() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.reactnativevectoricons.common"
+    namespace "com.reactnativevectoricons.get_image"
 
     sourceSets {
       main {
@@ -141,26 +141,6 @@ if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
     libraryName = "VectorIcons"
-    codegenJavaPackageName = "com.reactnativevectoricons.common"
+    codegenJavaPackageName = "com.reactnativevectoricons.get_image"
   }
 }
-
-android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVI")
-
-task copyFonts(type: Exec) {
-  commandLine 'node', '../lib/commonjs/scripts/getFonts.js', "${rootDir.parentFile.absolutePath}/package.json"
-  def fonts = new ByteArrayOutputStream()
-  standardOutput = fonts
-
-  doLast {
-    def files = fonts.toString().trim().split('\n').findAll { it }
-    copy {
-      from files
-
-      into "${buildDir}/intermediates/RNVI/fonts"
-      eachFile { println "Copying font ${it.file}" }
-    }
-  }
-}
-
-preBuild.dependsOn(copyFonts)

@@ -18,12 +18,14 @@ interface Data {
   className: string;
   postScriptName: string;
   fontFileName: string;
+  androidName: string;
   dependencies: Record<string, string>;
   upstreamFont?: string | { registry?: string; packageName: string; versionRange: string; versionOnly?: boolean };
   packageJSON?: Record<string, Record<string, string>>;
   versionSuffix?: string;
   customReadme?: boolean;
   customSrc?: string | boolean;
+  copyCustomFonts?: boolean;
   source: string;
   customAssets?: boolean;
   commonPackage?: string;
@@ -79,12 +81,11 @@ export default class extends Generator<Arguments> {
     this.data = this._data();
   }
 
-  writing() {
+  async writing() {
     this._writeTemplates();
-  }
-
-  install() {
-    return this._writePackageJSON();
+    await this._fixPackageVersion();
+    await this._addFontDependencies();
+    await this._addDependencies();
   }
 
   end() {
@@ -121,7 +122,13 @@ export default class extends Generator<Arguments> {
       'tsconfig.json',
       'tsconfig.build.json',
       'babel.config.js',
+      'android/build.gradle',
+      'android/src/main/AndroidManifestNew.xml',
+      'android/src/main/AndroidManifest.xml',
     ];
+    files.push(['android/src/main/java/Package.kt', `android/src/main/java/VectorIcons${data.className}Package.kt`]);
+
+    files.push(['font.podspec', `react-native-vector-icons-${data.packageName}.podspec`]);
 
     if (data.customSrc === true) {
       // Do nothing
@@ -146,77 +153,65 @@ export default class extends Generator<Arguments> {
     });
   }
 
-  async _writePackageJSON() {
+  async _fixPackageVersion() {
+    this.fs.extendJSON(this.destinationPath('package.json'), { version: this.options.currentVersion });
+  }
+
+  async _addFontDependencies() {
     const { data } = this;
 
-    const packageFile = this.destinationPath('package.json');
-    const packageJSON = JSON.parse(fs.readFileSync(packageFile, 'utf8'));
-
-    let packageName = '';
-    let version: string;
-    let versionOnly = false;
-    if (typeof data.upstreamFont === 'object') {
-      const registry = data.upstreamFont.registry ?? 'https://registry.npmjs.org';
-      packageName = data.upstreamFont.packageName;
-      const versionRange = data.upstreamFont.versionRange || '*';
-      versionOnly = data.upstreamFont.versionOnly || false;
-      const authToken = getAuthToken(registry.replace(/^https?:/, ''));
-
-      const packageInfo = await npmFetch.json(`${registry}/${packageName}`, {
-        forceAuth: { _authToken: authToken?.token },
-      });
-      const versions = Object.keys(packageInfo.versions as string[]);
-      const possibleVersion = semver.maxSatisfying(versions, versionRange);
-      if (!possibleVersion) {
-        throw new Error(`Invalid upstreamFont ${data.upstreamFont}: no matching version`);
-      }
-      version = possibleVersion;
-    } else if (typeof data.upstreamFont === 'string') {
-      const packageInfo = await npmFetch.json(`https://registry.npmjs.org/${data.upstreamFont}/latest`);
-      version = packageInfo.version as string;
-      packageName = data.upstreamFont;
-    } else {
-      version = '0.0.1';
+    if (!data.upstreamFont) {
+      return;
     }
 
-    const { currentVersion } = this.options;
-    let versionSuffix = '';
-    if (currentVersion && data.versionSuffix && currentVersion.match(data.versionSuffix)) {
-      const preRelease = currentVersion.split(data.versionSuffix)[1];
-      versionSuffix = `${data.versionSuffix}${preRelease}`;
-    } else {
-      versionSuffix = data.versionSuffix ? `${data.versionSuffix}.1` : '';
+    if (typeof data.upstreamFont === 'string') {
+      const packageInfo = (await npmFetch.json(`https://registry.npmjs.org/${data.upstreamFont}/latest`)) as {
+        version: string;
+      };
+      await this.addDevDependencies({ [data.upstreamFont]: packageInfo.version });
+
+      return;
     }
 
-    packageJSON.version = `${version}${versionSuffix}`;
-
-    const commonPackageFile = this.destinationPath('../common/package.json');
-    const commonPackageJSON = JSON.parse(fs.readFileSync(commonPackageFile, 'utf8'));
-
-    packageJSON.dependencies['@react-native-vector-icons/common'] = `^${commonPackageJSON.version}`;
-
-    if (data.dependencies) {
-      Object.entries(data.dependencies).forEach(([depName, depVersion]) => {
-        if (!depName.startsWith('@react-native-vector-icons')) {
-          packageJSON.dependencies[depName] = depVersion;
-
-          return;
-        }
-
-        const dep = depName.split('/')[1];
-
-        const depFile = this.destinationPath(`../${dep}/package.json`);
-        const depJSON = JSON.parse(fs.readFileSync(depFile, 'utf8'));
-
-        packageJSON.dependencies[depName] = `^${depJSON.version}`;
-      });
+    if (data.upstreamFont?.versionOnly) {
+      return;
     }
 
-    if (!versionOnly && packageName) {
-      packageJSON.devDependencies[packageName] = version;
+    const packageName = typeof data.upstreamFont === 'object' ? data.upstreamFont.packageName : data.upstreamFont;
+    let version = this.options.currentVersion;
+
+    const versionOnly = data.upstreamFont.versionOnly || false;
+    if (versionOnly) {
+      return;
     }
 
-    fs.writeFileSync(packageFile, JSON.stringify(packageJSON, null, 2));
+    const registry = data.upstreamFont.registry ?? 'https://registry.npmjs.org';
+    const versionRange = data.upstreamFont.versionRange || '*';
+    const authToken = getAuthToken(registry.replace(/^https?:/, ''));
+
+    const packageInfo = await npmFetch.json(`${registry}/${packageName}`, {
+      forceAuth: { _authToken: authToken?.token },
+    });
+    const versions = Object.keys(packageInfo.versions as string[]);
+    const possibleVersion = semver.maxSatisfying(versions, versionRange);
+    if (!possibleVersion) {
+      throw new Error(`Invalid upstreamFont ${data.upstreamFont}: no matching version`);
+    }
+    version = possibleVersion;
+
+    await this.addDevDependencies({ [packageName]: version });
+  }
+
+  async _addDependencies() {
+    const { data } = this;
+
+    if (!data.dependencies) {
+      return;
+    }
+
+    Object.entries(data.dependencies).forEach(async ([depName, depVersion]) => {
+      await this.addDependencies({ [depName]: depVersion as string });
+    });
   }
 
   _buildSteps() {
@@ -406,29 +401,31 @@ export default class extends Generator<Arguments> {
   _data() {
     // TODO: Use zod to vaidate the .yo-rc.json data
     const data = this.config.getAll() as unknown as Data;
+    // ant-design
     if (!data.packageName) {
       throw new Error('packageName is required');
     }
 
+    // Ant Design
     data.name ||= data.packageName
       .split('-')
       .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
       .join(' ');
-    data.buildSteps ||= {};
+    // AntDesign
     data.className ||= data.packageName
       .split('-')
       .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
       .join('');
-    data.postScriptName ||= data.packageName
-      .split('-')
-      .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
-      .join('');
-    data.fontFileName ||= data.packageName
-      .split('-')
-      .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
-      .join('');
+    // AntDesign
+    data.postScriptName ||= data.className;
+    data.fontFileName ||= data.className;
+    // ant_design
+    data.androidName = data.packageName.replaceAll('-', '_');
+
+    data.buildSteps ||= {};
     data.customReadme ||= false;
     data.customAssets ||= false;
+    data.copyCustomFonts ||= false;
     data.commonPackage ||= 'common';
     data.source = './src/index.ts';
     if (typeof data.customSrc === 'string') {

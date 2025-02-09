@@ -24,7 +24,6 @@
   },
   "dependencies": {
     "@react-native-vector-icons/ant-design": "workspace:^",
-    "@react-native-vector-icons/common": "workspace:^",
     "@react-native-vector-icons/entypo": "workspace:^",
     "@react-native-vector-icons/evil-icons": "workspace:^",
     "@react-native-vector-icons/feather": "workspace:^",
@@ -36,6 +35,7 @@
     "@react-native-vector-icons/fontello": "workspace:^",
     "@react-native-vector-icons/fontisto": "workspace:^",
     "@react-native-vector-icons/foundation": "workspace:^",
+    "@react-native-vector-icons/get-image": "workspace:^",
     "@react-native-vector-icons/icomoon": "workspace:^",
     "@react-native-vector-icons/ionicons": "workspace:^",
     "@react-native-vector-icons/lucide": "workspace:^",

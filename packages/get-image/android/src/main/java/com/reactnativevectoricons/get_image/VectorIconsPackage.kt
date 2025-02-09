@@ -1,4 +1,4 @@
-package com.reactnativevectoricons.common
+package com.reactnativevectoricons.get_image
 
 import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.ReactApplicationContext

@@ -20,29 +20,19 @@
     }
   },
   "files": [
-    "scripts",
     "src",
     "lib",
     "android",
     "ios",
     "cpp",
     "*.podspec",
-    "react-native.config.js",
-    "!ios/generated",
-    "!android/generated",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
     "!**/.*"
   ],
   "scripts": {
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
+    "clean": "del-cli lib",
     "prepare": "bob build && chmod +x lib/commonjs/scripts/updatePlist.js",
     "prepack": "cp ../../README.md .",
     "postpack": "rm README.md",
@@ -71,7 +61,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/oblador/react-native-vector-icons.git"
+    "url": "https://github.com/oblador/react-native-vector-icons.git",
+    "directory": "packages/common"
   },
   "author": {
     "name": "Joel Arvidsson",
@@ -86,31 +77,33 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-community/cli-tools": "^15.1.2",
+    "@react-native-community/cli-tools": "^17.0.0",
     "picocolors": "^1.1.1",
     "plist": "^3.1.0"
   },
   "devDependencies": {
     "@types/plist": "^3.0.5",
-    "@types/react": "~18.3.18",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
-    "react": "18.3.1",
-    "react-native": "0.76.5",
     "react-native-builder-bob": "^0.35.2",
-    "turbo": "^1.13.4",
     "typescript": "^5.7.2"
   },
-  "resolutions": {
-    "@types/react": "^18.2.44"
-  },
   "peerDependencies": {
+    "@react-native-vector-icons/get-image": "workspace:^",
     "react": "*",
     "react-native": "*"
+  },
+  "peerDependenciesMeta": {
+    "@react-native-vector-icons/get-image": {
+      "optional": true
+    }
   },
   "workspaces": [
     "packages/*"
   ],
+  "engines": {
+    "node": ">= 18.0.0"
+  },
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
@@ -122,7 +115,6 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "codegen",
       [
         "commonjs",
         {
@@ -144,22 +136,8 @@
       ]
     ]
   },
-  "codegenConfig": {
-    "name": "RNVectorIconsSpec",
-    "type": "all",
-    "jsSrcsDir": "src",
-    "outputDir": {
-      "ios": "ios/generated",
-      "android": "android/generated"
-    },
-    "android": {
-      "javaPackageName": "com.reactnativevectoricons.common"
-    },
-    "includesGeneratedCode": false
-  },
   "create-react-native-library": {
-    "type": "module-mixed",
-    "languages": "kotlin-objc",
+    "type": "library",
     "version": "0.41.2"
   }
 }

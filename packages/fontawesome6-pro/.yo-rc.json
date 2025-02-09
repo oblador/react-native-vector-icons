@@ -4,6 +4,7 @@
     "className": "FontAwesome6Pro",
     "commonPackage": "fontawesome-common/fontawesome6-pro",
     "customSrc": "../../../../fontawesome-common/generators/app/templates/src/index.tsx",
+    "copyCustomFonts": true,
     "customReadme": true,
     "upstreamFont": {
       "registry": "https://npm.fontawesome.com",

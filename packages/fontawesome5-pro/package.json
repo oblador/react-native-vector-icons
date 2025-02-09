@@ -81,8 +81,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^11.0.0",
-    "@react-native-vector-icons/fontawesome-common": "^11.0.0"
+    "@react-native-vector-icons/common": "workspace:^"
   },
   "devDependencies": {
     "del-cli": "^6.0.0",

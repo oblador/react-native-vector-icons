@@ -10,7 +10,7 @@
  * @nolint
  */
 
-package com.reactnativevectoricons.common
+package com.reactnativevectoricons.get_image
 
 import com.facebook.proguard.annotations.DoNotStrip
 import com.facebook.react.bridge.Promise

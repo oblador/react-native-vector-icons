@@ -14,3 +14,6 @@ dist/*
 local.properties
 msbuild.binlog
 node_modules/
+
+# Make sure we don't accidentally commit out fontawesomepro test fonts
+rnvi-fonts/
