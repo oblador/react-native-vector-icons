@@ -294,6 +294,7 @@ Create `__mocks__/@react-native-vector-icons/common.js`:
 module.exports = {
   createIconSet: () => "icon"
 }
+```
 
 ## [Changelog](https://github.com/react-native-vector-icons/react-native-vector-icons/releases)
 
