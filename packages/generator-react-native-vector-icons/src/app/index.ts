@@ -32,9 +32,13 @@ interface Data {
     preScript?: {
       script: string;
     };
-    fixSVGPaths?: {
+    renameSVGs?: {
       location: string;
       keepPostfix?: string;
+    };
+    fixSVGPaths?: {
+      location: string;
+      cleanup?: boolean;
     };
     fontCustom?: {
       location: string;
@@ -217,6 +221,7 @@ export default class extends Generator<Arguments> {
 
   _buildSteps() {
     this._preScript();
+    this._renameSVGs();
     this._fixSVGPaths();
     this._buildFontCustom();
     this._buildGlyphmap();
@@ -238,6 +243,26 @@ export default class extends Generator<Arguments> {
     }
   }
 
+  _renameSVGs() {
+    const { renameSVGs } = this.data.buildSteps;
+    if (!renameSVGs) {
+      return;
+    }
+    const { keepPostfix, location } = renameSVGs;
+
+    fs.mkdirSync('renamedSVGs');
+
+    if (keepPostfix) {
+      const files = fs.readdirSync(location);
+      files.forEach((file) => {
+        if (file.endsWith(`${keepPostfix}.svg`)) {
+          // Delete files that do not end with -16.svg
+          fs.copyFileSync(path.join(location, file), path.join('renamedSVGs', file.replace(keepPostfix, '')));
+        }
+      });
+    }
+  }
+
   _fixSVGPaths() {
     const { fixSVGPaths } = this.data.buildSteps;
     if (!fixSVGPaths) {
@@ -246,9 +271,11 @@ export default class extends Generator<Arguments> {
 
     fs.mkdirSync('fixedSvg');
 
+    const location = fixSVGPaths.cleanup ? 'renamedSVGs' : fixSVGPaths.location;
+
     const { exitCode } = this.spawnSync(
       '../../node_modules/.bin/oslllo-svg-fixer',
-      ['-s', fixSVGPaths.location, '-d', 'fixedSvg'],
+      ['-s', location, '-d', 'fixedSvg'],
       { stdio: 'inherit' },
     );
 
@@ -256,19 +283,8 @@ export default class extends Generator<Arguments> {
       throw new Error(`oslllo-svg-fixer exited with exitCode ${exitCode}`);
     }
 
-    const { keepPostfix } = fixSVGPaths;
-    if (keepPostfix) {
-      const files = fs.readdirSync('fixedSvg');
-      files.forEach((file) => {
-        if (!file.endsWith(`${keepPostfix}.svg`)) {
-          // Delete files that do not end with -16.svg
-          fs.unlinkSync(path.join('fixedSvg', file));
-
-          return;
-        }
-        const newName = file.replace(keepPostfix, '');
-        fs.renameSync(path.join('fixedSvg', file), path.join('fixedSvg', newName));
-      });
+    if (fixSVGPaths.cleanup) {
+      fs.rmSync('renamedSVgs', { recursive: true });
     }
   }
 
