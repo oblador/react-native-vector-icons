@@ -1,9 +1,7 @@
 # OSX
-#
 .DS_Store
 
 # Xcode
-#
 build/
 *.pbxuser
 !default.pbxuser
@@ -23,7 +21,6 @@ DerivedData
 project.xcworkspace
 
 # Android/IJ
-#
 .classpath
 .cxx
 .gradle
@@ -34,7 +31,6 @@ local.properties
 android.iml
 
 # node.js
-#
 node_modules/
 npm-debug.log
 yarn-debug.log
@@ -67,3 +63,6 @@ android/generated
 # Nx
 .nx/cache
 .nx/workspace-data
+
+# Diffenator
+diffenator
