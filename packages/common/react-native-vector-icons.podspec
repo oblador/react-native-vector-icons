@@ -38,15 +38,4 @@ Pod::Spec.new do |s|
       s.dependency "ReactCommon/turbomodule/core"
     end
   end
-
-  s.script_phase = {
-    :name => 'Copy Fonts',
-    :script => <<~SCRIPT
-      set -e
-
-      WITH_ENVIRONMENT="$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh"
-
-      /bin/sh -c "\"$WITH_ENVIRONMENT\" \"${PODS_TARGET_SRCROOT}/scripts/copy-fonts.sh\""
-    SCRIPT
-  }
 end
