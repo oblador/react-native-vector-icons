@@ -45,7 +45,7 @@ const Icon = (props: Props) => {
   const { iconStyle, name } = props;
   if (!iconStyle) {
     if (!glyphValidator(name, 'regular')) {
-      console.warn(`noSuchGlyph: glyph ${String(name)} does not exist for 'regular' icon type for FontAwesome5.`);
+      console.warn(`noSuchGlyph: glyph ${String(name)} does not exist for 'regular' icon type for FontAwesome5`);
     }
     return <RegularIcon {...props} />;
   }
