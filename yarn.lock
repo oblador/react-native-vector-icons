@@ -4548,11 +4548,13 @@ __metadata:
   dependencies:
     "@types/jscodeshift": "npm:^0.12.0"
     "@types/plist": "npm:^3.0.5"
+    "@types/semver": "npm:^7"
     del-cli: "npm:^6.0.0"
     jscodeshift: "npm:^17.1.1"
     onchange: "npm:^7.1.0"
     plist: "npm:^3.1.0"
     react-native-builder-bob: "npm:^0.35.2"
+    semver: "npm:^7.7.1"
     typescript: "npm:^5.7.2"
   bin:
     react-native-vector-icons-codemod: ./lib/commonjs/index.js
@@ -6492,7 +6494,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/semver@npm:^7.3.12, @types/semver@npm:^7.5.8":
+"@types/semver@npm:^7, @types/semver@npm:^7.3.12, @types/semver@npm:^7.5.8":
   version: 7.5.8
   resolution: "@types/semver@npm:7.5.8"
   checksum: 10c0/8663ff927234d1c5fcc04b33062cb2b9fcfbe0f5f351ed26c4d1e1581657deebd506b41ff7fdf89e787e3d33ce05854bc01686379b89e9c49b564c4cfa988efa

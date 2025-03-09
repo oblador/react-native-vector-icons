@@ -60,11 +60,13 @@
   },
   "dependencies": {
     "jscodeshift": "^17.1.1",
-    "plist": "^3.1.0"
+    "plist": "^3.1.0",
+    "semver": "^7.7.1"
   },
   "devDependencies": {
     "@types/jscodeshift": "^0.12.0",
     "@types/plist": "^3.0.5",
+    "@types/semver": "^7",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",

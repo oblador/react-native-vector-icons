@@ -65,7 +65,7 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 
 ## Migration
 
-See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-icons` to the package-per-icon-set approach.
+See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-icons` to the package-per-icon-set approach or between major versions.
 
 ## Installation
 
@@ -142,6 +142,8 @@ const myIcon3 = <Icon name="comments" size={30} color="#900" iconType="light" />
 
 Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
 
+You need to install `@react-native-vector-icons/get-image` to use this feature.
+
 ```jsx
 const source = Icon.getImageSourceSync('user', 20, 'red');
 return <Image source={source} />;
@@ -154,7 +156,7 @@ Keep in mind that `Icon.getImageSourceSync` is blocking and might incur performa
 
 ### Static methods
 
-All static methods from `Icon` is supported by multi-styled fonts.
+All static methods from `Icon` are supported by multi-styled fonts.
 
 | Prop                     | Description                                                                                                                                                                               |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -186,15 +188,7 @@ const Icon = createIconSet(glyphMap, {
 })
 ```
 
-You should place the font ttf file into `rnvi-fonts`. You can customise this location by adding the following snippet to your package.json
-
-```json
-{
-  "reactNativeVectorIcons": {
-    "fontDir": "src/assets/fonts"
-  }
-}
-  ```
+If you aren't using dynamic font loading you need to make sure your font is copied into your bundle.
 
 ## Animation
 
