@@ -4803,7 +4803,6 @@ __metadata:
   resolution: "@react-native-vector-icons/get-image@workspace:packages/get-image"
   dependencies:
     "@react-native-community/cli-tools": "npm:^15.1.2"
-    "@types/plist": "npm:^3.0.5"
     "@types/react": "npm:^18.3.18"
     del-cli: "npm:^6.0.0"
     onchange: "npm:^7.1.0"

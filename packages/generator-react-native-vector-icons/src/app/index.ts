@@ -62,6 +62,8 @@ interface Data {
       script: string;
     };
   };
+  versions?: { rnvi: string; upstream: string }[];
+  versionTable?: string;
 }
 
 const { uid, gid } = os.userInfo();
@@ -430,6 +432,15 @@ export default class extends Generator<Arguments> {
     data.source = './src/index.ts';
     if (typeof data.customSrc === 'string') {
       data.source = data.customSrc.endsWith('.tsx') ? './src/index.tsx' : './src/index.ts';
+    }
+
+    if (data.versions) {
+      const versionTable: string[] = [];
+      data.versions.forEach((version) => {
+        versionTable.push(`| <= ${version.rnvi} | ${version.upstream} |`);
+      });
+
+      data.versionTable = versionTable.join('\n');
     }
 
     return data;

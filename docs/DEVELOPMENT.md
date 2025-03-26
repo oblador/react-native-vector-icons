@@ -4,16 +4,9 @@ Things we use
 
 - nx - for building and releasing (all behind yarn scripts)
 
-## Versioning
+## Font versioning
 
-For fonts we track upstream versions. Occasionally we'll need to make changes out of step with upstream for example updating the Javascript.
-
-| Upstream | Action               | Our Version           |
-| -------- | -------------------- | --------------------- |
-| 1.0.0    | Font update          | 1.0.0                 |
-| 1.0.0    | Code change          | 1.0.1-really-1.0.0-v1 |
-| 1.0.0    | Code change          | 1.0.1-really-1.0.0-v2 |
-| 1.0.1    | Font and code update | 1.0.1                 |
+Font package versions are now independent of upstream font versions and we track the mapping in the README.md
 
 ## Publishing
 

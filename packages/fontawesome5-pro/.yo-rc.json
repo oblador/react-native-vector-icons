@@ -58,6 +58,7 @@
       "postScript": {
         "script": "node ../fontawesome-common/scripts/generate-fontawesome-metadata --path fa/pro --output glyphmaps/FontAwesome5Pro_meta.json\nrm -rf fa"
       }
-    }
+    },
+    "versions": [{ "rnvi": "12.0.0", "upstream": "5.15.4" }]
   }
 }
