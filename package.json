@@ -1,9 +1,6 @@
 {
   "private": true,
   "version": "0.0.1",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "generate": "scripts/generate-fonts.sh",
     "clean": "nx run-many -t clean",
@@ -12,7 +9,7 @@
     "lint:eslint": "eslint .",
     "lint:biome": "biome check .",
     "lint:types": "bash -c 'for i in packages/*; do if [ -f $i/tsconfig.json ]; then tsc --noEmit -p $i/tsconfig.json; fi; done'",
-    "lint": "yarn lint:eslint; yarn lint:biome",
+    "lint": "pnpm run '/^lint:.*/'",
     "release": "nx release",
     "knip": "knip"
   },
@@ -34,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-hooks": "^5.1.0",
+    "generator-react-native-vector-icons": "workspace:*",
     "knip": "^5.41.1",
     "nx": "20.3.0",
     "typescript": "^5.7.2",
@@ -47,9 +45,9 @@
       "@commitlint/config-conventional"
     ]
   },
-  "packageManager": "yarn@4.5.0",
   "repository": {
     "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git"
-  }
+  },
+  "packageManager": "pnpm@10.7.0+sha512.6b865ad4b62a1d9842b61d674a393903b871d9244954f652b8842c2b553c72176b278f64c463e52d40fff8aba385c235c8c9ecf5cc7de4fd78b8bb6d49633ab6"
 }

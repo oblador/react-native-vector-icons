@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "generate-glyphmap-index": "mkdir -p src/generated && node bin/generate-glyphmap-index.js > src/generated/glyphmapIndex.json",
     "generate-font-index": "mkdir -p src/generated/fonts && cp ../*/fonts/*.ttf src/generated/fonts && node bin/generate-font-styles.js > src/generated/fonts.css",
-    "prepare": "yarn generate-glyphmap-index && yarn generate-font-index"
+    "prepare": "pnpm run generate-glyphmap-index && pnpm run generate-font-index"
   },
   "browserslist": {
     "production": [

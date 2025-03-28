@@ -58,4 +58,4 @@ for package in "${PACKAGES[@]}"; do
 done
 
 cd -
-yarn
+pnpm install

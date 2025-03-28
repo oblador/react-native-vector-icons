@@ -36,7 +36,7 @@
     "prepare": "bob build && chmod +x lib/commonjs/scripts/updatePlist.js",
     "prepack": "cp ../../README.md .",
     "postpack": "rm README.md",
-    "watch": "onchange 'src/**' --initial -- yarn run prepare"
+    "watch": "onchange 'src/**' --initial -- pnpm run prepare"
   },
   "bin": {
     "rnvi-update-plist": "lib/commonjs/scripts/updatePlist.js"
@@ -83,6 +83,7 @@
   },
   "devDependencies": {
     "@types/plist": "^3.0.5",
+    "@types/react": "^18.3.18",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
@@ -98,9 +99,6 @@
       "optional": true
     }
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "engines": {
     "node": ">= 18.0.0"
   },

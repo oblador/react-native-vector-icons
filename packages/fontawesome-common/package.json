@@ -48,10 +48,8 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "dependencies": {
-    "@react-native-vector-icons/common": "^11.0.0"
-  },
   "devDependencies": {
+    "@types/react": "^18.3.18",
     "typescript": "^5.7.2",
     "yargs": "^17.7.2"
   },

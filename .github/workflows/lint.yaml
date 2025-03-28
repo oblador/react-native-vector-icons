@@ -11,19 +11,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-      - name: Setup yarn
-        run: corepack enable
-      - uses: bahmutov/npm-install@v1
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
         with:
-          install-command: yarn --immutable
-
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
       - name: Build
-        run: |
-          yarn prepare
+        run: pnpm install
 
       - name: Lint files
-        run: yarn lint:eslint
+        run: pnpm run lint:eslint
 
   biome:
     name: biome
@@ -31,40 +30,37 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-      - name: Setup yarn
-        run: corepack enable
-      - uses: bahmutov/npm-install@v1
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
         with:
-          install-command: yarn --immutable
-
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
       - name: Build
-        run: |
-          yarn prepare
+        run: pnpm install
 
       - name: Lint files
-        run: yarn lint:biome
+        run: pnpm run lint:biome
 
   types:
-    name: biome
+    name: types
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-      - name: Setup yarn
-        run: corepack enable
-      - uses: bahmutov/npm-install@v1
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
         with:
-          install-command: yarn --immutable
-
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
       - name: Build
-        run: |
-          yarn prepare
+        run: pnpm install
 
       - name: Typecheck files
-        run: yarn lint:types
-
+        run: pnpm run lint:types
 
   knip:
     name: knip
@@ -72,12 +68,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-      - name: Setup yarn
-        run: corepack enable
-      - uses: bahmutov/npm-install@v1
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
         with:
-          install-command: yarn --immutable
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
+      - name: Build
+        run: pnpm install
 
       - name: Check for unused things
-        run: yarn knip
+        run: pnpm run knip

@@ -46,12 +46,12 @@ echo "Setting gradle version to $GRADLE_VERSION"
 sed -i.bak "s/gradle-.*.zip/gradle-$GRADLE_VERSION.zip/" android/gradle/wrapper/gradle-wrapper.properties
 rm android/gradle/wrapper/gradle-wrapper.properties.bak
 
-yarn rnx-align-deps --requirements react-native@"$VERSION" --write
+pnpm run rnx-align-deps --requirements react-native@"$VERSION" --write
 RN_VERSION="^$(npm info react-native@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
-yarn add react-native@"$RN_VERSION"
+pnpm run add react-native@"$RN_VERSION"
 
 ## align-deps rolls this back, so force the latest
-yarn add react-native-test-app@latest
+pnpm run add react-native-test-app@latest
 
 ## test-app doesn't bundle but we need it for react-native-owl
 sed -i.bak \
@@ -59,7 +59,7 @@ sed -i.bak \
   ../../node_modules/react-native-test-app/android/app/build.gradle
 rm ../../node_modules/react-native-test-app/android/app/build.gradle.bak
 
-yarn --no-immutable
+pnpm run --frozen-lockfile
 
 mkdir -p node_modules
 cd node_modules

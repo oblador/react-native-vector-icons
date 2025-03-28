@@ -13,8 +13,8 @@ jobs:
       fail-fast: false
       matrix:
         api-level: [34]
-        rn-version: ['0.75', '0.74', '0.73']
-        arch: ['new', 'old']
+        rn-version: ["0.75", "0.74", "0.73"]
+        arch: ["new", "old"]
 
     steps:
       - uses: actions/checkout@v4
@@ -22,9 +22,15 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: "temurin"
+          java-version: "17"
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
       - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
 
       - name: Gradle cache
         uses: gradle/actions/setup-gradle@v3
@@ -83,17 +89,10 @@ jobs:
             -no-metrics -wipe-data -no-window -gpu swiftshader_indirect \
             -no-snapshot -no-snapshot-save -noaudio -no-boot-anim -camera-back none 2>&1 | tee /tmp/avd_log &
 
-      - name: Setup yarn
-        run: |
-          corepack enable
-
-      - name: Setup npm
-        uses: bahmutov/npm-install@v1
-        with:
-          install-command: yarn --immutable
       - name: Build
         run: |
-          yarn prepare
+          pnpm install
+
           # We don't package them so remove them
           rm -rf packages/common/android/generated
 
@@ -106,7 +105,7 @@ jobs:
       - name: Build App
         run: |
           cd packages/icon-explorer
-          yarn test:android:build
+          pnpm run test:android:build
 
       - name: ADB Wait For Device
         timeout-minutes: 3
@@ -129,7 +128,7 @@ jobs:
           export PATH=$ANDROID_HOME/platform-tools:$PATH
           cd packages/icon-explorer
           ln -s .owl/baseline baseline-${{ matrix.arch }}
-          yarn test:android:run
+          pnpm run test:android:run
 
       - name: Stop Emulator
         if: always()
@@ -156,31 +155,29 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rn-version: ['0.75', '0.74', '0.73']
-        arch: ['new', 'old']
+        rn-version: ["0.75", "0.74", "0.73"]
+        arch: ["new", "old"]
 
     steps:
       - uses: actions/checkout@v4
 
-
       - uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: "temurin"
+          java-version: "17"
 
-      - uses: actions/setup-node@v4
-
-      - name: Setup yarn
-        run: |
-          corepack enable
-
-      - uses: bahmutov/npm-install@v1
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
         with:
-          install-command: yarn --immutable
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
 
       - name: Build
         run: |
-          yarn prepare
+          pnpm install
+
           # We don't package them so remove them
           rm -rf packages/common/ios/generated
 
@@ -199,21 +196,21 @@ jobs:
           # cp -a ../../../node_modules/@johnf/react-native-owl @johnf/
           # cd -
           # Due to react-native-test-app not bundling
-          yarn build:ios:owl
+          pnpm run build:ios:owl
           if [ "${{ matrix.arch }}" = "new" ]; then
             NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=1 pod update --project-directory=ios
           else
             NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=0 pod update --project-directory=ios
           fi
-          yarn test:ios:build
+          pnpm run test:ios:build
 
       - name: Run simulator
         id: simulator
         uses: futureware-tech/simulator-action@v3
         with:
-          os: 'iOS'
+          os: "iOS"
           os_version: "=17.5"
-          model: 'iPhone 15'
+          model: "iPhone 15"
 
       - name: Run tests
         timeout-minutes: 10
@@ -222,7 +219,7 @@ jobs:
           ln -s .owl/baseline baseline-${{ matrix.arch }}
           tmp=$(mktemp)
           jq '.ios.device = "${{ steps.simulator.outputs.udid }}"' owl.config.json > "$tmp" && mv "$tmp" owl.config.json
-          yarn test:ios:run
+          pnpm run test:ios:run
 
       - uses: actions/upload-artifact@v4
         if: always()

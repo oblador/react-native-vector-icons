@@ -20,7 +20,7 @@
   "scripts": {
     "clean": "del-cli lib",
     "prepare": "bob build",
-    "watch": "onchange 'src/**' --initial -- yarn run prepare"
+    "watch": "onchange 'src/**' --initial -- pnpm run prepare"
   },
   "keywords": [
     "react-native",

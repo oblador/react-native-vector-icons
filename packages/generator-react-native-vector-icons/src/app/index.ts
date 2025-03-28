@@ -76,7 +76,7 @@ export default class extends Generator<Arguments> {
   data: Data;
 
   constructor(args: string | string[], opts: Arguments) {
-    super(args, opts);
+    super(args, opts, { customInstallTask: true });
 
     this.option('current-version', { type: String, description: 'Current package version' });
 
@@ -88,6 +88,10 @@ export default class extends Generator<Arguments> {
     await this._fixPackageVersion();
     await this._addFontDependencies();
     await this._addDependencies();
+  }
+
+  async install() {
+    this.spawnSync('pnpm', ['install', '--filter', '.', '--ignore-scripts']);
   }
 
   end() {

@@ -40,7 +40,7 @@ Transform complete!
 Upgraded to version ${version}
 
 NOTE: You may need to run again to upgrade to the next version.
-NOTE: You may need to run 'yarn install' or 'npm install' to install new dependencies.
+NOTE: You may need to run 'npm install' to install new dependencies.
 
 Please check https://github.com/react-native-vector-icons/react-native-vector-icons/blob/master/MIGRATION.md for any manual steps
 `);

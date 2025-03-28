@@ -41,7 +41,7 @@
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
     "prepare": "bob build && ../../scripts/fix-glyphmaps.sh",
-    "watch": "onchange 'src/**' --initial -- yarn run prepare"
+    "watch": "onchange 'src/**' --initial -- pnpm run prepare"
   },
   "keywords": [
     "react-native",
@@ -85,6 +85,7 @@
     "@react-native-vector-icons/fontawesome-common": "workspace:^"
   },
   "devDependencies": {
+    "@types/react": "^18.3.18",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
