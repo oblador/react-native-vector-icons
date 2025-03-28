@@ -27,7 +27,8 @@
       "conventionalCommits": true,
       "generatorOptions": {
         "NOTE": "We want auto but it's overzealous for our purposes, see https://github.com/nrwl/nx/discussions/29135",
-        "updateDependents": "never"
+        "updateDependents": "never",
+        "preserveLocalDependencyProtocols": true
       }
     }
   }
