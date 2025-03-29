@@ -32,6 +32,7 @@ for package in "${PACKAGES[@]}"; do
   CURRENT_VERSION=$(jq -r '.version' package.json)
 
   rm -rf ./*
+  git restore CHANGELOG.md
 
   if [ "$(jq -r '."generator-react-native-vector-icons".customReadme' .yo-rc.json)" == "true" ]; then
     git restore README.md >/dev/null || true
