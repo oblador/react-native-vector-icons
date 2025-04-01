@@ -296,7 +296,7 @@ module.exports = {
 }
 ```
 
-## [Changelog](https://github.com/react-native-vector-icons/react-native-vector-icons/releases)
+## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
 
 ## License
 
