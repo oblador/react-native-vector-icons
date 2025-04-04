@@ -1,15 +1,6 @@
 import React, { type ReactNode } from 'react';
 
-import {
-  Image,
-  ScrollView,
-  SectionList,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View,
-  type ViewProps,
-} from 'react-native';
+import { Image, Pressable, ScrollView, SectionList, StyleSheet, Text, View, type ViewProps } from 'react-native';
 
 import FontAwesome from '@react-native-vector-icons/fontawesome';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
@@ -72,17 +63,20 @@ const INLINE = [
   },
 ];
 
-const SYNCHROUNOUS = [
+console.log('🪚 🟩');
+const getImageFA = FontAwesome.getImageSourceSync('check', 40, 'green');
+console.log('🪚 getImageFA:', getImageFA);
+const getImageFA6 = FontAwesome6.getImageSourceSync('solid', 'check', 40, 'green');
+console.log('🪚 getImageFA6:', getImageFA6);
+
+const GETIMAGE = [
   {
-    name: 'synchronous',
+    name: 'get-image',
     children: (
       <>
-        <Image source={FontAwesome.getImageSourceSync('check', 40, 'green')} style={{ width: 40, height: 40 }} />
+        <Image source={getImageFA} style={{ width: 40, height: 40 }} />
 
-        <Image
-          source={FontAwesome6.getImageSourceSync('solid', 'check', 40, 'green')}
-          style={{ width: 40, height: 40 }}
-        />
+        <Image source={getImageFA6} style={{ width: 40, height: 40 }} />
       </>
     ),
   },
@@ -162,22 +156,16 @@ export const Home = ({
   navigator: (iconName: IconName) => void;
   multiNavigator: (iconName: IconName) => void;
 }) => {
-  const ref = React.useRef<SectionList>(null);
-
   const renderIcon = (itemName: IconName) => {
     const item = ICON_SETS[itemName];
 
     return (
-      <TouchableHighlight
-        testID={itemName}
-        onPress={() => (item.meta ? multiNavigator(itemName) : navigator(itemName))}
-        underlayColor="#eee"
-      >
+      <Pressable testID={itemName} onPress={() => (item.meta ? multiNavigator(itemName) : navigator(itemName))}>
         <View style={styles.row}>
           <Text style={styles.text}>{itemName}</Text>
           <Text style={styles.glyphCount}>{item.glyphNames.length}</Text>
         </View>
-      </TouchableHighlight>
+      </Pressable>
     );
   };
 
@@ -191,7 +179,7 @@ export const Home = ({
     { title: 'INLINE', data: INLINE.map((item) => renderRow(item)) },
     {
       title: 'SYNCHROUNOUS',
-      data: SYNCHROUNOUS.map((item) => renderRow(item)),
+      data: GETIMAGE.map((item) => renderRow(item)),
     },
     { title: 'ANIMATED', data: ANIMATED.map((item) => renderRow(item)) },
     { title: 'STYLING', data: STYLING.map((item) => renderStyling(item)) },
@@ -200,7 +188,6 @@ export const Home = ({
   return (
     <SectionList
       renderScrollComponent={(props) => <ScrollView {...props} testID="scrollview" />}
-      ref={ref}
       sections={sections}
       renderItem={({ item }) => item}
       renderSectionHeader={({ section }) => (

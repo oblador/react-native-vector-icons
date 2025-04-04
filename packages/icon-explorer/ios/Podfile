@@ -6,4 +6,4 @@ require "#{ws_dir}/node_modules/react-native-test-app/test_app.rb"
 
 workspace 'IconExplorer.xcworkspace'
 
-use_test_app!
+use_test_app! hermes_enabled: true, fabric_enabled: true

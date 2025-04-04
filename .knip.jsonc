@@ -9,7 +9,6 @@
         "eslint-config-airbnb-typescript",
         "generator-react-native-vector-icons",
         "@commitlint/config-conventional",
-        "@evilmartians/lefthook",
         "@nx/js"
       ],
       "ignoreBinaries": ["scripts/generate-fonts.sh"]

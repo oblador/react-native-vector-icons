@@ -3,7 +3,7 @@
     "workspace": "ios/IconExplorer.xcworkspace",
     "scheme": "ReactTestApp",
     "configuration": "Debug",
-    "device": "iPhone 15"
+    "device": "iPhone 16"
   },
   "android": {
     "packageName": "com.microsoft.reacttestapp"

@@ -64,7 +64,7 @@ task copyExtraFonts(type: Copy) {
   include "*.ttf"
 
   into "${buildDir}/intermediates/RNVI-fontawesome5-pro/fonts"
-  eachFile { println "(RNVI:fontawesome5-pro) Copying custom font from $fontDir: ${it.file}" }
+  eachFile { println "(RNVI:fontawesome5-pro) Copying custom font: ${it.file}" }
 }
 
 preBuild.dependsOn(copyExtraFonts)

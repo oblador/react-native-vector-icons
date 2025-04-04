@@ -9,6 +9,7 @@ const LINKING_ERROR = `
     - You are not using Expo Go
   `;
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const VectorIconsModule = require('./NativeVectorIcons').default;
 
 const VectorIcons = VectorIconsModule

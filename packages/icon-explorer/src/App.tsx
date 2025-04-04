@@ -1,21 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
-import { BackHandler, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { BackHandler, LogBox, Pressable, Text, View } from 'react-native';
+
+// We don't want ref error that react-native-owl is generating in our screenshots
+LogBox.ignoreAllLogs(true);
 
 import { Home, type IconName } from './Home';
 import { IconList, MultiIconList } from './IconList';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  header: {
-    backgroundColor: 'white',
-  },
-});
+import { TestMode } from './TestMode';
 
 type NavType = {
-  view: 'Home' | 'IconSet' | 'MultiIconSet';
+  view: 'Home' | 'IconSet' | 'MultiIconSet' | 'TestMode';
   iconName?: IconName;
   iconStyle?: string;
 };
@@ -35,6 +30,8 @@ const App = () => {
     setState({ view: 'IconSet', iconName, iconStyle });
   };
 
+  const handleTestMode = () => setState({ view: 'TestMode' });
+
   const handleBackPress = useCallback(() => {
     if (state.view === 'IconSet' && state.iconStyle) {
       setState({ view: 'MultiIconSet', iconName: state.iconName, iconStyle: undefined });
@@ -42,7 +39,7 @@ const App = () => {
       return true;
     }
 
-    if (state.view === 'IconSet' || state.view === 'MultiIconSet') {
+    if (['IconSet', 'MultiIconSet', 'TestMode'].includes(state.view)) {
       setState({ view: 'Home', iconName: undefined, iconStyle: undefined });
 
       return true;
@@ -61,26 +58,24 @@ const App = () => {
       case 'Home':
         return <Home navigator={navigateToIconSet} multiNavigator={navigateToMultiIconSet} />;
       case 'IconSet':
-        {
-          /* @ts-expect-error We are doing some strange things */
-        }
+        // @ts-expect-error We are doing some strange things
         return <IconList iconName={state.iconName} iconStyle={state.iconStyle} />;
       case 'MultiIconSet':
-        {
-          /* @ts-expect-error We are doing some strange things */
-        }
+        // @ts-expect-error We are doing some strange things
         return <MultiIconList iconName={state.iconName} navigator={navigateToIconSetWithStyle} />;
+      case 'TestMode':
+        return <TestMode />;
       default:
         throw new Error('Invalid view');
     }
   };
 
   return (
-    <View style={styles.container}>
-      <TouchableHighlight testID="back" onPress={handleBackPress} underlayColor="#eee">
-        <Text>Go Back</Text>
-      </TouchableHighlight>
+    <View style={{ flex: 1, paddingTop: 10, backgroundColor: '#ffffff' }}>
       {renderContent()}
+      <Pressable testID="TestMode" onPress={handleTestMode}>
+        <Text>TEST MODE</Text>
+      </Pressable>
     </View>
   );
 };
