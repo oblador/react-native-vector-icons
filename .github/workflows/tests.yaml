@@ -5,6 +5,14 @@ on:
   - push
   - pull_request
 
+permissions:
+  # AWS
+  id-token: write
+  # test-reporter
+  contents: read
+  actions: read
+  checks: write
+
 jobs:
   android:
     name: Android
@@ -18,6 +26,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-2
+          role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
+          role-skip-session-tagging: true
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -34,9 +48,9 @@ jobs:
           cache: pnpm
 
       - name: Gradle cache
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
         with:
-          add-job-summary: never
+          add-job-summary: on-failure
           # TODO: Remove this after we merge
           cache-read-only: ${{ github.ref != 'refs/heads/master' && github.ref != 'refs/heads/per-package-copy' }}
 
@@ -89,6 +103,8 @@ jobs:
           pnpm run test:android:build
 
       - name: Run test
+        timeout-minutes: 3
+        id: tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
           arch: x86_64
@@ -98,14 +114,27 @@ jobs:
           disable-animations: true
           script: adb shell settings put secure immersive_mode_confirmations confirmed && cd packages/icon-explorer && pnpm run test:android:run
 
-      - uses: actions/upload-artifact@v4
+      - name: S3 Report
         if: always()
-        with:
-          name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-android
-          path: packages/icon-explorer/.owl
-          include-hidden-files: true
+        run: |
+          cd packages/icon-explorer
 
-      - uses: dorny/test-reporter@v1
+          sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
+
+          ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
+          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID"
+
+          if [ "${{ steps.tests.outcome }}" == "failure" ]; then
+            echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.tests.outcome }}" == "success" ]; then
+            echo -n "*  ✅ " >> $GITHUB_STEP_SUMMARY
+          else
+            exit 0
+          fi
+
+          echo "[Report  ${{ matrix.arch }} ${{ matrix.rn-version }}](http://react-native-vector-icons.s3-website.us-east-2.amazonaws.com/$ID/report/index.html)" >> $GITHUB_STEP_SUMMARY
+
+      - uses: dorny/test-reporter@v2
         if: always()
         with:
           name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
@@ -123,6 +152,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-2
+          role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
+          role-skip-session-tagging: true
 
       - uses: actions/setup-java@v4
         with:
@@ -168,20 +203,34 @@ jobs:
 
       - name: Run tests
         timeout-minutes: 5
+        id: tests
         run: |
           cd packages/icon-explorer
           tmp=$(mktemp)
           jq '.ios.device = "${{ steps.simulator.outputs.udid }}"' owl.config.json > "$tmp" && mv "$tmp" owl.config.json
           pnpm run test:ios:run
 
-      - uses: actions/upload-artifact@v4
+      - name: S3 Report
         if: always()
-        with:
-          name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-ios
-          path: packages/icon-explorer/.owl
-          include-hidden-files: true
+        run: |
+          cd packages/icon-explorer
 
-      - uses: dorny/test-reporter@v1
+          sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
+
+          ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
+          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID"
+
+          if [ "${{ steps.tests.outcome }}" == "failure" ]; then
+            echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.tests.outcome }}" == "success" ]; then
+            echo -n "*  ✅ " >> $GITHUB_STEP_SUMMARY
+          else
+            exit 0
+          fi
+
+          echo "[Report  ${{ matrix.arch }} ${{ matrix.rn-version }}](http://react-native-vector-icons.s3-website.us-east-2.amazonaws.com/$ID/report/index.html)" >> $GITHUB_STEP_SUMMARY
+
+      - uses: dorny/test-reporter@v2
         if: always()
         with:
           name: JEST Tests ios - ${{ matrix.arch }} ${{ matrix.rn-version }}

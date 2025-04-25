@@ -2,8 +2,6 @@ import { press, scrollToEnd, takeScreenshot, toExist } from '@johnf/react-native
 
 describe('App.tsx', () => {
   it('show home top', async () => {
-    await takeScreenshot('home-top-before');
-
     await toExist('AntD');
 
     const screen = await takeScreenshot('home-top');
@@ -13,7 +11,6 @@ describe('App.tsx', () => {
   });
 
   it('show home bottom', async () => {
-    await takeScreenshot('home-bottom-before');
     await toExist('AntD');
 
     await scrollToEnd('scrollview');
@@ -25,7 +22,6 @@ describe('App.tsx', () => {
   });
 
   it('should load Test fonts', async () => {
-    await takeScreenshot('tests-before');
     await toExist('TestMode');
     await press('TestMode');
 
