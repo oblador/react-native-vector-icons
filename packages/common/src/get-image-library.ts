@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-mutable-exports
-export let NativeIconAPI: typeof import('@react-native-vector-icons/get-image') | null = null;
+let NativeIconAPI: typeof import('@react-native-vector-icons/get-image') | null = null;
 
 try {
   // eslint-disable-next-line global-require,import/no-extraneous-dependencies,@typescript-eslint/no-require-imports

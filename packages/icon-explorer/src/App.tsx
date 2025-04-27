@@ -2,12 +2,12 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import { BackHandler, LogBox, Pressable, Text, View } from 'react-native';
 
-// We don't want ref error that react-native-owl is generating in our screenshots
-LogBox.ignoreAllLogs(true);
-
 import { Home, type IconName } from './Home';
 import { IconList, MultiIconList } from './IconList';
 import { TestMode } from './TestMode';
+
+// We don't want ref error that react-native-owl is generating in our screenshots
+LogBox.ignoreAllLogs(true);
 
 type NavType = {
   view: 'Home' | 'IconSet' | 'MultiIconSet' | 'TestMode';

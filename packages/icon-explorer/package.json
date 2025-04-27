@@ -68,7 +68,7 @@
     "@rnx-kit/metro-config": "^2.0.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.17.11",
-    "@types/react": "^19.0.0",
+    "@types/react": "^18.0.0",
     "@types/react-test-renderer": "^19.0.0",
     "babel-jest": "^29.7.0",
     "eslint": "^8.57.1",

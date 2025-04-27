@@ -63,11 +63,8 @@ const INLINE = [
   },
 ];
 
-console.log('🪚 🟩');
 const getImageFA = FontAwesome.getImageSourceSync('check', 40, 'green');
-console.log('🪚 getImageFA:', getImageFA);
 const getImageFA6 = FontAwesome6.getImageSourceSync('solid', 'check', 40, 'green');
-console.log('🪚 getImageFA6:', getImageFA6);
 
 const GETIMAGE = [
   {

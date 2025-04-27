@@ -10,7 +10,6 @@ import {
   Text,
   TextInput,
   type TextInputChangeEventData,
-  TouchableHighlight,
   View,
 } from 'react-native';
 
