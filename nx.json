@@ -16,7 +16,7 @@
   },
   "defaultBase": "master",
   "release": {
-    "projects": ["*", "!IconExplorer"],
+    "projects": ["*", "!IconExplorer", "!fontcustom-docker"],
     "projectsRelationship": "independent",
     "changelog": {
       "projectChangelogs": {
