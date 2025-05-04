@@ -1,3 +1,17 @@
+# 20.0.0 (2025-05-04)
+
+### 🚀 Features
+
+- ⚠️  **octicons:** dummy commit to bump version ([d8335a4f](https://github.com/oblador/react-native-vector-icons/commit/d8335a4f))
+
+### ⚠️  Breaking Changes
+
+- ⚠️  **octicons:** dummy commit to bump version ([d8335a4f](https://github.com/oblador/react-native-vector-icons/commit/d8335a4f))
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 19.12.0-alpha.38 (2025-05-04)
 
 ### 🚀 Features
