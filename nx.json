@@ -16,7 +16,12 @@
   },
   "defaultBase": "master",
   "release": {
-    "projects": ["*", "!@react-native-vector-icons/icon-explorer", "!@react-native-vector-icons/fontcustom-docker"],
+    "projects": [
+      "*",
+      "!@react-native-vector-icons/icon-explorer",
+      "!@react-native-vector-icons/fontcustom-docker",
+      "!@react-native-vector-icons/directory"
+    ],
     "projectsRelationship": "independent",
     "changelog": {
       "projectChangelogs": {
