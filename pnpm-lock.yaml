@@ -828,8 +828,8 @@ importers:
         specifier: ^16.0.0
         version: 16.0.0
       react-native-test-app:
-        specifier: ^4.3.3
-        version: 4.3.3(@expo/config-plugins@8.0.11)(react-native@0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@18.3.18)(react@18.3.1))(react@18.3.1)
+        specifier: ^4.3.4
+        version: 4.3.4(@expo/config-plugins@8.0.11)(react-native@0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@18.3.18)(react@18.3.1))(react@18.3.1)
       react-test-renderer:
         specifier: 19.0.0
         version: 19.0.0(react@18.3.1)
@@ -3250,8 +3250,8 @@ packages:
       '@react-native/metro-config':
         optional: true
 
-  '@rnx-kit/react-native-host@0.5.5':
-    resolution: {integrity: sha512-g3cO9l8LKz12Flv4hbKXf3GAriK82q3pATAzMWywQGbk4oWnLUao6kC31Km+kynalhmbkcVN74/o6fyflR8iAg==}
+  '@rnx-kit/react-native-host@0.5.6':
+    resolution: {integrity: sha512-Qv4i1VKPI2fWF7YW9jy9b7KU8Hcz9yZQfgJWKm2gBWLDQlfr+1jT5VftS5E+PG3in1TlWDjTJwluaSn/9qHWbw==}
     engines: {node: '>=16.17'}
     peerDependencies:
       react-native: '>=0.66'
@@ -9718,14 +9718,14 @@ packages:
     engines: {node: '>= 18.0.0'}
     hasBin: true
 
-  react-native-test-app@4.3.3:
-    resolution: {integrity: sha512-QwfsqVp6Q9mAXzl/j69BGPLh4CuoBM3rT0kRHF8ljMlROzdOImSav88vtjXlDjw9DR+Xr+44WEcMDMG+yO6QQA==}
+  react-native-test-app@4.3.4:
+    resolution: {integrity: sha512-IvWz3PPFKecovyqBzY5lP9WgS6c9mj16RG7lRV0R3GlsvVc8xUATuB12VJEozYkrY6xvbRrm673mjQS9AIHO1A==}
     engines: {node: '>=16.17'}
     hasBin: true
     peerDependencies:
       '@callstack/react-native-visionos': 0.73 - 0.78
       '@expo/config-plugins': '>=5.0'
-      react: 18.1 - 19.0
+      react: 18.1 - 19.1
       react-native: 0.70 - 0.79 || >=0.80.0-0 <0.80.0
       react-native-macos: ^0.0.0-0 || 0.71 - 0.78
       react-native-windows: ^0.0.0-0 || 0.70 - 0.78
@@ -14737,7 +14737,7 @@ snapshots:
     optionalDependencies:
       '@react-native/metro-config': 0.79.0(@babel/core@7.26.9)
 
-  '@rnx-kit/react-native-host@0.5.5(react-native@0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@19.1.2)(react@18.3.1))':
+  '@rnx-kit/react-native-host@0.5.6(react-native@0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@18.3.18)(react@18.3.1))':
     dependencies:
       react-native: 0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@18.3.18)(react@18.3.1)
 
@@ -22846,9 +22846,9 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  react-native-test-app@4.3.3(@expo/config-plugins@8.0.11)(react-native@0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@18.3.18)(react@18.3.1))(react@18.3.1):
+  react-native-test-app@4.3.4(@expo/config-plugins@8.0.11)(react-native@0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@18.3.18)(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@rnx-kit/react-native-host': 0.5.5(react-native@0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@19.1.2)(react@18.3.1))
+      '@rnx-kit/react-native-host': 0.5.6(react-native@0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@18.3.18)(react@18.3.1))
       '@rnx-kit/tools-react-native': 2.1.0
       ajv: 8.17.1
       cliui: 8.0.1
