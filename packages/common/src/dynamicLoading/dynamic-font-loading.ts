@@ -3,10 +3,11 @@
  * in the future, more explicit apis will be exposed by the core, including typings
  * */
 // @ts-expect-error missing types
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
 import { getAssetByID } from '@react-native/assets-registry/registry';
 import type { Image } from 'react-native';
 // @ts-expect-error missing types
+// eslint-disable-next-line import/no-extraneous-dependencies
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 import { getErrorCallback } from './dynamic-loading-setting';
 import type { DynamicLoader, FontSource } from './types';

@@ -8,7 +8,7 @@ module.exports = (config) =>
 
     c.ios.infoPlist.UIAppFonts ||= [];
 
-    // TODO can we generatr this list?
+    // TODO can we generate this list?
     const fonts = [
       'AntDesign.ttf',
       'Entypo.ttf',

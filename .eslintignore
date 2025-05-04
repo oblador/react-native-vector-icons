@@ -7,6 +7,7 @@ packages/generator-react-native-vector-icons/src/app/templates/src/index.ts
 
 # Ignore yeomenan generated template
 packages/generator-react-native-vector-icons/generators
+packages/generator-react-native-vector-icons/src/app/templates
 packages/fontawesome-common/generators
 
 ##############

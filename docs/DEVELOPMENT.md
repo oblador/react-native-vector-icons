@@ -1,32 +1,39 @@
 # Handy reminders for developers
 
 Things we use
-* nx - for building and releasing (all behind yarn scripts)
 
-## Versioning
+* nx - for building and releasing (all behind pnpm scripts)
 
-For fonts we track upstream versions. Occasionally we'll need to make changes out of step with upstream for example updating the Javascript.
+## Font versioning
 
-| Upstream | Action               | Our Version           |
-| -------- | -------------------- | --------------------- |
-| 1.0.0    | Font update          | 1.0.0                 |
-| 1.0.0    | Code change          | 1.0.1-really-1.0.0-v1 |
-| 1.0.0    | Code change          | 1.0.1-really-1.0.0-v2 |
-| 1.0.1    | Font and code update | 1.0.1                 |
+Font package versions are now independent of upstream font versions and we track the mapping in the README.md
 
 ## Publishing
 
 This will auto detect which packages need to be published on NPM and ask which versions you want to set the packages to.
+
 ```sh
-yarn release
+pnpm release --verbose
 ```
 
 ## Building
 
 ```sh
 # Regenerate and update the font packages
-yarn generate
+pnpm run generate
 
 # Build everything
-yarn prepare
+pnpm run prepare
+```
+
+## Alpha release
+
+```sh
+# Remove --dry-run to actually publish
+pnpm nx release prerelease --verbose --skip-publish --dry-run
+pnpm nx release publish --verbose --tag alpha --dry-run
+
+# A single package
+pnpm nx release prerelease --verbose --skip-publish --package @react-native-vector-icons/lucide --dry-run
+pnpm nx release publish --verbose --tag alpha --package @react-native-vector-icons/lucide --dry-run
 ```

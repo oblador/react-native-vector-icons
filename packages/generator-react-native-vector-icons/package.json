@@ -1,6 +1,6 @@
 {
   "name": "generator-react-native-vector-icons",
-  "version": "11.0.0",
+  "version": "12.0.0-alpha.20",
   "description": "Generates React Native vector icons font library",
   "type": "module",
   "files": [
@@ -35,7 +35,7 @@
     "lint": "eslint ./src --ext .js,.ts",
     "clean": "rm -rf ./generators",
     "watch": "npm run watch-tsc --silent & npm run watch-deps --silent",
-    "watch-deps": "onchange 'src/*/templates/**' 'src/*/fontforge/**' --initial -- npm run copydeps",
+    "watch-deps": "onchange 'src/*/templates/**' 'src/*/fontforge/**' --initial -- pnpm run copydeps",
     "watch-tsc": "tsc -w"
   }
 }

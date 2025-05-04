@@ -14,6 +14,7 @@
       "copyFont": {
         "location": "../../node_modules/font-awesome/fonts/fontawesome-webfont.ttf"
       }
-    }
+    },
+    "versions": [{ "rnvi": "12.0.0", "upstream": "4.7.0" }]
   }
 }

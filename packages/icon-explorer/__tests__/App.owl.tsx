@@ -5,7 +5,9 @@ describe('App.tsx', () => {
     await toExist('AntD');
 
     const screen = await takeScreenshot('home-top');
-    expect(screen).toMatchBaseline();
+
+    // NOTE: Sometimes ios home bar has the wrong color so we crop the bottom
+    expect(screen).toMatchBaseline({ bottomCrop: 20 });
   });
 
   it('show home bottom', async () => {
@@ -15,50 +17,19 @@ describe('App.tsx', () => {
 
     const screen = await takeScreenshot('home-bottom');
 
-    expect(screen).toMatchBaseline();
+    // NOTE: Sometimes ios home bar has the wrong color so we crop the bottom
+    expect(screen).toMatchBaseline({ bottomCrop: 20 });
   });
 
-  it('should load AntD font', async () => {
-    await toExist('AntD');
-    await press('AntD');
+  it('should load Test fonts', async () => {
+    await toExist('TestMode');
+    await press('TestMode');
 
-    await toExist('search');
+    await toExist('TestScreen');
 
-    const screen = await takeScreenshot('antd');
+    const screen = await takeScreenshot('tests');
 
-    await press('back');
-
-    expect(screen).toMatchBaseline();
-  });
-
-  it('should load FontAwesome6 font', async () => {
-    await toExist('FontAwesome6');
-    await press('FontAwesome6');
-
-    await toExist('search');
-
-    await press('solid');
-
-    await toExist('search');
-
-    const screen = await takeScreenshot('fontawesome6');
-
-    await press('back');
-    await press('back');
-
-    expect(screen).toMatchBaseline();
-  });
-
-  it('should load Fontello font', async () => {
-    await toExist('Fontello');
-    await press('Fontello');
-
-    await toExist('search');
-
-    const screen = await takeScreenshot('fontello');
-
-    await press('back');
-
-    expect(screen).toMatchBaseline();
+    // NOTE: Sometimes ios home bar has the wrong color so we crop the bottom
+    expect(screen).toMatchBaseline({ bottomCrop: 20 });
   });
 });

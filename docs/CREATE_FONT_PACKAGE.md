@@ -11,6 +11,7 @@ Below we describe how to create a font in this monorepo, the process for creatin
 ## Create the yeoman config
 
 Create and start editing the config file
+
 ```sh
 mkdir packages/material-symbols
 vi packages/material-symbols/.yo-rc.json
@@ -26,7 +27,6 @@ The basics of the ```.yo-rc.json``` are
   "generator-react-native-vector-icons": {
     "packageName": "material-symbols",
     "upstreamFont": "@ant-design/icons-svg",
-    "versionSuffix": "-alpha",
     "buildSteps": {
       "fixSVGPaths": {
         "location": "../../node_modules/@ant-design/icons-svg/inline-namespaced-svg/outlined"
@@ -51,4 +51,3 @@ The basics of the ```.yo-rc.json``` are
 This is the name of the node package and it should match the directory name.
 
 NOTE: it currently assumes it will live in @react-native-vector-icons namespace)
-

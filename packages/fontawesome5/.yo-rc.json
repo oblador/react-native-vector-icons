@@ -46,6 +46,7 @@
       "postScript": {
         "script": "node ../fontawesome-common/scripts/generate-fontawesome-metadata --path ../../node_modules/@fortawesome/fontawesome-free --output glyphmaps/FontAwesome5_meta.json"
       }
-    }
+    },
+    "versions": [{ "rnvi": "12.0.0", "upstream": "5.15.4" }]
   }
 }

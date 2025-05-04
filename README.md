@@ -65,24 +65,18 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 
 ## Migration
 
-See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-icons` to the package-per-icon-set approach.
+See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-icons` to the package-per-icon-set approach or between major versions.
 
 ## Installation
 
-1. Install the common package
-
-   ```sh
-   npm install --save @react-native-vector-icons/common
-   ```
-
-2. Install the packages for the icons you want use
+1. Install the packages for the icons you want use
 
    ```sh
    npm install --save @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evil-icons
    ```
 
-3. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
-4. If you are using one of the following fonts refer to their guides for further instructions
+2. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
+3. If you are using one of the following fonts refer to their guides for further instructions
 
 - [FontAwesome 6](packages/fontawesome6/README.md)
 - [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
@@ -114,13 +108,6 @@ Any [Text props](https://reactnative.dev/docs/text.html#props) and the following
 | **`name`**  | What icon to show, see Icon Explorer app or one of the links above.     | _None_      |
 | **`color`** | Color of the icon.                                                      | _Inherited_ |
 
-### Static Methods
-
-| Prop                     | Description                                                                                                                                                                               |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`getImageSource`**     | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
-| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)`                                                                              |
-
 ### Styling
 
 Since `Icon` builds on top of the `Text` component, most [style properties](https://reactnative.dev/docs/style.html) will work as expected, you might find it useful to play around with these:
@@ -139,20 +126,6 @@ By combining some of these you can create for example :
 ![type](https://cloud.githubusercontent.com/assets/378279/7667570/33817554-fc0d-11e4-9ad7-4eb60139cfb7.png)
 ![star](https://cloud.githubusercontent.com/assets/378279/7667569/3010dd7e-fc0d-11e4-9696-cb721fe8e98d.png)
 
-## Usage as PNG Image/Source Object
-
-Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
-
-```jsx
-const source = Icon.getImageSourceSync('user', 20, 'red');
-return <Image source={source} />;
-);
-```
-
-Alternatively you may use the async method `Icon.getImageSource`.
-
-Keep in mind that `Icon.getImageSourceSync` is blocking and might incur performance penalties. Subsequent calls will use cache however.
-
 ## Multi-Style Fonts
 
 Some fonts today use multiple styles, FontAwesome 5 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
@@ -165,9 +138,25 @@ const myIcon2 = <Icon name="comments" size={30} color="#900" iconType="solid" />
 const myIcon3 = <Icon name="comments" size={30} color="#900" iconType="light" />; // Only in FA5 Pro
 ```
 
+## Usage as PNG Image/Source Object
+
+Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
+
+You need to install `@react-native-vector-icons/get-image` to use this feature.
+
+```jsx
+const source = Icon.getImageSourceSync('user', 20, 'red');
+return <Image source={source} />;
+);
+```
+
+Alternatively you may use the async method `Icon.getImageSource`.
+
+Keep in mind that `Icon.getImageSourceSync` is blocking and might incur performance penalties. Subsequent calls will use cache however.
+
 ### Static methods
 
-All static methods from `Icon` is supported by multi-styled fonts.
+All static methods from `Icon` are supported by multi-styled fonts.
 
 | Prop                     | Description                                                                                                                                                                               |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -199,15 +188,7 @@ const Icon = createIconSet(glyphMap, {
 })
 ```
 
-You should place the font ttf file into `rnvi-fonts`. You can customise this location by adding the following snippet to your package.json
-
-```json
-{
-  "reactNativeVectorIcons": {
-    "fontDir": "src/assets/fonts"
-  }
-}
-  ```
+If you aren't using dynamic font loading you need to make sure your font is copied into your bundle.
 
 ## Animation
 

@@ -11,6 +11,7 @@
       "copyFont": {
         "location": "../../node_modules/simple-line-icons/fonts/Simple-Line-Icons.ttf"
       }
-    }
+    },
+    "versions": [{ "rnvi": "12.0.0", "upstream": "2.5.5" }]
   }
 }

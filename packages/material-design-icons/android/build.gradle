@@ -1,0 +1,60 @@
+// NOTE:This file was generated from packages/generator-react-native-vector-icons/src/app/templates
+// If you're contributing to react-native-vector-icons, make the change there, otherwise it'll be lost
+
+def isNewArchitectureEnabled() {
+  return rootProject.hasProperty("newArchEnabled") && rootProject.getProperty("newArchEnabled") == "true"
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+if (isNewArchitectureEnabled()) {
+  apply plugin: "com.facebook.react"
+}
+
+def supportsNamespace() {
+  def parsed = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')
+  def major = parsed[0].toInteger()
+  def minor = parsed[1].toInteger()
+
+  // Namespace support was added in 7.3.0
+  return (major == 7 && minor >= 3) || major >= 8
+}
+
+android {
+  if (supportsNamespace()) {
+    namespace "com.reactnativevectoricons.material_design_icons"
+
+    sourceSets {
+      main {
+        manifest.srcFile "src/main/AndroidManifestNew.xml"
+      }
+    }
+  }
+
+  compileSdkVersion 31
+}
+
+dependencies {
+  implementation "com.facebook.react:react-native:+"
+}
+
+if (isNewArchitectureEnabled()) {
+  react {
+    jsRootDir = file("../src/")
+    libraryName = "VectorIconsMaterialDesignIcons"
+    codegenJavaPackageName = "com.reactnativevectoricons.material_design_icons"
+  }
+}
+
+android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVI-material-design-icons")
+
+task copyFonts(type: Copy) {
+  from "../fonts"
+  include "*.ttf"
+
+  into "${buildDir}/intermediates/RNVI-material-design-icons/fonts"
+  eachFile { println "(RNVI:material-design-icons) Copying font ${it.file}" }
+}
+
+preBuild.dependsOn(copyFonts)

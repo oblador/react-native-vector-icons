@@ -23,21 +23,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile --non-interactive --silent
+        run: pnpm install
 
       - name: Publish to NPM
         if: github.event.inputs.pre-release != 'true'
-        run: yarn release
+        run: pnpm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # - name: Publish pre-release to NPM
       #   if: github.event.inputs.pre-release = 'true'
-      #   run: yarn prerelease
+      #   run: pnpm run prerelease
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -48,15 +53,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile --non-interactive --silent
+        run: pnpm install
         working-directory: packages/directory
 
       - name: Build directory
-        run: yarn build
+        run: pnpm run build
         working-directory: packages/directory
 
       - name: Publish static assets to GitHub Pages
