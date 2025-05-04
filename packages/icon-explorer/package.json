@@ -1,6 +1,6 @@
 {
-  "name": "IconExplorer",
-  "version": "12.0.0-alpha.20",
+  "name": "@react-native-vector-icons/icon-explorer",
+  "version": "12.0.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
