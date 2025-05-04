@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/octicons",
-  "version": "19.15.0",
+  "version": "12.0.0-alpha.20",
   "description": "Octicons font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
@@ -41,7 +41,7 @@
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
     "prepare": "bob build && ../../scripts/fix-glyphmaps.sh",
-    "watch": "onchange 'src/**' --initial -- yarn run prepare"
+    "watch": "onchange 'src/**' --initial -- pnpm run prepare"
   },
   "keywords": [
     "react-native",
@@ -64,8 +64,8 @@
     "octicons"
   ],
   "repository": {
-    "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git",
+    "url": "https://github.com/oblador/react-native-vector-icons.git",
     "directory": "packages/octicons"
   },
   "author": {
@@ -81,14 +81,15 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-vector-icons/common": "^11.0.0"
+    "@react-native-vector-icons/common": "workspace:^"
   },
   "devDependencies": {
-    "@primer/octicons": "19.15.0",
+    "@types/react": "^18.3.18",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "@primer/octicons": "19.15.0"
   },
   "peerDependencies": {
     "react": "*",

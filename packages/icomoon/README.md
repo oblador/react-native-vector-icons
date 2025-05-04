@@ -17,7 +17,7 @@ npm install @react-native-vector-icons/icomoon
 3. Add this package to your project
 
 ```sh
-yarn instal @react-native-vector-icons/icomoon
+npm install @react-native-vector-icons/icomoon
 ```
 
 4. Create the component in your project and use it

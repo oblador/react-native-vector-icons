@@ -2,12 +2,9 @@
 
 /* eslint-disable no-console */
 
-import { exec } from 'node:child_process';
 import path from 'node:path';
 
-import infoPlistTransform from './info-plist';
-import packageJsonTransform from './package-json';
-import removeFonts from './remove-fonts';
+import semver from 'semver';
 
 const dir = process.argv[2];
 if (!dir) {
@@ -15,36 +12,35 @@ if (!dir) {
   process.exit(1);
 }
 
-const transformFilePath = path.join(__dirname, 'transform.js');
-const cmd = `jscodeshift --transform ${transformFilePath}  --extensions js,ts,jsx,tsx --parser tsx --ignore-pattern '**/node_modules/**' ${dir}`;
+// eslint-disable-next-line import/no-dynamic-require,@typescript-eslint/no-require-imports
+const projectPkgJson = require(path.join(dir, 'package.json'));
 
-const proc = exec(cmd, { env: { ...process.env, FORCE_COLOR: 'true' } });
+const { dependencies } = projectPkgJson;
 
-const pkgs = new Set<string>();
-proc.stdout?.on('data', (data: string) => {
-  console.log(data);
+let version: string;
 
-  const lines = data.split('\n');
+if (dependencies['react-native-vector-icons']) {
+  version = '11.x';
+  await import('./11.0');
+} else {
+  const currentVersion = dependencies['@react-native-vector-icons/common'];
 
-  lines.forEach((line) => {
-    if (line.match('DEP_FOUND: ')) {
-      pkgs.add(line.replace(/.*DEP_FOUND: /, '').trim());
-    }
-  });
-});
+  if (semver.satisfies(currentVersion, '12.x')) {
+    version = '12.x';
+    await import('./12.0');
+  } else {
+    console.error('Unsupported version of react-native-vector-icons');
+    process.exit(1);
+  }
+}
 
-proc.stderr?.on('data', (data) => {
-  console.error(data);
-});
+console.log(`
+Transform complete!
 
-proc.on('exit', () => {
-  packageJsonTransform(pkgs);
-  infoPlistTransform();
-  removeFonts();
+Upgraded to version ${version}
 
-  console.log(`
-Transform complete! You may need to run 'yarn install' or 'npm install' to install new dependencies.
+NOTE: You may need to run again to upgrade to the next version.
+NOTE: You may need to run 'npm install' to install new dependencies.
 
 Please check https://github.com/react-native-vector-icons/react-native-vector-icons/blob/master/MIGRATION.md for any manual steps
-  `);
-});
+`);

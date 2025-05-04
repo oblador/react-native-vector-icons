@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/codemod",
-  "version": "11.0.0",
+  "version": "12.0.0-alpha.20",
   "description": "Tool to help users migrate from react-native-vector-icons to @react-native-vector-icons/*",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -20,7 +20,7 @@
   "scripts": {
     "clean": "del-cli lib",
     "prepare": "bob build",
-    "watch": "onchange 'src/**' --initial -- yarn run prepare"
+    "watch": "onchange 'src/**' --initial -- pnpm run prepare"
   },
   "keywords": [
     "react-native",
@@ -60,11 +60,13 @@
   },
   "dependencies": {
     "jscodeshift": "^17.1.1",
-    "plist": "^3.1.0"
+    "plist": "^3.1.0",
+    "semver": "^7.7.1"
   },
   "devDependencies": {
     "@types/jscodeshift": "^0.12.0",
     "@types/plist": "^3.0.5",
+    "@types/semver": "^7",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",

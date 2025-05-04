@@ -12,6 +12,7 @@
         "prefix": ".mdi-",
         "cleanup": true
       }
-    }
+    },
+    "versions": [{ "rnvi": "12.0.0", "upstream": "0.0.1" }]
   }
 }

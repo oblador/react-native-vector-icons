@@ -12,6 +12,7 @@
       "copyFont": {
         "location": "../../node_modules/fontisto/fonts/fontisto/fontisto.ttf"
       }
-    }
+    },
+    "versions": [{ "rnvi": "12.0.0", "upstream": "3.0.4" }]
   }
 }

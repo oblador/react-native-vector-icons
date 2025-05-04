@@ -6,7 +6,7 @@ import { ScrollView } from 'react-native';
 const createAnimatableComponentMock = (component: React.FC) => component;
 
 const disableAnimations = () => {
-  const scroll = <ScrollView testID="animatable-scroll" showsVerticalScrollIndicator />;
+  const scroll = <ScrollView showsVerticalScrollIndicator />;
 
   return !scroll.props.showsVerticalScrollIndicator;
 };

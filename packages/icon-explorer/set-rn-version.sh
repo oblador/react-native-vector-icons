@@ -14,9 +14,6 @@ if [ -z "$VERSION" ]; then
   exit 1
 fi
 
-rm -rf android/app/build/ android/.gradle/
-killall java 2>/dev/null || true
-
 echo "Switching to $VERSION (arch: $ARCH)"
 
 case $VERSION in
@@ -32,8 +29,16 @@ case $VERSION in
   GRADLE_VERSION=8.8-bin
   ;;
 
-0.77)
+0.7[67])
   GRADLE_VERSION=8.10.2-all
+  ;;
+
+0.78)
+  GRADLE_VERSION=8.12-all
+  ;;
+
+0.79)
+  GRADLE_VERSION=8.13-bin
   ;;
 
 *)
@@ -46,21 +51,20 @@ echo "Setting gradle version to $GRADLE_VERSION"
 sed -i.bak "s/gradle-.*.zip/gradle-$GRADLE_VERSION.zip/" android/gradle/wrapper/gradle-wrapper.properties
 rm android/gradle/wrapper/gradle-wrapper.properties.bak
 
-yarn rnx-align-deps --requirements react-native@"$VERSION" --write
-RN_VERSION="^$(npm info react-native@^"$VERSION" version --json 2>/dev/null | jq -r '.[-1]')"
-yarn add react-native@"$RN_VERSION"
+pnpm rnx-align-deps --requirements react-native@"$VERSION" --write
 
-## align-deps rolls this back, so force the latest
-yarn add react-native-test-app@latest
+pnpm add --ignore-scripts react-native@"^$VERSION.0"
 
-## test-app doesn't bundle but we need it for react-native-owl
-sed -i.bak \
-  -e 's/task.enabled = false/task.enabled = true/;s/bundleInRelease      : false/bundleInRelease      : true/' \
-  ../../node_modules/react-native-test-app/android/app/build.gradle
-rm ../../node_modules/react-native-test-app/android/app/build.gradle.bak
+# align-deps rolls this back, so force the latest
+pnpm add --ignore-scripts react-native-test-app@latest
 
-yarn --no-immutable
+pnpm install --frozen-lockfile --ignore-scripts --filter .
 
+# We don't package them so remove them
+rm -rf ../get-image/android/generated
+rm -rf ../get-image/ios/generated
+
+# Make react-native-owl work in monorepo
 mkdir -p node_modules
 cd node_modules
 ln -nfs ../../../node_modules/@johnf/react-native-owl react-native-owl
@@ -68,7 +72,22 @@ ln -nfs ../../../node_modules/react-native react-native
 cd -
 
 if [ "$ARCH" = "new" ]; then
-  echo "newArchEnabled=true" >>android/gradle.properties
+  if [ "$(uname)" == "Darwin" ]; then
+    sed -i.bak -e 's/fabric_enabled:.*/fabric_enabled: true/' ios/Podfile
+  else
+    echo "newArchEnabled=true" >>android/gradle.properties
+  fi
 else
-  echo "newArchEnabled=false" >>android/gradle.properties
+  if [ "$(uname)" == "Darwin" ]; then
+    sed -i.bak -e 's/fabric_enabled:.*/fabric_enabled: false/' ios/Podfile
+  else
+    echo "newArchEnabled=false" >>android/gradle.properties
+  fi
+fi
+
+if [ "$(uname)" == "Darwin" ]; then
+  pnpm run build:owl:ios
+  pod update --project-directory=ios
+else
+  pnpm run build:owl:android
 fi

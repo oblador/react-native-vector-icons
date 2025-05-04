@@ -5,6 +5,14 @@ on:
   - push
   - pull_request
 
+permissions:
+  # AWS
+  id-token: write
+  # test-reporter
+  contents: read
+  actions: read
+  checks: write
+
 jobs:
   android:
     name: Android
@@ -12,40 +20,44 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        api-level: [34]
-        rn-version: ['0.75', '0.74', '0.73']
-        arch: ['new', 'old']
+        api-level: [35]
+        rn-version: ["0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]
+        arch: ["new", "old"]
 
     steps:
       - uses: actions/checkout@v4
 
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-2
+          role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
+          role-skip-session-tagging: true
+
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: "temurin"
+          java-version: "17"
+
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
       - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
 
       - name: Gradle cache
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
         with:
-          add-job-summary: never
+          add-job-summary: on-failure
           # TODO: Remove this after we merge
-          cache-read-only: ${{ github.ref != 'refs/heads/master' && github.ref != 'refs/heads/monorepo' }}
+          cache-read-only: ${{ github.ref != 'refs/heads/master' && github.ref != 'refs/heads/per-package-copy' }}
 
       - name: AVD Deps
         run: |
           sudo apt update
           sudo apt-get install -y libpulse0 libgl1
-
-      # - name: SDK cache
-      #   uses: actions/cache@v4
-      #   id: sdk-cache
-      #   with:
-      #     path: |
-      #       /usr/local/lib/android/sdk/system-images
-      #       /usr/local/lib/android/sdk/platform-tools
-      #     key: sdk-${{ matrix.api-level }}
 
       - name: AVD cache
         uses: actions/cache@v4
@@ -56,13 +68,6 @@ jobs:
             ~/.android/adb*
           key: avd-${{ matrix.api-level }}
 
-      - name: SDKs
-        run: |
-          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager \
-            "system-images;android-${{ matrix.api-level }};default;x86_64"
-          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager platform-tools
-          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
-
       - name: Enable KVM group perms
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | \
@@ -70,32 +75,20 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
-      - name: Emulator
-        run: |
-          if ! $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager list avd --compact | grep -q "Pixel_API_${{ matrix.api-level }}"; then
-            $ANDROID_HOME/cmdline-tools/latest/bin/avdmanager create avd \
-              -n Pixel_API_${{ matrix.api-level }} \
-              --device 'pixel_6_pro' \
-              --package "system-images;android-${{ matrix.api-level }};default;x86_64" \
-              --sdcard 512M
-          fi
-          $ANDROID_HOME/emulator/emulator -memory 4096 -avd Pixel_API_${{ matrix.api-level }} \
-            -no-metrics -wipe-data -no-window -gpu swiftshader_indirect \
-            -no-snapshot -no-snapshot-save -noaudio -no-boot-anim -camera-back none 2>&1 | tee /tmp/avd_log &
-
-      - name: Setup yarn
-        run: |
-          corepack enable
-
-      - name: Setup npm
-        uses: bahmutov/npm-install@v1
+      - name: create AVD and generate snapshot for caching
+        if: steps.avd-cache.outputs.cache-hit != 'true'
+        uses: reactivecircus/android-emulator-runner@v2
         with:
-          install-command: yarn --immutable
+          arch: x86_64
+          api-level: ${{ matrix.api-level }}
+          force-avd-creation: false
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: false
+          script: echo "Created cachable AVD"
+
       - name: Build
         run: |
-          yarn prepare
-          # We don't package them so remove them
-          rm -rf packages/common/android/generated
+          pnpm install
 
       - name: Set up RN version
         run: |
@@ -106,44 +99,42 @@ jobs:
       - name: Build App
         run: |
           cd packages/icon-explorer
-          yarn test:android:build
+          mv .owl/baseline-${{ matrix.arch }} .owl/baseline
+          pnpm run test:android:build
 
-      - name: ADB Wait For Device
+      - name: Run test
         timeout-minutes: 3
-        run: |
-          $ANDROID_HOME/platform-tools/adb wait-for-any-device
-
-          echo -n "Waiting for emulator to boot"
-          while [ "$($ANDROID_HOME/platform-tools/adb shell getprop sys.boot_completed | tr -d '\r')" != "1" ]; do
-            echo -n "."
-            sleep 5
-          done
-          echo "Emulator has fully booted."
-
-          # Disable the notification about immersive mode
-          $ANDROID_HOME/platform-tools/adb shell settings put secure immersive_mode_confirmations confirmed
-
-      - name: Run tests
-        timeout-minutes: 10
-        run: |
-          export PATH=$ANDROID_HOME/platform-tools:$PATH
-          cd packages/icon-explorer
-          ln -s .owl/baseline baseline-${{ matrix.arch }}
-          yarn test:android:run
-
-      - name: Stop Emulator
-        if: always()
-        run: |
-          $ANDROID_HOME/platform-tools/adb -s emulator-5554 emu kill || true
-
-      - uses: actions/upload-artifact@v4
-        if: always()
+        id: tests
+        uses: reactivecircus/android-emulator-runner@v2
         with:
-          name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-android
-          path: packages/icon-explorer/.owl
-          include-hidden-files: true
+          arch: x86_64
+          api-level: ${{ matrix.api-level }}
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: adb shell settings put secure immersive_mode_confirmations confirmed && cd packages/icon-explorer && pnpm run test:android:run
 
-      - uses: dorny/test-reporter@v1
+      - name: S3 Report
+        if: always()
+        run: |
+          cd packages/icon-explorer
+
+          sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
+
+          ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
+          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID"
+
+          if [ "${{ steps.tests.outcome }}" == "failure" ]; then
+            echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.tests.outcome }}" == "success" ]; then
+            echo -n "*  ✅ " >> $GITHUB_STEP_SUMMARY
+          else
+            exit 0
+          fi
+
+          echo "[Report  ${{ matrix.arch }} ${{ matrix.rn-version }}](http://react-native-vector-icons.s3-website.us-east-2.amazonaws.com/$ID/report/index.html)" >> $GITHUB_STEP_SUMMARY
+
+      - uses: dorny/test-reporter@v2
         if: always()
         with:
           name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
@@ -156,33 +147,34 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rn-version: ['0.75', '0.74', '0.73']
-        arch: ['new', 'old']
+        rn-version: ["0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]
+        arch: ["new", "old"]
 
     steps:
       - uses: actions/checkout@v4
 
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-2
+          role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
+          role-skip-session-tagging: true
 
       - uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: "temurin"
+          java-version: "17"
 
-      - uses: actions/setup-node@v4
-
-      - name: Setup yarn
-        run: |
-          corepack enable
-
-      - uses: bahmutov/npm-install@v1
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - uses: pnpm/action-setup@v4
         with:
-          install-command: yarn --immutable
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          cache: pnpm
 
       - name: Build
         run: |
-          yarn prepare
-          # We don't package them so remove them
-          rm -rf packages/common/ios/generated
+          pnpm install
 
       - name: Set up RN version
         run: |
@@ -193,45 +185,52 @@ jobs:
       - name: Build App
         run: |
           cd packages/icon-explorer
-          # Work around mono repo issues with owl
-          # mkdir -p node_modules/@johnf
-          # cd node_modules
-          # cp -a ../../../node_modules/@johnf/react-native-owl @johnf/
-          # cd -
-          # Due to react-native-test-app not bundling
-          yarn build:ios:owl
-          if [ "${{ matrix.arch }}" = "new" ]; then
-            NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=1 pod update --project-directory=ios
-          else
-            NO_FLIPPER=1 RCT_NEW_ARCH_ENABLED=0 pod update --project-directory=ios
-          fi
-          yarn test:ios:build
+
+          # Try and work around strange build bug
+          mkdir -p /Users/runner/work/react-native-vector-icons/react-native-vector-icons/packages/icon-explorer/ios/build/Build/Products/Debug-iphonesimulator/ReactTestApp.app
+          mkdir -p /Users/runner/work/react-native-vector-icons/react-native-vector-icons/packages/icon-explorer/ios/build/Build/Products/Release-iphonesimulator/ReactTestApp.app
+
+          mv .owl/baseline-${{ matrix.arch }} .owl/baseline
+          pnpm run test:ios:build
 
       - name: Run simulator
         id: simulator
         uses: futureware-tech/simulator-action@v3
         with:
-          os: 'iOS'
-          os_version: "=17.5"
-          model: 'iPhone 15'
+          os: "iOS"
+          os_version: "=18.2"
+          model: "iPhone 16"
 
       - name: Run tests
-        timeout-minutes: 10
+        timeout-minutes: 5
+        id: tests
         run: |
           cd packages/icon-explorer
-          ln -s .owl/baseline baseline-${{ matrix.arch }}
           tmp=$(mktemp)
           jq '.ios.device = "${{ steps.simulator.outputs.udid }}"' owl.config.json > "$tmp" && mv "$tmp" owl.config.json
-          yarn test:ios:run
+          pnpm run test:ios:run
 
-      - uses: actions/upload-artifact@v4
+      - name: S3 Report
         if: always()
-        with:
-          name: test-results-${{ matrix.arch }}-${{ matrix.rn-version }}-ios
-          path: packages/icon-explorer/.owl
-          include-hidden-files: true
+        run: |
+          cd packages/icon-explorer
 
-      - uses: dorny/test-reporter@v1
+          sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
+
+          ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
+          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID"
+
+          if [ "${{ steps.tests.outcome }}" == "failure" ]; then
+            echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.tests.outcome }}" == "success" ]; then
+            echo -n "*  ✅ " >> $GITHUB_STEP_SUMMARY
+          else
+            exit 0
+          fi
+
+          echo "[Report  ${{ matrix.arch }} ${{ matrix.rn-version }}](http://react-native-vector-icons.s3-website.us-east-2.amazonaws.com/$ID/report/index.html)" >> $GITHUB_STEP_SUMMARY
+
+      - uses: dorny/test-reporter@v2
         if: always()
         with:
           name: JEST Tests ios - ${{ matrix.arch }} ${{ matrix.rn-version }}

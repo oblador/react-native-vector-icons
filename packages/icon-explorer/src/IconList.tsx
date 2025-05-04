@@ -5,11 +5,11 @@ import {
   FlatList,
   type NativeSyntheticEvent,
   Platform,
+  Pressable,
   StyleSheet,
   Text,
   TextInput,
   type TextInputChangeEventData,
-  TouchableHighlight,
   View,
 } from 'react-native';
 
@@ -19,7 +19,6 @@ import ICON_SETS from './icon-sets';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
   },
   searchBar: {
     padding: 3,
@@ -49,6 +48,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginRight: 10,
     width: 20,
+  },
+  heading: {
+    color: '#000',
+    fontWeight: '800',
+    marginLeft: 10,
   },
   text: {
     flex: 1,
@@ -100,13 +104,12 @@ export const IconList = ({
 
   return (
     <View style={styles.container}>
-      <Text>
+      <Text style={styles.heading}>
         {iconName}
         {iconStyle ? ` - ${iconStyle}` : ''}
       </Text>
       <View style={styles.searchBar}>
         <TextInput
-          testID="search"
           autoCapitalize="none"
           autoCorrect={false}
           onChange={handleSearchChange}
@@ -152,17 +155,17 @@ export const MultiIconList = ({
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{iconName}</Text>
+      <Text style={styles.heading}>{iconName}</Text>
       <FlatList
         data={Object.keys(iconSet.meta)}
         style={styles.list}
         renderItem={({ item: iconStyle }) => (
-          <TouchableHighlight testID={iconStyle} onPress={() => navigator(iconStyle, iconName)} underlayColor="#eee">
+          <Pressable testID={iconStyle} onPress={() => navigator(iconStyle, iconName)}>
             <View style={styles.row}>
               <Text style={styles.text}>{iconStyle}</Text>
               <Text style={styles.glyphCount}>{iconSet.meta[iconStyle as keyof typeof iconSet.meta].length}</Text>
             </View>
-          </TouchableHighlight>
+          </Pressable>
         )}
         automaticallyAdjustContentInsets={false}
         keyboardDismissMode="on-drag"
