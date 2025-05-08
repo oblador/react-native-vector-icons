@@ -89,7 +89,7 @@
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
     "typescript": "^5.7.2",
-    "ionicons": "7.4.0"
+    "ionicons": "8.0.8"
   },
   "peerDependencies": {
     "react": "*",
