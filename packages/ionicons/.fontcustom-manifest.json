@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "3bef96ee54e3a628f4e8f05458d9a6c124efbe1bdc3af0820c1fbb72394de769",
-    "current": "3bef96ee54e3a628f4e8f05458d9a6c124efbe1bdc3af0820c1fbb72394de769"
+    "previous": "e96312b6719260d2b09198146ebf6dbf01cf43de83c88a7b6e2e944ec41a2e50",
+    "current": "e96312b6719260d2b09198146ebf6dbf01cf43de83c88a7b6e2e944ec41a2e50"
   },
   "fonts": [
     "Ionicons/Ionicons.ttf",
@@ -3242,6 +3242,10 @@
     "logo-tableau": {
       "codepoint": 62487,
       "source": "fixedSvg/logo-tableau.svg"
+    },
+    "logo-threads": {
+      "codepoint": 63052,
+      "source": "fixedSvg/logo-threads.svg"
     },
     "logo-tiktok": {
       "codepoint": 62488,
