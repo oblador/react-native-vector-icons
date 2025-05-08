@@ -5,10 +5,10 @@
 You need your FontAwesome npm token which can be obtained by logging into your
 account and then access the `Services` tab.
 
-Run `npm run fa6-upgrade` and enter the token
+Run `npx fa-upgrade6` and enter the token
 when asked to in order to upgrade to the Pro version. It will install the fonts
 in your repo in the `rnvi-fonts` directory but the folder can be customized by
-setting it when executing the command: `npm run fa6-upgrade [destination]`.
+setting it when executing the command: `npx fa-upgrade6 [destination]`.
 
 ### Manually
 
