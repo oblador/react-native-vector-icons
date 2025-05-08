@@ -73,7 +73,6 @@ export function createIconSet<GM extends Record<string, number>>(
   const fontReference = Platform.select({
     windows: `/Assets/${fontFileName}#${postScriptName}`,
     android: fontBasename,
-    web: fontBasename,
     default: postScriptName,
   });
 
