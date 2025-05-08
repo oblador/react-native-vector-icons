@@ -4,4 +4,4 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-"${SCRIPT_DIR}"/fa-upgrade.sh 6 "$@"
+"${SCRIPT_DIR}"/fa-upgrade 5 "$@"

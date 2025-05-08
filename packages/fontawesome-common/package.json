@@ -57,8 +57,8 @@
     "node": ">= 18.0.0"
   },
   "bin": {
-    "fa-upgrade.sh": "./bin/fa-upgrade.sh",
-    "fa-upgrade5.sh": "./bin/fa-upgrade5.sh",
-    "fa-upgrade6.sh": "./bin/fa-upgrade6.sh"
+    "fa-upgrade": "./bin/fa-upgrade",
+    "fa-upgrade5": "./bin/fa-upgrade5",
+    "fa-upgrade6": "./bin/fa-upgrade6"
   }
 }
