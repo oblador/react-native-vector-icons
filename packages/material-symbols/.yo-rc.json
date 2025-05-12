@@ -1,0 +1,18 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "material-symbols",
+    "upstreamFont": "material-symbol-rnvi",
+    "buildSteps": {
+      "glyphmap": {
+        "location": "../../node_modules/material-symbol-rnvi/font/rounded/MaterialSymbols.css",
+        "mode": "css",
+        "prefix": ".MaterialSymbols-"
+      },
+      "copyFont": {
+        "location": "../../node_modules/material-symbol-rnvi/font/rounded/MaterialSymbols.ttf",
+        "cleanup": true
+      }
+    },
+    "versions": [{ "rnvi": "12.0.0", "upstream": "1.0.3" }]
+  }
+}
