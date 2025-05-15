@@ -5,6 +5,10 @@ def isNewArchitectureEnabled() {
   return rootProject.hasProperty("newArchEnabled") && rootProject.getProperty("newArchEnabled") == "true"
 }
 
+def safeExtGet(prop, fallback) {
+  rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
 
@@ -32,7 +36,7 @@ android {
     }
   }
 
-  compileSdkVersion 31
+  compileSdkVersion safeExtGet('compileSdkVersion', 31)
 }
 
 dependencies {
