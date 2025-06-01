@@ -20,7 +20,7 @@ jobs:
   npm:
     name: NPM
     runs-on: ubuntu-latest
-    if: github.event.inputs.action = 'npm'
+    if: github.event.inputs.action == 'npm'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
           fi
 
       - name: Publish pre-release to NPM
-        if: github.event.inputs.pre_release = 'true'
+        if: github.event.inputs.pre_release == 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
@@ -64,7 +64,7 @@ jobs:
   website:
     name: Directory website
     runs-on: ubuntu-latest
-    if: github.event.inputs.action = 'website'
+    if: github.event.inputs.action == 'website'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
