@@ -1,33 +1,39 @@
-name: Deploy
+name: Publish to NPM and Website
 
 on:
   workflow_dispatch:
     inputs:
-      skip-npm:
+      dry_run:
+        description: Perform a dry run
         type: boolean
-        description: Skip NPM release
-      skip-directory:
-        type: boolean
-        description: Skip directory website deployment
-      pre-release:
+      action:
+        type: choice
+        description: What to publish
+        options:
+          - npm
+          - website
+      pre_release:
         type: boolean
         description: Create a pre-release
-  release:
-    types: [created]
 
 jobs:
   npm:
     name: NPM
     runs-on: ubuntu-latest
-    if: github.event.inputs.skip-npm != 'true'
+    if: github.event.inputs.action = 'npm'
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Needed for changelogs and tag comparison
 
       # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
-      - uses: pnpm/action-setup@v4
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v4
         with:
           run_install: false
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           cache: pnpm
 
@@ -35,29 +41,41 @@ jobs:
         run: pnpm install
 
       - name: Publish to NPM
-        if: github.event.inputs.pre-release != 'true'
-        run: pnpm run release
+        if: github.event.inputs.pre_release != 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+          echo pnpm run release --dry-run
+          else
+          echo pnpm run release
+          fi
 
       - name: Publish pre-release to NPM
-        if: github.event.inputs.pre-release = 'true'
-        run: pnpm run prerelease
+        if: github.event.inputs.pre_release = 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+            echo pnpm run prerelease --dry-run
+          else
+            echo pnpm run prerelease
+          fi
 
-  directory:
+  website:
     name: Directory website
     runs-on: ubuntu-latest
-    if: github.event.inputs.skip-directory != 'true'
+    if: github.event.inputs.action = 'website'
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
-      - uses: pnpm/action-setup@v4
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v4
         with:
           run_install: false
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           cache: pnpm
 
