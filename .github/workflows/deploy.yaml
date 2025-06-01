@@ -44,10 +44,11 @@ jobs:
         if: github.event.inputs.pre_release != 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
-          echo pnpm run release --dry-run
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+            pnpm run release --dry-run
           else
-          echo pnpm run release
+            pnpm run release
           fi
 
       - name: Publish pre-release to NPM
@@ -56,9 +57,9 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
-            echo pnpm run prerelease --dry-run
+            pnpm run prerelease --dry-run
           else
-            echo pnpm run prerelease
+            pnpm run prerelease
           fi
 
   website:
