@@ -961,6 +961,37 @@ importers:
         specifier: ^5.7.2
         version: 5.8.2
 
+  packages/material-symbols:
+    dependencies:
+      '@react-native-vector-icons/common':
+        specifier: workspace:^
+        version: link:../common
+      react:
+        specifier: '*'
+        version: 18.3.1
+      react-native:
+        specifier: '*'
+        version: 0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.2))(@types/react@18.3.18)(react@18.3.1)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.18
+        version: 18.3.18
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      material-symbol-rnvi:
+        specifier: 1.0.3
+        version: 1.0.3
+      onchange:
+        specifier: ^7.1.0
+        version: 7.1.0
+      react-native-builder-bob:
+        specifier: ^0.35.2
+        version: 0.35.3(typescript@5.8.2)
+      typescript:
+        specifier: ^5.7.2
+        version: 5.8.2
+
   packages/octicons:
     dependencies:
       '@react-native-vector-icons/common':
@@ -7966,6 +7997,9 @@ packages:
   matcher@3.0.0:
     resolution: {integrity: sha512-OkeDaAZ/bQCxeFAozM55PKcKU0yJMPGifLwV4Qgjitu+5MoAfSQN4lsLJeXZ1b8w0x+/Emda6MZgXS1jvsapng==}
     engines: {node: '>=10'}
+
+  material-symbol-rnvi@1.0.3:
+    resolution: {integrity: sha512-7glQHmv37Mppy3w6pZy407wWwKVC5d+oFomHnojvjJD1zycUO/uotwkCWYSYcz8jadcAJdKd6mblO7P4HQUE4w==}
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -20616,6 +20650,8 @@ snapshots:
   matcher@3.0.0:
     dependencies:
       escape-string-regexp: 4.0.0
+
+  material-symbol-rnvi@1.0.3: {}
 
   math-intrinsics@1.1.0: {}
 
