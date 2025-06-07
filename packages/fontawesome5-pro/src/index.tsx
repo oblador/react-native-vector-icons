@@ -32,14 +32,23 @@ const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
 
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const LightIcon = createIconSet(lightGM, 'FontAwesome5Pro-Light', 'FontAwesome5_Pro_Light.ttf', fontStyle('300'));
+export type FontAwesome5ProLightIconName = ComponentProps<typeof LightIcon>['name'];
+
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const RegularIcon = createIconSet(regularGM, 'FontAwesome5Pro-Regular', 'FontAwesome5_Pro_Regular.ttf', fontStyle('400'));
+export type FontAwesome5ProRegularIconName = ComponentProps<typeof RegularIcon>['name'];
+
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const SolidIcon = createIconSet(solidGM, 'FontAwesome5Pro-Solid', 'FontAwesome5_Pro_Solid.ttf', fontStyle('900'));
+export type FontAwesome5ProSolidIconName = ComponentProps<typeof SolidIcon>['name'];
+
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const DuotoneIcon = createIconSet(duotoneGM, 'FontAwesome5Duotone-Solid', 'FontAwesome5_Pro_Duotone.ttf', fontStyle('900'));
+export type FontAwesome5ProDuotoneIconName = ComponentProps<typeof DuotoneIcon>['name'];
+
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const BrandIcon = createIconSet(brandGM, 'FontAwesome5Brands-Regular', 'FontAwesome5_Pro_Brands.ttf', fontStyle('400'));
+export type FontAwesome5ProBrandIconName = ComponentProps<typeof BrandIcon>['name'];
 
 type Props =
   | ({ iconStyle: 'light' } & ComponentProps<typeof LightIcon>)
@@ -49,7 +58,7 @@ type Props =
   | ({ iconStyle: 'brand' } & ComponentProps<typeof BrandIcon>)
   | ({ iconStyle?: never } & ComponentProps<typeof RegularIcon>);
 
-const Icon = (props: Props) => {
+export const FontAwesome5Pro = (props: Props) => {
   const { iconStyle, name } = props;
   if (!iconStyle) {
     return <RegularIcon {...props} />;
@@ -128,7 +137,7 @@ const getImageSource: GetImageSourceFunc = (iconStyle, name, size = DEFAULT_ICON
       return RegularIcon.getImageSource(name as keyof typeof regularGM, size, color);
   }
 };
-Icon.getImageSource = getImageSource;
+FontAwesome5Pro.getImageSource = getImageSource;
 
 type GetImageSourceSyncFunc = {
   (
@@ -180,6 +189,8 @@ const getImageSourceSync: GetImageSourceSyncFunc = (iconStyle, name, size = DEFA
       return RegularIcon.getImageSourceSync(name as keyof typeof regularGM, size, color);
   }
 };
-Icon.getImageSourceSync = getImageSourceSync;
+FontAwesome5Pro.getImageSourceSync = getImageSourceSync;
 
-export default Icon;
+export type FontAwesome5ProIconName = ComponentProps<typeof FontAwesome5Pro>['name'];
+
+export default FontAwesome5Pro;

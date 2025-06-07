@@ -9,13 +9,17 @@
  * Usage: <FontAwesome name="icon-name" size={20} color="#4F8EF7" />
  */
 
+import type { ComponentProps } from 'react';
+
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/FontAwesome.json';
 
-const Icon = createIconSet(glyphMap, {
+export const FontAwesome = createIconSet(glyphMap, {
   postScriptName: 'FontAwesome',
   fontFileName: 'FontAwesome.ttf',
   fontSource: require('../fonts/FontAwesome.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type FontAwesomeIconName = ComponentProps<typeof FontAwesome>['name'];
+
+export default FontAwesome;

@@ -9,13 +9,17 @@
  * Usage: <MaterialDesignIcons name="icon-name" size={20} color="#4F8EF7" />
  */
 
+import type { ComponentProps } from 'react';
+
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/MaterialDesignIcons.json';
 
-const Icon = createIconSet(glyphMap, {
+export const MaterialDesignIcons = createIconSet(glyphMap, {
   postScriptName: 'MaterialDesignIcons',
   fontFileName: 'MaterialDesignIcons.ttf',
   fontSource: require('../fonts/MaterialDesignIcons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type MaterialDesignIconsIconName = ComponentProps<typeof MaterialDesignIcons>['name'];
+
+export default MaterialDesignIcons;

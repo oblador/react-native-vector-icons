@@ -9,13 +9,17 @@
  * Usage: <Zocial name="icon-name" size={20} color="#4F8EF7" />
  */
 
+import type { ComponentProps } from 'react';
+
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Zocial.json';
 
-const Icon = createIconSet(glyphMap, {
+export const Zocial = createIconSet(glyphMap, {
   postScriptName: 'zocial',
   fontFileName: 'Zocial.ttf',
   fontSource: require('../fonts/Zocial.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type ZocialIconName = ComponentProps<typeof Zocial>['name'];
+
+export default Zocial;
