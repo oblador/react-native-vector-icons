@@ -35,6 +35,7 @@ const RegularIcon = createIconSet(regularGM, {
   fontSource: require('../fonts/FontAwesome6_Regular.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
   fontStyle: fontStyle('400')
 });
+export type FontAwesome6RegularIconName = keyof typeof regularGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const SolidIcon = createIconSet(solidGM, {
   postScriptName: 'FontAwesome6Free-Solid',
@@ -42,6 +43,7 @@ const SolidIcon = createIconSet(solidGM, {
   fontSource: require('../fonts/FontAwesome6_Solid.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
   fontStyle: fontStyle('900')
 });
+export type FontAwesome6SolidIconName = keyof typeof solidGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const BrandIcon = createIconSet(brandGM, {
   postScriptName: 'FontAwesome6Brands-Regular',
@@ -49,14 +51,14 @@ const BrandIcon = createIconSet(brandGM, {
   fontSource: require('../fonts/FontAwesome6_Brands.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
   fontStyle: fontStyle('400')
 });
-
+export type FontAwesome6BrandIconName = keyof typeof brandGM;
 type Props =
   | ({ iconStyle: 'regular' } & ComponentProps<typeof RegularIcon>)
   | ({ iconStyle: 'solid' } & ComponentProps<typeof SolidIcon>)
   | ({ iconStyle: 'brand' } & ComponentProps<typeof BrandIcon>)
   | ({ iconStyle?: never } & ComponentProps<typeof RegularIcon>);
 
-const Icon = (props: Props) => {
+export const FontAwesome6 = (props: Props) => {
   const { iconStyle, name } = props;
   if (!iconStyle) {
     if (!glyphValidator(name, 'regular')) {
@@ -118,7 +120,7 @@ const getImageSource: GetImageSourceFunc = (iconStyle, name, size = DEFAULT_ICON
       return RegularIcon.getImageSource(name as keyof typeof regularGM, size, color);
   }
 };
-Icon.getImageSource = getImageSource;
+FontAwesome6.getImageSource = getImageSource;
 
 type GetImageSourceSyncFunc = {
   (
@@ -154,6 +156,8 @@ const getImageSourceSync: GetImageSourceSyncFunc = (iconStyle, name, size = DEFA
       return RegularIcon.getImageSourceSync(name as keyof typeof regularGM, size, color);
   }
 };
-Icon.getImageSourceSync = getImageSourceSync;
+FontAwesome6.getImageSourceSync = getImageSourceSync;
 
-export default Icon;
+export type FontAwesome6IconName = ComponentProps<typeof FontAwesome6>['name'];
+
+export default FontAwesome6;

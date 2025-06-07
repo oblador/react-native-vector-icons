@@ -12,10 +12,12 @@
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Octicons.json';
 
-const Icon = createIconSet(glyphMap, {
+export const Octicons = createIconSet(glyphMap, {
   postScriptName: 'Octicons',
   fontFileName: 'Octicons.ttf',
   fontSource: require('../fonts/Octicons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type OcticonsIconName = keyof typeof glyphMap;
+
+export default Octicons;

@@ -41,61 +41,70 @@ const ThinIcon = createIconSet(thinGM, {
   fontFileName: 'FontAwesome6_Pro_Thin.ttf',
   fontStyle: fontStyle('100')
 });
+export type FontAwesome6ProThinIconName = keyof typeof thinGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const LightIcon = createIconSet(lightGM, {
   postScriptName: 'FontAwesome6Pro-Light',
   fontFileName: 'FontAwesome6_Pro_Light.ttf',
   fontStyle: fontStyle('300')
 });
+export type FontAwesome6ProLightIconName = keyof typeof lightGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const RegularIcon = createIconSet(regularGM, {
   postScriptName: 'FontAwesome6Pro-Regular',
   fontFileName: 'FontAwesome6_Pro_Regular.ttf',
   fontStyle: fontStyle('400')
 });
+export type FontAwesome6ProRegularIconName = keyof typeof regularGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const SolidIcon = createIconSet(solidGM, {
   postScriptName: 'FontAwesome6Pro-Solid',
   fontFileName: 'FontAwesome6_Pro_Solid.ttf',
   fontStyle: fontStyle('900')
 });
+export type FontAwesome6ProSolidIconName = keyof typeof solidGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const SharpThinIcon = createIconSet(sharpThinGM, {
   postScriptName: 'FontAwesome6Sharp-Thin',
   fontFileName: 'FontAwesome6_Pro_Sharp_Thin.ttf',
   fontStyle: fontStyle('100')
 });
+export type FontAwesome6ProSharpThinIconName = keyof typeof sharpThinGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const SharpLightIcon = createIconSet(sharpLightGM, {
   postScriptName: 'FontAwesome6Sharp-Light',
   fontFileName: 'FontAwesome6_Pro_Sharp_Light.ttf',
   fontStyle: fontStyle('300')
 });
+export type FontAwesome6ProSharpLightIconName = keyof typeof sharpLightGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const SharpIcon = createIconSet(sharpGM, {
   postScriptName: 'FontAwesome6Sharp-Regular',
   fontFileName: 'FontAwesome6_Pro_Sharp_Regular.ttf',
   fontStyle: fontStyle('400')
 });
+export type FontAwesome6ProSharpIconName = keyof typeof sharpGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const SharpSolidIcon = createIconSet(sharpSolidGM, {
   postScriptName: 'FontAwesome6Sharp-Solid',
   fontFileName: 'FontAwesome6_Pro_Sharp_Solid.ttf',
   fontStyle: fontStyle('900')
 });
+export type FontAwesome6ProSharpSolidIconName = keyof typeof sharpSolidGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const DuotoneIcon = createIconSet(duotoneGM, {
   postScriptName: 'FontAwesome6Duotone-Solid',
   fontFileName: 'FontAwesome6_Pro_Duotone.ttf',
   fontStyle: fontStyle('900')
 });
+export type FontAwesome6ProDuotoneIconName = keyof typeof duotoneGM;
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const BrandIcon = createIconSet(brandGM, {
   postScriptName: 'FontAwesome6Brands-Regular',
   fontFileName: 'FontAwesome6_Pro_Brands.ttf',
   fontStyle: fontStyle('400')
 });
-
+export type FontAwesome6ProBrandIconName = keyof typeof brandGM;
 type Props =
   | ({ iconStyle: 'thin' } & ComponentProps<typeof ThinIcon>)
   | ({ iconStyle: 'light' } & ComponentProps<typeof LightIcon>)
@@ -109,7 +118,7 @@ type Props =
   | ({ iconStyle: 'brand' } & ComponentProps<typeof BrandIcon>)
   | ({ iconStyle?: never } & ComponentProps<typeof RegularIcon>);
 
-const Icon = (props: Props) => {
+export const FontAwesome6Pro = (props: Props) => {
   const { iconStyle, name } = props;
   if (!iconStyle) {
     if (!glyphValidator(name, 'regular')) {
@@ -241,7 +250,7 @@ const getImageSource: GetImageSourceFunc = (iconStyle, name, size = DEFAULT_ICON
       return RegularIcon.getImageSource(name as keyof typeof regularGM, size, color);
   }
 };
-Icon.getImageSource = getImageSource;
+FontAwesome6Pro.getImageSource = getImageSource;
 
 type GetImageSourceSyncFunc = {
   (
@@ -333,6 +342,8 @@ const getImageSourceSync: GetImageSourceSyncFunc = (iconStyle, name, size = DEFA
       return RegularIcon.getImageSourceSync(name as keyof typeof regularGM, size, color);
   }
 };
-Icon.getImageSourceSync = getImageSourceSync;
+FontAwesome6Pro.getImageSourceSync = getImageSourceSync;
 
-export default Icon;
+export type FontAwesome6ProIconName = ComponentProps<typeof FontAwesome6Pro>['name'];
+
+export default FontAwesome6Pro;

@@ -12,10 +12,12 @@
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/EvilIcons.json';
 
-const Icon = createIconSet(glyphMap, {
+export const EvilIcons = createIconSet(glyphMap, {
   postScriptName: 'EvilIcons',
   fontFileName: 'EvilIcons.ttf',
   fontSource: require('../fonts/EvilIcons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type EvilIconsIconName = keyof typeof glyphMap;
+
+export default EvilIcons;
