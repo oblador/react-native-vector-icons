@@ -30,10 +30,15 @@ const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
 
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const RegularIcon = createIconSet(regularGM, 'FontAwesome6Free-Regular', 'FontAwesome6_Regular.ttf', fontStyle('400'));
+export type FontAwesome6RegularIconName = ComponentProps<typeof RegularIcon>['name'];
+
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const SolidIcon = createIconSet(solidGM, 'FontAwesome6Free-Solid', 'FontAwesome6_Solid.ttf', fontStyle('900'));
+export type FontAwesome6SolidIconName = ComponentProps<typeof SolidIcon>['name'];
+
 // biome-ignore format: We want these to be consistent and we are fine with single for all
 const BrandIcon = createIconSet(brandGM, 'FontAwesome6Brands-Regular', 'FontAwesome6_Brands.ttf', fontStyle('400'));
+export type FontAwesome6BrandIconName = ComponentProps<typeof BrandIcon>['name'];
 
 type Props =
   | ({ iconStyle: 'regular' } & ComponentProps<typeof RegularIcon>)
@@ -41,7 +46,7 @@ type Props =
   | ({ iconStyle: 'brand' } & ComponentProps<typeof BrandIcon>)
   | ({ iconStyle?: never } & ComponentProps<typeof RegularIcon>);
 
-const Icon = (props: Props) => {
+export const FontAwesome6 = (props: Props) => {
   const { iconStyle, name } = props;
   if (!iconStyle) {
     return <RegularIcon {...props} />;
@@ -100,7 +105,7 @@ const getImageSource: GetImageSourceFunc = (iconStyle, name, size = DEFAULT_ICON
       return RegularIcon.getImageSource(name as keyof typeof regularGM, size, color);
   }
 };
-Icon.getImageSource = getImageSource;
+FontAwesome6.getImageSource = getImageSource;
 
 type GetImageSourceSyncFunc = {
   (
@@ -136,6 +141,8 @@ const getImageSourceSync: GetImageSourceSyncFunc = (iconStyle, name, size = DEFA
       return RegularIcon.getImageSourceSync(name as keyof typeof regularGM, size, color);
   }
 };
-Icon.getImageSourceSync = getImageSourceSync;
+FontAwesome6.getImageSourceSync = getImageSourceSync;
 
-export default Icon;
+export type FontAwesome6IconName = ComponentProps<typeof FontAwesome6>['name'];
+
+export default FontAwesome6;

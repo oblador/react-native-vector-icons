@@ -9,13 +9,17 @@
  * Usage: <Ionicons name="icon-name" size={20} color="#4F8EF7" />
  */
 
+import type { ComponentProps } from 'react';
+
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Ionicons.json';
 
-const Icon = createIconSet(glyphMap, {
+export const Ionicons = createIconSet(glyphMap, {
   postScriptName: 'Ionicons',
   fontFileName: 'Ionicons.ttf',
   fontSource: require('../fonts/Ionicons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type IoniconsIconName = ComponentProps<typeof Ionicons>['name'];
+
+export default Ionicons;
