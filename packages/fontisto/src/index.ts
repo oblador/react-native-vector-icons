@@ -9,13 +9,17 @@
  * Usage: <Fontisto name="icon-name" size={20} color="#4F8EF7" />
  */
 
+import type { ComponentProps } from 'react';
+
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Fontisto.json';
 
-const Icon = createIconSet(glyphMap, {
+export const Fontisto = createIconSet(glyphMap, {
   postScriptName: 'fontisto',
   fontFileName: 'Fontisto.ttf',
   fontSource: require('../fonts/Fontisto.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type FontistoIconName = ComponentProps<typeof Fontisto>['name'];
+
+export default Fontisto;
