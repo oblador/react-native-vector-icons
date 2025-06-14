@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-native-vector-icons/static/css/main.6d9e272b.css",
-    "main.js": "/react-native-vector-icons/static/js/main.ecd7eb2b.js",
+    "main.js": "/react-native-vector-icons/static/js/main.568ca223.js",
     "static/js/317.00f1b906.chunk.js": "/react-native-vector-icons/static/js/317.00f1b906.chunk.js",
     "static/media/MaterialDesignIcons.ttf": "/react-native-vector-icons/static/media/MaterialDesignIcons.1fcc36272ea3e53d0031.ttf",
     "static/media/Lucide.ttf": "/react-native-vector-icons/static/media/Lucide.ab88cb06115a2b9d5c0a.ttf",
@@ -25,11 +25,11 @@
     "static/media/EvilIcons.ttf": "/react-native-vector-icons/static/media/EvilIcons.166150f21e57d529b06e.ttf",
     "index.html": "/react-native-vector-icons/index.html",
     "main.6d9e272b.css.map": "/react-native-vector-icons/static/css/main.6d9e272b.css.map",
-    "main.ecd7eb2b.js.map": "/react-native-vector-icons/static/js/main.ecd7eb2b.js.map",
+    "main.568ca223.js.map": "/react-native-vector-icons/static/js/main.568ca223.js.map",
     "317.00f1b906.chunk.js.map": "/react-native-vector-icons/static/js/317.00f1b906.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6d9e272b.css",
-    "static/js/main.ecd7eb2b.js"
+    "static/js/main.568ca223.js"
   ]
 }
