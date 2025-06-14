@@ -5,20 +5,17 @@
 // @ts-expect-error missing types
 // eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
 import { getAssetByID } from '@react-native/assets-registry/registry';
-import type { Image } from 'react-native';
-// @ts-expect-error missing types
-// eslint-disable-next-line import/no-extraneous-dependencies
-import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
-import { getErrorCallback } from './dynamic-loading-setting';
+import { Image } from 'react-native';
+import { assertExpoModulesPresent, getErrorCallback } from './dynamic-loading-setting';
 import type { DynamicLoader, FontSource } from './types';
 
 const loadPromises: { [fontSource: string]: Promise<void> } = {};
 
 const loadFontAsync = async (fontFamily: string, fontSource: FontSource): Promise<void> => {
-  const expoModules = globalThis?.expo?.modules;
-  if (!expoModules) {
-    throw new Error('Expo is not available. Dynamic font loading is not available.');
-  }
+  const globalRef = globalThis;
+  assertExpoModulesPresent(globalRef);
+
+  const expoModules = globalRef.expo.modules;
 
   if (loadPromises[fontFamily]) {
     return loadPromises[fontFamily];
@@ -66,8 +63,7 @@ const getLocalFontUrl = (fontModuleId: number, fontFamily: string) => {
     throw new Error(`no asset found for font family "${fontFamily}", moduleId: ${String(fontModuleId)}`);
   }
 
-  const resolver: typeof Image.resolveAssetSource = resolveAssetSource;
-  const assetSource = resolver(fontModuleId);
+  const assetSource = Image.resolveAssetSource(fontModuleId);
 
   return { ...assetMeta, ...assetSource };
 };
@@ -78,13 +74,10 @@ const isLoadedNative = (fontFamily: string) => {
   if (fontFamily in loadedFontsCache) {
     return true;
   }
+  const globalRef = globalThis;
+  assertExpoModulesPresent(globalRef);
 
-  const { expo } = globalThis;
-  if (!expo) {
-    throw new Error('Expo is not available. Dynamic font loading is not available.');
-  }
-
-  const loadedNativeFonts = expo.modules.ExpoFontLoader.getLoadedFonts();
+  const loadedNativeFonts = globalRef.expo.modules.ExpoFontLoader.getLoadedFonts();
   loadedNativeFonts.forEach((font) => {
     loadedFontsCache[font] = true;
   });
