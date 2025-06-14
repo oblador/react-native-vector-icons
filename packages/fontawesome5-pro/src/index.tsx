@@ -31,15 +31,35 @@ const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
   });
 
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const LightIcon = createIconSet(lightGM, 'FontAwesome5Pro-Light', 'FontAwesome5_Pro_Light.ttf', fontStyle('300'));
+const LightIcon = createIconSet(lightGM, {
+  postScriptName: 'FontAwesome5Pro-Light',
+  fontFileName: 'FontAwesome5_Pro_Light.ttf',
+  fontStyle: fontStyle('300')
+});
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const RegularIcon = createIconSet(regularGM, 'FontAwesome5Pro-Regular', 'FontAwesome5_Pro_Regular.ttf', fontStyle('400'));
+const RegularIcon = createIconSet(regularGM, {
+  postScriptName: 'FontAwesome5Pro-Regular',
+  fontFileName: 'FontAwesome5_Pro_Regular.ttf',
+  fontStyle: fontStyle('400')
+});
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const SolidIcon = createIconSet(solidGM, 'FontAwesome5Pro-Solid', 'FontAwesome5_Pro_Solid.ttf', fontStyle('900'));
+const SolidIcon = createIconSet(solidGM, {
+  postScriptName: 'FontAwesome5Pro-Solid',
+  fontFileName: 'FontAwesome5_Pro_Solid.ttf',
+  fontStyle: fontStyle('900')
+});
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const DuotoneIcon = createIconSet(duotoneGM, 'FontAwesome5Duotone-Solid', 'FontAwesome5_Pro_Duotone.ttf', fontStyle('900'));
+const DuotoneIcon = createIconSet(duotoneGM, {
+  postScriptName: 'FontAwesome5Duotone-Solid',
+  fontFileName: 'FontAwesome5_Pro_Duotone.ttf',
+  fontStyle: fontStyle('900')
+});
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const BrandIcon = createIconSet(brandGM, 'FontAwesome5Brands-Regular', 'FontAwesome5_Pro_Brands.ttf', fontStyle('400'));
+const BrandIcon = createIconSet(brandGM, {
+  postScriptName: 'FontAwesome5Brands-Regular',
+  fontFileName: 'FontAwesome5_Pro_Brands.ttf',
+  fontStyle: fontStyle('400')
+});
 
 type Props =
   | ({ iconStyle: 'light' } & ComponentProps<typeof LightIcon>)
