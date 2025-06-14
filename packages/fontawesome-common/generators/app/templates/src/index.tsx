@@ -32,7 +32,14 @@ const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
 <% Object.entries(meta.styles).forEach(([styleName, { family, name, weight }]) => { -%>
 <% upperStyleName = styleName.charAt(0).toUpperCase() + styleName.slice(1) -%>
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const <%= upperStyleName %>Icon = createIconSet(<%= styleName %>GM, '<%= family %>', '<%= name %>', fontStyle('<%= weight %>'));
+const <%= upperStyleName %>Icon = createIconSet(<%= styleName %>GM, {
+  postScriptName: '<%= family %>',
+  fontFileName: '<%= name %>',
+<% if (!packageName.endsWith('-pro')) { -%>
+  fontSource: require('../fonts/<%= name %>'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+<% } -%>
+  fontStyle: fontStyle('<%= weight %>')
+});
 <% }) -%>
 
 type Props =
