@@ -1,7 +1,7 @@
-#!/usr/bin/env node
+#!/usr/bin/env -S node --experimental-strip-types --disable-warning=ExperimentalWarning
 
-const path = require('node:path'); // eslint-disable-line @typescript-eslint/no-require-imports
-const { globSync } = require('glob'); // eslint-disable-line @typescript-eslint/no-require-imports
+import path from 'node:path';
+import { globSync } from 'glob';
 
 const customFontMap = {
   'FontAwesome5_Solid.ttf': 'FontAwesome5',
