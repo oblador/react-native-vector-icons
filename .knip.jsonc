@@ -38,8 +38,16 @@
       "entry": ["src/index.ts", "src/{11,12}.0/transform.ts"]
     },
     "packages/directory": {
-      "entry": ["src/index.tsx", "src/App.test.tsx", "src/reportWebVitals.ts", "src/setupTests.js"],
-      "ignoreDependencies": ["@testing-library/user-event"]
+      "entry": [
+        "src/index.tsx",
+        "src/App.test.tsx",
+        "src/reportWebVitals.ts",
+        "src/setupTests.js",
+        "bin/generate-font-styles.mts",
+        "bin/generate-glyphmap-index.mts"
+      ],
+      "ignoreDependencies": ["@testing-library/user-event"],
+      "ignoreBinaries": ["bin/generate-font-styles.mts", "bin/generate-glyphmap-index.mts"]
     },
     "packages/icon-explorer": {
       "entry": ["index.js", "react-native.config.js", "configPlugin.js", "src/Types.tsx"],
