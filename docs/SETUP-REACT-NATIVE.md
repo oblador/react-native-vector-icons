@@ -48,4 +48,6 @@ This needs more work, see details in [#1624](https://github.com/oblador/react-na
 
 ### Windows
 
-Windows support status is unknown. If you have information on this, please open a PR to update this document.
+1. Copy the needed fonts from `node_modules/react-native-vector-icons/Fonts/*` to `windows/<Project>/Assets/*`
+2. Open your solution on Visual Studio, right click on Assets, add Add Assets, then select your fonts, save and quit Visual Studio.
+3. Rebuild your project
