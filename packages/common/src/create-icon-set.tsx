@@ -76,6 +76,12 @@ export function createIconSet<GM extends Record<string, number>>(
     default: postScriptName,
   });
 
+  const styleOverrides: TextProps['style'] = {
+    fontFamily: fontReference,
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+  };
+
   const resolveGlyph = (name: keyof GM) => {
     const glyph = glyphMap[name] || '?';
 
@@ -124,12 +130,6 @@ export function createIconSet<GM extends Record<string, number>>(
     const styleDefaults = {
       fontSize: size,
       color,
-    };
-
-    const styleOverrides: TextProps['style'] = {
-      fontFamily: fontReference,
-      fontWeight: 'normal',
-      fontStyle: 'normal',
     };
 
     const newProps: TextProps = {
