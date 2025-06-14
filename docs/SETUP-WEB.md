@@ -80,30 +80,30 @@ To integrate the library with your web project using [webpack](https://webpack.j
 
 2.  In your JavaScript entry point, consume the font files and inject the necessary style tag:
 
-        ```js
-          import Icon from '@react-native-vector-icons/fontAwesome';
+    ```js
+    import Icon from '@react-native-vector-icons/fontAwesome';
 
-          // Generate the required CSS
-          import iconFont from '@react-native-vector-icons/fontawesome/fonts/FontAwesome.ttf';
-          const iconFontStyles = `@font-face {
-            src: url(${iconFont});
-            font-family: FontAwesome;
-          }`;
+    // Generate the required CSS
+    import iconFont from '@react-native-vector-icons/fontawesome/fonts/FontAwesome.ttf';
+    const iconFontStyles = `@font-face {
+      src: url(${iconFont});
+      font-family: FontAwesome;
+    }`;
 
-          // Create a stylesheet
-          const style = document.createElement('style');
-          style.type = 'text/css';
+    // Create a stylesheet
+    const style = document.createElement('style');
+    style.type = 'text/css';
 
-          // Append the iconFontStyles to the stylesheet
-          if (style.styleSheet) {
-            style.styleSheet.cssText = iconFontStyles;
-          } else {
-            style.appendChild(document.createTextNode(iconFontStyles));
-          }
+    // Append the iconFontStyles to the stylesheet
+    if (style.styleSheet) {
+      style.styleSheet.cssText = iconFontStyles;
+    } else {
+      style.appendChild(document.createTextNode(iconFontStyles));
+    }
 
-          // Inject the stylesheet into the document head
-          document.head.appendChild(style);
-          ```
+    // Inject the stylesheet into the document head
+    document.head.appendChild(style);
+    ```
 
     By following these steps, you will seamlessly integrate the vector icons
     library into your web project using [webpack](https://webpack.js.org/),
