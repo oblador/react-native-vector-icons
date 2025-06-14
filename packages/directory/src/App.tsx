@@ -1,4 +1,13 @@
-import React, { useCallback, useLayoutEffect, useRef } from 'react';
+import {
+  type ChangeEvent,
+  type FormEvent,
+  type HTMLProps,
+  memo,
+  useCallback,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import './App.css';
 
 import IconFamilies from './generated/glyphmapIndex.json'; // eslint-disable-line import/no-unresolved
@@ -7,17 +16,13 @@ const WAITING_INTERVAL = 300;
 
 type Match = { family: string; names: string[] };
 
-const Icon = React.memo(
-  ({ family, name, ...props }: { family: string; name: string } & React.HTMLProps<HTMLSpanElement>) => (
-    <span style={{ fontFamily: family }} {...props}>
-      {String.fromCodePoint(
-        IconFamilies[family as keyof typeof IconFamilies][
-          name as keyof (typeof IconFamilies)[keyof typeof IconFamilies]
-        ],
-      )}
-    </span>
-  ),
-);
+const Icon = memo(({ family, name, ...props }: { family: string; name: string } & HTMLProps<HTMLSpanElement>) => (
+  <span style={{ fontFamily: family }} {...props}>
+    {String.fromCodePoint(
+      IconFamilies[family as keyof typeof IconFamilies][name as keyof (typeof IconFamilies)[keyof typeof IconFamilies]],
+    )}
+  </span>
+));
 
 const FamiliesLinks = ({ matches = [] }: { matches: Match[] }) => (
   <div className="Family-Links-Container">
@@ -50,7 +55,7 @@ const SearchBar = ({ onSubmit }: { onSubmit: (text?: string) => void }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const handleSubmit = useCallback(
-    (e: React.FormEvent<HTMLFormElement>) => {
+    (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
       if (inputRef.current?.value) {
@@ -61,7 +66,7 @@ const SearchBar = ({ onSubmit }: { onSubmit: (text?: string) => void }) => {
   );
 
   const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    (e: ChangeEvent<HTMLInputElement>) => {
       e.preventDefault();
       if (timerRef.current) {
         clearInterval(timerRef.current);
@@ -130,7 +135,7 @@ const getMatches = (query: string) =>
     .filter(({ names }) => names.length);
 
 const App = () => {
-  const [matches, setMatches] = React.useState<Match[]>([]);
+  const [matches, setMatches] = useState<Match[]>([]);
   const handleSubmit = useCallback((text = '') => {
     setMatches(getMatches(text));
   }, []);
