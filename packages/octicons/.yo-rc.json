@@ -16,6 +16,6 @@
         "cleanup": true
       }
     },
-    "versions": [{ "rnvi": "12.0.0", "upstream": "9.15.0" }]
+    "versions": [{ "rnvi": "12.0.0", "upstream": "19.15.0" }, { "rnvi": "12.0.3", "upstream": "19.15.2" }]
   }
 }
