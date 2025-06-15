@@ -49,6 +49,7 @@ jobs:
       - name: Publish to NPM
         if: github.event.inputs.pre_release != 'true'
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
@@ -60,6 +61,7 @@ jobs:
       - name: Publish pre-release to NPM
         if: github.event.inputs.pre_release == 'true'
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
