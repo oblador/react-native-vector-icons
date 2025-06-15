@@ -1,3 +1,13 @@
+## 12.0.3 (2025-06-15)
+
+### 🩹 Fixes
+
+- update generator to fix the sign on the version tables ([#1775](https://github.com/oblador/react-native-vector-icons/pull/1775))
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 12.0.2 (2025-06-15)
 
 ### 🩹 Fixes

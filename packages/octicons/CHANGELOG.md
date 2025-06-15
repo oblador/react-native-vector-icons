@@ -1,3 +1,13 @@
+## 20.0.3 (2025-06-15)
+
+### 🩹 Fixes
+
+- upgrade Octicons to 19.15.2 ([#1777](https://github.com/oblador/react-native-vector-icons/pull/1777))
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 20.0.2 (2025-06-15)
 
 ### 🩹 Fixes
