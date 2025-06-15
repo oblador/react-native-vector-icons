@@ -1,0 +1,3 @@
+# Files that shouldn't cause new versions to be created
+pnpm-lock.yaml
+README.md
