@@ -1,3 +1,13 @@
+## 12.0.2 (2025-06-15)
+
+### 🩹 Fixes
+
+- new Ion Icons (no font changes) ([#1774](https://github.com/oblador/react-native-vector-icons/pull/1774))
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 12.0.1 (2025-06-15)
 
 ### 🩹 Fixes
