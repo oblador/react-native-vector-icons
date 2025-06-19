@@ -145,6 +145,10 @@
     "packages/zocial": {
       "ignore": ["src/NativeVectorIconsZocial.ts"],
       "ignoreDependencies": ["css-social-buttons"]
+    },
+    "packages/material-symbols": {
+      "ignore": ["src/NativeVectorIconsMaterialSymbols.ts"],
+      "ignoreDependencies": ["material-symbol-rnvi"]
     }
   }
 }

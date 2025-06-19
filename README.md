@@ -51,6 +51,7 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 - [`MaterialDesignIcons`](https://pictogrammers.com/library/mdi/) from MaterialDesignIcons.com (v7.4.47 including _7448_ icons)
 - [`Octicons`](https://primer.style/foundations/icons) designed by GitHub, Inc. (v19.15.2 with _333_ icons)
 - [`Lucide`](https://lucide.dev/) designed by Lucide, (v0.473.0 with _1548_ icons)
+- [`MaterialSymbol`](https://github.com/google/material-design-icons/tree/master/symbols/web/) from MaterialDesignIcons (with _3660_ icons)
 
 ### No longer maintained upstream
 
@@ -94,7 +95,7 @@ Please refer to the guide for [Expo](./docs/SETUP-EXPO.md), [React Native](./doc
 You can either use one of the bundled icons above or roll your own custom font.
 
 ```js
-import Icon from '@react-native-vector-icons/fontawesome';
+import Icon from "@react-native-vector-icons/fontawesome";
 const myIcon = <Icon name="rocket" size={30} color="#900" />;
 ```
 
@@ -131,11 +132,15 @@ By combining some of these you can create for example :
 Some fonts today use multiple styles, FontAwesome 5 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
 
 ```jsx
-import Icon from '@react-native-vector-icons/fontawesome5';
+import Icon from "@react-native-vector-icons/fontawesome5";
 
 const myIcon1 = <Icon name="comments" size={30} color="#900" />; // Defaults to solid
-const myIcon2 = <Icon name="comments" size={30} color="#900" iconType="solid" />;
-const myIcon3 = <Icon name="comments" size={30} color="#900" iconType="light" />; // Only in FA5 Pro
+const myIcon2 = (
+  <Icon name="comments" size={30} color="#900" iconType="solid" />
+);
+const myIcon3 = (
+  <Icon name="comments" size={30} color="#900" iconType="light" />
+); // Only in FA5 Pro
 ```
 
 ## Usage as PNG Image/Source Object
@@ -176,16 +181,16 @@ name and the value is either a UTF-8 character or it's character code.
 Font Book.app or similar to learn the name. Also pass the `fontFileName` argument for Android support.
 
 ```js
-import { createIconSet } from '@react-native-vector-icons/common';
-const glyphMap = { 'icon-name': 1234, test: '∆' };
+import { createIconSet } from "@react-native-vector-icons/common";
+const glyphMap = { "icon-name": 1234, test: "∆" };
 
 // use createIconSet() with object parameter
 // or use positional parameters for compatibility with version <= 10: `createIconSet(glyphMap, fontFamily[, fontFile])`
 const Icon = createIconSet(glyphMap, {
-   postScriptName: 'FontName',
-   fontFileName: 'font-name.ttf',
-   fontSource: require('../fonts/font-name.ttf') // optional, for dynamic loading. Can also be a local file uri.
-})
+  postScriptName: "FontName",
+  fontFileName: "font-name.ttf",
+  fontSource: require("../fonts/font-name.ttf"), // optional, for dynamic loading. Can also be a local file uri.
+});
 ```
 
 If you aren't using dynamic font loading you need to make sure your font is copied into your bundle.
@@ -227,7 +232,7 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 ### Basic Example
 
 ```js
-import Icon from '@react-native-vector-icons/ionicons';
+import Icon from "@react-native-vector-icons/ionicons";
 
 function ExampleView(props) {
   return <Icon name="ios-person" size={30} color="#4F8EF7" />;
@@ -237,8 +242,8 @@ function ExampleView(props) {
 ### Inline Icons
 
 ```js
-import { Text } from 'react-native';
-import Icon from '@react-native-vector-icons/ionicons';
+import { Text } from "react-native";
+import Icon from "@react-native-vector-icons/ionicons";
 
 function ExampleView(props) {
   return (
@@ -273,8 +278,8 @@ Create `__mocks__/@react-native-vector-icons/common.js`:
 ```js
 // Mock the entire common library so there are no native module loading errors
 module.exports = {
-  createIconSet: () => "icon"
-}
+  createIconSet: () => "icon",
+};
 ```
 
 ## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
