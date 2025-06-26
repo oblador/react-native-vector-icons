@@ -35,6 +35,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
+          node-version: lts/*
           cache: pnpm
 
       - name: Install dependencies
@@ -48,6 +49,7 @@ jobs:
       - name: Publish to NPM
         if: github.event.inputs.pre_release != 'true'
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
@@ -59,6 +61,7 @@ jobs:
       - name: Publish pre-release to NPM
         if: github.event.inputs.pre_release == 'true'
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
@@ -83,6 +86,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
+          node-version: lts/*
           cache: pnpm
 
       - name: Install dependencies
@@ -90,11 +94,13 @@ jobs:
         working-directory: packages/directory
 
       - name: Build directory
-        run: pnpm run build
         working-directory: packages/directory
+        run: |
+          pnpm prepare
+          pnpm run build
 
       - name: Publish static assets to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: packages/directory/build

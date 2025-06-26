@@ -29,15 +29,28 @@ const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
   });
 
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const RegularIcon = createIconSet(regularGM, 'FontAwesome5Free-Regular', 'FontAwesome5_Regular.ttf', fontStyle('400'));
+const RegularIcon = createIconSet(regularGM, {
+  postScriptName: 'FontAwesome5Free-Regular',
+  fontFileName: 'FontAwesome5_Regular.ttf',
+  fontSource: require('../fonts/FontAwesome5_Regular.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontStyle: fontStyle('400')
+});
 export type FontAwesome5RegularIconName = ComponentProps<typeof RegularIcon>['name'];
-
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const SolidIcon = createIconSet(solidGM, 'FontAwesome5Free-Solid', 'FontAwesome5_Solid.ttf', fontStyle('900'));
+const SolidIcon = createIconSet(solidGM, {
+  postScriptName: 'FontAwesome5Free-Solid',
+  fontFileName: 'FontAwesome5_Solid.ttf',
+  fontSource: require('../fonts/FontAwesome5_Solid.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontStyle: fontStyle('900')
+});
 export type FontAwesome5SolidIconName = ComponentProps<typeof SolidIcon>['name'];
-
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const BrandIcon = createIconSet(brandGM, 'FontAwesome5Brands-Regular', 'FontAwesome5_Brands.ttf', fontStyle('400'));
+const BrandIcon = createIconSet(brandGM, {
+  postScriptName: 'FontAwesome5Brands-Regular',
+  fontFileName: 'FontAwesome5_Brands.ttf',
+  fontSource: require('../fonts/FontAwesome5_Brands.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontStyle: fontStyle('400')
+});
 export type FontAwesome5BrandIconName = ComponentProps<typeof BrandIcon>['name'];
 
 type Props =
@@ -49,6 +62,9 @@ type Props =
 export const FontAwesome5 = (props: Props) => {
   const { iconStyle, name } = props;
   if (!iconStyle) {
+    if (!glyphValidator(name, 'regular')) {
+      console.warn(`noSuchGlyph: glyph ${String(name)} does not exist for 'regular' icon type for FontAwesome5`);
+    }
     return <RegularIcon {...props} />;
   }
 

@@ -19,6 +19,7 @@ jobs:
           run_install: false
       - uses: actions/setup-node@v4
         with:
+          node-version: lts/*
           cache: pnpm
       - name: Build
         run: pnpm install
@@ -38,6 +39,7 @@ jobs:
           run_install: false
       - uses: actions/setup-node@v4
         with:
+          node-version: lts/*
           cache: pnpm
       - name: Build
         run: pnpm install
@@ -57,7 +59,9 @@ jobs:
           run_install: false
       - uses: actions/setup-node@v4
         with:
+          node-version: lts/*
           cache: pnpm
+
       - name: Build
         run: pnpm install
 
@@ -76,6 +80,7 @@ jobs:
           run_install: false
       - uses: actions/setup-node@v4
         with:
+          node-version: lts/*
           cache: pnpm
       - name: Build
         run: pnpm install

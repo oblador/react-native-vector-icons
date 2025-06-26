@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/octicons",
-  "version": "20.0.0",
+  "version": "20.0.3",
   "description": "Octicons font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
@@ -89,7 +89,7 @@
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
     "typescript": "^5.7.2",
-    "@primer/octicons": "19.15.0"
+    "@primer/octicons": "19.15.2"
   },
   "peerDependencies": {
     "react": "*",

@@ -1,19 +1,23 @@
 import type { FontSource } from './types';
 
+type ExpoAssetModule = {
+  // definition from
+  // https://github.com/expo/expo/blob/1f5a5991d14aad09282d1ce1612b44d30e7e7d3d/packages/expo-asset/ios/AssetModule.swift#L23
+  downloadAsync: (uri: string, hash: string | undefined, type: string) => Promise<string>;
+};
+
+type ExpoFontLoaderModule = {
+  // definition from
+  // https://github.com/expo/expo/blob/1f5a5991d14aad09282d1ce1612b44d30e7e7d3d/packages/expo-font/ios/FontLoaderModule.swift#L18
+  getLoadedFonts: () => string[];
+  loadAsync: (fontFamilyAlias: string, fileUri: string) => Promise<void>;
+};
+
 declare global {
   interface ExpoGlobal {
     modules: {
-      ExpoAsset: {
-        // definition from
-        // https://github.com/expo/expo/blob/1f5a5991d14aad09282d1ce1612b44d30e7e7d3d/packages/expo-asset/ios/AssetModule.swift#L23
-        downloadAsync: (uri: string, hash: string | undefined, type: string) => Promise<string>;
-      };
-      ExpoFontLoader: {
-        // definition from
-        // https://github.com/expo/expo/blob/1f5a5991d14aad09282d1ce1612b44d30e7e7d3d/packages/expo-font/ios/FontLoaderModule.swift#L18
-        getLoadedFonts: () => string[];
-        loadAsync: (fontFamilyAlias: string, fileUri: string) => Promise<void>;
-      };
+      ExpoAsset?: ExpoAssetModule;
+      ExpoFontLoader?: ExpoFontLoaderModule;
     };
   }
 
@@ -21,10 +25,34 @@ declare global {
   var expo: ExpoGlobal | undefined;
 }
 
+type ExpoGlobalType = {
+  modules: {
+    ExpoAsset: ExpoAssetModule;
+    ExpoFontLoader: ExpoFontLoaderModule;
+  };
+};
+
+// biome-ignore lint/suspicious/noExplicitAny: this is used internally with globalThis
+function getIsDynamicLoadingSupported(globalObj: any): globalObj is {
+  expo: ExpoGlobalType;
+} {
+  return (
+    globalObj?.expo &&
+    typeof globalObj.expo.modules?.ExpoAsset?.downloadAsync === 'function' &&
+    typeof globalObj.expo.modules?.ExpoFontLoader?.getLoadedFonts === 'function' &&
+    typeof globalObj.expo.modules?.ExpoFontLoader?.loadAsync === 'function'
+  );
+}
+
+export function assertExpoModulesPresent(globalObj: unknown): asserts globalObj is { expo: ExpoGlobalType } {
+  if (!getIsDynamicLoadingSupported(globalObj)) {
+    throw new Error('Dynamic font loading for Expo is not available.');
+  }
+}
+
 const hasNecessaryExpoModules = !!globalThis.expo?.modules?.ExpoAsset && !!globalThis.expo?.modules?.ExpoFontLoader;
 
-const hasNecessaryExpoFeatures =
-  hasNecessaryExpoModules && typeof globalThis.expo?.modules.ExpoFontLoader.getLoadedFonts === 'function';
+const hasNecessaryExpoFeatures = getIsDynamicLoadingSupported(globalThis);
 
 let dynamicFontLoadingEnabled = hasNecessaryExpoFeatures;
 

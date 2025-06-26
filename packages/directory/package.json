@@ -4,26 +4,28 @@
   "private": true,
   "homepage": "https://oblador.github.io/react-native-vector-icons",
   "dependencies": {
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.1.0",
-    "@testing-library/user-event": "^14.5.2",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
     "@types/node": "^20.17.11",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "glob": "^11.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^5.7.2",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "FAST_REFRESH=false react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-glyphmap-index": "mkdir -p src/generated && node bin/generate-glyphmap-index.js > src/generated/glyphmapIndex.json",
-    "generate-font-index": "mkdir -p src/generated/fonts && cp ../*/fonts/*.ttf src/generated/fonts && node bin/generate-font-styles.js > src/generated/fonts.css",
+    "generate-glyphmap-index": "mkdir -p src/generated &&  bin/generate-glyphmap-index.mts > src/generated/glyphmapIndex.json",
+    "generate-font-index": "mkdir -p src/generated/fonts && cp ../*/fonts/*.ttf src/generated/fonts && bin/generate-font-styles.mts > src/generated/fonts.css",
     "prepare": "pnpm run generate-glyphmap-index && pnpm run generate-font-index"
   },
   "browserslist": {
@@ -37,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@testing-library/dom": "^10.4.0"
   }
 }

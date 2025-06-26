@@ -32,8 +32,16 @@ const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
 <% Object.entries(meta.styles).forEach(([styleName, { family, name, weight }]) => { -%>
 <% upperStyleName = styleName.charAt(0).toUpperCase() + styleName.slice(1) -%>
 // biome-ignore format: We want these to be consistent and we are fine with single for all
-const <%= upperStyleName %>Icon = createIconSet(<%= styleName %>GM, '<%= family %>', '<%= name %>', fontStyle('<%= weight %>'));
+const <%= upperStyleName %>Icon = createIconSet(<%= styleName %>GM, {
+  postScriptName: '<%= family %>',
+  fontFileName: '<%= name %>',
+<% if (!packageName.endsWith('-pro')) { -%>
+  fontSource: require('../fonts/<%= name %>'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+<% } -%>
+  fontStyle: fontStyle('<%= weight %>')
+});
 export type <%= className %><%= upperStyleName %>IconName = ComponentProps<typeof <%= upperStyleName %>Icon>['name'];
+<% }) -%>
 
 <% }) -%>
 type Props =
@@ -46,6 +54,9 @@ type Props =
 export const <%= className %> = (props: Props) => {
   const { iconStyle, name } = props;
   if (!iconStyle) {
+    if (!glyphValidator(name, 'regular')) {
+      console.warn(`noSuchGlyph: glyph ${String(name)} does not exist for 'regular' icon type for <%= className %>`);
+    }
     return <<%= upperDefaultStyleName %>Icon {...props} />;
   }
 
