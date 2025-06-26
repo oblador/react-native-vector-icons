@@ -9,13 +9,17 @@
  * Usage: <Foundation name="icon-name" size={20} color="#4F8EF7" />
  */
 
+import type { ComponentProps } from 'react';
+
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Foundation.json';
 
-const Icon = createIconSet(glyphMap, {
+export const Foundation = createIconSet(glyphMap, {
   postScriptName: 'fontcustom',
   fontFileName: 'Foundation.ttf',
   fontSource: require('../fonts/Foundation.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type FoundationIconName = ComponentProps<typeof Foundation>['name'];
+
+export default Foundation;
