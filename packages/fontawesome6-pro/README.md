@@ -7,13 +7,13 @@ account and then access the `Services` tab.
 
 Run `npx fa-upgrade6` and enter the token
 when asked to in order to upgrade to the Pro version. It will install the fonts
-in your repo in the `rnvi-fonts` directory but the folder can be customized by
+in your repo in the `rnvi-fonts/fontawesome6-pro` directory but the folder can be customized by
 setting it when executing the command: `npx fa-upgrade6 [destination]`.
 
 ### Manually
 
 If the shell script does not work you can install the Pro version manually.
-All you really need to do is adding the Pro fonts to the `rnvi-fonts` directory.
+All you really need to do is adding the Pro fonts to the `rnvi-fonts/fontawesome6-pro` directory.
 
 ## Usage
 
