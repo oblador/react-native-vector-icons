@@ -6,6 +6,9 @@ TEMP_DIR_PATH=""
 FONTAWESOME_PRO_DIR_NAME=""
 VERSION=$1
 DEST_DIR_PATH=${2:-"rnvi-fonts"}
+if [ "$VERSION" = "5" ] || [ "$VERSION" = "6" ]; then
+  DEST_DIR_PATH="${DEST_DIR_PATH}/fontawesome${VERSION}-pro"
+fi
 FONT_NAME="Font Awesome Pro ${VERSION}"
 
 setup_npm_config() {
