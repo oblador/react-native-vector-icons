@@ -131,7 +131,7 @@ By combining some of these you can create for example :
 Some fonts today use multiple styles, FontAwesome 5 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
 
 ```jsx
-import Icon from '@react-native-vector-icons/fontawesome5';
+import Icon from '@react-native-vector-icons/fontawesome6';
 
 const myIcon1 = <Icon name="comments" size={30} color="#900" />; // Defaults to solid
 const myIcon2 = <Icon name="comments" size={30} color="#900" iconType="solid" />;
