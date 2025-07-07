@@ -2,16 +2,14 @@
 import React, { forwardRef, type Ref, useEffect } from 'react';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { PixelRatio, Platform, Text, type TextProps, type TextStyle, processColor } from 'react-native';
+import { Platform, Text, type TextProps, type TextStyle } from 'react-native';
 
 import createIconSourceCache from './create-icon-source-cache';
+import { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE } from './defaults';
 import { dynamicLoader } from './dynamicLoading/dynamic-font-loading';
 import { isDynamicLoadingEnabled } from './dynamicLoading/dynamic-loading-setting';
 import type { FontSource } from './dynamicLoading/types';
-import { ensureGetImageAvailable } from './get-image-library';
-
-export const DEFAULT_ICON_SIZE = 12;
-export const DEFAULT_ICON_COLOR = 'black';
+import { getImageSource as getImageSourceImpl, getImageSourceSync as getImageSourceSyncImpl } from './get-image-source';
 
 type ValueData = { uri: string; scale: number };
 type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData | undefined;
@@ -65,7 +63,11 @@ export function createIconSet<GM extends Record<string, number>>(
 ): IconComponent<GM> {
   const { postScriptName, fontFileName, fontStyle } =
     typeof postScriptNameOrOptions === 'string'
-      ? { postScriptName: postScriptNameOrOptions, fontFileName: fontFileNameParam, fontStyle: fontStyleParam }
+      ? {
+          postScriptName: postScriptNameOrOptions,
+          fontFileName: fontFileNameParam,
+          fontStyle: fontStyleParam,
+        }
       : postScriptNameOrOptions;
 
   const fontBasename = fontFileName ? fontFileName.replace(/\.(otf|ttf)$/, '') : postScriptName;
@@ -83,13 +85,13 @@ export function createIconSet<GM extends Record<string, number>>(
   };
 
   const resolveGlyph = (name: keyof GM) => {
-    const glyph = glyphMap[name] || '?';
+    const glyph = glyphMap[name];
 
     if (typeof glyph === 'number') {
       return String.fromCodePoint(glyph);
     }
 
-    return glyph;
+    return '?';
   };
 
   const Icon = ({
@@ -153,69 +155,15 @@ export function createIconSet<GM extends Record<string, number>>(
 
   const imageSourceCache = createIconSourceCache();
 
-  const getImageSourceSync = (
-    name: keyof GM,
-    size = DEFAULT_ICON_SIZE,
-    color: TextStyle['color'] = DEFAULT_ICON_COLOR,
-  ) => {
-    const NativeIconAPI = ensureGetImageAvailable();
-
-    const glyph = resolveGlyph(name);
-    const processedColor = processColor(color);
-    const cacheKey = `${glyph}:${size}:${String(processedColor)}`;
-
-    if (imageSourceCache.has(cacheKey)) {
-      // FIXME: Should this check if it's an error and throw it again?
-      return imageSourceCache.get(cacheKey);
+  const getImageSource: GetImageSourceIconFunc<keyof GM> = async (name, size, color) => {
+    if (typeof postScriptNameOrOptions === 'object' && typeof postScriptNameOrOptions.fontSource !== 'undefined') {
+      await dynamicLoader.loadFontAsync(fontReference, postScriptNameOrOptions.fontSource);
     }
-
-    try {
-      const imagePath = NativeIconAPI.getImageForFontSync(
-        fontReference,
-        glyph,
-        size,
-        processedColor as number, // FIXME what if a non existant colour was passed in?
-      );
-      const value = { uri: imagePath, scale: PixelRatio.get() };
-      imageSourceCache.setValue(cacheKey, value);
-      return value;
-    } catch (error) {
-      imageSourceCache.setError(cacheKey, error as Error);
-      throw error;
-    }
+    return getImageSourceImpl(imageSourceCache, fontReference, resolveGlyph(name), size, color);
   };
 
-  const getImageSource = async (
-    name: keyof GM,
-    size = DEFAULT_ICON_SIZE,
-    color: TextStyle['color'] = DEFAULT_ICON_COLOR,
-  ) => {
-    const NativeIconAPI = ensureGetImageAvailable();
-
-    const glyph = resolveGlyph(name);
-    const processedColor = processColor(color);
-    const cacheKey = `${glyph}:${size}:${String(processedColor)}`;
-
-    if (imageSourceCache.has(cacheKey)) {
-      // FIXME: Should this check if it's an error and throw it again?
-      return imageSourceCache.get(cacheKey);
-    }
-
-    try {
-      const imagePath = await NativeIconAPI.getImageForFont(
-        fontReference,
-        glyph,
-        size,
-        processedColor as number, // FIXME what if a non existant colour was passed in?
-      );
-      const value = { uri: imagePath, scale: PixelRatio.get() };
-      imageSourceCache.setValue(cacheKey, value);
-      return value;
-    } catch (error) {
-      imageSourceCache.setError(cacheKey, error as Error);
-      throw error;
-    }
-  };
+  const getImageSourceSync: GetImageSourceSyncIconFunc<keyof GM> = (name, size, color) =>
+    getImageSourceSyncImpl(imageSourceCache, fontReference, resolveGlyph(name), size, color);
 
   const IconNamespace = Object.assign(WrappedIcon, {
     getImageSource,

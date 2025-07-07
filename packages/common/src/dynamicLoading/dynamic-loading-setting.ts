@@ -13,11 +13,23 @@ type ExpoFontLoaderModule = {
   loadAsync: (fontFamilyAlias: string, fileUri: string) => Promise<void>;
 };
 
+type ExpoFontUtilsModule = {
+  renderToImageAsync: (
+    glyph: string,
+    options: {
+      fontFamily?: string;
+      size?: number;
+      color?: number;
+    },
+  ) => Promise<string>;
+};
+
 declare global {
   interface ExpoGlobal {
     modules: {
       ExpoAsset?: ExpoAssetModule;
       ExpoFontLoader?: ExpoFontLoaderModule;
+      ExpoFontUtils?: ExpoFontUtilsModule;
     };
   }
 
@@ -42,6 +54,17 @@ function getIsDynamicLoadingSupported(globalObj: any): globalObj is {
     typeof globalObj.expo.modules?.ExpoFontLoader?.getLoadedFonts === 'function' &&
     typeof globalObj.expo.modules?.ExpoFontLoader?.loadAsync === 'function'
   );
+}
+
+// biome-ignore lint/suspicious/noExplicitAny: this is used internally with globalThis
+export function getIsRenderToImageSupported(globalObj: any): globalObj is {
+  expo: {
+    modules: {
+      ExpoFontUtils: ExpoFontUtilsModule;
+    };
+  };
+} {
+  return globalObj?.expo && typeof globalObj.expo.modules?.ExpoFontUtils?.renderToImageAsync === 'function';
 }
 
 export function assertExpoModulesPresent(globalObj: unknown): asserts globalObj is { expo: ExpoGlobalType } {

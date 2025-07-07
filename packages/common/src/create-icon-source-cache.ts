@@ -12,8 +12,6 @@ export default function createIconSourceCache() {
 
   const setError = (key: string, error: Error) => cache.set(key, { type: TYPE_ERROR, data: error });
 
-  const has = (key: string) => cache.has(key);
-
   const get = (key: string) => {
     const value = cache.get(key);
     if (!value) {
@@ -27,5 +25,5 @@ export default function createIconSourceCache() {
     return data;
   };
 
-  return { setValue, setError, has, get };
+  return { setValue, setError, get };
 }
