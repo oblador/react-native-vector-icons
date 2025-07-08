@@ -101,7 +101,6 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "codegen",
       [
         "commonjs",
         {
@@ -125,12 +124,8 @@
   },
   "codegenConfig": {
     "name": "RNVectorIconsSpec",
-    "type": "all",
+    "type": "modules",
     "jsSrcsDir": "src",
-    "outputDir": {
-      "ios": "ios/generated",
-      "android": "android/generated"
-    },
     "android": {
       "javaPackageName": "com.reactnativevectoricons.get_image"
     },
