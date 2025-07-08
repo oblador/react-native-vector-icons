@@ -84,7 +84,7 @@
     "@react-native-vector-icons/common": "workspace:^"
   },
   "devDependencies": {
-    "@types/react": "^18.3.18",
+    "@types/react": "^19.0.12",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
