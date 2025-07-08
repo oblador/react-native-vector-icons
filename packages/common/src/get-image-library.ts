@@ -31,7 +31,7 @@ export const ensureGetImageAvailable = () => {
         }),
       getImageForFontSync: () => {
         throw new Error(
-          'You are attempting to call `getImageForFontSync`. Expo dev client is required for this. Alternatively, call `getImageForFont` instead.',
+          'You are attempting to call `getImageForFontSync`. Expo dev client with `@react-native-vector-icons/get-image` installed is required for this. Alternatively, call `getImageForFont` instead.',
         );
       },
     };
