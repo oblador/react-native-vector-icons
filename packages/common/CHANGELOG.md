@@ -25,6 +25,8 @@
 
 # 12.0.0 (2025-05-04)
 
+With v12.0 you can remove `@react-native-vector-icons/common` from your `package.json` - unless you use it directly.
+
 ### 🚀 Features
 
 - ⚠️  make font packages responsible for font copying ([#1711](https://github.com/oblador/react-native-vector-icons/pull/1711))
