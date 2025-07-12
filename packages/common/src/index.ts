@@ -1,4 +1,4 @@
-export { createIconSet, DEFAULT_ICON_SIZE, DEFAULT_ICON_COLOR } from './create-icon-set';
+export { createIconSet } from './create-icon-set';
 export type { IconProps, CreateIconSetOptions } from './create-icon-set';
 export {
   setDynamicLoadingEnabled,
@@ -6,3 +6,4 @@ export {
   isDynamicLoadingSupported,
   setDynamicLoadingErrorCallback,
 } from './dynamicLoading/dynamic-loading-setting';
+export { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE } from './defaults';
