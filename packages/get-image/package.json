@@ -83,15 +83,12 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "dependencies": {
-    "@react-native-community/cli-tools": "^15.1.2"
-  },
   "devDependencies": {
-    "@types/react": "^18.3.18",
+    "@types/react": "^19.0.12",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
-    "react": "18.3.1",
-    "react-native": "0.76.9",
+    "react": "19.0.0",
+    "react-native": "0.79.0",
     "react-native-builder-bob": "^0.35.2",
     "turbo": "^1.13.4",
     "typescript": "^5.7.2"
@@ -104,7 +101,6 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "codegen",
       [
         "commonjs",
         {
@@ -128,12 +124,8 @@
   },
   "codegenConfig": {
     "name": "RNVectorIconsSpec",
-    "type": "all",
+    "type": "modules",
     "jsSrcsDir": "src",
-    "outputDir": {
-      "ios": "ios/generated",
-      "android": "android/generated"
-    },
     "android": {
       "javaPackageName": "com.reactnativevectoricons.get_image"
     },

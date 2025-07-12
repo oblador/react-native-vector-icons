@@ -45,7 +45,7 @@
     "@react-native-vector-icons/octicons": "workspace:*",
     "@react-native-vector-icons/simple-line-icons": "workspace:*",
     "@react-native-vector-icons/zocial": "workspace:*",
-    "react": "18.3.1",
+    "react": "19.0.0",
     "react-native": "0.79.0",
     "react-native-animatable": "^1.4.0"
   },
@@ -68,7 +68,7 @@
     "@rnx-kit/metro-config": "^2.0.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.17.11",
-    "@types/react": "^18.0.0",
+    "@types/react": "^19.0.12",
     "@types/react-test-renderer": "^19.0.0",
     "babel-jest": "^29.7.0",
     "eslint": "^8.57.1",
