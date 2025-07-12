@@ -69,14 +69,14 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
 
 ## Installation
 
-1. Install the packages for the icons you want use
+1. Install the packages for the icons you want to use
 
    ```sh
-   npm install --save @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evil-icons
+   npm install @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evil-icons
    ```
 
 1. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
-1. If you are using one of the following fonts refer to their guides for further instructions
+1. If you are using one of the following fonts, refer to their guides for further instructions
 
 - [FontAwesome 6](packages/fontawesome6/README.md)
 - [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
