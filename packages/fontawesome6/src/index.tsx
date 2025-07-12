@@ -7,10 +7,11 @@
  * FontAwesome6 icon set component.
  * Usage: <FontAwesome6 name="icon-name" size={20} color="#4F8EF7" />
  */
+
 import type { ComponentProps } from 'react';
 import { Platform, type TextStyle } from 'react-native';
 
-import { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE, createIconSet } from '@react-native-vector-icons/common';
+import { createIconSet, DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE } from '@react-native-vector-icons/common';
 
 import brandGM from '../glyphmaps/FontAwesome6_brand.json';
 import regularGM from '../glyphmaps/FontAwesome6_regular.json';

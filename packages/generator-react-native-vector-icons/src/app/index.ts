@@ -7,7 +7,6 @@ import path from 'node:path';
 import npmFetch from 'npm-registry-fetch';
 import getAuthToken from 'registry-auth-token';
 import semver from 'semver';
-
 import Generator, { type BaseOptions } from 'yeoman-generator';
 
 import { generateGlyphmap } from './generateGlyphmap.js';

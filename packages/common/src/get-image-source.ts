@@ -1,5 +1,6 @@
 import type { TextStyle } from 'react-native';
 import { PixelRatio, processColor } from 'react-native';
+
 import type createIconSourceCache from './create-icon-source-cache';
 import { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE } from './defaults';
 import { ensureGetImageAvailable } from './get-image-library';

@@ -10,8 +10,10 @@ import FontAwesome5 from '@react-native-vector-icons/fontawesome5';
 import FontAwesome5Pro from '@react-native-vector-icons/fontawesome5-pro';
 import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
 import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
+import createFontelloIconSet from '@react-native-vector-icons/fontello';
 import Fontisto from '@react-native-vector-icons/fontisto';
 import Foundation from '@react-native-vector-icons/foundation';
+import createIcoMoonIconSet from '@react-native-vector-icons/icomoon';
 import Ionicons from '@react-native-vector-icons/ionicons';
 import Lucide from '@react-native-vector-icons/lucide';
 import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
@@ -19,9 +21,6 @@ import MaterialIcons from '@react-native-vector-icons/material-icons';
 import Octicons from '@react-native-vector-icons/octicons';
 import SimpleLineIcons from '@react-native-vector-icons/simple-line-icons';
 import Zocial from '@react-native-vector-icons/zocial';
-
-import createFontelloIconSet from '@react-native-vector-icons/fontello';
-import createIcoMoonIconSet from '@react-native-vector-icons/icomoon';
 
 import FontelloConfig from './configs/fontello.config.json';
 import IcoMoonConfig from './configs/icomoon.config.json';

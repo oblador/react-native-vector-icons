@@ -10,6 +10,7 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
+
 import glyphMap from '../glyphmaps/Lucide.json';
 
 export const Lucide = createIconSet(glyphMap, {
