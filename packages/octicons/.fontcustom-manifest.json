@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "66fc7a7b7945fcdc96bc3df691d5a8d3d5bd6f9661ebc305bdccd0d2df665f8c",
-    "current": "66fc7a7b7945fcdc96bc3df691d5a8d3d5bd6f9661ebc305bdccd0d2df665f8c"
+    "previous": "0fc9ef0a8dbb07d21032f73ec0473fdcfe154f17b2d80d8d9e5d77db8a394b91",
+    "current": "0fc9ef0a8dbb07d21032f73ec0473fdcfe154f17b2d80d8d9e5d77db8a394b91"
   },
   "fonts": [
     "Octicons/Octicons.ttf",
@@ -1110,6 +1110,10 @@
     "sort-desc": {
       "codepoint": 61964,
       "source": "renamedSVGs/sort-desc.svg"
+    },
+    "sparkle": {
+      "codepoint": 62026,
+      "source": "renamedSVGs/sparkle.svg"
     },
     "sparkle-fill": {
       "codepoint": 61965,

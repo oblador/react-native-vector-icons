@@ -441,7 +441,7 @@ export default class extends Generator<Arguments> {
     if (data.versions) {
       const versionTable: string[] = [];
       data.versions.forEach((version) => {
-        versionTable.push(`| >= ${version.rnvi} | ${version.upstream} |`);
+        versionTable.push(`| > ${version.rnvi} | ${version.upstream} |`);
       });
 
       data.versionTable = versionTable.join('\n');
