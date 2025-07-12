@@ -1,3 +1,21 @@
+## 20.1.0 (2025-07-12)
+
+### 🚀 Features
+
+- export types for icon names ([#1761](https://github.com/oblador/react-native-vector-icons/pull/1761))
+
+### 🩹 Fixes
+
+- upgrade Octicons to 19.15.3 ([#1795](https://github.com/oblador/react-native-vector-icons/pull/1795))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/common to 12.1.0
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 20.0.3 (2025-06-15)
 
 ### 🩹 Fixes

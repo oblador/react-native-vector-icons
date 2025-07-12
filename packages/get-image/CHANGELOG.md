@@ -1,3 +1,13 @@
+## 12.1.0 (2025-07-12)
+
+### 🩹 Fixes
+
+- **web:** throw a meaningful error in getImageForFont ([#1792](https://github.com/oblador/react-native-vector-icons/pull/1792))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.0.2 (2025-06-15)
 
 ### 🩹 Fixes

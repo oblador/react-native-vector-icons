@@ -1,3 +1,21 @@
+## 12.1.0 (2025-07-12)
+
+### 🚀 Features
+
+- export types for icon names ([#1761](https://github.com/oblador/react-native-vector-icons/pull/1761))
+
+### 🩹 Fixes
+
+- upgrade lucide to 0.525.0 ([#1798](https://github.com/oblador/react-native-vector-icons/pull/1798))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/common to 12.1.0
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 12.0.2 (2025-06-15)
 
 ### 🩹 Fixes

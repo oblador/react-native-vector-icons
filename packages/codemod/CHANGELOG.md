@@ -1,3 +1,7 @@
+## 12.1.0 (2025-07-12)
+
+This was a version bump only for @react-native-vector-icons/codemod to align it with other projects, there were no code changes.
+
 ## 12.0.2 (2025-06-15)
 
 ### 🩹 Fixes

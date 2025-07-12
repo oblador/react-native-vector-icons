@@ -1,3 +1,17 @@
+## 12.1.0 (2025-07-12)
+
+### 🚀 Features
+
+- allow using expo font for getImageSource ([#1788](https://github.com/oblador/react-native-vector-icons/pull/1788))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/get-image to 12.1.0
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.0.2 (2025-06-15)
 
 ### 🩹 Fixes
