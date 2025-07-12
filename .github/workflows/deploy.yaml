@@ -55,7 +55,7 @@ jobs:
           if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
             pnpm run release --dry-run
           else
-            pnpm run release
+            pnpm run release --yes
           fi
 
       - name: Publish pre-release to NPM
