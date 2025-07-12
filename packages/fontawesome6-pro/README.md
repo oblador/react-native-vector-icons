@@ -7,8 +7,8 @@ account and then access the `Services` tab.
 
 Run `npx fa-upgrade6` and enter the token
 when asked to in order to upgrade to the Pro version. It will install the fonts
-in your repo in the `rnvi-fonts/fontawesome6-pro` directory but the folder can be customized by
-setting it when executing the command: `npx fa-upgrade6 [destination]`.
+in your repo in the `rnvi-fonts/fontawesome6-pro` directory. The top-level `rnvi-fonts` folder name can be customized by
+setting it when executing the command: `npx fa-upgrade6 [destination]` and setting the `fontDir` in `package.json`.
 
 ### Manually
 
@@ -20,7 +20,7 @@ All you really need to do is adding the Pro fonts to the `rnvi-fonts/fontawesome
 Using the standard icons works just like the standard icons in this library.
 
 ```javascript
-import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
+import FontAwesome6Pro from "@react-native-vector-icons/fontawesome6-pro";
 
 const icon = <FontAwesome6Pro name="comments" />;
 ```
@@ -29,7 +29,7 @@ Something special about the FontAwesome6Pro class is that you can also pass prop
 to change the style of the icon:
 
 ```javascript
-import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
+import FontAwesome6Pro from "@react-native-vector-icons/fontawesome6-pro";
 
 const icon = <FontAwesome6Pro name="comments" iconStyle="solid" />;
 const icon = <FontAwesome6Pro name="git" iconStyle="brand" />;
@@ -57,10 +57,12 @@ No specified type indicates Regular font.
 font is separated into different files. An extra argument to specify the font
 style is required.
 
-```javascript
-import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
+Use this to select which style the generated image should have:
 
-FontAwesome6Pro.getImageSource('solid', 'comments', 30, '#000').then(
-  (source) => this.setState({ image: source })
+```javascript
+import FontAwesome6Pro from "@react-native-vector-icons/fontawesome6-pro";
+
+FontAwesome6Pro.getImageSource("solid", "comments", 30, "#000").then((source) =>
+  this.setState({ image: source }),
 );
 ```
