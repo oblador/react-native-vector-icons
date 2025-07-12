@@ -10,6 +10,9 @@ import metadata from './glyphmaps/FontAwesome6Free_meta.json';
 
 export { FA6Style } from './lib/create-icon-set-from-fontawesome6';
 
+/**
+ * @deprecated react-native-vector-icons package has moved to a new model of per-icon-family packages. See the https://github.com/oblador/react-native-vector-icons/blob/master/MIGRATION.md on how to migrate
+ */
 const iconSet = createFA6iconSet(glyphMap, metadata, false);
 
 export default iconSet;
