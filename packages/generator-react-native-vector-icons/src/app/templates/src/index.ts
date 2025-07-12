@@ -12,10 +12,12 @@
 import { createIconSet } from '@react-native-vector-icons/<%= commonPackage %>';
 import glyphMap from '../glyphmaps/<%= fontFileName %>.json';
 
-const Icon = createIconSet(glyphMap, {
+export const <%= className %> = createIconSet(glyphMap, {
   postScriptName: '<%= postScriptName %>',
   fontFileName: '<%= fontFileName %>.ttf',
   fontSource: require('../fonts/<%= fontFileName %>.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type <%= className %>IconName = keyof typeof glyphMap;
+
+export default <%= className %>;

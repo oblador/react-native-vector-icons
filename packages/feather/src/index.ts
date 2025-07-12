@@ -12,10 +12,12 @@
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/Feather.json';
 
-const Icon = createIconSet(glyphMap, {
+export const Feather = createIconSet(glyphMap, {
   postScriptName: 'Feather',
   fontFileName: 'Feather.ttf',
   fontSource: require('../fonts/Feather.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type FeatherIconName = keyof typeof glyphMap;
+
+export default Feather;

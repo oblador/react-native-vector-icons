@@ -40,8 +40,8 @@ const <%= upperStyleName %>Icon = createIconSet(<%= styleName %>GM, {
 <% } -%>
   fontStyle: fontStyle('<%= weight %>')
 });
+export type <%= className %><%= upperStyleName %>IconName = keyof typeof <%= styleName %>GM;
 <% }) -%>
-
 type Props =
 <% Object.entries(meta.styles).forEach(([styleName, { family, name, weight }]) => { -%>
 <% upperStyleName = styleName.charAt(0).toUpperCase() + styleName.slice(1) -%>
@@ -49,7 +49,7 @@ type Props =
 <% }) -%>
   | ({ iconStyle?: never } & ComponentProps<typeof <%= upperDefaultStyleName %>Icon>);
 
-const Icon = (props: Props) => {
+export const <%= className %> = (props: Props) => {
   const { iconStyle, name } = props;
   if (!iconStyle) {
     if (!glyphValidator(name, 'regular')) {
@@ -100,7 +100,7 @@ const getImageSource: GetImageSourceFunc = (iconStyle, name, size = DEFAULT_ICON
       return <%= upperDefaultStyleName %>Icon.getImageSource(name as keyof typeof <%= meta.defaultStyleName %>GM, size, color);
   }
 };
-Icon.getImageSource = getImageSource;
+<%= className %>.getImageSource = getImageSource;
 
 type GetImageSourceSyncFunc = {
 <% meta.styleNames.forEach((styleName) => { -%>
@@ -126,6 +126,8 @@ const getImageSourceSync: GetImageSourceSyncFunc = (iconStyle, name, size = DEFA
       return <%= upperDefaultStyleName %>Icon.getImageSourceSync(name as keyof typeof <%= meta.defaultStyleName %>GM, size, color);
   }
 };
-Icon.getImageSourceSync = getImageSourceSync;
+<%= className %>.getImageSourceSync = getImageSourceSync;
 
-export default Icon;
+export type <%= className %>IconName = ComponentProps<typeof <%= className %>>['name'];
+
+export default <%= className %>;

@@ -12,10 +12,12 @@
 import { createIconSet } from '@react-native-vector-icons/common';
 import glyphMap from '../glyphmaps/SimpleLineIcons.json';
 
-const Icon = createIconSet(glyphMap, {
+export const SimpleLineIcons = createIconSet(glyphMap, {
   postScriptName: 'simple-line-icons',
   fontFileName: 'SimpleLineIcons.ttf',
   fontSource: require('../fonts/SimpleLineIcons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 });
 
-export default Icon;
+export type SimpleLineIconsIconName = keyof typeof glyphMap;
+
+export default SimpleLineIcons;
