@@ -3,6 +3,7 @@
 
 import fs from 'node:fs';
 import * as path from 'node:path';
+
 import pc from 'picocolors';
 import * as plist from 'plist';
 

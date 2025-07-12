@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
-
+import { useCallback, useEffect, useState } from 'react';
 import { BackHandler, LogBox, Pressable, Text, View } from 'react-native';
 
 import { Home, type IconName } from './Home';

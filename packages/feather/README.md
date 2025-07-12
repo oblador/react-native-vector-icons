@@ -29,7 +29,7 @@ The table below tracks which font version is included in each package version.
 
 | RNVI version | Upstream version |
 | ------------ | ---------------- |
-| &gt;= 12.0.0 | 4.29.2 |
+| &gt; 12.0.0 | 4.29.2 |
 
 ## Contributing
 

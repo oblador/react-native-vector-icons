@@ -1,6 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import React, { forwardRef, type Ref, useEffect } from 'react';
-
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Platform, Text, type TextProps, type TextStyle } from 'react-native';
 

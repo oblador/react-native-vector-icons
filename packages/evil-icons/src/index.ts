@@ -10,6 +10,7 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/common';
+
 import glyphMap from '../glyphmaps/EvilIcons.json';
 
 export const EvilIcons = createIconSet(glyphMap, {

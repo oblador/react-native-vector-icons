@@ -7,10 +7,11 @@
  * <%= className %> icon set component.
  * Usage: <<%= className %> name="icon-name" size={20} color="#4F8EF7" />
  */
+
 import type { ComponentProps } from 'react';
 import { Platform, type TextStyle } from 'react-native';
 
-import { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE, createIconSet } from '@react-native-vector-icons/common';
+import { createIconSet, DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE } from '@react-native-vector-icons/common';
 
 <% upperDefaultStyleName = meta.defaultStyleName.charAt(0).toUpperCase() + meta.defaultStyleName.slice(1) -%>
 <% meta.styleNames.sort().forEach((styleName) => { -%>

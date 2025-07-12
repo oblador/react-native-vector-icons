@@ -1,3 +1,5 @@
+import { Image } from 'react-native';
+
 /*
  * The following imports are always present when react native is installed
  * in the future, more explicit apis will be exposed by the core, including typings
@@ -5,7 +7,7 @@
 // @ts-expect-error missing types
 // eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
 import { getAssetByID } from '@react-native/assets-registry/registry';
-import { Image } from 'react-native';
+
 import { assertExpoModulesPresent, getErrorCallback } from './dynamic-loading-setting';
 import type { DynamicLoader, FontSource } from './types';
 

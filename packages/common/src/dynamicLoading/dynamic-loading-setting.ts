@@ -110,11 +110,7 @@ export const setDynamicLoadingEnabled = (value: boolean): boolean => {
  * */
 export const isDynamicLoadingEnabled = () => dynamicFontLoadingEnabled;
 
-type ErrorCallback = (args: {
-  error: Error;
-  fontFamily: string;
-  fontSource: FontSource;
-}) => void;
+type ErrorCallback = (args: { error: Error; fontFamily: string; fontSource: FontSource }) => void;
 
 let dynamicLoadingErrorCallback: undefined | ErrorCallback;
 

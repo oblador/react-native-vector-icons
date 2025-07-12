@@ -10,6 +10,7 @@
  */
 
 import { createIconSet } from '@react-native-vector-icons/<%= commonPackage %>';
+
 import glyphMap from '../glyphmaps/<%= fontFileName %>.json';
 
 export const <%= className %> = createIconSet(glyphMap, {

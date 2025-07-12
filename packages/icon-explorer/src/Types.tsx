@@ -1,7 +1,5 @@
 /* This file exists to make sure the types work properly */
 
-import React from 'react';
-
 import AntD from '@react-native-vector-icons/ant-design';
 import FontAwesome5 from '@react-native-vector-icons/fontawesome5';
 

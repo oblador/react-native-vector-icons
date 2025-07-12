@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react';
 import {
   DeviceEventEmitter,
   FlatList,
@@ -75,13 +74,7 @@ const getFilteredGlyphNames = (iconStyle: string | undefined, iconSet: IconSet, 
   return icons.filter((glyphNames) => glyphNames.find((glyphName) => glyphName.indexOf(query) !== -1));
 };
 
-export const IconList = ({
-  iconName,
-  iconStyle = undefined,
-}: {
-  iconName: IconName;
-  iconStyle?: string;
-}) => {
+export const IconList = ({ iconName, iconStyle = undefined }: { iconName: IconName; iconStyle?: string }) => {
   const iconSet = ICON_SETS[iconName];
   const [filter, setFilter] = useState('');
 
