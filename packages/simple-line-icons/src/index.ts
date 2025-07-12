@@ -21,4 +21,5 @@ export const SimpleLineIcons = createIconSet(glyphMap, {
 
 export type SimpleLineIconsIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default SimpleLineIcons;

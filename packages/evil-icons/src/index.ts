@@ -21,4 +21,5 @@ export const EvilIcons = createIconSet(glyphMap, {
 
 export type EvilIconsIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default EvilIcons;

@@ -21,4 +21,5 @@ export const AntDesign = createIconSet(glyphMap, {
 
 export type AntDesignIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default AntDesign;

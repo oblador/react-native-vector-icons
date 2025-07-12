@@ -21,4 +21,5 @@ export const Feather = createIconSet(glyphMap, {
 
 export type FeatherIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default Feather;

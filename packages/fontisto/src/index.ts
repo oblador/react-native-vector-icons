@@ -21,4 +21,5 @@ export const Fontisto = createIconSet(glyphMap, {
 
 export type FontistoIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default Fontisto;

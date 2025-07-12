@@ -21,4 +21,5 @@ export const Octicons = createIconSet(glyphMap, {
 
 export type OcticonsIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default Octicons;

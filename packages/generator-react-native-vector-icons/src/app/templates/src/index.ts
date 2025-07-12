@@ -21,4 +21,5 @@ export const <%= className %> = createIconSet(glyphMap, {
 
 export type <%= className %>IconName = keyof typeof glyphMap;
 
+/** @alias */
 export default <%= className %>;

@@ -131,4 +131,5 @@ const getImageSourceSync: GetImageSourceSyncFunc = (iconStyle, name, size = DEFA
 
 export type <%= className %>IconName = ComponentProps<typeof <%= className %>>['name'];
 
+/** @alias */
 export default <%= className %>;

@@ -21,4 +21,5 @@ export const Foundation = createIconSet(glyphMap, {
 
 export type FoundationIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default Foundation;
