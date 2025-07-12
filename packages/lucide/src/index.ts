@@ -21,4 +21,5 @@ export const Lucide = createIconSet(glyphMap, {
 
 export type LucideIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default Lucide;

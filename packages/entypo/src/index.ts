@@ -21,4 +21,5 @@ export const Entypo = createIconSet(glyphMap, {
 
 export type EntypoIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default Entypo;

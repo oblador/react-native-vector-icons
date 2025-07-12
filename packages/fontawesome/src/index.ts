@@ -21,4 +21,5 @@ export const FontAwesome = createIconSet(glyphMap, {
 
 export type FontAwesomeIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default FontAwesome;

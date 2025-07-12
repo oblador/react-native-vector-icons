@@ -161,4 +161,5 @@ FontAwesome5.getImageSourceSync = getImageSourceSync;
 
 export type FontAwesome5IconName = ComponentProps<typeof FontAwesome5>['name'];
 
+/** @alias */
 export default FontAwesome5;

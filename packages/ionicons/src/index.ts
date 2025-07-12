@@ -21,4 +21,5 @@ export const Ionicons = createIconSet(glyphMap, {
 
 export type IoniconsIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default Ionicons;

@@ -21,4 +21,5 @@ export const MaterialDesignIcons = createIconSet(glyphMap, {
 
 export type MaterialDesignIconsIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default MaterialDesignIcons;

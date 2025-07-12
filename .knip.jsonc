@@ -26,11 +26,11 @@
     },
     "packages/get-image": {
       "entry": ["src/index.ts"],
-      "ignoreDependencies": ["@react-native-community/cli-tools", "turbo"],
+      "ignoreDependencies": ["turbo"],
       "ignore": ["src/NativeVectorIcons.ts", "react-native.config.js"]
     },
     "packages/fontawesome-common": {
-      "entry": ["src/index.ts", "scripts/generate-fontawesome-metadata.js"],
+      "entry": ["scripts/generate-fontawesome-metadata.js"],
       "ignore": ["generators/app/templates/src/*"],
       "ignoreDependencies": ["@types/react"]
     },

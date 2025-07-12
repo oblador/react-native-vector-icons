@@ -21,4 +21,5 @@ export const Zocial = createIconSet(glyphMap, {
 
 export type ZocialIconName = keyof typeof glyphMap;
 
+/** @alias */
 export default Zocial;
