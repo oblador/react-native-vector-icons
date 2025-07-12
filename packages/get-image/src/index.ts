@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
 
-export { default as ensureNativeModuleAvailable } from './ensure-native-module-available';
+export { ensureNativeModuleAvailable } from './ensure-native-module-available';
 
 const LINKING_ERROR = `
   The package '@react-native-vector-icons/get-image' doesn't seem to be linked. Make sure:
