@@ -2,16 +2,24 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "clean": {
-      "dependsOn": ["^clean"]
+      "dependsOn": [
+        "^clean"
+      ]
     },
     "prepare": {
-      "dependsOn": ["^prepare"]
+      "dependsOn": [
+        "^prepare"
+      ]
     },
     "prepack": {
-      "dependsOn": ["^prepack"]
+      "dependsOn": [
+        "^prepack"
+      ]
     },
     "postpack": {
-      "dependsOn": ["^postpack"]
+      "dependsOn": [
+        "^postpack"
+      ]
     }
   },
   "defaultBase": "master",
@@ -33,11 +41,8 @@
     },
     "version": {
       "conventionalCommits": true,
-      "generatorOptions": {
-        "NOTE": "We want auto but it's overzealous for our purposes, see https://github.com/nrwl/nx/discussions/29135",
-        "updateDependents": "never",
-        "preserveLocalDependencyProtocols": true
-      }
+      "NOTE": "We want auto but it's overzealous for our purposes, see https://github.com/nrwl/nx/discussions/29135",
+      "updateDependents": "never"
     }
   }
 }
