@@ -857,8 +857,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
       ionicons:
-        specifier: 8.0.9
-        version: 8.0.9
+        specifier: 8.0.13
+        version: 8.0.13
       onchange:
         specifier: ^7.1.0
         version: 7.1.0
@@ -3340,8 +3340,8 @@ packages:
     engines: {node: '>=8.10'}
     hasBin: true
 
-  '@stencil/core@4.31.0':
-    resolution: {integrity: sha512-Ei9MFJ6LPD9BMFs+klkHylbVOOYhG10Jv4bvoFf3GMH15kA41rSYkEdr4DiX84ZdErQE2qtFV/2SUyWoXh0AhA==}
+  '@stencil/core@4.35.3':
+    resolution: {integrity: sha512-RH5/I+amV31QI8TMXhXkAkjzs2eod6Y07jkUYTl9kMB+X7c5wUpv95Y/2LtcAx0Rqdhh4SHbJiwpr0ApBZmv0g==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
@@ -6771,8 +6771,8 @@ packages:
   invariant@2.2.4:
     resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
 
-  ionicons@8.0.9:
-    resolution: {integrity: sha512-qC8xcTVcrmC9e+4KwigtbfKa9J27rFzsjvi1wQBue178Az6u6mFDpL/Q10w534+RD5PkmiXlqy7my7+h2B/zTw==}
+  ionicons@8.0.13:
+    resolution: {integrity: sha512-2QQVyG2P4wszne79jemMjWYLp0DBbDhr4/yFroPCxvPP1wtMxgdIV3l5n+XZ5E9mgoXU79w7yTWpm2XzJsISxQ==}
 
   ip-address@9.0.5:
     resolution: {integrity: sha512-zHtQzGojZXTwZTHQqra+ETKd4Sn3vgi7uBmlPoXVWZqYvuKmtI0l/VZTjqGmJY9x88GGOaZ9+G9ES8hC4T4X8g==}
@@ -14575,7 +14575,7 @@ snapshots:
       ignore: 5.3.2
       p-map: 4.0.0
 
-  '@stencil/core@4.31.0':
+  '@stencil/core@4.35.3':
     optionalDependencies:
       '@rollup/rollup-darwin-arm64': 4.34.9
       '@rollup/rollup-darwin-x64': 4.34.9
@@ -18674,9 +18674,9 @@ snapshots:
     dependencies:
       loose-envify: 1.4.0
 
-  ionicons@8.0.9:
+  ionicons@8.0.13:
     dependencies:
-      '@stencil/core': 4.31.0
+      '@stencil/core': 4.35.3
 
   ip-address@9.0.5:
     dependencies:
