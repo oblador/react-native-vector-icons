@@ -75,8 +75,8 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
    npm install --save @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evil-icons
    ```
 
-2. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
-3. If you are using one of the following fonts refer to their guides for further instructions
+1. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
+1. If you are using one of the following fonts refer to their guides for further instructions
 
 - [FontAwesome 6](packages/fontawesome6/README.md)
 - [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
@@ -89,13 +89,26 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
 
 Please refer to the guide for [Expo](./docs/SETUP-EXPO.md), [React Native](./docs/SETUP-REACT-NATIVE.md) or [Web](./docs/SETUP-WEB.md) for further instructions.
 
+### Font location customisation
+
+For fonts like fontawesome6-pro, fontello and icomoon where you provide the fonts the default location for the font files is `rnvi-fonts` in the same directory as your package.json. This can be customized by setting the `fontDir` property in your `package.json` file.
+
+```json
+{
+  "reactNativeVectorIcons": {
+    "fontDir": "src/rnvi-fonts"
+  }
+}
+```
+
 ## `Icon` Component
 
 You can either use one of the bundled icons above or roll your own custom font.
 
 ```js
-import Icon from '@react-native-vector-icons/fontawesome';
-const myIcon = <Icon name="rocket" size={30} color="#900" />;
+import Icon from "@react-native-vector-icons/fontawesome";
+
+<Icon name="rocket" size={30} color="#900" />;
 ```
 
 ### Props
@@ -128,14 +141,16 @@ By combining some of these you can create for example :
 
 ## Multi-Style Fonts
 
-Some fonts today use multiple styles, FontAwesome 5 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
+Some fonts today use multiple styles, FontAwesome 6 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
 
 ```jsx
-import Icon from '@react-native-vector-icons/fontawesome5';
+import Icon from "@react-native-vector-icons/fontawesome5";
 
-const myIcon1 = <Icon name="comments" size={30} color="#900" />; // Defaults to solid
-const myIcon2 = <Icon name="comments" size={30} color="#900" iconType="solid" />;
-const myIcon3 = <Icon name="comments" size={30} color="#900" iconType="light" />; // Only in FA5 Pro
+<Icon name="comments" size={30} color="#900" />; // Defaults to regular
+
+<Icon name="comments" size={30} color="#900" iconType="solid" />
+
+<Icon name="comments" size={30} color="#900" iconType="light" />
 ```
 
 ## Usage as PNG Image/Source Object
@@ -146,6 +161,7 @@ You need to install `@react-native-vector-icons/get-image` to use this feature.
 
 ```jsx
 const source = Icon.getImageSourceSync('user', 20, 'red');
+
 return <Image source={source} />;
 );
 ```
@@ -176,16 +192,16 @@ name and the value is either a UTF-8 character or it's character code.
 Font Book.app or similar to learn the name. Also pass the `fontFileName` argument for Android support.
 
 ```js
-import { createIconSet } from '@react-native-vector-icons/common';
-const glyphMap = { 'icon-name': 1234, test: '∆' };
+import { createIconSet } from "@react-native-vector-icons/common";
+const glyphMap = { "icon-name": 1234, test: "∆" };
 
 // use createIconSet() with object parameter
 // or use positional parameters for compatibility with version <= 10: `createIconSet(glyphMap, fontFamily[, fontFile])`
 const Icon = createIconSet(glyphMap, {
-   postScriptName: 'FontName',
-   fontFileName: 'font-name.ttf',
-   fontSource: require('../fonts/font-name.ttf') // optional, for dynamic loading. Can also be a local file uri.
-})
+  postScriptName: "FontName",
+  fontFileName: "font-name.ttf",
+  fontSource: require("../fonts/font-name.ttf"), // optional, for dynamic loading. Can also be a local file uri.
+});
 ```
 
 If you aren't using dynamic font loading you need to make sure your font is copied into your bundle.
@@ -227,26 +243,22 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 ### Basic Example
 
 ```js
-import Icon from '@react-native-vector-icons/ionicons';
+import Icon from "@react-native-vector-icons/ionicons";
 
-function ExampleView(props) {
-  return <Icon name="ios-person" size={30} color="#4F8EF7" />;
-}
+const ExampleView = () => <Icon name="ios-person" size={30} color="#4F8EF7" />;
 ```
 
 ### Inline Icons
 
 ```js
-import { Text } from 'react-native';
-import Icon from '@react-native-vector-icons/ionicons';
+import { Text } from "react-native";
+import Icon from "@react-native-vector-icons/ionicons";
 
-function ExampleView(props) {
-  return (
-    <Text>
-      Lorem <Icon name="ios-book" color="#4F8EF7" /> Ipsum
-    </Text>
-  );
-}
+const ExampleView = (props) => (
+  <Text>
+    Lorem <Icon name="ios-book" color="#4F8EF7" /> Ipsum
+  </Text>
+);
 ```
 
 ## Testing
@@ -273,8 +285,8 @@ Create `__mocks__/@react-native-vector-icons/common.js`:
 ```js
 // Mock the entire common library so there are no native module loading errors
 module.exports = {
-  createIconSet: () => "icon"
-}
+  createIconSet: () => "icon",
+};
 ```
 
 ## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)

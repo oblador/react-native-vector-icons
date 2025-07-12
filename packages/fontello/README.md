@@ -13,7 +13,7 @@ npm install @react-native-vector-icons/fontello
 ## Usage
 
 1. Add the config.json somewhere in your project to be imported
-2. Add the ttf file into `rnvi-fonts`. You can customise this location as described in [react-native-vector-icons](../../README.md#custom-fonts)
+2. Add the ttf file into `rnvi-fonts/fontello`. You can customise this location as described in [react-native-vector-icons](../../README.md#custom-fonts)
 3. Add this package to your project
 
 ```sh
@@ -33,9 +33,9 @@ cont icon = <Icon name="comments" />;
 If you want to customise the font postscript name and filename you can pass extra arguments.
 
 ```js
-import createIconSet from '@react-native-vector-icons/fontello';
-import fontelloConfig from './config.json';
-const Icon = createIconSet(fontelloConfig, 'Font Family', 'FontFamily.ttf');
+import createIconSet from "@react-native-vector-icons/fontello";
+import fontelloConfig from "./config.json";
+const Icon = createIconSet(fontelloConfig, "Font Family", "FontFamily.ttf");
 ```
 
 ## Contributing
