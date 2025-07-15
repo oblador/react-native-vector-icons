@@ -77,11 +77,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@react-native-community/cli-tools": "^17.0.0",
     "picocolors": "^1.1.1",
     "plist": "^3.1.0"
   },
   "devDependencies": {
+    "@react-native-community/cli-tools": "^17.0.0",
     "@types/plist": "^3.0.5",
     "@types/react": "^19.0.12",
     "del-cli": "^6.0.0",
@@ -90,6 +90,7 @@
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
+    "@react-native-community/cli-tools": ">=9.0.0",
     "@react-native-vector-icons/get-image": "workspace:^",
     "react": "*",
     "react-native": "*"

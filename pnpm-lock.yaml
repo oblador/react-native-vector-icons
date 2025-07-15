@@ -142,9 +142,6 @@ importers:
 
   packages/common:
     dependencies:
-      '@react-native-community/cli-tools':
-        specifier: ^17.0.0
-        version: 17.0.0
       '@react-native-vector-icons/get-image':
         specifier: workspace:^
         version: link:../get-image
@@ -161,6 +158,9 @@ importers:
         specifier: '*'
         version: 0.79.0(@babel/core@7.26.9)(@react-native-community/cli@18.0.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.0.0)
     devDependencies:
+      '@react-native-community/cli-tools':
+        specifier: ^17.0.0
+        version: 17.0.0
       '@types/plist':
         specifier: ^3.0.5
         version: 3.0.5
