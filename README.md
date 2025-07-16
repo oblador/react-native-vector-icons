@@ -187,7 +187,7 @@ See [CREATE_FONT_PACKAGE.md](./docs/CREATE_FONT_PACKAGE.md) to learn how to crea
 
 You can also use `createIconSet()` directly in your project. This
 returns your own custom font based on the `glyphMap` where the key is the icon
-name and the value is either a UTF-8 character or it's character code.
+name and the value is either a UTF-8 character or its character code.
 `postScriptName` is the name of the postscript font. Open the font in <https://fontdrop.info/>,
 Font Book.app or similar to learn the name. Also pass the `fontFileName` argument for Android support.
 
@@ -217,11 +217,11 @@ animation library
 
 ## Dynamic icon font loading
 
-> At the moment, dynamic loading is supported on native platforms (not on web) only if you use Expo ([Expo Go](https://expo.dev/go) or a development client). In the future, it should become available for all React Native projects via React Native core.
+> At the moment, dynamic loading is supported on native platforms only if you use Expo ([Expo Go](https://expo.dev/go) or a development client). In the future, it should become available for all React Native projects via React Native core.
 
 Fonts can be available in an app statically (since build time) or loaded dynamically at runtime. The latter can be useful e.g. for apps that use over-the-air updates and want to load new fonts with an update, or when you need to use a font from a remote location.
 
-Dynamic loading in react-native-vector-icons is currently limited to those fonts that are bundled within the provided packages: it doesn't support Pro fonts (such as FontAwesome 5 Pro). However, loading of custom fonts is not difficult to implement: see any of the free font packages for reference.
+Dynamic loading in react-native-vector-icons is currently limited to those fonts that are bundled within the provided packages: it doesn't support Pro fonts (such as FontAwesome 5 Pro). However, loading of custom fonts is not difficult to implement: use `createIconSet` as seen in [custom fonts](#custom-fonts) paragraph to obtain a icon font family with dynamic font loading enabled. See any of the free font packages for reference.
 
 By default, dynamic loading is enabled if you run Expo SDK >= 52. It doesn't change the way you work with the package: If rendering an icon requires a font that is not known to the app, it will be loaded automatically and icon will render as expected.
 

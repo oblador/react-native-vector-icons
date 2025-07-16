@@ -1,14 +1,14 @@
-import { Image } from 'react-native';
-
 /*
  * The following imports are always present when react native is installed
  * in the future, more explicit apis will be exposed by the core, including typings
  * */
+import { Image, Platform } from 'react-native';
+
 // @ts-expect-error missing types
 // eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
 import { getAssetByID } from '@react-native/assets-registry/registry';
 
-import { assertExpoModulesPresent, getErrorCallback } from './dynamic-loading-setting';
+import { assertExpoModulesPresent, getErrorCallback, type LoadAsyncAsset } from './dynamic-loading-setting';
 import type { DynamicLoader, FontSource } from './types';
 
 const loadPromises: { [fontSource: string]: Promise<void> } = {};
@@ -35,7 +35,11 @@ const loadFontAsync = async (fontFamily: string, fontSource: FontSource): Promis
         return expoModules.ExpoAsset.downloadAsync(uri, hash, type);
       })();
 
-      await expoModules.ExpoFontLoader.loadAsync(fontFamily, localUri);
+      const asset = Platform.select<LoadAsyncAsset>({
+        web: { uri: localUri, display: 'auto' },
+        default: localUri,
+      });
+      await expoModules.ExpoFontLoader.loadAsync(fontFamily, asset);
     } catch (error) {
       console.error(`Failed to load font ${fontFamily}`, error); // eslint-disable-line no-console
 
