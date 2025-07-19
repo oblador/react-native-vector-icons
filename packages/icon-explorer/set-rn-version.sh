@@ -41,6 +41,10 @@ case $VERSION in
   GRADLE_VERSION=8.13-bin
   ;;
 
+0.80)
+  GRADLE_VERSION=8.14.1-bin
+  ;;
+
 *)
   echo "Unsupported version $VERSION"
   exit 1

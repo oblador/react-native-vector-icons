@@ -84,11 +84,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@types/react": "^19.0.12",
+    "@types/react": "^19.1.0",
     "del-cli": "^6.0.0",
     "onchange": "^7.1.0",
-    "react": "19.0.0",
-    "react-native": "0.79.0",
+    "react": "19.1.0",
+    "react-native": "0.80.0",
     "react-native-builder-bob": "^0.35.2",
     "turbo": "^1.13.4",
     "typescript": "^5.7.2"
