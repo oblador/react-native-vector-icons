@@ -107,6 +107,12 @@ jobs:
         run: |
           cd packages/icon-explorer
           mv .owl/baseline-${{ matrix.arch }} .owl/baseline
+
+          # something strange where the owl build isn't generating the jni files
+          if [ "${{ matrix.rn-version }}" == "0.80" -a "${{ matrix.arch }}" == "new" ]; then
+            pnpm run android || true
+          fi
+
           pnpm run test:android:build
 
       - name: Run test
@@ -154,7 +160,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rn-version: ["0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]
+        rn-version:
+          ["0.80", "0.79", "0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]
         arch: ["new", "old"]
 
     steps:
