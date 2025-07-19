@@ -137,5 +137,12 @@
   "create-react-native-library": {
     "type": "library",
     "version": "0.41.2"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "dependsOn": ["@react-native-vector-icons/get-image:build"]
+      }
+    }
   }
 }
