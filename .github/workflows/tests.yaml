@@ -28,6 +28,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: aws-actions/configure-aws-credentials@v4
+        if: always() # it fails for non maintainer PRs
         with:
           aws-region: us-east-2
           role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
@@ -123,7 +124,7 @@ jobs:
           sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
 
           ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
-          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID"
+          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID" || true
 
           if [ "${{ steps.tests.outcome }}" == "failure" ]; then
             echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY
@@ -155,6 +156,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: aws-actions/configure-aws-credentials@v4
+        if: always() # it fails for non maintainer PRs
         with:
           aws-region: us-east-2
           role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
@@ -220,7 +222,7 @@ jobs:
           sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
 
           ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
-          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID"
+          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID" || true
 
           if [ "${{ steps.tests.outcome }}" == "failure" ]; then
             echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY
