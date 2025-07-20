@@ -8,10 +8,10 @@
     "test": "nx run-many -t test",
     "lint:eslint": "eslint .",
     "lint:biome": "biome check .",
+    "lint:knip": "knip",
     "lint:types": "bash -c 'for i in packages/*; do if [ -f $i/tsconfig.json ]; then tsc --noEmit -p $i/tsconfig.json; fi; done'",
     "lint": "pnpm run '/^lint:.*/'",
-    "release": "nx release",
-    "knip": "knip"
+    "release": "nx release"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.1",
