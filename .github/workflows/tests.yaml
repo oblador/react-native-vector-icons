@@ -160,8 +160,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rn-version:
-          ["0.80", "0.79", "0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]
+        rn-version: ${{ github.event.inputs.all_versions && fromJSON('["0.80", "0.79", "0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]') || fromJSON('["0.80", "0.79", "0.77"]') }}
         arch: ["new", "old"]
 
     steps:
