@@ -18,8 +18,8 @@ If you wish to submit a pull request for a new feature or issue, you should star
 
 This project is a monorepo managed using [pnpm workspaces](https://pnpm.io/workspaces). It contains the following packages:
 
-- The library package in `packages/common`
-- An example app in `packages/icon-explorer
+- The library packages in `packages/common` and `packages/get-image`
+- Example apps in `packages/icon-explorer` and `packages/directory`
 - Fonts in `packages/fontname` e.g. `packages/fontawesome6`
 
 To get started with the project, run `pnpm install` in the root directory to install the required dependencies for each package:
@@ -87,17 +87,16 @@ Running "IconExplorer" with {"fabric":true,"initialProps":{"concurrentRoot":true
 
 Note the `"fabric":true` and `"concurrentRoot":true` properties.
 
-Make sure your code passes TypeScript and ESLint. Run the following to verify:
+Make sure your code passes all of our linting. Run the following to verify:
 
 ```sh
-pnpm run typecheck
 pnpm run lint
 ```
 
 To fix formatting errors, run the following:
 
 ```sh
-pnpm run lint --fix
+pnpm run lint:biome --fix
 ```
 
 Remember to add tests for your change if possible. Run the unit tests by:
@@ -106,11 +105,11 @@ Remember to add tests for your change if possible. Run the unit tests by:
 pnpm run test
 ```
 
-### Detox
+### Tests
 
-TODO: Expand on detox here
+We run tests again `new` and `old` architecture against the last 3 versions of React Native automatically via CI.
 
-To run the detox tests you should create an avd called test which is based on the Pixel 6 Pro profile. This is essential for the screenshot diffs to work
+To run the these tests manually you should create an avd called test which is based on the Pixel 6 Pro profile. This is essential for the screenshot diffs to work
 
 ```sh
 sdkmanager --install 'system-images;android-31;default;x86_64' --channel=0
@@ -125,6 +124,15 @@ pnpm run run test:android:build
 pnpm run run test:android:run
 pnpm run run test:ios:build
 pnpm run run test:ios:run
+```
+
+You can switch versions of react native before running the tests with
+
+```
+cd packages/icon-explorer
+# ./set-rn-version <arch> <version>
+./set-rn-version new 0.74
+./set-rn-version old 0.79
 ```
 
 ### Commit message convention
@@ -150,25 +158,18 @@ Our pre-commit hooks verify that the linter and tests pass when committing.
 
 ### Publishing to npm
 
-We use [release-it](https://github.com/release-it/release-it) to make it easier to publish new versions. It handles common tasks like bumping version based on semver, creating tags and releases etc.
+We use `nx` to make it easier to publish new versions. It handles common tasks like bumping version based on semver, creating tags and releases etc.
 
-To publish new versions, run the following:
-
-```sh
-pnpm run release
-```
+To publish new versions, use the github action [release.yml](.github/workflows/deploy.yml) which is triggered manually.
 
 ### Scripts
 
 The `package.json` file contains various scripts for common tasks:
 
 - `pnpm i`: setup project by installing dependencies.
-- `pnpm run typecheck`: type-check files with TypeScript.
-- `pnpm run lint`: lint files with ESLint.
-- `pnpm run test`: run unit tests with Jest.
-- `pnpm run example start`: start the Metro server for the example app.
-- `pnpm run example android`: run the example app on Android.
-- `pnpm run example ios`: run the example app on iOS.
+- `pnpm run lint:typecheck`: type-check files with TypeScript.
+- `pnpm run lint:eslint`: lint files with ESLint.
+- `pnpm run lint:biome`: lint files with Biome.
 
 ### Sending a pull request
 
@@ -181,3 +182,21 @@ When you're sending a pull request:
 - Review the documentation to make sure it looks good.
 - Follow the pull request template when opening a pull request.
 - For pull requests that change the API or implementation, discuss with maintainers first by opening an issue.
+
+### Font generation
+
+All the fonts are automatiaclly generated using a `yeoman` generator. This is driven by a `.yo-rc.json` file in the root of each font.
+
+To make changes to common font files you shuold edit the files in `packages/generator-react-native-vector-icons/src/app/templates/` and then at the root you shuld run:
+
+```sh
+# Generate all fonts
+pnpm generate
+
+# Generate a single font
+pnpm generate ant-design
+```
+
+### Font versioning
+
+Font package versions are now independent of upstream font versions and we track the mapping in the README.md of each font
