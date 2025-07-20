@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/feather",
-  "version": "12.1.0",
+  "version": "12.2.0",
   "description": "Feather font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",

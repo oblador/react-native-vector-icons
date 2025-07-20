@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/ant-design",
-  "version": "12.1.0",
+  "version": "12.2.0",
   "description": "Ant Design font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/common",
-  "version": "12.1.0",
+  "version": "12.2.0",
   "description": "Customizable Icons for React Native with support for image source and full styling.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -141,7 +141,9 @@
   "nx": {
     "targets": {
       "build": {
-        "dependsOn": ["@react-native-vector-icons/get-image:build"]
+        "dependsOn": [
+          "@react-native-vector-icons/get-image:build"
+        ]
       }
     }
   }

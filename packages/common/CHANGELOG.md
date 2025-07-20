@@ -1,3 +1,13 @@
+## 12.2.0 (2025-07-20)
+
+### 🚀 Features
+
+- allow dynamic font loading with expo on web ([#1807](https://github.com/oblador/react-native-vector-icons/pull/1807))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.1.0 (2025-07-12)
 
 ### 🚀 Features

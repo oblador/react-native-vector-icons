@@ -1,3 +1,17 @@
+## 12.2.0 (2025-07-20)
+
+### 🚀 Features
+
+- add 'use client' directive for RSC ([#1809](https://github.com/oblador/react-native-vector-icons/pull/1809))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/common to 12.2.0
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.1.0 (2025-07-12)
 
 ### 🚀 Features
