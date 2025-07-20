@@ -1,4 +1,5 @@
 'use client';
+
 /**
  * This is a generated file. If you modify it manually, your changes will be lost!
  * This file was generated from packages/generator-react-native-vector-icons/src/app/templates
