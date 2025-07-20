@@ -2,8 +2,13 @@
 name: Tests
 
 on:
-  - push
-  - pull_request
+  workflow_dispatch:
+    inputs:
+      all_versions:
+        description: Run tests against all versions
+        type: boolean
+  push:
+  pull_request:
 
 permissions:
   # AWS
@@ -21,13 +26,14 @@ jobs:
       fail-fast: false
       matrix:
         api-level: [35]
-        rn-version: ["0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]
+        rn-version: ${{ github.event.inputs.all_versions && fromJSON('["0.80", "0.79", "0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]') || fromJSON('["0.80", "0.79", "0.77"]') }}
         arch: ["new", "old"]
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: aws-actions/configure-aws-credentials@v4
+        if: always() # it fails for non maintainer PRs
         with:
           aws-region: us-east-2
           role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
@@ -101,6 +107,12 @@ jobs:
         run: |
           cd packages/icon-explorer
           mv .owl/baseline-${{ matrix.arch }} .owl/baseline
+
+          # something strange where the owl build isn't generating the jni files
+          if [ "${{ matrix.rn-version }}" == "0.80" -a "${{ matrix.arch }}" == "new" ]; then
+            pnpm run android || true
+          fi
+
           pnpm run test:android:build
 
       - name: Run test
@@ -123,7 +135,7 @@ jobs:
           sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
 
           ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
-          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID"
+          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID" || true
 
           if [ "${{ steps.tests.outcome }}" == "failure" ]; then
             echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY
@@ -148,13 +160,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rn-version: ["0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]
+        rn-version: ${{ github.event.inputs.all_versions && fromJSON('["0.80", "0.79", "0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]') || fromJSON('["0.80", "0.79", "0.77"]') }}
         arch: ["new", "old"]
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: aws-actions/configure-aws-credentials@v4
+        if: always() # it fails for non maintainer PRs
         with:
           aws-region: us-east-2
           role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
@@ -220,7 +233,7 @@ jobs:
           sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
 
           ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
-          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID"
+          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID" || true
 
           if [ "${{ steps.tests.outcome }}" == "failure" ]; then
             echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY

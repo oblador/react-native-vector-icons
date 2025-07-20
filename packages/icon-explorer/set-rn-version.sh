@@ -16,41 +16,6 @@ fi
 
 echo "Switching to $VERSION (arch: $ARCH)"
 
-case $VERSION in
-0.73)
-  GRADLE_VERSION=8.3-bin
-  ;;
-
-0.74)
-  GRADLE_VERSION=8.6-bin
-  ;;
-
-0.75)
-  GRADLE_VERSION=8.8-bin
-  ;;
-
-0.7[67])
-  GRADLE_VERSION=8.10.2-all
-  ;;
-
-0.78)
-  GRADLE_VERSION=8.12-all
-  ;;
-
-0.79)
-  GRADLE_VERSION=8.13-bin
-  ;;
-
-*)
-  echo "Unsupported version $VERSION"
-  exit 1
-  ;;
-esac
-
-echo "Setting gradle version to $GRADLE_VERSION"
-sed -i.bak "s/gradle-.*.zip/gradle-$GRADLE_VERSION.zip/" android/gradle/wrapper/gradle-wrapper.properties
-rm android/gradle/wrapper/gradle-wrapper.properties.bak
-
 pnpm rnx-align-deps --requirements react-native@"$VERSION" --write
 
 pnpm add --ignore-scripts react-native@"^$VERSION.0"
