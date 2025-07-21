@@ -1,10 +1,10 @@
 /* This file exists to make sure the types work properly */
 
-import AntD from '@react-native-vector-icons/ant-design';
-import FontAwesome5 from '@react-native-vector-icons/fontawesome5';
+import { AntDesign } from '@react-native-vector-icons/ant-design';
+import { FontAwesome5 } from '@react-native-vector-icons/fontawesome5';
 
 export const Component = () => {
-  AntD.getImageSource('robot', 20, 'red');
+  AntDesign.getImageSource('robot', 20, 'red');
   FontAwesome5.getImageSource('regular', 'address-book', 20, 'red');
   // @ts-expect-error bad font name
   FontAwesome5.getImageSource('brand', 'address-book', 20, 'red');
@@ -13,9 +13,9 @@ export const Component = () => {
 
   return (
     <>
-      <AntD name="robot" />
+      <AntDesign name="robot" />
       {/* @ts-expect-error bad font name */}
-      <AntD name="rnvi" />
+      <AntDesign name="rnvi" />
 
       <FontAwesome5 name="address-book" />
       <FontAwesome5 iconStyle="regular" name="address-book" />

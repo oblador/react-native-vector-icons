@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/fontawesome
 
 ## Usage
 
-```js
-import FontAwesome from '@react-native-vector-icons/fontawesome';
+```jsx
+import { FontAwesome } from '@react-native-vector-icons/fontawesome';
 
 // ...
 

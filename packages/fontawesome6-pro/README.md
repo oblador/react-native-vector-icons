@@ -20,7 +20,7 @@ All you really need to do is adding the Pro fonts to the `rnvi-fonts/fontawesome
 Using the standard icons works just like the standard icons in this library.
 
 ```javascript
-import FontAwesome6Pro from "@react-native-vector-icons/fontawesome6-pro";
+import { FontAwesome6Pro } from "@react-native-vector-icons/fontawesome6-pro";
 
 const icon = <FontAwesome6Pro name="comments" />;
 ```
@@ -29,7 +29,7 @@ Something special about the FontAwesome6Pro class is that you can also pass prop
 to change the style of the icon:
 
 ```javascript
-import FontAwesome6Pro from "@react-native-vector-icons/fontawesome6-pro";
+import { FontAwesome6Pro } from "@react-native-vector-icons/fontawesome6-pro";
 
 const icon = <FontAwesome6Pro name="comments" iconStyle="solid" />;
 const icon = <FontAwesome6Pro name="git" iconStyle="brand" />;
@@ -60,7 +60,7 @@ style is required.
 Use this to select which style the generated image should have:
 
 ```javascript
-import FontAwesome6Pro from "@react-native-vector-icons/fontawesome6-pro";
+import { FontAwesome6Pro } from "@react-native-vector-icons/fontawesome6-pro";
 
 FontAwesome6Pro.getImageSource("solid", "comments", 30, "#000").then((source) =>
   this.setState({ image: source }),

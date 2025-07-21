@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/entypo
 
 ## Usage
 
-```js
-import Entypo from '@react-native-vector-icons/entypo';
+```jsx
+import { Entypo } from '@react-native-vector-icons/entypo';
 
 // ...
 

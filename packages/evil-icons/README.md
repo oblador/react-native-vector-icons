@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/evil-icons
 
 ## Usage
 
-```js
-import EvilIcons from '@react-native-vector-icons/evil-icons';
+```jsx
+import { EvilIcons } from '@react-native-vector-icons/evil-icons';
 
 // ...
 

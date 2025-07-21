@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/simple-line-icons
 
 ## Usage
 
-```js
-import SimpleLineIcons from '@react-native-vector-icons/simple-line-icons';
+```jsx
+import { SimpleLineIcons } from '@react-native-vector-icons/simple-line-icons';
 
 // ...
 

@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/fontisto
 
 ## Usage
 
-```js
-import Fontisto from '@react-native-vector-icons/fontisto';
+```jsx
+import { Fontisto } from '@react-native-vector-icons/fontisto';
 
 // ...
 

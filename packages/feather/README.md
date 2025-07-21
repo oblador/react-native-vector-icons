@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/feather
 
 ## Usage
 
-```js
-import Feather from '@react-native-vector-icons/feather';
+```jsx
+import { Feather } from '@react-native-vector-icons/feather';
 
 // ...
 

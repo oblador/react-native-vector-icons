@@ -10,7 +10,7 @@
 Using the standard icons works just like the standard icons in this library.
 
 ```javascript
-import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
+import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6";
 
 const icon = <FontAwesome6 name="comments" />;
 ```
@@ -19,7 +19,7 @@ Something special about the FontAwesome6 class is that you can also pass props
 to change the style of the icon:
 
 ```javascript
-import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
+import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6";
 
 const icon = <FontAwesome6 name="comments" iconStyle="solid" />;
 const icon = <FontAwesome6 name="git" iconStyle="brand" />;
@@ -44,10 +44,10 @@ style is required.
 Use this to select which style the generated image should have:
 
 ```javascript
-import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
+import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6";
 
-FontAwesome6.getImageSource('solid', 'comments', 30, '#000').then(
-  (source) => this.setState({ image: source })
+FontAwesome6.getImageSource("solid", "comments", 30, "#000").then((source) =>
+  this.setState({ image: source }),
 );
 ```
 

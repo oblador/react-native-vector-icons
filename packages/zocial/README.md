@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/zocial
 
 ## Usage
 
-```js
-import Zocial from '@react-native-vector-icons/zocial';
+```jsx
+import { Zocial } from '@react-native-vector-icons/zocial';
 
 // ...
 

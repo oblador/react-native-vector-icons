@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/ionicons
 
 ## Usage
 
-```js
-import Ionicons from '@react-native-vector-icons/ionicons';
+```jsx
+import { Ionicons } from '@react-native-vector-icons/ionicons';
 
 // ...
 
