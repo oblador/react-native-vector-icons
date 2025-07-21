@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/<%= packageName %>
 
 ## Usage
 
-```js
-import <%= className %> from '@react-native-vector-icons/<%= packageName %>';
+```jsx
+import { <%= className %> } from '@react-native-vector-icons/<%= packageName %>';
 
 // ...
 

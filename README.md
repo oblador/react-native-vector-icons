@@ -106,9 +106,9 @@ For fonts like fontawesome6-pro, fontello and icomoon where you provide the font
 You can either use one of the bundled icons above or roll your own custom font.
 
 ```js
-import Icon from "@react-native-vector-icons/fontawesome";
+import { FontAwesome } from "@react-native-vector-icons/fontawesome";
 
-<Icon name="rocket" size={30} color="#900" />;
+<FontAwesome name="rocket" size={30} color="#900" />;
 ```
 
 ### Props
@@ -144,13 +144,13 @@ By combining some of these you can create for example :
 Some fonts today use multiple styles, FontAwesome 6 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
 
 ```jsx
-import Icon from "@react-native-vector-icons/fontawesome5";
+import { FontAwesome5 } from "@react-native-vector-icons/fontawesome5";
 
-<Icon name="comments" size={30} color="#900" />; // Defaults to regular
+<FontAwesome5 name="comments" size={30} color="#900" />; // Defaults to regular
 
-<Icon name="comments" size={30} color="#900" iconType="solid" />
+<FontAwesome5 name="comments" size={30} color="#900" iconType="solid" />
 
-<Icon name="comments" size={30} color="#900" iconType="light" />
+<FontAwesome5 name="comments" size={30} color="#900" iconType="light" />
 ```
 
 ## Usage as PNG Image/Source Object
@@ -243,20 +243,22 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 ### Basic Example
 
 ```js
-import Icon from "@react-native-vector-icons/ionicons";
+import { IonIcons } from "@react-native-vector-icons/ionicons";
 
-const ExampleView = () => <Icon name="ios-person" size={30} color="#4F8EF7" />;
+const ExampleView = () => (
+  <IonIcon name="ios-person" size={30} color="#4F8EF7" />
+);
 ```
 
 ### Inline Icons
 
 ```js
 import { Text } from "react-native";
-import Icon from "@react-native-vector-icons/ionicons";
+import { IonIcons } from "@react-native-vector-icons/ionicons";
 
 const ExampleView = (props) => (
   <Text>
-    Lorem <Icon name="ios-book" color="#4F8EF7" /> Ipsum
+    Lorem <IonIcon name="ios-book" color="#4F8EF7" /> Ipsum
   </Text>
 );
 ```

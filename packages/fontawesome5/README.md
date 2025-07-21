@@ -10,7 +10,7 @@
 Using the standard icons works just like the standard icons in this library.
 
 ```javascript
-import FontAwesome5 from '@react-native-vector-icons/fontawesome5';
+import { FontAwesome5 } from "@react-native-vector-icons/fontawesome5";
 
 const icon = <FontAwesome5 name="comments" />;
 ```
@@ -19,7 +19,7 @@ Something special about the FontAwesome5 class is that you can also pass props
 to change the style of the icon:
 
 ```javascript
-import FontAwesome5 from '@react-native-vector-icons/fontawesome5';
+import { FontAwesome5 } from "@react-native-vector-icons/fontawesome5";
 
 const icon = <FontAwesome5 name="comments" iconStyle="solid" />;
 const icon = <FontAwesome5 name="git" iconStyle="brand" />;
@@ -27,7 +27,7 @@ const icon = <FontAwesome5 name="git" iconStyle="brand" />;
 
 **Valid types**
 
-| Type        | Description            |
+| Type        | Description           |
 | ----------- | --------------------- |
 | **regular** | Uses the Regular font |
 | **brand**   | Uses the Brands font  |
@@ -44,10 +44,10 @@ style is required.
 Use this to select which style the generated image should have:
 
 ```javascript
-import FontAwesome5 from '@react-native-vector-icons/fontawesome5';
+import { FontAwesome5 } from "@react-native-vector-icons/fontawesome5";
 
-FontAwesome5.getImageSource('solid', 'comments', 30, '#000').then(
-  (source) => this.setState({ image: source })
+FontAwesome5.getImageSource("solid", "comments", 30, "#000").then((source) =>
+  this.setState({ image: source }),
 );
 ```
 

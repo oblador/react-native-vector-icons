@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/ant-design
 
 ## Usage
 
-```js
-import AntDesign from '@react-native-vector-icons/ant-design';
+```jsx
+import { AntDesign } from '@react-native-vector-icons/ant-design';
 
 // ...
 

@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/octicons
 
 ## Usage
 
-```js
-import Octicons from '@react-native-vector-icons/octicons';
+```jsx
+import { Octicons } from '@react-native-vector-icons/octicons';
 
 // ...
 

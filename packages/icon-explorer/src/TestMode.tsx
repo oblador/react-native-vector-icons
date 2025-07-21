@@ -1,26 +1,26 @@
 import type { ReactNode } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 
-import AntD from '@react-native-vector-icons/ant-design';
-import Entypo from '@react-native-vector-icons/entypo';
-import EvilIcons from '@react-native-vector-icons/evil-icons';
-import Feather from '@react-native-vector-icons/feather';
-import FontAwesome from '@react-native-vector-icons/fontawesome';
-import FontAwesome5 from '@react-native-vector-icons/fontawesome5';
-import FontAwesome5Pro from '@react-native-vector-icons/fontawesome5-pro';
-import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
-import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
+import { AntDesign } from '@react-native-vector-icons/ant-design';
+import { Entypo } from '@react-native-vector-icons/entypo';
+import { EvilIcons } from '@react-native-vector-icons/evil-icons';
+import { Feather } from '@react-native-vector-icons/feather';
+import { FontAwesome } from '@react-native-vector-icons/fontawesome';
+import { FontAwesome5 } from '@react-native-vector-icons/fontawesome5';
+import { FontAwesome5Pro } from '@react-native-vector-icons/fontawesome5-pro';
+import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
+import { FontAwesome6Pro } from '@react-native-vector-icons/fontawesome6-pro';
 import createFontelloIconSet from '@react-native-vector-icons/fontello';
-import Fontisto from '@react-native-vector-icons/fontisto';
-import Foundation from '@react-native-vector-icons/foundation';
+import { Fontisto } from '@react-native-vector-icons/fontisto';
+import { Foundation } from '@react-native-vector-icons/foundation';
 import createIcoMoonIconSet from '@react-native-vector-icons/icomoon';
-import Ionicons from '@react-native-vector-icons/ionicons';
-import Lucide from '@react-native-vector-icons/lucide';
-import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
-import MaterialIcons from '@react-native-vector-icons/material-icons';
-import Octicons from '@react-native-vector-icons/octicons';
-import SimpleLineIcons from '@react-native-vector-icons/simple-line-icons';
-import Zocial from '@react-native-vector-icons/zocial';
+import { Ionicons } from '@react-native-vector-icons/ionicons';
+import { Lucide } from '@react-native-vector-icons/lucide';
+import { MaterialDesignIcons } from '@react-native-vector-icons/material-design-icons';
+import { MaterialIcons } from '@react-native-vector-icons/material-icons';
+import { Octicons } from '@react-native-vector-icons/octicons';
+import { SimpleLineIcons } from '@react-native-vector-icons/simple-line-icons';
+import { Zocial } from '@react-native-vector-icons/zocial';
 
 import FontelloConfig from './configs/fontello.config.json';
 import IcoMoonConfig from './configs/icomoon.config.json';
@@ -53,7 +53,7 @@ const IconRow = ({ label, children }: IconRowProps) => (
 
 export const TestMode = () => {
   const iconConfig = [
-    { Component: AntD, name: 'home', label: 'AntD' },
+    { Component: AntDesign, name: 'home', label: 'AntD' },
     { Component: Entypo, name: 'home', label: 'Entypo' },
     { Component: EvilIcons, name: 'archive', label: 'EvilIcons' },
     { Component: Feather, name: 'home', label: 'Feather' },

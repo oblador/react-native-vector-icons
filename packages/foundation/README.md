@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/foundation
 
 ## Usage
 
-```js
-import Foundation from '@react-native-vector-icons/foundation';
+```jsx
+import { Foundation } from '@react-native-vector-icons/foundation';
 
 // ...
 

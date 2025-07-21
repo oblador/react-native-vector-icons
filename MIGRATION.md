@@ -53,7 +53,7 @@ Update your import statements to use the new library names
 import Fontisto from "react-native-vector-icons";
 
 // New
-import Fontisto from "@react-native-vector-icons/fontisto";
+import { Fontisto } from "@react-native-vector-icons/fontisto";
 ```
 
 ### Move to new props for Fontawesome 5 and 6

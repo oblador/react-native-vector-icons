@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/material-icons
 
 ## Usage
 
-```js
-import MaterialIcons from '@react-native-vector-icons/material-icons';
+```jsx
+import { MaterialIcons } from '@react-native-vector-icons/material-icons';
 
 // ...
 

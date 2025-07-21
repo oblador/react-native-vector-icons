@@ -1,65 +1,65 @@
-import AntD from '@react-native-vector-icons/ant-design';
+import { AntDesign } from '@react-native-vector-icons/ant-design';
 // @ts-expect-error: We don't really want to export this
-import AntDGlyphs from '@react-native-vector-icons/ant-design/glyphmaps/AntDesign.json';
-import Entypo from '@react-native-vector-icons/entypo';
+import AntDesignGlyphs from '@react-native-vector-icons/ant-design/glyphmaps/AntDesign.json';
+import { Entypo } from '@react-native-vector-icons/entypo';
 // @ts-expect-error: We don't really want to export this
 import EntypoGlyphs from '@react-native-vector-icons/entypo/glyphmaps/Entypo.json';
-import EvilIcons from '@react-native-vector-icons/evil-icons';
+import { EvilIcons } from '@react-native-vector-icons/evil-icons';
 // @ts-expect-error: We don't really want to export this
 import EvilIconsGlyphs from '@react-native-vector-icons/evil-icons/glyphmaps/EvilIcons.json';
-import Feather from '@react-native-vector-icons/feather';
+import { Feather } from '@react-native-vector-icons/feather';
 // @ts-expect-error: We don't really want to export this
 import FeatherGlyphs from '@react-native-vector-icons/feather/glyphmaps/Feather.json';
-import FontAwesome from '@react-native-vector-icons/fontawesome';
+import { FontAwesome } from '@react-native-vector-icons/fontawesome';
 // @ts-expect-error: We don't really want to export this
 import FontAwesomeGlyphs from '@react-native-vector-icons/fontawesome/glyphmaps/FontAwesome.json';
-import FontAwesome5 from '@react-native-vector-icons/fontawesome5';
+import { FontAwesome5 } from '@react-native-vector-icons/fontawesome5';
 // @ts-expect-error: We don't really want to export this
 import FontAwesome5Glyphs from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5.json';
 // @ts-expect-error: We don't really want to export this
 import FontAwesome5Meta from '@react-native-vector-icons/fontawesome5/glyphmaps/FontAwesome5_meta.json';
-import FontAwesome5Pro from '@react-native-vector-icons/fontawesome5-pro';
+import { FontAwesome5Pro } from '@react-native-vector-icons/fontawesome5-pro';
 // @ts-expect-error: We don't really want to export this
 import FontAwesome5ProGlyphs from '@react-native-vector-icons/fontawesome5-pro/glyphmaps/FontAwesome5Pro.json';
 // @ts-expect-error: We don't really want to export this
 import FontAwesome5ProMeta from '@react-native-vector-icons/fontawesome5-pro/glyphmaps/FontAwesome5Pro_meta.json';
-import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
+import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
 // @ts-expect-error: We don't really want to export this
 import FontAwesome6Glyphs from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6.json';
 // @ts-expect-error: We don't really want to export this
 import FontAwesome6Meta from '@react-native-vector-icons/fontawesome6/glyphmaps/FontAwesome6_meta.json';
-import FontAwesome6Pro from '@react-native-vector-icons/fontawesome6-pro';
+import { FontAwesome6Pro } from '@react-native-vector-icons/fontawesome6-pro';
 // @ts-expect-error: We don't really want to export this
 import FontAwesome6ProGlyphs from '@react-native-vector-icons/fontawesome6-pro/glyphmaps/FontAwesome6Pro.json';
 // @ts-expect-error: We don't really want to export this
 import FontAwesome6ProMeta from '@react-native-vector-icons/fontawesome6-pro/glyphmaps/FontAwesome6Pro_meta.json';
 import createFontelloIconSet from '@react-native-vector-icons/fontello';
-import Fontisto from '@react-native-vector-icons/fontisto';
+import { Fontisto } from '@react-native-vector-icons/fontisto';
 // @ts-expect-error: We don't really want to export this
 import FontistoGlyphs from '@react-native-vector-icons/fontisto/glyphmaps/Fontisto.json';
-import Foundation from '@react-native-vector-icons/foundation';
+import { Foundation } from '@react-native-vector-icons/foundation';
 // @ts-expect-error: We don't really want to export this
 import FoundationGlyphs from '@react-native-vector-icons/foundation/glyphmaps/Foundation.json';
 import createIcoMoonIconSet from '@react-native-vector-icons/icomoon';
-import Ionicons from '@react-native-vector-icons/ionicons';
+import { Ionicons } from '@react-native-vector-icons/ionicons';
 // @ts-expect-error: We don't really want to export this
 import IoniconsGlyphs from '@react-native-vector-icons/ionicons/glyphmaps/Ionicons.json';
-import Lucide from '@react-native-vector-icons/lucide';
+import { Lucide } from '@react-native-vector-icons/lucide';
 // @ts-expect-error: We don't really want to export this
 import LucideGlyphs from '@react-native-vector-icons/lucide/glyphmaps/Lucide.json';
-import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
+import { MaterialDesignIcons } from '@react-native-vector-icons/material-design-icons';
 // @ts-expect-error: We don't really want to export this
 import MaterialDesignIconsGlyphs from '@react-native-vector-icons/material-design-icons/glyphmaps/MaterialDesignIcons.json';
-import MaterialIcons from '@react-native-vector-icons/material-icons';
+import { MaterialIcons } from '@react-native-vector-icons/material-icons';
 // @ts-expect-error: We don't really want to export this
 import MaterialIconsGlyphs from '@react-native-vector-icons/material-icons/glyphmaps/MaterialIcons.json';
-import Octicons from '@react-native-vector-icons/octicons';
+import { Octicons } from '@react-native-vector-icons/octicons';
 // @ts-expect-error: We don't really want to export this
 import OcticonsGlyphs from '@react-native-vector-icons/octicons/glyphmaps/Octicons.json';
-import SimpleLineIcons from '@react-native-vector-icons/simple-line-icons';
+import { SimpleLineIcons } from '@react-native-vector-icons/simple-line-icons';
 // @ts-expect-error: We don't really want to export this
 import SimpleLineIconsGlyphs from '@react-native-vector-icons/simple-line-icons/glyphmaps/SimpleLineIcons.json';
-import Zocial from '@react-native-vector-icons/zocial';
+import { Zocial } from '@react-native-vector-icons/zocial';
 // @ts-expect-error: We don't really want to export this
 import ZocialGlyphs from '@react-native-vector-icons/zocial/glyphmaps/Zocial.json';
 
@@ -93,7 +93,7 @@ const groupGlyphNames = (glyphMap: Record<string, number>) => {
 };
 
 const iconSets = {
-  AntD: { component: AntD, glyphNames: groupGlyphNames(AntDGlyphs), meta: undefined },
+  AntD: { component: AntDesign, glyphNames: groupGlyphNames(AntDesignGlyphs), meta: undefined },
   Entypo: { component: Entypo, glyphNames: groupGlyphNames(EntypoGlyphs), meta: undefined },
   EvilIcons: { component: EvilIcons, glyphNames: groupGlyphNames(EvilIconsGlyphs), meta: undefined },
   Feather: { component: Feather, glyphNames: groupGlyphNames(FeatherGlyphs), meta: undefined },

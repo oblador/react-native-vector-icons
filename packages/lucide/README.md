@@ -12,8 +12,8 @@ npm install @react-native-vector-icons/lucide
 
 ## Usage
 
-```js
-import Lucide from '@react-native-vector-icons/lucide';
+```jsx
+import { Lucide } from '@react-native-vector-icons/lucide';
 
 // ...
 

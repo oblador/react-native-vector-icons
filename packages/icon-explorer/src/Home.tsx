@@ -1,8 +1,8 @@
 import type { ReactNode } from 'react';
 import { Image, Pressable, ScrollView, SectionList, StyleSheet, Text, View, type ViewProps } from 'react-native';
 
-import FontAwesome from '@react-native-vector-icons/fontawesome';
-import FontAwesome6 from '@react-native-vector-icons/fontawesome6';
+import { FontAwesome } from '@react-native-vector-icons/fontawesome';
+import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
 
 import { createAnimatableComponent } from './animatable';
 import ICON_SETS from './icon-sets';
