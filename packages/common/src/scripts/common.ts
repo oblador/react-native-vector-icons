@@ -1,7 +1,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { resolveNodeModuleDir } from '@react-native-community/cli-tools';
+import { findUpSync } from 'find-up';
+
+/**
+ * Source vendored and simplified from @react-native-coommunity/cli
+ */
+const resolveNodeModuleDir = (root: string, pkgName: string) => {
+  const packageDir = findUpSync(path.join('node_modules', pkgName), {
+    cwd: root,
+    type: 'directory',
+  });
+
+  return packageDir;
+};
 
 const getPackageJson = (filename: string) => {
   const packageData = fs.readFileSync(filename, 'utf-8');

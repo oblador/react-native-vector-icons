@@ -142,12 +142,12 @@ importers:
 
   packages/common:
     dependencies:
-      '@react-native-community/cli-tools':
-        specifier: ^17.0.0
-        version: 17.0.0
       '@react-native-vector-icons/get-image':
         specifier: workspace:^
         version: link:../get-image
+      find-up:
+        specifier: ^7.0.0
+        version: 7.0.0
       picocolors:
         specifier: ^1.1.1
         version: 1.1.1
@@ -2984,9 +2984,6 @@ packages:
 
   '@react-native-community/cli-server-api@19.0.0':
     resolution: {integrity: sha512-udcSGC9hrWOGqB4S5L8cH8wgckbrZfc0iF6bH2b2/QalJ3vD016WDoZ6R6fyiyB/u8YsFJ3bnb6tk0tKInKWjg==}
-
-  '@react-native-community/cli-tools@17.0.0':
-    resolution: {integrity: sha512-mVXH7U/uXd7yizqm2iE+W4SSVc4FGYYEafAu29HihA+FHttonqdg35zVAnIX2FKbyla+TotR1ACNSgo7KFDq+w==}
 
   '@react-native-community/cli-tools@19.0.0':
     resolution: {integrity: sha512-O6qGE+1xZOOJY43CcjL3E6xtVx5m6TDEVzysIJ0jHjjE1QqYijx6W8VuWebmA08MfX4JCE2jzUrwx2Ns2GguGg==}
@@ -14168,19 +14165,6 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
-
-  '@react-native-community/cli-tools@17.0.0':
-    dependencies:
-      '@vscode/sudo-prompt': 9.3.1
-      appdirsjs: 1.2.7
-      chalk: 4.1.2
-      execa: 5.1.1
-      find-up: 5.0.0
-      launch-editor: 2.10.0
-      mime: 2.6.0
-      ora: 5.4.1
-      prompts: 2.4.2
-      semver: 7.7.2
 
   '@react-native-community/cli-tools@19.0.0':
     dependencies:
