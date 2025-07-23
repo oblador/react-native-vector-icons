@@ -3,7 +3,9 @@
 /* eslint-disable no-console */
 
 import path from 'node:path';
+
 import semver from 'semver';
+
 import { runExpoMigration } from './expo';
 import { readPackageDeps } from './readPackageDeps';
 

@@ -1,4 +1,5 @@
-import type { FileInfo, API } from 'jscodeshift';
+import type { API, FileInfo } from 'jscodeshift';
+
 import { addNewFontImport } from './newFontImports';
 
 const importsMap: Record<string, string> = {

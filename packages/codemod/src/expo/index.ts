@@ -1,4 +1,7 @@
+/* eslint-disable no-console */
+
 import { run as jscodeshift } from 'jscodeshift/src/Runner';
+
 import { updatePackageJson } from './package-json';
 
 export async function runExpoMigration(dir: string) {

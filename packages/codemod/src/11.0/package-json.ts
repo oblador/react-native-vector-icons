@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+
 import { getVersion } from '../getVersion';
 
 export default async (pkgs: Set<string>) => {

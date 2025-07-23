@@ -1,8 +1,11 @@
-import os from 'node:os';
+/* eslint-disable no-console */
+
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
-import { getNewFontImports } from './newFontImports';
+
 import { getVersion } from '../getVersion';
+import { getNewFontImports } from './newFontImports';
 
 export async function updatePackageJson(dir: string) {
   const packageJsonPath = path.join(dir, 'package.json');
