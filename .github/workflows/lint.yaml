@@ -86,4 +86,4 @@ jobs:
         run: pnpm install
 
       - name: Check for unused things
-        run: pnpm run knip
+        run: pnpm run lint:knip
