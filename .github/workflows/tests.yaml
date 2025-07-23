@@ -2,13 +2,25 @@
 name: Tests
 
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/tests.yaml"
+      - "packages/**"
+      - "scripts/**"
+      - "android/**"
+      - "ios/**"
+  pull_request:
+    paths:
+      - ".github/workflows/tests.yaml"
+      - "packages/**"
+      - "scripts/**"
   workflow_dispatch:
     inputs:
       all_versions:
         description: Run tests against all versions
         type: boolean
-  push:
-  pull_request:
 
 permissions:
   # AWS
