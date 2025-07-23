@@ -1,21 +1,18 @@
 import fs from 'node:fs';
 
-const getVersion = async (pkg: string) => {
-  const packageJson = await fetch(`https://registry.npmjs.org/${pkg}/latest`).then(
-    (res) => res.json() as unknown as { version: string },
-  );
-  return `^${packageJson.version}`;
-};
+import { getVersion } from '../getVersion';
 
 export default async (pkgs: Set<string>) => {
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   const { dependencies } = packageJson;
 
-  pkgs.forEach(async (pkg) => {
+  const versionPromises = Array.from(pkgs).map(async (pkg) => {
     if (!dependencies[pkg]) {
       dependencies[pkg] = await getVersion(pkg);
     }
   });
+
+  await Promise.all(versionPromises);
 
   if (pkgs.size > 0 && dependencies['react-native-vector-icons']) {
     dependencies['react-native-vector-icons'] = undefined;
