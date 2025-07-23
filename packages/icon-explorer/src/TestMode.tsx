@@ -7,7 +7,7 @@ import { EvilIcons } from '@react-native-vector-icons/evil-icons';
 import { Feather } from '@react-native-vector-icons/feather';
 import { FontAwesome } from '@react-native-vector-icons/fontawesome';
 import { FontAwesome5 } from '@react-native-vector-icons/fontawesome5';
-import { FontAwesome5Pro } from '@react-native-vector-icons/fontawesome5-pro';
+import { FontAwesome5Pro, type FontAwesome5ProSolidIconName } from '@react-native-vector-icons/fontawesome5-pro';
 import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
 import { FontAwesome6Pro } from '@react-native-vector-icons/fontawesome6-pro';
 import createFontelloIconSet from '@react-native-vector-icons/fontello';
@@ -50,6 +50,20 @@ const IconRow = ({ label, children }: IconRowProps) => (
     {children}
   </View>
 );
+
+/**
+ * @public
+ * Show knip ignores it
+ */
+export const OurTypeTestIcon = ({
+  name,
+  size = 24,
+  color = '#000',
+}: {
+  size: number;
+  color: string;
+  name: FontAwesome5ProSolidIconName;
+}) => <FontAwesome5Pro name={name} size={size} color={color} iconStyle="solid" />;
 
 export const TestMode = () => {
   const iconConfig = [
