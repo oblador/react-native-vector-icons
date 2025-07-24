@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 
+import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-import { getVersion } from '../getVersion';
 import { getNewFontImports } from './newFontImports';
 
 export async function updatePackageJson(dir: string) {
@@ -30,12 +30,13 @@ export async function updatePackageJson(dir: string) {
   }
 
   const newFontImports = getNewFontImports();
-  const latestVersions = await Promise.all(newFontImports.map((font) => getVersion(font)));
-  newFontImports.forEach((font, index) => {
-    packageJson.dependencies[font] = latestVersions[index];
-  });
 
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + os.EOL);
+
+  execSync(`npx expo install ${newFontImports.join(' ')}`, {
+    cwd: dir,
+    stdio: 'inherit',
+  });
 
   console.log(
     `Removed @expo/vector-icons and added ${newFontImports.length} font packages: ${newFontImports.join(', ')}`,
