@@ -2,7 +2,7 @@
   "name": "@react-native-vector-icons/get-image",
   "version": "12.1.0",
   "description": "Glyph to png conversion for react native vector icons",
-  "source": "./src/index.tsx",
+  "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
   "types": "./lib/typescript/commonjs/src/index.d.ts",

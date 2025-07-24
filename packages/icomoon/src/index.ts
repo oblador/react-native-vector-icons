@@ -22,7 +22,7 @@ type IcoMoonConfig = {
   };
 };
 
-export default (config: IcoMoonConfig, fontFamilyArg?: string, fontFile?: string) => {
+export default function createIconSetFromIcoMoon(config: IcoMoonConfig, fontFamilyArg?: string, fontFile?: string) {
   const glyphMap: Record<string, number> = {};
   config.icons.forEach((icon) => {
     icon.properties.name.split(/\s*,\s*/g).forEach((name) => {
@@ -33,4 +33,4 @@ export default (config: IcoMoonConfig, fontFamilyArg?: string, fontFile?: string
   const fontFamily = fontFamilyArg || config.preferences.fontPref.metadata.fontFamily;
 
   return createIconSet(glyphMap, fontFamily, fontFile || `${fontFamily}.ttf`);
-};
+}
