@@ -1,0 +1,22 @@
+name: 'Support requests'
+
+on:
+  issues:
+    types: [labeled, unlabeled, reopened]
+
+jobs:
+  support:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dessant/support-requests@v4
+        with:
+          github-token: ${{ github.token }}
+          support-label: 'missing-repro'
+          issue-comment: >
+            :wave: @{issue-author}, sorry you're having an issue. As the issue template explains, it's required that you provide a runnable example that reproduces your issue (see the [issue template](../blob/main/.github/ISSUE_TEMPLATE/bug_report.yaml)).
+
+            The reason is that a bug report is not actionable without a reproducer. Try to minimize the superfluous code and focus only on reproducing the bug.
+
+            Please create a new issue with this and one of the maintainers will do their best to review it!
+          close-issue: true
+          lock-issue: true

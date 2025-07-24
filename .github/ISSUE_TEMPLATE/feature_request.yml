@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to suggest a new feature!
-        Before requesting please:
+        Before requesting:
         - Search for existing issues (including closed issues): https://github.com/oblador/react-native-vector-icons/issues?q=is%3Aissue+
 
   - type: textarea
@@ -35,7 +35,7 @@ body:
         A clear and concise description of any alternative solutions or features you've considered.
 
   - type: textarea
-    id: contect
+    id: context
     attributes:
       label: Additional context
       description: |
