@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-        Before filing a bug report please:
+        Before filing a bug report:
         - Review the documentation: https://github.com/react-native-vector-icons/react-native-vector-icons
         - Search for existing issues (including closed issues): https://github.com/oblador/react-native-vector-icons/issues?q=is%3Aissue+
 
@@ -33,6 +33,17 @@ body:
     validations:
       required: true
 
+  - type: input
+    attributes:
+      label: Minimal reproducible example
+      description: |
+        A link to a GitHub repository containing a minimal reproducible example. This repository should include as little code as possible and not include extraneous dependencies.
+
+        Either provide a link to the repo that reproduces the bug or provide your version of the `App.tsx` file that reproduces the issue and that we can copy-paste and see the issue.
+
+        If a reproducible example is not provided, your issue is likely to be closed.
+        [Learn more about creating a minimal reproducible example](https://stackoverflow.com/help/mcve).
+
   - type: textarea
     id: what-happened
     attributes:
@@ -47,15 +58,8 @@ body:
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: Copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
-
-  - type: textarea
-    id: demo
-    attributes:
-      label: Minimal reproducible example
-      description: |
-        Let us know how to reproduce the issue. Include a code sample, share a project, or share an app that reproduces the issue using https://snack.expo.io/. Please follow the guidelines for providing a MCVE: https://stackoverflow.com/help/mcve
 
   - type: textarea
     attributes:
