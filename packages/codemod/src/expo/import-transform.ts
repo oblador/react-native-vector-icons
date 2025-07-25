@@ -20,6 +20,9 @@ const importsMap: Record<string, string> = {
   '@expo/vector-icons/Octicons': '@react-native-vector-icons/octicons',
   '@expo/vector-icons/SimpleLineIcons': '@react-native-vector-icons/SimpleLineIcons',
   '@expo/vector-icons/Zocial': '@react-native-vector-icons/zocial',
+  // non-icon-family imports
+  '@expo/vector-icons/createIconSetFromIcoMoon': '@react-native-vector-icons/icomoon',
+  '@expo/vector-icons/createIconSetFromFontello': '@react-native-vector-icons/fontello',
 };
 
 // prefer transforms to default imports as they are easier to get right than named imports
