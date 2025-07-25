@@ -20,7 +20,7 @@ type FontelloConfig = {
   }>;
 };
 
-export default (config: FontelloConfig, fontFamilyArg?: string, fontFile?: string) => {
+export default function createIconSetFromFontello(config: FontelloConfig, fontFamilyArg?: string, fontFile?: string) {
   const glyphMap: Record<string, number> = {};
   config.glyphs.forEach((glyph) => {
     glyphMap[glyph.css] = glyph.code;
@@ -29,4 +29,4 @@ export default (config: FontelloConfig, fontFamilyArg?: string, fontFile?: strin
   const fontFamily = fontFamilyArg || config.name || 'fontello';
 
   return createIconSet(glyphMap, fontFamily, fontFile || `${fontFamily}.ttf`);
-};
+}
