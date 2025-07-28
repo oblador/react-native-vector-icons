@@ -9,14 +9,20 @@ We provide a `codemod` to help migrate your code and settings between major vers
 npx @react-native-vector-icons/codemod
 ```
 
-This will attempt to execute many of the manual steps. Thoroughly check each section below for any steps that aren't automatically handled.
+## Expo
+
+Run the codemod in your Expo project and you're done! Do not perform any manual steps below.
+
+## React Native CLI projects
+
+The codemod attempts to execute many of the manual steps listed below. Thoroughly check each section below for any steps that aren't automatically handled.
 
 > [!NOTE]
 > The codemod is a best effort, read through all the manual steps to ensure they have been completed.
 
 ## Migration from react-native-vector-icons to @react-native-vector-icons/\* v12.0+
 
-The library has been simplified to require very little setup and does not require the explicit installation of `@react-native-vector-icons/common` package.
+In v12, the library has been simplified to require very little setup and does not require the explicit installation of `@react-native-vector-icons/common` package.
 
 ### package.json
 
