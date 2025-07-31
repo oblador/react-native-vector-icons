@@ -16,7 +16,9 @@
         "types": "./lib/typescript/commonjs/src/index.d.ts",
         "default": "./lib/commonjs/index.js"
       }
-    }
+    },
+    "./glyphmaps/*.json": "./glyphmaps/*.json",
+    "./fonts/*.ttf": "./fonts/*.ttf"
   },
   "files": [
     "src",

@@ -185,9 +185,9 @@ When you're sending a pull request:
 
 ### Font generation
 
-All the fonts are automatiaclly generated using a `yeoman` generator. This is driven by a `.yo-rc.json` file in the root of each font.
+All the font packages are automatically generated using a `yeoman` generator. This is driven by a `.yo-rc.json` file in the root of each font.
 
-To make changes to common font files you shuold edit the files in `packages/generator-react-native-vector-icons/src/app/templates/` and then at the root you shuld run:
+To make changes to common font files, edit the files in `packages/generator-react-native-vector-icons/src/app/templates/` and then at the root run:
 
 ```sh
 # Generate all fonts
@@ -199,4 +199,4 @@ pnpm generate ant-design
 
 ### Font versioning
 
-Font package versions are now independent of upstream font versions and we track the mapping in the README.md of each font
+Font package versions are now independent of upstream font versions, and we track the mapping in the README.md of each font
