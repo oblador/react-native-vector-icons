@@ -25,7 +25,7 @@ export type IconProps<T> = TextProps & {
   innerRef?: Ref<Text>;
 };
 
-type IconComponent<GM extends Record<string, number>> = React.FC<
+export type IconComponent<GM extends Record<string, number>> = React.FC<
   TextProps & {
     name: keyof GM;
     size?: number;
@@ -150,7 +150,7 @@ export function createIconSet<GM extends Record<string, number>>(
   const WrappedIcon = forwardRef<Text, IconProps<keyof typeof glyphMap>>((props, ref) => (
     <Icon innerRef={ref} {...props} />
   ));
-  WrappedIcon.displayName = 'Icon';
+  WrappedIcon.displayName = `Icon(${postScriptName})`;
 
   const imageSourceCache = createIconSourceCache();
 

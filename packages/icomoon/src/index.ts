@@ -3,7 +3,7 @@
  * Usage: <Fontello name="icon-name" size={20} color="#4F8EF7" />
  */
 
-import { createIconSet } from '@react-native-vector-icons/common';
+import { type CreateIconSetOptions, createIconSet, type IconComponent } from '@react-native-vector-icons/common';
 
 type IcoMoonIcon = {
   properties: {
@@ -22,7 +22,30 @@ type IcoMoonConfig = {
   };
 };
 
-export default function createIconSetFromIcoMoon(config: IcoMoonConfig, fontFamilyArg?: string, fontFile?: string) {
+type IcoMoonComponent = IconComponent<Record<string, number>>;
+
+// entries are optional because they can be derived from the config
+type Options = Partial<CreateIconSetOptions>;
+
+export default function createIconSetFromIcoMoon(
+  config: IcoMoonConfig,
+  postScriptName?: string,
+  fontFileName?: string,
+): IcoMoonComponent;
+export default function createIconSetFromIcoMoon(config: IcoMoonConfig, options: Options): IcoMoonComponent;
+export default function createIconSetFromIcoMoon(
+  config: IcoMoonConfig,
+  postScriptNameOrOptions?: string | Options,
+  fontFileNameParam?: string,
+): IcoMoonComponent {
+  const { postScriptName, fontFileName, fontSource, fontStyle } =
+    typeof postScriptNameOrOptions === 'object'
+      ? postScriptNameOrOptions
+      : {
+          postScriptName: postScriptNameOrOptions,
+          fontFileName: fontFileNameParam,
+        };
+
   const glyphMap: Record<string, number> = {};
   config.icons.forEach((icon) => {
     icon.properties.name.split(/\s*,\s*/g).forEach((name) => {
@@ -30,7 +53,12 @@ export default function createIconSetFromIcoMoon(config: IcoMoonConfig, fontFami
     });
   });
 
-  const fontFamily = fontFamilyArg || config.preferences.fontPref.metadata.fontFamily;
+  const fontFamily = postScriptName || config.preferences.fontPref.metadata.fontFamily;
 
-  return createIconSet(glyphMap, fontFamily, fontFile || `${fontFamily}.ttf`);
+  return createIconSet(glyphMap, {
+    postScriptName: fontFamily,
+    fontFileName: fontFileName || `${fontFamily}.ttf`,
+    fontSource,
+    fontStyle,
+  });
 }
