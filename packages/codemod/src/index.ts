@@ -6,6 +6,7 @@ import path from 'node:path';
 
 import semver from 'semver';
 
+import { checkGitStatus } from './checkGitStatus';
 import { runExpoMigration } from './expo';
 import { readPackageDeps } from './readPackageDeps';
 
@@ -15,6 +16,8 @@ async function main() {
     console.error('Specify a directory in which to run the codemod');
     process.exit(1);
   }
+
+  checkGitStatus(dir);
 
   const { dependencies, error } = readPackageDeps(dir);
 
@@ -31,7 +34,6 @@ async function main() {
 
   if (expoVectorIcons) {
     await runExpoMigration(dir);
-    console.log('Transform complete! Reinstall npm dependencies to use the new versions.');
   } else {
     if (dependencies['react-native-vector-icons']) {
       version = '11.x';
