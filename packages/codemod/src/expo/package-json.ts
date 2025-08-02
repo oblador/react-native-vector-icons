@@ -39,6 +39,7 @@ export async function updatePackageJson(dir: string) {
   });
 
   console.log(
-    `Removed @expo/vector-icons and added ${newFontImports.length} font packages: ${newFontImports.join(', ')}`,
+    `@expo/vector-icons was removed from package.json. As a replacement, the following ${newFontImports.length} packages were added: ${newFontImports.join(', ')}.`,
   );
+  console.log('If you need to, you can add @expo/vector-icons back by running `npx expo install @expo/vector-icons`');
 }
