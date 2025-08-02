@@ -11,7 +11,17 @@ npx @react-native-vector-icons/codemod
 
 ## Expo
 
-Run the codemod in your Expo project and you're done! Do not perform any manual steps below.
+To migrate from `@expo/vector-icons`, run the codemod in your Expo project. If you use `createIconSetFromIcoMoon` or `createIconSetFromFontello`, there may be some manual steps required after running the codemod:
+
+```diff
+-import createIconSetFromFontello from '@expo/vector-icons/createIconSetFromFontello';
++import createIconSetFromFontello from '@react-native-vector-icons/fontello';
+
+-createIconSetFromFontello(fontelloConfig, 'fontello', require('path/to/fontello.ttf'));
++createIconSetFromFontello(fontelloConfig, {
++    fontSource: require('path/to/fontello.ttf')
++});
+```
 
 ## React Native CLI projects
 
