@@ -66,11 +66,9 @@ const styles = StyleSheet.create({
 
 const getFilteredGlyphNames = (iconStyle: string | undefined, iconSet: IconSet, query: string) => {
   const icons = iconStyle
-    ? // @ts-expect-error because we don't export the glyphmap
-      (iconSet.meta?.[iconStyle as keyof typeof iconSet.meta] || []).map((name) => [name])
+    ? (iconSet.meta?.[iconStyle as keyof typeof iconSet.meta] || []).map((name) => [name])
     : iconSet.glyphNames;
 
-  // @ts-expect-error because we don't export the glyphmap
   return icons.filter((glyphNames) => glyphNames.find((glyphName) => glyphName.indexOf(query) !== -1));
 };
 
