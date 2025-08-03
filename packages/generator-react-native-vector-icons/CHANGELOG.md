@@ -1,3 +1,13 @@
+## 12.3.0 (2025-08-03)
+
+### 🚀 Features
+
+- export font files and glyphmaps ([#1827](https://github.com/oblador/react-native-vector-icons/pull/1827))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.2.0 (2025-07-20)
 
 ### 🚀 Features

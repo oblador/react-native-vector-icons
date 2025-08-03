@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/evil-icons",
-  "version": "12.2.0",
+  "version": "12.3.0",
   "description": "Evil Icons font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",

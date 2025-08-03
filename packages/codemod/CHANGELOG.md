@@ -1,3 +1,17 @@
+## 12.2.0 (2025-08-03)
+
+### 🚀 Features
+
+- **codemod:** add codemod for expo/vector-icons ([#1815](https://github.com/oblador/react-native-vector-icons/pull/1815))
+
+### 🩹 Fixes
+
+- **codemod:** add git status check, use npx expo install to add deps ([#1818](https://github.com/oblador/react-native-vector-icons/pull/1818))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.1.0 (2025-07-12)
 
 This was a version bump only for @react-native-vector-icons/codemod to align it with other projects, there were no code changes.

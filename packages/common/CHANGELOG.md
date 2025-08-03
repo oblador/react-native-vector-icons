@@ -1,3 +1,17 @@
+## 12.3.0 (2025-08-03)
+
+### 🩹 Fixes
+
+- remove @react-native-commmunity/cli as a dependency ([#1812](https://github.com/oblador/react-native-vector-icons/pull/1812))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/get-image to 12.2.0
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 12.2.0 (2025-07-20)
 
 ### 🚀 Features
