@@ -27,7 +27,7 @@ import createIconSet from '@react-native-vector-icons/fontello';
 import fontelloConfig from './config.json';
 const Icon = createIconSet(fontelloConfig);
 
-cont icon = <Icon name="comments" />;
+const icon = <Icon name="comments" />;
 ```
 
 If you want to customise the font postscript name and filename you can pass extra arguments.
