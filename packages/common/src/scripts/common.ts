@@ -4,7 +4,7 @@ import path from 'node:path';
 import { findUpSync } from 'find-up';
 
 /**
- * Source vendored and simplified from @react-native-coommunity/cli
+ * Source vendored and simplified from @react-native-community/cli
  */
 const resolveNodeModuleDir = (root: string, pkgName: string) => {
   const packageDir = findUpSync(path.join('node_modules', pkgName), {
