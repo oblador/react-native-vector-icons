@@ -42,6 +42,8 @@ body:
 
         If a reproducible example is not provided, your issue is likely to be closed.
         [Learn more about creating a minimal reproducible example](https://stackoverflow.com/help/mcve).
+    validations:
+      required: true
 
   - type: textarea
     id: what-happened
