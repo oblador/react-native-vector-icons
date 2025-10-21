@@ -50,6 +50,15 @@ jobs:
           git config --local user.name 'github-actions[bot]'
           git config --local user.email 'github-actions[bot]@users.noreply.github.com'
 
+      # Ensure npm 11.5.1 or later is installed
+      - name: Update npm
+        run: |
+          echo 'BEFORE'
+          npm -v
+          npm install -g npm@latest
+          echo 'AFTER'
+          npm -v
+
       - name: Publish to NPM
         if: github.event.inputs.pre_release != 'true'
         env:
