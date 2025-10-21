@@ -17,8 +17,8 @@ on:
         description: Create a pre-release
 
 permissions:
-  id-token: write
-  contents: read
+  id-token: write # For NPM trusted publishing
+  contents: write # For git commits of Changelog
 
 jobs:
   npm:
