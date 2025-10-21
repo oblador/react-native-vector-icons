@@ -1,3 +1,14 @@
+## 12.3.1 (2025-10-21)
+
+### 🩹 Fixes
+
+- supported node version range ([#1840](https://github.com/oblador/react-native-vector-icons/pull/1840))
+- correct required node version ([#1837](https://github.com/oblador/react-native-vector-icons/pull/1837))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.3.0 (2025-08-03)
 
 ### 🩹 Fixes
