@@ -16,6 +16,10 @@ on:
         type: boolean
         description: Create a pre-release
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   npm:
     name: NPM
