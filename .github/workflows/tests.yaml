@@ -227,7 +227,6 @@ jobs:
         uses: futureware-tech/simulator-action@v3
         with:
           os: "iOS"
-          os_version: "=18.2"
           model: "iPhone 16"
 
       - name: Run tests
