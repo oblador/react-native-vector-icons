@@ -25,7 +25,9 @@ export type IconProps<T> = TextProps & {
   innerRef?: Ref<Text>;
 };
 
-export type IconComponent<GM extends Record<string, number>> = React.FC<
+type GlyphMap = Record<string, number | string>;
+
+export type IconComponent<GM extends GlyphMap> = React.FC<
   TextProps & {
     name: keyof GM;
     size?: number;
@@ -44,17 +46,14 @@ export type CreateIconSetOptions = {
   fontStyle?: TextProps['style'];
 };
 
-export function createIconSet<GM extends Record<string, number>>(
+export function createIconSet<GM extends GlyphMap>(
   glyphMap: GM,
   postScriptName: string,
   fontFileName: string,
   fontStyle?: TextProps['style'],
 ): IconComponent<GM>;
-export function createIconSet<GM extends Record<string, number>>(
-  glyphMap: GM,
-  options: CreateIconSetOptions,
-): IconComponent<GM>;
-export function createIconSet<GM extends Record<string, number>>(
+export function createIconSet<GM extends GlyphMap>(glyphMap: GM, options: CreateIconSetOptions): IconComponent<GM>;
+export function createIconSet<GM extends GlyphMap>(
   glyphMap: GM,
   postScriptNameOrOptions: string | CreateIconSetOptions,
   fontFileNameParam?: string,
@@ -83,14 +82,14 @@ export function createIconSet<GM extends Record<string, number>>(
     fontStyle: 'normal',
   };
 
-  const resolveGlyph = (name: keyof GM) => {
-    const glyph = glyphMap[name];
+  const resolveGlyph = (name: keyof GM): string => {
+    const glyph = glyphMap[name] || '?';
 
     if (typeof glyph === 'number') {
       return String.fromCodePoint(glyph);
     }
 
-    return '?';
+    return glyph;
   };
 
   const Icon = ({
