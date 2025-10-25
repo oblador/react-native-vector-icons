@@ -34,6 +34,7 @@ module.exports = (config) =>
       'Lucide.ttf',
     ];
 
+    // biome-ignore lint/suspicious/useIterableCallbackReturn: @expo doesn't go deep enough on the types
     fonts.forEach((font) => c.ios.infoPlist.UIAppFonts.push(font));
 
     return c;

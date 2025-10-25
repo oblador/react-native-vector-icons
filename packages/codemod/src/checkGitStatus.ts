@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { execSync } from 'child_process';
+import { execSync } from 'node:child_process';
 
 export function checkGitStatus(dir: string): void {
   try {
@@ -22,6 +22,6 @@ export function checkGitStatus(dir: string): void {
     console.log('✅ Git repository is clean');
   } catch {
     // If git rev-parse fails, the directory is not a git repository
-    console.log('⚠️  Directory is not a git repository. Proceeding without git status check.');
+    console.log('!  Directory is not a git repository. Proceeding without git status check.');
   }
 }

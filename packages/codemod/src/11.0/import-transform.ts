@@ -36,5 +36,6 @@ export default (j: JSCodeshift, root: Collection, r: (msg: string) => void) => {
     })
     .toSource();
 
+  // biome-ignore lint/suspicious/useIterableCallbackReturn: biome bug??
   pkgs.forEach((pkg) => r(`DEP_FOUND: ${pkg}`));
 };

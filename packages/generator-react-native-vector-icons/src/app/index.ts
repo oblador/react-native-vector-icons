@@ -387,6 +387,7 @@ export default class extends Generator<Arguments> {
       locations = copyFont.location;
     }
 
+    // biome-ignore lint/suspicious/useIterableCallbackReturn: biome bug??
     locations.forEach(([from, to]) => fs.cpSync(from, `fonts/${to}.ttf`));
   }
 
