@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "0fc9ef0a8dbb07d21032f73ec0473fdcfe154f17b2d80d8d9e5d77db8a394b91",
-    "current": "0fc9ef0a8dbb07d21032f73ec0473fdcfe154f17b2d80d8d9e5d77db8a394b91"
+    "previous": "923f7b9c09ea91cb6b44d9c64bf959b204eb39bc20626d388ba29f369667c663",
+    "current": "923f7b9c09ea91cb6b44d9c64bf959b204eb39bc20626d388ba29f369667c663"
   },
   "fonts": [
     "Octicons/Octicons.ttf",
@@ -18,6 +18,10 @@
     "accessibility-inset": {
       "codepoint": 61697,
       "source": "renamedSVGs/accessibility-inset.svg"
+    },
+    "agent": {
+      "codepoint": 62027,
+      "source": "renamedSVGs/agent.svg"
     },
     "ai-model": {
       "codepoint": 62022,
@@ -163,6 +167,10 @@
       "codepoint": 61730,
       "source": "renamedSVGs/checkbox.svg"
     },
+    "checkbox-fill": {
+      "codepoint": 62028,
+      "source": "renamedSVGs/checkbox-fill.svg"
+    },
     "checklist": {
       "codepoint": 61731,
       "source": "renamedSVGs/checklist.svg"
@@ -246,6 +254,10 @@
     "comment": {
       "codepoint": 61751,
       "source": "renamedSVGs/comment.svg"
+    },
+    "comment-ai": {
+      "codepoint": 62029,
+      "source": "renamedSVGs/comment-ai.svg"
     },
     "comment-discussion": {
       "codepoint": 61752,
@@ -759,6 +771,10 @@
       "codepoint": 61877,
       "source": "renamedSVGs/logo-github.svg"
     },
+    "loop": {
+      "codepoint": 62030,
+      "source": "renamedSVGs/loop.svg"
+    },
     "mail": {
       "codepoint": 61878,
       "source": "renamedSVGs/mail.svg"
@@ -770,6 +786,14 @@
     "markdown": {
       "codepoint": 61880,
       "source": "renamedSVGs/markdown.svg"
+    },
+    "maximize": {
+      "codepoint": 62031,
+      "source": "renamedSVGs/maximize.svg"
+    },
+    "mcp": {
+      "codepoint": 62032,
+      "source": "renamedSVGs/mcp.svg"
     },
     "megaphone": {
       "codepoint": 61881,
@@ -786,6 +810,10 @@
     "milestone": {
       "codepoint": 61884,
       "source": "renamedSVGs/milestone.svg"
+    },
+    "minimize": {
+      "codepoint": 62033,
+      "source": "renamedSVGs/minimize.svg"
     },
     "mirror": {
       "codepoint": 61885,
@@ -1111,6 +1139,10 @@
       "codepoint": 61964,
       "source": "renamedSVGs/sort-desc.svg"
     },
+    "space": {
+      "codepoint": 62034,
+      "source": "renamedSVGs/space.svg"
+    },
     "sparkle": {
       "codepoint": 62026,
       "source": "renamedSVGs/sparkle.svg"
@@ -1302,6 +1334,10 @@
     "video": {
       "codepoint": 62008,
       "source": "renamedSVGs/video.svg"
+    },
+    "vscode": {
+      "codepoint": 62035,
+      "source": "renamedSVGs/vscode.svg"
     },
     "webhook": {
       "codepoint": 62009,
