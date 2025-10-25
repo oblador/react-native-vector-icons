@@ -972,8 +972,8 @@ importers:
         version: 0.80.0(@babel/core@7.26.9)(@react-native-community/cli@19.0.0(typescript@5.8.3))(@types/react@19.1.8)(react@19.1.0)
     devDependencies:
       '@primer/octicons':
-        specifier: 19.15.3
-        version: 19.15.3
+        specifier: 19.19.0
+        version: 19.19.0
       '@types/react':
         specifier: ^19.1.0
         version: 19.1.8
@@ -2955,8 +2955,8 @@ packages:
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
 
-  '@primer/octicons@19.15.3':
-    resolution: {integrity: sha512-SVD0JbTzabLqLx4d5Cl3cyY+i0u3j5/lI6P3FyNkkJb9Z4VAQ+mBvl7WgK0ZFEXBsLc2gxnoYXvC3TkNSEz1NQ==}
+  '@primer/octicons@19.19.0':
+    resolution: {integrity: sha512-LBbL8nOl6FWMDy7riKB5ppHLtffY7loRq+CDGj0D5G1Xdo2mKlSOQy3rWy2RVE8SxxPFL+mj46C1nG+smKBEZA==}
 
   '@react-native-community/cli-clean@19.0.0':
     resolution: {integrity: sha512-Br+bxxEKXpikzlBLeAv3Bh1DRGrveJmULEG6Q9XPHzPOtRZcRlcDcBidjVwu8XGJdYiplvFdK6cC2sxCM2Mbvw==}
@@ -14074,7 +14074,7 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@primer/octicons@19.15.3':
+  '@primer/octicons@19.19.0':
     dependencies:
       object-assign: 4.1.1
 
