@@ -6,3 +6,15 @@ Icon packages from `@react-native-vector-icons` work out of the box with Expo, a
 
 > [!WARNING]  
 > Avoid Manual Font Duplication: do not add fonts from `node_modules/@react-native-vector-icons/some-font` to `expo-font` plugin configuration unless you have a specific advanced use case.
+
+
+> [!Troubleshooting]  
+> Icons are not showing on iOS:  
+> The order of imports at your app's entry point is important. Import `expo` or `expo-router` before importing this one. If this library is imported before Expo is initialized, icons may not display correctly.
+> ```javascript
+> // Import Expo first, before your App component
+> import { registerRootComponent } from 'expo'; 
+> import App from './App';
+> 
+> registerRootComponent(App);
+> ```
