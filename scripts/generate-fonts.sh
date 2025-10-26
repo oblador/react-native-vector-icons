@@ -29,10 +29,10 @@ for package in "${PACKAGES[@]}"; do
     cp fonts/*.ttf "/tmp/$package/before"
   fi
 
-  CURRENT_VERSION=$(jq -r '.version' package.json)
+  CURRENT_VERSION=$([ -f package.json ] && jq -r '.version' package.json || echo "0.0.1")
 
   rm -rf ./*
-  git restore CHANGELOG.md
+  git restore CHANGELOG.md &>/dev/null || true
 
   if [ "$(jq -r '."generator-react-native-vector-icons".customReadme' .yo-rc.json)" == "true" ]; then
     git restore README.md >/dev/null || true
