@@ -11,7 +11,7 @@
 
 import { createIconSet } from '@react-native-vector-icons/<%= commonPackage %>';
 
-import glyphMap from '../glyphmaps/<%= fontFileName %>.json';
+import glyphMap from '../glyphmaps/<%= className %>.json';
 
 export const <%= className %> = createIconSet(glyphMap, {
   postScriptName: '<%= postScriptName %>',
