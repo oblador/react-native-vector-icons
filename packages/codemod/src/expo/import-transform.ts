@@ -18,7 +18,7 @@ const importsMap: Record<string, string> = {
   '@expo/vector-icons/MaterialCommunityIcons': '@react-native-vector-icons/material-design-icons',
   '@expo/vector-icons/MaterialIcons': '@react-native-vector-icons/material-icons',
   '@expo/vector-icons/Octicons': '@react-native-vector-icons/octicons',
-  '@expo/vector-icons/SimpleLineIcons': '@react-native-vector-icons/SimpleLineIcons',
+  '@expo/vector-icons/SimpleLineIcons': '@react-native-vector-icons/simple-line-icons',
   '@expo/vector-icons/Zocial': '@react-native-vector-icons/zocial',
   // non-icon-family imports
   '@expo/vector-icons/createIconSetFromIcoMoon': '@react-native-vector-icons/icomoon',
