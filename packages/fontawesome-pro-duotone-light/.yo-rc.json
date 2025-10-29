@@ -1,0 +1,28 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontawesome-pro-duotone-light",
+    "upstreamFont": {
+      "registry": "https://npm.fontawesome.com",
+      "packageName": "@fortawesome/fontawesome-pro",
+      "versionOnly": true
+    },
+    "copyCustomFonts": true,
+    "className": "FontAwesomeProDuotoneLight",
+    "postScriptName": "FontAwesome7Duotone-Light",
+    "fontFileName": "fa-duotone-light-300",
+    "buildSteps": {
+      "preScript": {
+        "script": "../fontawesome-common/scripts/fetch-pro.sh 7"
+      },
+      "glyphmap": {
+        "location": "fa/pro/css/all.css",
+        "mode": "css",
+        "prefix": ".fa-"
+      },
+      "postScript": {
+        "script": "../fontawesome-common/scripts/generate-fontawesome-glyphmap.mts FontAwesomeProDuotoneLight.json fa/pro/svgs/duotone-light\nrm -rf fa"
+      }
+    },
+    "versions": [{ "rnvi": "1.0.0", "upstream": "7.1.0" }]
+  }
+}

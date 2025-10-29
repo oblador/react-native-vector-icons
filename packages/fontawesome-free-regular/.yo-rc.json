@@ -1,0 +1,24 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontawesome-free-regular",
+    "upstreamFont": "@fortawesome/fontawesome-free",
+    "className": "FontAwesomeFreeRegular",
+    "postScriptName": "FontAwesome7Free-Regular",
+    "fontFileName": "fa-regular-400",
+    "buildSteps": {
+      "glyphmap": {
+        "location": "../../node_modules/@fortawesome/fontawesome-free/css/all.css",
+        "mode": "css",
+        "prefix": ".fa-"
+      },
+      "copyFont": {
+        "location": "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2",
+        "cleanup": true
+      },
+      "postScript": {
+        "script": "../fontawesome-common/scripts/generate-fontawesome-glyphmap.mts FontAwesomeFreeRegular.json ../../node_modules/@fortawesome/fontawesome-free/svgs/regular"
+      }
+    },
+    "versions": [{ "rnvi": "1.0.0", "upstream": "7.1.0" }]
+  }
+}

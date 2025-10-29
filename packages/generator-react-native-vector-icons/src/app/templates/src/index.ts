@@ -16,7 +16,9 @@ import glyphMap from '../glyphmaps/<%= className %>.json';
 export const <%= className %> = createIconSet(glyphMap, {
   postScriptName: '<%= postScriptName %>',
   fontFileName: '<%= fontFileName %>.ttf',
+<% if (!copyCustomFonts) { -%>
   fontSource: require('../fonts/<%= fontFileName %>.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+<% } -%>
 });
 
 export type <%= className %>IconName = keyof typeof glyphMap;

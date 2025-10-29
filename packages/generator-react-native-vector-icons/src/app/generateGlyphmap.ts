@@ -70,7 +70,7 @@ const extractGlyphMapFromCss = (fileName: string, selectorPrefix: string) => {
 
     const contents: string[] = [];
     rule.walkDecls('--fa', (decl) => {
-      const content = decl.value.replace(/['"]/g, ''); // Remove quotes
+      const content = decl.value.replace(/^['"]/g, '').replace(/['"]$/g, ''); // Remove quotes
       contents.push(content);
     });
 
@@ -78,7 +78,10 @@ const extractGlyphMapFromCss = (fileName: string, selectorPrefix: string) => {
     if (!content) {
       return;
     }
-    const codePoint = Number.parseInt(content.slice(1), 16);
+    let codePoint = Number.parseInt(content.slice(1), 16);
+    if (Number.isNaN(codePoint)) {
+      codePoint = content.codePointAt(0) || 0;
+    }
 
     iconNames.forEach((iconName) => {
       glyphMap[iconName] = codePoint;
