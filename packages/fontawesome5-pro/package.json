@@ -79,7 +79,8 @@
   },
   "homepage": "https://github.com/oblador/react-native-vector-icons",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "dependencies": {
     "@react-native-vector-icons/common": "workspace:^",
