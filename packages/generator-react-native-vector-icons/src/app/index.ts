@@ -28,6 +28,8 @@ interface Data {
   source: string;
   customAssets?: boolean;
   commonPackage?: string;
+  noGlyphmap?: boolean;
+  extraExports: string;
   meta: Record<string, object>;
   buildSteps: {
     preScript?: {
@@ -469,6 +471,17 @@ export default class extends Generator<Arguments> {
 
       data.versionTable = versionTable.join('\n');
     }
+
+    const extraExports = [];
+    if (!data.noGlyphmap) {
+      extraExports.push('"./glyphmaps/*.json": "./glyphmaps/*.json"');
+    }
+
+    if (!data.copyCustomFonts) {
+      extraExports.push('"./fonts/*.ttf": "./fonts/*.ttf"');
+    }
+
+    data.extraExports = extraExports.length === 0 ? '' : `,\n    ${extraExports.join(',\n    ')}`;
 
     return data;
   }

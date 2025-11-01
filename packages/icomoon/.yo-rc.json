@@ -3,6 +3,7 @@
     "packageName": "icomoon",
     "customReadme": true,
     "customSrc": true,
+    "noGlyphmap": true,
     "copyCustomFonts": true
   }
 }

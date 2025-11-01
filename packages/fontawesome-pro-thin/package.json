@@ -17,8 +17,7 @@
         "default": "./lib/commonjs/index.js"
       }
     },
-    "./glyphmaps/*.json": "./glyphmaps/*.json",
-    "./fonts/*.ttf": "./fonts/*.ttf"
+    "./glyphmaps/*.json": "./glyphmaps/*.json"
   },
   "files": [
     "src",

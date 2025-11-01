@@ -30,7 +30,7 @@
       "ignore": ["src/NativeVectorIcons.ts", "react-native.config.js"]
     },
     "packages/fontawesome-common": {
-      "entry": ["scripts/generate-fontawesome-metadata.js"],
+      "entry": ["scripts/generate-fontawesome-metadata.js", "scripts/generate-fontawesome-glyphmap.mts"],
       "ignore": ["generators/app/templates/src/*"],
       "ignoreDependencies": ["@types/react"]
     },
@@ -88,6 +88,15 @@
     "packages/fontawesome": {
       "ignore": ["src/NativeVectorIconsFontAwesome.ts"],
       "ignoreDependencies": ["font-awesome"]
+    },
+    "packages/fontawesome-free-brands": {
+      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
+    },
+    "packages/fontawesome-free-regular": {
+      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
+    },
+    "packages/fontawesome-free-solid": {
+      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
     },
     "packages/fontawesome5": {
       "ignore": ["src/NativeVectorIconsFontAwesome5.ts"],
