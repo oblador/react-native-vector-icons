@@ -71,7 +71,11 @@ const extractGlyphMapFromCss = (fileName: string, selectorPrefix: string) => {
     const contents: string[] = [];
     rule.walkDecls('--fa', (decl) => {
       const content = decl.value.replace(/^['"]/g, '').replace(/['"]$/g, ''); // Remove quotes
-      contents.push(content);
+      if (content.length === 2 && content[0] === '\\') {
+        contents.push(content.at(1) || '');
+      } else {
+        contents.push(content);
+      }
     });
 
     const content = contents[0];
