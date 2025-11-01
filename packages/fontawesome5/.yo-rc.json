@@ -32,19 +32,19 @@
     },
     "buildSteps": {
       "glyphmap": {
-        "location": "../../node_modules/@fortawesome/fontawesome-free/css/all.css",
+        "location": "node_modules/@fortawesome/fontawesome-free/css/all.css",
         "mode": "css",
         "prefix": ".fa-"
       },
       "copyFont": {
         "location": [
-          ["../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf", "FontAwesome5_Brands"],
-          ["../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf", "FontAwesome5_Regular"],
-          ["../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf", "FontAwesome5_Solid"]
+          ["node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf", "FontAwesome5_Brands"],
+          ["node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf", "FontAwesome5_Regular"],
+          ["node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf", "FontAwesome5_Solid"]
         ]
       },
       "postScript": {
-        "script": "node ../fontawesome-common/scripts/generate-fontawesome-metadata --path ../../node_modules/@fortawesome/fontawesome-free --output glyphmaps/FontAwesome5_meta.json"
+        "script": "node ../fontawesome-common/scripts/generate-fontawesome-metadata --path node_modules/@fortawesome/fontawesome-free --output glyphmaps/FontAwesome5_meta.json"
       }
     },
     "versions": [{ "rnvi": "12.0.0", "upstream": "5.15.4" }]

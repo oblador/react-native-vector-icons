@@ -20,7 +20,6 @@ import { Feather } from '@react-native-vector-icons/feather';
 <Feather name="house" color="#ff0000" size={20} />
 ```
 
-
 ## Versions
 
 Prior to version 12, the version of this font package tracked the upstream version.

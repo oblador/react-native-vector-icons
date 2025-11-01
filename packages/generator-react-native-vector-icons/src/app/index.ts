@@ -28,6 +28,8 @@ interface Data {
   source: string;
   customAssets?: boolean;
   commonPackage?: string;
+  noGlyphmap?: boolean;
+  extraExports: string;
   meta: Record<string, object>;
   buildSteps: {
     preScript?: {
@@ -380,6 +382,10 @@ export default class extends Generator<Arguments> {
       return;
     }
 
+    if (!fs.existsSync('fonts')) {
+      fs.mkdirSync('fonts');
+    }
+
     let locations: [string, string][] = [];
     if (typeof copyFont.location === 'string') {
       locations.push([copyFont.location, data.fontFileName]);
@@ -387,8 +393,27 @@ export default class extends Generator<Arguments> {
       locations = copyFont.location;
     }
 
-    // biome-ignore lint/suspicious/useIterableCallbackReturn: biome bug??
-    locations.forEach(([from, to]) => fs.cpSync(from, `fonts/${to}.ttf`));
+    locations.forEach(([from, to]) => {
+      if (from.endsWith('.ttf')) {
+        fs.cpSync(from, `fonts/${to}.ttf`);
+
+        return;
+      }
+
+      if (from.endsWith('.woff2')) {
+        const { exitCode } = this.spawnSync('woff2_decompress', [from], { stdio: 'inherit' });
+
+        if (exitCode !== 0) {
+          throw new Error(`woff2_decompress exited with exitCode ${exitCode}`);
+        }
+
+        fs.renameSync(from.replace(/\.woff2$/, '.ttf'), `fonts/${to}.ttf`);
+
+        return;
+      }
+
+      throw new Error(`Unsupported font format: ${from}`);
+    });
   }
 
   _postScript() {
@@ -446,6 +471,17 @@ export default class extends Generator<Arguments> {
 
       data.versionTable = versionTable.join('\n');
     }
+
+    const extraExports = [];
+    if (!data.noGlyphmap) {
+      extraExports.push('"./glyphmaps/*.json": "./glyphmaps/*.json"');
+    }
+
+    if (!data.copyCustomFonts) {
+      extraExports.push('"./fonts/*.ttf": "./fonts/*.ttf"');
+    }
+
+    data.extraExports = extraExports.length === 0 ? '' : `,\n    ${extraExports.join(',\n    ')}`;
 
     return data;
   }

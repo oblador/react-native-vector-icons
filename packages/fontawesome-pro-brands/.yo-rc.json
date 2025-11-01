@@ -1,0 +1,28 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontawesome-pro-brands",
+    "upstreamFont": {
+      "registry": "https://npm.fontawesome.com",
+      "packageName": "@fortawesome/fontawesome-pro",
+      "versionOnly": true
+    },
+    "copyCustomFonts": true,
+    "className": "FontAwesomeProBrands",
+    "postScriptName": "FontAwesome7Brands-Regular",
+    "fontFileName": "fa-brands-400",
+    "buildSteps": {
+      "preScript": {
+        "script": "../fontawesome-common/scripts/fetch-pro.sh 7"
+      },
+      "glyphmap": {
+        "location": "fa/pro/css/all.css",
+        "mode": "css",
+        "prefix": ".fa-"
+      },
+      "postScript": {
+        "script": "../fontawesome-common/scripts/generate-fontawesome-glyphmap.mts FontAwesomeProBrands.json fa/pro/svgs/brands\nrm -rf fa"
+      }
+    },
+    "versions": [{ "rnvi": "1.0.0", "upstream": "7.1.0" }]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "fontawesome-pro-sharp-duotone-solid",
+    "upstreamFont": {
+      "registry": "https://npm.fontawesome.com",
+      "packageName": "@fortawesome/fontawesome-pro",
+      "versionOnly": true
+    },
+    "copyCustomFonts": true,
+    "className": "FontAwesomeProSharpDuotoneSolid",
+    "postScriptName": "FontAwesome7SharpDuotone-Solid",
+    "fontFileName": "fa-sharp-duotone-solid-900",
+    "buildSteps": {
+      "preScript": {
+        "script": "../fontawesome-common/scripts/fetch-pro.sh 7"
+      },
+      "glyphmap": {
+        "location": "fa/pro/css/all.css",
+        "mode": "css",
+        "prefix": ".fa-"
+      },
+      "postScript": {
+        "script": "../fontawesome-common/scripts/generate-fontawesome-glyphmap.mts FontAwesomeProSharpDuotoneSolid.json fa/pro/svgs/sharp-duotone-solid\nrm -rf fa"
+      }
+    },
+    "versions": [{ "rnvi": "1.0.0", "upstream": "7.1.0" }]
+  }
+}

@@ -70,15 +70,22 @@ const extractGlyphMapFromCss = (fileName: string, selectorPrefix: string) => {
 
     const contents: string[] = [];
     rule.walkDecls('--fa', (decl) => {
-      const content = decl.value.replace(/['"]/g, ''); // Remove quotes
-      contents.push(content);
+      const content = decl.value.replace(/^['"]/g, '').replace(/['"]$/g, ''); // Remove quotes
+      if (content.length === 2 && content[0] === '\\') {
+        contents.push(content.at(1) || '');
+      } else {
+        contents.push(content);
+      }
     });
 
     const content = contents[0];
     if (!content) {
       return;
     }
-    const codePoint = Number.parseInt(content.slice(1), 16);
+    let codePoint = Number.parseInt(content.slice(1), 16);
+    if (Number.isNaN(codePoint)) {
+      codePoint = content.codePointAt(0) || 0;
+    }
 
     iconNames.forEach((iconName) => {
       glyphMap[iconName] = codePoint;
