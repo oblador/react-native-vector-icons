@@ -1,3 +1,21 @@
+## 12.4.0 (2025-11-01)
+
+### 🚀 Features
+
+- upgrade FontAwesome to version 7 with new package strucutre ([#1857](https://github.com/oblador/react-native-vector-icons/pull/1857))
+
+### 🩹 Fixes
+
+- upgrade lucide to 0.548.0 ([#1852](https://github.com/oblador/react-native-vector-icons/pull/1852))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/common to 12.4.0
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 12.3.0 (2025-08-03)
 
 ### 🚀 Features

@@ -1,3 +1,17 @@
+## 12.4.0 (2025-11-01)
+
+### 🩹 Fixes
+
+- allow string values in glyphmap ([#1850](https://github.com/oblador/react-native-vector-icons/pull/1850))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/get-image to 12.3.0
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.3.1 (2025-10-21)
 
 ### 🩹 Fixes

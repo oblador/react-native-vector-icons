@@ -1,3 +1,13 @@
+## 12.3.0 (2025-11-01)
+
+### 🩹 Fixes
+
+- update codemod simple-line-icon repository name ([#1856](https://github.com/oblador/react-native-vector-icons/pull/1856))
+
+### ❤️ Thank You
+
+- Mark @feyst
+
 ## 12.2.0 (2025-08-03)
 
 ### 🚀 Features

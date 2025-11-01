@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/common",
-  "version": "12.3.1",
+  "version": "12.4.0",
   "description": "Customizable Icons for React Native with support for image source and full styling.",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",

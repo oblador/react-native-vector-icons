@@ -1,3 +1,21 @@
+## 20.4.0 (2025-11-01)
+
+### 🚀 Features
+
+- upgrade FontAwesome to version 7 with new package strucutre ([#1857](https://github.com/oblador/react-native-vector-icons/pull/1857))
+
+### 🩹 Fixes
+
+- upgrade octicons to 19.19.0 ([#1853](https://github.com/oblador/react-native-vector-icons/pull/1853))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/common to 12.4.0
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 20.3.0 (2025-08-03)
 
 ### 🚀 Features

@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome-common",
-  "version": "12.2.0",
+  "version": "12.3.0",
   "description": "Fontawesome 5 & 6 Pro Common library for react native vector icons",
   "react-native": "src/index",
   "source": "src/index",

@@ -1,6 +1,6 @@
 {
   "name": "generator-react-native-vector-icons",
-  "version": "12.3.0",
+  "version": "12.4.0",
   "description": "Generates React Native vector icons font library",
   "type": "module",
   "files": [
