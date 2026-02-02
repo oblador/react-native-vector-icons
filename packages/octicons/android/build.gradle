@@ -37,6 +37,11 @@ android {
   }
 
   compileSdkVersion safeExtGet('compileSdkVersion', 31)
+
+  defaultConfig {
+    targetSdkVersion safeExtGet('targetSdkVersion', 31)
+    minSdkVersion safeExtGet('minSdkVersion', 24)
+  }
 }
 
 dependencies {
