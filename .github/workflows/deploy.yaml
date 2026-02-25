@@ -12,6 +12,10 @@ on:
         options:
           - npm
           - website
+          - npm-republish-failed
+      packages:
+        type: string
+        description: 'Space-separated list of package dirs to republish (e.g. "codemod ionicons"). Only used with npm-republish-failed.'
       pre_release:
         type: boolean
         description: Create a pre-release
@@ -80,6 +84,58 @@ jobs:
           else
             pnpm run prerelease
           fi
+
+  republish:
+    name: Republish failed packages
+    runs-on: ubuntu-latest
+    if: github.event.inputs.action == 'npm-republish-failed'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Update npm
+        run: |
+          echo 'BEFORE'
+          npm -v
+          npm install -g npm@latest
+          echo 'AFTER'
+          npm -v
+
+      - name: Publish packages
+        env:
+          INPUT_PACKAGES: ${{ github.event.inputs.packages }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+        run: |
+          if [ -z "$INPUT_PACKAGES" ]; then
+            echo "Error: 'packages' input is required for npm-republish-failed"
+            exit 1
+          fi
+          FAILED=0
+          for pkg in $INPUT_PACKAGES; do
+            echo "========================================="
+            echo "Publishing packages/$pkg"
+            echo "========================================="
+            if [ "$DRY_RUN" == "true" ]; then
+              pnpm publish "packages/$pkg" --no-git-checks --dry-run || FAILED=1
+            else
+              pnpm publish "packages/$pkg" --no-git-checks || FAILED=1
+            fi
+            echo ""
+          done
+          exit $FAILED
 
   website:
     name: Directory website
