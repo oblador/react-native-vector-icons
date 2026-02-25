@@ -1,3 +1,13 @@
+## 12.3.1 (2026-02-25)
+
+### 🩹 Fixes
+
+- add targetSdkVersion to avoid READ_PHONE_STATE permission ([#1866](https://github.com/oblador/react-native-vector-icons/pull/1866), [#1861](https://github.com/oblador/react-native-vector-icons/issues/1861))
+
+### ❤️ Thank You
+
+- Phecda Su
+
 ## 12.3.0 (2025-11-01)
 
 ### 🚀 Features

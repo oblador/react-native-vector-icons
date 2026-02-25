@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome-pro-duotone-regular",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fontawesome Pro Duotone Regular font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",

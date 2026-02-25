@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome-pro-light",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fontawesome Pro Light font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
