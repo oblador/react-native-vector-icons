@@ -17,7 +17,7 @@
     "@biomejs/biome": "^2.3.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@evilmartians/lefthook": "^2.0.1",
-    "@nx/js": "^22.0.1",
+    "@nx/js": "^22.5.2",
     "@types/eslint": "^8.56.12",
     "@types/node": "^20.19.23",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
@@ -33,7 +33,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "generator-react-native-vector-icons": "workspace:*",
     "knip": "^5.66.2",
-    "nx": "^22.0.1",
+    "nx": "^22.5.2",
     "typescript": "^5.9.3",
     "yo": "^5.1.0"
   },
