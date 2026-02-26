@@ -78,14 +78,13 @@ export function assertExpoModulesPresent(globalObj: unknown): asserts globalObj 
   }
 }
 
-const hasNecessaryExpoModules =
-  (Platform.OS === 'web' || !!globalThis.expo?.modules?.ExpoAsset) && !!globalThis.expo?.modules?.ExpoFontLoader;
+// Detection of Expo modules is deferred to first use so that import order
+// doesn't matter. By the time a component renders, all imports (including Expo)
+// have been evaluated and globalThis.expo is available.
 
-const hasNecessaryExpoFeatures = getIsDynamicLoadingSupported(globalThis);
+let dynamicFontLoadingOverride: boolean | null = null;
 
-let dynamicFontLoadingEnabled = hasNecessaryExpoFeatures;
-
-export const isDynamicLoadingSupported = () => hasNecessaryExpoFeatures;
+export const isDynamicLoadingSupported = () => getIsDynamicLoadingSupported(globalThis);
 
 /**
  * Set whether dynamic loading of fonts is enabled.
@@ -96,8 +95,10 @@ export const isDynamicLoadingSupported = () => hasNecessaryExpoFeatures;
  * @returns `true` if dynamic loading of fonts was successfully set. `false` otherwise.
  * */
 export const setDynamicLoadingEnabled = (value: boolean): boolean => {
-  if (!hasNecessaryExpoFeatures) {
+  if (!getIsDynamicLoadingSupported(globalThis)) {
     if (process.env.NODE_ENV !== 'production' && !!value) {
+      const hasNecessaryExpoModules =
+        (Platform.OS === 'web' || !!globalThis.expo?.modules?.ExpoAsset) && !!globalThis.expo?.modules?.ExpoFontLoader;
       const message = hasNecessaryExpoModules
         ? 'Expo is installed, but does not support dynamic font loading. Make sure to use Expo SDK 54 or newer.'
         : 'Necessary Expo modules not found. Dynamic font loading is not available when necessary Expo modules are not present.';
@@ -106,7 +107,7 @@ export const setDynamicLoadingEnabled = (value: boolean): boolean => {
     return false;
   }
 
-  dynamicFontLoadingEnabled = !!value;
+  dynamicFontLoadingOverride = !!value;
 
   return true;
 };
@@ -114,7 +115,8 @@ export const setDynamicLoadingEnabled = (value: boolean): boolean => {
 /**
  * Whether dynamic loading of fonts is enabled.
  * */
-export const isDynamicLoadingEnabled = () => dynamicFontLoadingEnabled;
+export const isDynamicLoadingEnabled = (): boolean =>
+  dynamicFontLoadingOverride ?? getIsDynamicLoadingSupported(globalThis);
 
 type ErrorCallback = (args: { error: Error; fontFamily: string; fontSource: FontSource }) => void;
 
