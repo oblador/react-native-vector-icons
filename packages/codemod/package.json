@@ -51,7 +51,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/react-native-vector-icons/react-native-vector-icons.git"
+    "url": "https://github.com/oblador/react-native-vector-icons.git",
+    "directory": "packages/codemod"
   },
   "license": "MIT",
   "publishConfig": {
