@@ -37,5 +37,14 @@
     "watch": "npm run watch-tsc --silent & npm run watch-deps --silent",
     "watch-deps": "onchange 'src/*/templates/**' 'src/*/fontforge/**' --initial -- pnpm run copydeps",
     "watch-tsc": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oblador/react-native-vector-icons.git",
+    "directory": "packages/generator-react-native-vector-icons"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }
