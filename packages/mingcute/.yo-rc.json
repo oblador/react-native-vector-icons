@@ -1,0 +1,20 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "mingcute",
+    "postScriptName": "MingCute",
+    "fontFileName": "MingCute",
+    "className": "MingCute",
+    "upstreamFont": "mingcute_icon",
+    "buildSteps": {
+      "glyphmap": {
+        "location": "../../node_modules/mingcute_icon/font/Mingcute.css",
+        "mode": "css",
+        "prefix": ".mgc_"
+      },
+      "copyFont": {
+        "location": "../../node_modules/mingcute_icon/font/MingCute.ttf"
+      }
+    },
+    "versions": [{ "rnvi": "12.0.0", "upstream": "2.9.71" }]
+  }
+}
