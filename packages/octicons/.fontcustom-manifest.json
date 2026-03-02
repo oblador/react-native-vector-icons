@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "923f7b9c09ea91cb6b44d9c64bf959b204eb39bc20626d388ba29f369667c663",
-    "current": "923f7b9c09ea91cb6b44d9c64bf959b204eb39bc20626d388ba29f369667c663"
+    "previous": "fd9a60b515041398881b0181628154702913f13d8e3ef4646e83a01b8bc4af1b",
+    "current": "fd9a60b515041398881b0181628154702913f13d8e3ef4646e83a01b8bc4af1b"
   },
   "fonts": [
     "Octicons/Octicons.ttf",
@@ -111,6 +111,10 @@
       "codepoint": 61718,
       "source": "renamedSVGs/book.svg"
     },
+    "book-locked": {
+      "codepoint": 62036,
+      "source": "renamedSVGs/book-locked.svg"
+    },
     "bookmark": {
       "codepoint": 61719,
       "source": "renamedSVGs/bookmark.svg"
@@ -126,6 +130,14 @@
     "bookmark-slash-fill": {
       "codepoint": 62018,
       "source": "renamedSVGs/bookmark-slash-fill.svg"
+    },
+    "boolean-off": {
+      "codepoint": 62037,
+      "source": "renamedSVGs/boolean-off.svg"
+    },
+    "boolean-on": {
+      "codepoint": 62038,
+      "source": "renamedSVGs/boolean-on.svg"
     },
     "briefcase": {
       "codepoint": 61721,
@@ -263,6 +275,14 @@
       "codepoint": 61752,
       "source": "renamedSVGs/comment-discussion.svg"
     },
+    "comment-locked": {
+      "codepoint": 62039,
+      "source": "renamedSVGs/comment-locked.svg"
+    },
+    "compose": {
+      "codepoint": 62040,
+      "source": "renamedSVGs/compose.svg"
+    },
     "container": {
       "codepoint": 61753,
       "source": "renamedSVGs/container.svg"
@@ -294,6 +314,10 @@
     "cross-reference": {
       "codepoint": 61760,
       "source": "renamedSVGs/cross-reference.svg"
+    },
+    "crosshairs": {
+      "codepoint": 62041,
+      "source": "renamedSVGs/crosshairs.svg"
     },
     "dash": {
       "codepoint": 61761,
@@ -334,6 +358,10 @@
     "diamond": {
       "codepoint": 61770,
       "source": "renamedSVGs/diamond.svg"
+    },
+    "dice": {
+      "codepoint": 62042,
+      "source": "renamedSVGs/dice.svg"
     },
     "diff": {
       "codepoint": 61771,
@@ -390,6 +418,10 @@
     "ellipsis": {
       "codepoint": 61784,
       "source": "renamedSVGs/ellipsis.svg"
+    },
+    "exclamation": {
+      "codepoint": 62043,
+      "source": "renamedSVGs/exclamation.svg"
     },
     "eye": {
       "codepoint": 61785,
@@ -491,6 +523,10 @@
       "codepoint": 61809,
       "source": "renamedSVGs/file-binary.svg"
     },
+    "file-check": {
+      "codepoint": 62044,
+      "source": "renamedSVGs/file-check.svg"
+    },
     "file-code": {
       "codepoint": 61810,
       "source": "renamedSVGs/file-code.svg"
@@ -555,6 +591,14 @@
       "codepoint": 61824,
       "source": "renamedSVGs/flame.svg"
     },
+    "flowchart": {
+      "codepoint": 62045,
+      "source": "renamedSVGs/flowchart.svg"
+    },
+    "focus-center": {
+      "codepoint": 62046,
+      "source": "renamedSVGs/focus-center.svg"
+    },
     "fold": {
       "codepoint": 61825,
       "source": "renamedSVGs/fold.svg"
@@ -578,6 +622,10 @@
     "git-branch": {
       "codepoint": 61830,
       "source": "renamedSVGs/git-branch.svg"
+    },
+    "git-branch-check": {
+      "codepoint": 62047,
+      "source": "renamedSVGs/git-branch-check.svg"
     },
     "git-commit": {
       "codepoint": 61831,
@@ -607,6 +655,10 @@
       "codepoint": 61837,
       "source": "renamedSVGs/git-pull-request-draft.svg"
     },
+    "git-pull-request-locked": {
+      "codepoint": 62048,
+      "source": "renamedSVGs/git-pull-request-locked.svg"
+    },
     "globe": {
       "codepoint": 61838,
       "source": "renamedSVGs/globe.svg"
@@ -622,6 +674,14 @@
     "graph": {
       "codepoint": 61841,
       "source": "renamedSVGs/graph.svg"
+    },
+    "graph-bar-horizontal": {
+      "codepoint": 62049,
+      "source": "renamedSVGs/graph-bar-horizontal.svg"
+    },
+    "graph-bar-vertical": {
+      "codepoint": 62050,
+      "source": "renamedSVGs/graph-bar-vertical.svg"
     },
     "hash": {
       "codepoint": 61842,
@@ -675,6 +735,10 @@
       "codepoint": 61853,
       "source": "renamedSVGs/inbox.svg"
     },
+    "inbox-fill": {
+      "codepoint": 62051,
+      "source": "renamedSVGs/inbox-fill.svg"
+    },
     "infinity": {
       "codepoint": 61854,
       "source": "renamedSVGs/infinity.svg"
@@ -690,6 +754,10 @@
     "issue-draft": {
       "codepoint": 61857,
       "source": "renamedSVGs/issue-draft.svg"
+    },
+    "issue-locked": {
+      "codepoint": 62052,
+      "source": "renamedSVGs/issue-locked.svg"
     },
     "issue-opened": {
       "codepoint": 61858,
@@ -855,6 +923,10 @@
       "codepoint": 61894,
       "source": "renamedSVGs/no-entry.svg"
     },
+    "node": {
+      "codepoint": 62053,
+      "source": "renamedSVGs/node.svg"
+    },
     "north-star": {
       "codepoint": 61895,
       "source": "renamedSVGs/north-star.svg"
@@ -910,6 +982,10 @@
     "pencil": {
       "codepoint": 61907,
       "source": "renamedSVGs/pencil.svg"
+    },
+    "pencil-ai": {
+      "codepoint": 62054,
+      "source": "renamedSVGs/pencil-ai.svg"
     },
     "people": {
       "codepoint": 61908,
@@ -1131,6 +1207,22 @@
       "codepoint": 61962,
       "source": "renamedSVGs/smiley.svg"
     },
+    "smiley-frown": {
+      "codepoint": 62055,
+      "source": "renamedSVGs/smiley-frown.svg"
+    },
+    "smiley-frustrated": {
+      "codepoint": 62056,
+      "source": "renamedSVGs/smiley-frustrated.svg"
+    },
+    "smiley-grin": {
+      "codepoint": 62057,
+      "source": "renamedSVGs/smiley-grin.svg"
+    },
+    "smiley-neutral": {
+      "codepoint": 62058,
+      "source": "renamedSVGs/smiley-neutral.svg"
+    },
     "sort-asc": {
       "codepoint": 61963,
       "source": "renamedSVGs/sort-asc.svg"
@@ -1143,6 +1235,18 @@
       "codepoint": 62034,
       "source": "renamedSVGs/space.svg"
     },
+    "spacing-large": {
+      "codepoint": 62059,
+      "source": "renamedSVGs/spacing-large.svg"
+    },
+    "spacing-medium": {
+      "codepoint": 62060,
+      "source": "renamedSVGs/spacing-medium.svg"
+    },
+    "spacing-small": {
+      "codepoint": 62061,
+      "source": "renamedSVGs/spacing-small.svg"
+    },
     "sparkle": {
       "codepoint": 62026,
       "source": "renamedSVGs/sparkle.svg"
@@ -1154,6 +1258,10 @@
     "sparkles-fill": {
       "codepoint": 62023,
       "source": "renamedSVGs/sparkles-fill.svg"
+    },
+    "split-view": {
+      "codepoint": 62062,
+      "source": "renamedSVGs/split-view.svg"
     },
     "sponsor-tiers": {
       "codepoint": 61966,
@@ -1319,6 +1427,10 @@
       "codepoint": 62004,
       "source": "renamedSVGs/unverified.svg"
     },
+    "unwrap": {
+      "codepoint": 62063,
+      "source": "renamedSVGs/unwrap.svg"
+    },
     "upload": {
       "codepoint": 62005,
       "source": "renamedSVGs/upload.svg"
@@ -1346,6 +1458,10 @@
     "workflow": {
       "codepoint": 62010,
       "source": "renamedSVGs/workflow.svg"
+    },
+    "wrap": {
+      "codepoint": 62064,
+      "source": "renamedSVGs/wrap.svg"
     },
     "x": {
       "codepoint": 62011,
