@@ -13,6 +13,11 @@
         "location": "../../node_modules/foundation-icons/foundation-icons.ttf"
       }
     },
-    "versions": [{ "rnvi": "12.0.0", "upstream": "2.0.0" }]
+    "versions": [
+      {
+        "rnvi": "12.0.0",
+        "upstream": "2.0.0"
+      }
+    ]
   }
 }

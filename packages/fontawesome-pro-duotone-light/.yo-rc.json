@@ -23,6 +23,11 @@
         "script": "../fontawesome-common/scripts/generate-fontawesome-glyphmap.mts FontAwesomeProDuotoneLight.json fa/pro/svgs/duotone-light\nrm -rf fa"
       }
     },
-    "versions": [{ "rnvi": "1.0.0", "upstream": "7.1.0" }]
+    "versions": [
+      {
+        "rnvi": "0.1.0",
+        "upstream": "7.1.0"
+      }
+    ]
   }
 }

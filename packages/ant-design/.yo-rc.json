@@ -15,6 +15,11 @@
         "cleanup": true
       }
     },
-    "versions": [{ "rnvi": "12.0.0", "upstream": "4.4.2" }]
+    "versions": [
+      {
+        "rnvi": "12.0.0",
+        "upstream": "4.4.2"
+      }
+    ]
   }
 }
