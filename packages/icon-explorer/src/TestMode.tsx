@@ -18,6 +18,7 @@ import { Ionicons } from '@react-native-vector-icons/ionicons';
 import { Lucide } from '@react-native-vector-icons/lucide';
 import { MaterialDesignIcons } from '@react-native-vector-icons/material-design-icons';
 import { MaterialIcons } from '@react-native-vector-icons/material-icons';
+import { MingCute } from '@react-native-vector-icons/mingcute';
 import { Octicons } from '@react-native-vector-icons/octicons';
 import { SimpleLineIcons } from '@react-native-vector-icons/simple-line-icons';
 import { Zocial } from '@react-native-vector-icons/zocial';
@@ -84,6 +85,7 @@ export const TestMode = () => {
     { Component: Lucide, name: 'house', label: 'Lucide' },
     { Component: MaterialDesignIcons, name: 'home', label: 'MaterialDesignIcons' },
     { Component: MaterialIcons, name: 'home', label: 'MaterialIcons' },
+    { Component: MingCute, name: 'home_1_fill', label: 'MingCute' },
     { Component: Octicons, name: 'home', label: 'Octicons' },
     { Component: SimpleLineIcons, name: 'home', label: 'SimpleLineIcons' },
     { Component: Zocial, name: 'email', label: 'Zocial' },
