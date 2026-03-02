@@ -1457,8 +1457,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
       lucide-static:
-        specifier: 0.548.0
-        version: 0.548.0
+        specifier: 0.576.0
+        version: 0.576.0
       onchange:
         specifier: ^7.1.0
         version: 7.1.0
