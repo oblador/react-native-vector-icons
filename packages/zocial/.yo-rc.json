@@ -13,6 +13,11 @@
         "location": "../../node_modules/css-social-buttons/css/zocial.ttf"
       }
     },
-    "versions": [{ "rnvi": "12.0.0", "upstream": "1.1.1" }]
+    "versions": [
+      {
+        "rnvi": "12.0.0",
+        "upstream": "1.1.1"
+      }
+    ]
   }
 }

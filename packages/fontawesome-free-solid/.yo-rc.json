@@ -19,6 +19,11 @@
         "script": "../fontawesome-common/scripts/generate-fontawesome-glyphmap.mts FontAwesomeFreeSolid.json ../../node_modules/@fortawesome/fontawesome-free/svgs/solid"
       }
     },
-    "versions": [{ "rnvi": "1.0.0", "upstream": "7.1.0" }]
+    "versions": [
+      {
+        "rnvi": "0.1.0",
+        "upstream": "7.1.0"
+      }
+    ]
   }
 }

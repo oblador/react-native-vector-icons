@@ -12,6 +12,11 @@
         "location": "../../node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf"
       }
     },
-    "versions": [{ "rnvi": "12.0.0", "upstream": "7.4.47" }]
+    "versions": [
+      {
+        "rnvi": "12.0.0",
+        "upstream": "7.4.47"
+      }
+    ]
   }
 }

@@ -85,9 +85,13 @@ export default class extends Generator<Arguments> {
   }
 
   async writing() {
+    const upstreamVersion = await this._resolveUpstreamVersion();
+    if (upstreamVersion) {
+      this._updateVersionTracking(upstreamVersion);
+    }
     this._writeTemplates();
     await this._fixPackageVersion();
-    await this._addFontDependencies();
+    await this._addFontDependencies(upstreamVersion);
     await this._addDependencies();
   }
 
@@ -164,49 +168,81 @@ export default class extends Generator<Arguments> {
     this.fs.extendJSON(this.destinationPath('package.json'), { version: this.options.currentVersion });
   }
 
-  async _addFontDependencies() {
+  async _resolveUpstreamVersion(): Promise<string | undefined> {
     const { data } = this;
 
     if (!data.upstreamFont) {
-      return;
+      return undefined;
     }
 
     if (typeof data.upstreamFont === 'string') {
       const packageInfo = (await npmFetch.json(`https://registry.npmjs.org/${data.upstreamFont}/latest`)) as {
         version: string;
       };
-      await this.addDevDependencies({ [data.upstreamFont]: packageInfo.version });
-
-      return;
-    }
-
-    if (data.upstreamFont?.versionOnly) {
-      return;
-    }
-
-    const packageName = typeof data.upstreamFont === 'object' ? data.upstreamFont.packageName : data.upstreamFont;
-    let version = this.options.currentVersion;
-
-    const versionOnly = data.upstreamFont.versionOnly || false;
-    if (versionOnly) {
-      return;
+      return packageInfo.version;
     }
 
     const registry = data.upstreamFont.registry ?? 'https://registry.npmjs.org';
     const versionRange = data.upstreamFont.versionRange || '*';
     const authToken = getAuthToken(registry.replace(/^https?:/, ''));
 
-    const packageInfo = await npmFetch.json(`${registry}/${packageName}`, {
+    const packageInfo = await npmFetch.json(`${registry}/${data.upstreamFont.packageName}`, {
       forceAuth: { _authToken: authToken?.token },
     });
     const versions = Object.keys(packageInfo.versions as string[]);
-    const possibleVersion = semver.maxSatisfying(versions, versionRange);
-    if (!possibleVersion) {
-      throw new Error(`Invalid upstreamFont ${data.upstreamFont}: no matching version`);
+    const resolvedVersion = semver.maxSatisfying(versions, versionRange);
+    if (!resolvedVersion) {
+      throw new Error(`Invalid upstreamFont ${data.upstreamFont.packageName}: no matching version`);
     }
-    version = possibleVersion;
+    return resolvedVersion;
+  }
 
-    await this.addDevDependencies({ [packageName]: version });
+  _updateVersionTracking(upstreamVersion: string) {
+    const { currentVersion } = this.options;
+    let { versions } = this.data;
+
+    if (!versions || versions.length === 0) {
+      versions = [{ rnvi: currentVersion, upstream: upstreamVersion }];
+    } else {
+      const lastIndex = versions.length - 1;
+
+      const version = versions[lastIndex];
+      if (!version) {
+        throw new Error('Invalid versions data: empty version entry');
+      }
+
+      if (version.upstream !== upstreamVersion) {
+        if (version.rnvi === currentVersion) {
+          version.upstream = upstreamVersion;
+        } else {
+          versions.push({ rnvi: currentVersion, upstream: upstreamVersion });
+        }
+      }
+    }
+
+    this.config.set('versions', versions);
+    this.data.versions = versions;
+
+    const versionTable: string[] = [];
+    versions.forEach((version) => {
+      versionTable.push(`| > ${version.rnvi} | ${version.upstream} |`);
+    });
+    this.data.versionTable = versionTable.join('\n');
+  }
+
+  async _addFontDependencies(resolvedVersion?: string) {
+    const { data } = this;
+
+    if (!data.upstreamFont || !resolvedVersion) {
+      return;
+    }
+
+    if (typeof data.upstreamFont === 'object' && data.upstreamFont.versionOnly) {
+      return;
+    }
+
+    const packageName = typeof data.upstreamFont === 'string' ? data.upstreamFont : data.upstreamFont.packageName;
+    await this.addDevDependencies({ [packageName]: resolvedVersion });
   }
 
   async _addDependencies() {
