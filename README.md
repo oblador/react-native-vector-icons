@@ -49,8 +49,10 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0 with _283_ icons)
 - [`Ionicons`](https://ionic.io/ionicons) crafted by Ionic (v8.0.9 containing _1,357_ icons)
 - [`MaterialDesignIcons`](https://pictogrammers.com/library/mdi/) from MaterialDesignIcons.com (v7.4.47 including _7448_ icons)
-- [`Octicons`](https://primer.style/foundations/icons) designed by GitHub, Inc. (v19.19.0 with _339_ icons)
 - [`Lucide`](https://lucide.dev/) designed by Lucide, (v0.576.0 with _1,639_ icons)
+- [`Octicons`](https://primer.style/foundations/icons) designed by GitHub, Inc. (v19.22.0 with _339_ icons)
+- [`Lucide`](https://lucide.dev/) designed by Lucide, (v0.548.0 with _1,639_ icons)
+  > > > > > > > 08c5e04d (fix: upgrade Octicons 19.22.0)
 
 ### No longer maintained upstream
 

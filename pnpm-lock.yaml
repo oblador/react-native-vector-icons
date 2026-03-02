@@ -1541,8 +1541,8 @@ importers:
         version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@19.0.0(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
     devDependencies:
       '@primer/octicons':
-        specifier: 19.19.0
-        version: 19.19.0
+        specifier: 19.22.0
+        version: 19.22.0
       '@types/react':
         specifier: ^19.1.0
         version: 19.1.8
@@ -2712,8 +2712,8 @@ packages:
     resolution: {integrity: sha512-JUOtgFW6k9u4Y+xeIaEiLr3+cjoUPiAuLXoyKOJSia6Duzb7pq+A76P9ZdPDoAoxHdHzq6gE9/jKBGXlZT8FbA==}
     engines: {node: '>=6'}
 
-  '@fortawesome/fontawesome-free@7.1.0':
-    resolution: {integrity: sha512-+WxNld5ZCJHvPQCr/GnzCTVREyStrAJjisUPtUxG5ngDA8TMlPnKp6dddlTpai4+1GNmltAeuk1hJEkBohwZYA==}
+  '@fortawesome/fontawesome-free@7.2.0':
+    resolution: {integrity: sha512-3DguDv/oUE+7vjMeTSOjCSG+KeawgVQOHrKRnvUuqYh1mfArrh7s+s8hXW3e4RerBA1+Wh+hBqf8sJNpqNrBWg==}
     engines: {node: '>=6'}
 
   '@hapi/hoek@9.3.0':
@@ -3578,8 +3578,8 @@ packages:
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
 
-  '@primer/octicons@19.19.0':
-    resolution: {integrity: sha512-LBbL8nOl6FWMDy7riKB5ppHLtffY7loRq+CDGj0D5G1Xdo2mKlSOQy3rWy2RVE8SxxPFL+mj46C1nG+smKBEZA==}
+  '@primer/octicons@19.22.0':
+    resolution: {integrity: sha512-nWoh9PlE6u7xbiZF3KcUm3ktLpN2rQPt11trwp/t4EsKuYRNVWVbBp1LkCBsvZq7ScckNKUURLigIU0wS1FQdw==}
 
   '@react-native-community/cli-clean@19.0.0':
     resolution: {integrity: sha512-Br+bxxEKXpikzlBLeAv3Bh1DRGrveJmULEG6Q9XPHzPOtRZcRlcDcBidjVwu8XGJdYiplvFdK6cC2sxCM2Mbvw==}
@@ -8493,8 +8493,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-static@0.548.0:
-    resolution: {integrity: sha512-gU7B6abtKtsw7DuSl1rsSKybMHja11g6I/2XYS6QLXnhD3jAirO3h4zP1ztV9epcjxiCtfXFIfsfqdD2gN5Icw==}
+  lucide-static@0.576.0:
+    resolution: {integrity: sha512-0LPnsw/0/PC8Diu0neT6lSsR/ZaCQRu2B4d15joy5OFlSrhyJi5Jc8p1aYOn2wqb4dUECxQ/fk1s4iSlKYvqqA==}
 
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
@@ -13598,7 +13598,7 @@ snapshots:
 
   '@fortawesome/fontawesome-free@6.7.2': {}
 
-  '@fortawesome/fontawesome-free@7.1.0': {}
+  '@fortawesome/fontawesome-free@7.2.0': {}
 
   '@hapi/hoek@9.3.0': {}
 
@@ -14772,7 +14772,7 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@primer/octicons@19.19.0':
+  '@primer/octicons@19.22.0':
     dependencies:
       object-assign: 4.1.1
 
@@ -20923,7 +20923,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-static@0.548.0: {}
+  lucide-static@0.576.0: {}
 
   lz-string@1.5.0: {}
 
@@ -22276,7 +22276,7 @@ snapshots:
 
   parse-json@8.1.0:
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       index-to-position: 0.1.2
       type-fest: 4.37.0
 
@@ -23550,7 +23550,7 @@ snapshots:
 
   rollup-plugin-terser@7.0.2(rollup@2.79.2):
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       jest-worker: 26.6.2
       rollup: 2.79.2
       serialize-javascript: 4.0.0
