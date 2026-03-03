@@ -34,6 +34,8 @@ import { MaterialDesignIcons } from '@react-native-vector-icons/material-design-
 import MaterialDesignIconsGlyphs from '@react-native-vector-icons/material-design-icons/glyphmaps/MaterialDesignIcons.json';
 import { MaterialIcons } from '@react-native-vector-icons/material-icons';
 import MaterialIconsGlyphs from '@react-native-vector-icons/material-icons/glyphmaps/MaterialIcons.json';
+import { MingCute } from '@react-native-vector-icons/mingcute';
+import MingCuteGlyphs from '@react-native-vector-icons/mingcute/glyphmaps/MingCute.json';
 import { Octicons } from '@react-native-vector-icons/octicons';
 import OcticonsGlyphs from '@react-native-vector-icons/octicons/glyphmaps/Octicons.json';
 import { SimpleLineIcons } from '@react-native-vector-icons/simple-line-icons';
@@ -100,6 +102,7 @@ const iconSets = {
     glyphNames: groupGlyphNames(MaterialDesignIconsGlyphs),
     meta: undefined,
   },
+  MingCute: { component: MingCute, glyphNames: groupGlyphNames(MingCuteGlyphs), meta: undefined },
   Octicons: { component: Octicons, glyphNames: groupGlyphNames(OcticonsGlyphs), meta: undefined },
   SimpleLineIcons: { component: SimpleLineIcons, glyphNames: groupGlyphNames(SimpleLineIconsGlyphs), meta: undefined },
   Zocial: { component: Zocial, glyphNames: groupGlyphNames(ZocialGlyphs), meta: undefined },
