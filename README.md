@@ -75,16 +75,12 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
 1. Install the packages for the icons you want to use
 
    ```sh
-   npm install @react-native-vector-icons/fontawesome6 @react-native-vector-icons/evil-icons
+   npm install @react-native-vector-icons/fontawesome-free-solid @react-native-vector-icons/evil-icons
    ```
 
 1. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
 1. If you are using one of the following fonts, refer to their guides for further instructions
 
-- [FontAwesome 6](packages/fontawesome6/README.md)
-- [FontAwesome 6 Pro](packages/fontawesome6-pro/README.md)
-- [FontAwesome 5](packages/fontawesome5/README.md)
-- [FontAwesome 5 Pro](packages/fontawesome5-pro/README.md)
 - [Fontello](packages/fontello/README.md)
 - [Icomoon](packages/icomoon/README.md)
 
@@ -94,7 +90,7 @@ Refer to the guide for [Expo](./docs/SETUP-EXPO.md), [React Native](./docs/SETUP
 
 ### Font location customisation
 
-For fonts like fontawesome6-pro, fontello and icomoon where you provide the fonts the default location for the font files is `rnvi-fonts` in the same directory as your package.json. This can be customized by setting the `fontDir` property in your `package.json` file.
+For fonts like the FontAwesome Pro as well as fontello and icomoon where you provide the fonts the default location for the font files is `rnvi-fonts` in the same directory as your package.json. This can be customized by setting the `fontDir` property in your `package.json` file.
 
 ```json
 {
@@ -109,9 +105,9 @@ For fonts like fontawesome6-pro, fontello and icomoon where you provide the font
 You can either use one of the bundled icons above or roll your own custom font.
 
 ```js
-import { FontAwesome } from "@react-native-vector-icons/fontawesome";
+import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid";
 
-<FontAwesome name="rocket" size={30} color="#900" />;
+<FontAwesomeFreeSolid name="rocket" size={30} color="#900" />;
 ```
 
 ### Props
@@ -141,20 +137,6 @@ By combining some of these you can create for example :
 
 ![type](https://cloud.githubusercontent.com/assets/378279/7667570/33817554-fc0d-11e4-9ad7-4eb60139cfb7.png)
 ![star](https://cloud.githubusercontent.com/assets/378279/7667569/3010dd7e-fc0d-11e4-9696-cb721fe8e98d.png)
-
-## Multi-Style Fonts
-
-Some fonts today use multiple styles, FontAwesome 6 for example, which is supported by this library. The usage is pretty much the same as the standard `Icon` component:
-
-```jsx
-import { FontAwesome5 } from "@react-native-vector-icons/fontawesome5";
-
-<FontAwesome5 name="comments" size={30} color="#900" />; // Defaults to regular
-
-<FontAwesome5 name="comments" size={30} color="#900" iconType="solid" />
-
-<FontAwesome5 name="comments" size={30} color="#900" iconType="light" />
-```
 
 ## Usage as PNG Image/Source Object
 
@@ -224,7 +206,7 @@ animation library
 
 Fonts can be available in an app statically (since build time) or loaded dynamically at runtime. The latter can be useful e.g. for apps that use over-the-air updates and want to load new fonts with an update, or when you need to use a font from a remote location.
 
-Dynamic loading in `@react-native-vector-icons` is currently limited to those fonts that are bundled within the provided packages: it doesn't support Pro fonts (such as FontAwesome 5 Pro). However, loading of custom fonts is not difficult to implement: use `createIconSet` as seen in [custom fonts](#custom-fonts) paragraph to obtain a icon font family with dynamic font loading enabled. See any of the free font packages for reference.
+Dynamic loading in `@react-native-vector-icons` is currently limited to those fonts that are bundled within the provided packages: it doesn't support Pro fonts (such as FontAwesome Pro). However, loading of custom fonts is not difficult to implement: use `createIconSet` as seen in [custom fonts](#custom-fonts) paragraph to obtain a icon font family with dynamic font loading enabled. See any of the free font packages for reference.
 
 By default, dynamic loading is enabled if you run Expo SDK >= 52. It doesn't change the way you work with the package: If rendering an icon requires a font that is not known to the app, it will be loaded automatically and icon will render as expected.
 
