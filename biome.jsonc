@@ -25,8 +25,8 @@
       "!**/.nx",
 
       // Templates that have ejs
-      "!**/packages/fontawesome-common/generators/app/templates/src/index.tsx",
-      "!**/packages/generator-react-native-vector-icons/src/app/templates/src/index.ts",
+      "!**/packages/fontawesome-common/generators/app/templates/src",
+      "!**/packages/generator-react-native-vector-icons/src/app/templates/src",
 
       // Upstream files
       "!**/packages/icon-explorer/src/configs/icomoon.config.json",
