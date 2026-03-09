@@ -17,6 +17,16 @@
         "default": "./lib/commonjs/index.js"
       }
     },
+    "./static": {
+      "import": {
+        "types": "./lib/typescript/module/src/static.d.ts",
+        "default": "./lib/module/static.js"
+      },
+      "require": {
+        "types": "./lib/typescript/commonjs/src/static.d.ts",
+        "default": "./lib/commonjs/static.js"
+      }
+    },
     "./glyphmaps/*.json": "./glyphmaps/*.json",
     "./fonts/*.ttf": "./fonts/*.ttf"
   },

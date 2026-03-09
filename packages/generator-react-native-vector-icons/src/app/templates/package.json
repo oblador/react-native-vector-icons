@@ -16,6 +16,16 @@
         "types": "./lib/typescript/commonjs/src/index.d.ts",
         "default": "./lib/commonjs/index.js"
       }
+    },
+    "./static": {
+      "import": {
+        "types": "./lib/typescript/module/src/static.d.ts",
+        "default": "./lib/module/static.js"
+      },
+      "require": {
+        "types": "./lib/typescript/commonjs/src/static.d.ts",
+        "default": "./lib/commonjs/static.js"
+      }
     }<%- extraExports -%>
   },
   "files": [
