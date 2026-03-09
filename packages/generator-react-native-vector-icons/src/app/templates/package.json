@@ -16,7 +16,7 @@
         "types": "./lib/typescript/commonjs/src/index.d.ts",
         "default": "./lib/commonjs/index.js"
       }
-    },
+    }<% if (customSrc !== true) { -%>,
     "./static": {
       "import": {
         "types": "./lib/typescript/module/src/static.d.ts",
@@ -26,7 +26,7 @@
         "types": "./lib/typescript/commonjs/src/static.d.ts",
         "default": "./lib/commonjs/static.js"
       }
-    }<%- extraExports -%>
+    }<% } -%><%- extraExports -%>
   },
   "files": [
     "src",
