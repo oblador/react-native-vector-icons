@@ -35,12 +35,12 @@ npx rnvi-update-plist package.json ios/AppName/Info.plist
 </details>
 
 
-2. Run `pod install` in the ios directory
+3. Run `pod install` in the ios directory
 ```sh
 cd ios && pod install
 ```
 
-3. Rebuild your app
+4. Rebuild your app
 
 ### macOS
 

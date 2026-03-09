@@ -42,7 +42,13 @@ for package in "${PACKAGES[@]}"; do
     git restore src >/dev/null || true
   fi
 
-  yo react-native-vector-icons --force --skip-install --current-version="$CURRENT_VERSION"
+  if ! yo react-native-vector-icons --force --skip-install --current-version="$CURRENT_VERSION"; then
+    echo
+    echo "⚠️  Skipping $package (generator failed)"
+    echo
+    cd -
+    continue
+  fi
 
   if [ -n "$DIFF" ]; then
     mkdir -p "/tmp/$package/after"

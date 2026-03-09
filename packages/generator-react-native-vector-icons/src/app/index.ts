@@ -96,6 +96,9 @@ export default class extends Generator<Arguments> {
   }
 
   async install() {
+    if (this.options.skipInstall) {
+      return;
+    }
     this.spawnSync('pnpm', ['install', '--filter', '.', '--ignore-scripts']);
   }
 
@@ -147,6 +150,7 @@ export default class extends Generator<Arguments> {
       files.push([data.customSrc, data.customSrc.endsWith('.tsx') ? 'src/index.tsx' : 'src/index.ts']);
     } else {
       files.push('src/index.ts');
+      files.push('src/static.ts');
     }
 
     if (!data.customReadme) {
