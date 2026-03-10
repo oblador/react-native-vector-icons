@@ -1,3 +1,13 @@
+## 12.3.1 (2026-03-10)
+
+### 🩹 Fixes
+
+- **codemod:** update provenance details ([#1871](https://github.com/oblador/react-native-vector-icons/pull/1871))
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 12.3.0 (2025-11-01)
 
 ### 🩹 Fixes

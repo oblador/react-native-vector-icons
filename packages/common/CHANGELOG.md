@@ -1,3 +1,13 @@
+## 12.4.1 (2026-03-10)
+
+### 🩹 Fixes
+
+- make expo modules detection lazy ([#1867](https://github.com/oblador/react-native-vector-icons/pull/1867))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.4.0 (2025-11-01)
 
 ### 🩹 Fixes

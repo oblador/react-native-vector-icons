@@ -1,3 +1,21 @@
+## 0.1.2 (2026-03-10)
+
+### 🚀 Features
+
+- **generator:** auto-update upstream versions in .yo-rc.json during generation ([#1873](https://github.com/oblador/react-native-vector-icons/pull/1873))
+
+### 🩹 Fixes
+
+- upgrade Font Awesome to 7.2.0 ([#1874](https://github.com/oblador/react-native-vector-icons/pull/1874))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/common to 12.4.1
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+
 ## 0.1.1 (2026-02-25)
 
 ### 🩹 Fixes

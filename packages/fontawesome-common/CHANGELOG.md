@@ -1,3 +1,9 @@
+## 12.3.1 (2026-03-10)
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/common to 12.4.1
+
 ## 12.3.0 (2025-11-01)
 
 ### 🚀 Features
