@@ -52,7 +52,7 @@
   ],
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
-    "prepare": "bob build && ../../scripts/fix-glyphmaps.sh",
+    "prepare": "bob build && ../../scripts/fix-glyphmaps.mjs",
     "watch": "onchange 'src/**' --initial -- pnpm run prepare"
   },
   "keywords": [
