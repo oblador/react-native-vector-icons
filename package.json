@@ -24,8 +24,6 @@
     "@typescript-eslint/parser": "^8.46.2",
     "commitlint": "^20.1.0",
     "eslint": "^8.57.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-biome": "^1.9.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
