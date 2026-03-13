@@ -36,7 +36,7 @@ const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
 const <%= upperStyleName %>Icon = createIconSet(<%= styleName %>GM, {
   postScriptName: '<%= family %>',
   fontFileName: '<%= name %>',
-<% if (!packageName.endsWith('-pro')) { -%>
+<% if (!locals.isStatic && !packageName.endsWith('-pro')) { -%>
   fontSource: require('../fonts/<%= name %>'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
 <% } -%>
   fontStyle: fontStyle('<%= weight %>')

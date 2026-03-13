@@ -16,7 +16,17 @@
         "types": "./lib/typescript/commonjs/src/index.d.ts",
         "default": "./lib/commonjs/index.js"
       }
-    }<%- extraExports -%>
+    }<% if (customSrc !== true) { -%>,
+    "./static": {
+      "import": {
+        "types": "./lib/typescript/module/src/static.d.ts",
+        "default": "./lib/module/static.js"
+      },
+      "require": {
+        "types": "./lib/typescript/commonjs/src/static.d.ts",
+        "default": "./lib/commonjs/static.js"
+      }
+    }<% } -%><%- extraExports -%>
   },
   "files": [
     "src",
@@ -40,7 +50,7 @@
   ],
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
-    "prepare": "bob build && ../../scripts/fix-glyphmaps.sh",
+    "prepare": "bob build && ../../scripts/fix-glyphmaps.mjs",
     "watch": "onchange 'src/**' --initial -- pnpm run prepare"
   },
   "keywords": [

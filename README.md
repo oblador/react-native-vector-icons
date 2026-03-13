@@ -72,12 +72,12 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
 
 1. Install the packages for the icons you want to use
 
-   ```sh
-   npm install @react-native-vector-icons/fontawesome-free-solid @react-native-vector-icons/evil-icons
-   ```
+```sh
+npm install @react-native-vector-icons/fontawesome-free-solid @react-native-vector-icons/evil-icons
+```
 
-1. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
-1. If you are using one of the following fonts, refer to their guides for further instructions
+2. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
+3. If you are using one of the following fonts, refer to their guides for further instructions
 
 - [Fontello](packages/fontello/README.md)
 - [Icomoon](packages/icomoon/README.md)
@@ -88,7 +88,7 @@ Refer to the guide for [Expo](./docs/SETUP-EXPO.md), [React Native](./docs/SETUP
 
 ### Font location customisation
 
-For fonts like the FontAwesome Pro as well as fontello and icomoon where you provide the fonts the default location for the font files is `rnvi-fonts` in the same directory as your package.json. This can be customized by setting the `fontDir` property in your `package.json` file.
+For fonts like the FontAwesome Pro as well as Fontello and Icomoon where you provide the fonts, the default location for the font files is `rnvi-fonts` in the same directory as your package.json. This can be customized by setting the `fontDir` property in your `package.json` file.
 
 ```json
 {
@@ -104,6 +104,8 @@ You can either use one of the bundled icons above or roll your own custom font.
 
 ```js
 import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid";
+// or use the static version if you don't need [dynamic font loading](#dynamic-icon-font-loading) to get a slightly smaller bundle size
+import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid/static";
 
 <FontAwesomeFreeSolid name="rocket" size={30} color="#900" />;
 ```
@@ -146,7 +148,6 @@ You need to install `@react-native-vector-icons/get-image` to use this feature.
 const source = Icon.getImageSourceSync('user', 20, 'red');
 
 return <Image source={source} />;
-);
 ```
 
 Alternatively you may use the async method `Icon.getImageSource`.
@@ -200,9 +201,9 @@ animation library
 
 ## Dynamic icon font loading
 
-> Dynamic loading is supported on all platforms if you use Expo ([Expo Go](https://expo.dev/go) or a development client). In the future, it should become available for all React Native projects via React Native core.
+> Dynamic loading is supported on all platforms if you use Expo ([Expo Go](https://expo.dev/go) or a [development build](https://docs.expo.dev/develop/development-builds/introduction/)). In the future, it should become available for all React Native projects via React Native core.
 
-Fonts can be available in an app statically (since build time) or loaded dynamically at runtime. The latter can be useful e.g. for apps that use over-the-air updates and want to load new fonts with an update, or when you need to use a font from a remote location.
+Fonts can be available in an app statically (since build time) or loaded dynamically at runtime. The latter can be useful e.g. for apps that use over-the-air updates and want to [load](https://docs.expo.dev/versions/latest/sdk/font/#loadasyncfontfamilyorfontmap-source) new fonts with an update, or when you need to use a font from a remote location. If you don't use dynamic loading, use the `/static` imports (e.g. `"@react-native-vector-icons/ionicons/static"`).
 
 Dynamic loading in `@react-native-vector-icons` is currently limited to those fonts that are bundled within the provided packages: it doesn't support Pro fonts (such as FontAwesome Pro). However, loading of custom fonts is not difficult to implement: use `createIconSet` as seen in [custom fonts](#custom-fonts) paragraph to obtain a icon font family with dynamic font loading enabled. See any of the free font packages for reference.
 
@@ -226,10 +227,10 @@ Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can 
 ### Basic Example
 
 ```js
-import { IonIcons } from "@react-native-vector-icons/ionicons";
+import { IonIcons } from "@react-native-vector-icons/ionicons/static";
 
 const ExampleView = () => (
-  <IonIcon name="ios-person" size={30} color="#4F8EF7" />
+  <IonIcons name="ios-person" size={30} color="#4F8EF7" />
 );
 ```
 
@@ -237,11 +238,11 @@ const ExampleView = () => (
 
 ```js
 import { Text } from "react-native";
-import { IonIcons } from "@react-native-vector-icons/ionicons";
+import { IonIcons } from "@react-native-vector-icons/ionicons/static";
 
 const ExampleView = (props) => (
   <Text>
-    Lorem <IonIcon name="ios-book" color="#4F8EF7" /> Ipsum
+    Lorem <IonIcons name="ios-book" color="#4F8EF7" /> Ipsum
   </Text>
 );
 ```

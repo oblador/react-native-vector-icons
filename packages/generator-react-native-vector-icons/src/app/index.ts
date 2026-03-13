@@ -96,6 +96,9 @@ export default class extends Generator<Arguments> {
   }
 
   async install() {
+    if (this.options.skipInstall) {
+      return;
+    }
     this.spawnSync('pnpm', ['install', '--filter', '.', '--ignore-scripts']);
   }
 
@@ -147,6 +150,7 @@ export default class extends Generator<Arguments> {
       files.push([data.customSrc, data.customSrc.endsWith('.tsx') ? 'src/index.tsx' : 'src/index.ts']);
     } else {
       files.push('src/index.ts');
+      files.push('src/static.ts');
     }
 
     if (!data.customReadme) {
@@ -162,6 +166,12 @@ export default class extends Generator<Arguments> {
         this.fs.copyTpl(this.templatePath(from), this.destinationPath(to), data);
       }
     });
+
+    // Render static version of customSrc (same template, no fontSource requires)
+    if (data.customSrc && data.customSrc !== true) {
+      const staticDest = data.customSrc.endsWith('.tsx') ? 'src/static.tsx' : 'src/static.ts';
+      this.fs.copyTpl(this.templatePath(data.customSrc), this.destinationPath(staticDest), { ...data, isStatic: true });
+    }
   }
 
   async _fixPackageVersion() {
