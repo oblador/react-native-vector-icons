@@ -23,12 +23,14 @@ export const ensureGetImageAvailable = () => {
   if (hasExpoRenderToImage) {
     const { ExpoFontUtils } = globalRef.expo.modules;
     return {
-      getImageForFont: async (fontReference: string, glyph: string, size: number, color: number) =>
-        ExpoFontUtils.renderToImageAsync(glyph, {
+      getImageForFont: async (fontReference: string, glyph: string, size: number, color: number) => {
+        const result = await ExpoFontUtils.renderToImageAsync(glyph, {
           fontFamily: fontReference,
           size,
           color,
-        }),
+        });
+        return result.uri;
+      },
       getImageForFontSync: () => {
         throw new Error(
           'You attempted to call `getImageForFontSync`. Expo dev client with `@react-native-vector-icons/get-image` installed is required for this. Alternatively, call `getImageForFont` or generate the image yourself and bundle it with the app.',
@@ -37,6 +39,6 @@ export const ensureGetImageAvailable = () => {
     };
   }
   throw new Error(
-    'Error in getImageSource / getImageSourceSync: You need to either (1) install `@react-native-vector-icons/get-image` or (2) use Expo SDK 53+ (Expo dev client or Expo Go). Check your setup and rebuild the app.',
+    'Error in getImageSource / getImageSourceSync: You need to either (1) install `@react-native-vector-icons/get-image` or (2) use Expo SDK 54+ (Expo dev client or Expo Go). Check your setup and rebuild the app.',
   );
 };

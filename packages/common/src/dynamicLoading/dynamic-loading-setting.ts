@@ -18,6 +18,28 @@ type ExpoFontLoaderModule = {
   loadAsync: (fontFamilyAlias: string, asset: LoadAsyncAsset) => Promise<void>;
 };
 
+// RenderToImageResult needs to be usable as the `source` prop for image,
+// so it must stay compatible with ImageURISource type
+type RenderToImageResult = {
+  /**
+   * The file uri to the image.
+   */
+  uri: string;
+  /**
+   * Image width in dp.
+   */
+  width: number;
+  /**
+   * Image height in dp.
+   */
+  height: number;
+
+  /**
+   * Scale factor of the image. Multiply the dp dimensions by this value to get the dimensions in pixels.
+   * */
+  scale: number;
+};
+
 type ExpoFontUtilsModule = {
   renderToImageAsync: (
     glyph: string,
@@ -26,7 +48,7 @@ type ExpoFontUtilsModule = {
       size?: number;
       color?: number;
     },
-  ) => Promise<string>;
+  ) => Promise<RenderToImageResult>;
 };
 
 declare global {
