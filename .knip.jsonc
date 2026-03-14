@@ -143,6 +143,10 @@
     "packages/material-icons": {
       "ignore": ["src/NativeVectorIconsMaterialIcons.ts"]
     },
+    "packages/mingcute": {
+      "ignore": ["src/NativeVectorIconsMingCute.ts"],
+      "ignoreDependencies": ["mingcute_icon"]
+    },
     "packages/simple-line-icons": {
       "ignore": ["src/NativeVectorIconsSimpleLineIcons.ts"],
       "ignoreDependencies": ["simple-line-icons"]
