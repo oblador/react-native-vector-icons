@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'airbnb'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended'],
   env: {
     browser: true,
     es2021: true,
@@ -11,7 +11,7 @@ module.exports = {
       extends: ['biome'],
     },
     {
-      files: ['.eslintrc.{js,cjs}'],
+      files: ['.eslintrc.{js,cjs}', '*.config.js', 'react-native.config.js', 'configPlugin.js'],
       env: {
         node: true,
       },
@@ -38,8 +38,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'import', 'jsx-a11y'],
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],

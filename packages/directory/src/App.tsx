@@ -16,13 +16,21 @@ const WAITING_INTERVAL = 300;
 
 type Match = { family: string; names: string[] };
 
-const Icon = memo(({ family, name, ...props }: { family: string; name: string } & HTMLProps<HTMLSpanElement>) => (
-  <span style={{ fontFamily: family }} {...props}>
-    {String.fromCodePoint(
-      IconFamilies[family as keyof typeof IconFamilies][name as keyof (typeof IconFamilies)[keyof typeof IconFamilies]],
-    )}
-  </span>
-));
+const Icon = memo(function Icon({
+  family,
+  name,
+  ...props
+}: { family: string; name: string } & HTMLProps<HTMLSpanElement>) {
+  return (
+    <span style={{ fontFamily: family }} {...props}>
+      {String.fromCodePoint(
+        IconFamilies[family as keyof typeof IconFamilies][
+          name as keyof (typeof IconFamilies)[keyof typeof IconFamilies]
+        ],
+      )}
+    </span>
+  );
+});
 
 const FamiliesLinks = ({ matches = [] }: { matches: Match[] }) => (
   <div className="Family-Links-Container">
