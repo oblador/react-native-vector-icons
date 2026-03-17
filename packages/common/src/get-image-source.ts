@@ -1,7 +1,7 @@
 import type { TextStyle } from 'react-native';
 import { PixelRatio, processColor } from 'react-native';
 
-import type createIconSourceCache from './create-icon-source-cache';
+import type { createIconSourceCache } from './create-icon-source-cache';
 import { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE } from './defaults';
 import { ensureGetImageAvailable } from './get-image-library';
 
@@ -19,24 +19,18 @@ export const getImageSourceSync = (
 
   const maybeCachedValue = imageSourceCache.get(cacheKey);
   if (maybeCachedValue !== undefined) {
-    // FIXME: Should this check if it's an error and throw it again?
     return maybeCachedValue;
   }
 
-  try {
-    const imagePath = NativeIconAPI.getImageForFontSync(
-      fontReference,
-      glyph,
-      size,
-      processedColor as number, // FIXME what if a non existent colour was passed in?
-    );
-    const value = { uri: imagePath, scale: PixelRatio.get() };
-    imageSourceCache.setValue(cacheKey, value);
-    return value;
-  } catch (error) {
-    imageSourceCache.setError(cacheKey, error as Error);
-    throw error;
-  }
+  const imagePath = NativeIconAPI.getImageForFontSync(
+    fontReference,
+    glyph,
+    size,
+    processedColor as number, // FIXME what if a non existent colour was passed in?,
+  );
+  const value = { uri: imagePath, scale: PixelRatio.get() };
+  imageSourceCache.setValue(cacheKey, value);
+  return value;
 };
 
 export const getImageSource = async (
@@ -53,22 +47,11 @@ export const getImageSource = async (
 
   const maybeCachedValue = imageSourceCache.get(cacheKey);
   if (maybeCachedValue !== undefined) {
-    // FIXME: Should this check if it's an error and throw it again?
     return maybeCachedValue;
   }
 
-  try {
-    const imagePath = await NativeIconAPI.getImageForFont(
-      fontReference,
-      glyph,
-      size,
-      processedColor as number, // FIXME what if a non existent colour was passed in?
-    );
-    const value = { uri: imagePath, scale: PixelRatio.get() };
-    imageSourceCache.setValue(cacheKey, value);
-    return value;
-  } catch (error) {
-    imageSourceCache.setError(cacheKey, error as Error);
-    throw error;
-  }
+  const imagePath = await NativeIconAPI.getImageForFont(fontReference, glyph, size, processedColor as number);
+  const value = { uri: imagePath, scale: PixelRatio.get() };
+  imageSourceCache.setValue(cacheKey, value);
+  return value;
 };

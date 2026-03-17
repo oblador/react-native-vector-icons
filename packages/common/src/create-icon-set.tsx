@@ -3,7 +3,7 @@ import React, { forwardRef, type Ref, useEffect } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Platform, Text, type TextProps, type TextStyle } from 'react-native';
 
-import createIconSourceCache from './create-icon-source-cache';
+import { createIconSourceCache } from './create-icon-source-cache';
 import { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE } from './defaults';
 import { dynamicLoader } from './dynamicLoading/dynamic-font-loading';
 import { isDynamicLoadingEnabled } from './dynamicLoading/dynamic-loading-setting';
