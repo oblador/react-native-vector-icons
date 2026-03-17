@@ -1,3 +1,13 @@
+## 12.4.2 (2026-03-17)
+
+### 🩹 Fixes
+
+- simplify createIconSourceCache and remove error caching ([#1883](https://github.com/oblador/react-native-vector-icons/pull/1883))
+
+### ❤️ Thank You
+
+- Vojtech Novak
+
 ## 12.4.1 (2026-03-10)
 
 ### 🩹 Fixes
