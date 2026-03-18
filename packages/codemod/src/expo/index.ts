@@ -1,19 +1,20 @@
 /* eslint-disable no-console */
 
-import resolveFrom from 'resolve-from';
 import { run as jscodeshift } from 'jscodeshift/src/Runner';
+import resolveFrom from 'resolve-from';
 
 import { updatePackageJson } from './package-json';
-
 
 async function shouldUseStaticImports(dir: string): Promise<boolean> {
   const hasExpoDevClient = resolveFrom.silent(dir, 'expo-dev-client/package.json') != null;
 
   if (hasExpoDevClient) {
-    console.log('\nDetected expo-dev-client. Defaulting to /static imports (e.g. @react-native-vector-icons/material-icons/static).');
+    console.log(
+      '\nDetected expo-dev-client. Defaulting to /static imports (e.g. @react-native-vector-icons/material-icons/static).',
+    );
   } else {
     console.log(
-        '\nNo expo-dev-client detected (assuming Expo Go). Using default imports (e.g. @react-native-vector-icons/material-icons).',
+      '\nNo expo-dev-client detected (assuming Expo Go). Using default imports (e.g. @react-native-vector-icons/material-icons).',
     );
   }
   return hasExpoDevClient;
