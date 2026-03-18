@@ -11,12 +11,8 @@ import type { FontSource } from './dynamicLoading/types';
 import { getImageSource as getImageSourceImpl, getImageSourceSync as getImageSourceSyncImpl } from './get-image-source';
 
 type ValueData = { uri: string; scale: number };
-type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData | undefined;
-type GetImageSourceIconFunc<GM> = (
-  name: GM,
-  size?: number,
-  color?: TextStyle['color'],
-) => Promise<ValueData | undefined>;
+type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData;
+type GetImageSourceIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => Promise<ValueData>;
 
 export type IconProps<T> = TextProps & {
   name: T;
@@ -154,7 +150,11 @@ export function createIconSet<GM extends GlyphMap>(
   const imageSourceCache = createIconSourceCache();
 
   const getImageSource: GetImageSourceIconFunc<keyof GM> = async (name, size, color) => {
-    if (typeof postScriptNameOrOptions === 'object' && typeof postScriptNameOrOptions.fontSource !== 'undefined') {
+    if (
+      typeof postScriptNameOrOptions === 'object' &&
+      typeof postScriptNameOrOptions.fontSource !== 'undefined' &&
+      !dynamicLoader.isLoaded(fontReference)
+    ) {
       await dynamicLoader.loadFontAsync(fontReference, postScriptNameOrOptions.fontSource);
     }
     return getImageSourceImpl(imageSourceCache, fontReference, resolveGlyph(name), size, color);
