@@ -1,4 +1,4 @@
-import type { API, FileInfo } from 'jscodeshift';
+import type { API, FileInfo, Options } from 'jscodeshift';
 
 import { addNewFontImport } from './newFontImports';
 
@@ -26,11 +26,16 @@ const importsMap: Record<string, string> = {
 };
 
 // prefer transforms to default imports as they are easier to get right than named imports
-export default function transform(fileInfo: FileInfo, api: API) {
+export default function transform(fileInfo: FileInfo, api: API, options: Options) {
   const j = api.jscodeshift;
   const root = j(fileInfo.source);
+  const useStatic = options.useStatic === true;
 
   const newFontImports = new Set<string>();
+
+  const resolveImportPath = (basePath: string): string => {
+    return useStatic ? `${basePath}/static` : basePath;
+  };
 
   // Transform import statements from @expo/vector-icons
   root.find(j.ImportDeclaration).forEach((path) => {
@@ -55,7 +60,10 @@ export default function transform(fileInfo: FileInfo, api: API) {
 
               newFontImports.add(newFontPath);
 
-              return j.importDeclaration([j.importDefaultSpecifier(j.identifier(fontName))], j.literal(newFontPath));
+              return j.importDeclaration(
+                [j.importDefaultSpecifier(j.identifier(fontName))],
+                j.literal(resolveImportPath(newFontPath)),
+              );
             }
             return null;
           })
@@ -83,7 +91,7 @@ export default function transform(fileInfo: FileInfo, api: API) {
       newFontImports.add(newFontPath);
 
       // Replace with new import
-      source.value = newFontPath;
+      source.value = resolveImportPath(newFontPath);
     }
   });
 
