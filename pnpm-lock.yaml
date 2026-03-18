@@ -108,6 +108,9 @@ importers:
       plist:
         specifier: ^3.1.0
         version: 3.1.0
+      resolve-from:
+        specifier: ^5.0.0
+        version: 5.0.0
       semver:
         specifier: ^7.7.1
         version: 7.7.3
