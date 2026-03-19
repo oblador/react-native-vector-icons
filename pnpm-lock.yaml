@@ -151,6 +151,9 @@ importers:
       '@react-native-vector-icons/get-image':
         specifier: workspace:^
         version: link:../get-image
+      '@react-native/assets-registry':
+        specifier: '*'
+        version: 0.84.1
       find-up:
         specifier: ^7.0.0
         version: 7.0.0
