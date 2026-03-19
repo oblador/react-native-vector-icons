@@ -20,7 +20,19 @@
   "scripts": {
     "clean": "del-cli lib",
     "prepare": "bob build",
+    "test": "jest",
     "watch": "onchange 'src/**' --initial -- pnpm run prepare"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": ["ts-jest", {
+        "tsconfig": {
+          "verbatimModuleSyntax": false
+        }
+      }]
+    }
   },
   "keywords": [
     "react-native",
@@ -66,12 +78,15 @@
     "semver": "^7.7.1"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/jscodeshift": "^0.12.0",
     "@types/plist": "^3.0.5",
     "@types/semver": "^7",
     "del-cli": "^6.0.0",
+    "jest": "^29.7.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
+    "ts-jest": "^29.2.5",
     "typescript": "^5.7.2"
   },
   "engines": {
