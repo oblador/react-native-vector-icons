@@ -5,7 +5,6 @@
 import { Image, Platform } from 'react-native';
 
 // @ts-expect-error missing types
-// eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
 import { getAssetByID } from '@react-native/assets-registry/registry';
 
 import { assertExpoModulesPresent, getErrorCallback, type LoadAsyncAsset } from './dynamic-loading-setting';

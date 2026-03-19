@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/microsoft/react-native-test-app/trunk/schema.json",
   "name": "IconExplorer",
   "displayName": "IconExplorer",
   "singleApp": "IconExplorer",

@@ -82,9 +82,14 @@ const ANIMATED = [
     name: 'animated',
     children: (
       <AnimatableIcon
-        animation="pulse"
-        easing="ease-out"
+        animation={{
+          0: { scale: 1 },
+          0.5: { scale: 1.3 },
+          1: { scale: 1 },
+        }}
+        easing="ease-in-out"
         iterationCount="infinite"
+        duration={800}
         name="heart"
         size={30}
         color="#e0284f"
