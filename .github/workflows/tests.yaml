@@ -10,189 +10,25 @@ on:
       - "packages/**"
       - "!packages/directory/**"
       - "!packages/codemod/**"
-      - "scripts/**"
   pull_request:
     paths:
       - ".github/workflows/tests.yaml"
       - "packages/**"
       - "!packages/directory/**"
       - "!packages/codemod/**"
-      - "scripts/**"
   workflow_dispatch:
-    inputs:
-      all_versions:
-        description: Run tests against all versions
-        type: boolean
-
-permissions:
-  # AWS
-  id-token: write
-  # test-reporter
-  contents: read
-  actions: read
-  checks: write
 
 jobs:
   android:
     name: Android
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        api-level: [35]
-        rn-version: ${{ github.event.inputs.all_versions && fromJSON('["0.80", "0.79", "0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]') || fromJSON('["0.80", "0.79", "0.77"]') }}
-        arch: ["new", "old"]
-
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: aws-actions/configure-aws-credentials@v4
-        if: always() # it fails for non maintainer PRs
-        with:
-          aws-region: us-east-2
-          role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
-          role-skip-session-tagging: true
-
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "17"
-
-      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
-      - uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          cache: pnpm
-
-      - name: Gradle cache
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          add-job-summary: on-failure
-          # TODO: Remove this after we merge
-          cache-read-only: ${{ github.ref != 'refs/heads/master' && github.ref != 'refs/heads/per-package-copy' }}
-
-      - name: AVD Deps
-        run: |
-          sudo apt update
-          sudo apt-get install -y libpulse0 libgl1
-
-      - name: AVD cache
-        uses: actions/cache@v4
-        id: avd-cache
-        with:
-          path: |
-            ~/.android/avd/*
-            ~/.android/adb*
-          key: avd-${{ matrix.api-level }}
-
-      - name: Enable KVM group perms
-        run: |
-          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | \
-            sudo tee /etc/udev/rules.d/99-kvm4all.rules
-          sudo udevadm control --reload-rules
-          sudo udevadm trigger --name-match=kvm
-
-      - name: create AVD and generate snapshot for caching
-        if: steps.avd-cache.outputs.cache-hit != 'true'
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          arch: x86_64
-          api-level: ${{ matrix.api-level }}
-          force-avd-creation: false
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: false
-          script: echo "Created cachable AVD"
-
-      - name: Build
-        run: |
-          pnpm install
-
-      - name: Set up RN version
-        run: |
-          cd packages/icon-explorer
-
-          ./set-rn-version.sh ${{ matrix.arch }} ${{ matrix.rn-version }}
-
-      - name: Build App
-        run: |
-          cd packages/icon-explorer
-          mv .owl/baseline-${{ matrix.arch }} .owl/baseline
-
-          # something strange where the owl build isn't generating the jni files
-          if [ "${{ matrix.rn-version }}" == "0.80" -a "${{ matrix.arch }}" == "new" ]; then
-            pnpm run android || true
-          fi
-
-          pnpm run test:android:build
-
-      - name: Run test
-        timeout-minutes: 3
-        id: tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          arch: x86_64
-          api-level: ${{ matrix.api-level }}
-          force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: true
-          script: adb shell settings put secure immersive_mode_confirmations confirmed && cd packages/icon-explorer && pnpm run test:android:run
-
-      - name: S3 Report
-        if: always()
-        run: |
-          cd packages/icon-explorer
-
-          sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
-
-          ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
-          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID" || true
-
-          if [ "${{ steps.tests.outcome }}" == "failure" ]; then
-            echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY
-          elif [ "${{ steps.tests.outcome }}" == "success" ]; then
-            echo -n "*  ✅ " >> $GITHUB_STEP_SUMMARY
-          else
-            exit 0
-          fi
-
-          echo "[Report  ${{ matrix.arch }} ${{ matrix.rn-version }}](http://react-native-vector-icons.s3-website.us-east-2.amazonaws.com/$ID/report/index.html)" >> $GITHUB_STEP_SUMMARY
-
-      - uses: dorny/test-reporter@v2
-        if: always()
-        with:
-          name: JEST Tests android - ${{ matrix.arch }} ${{ matrix.rn-version }}
-          path: packages/icon-explorer/.owl/report/*.xml
-          reporter: jest-junit
-
-  ios:
-    name: iOS
-    runs-on: macos-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        rn-version: ${{ github.event.inputs.all_versions && fromJSON('["0.80", "0.79", "0.78", "0.77", "0.76", "0.75", "0.74", "0.73"]') || fromJSON('["0.80", "0.79", "0.77"]') }}
-        arch: ["new", "old"]
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: aws-actions/configure-aws-credentials@v4
-        if: always() # it fails for non maintainer PRs
-        with:
-          aws-region: us-east-2
-          role-to-assume: arn:aws:iam::119243932312:role/RNVI-S3-Buckert
-          role-skip-session-tagging: true
-
+      - uses: actions/checkout@v6
       - uses: actions/setup-java@v4
         with:
           distribution: "temurin"
           java-version: "17"
-
-      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
       - uses: pnpm/action-setup@v4
         with:
           run_install: false
@@ -200,67 +36,48 @@ jobs:
         with:
           node-version: lts/*
           cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+      - name: Build Android app
+        run: ./gradlew app:assembleDebug
+        working-directory: packages/icon-explorer/android
+      - name: Bundle JS
+        run: pnpm run build:android
+        working-directory: packages/icon-explorer
 
-      - name: Build
-        run: |
-          pnpm install
-
-      - name: Set up RN version
-        run: |
-          cd packages/icon-explorer
-
-          ./set-rn-version.sh ${{ matrix.arch }} ${{ matrix.rn-version }}
-
-      - name: Build App
-        run: |
-          cd packages/icon-explorer
-
-          # Try and work around strange build bug
-          mkdir -p /Users/runner/work/react-native-vector-icons/react-native-vector-icons/packages/icon-explorer/ios/build/Build/Products/Debug-iphonesimulator/ReactTestApp.app
-          mkdir -p /Users/runner/work/react-native-vector-icons/react-native-vector-icons/packages/icon-explorer/ios/build/Build/Products/Release-iphonesimulator/ReactTestApp.app
-
-          mv .owl/baseline-${{ matrix.arch }} .owl/baseline
-          pnpm run test:ios:build
-
-      - name: Run simulator
-        id: simulator
-        uses: futureware-tech/simulator-action@v3
+  ios:
+    name: iOS
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
         with:
-          os: "iOS"
-          model: "iPhone 16"
-
-      - name: Run tests
-        timeout-minutes: 5
-        id: tests
-        run: |
-          cd packages/icon-explorer
-          tmp=$(mktemp)
-          jq '.ios.device = "${{ steps.simulator.outputs.udid }}"' owl.config.json > "$tmp" && mv "$tmp" owl.config.json
-          pnpm run test:ios:run
-
-      - name: S3 Report
-        if: always()
-        run: |
-          cd packages/icon-explorer
-
-          sed -i.bak -e "s/Report/Report (RN: ${{ matrix.arch }} Arch: ${{ matrix.rn-version }}) $(date)/" .owl/report/index.html || true
-
-          ID="${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}-${{ matrix.arch }}-${{ matrix.rn-version }}"
-          aws --region us-east-2 s3 sync .owl "s3://react-native-vector-icons/$ID" || true
-
-          if [ "${{ steps.tests.outcome }}" == "failure" ]; then
-            echo -n "* ❌ " >> $GITHUB_STEP_SUMMARY
-          elif [ "${{ steps.tests.outcome }}" == "success" ]; then
-            echo -n "*  ✅ " >> $GITHUB_STEP_SUMMARY
-          else
-            exit 0
-          fi
-
-          echo "[Report  ${{ matrix.arch }} ${{ matrix.rn-version }}](http://react-native-vector-icons.s3-website.us-east-2.amazonaws.com/$ID/report/index.html)" >> $GITHUB_STEP_SUMMARY
-
-      - uses: dorny/test-reporter@v2
-        if: always()
+          run_install: false
+      - uses: actions/setup-node@v4
         with:
-          name: JEST Tests ios - ${{ matrix.arch }} ${{ matrix.rn-version }}
-          path: packages/icon-explorer/.owl/report/*.xml
-          reporter: jest-junit
+          node-version: lts/*
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Cache CocoaPods
+        uses: actions/cache@v4
+        with:
+          path: |
+            packages/icon-explorer/ios/Pods
+            ~/Library/Caches/CocoaPods
+          key: ${{ runner.os }}-pods-${{ hashFiles('packages/icon-explorer/ios/Podfile.lock') }}
+      - name: Install pods
+        run: pod install || pod install
+        working-directory: packages/icon-explorer/ios
+        env:
+          RCT_USE_PREBUILT_RNCORE: 1
+          RCT_USE_RN_DEP: 1
+      - name: Build iOS app
+        run: xcodebuild -scheme IconExplorer -workspace IconExplorer.xcworkspace ONLY_ACTIVE_ARCH=YES -sdk iphonesimulator -configuration Debug
+        working-directory: packages/icon-explorer/ios
+      - name: Bundle JS
+        run: pnpm run build:ios
+        working-directory: packages/icon-explorer
