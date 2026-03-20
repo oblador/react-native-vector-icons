@@ -1,6 +1,8 @@
 const { withInfoPlist } = require('@expo/config-plugins'); // eslint-disable-line import/no-extraneous-dependencies, @typescript-eslint/no-require-imports
 
 // Add all our fonts to the plist
+// installing the library makes sure that the font resource is copied into the app bundle
+// but we still need to add it to plist
 module.exports = (config) =>
   withInfoPlist(config, (c) => {
     c.ios ||= {};
@@ -34,8 +36,9 @@ module.exports = (config) =>
       'Lucide.ttf',
     ];
 
-    // biome-ignore lint/suspicious/useIterableCallbackReturn: @expo doesn't go deep enough on the types
-    fonts.forEach((font) => c.ios.infoPlist.UIAppFonts.push(font));
+    fonts.forEach((font) => {
+      c.ios.infoPlist.UIAppFonts.push(font);
+    });
 
     return c;
   });

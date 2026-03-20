@@ -84,6 +84,6 @@
     "node": ">=18"
   },
   "reactNativeVectorIcons": {
-    "fontDir": "src/rnvi-fonts"
+    "fontDir": "rnvi-fonts"
   }
 }

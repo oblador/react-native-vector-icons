@@ -70,7 +70,7 @@ const groupGlyphNames = (glyphMap: Record<string, number>) => {
   return Object.values(result);
 };
 
-const iconSets = {
+export const iconSets = {
   AntD: { component: AntDesign, glyphNames: groupGlyphNames(AntDesignGlyphs), meta: undefined },
   Entypo: { component: Entypo, glyphNames: groupGlyphNames(EntypoGlyphs), meta: undefined },
   EvilIcons: { component: EvilIcons, glyphNames: groupGlyphNames(EvilIconsGlyphs), meta: undefined },
@@ -103,6 +103,7 @@ const iconSets = {
   Octicons: { component: Octicons, glyphNames: groupGlyphNames(OcticonsGlyphs), meta: undefined },
   SimpleLineIcons: { component: SimpleLineIcons, glyphNames: groupGlyphNames(SimpleLineIconsGlyphs), meta: undefined },
   Zocial: { component: Zocial, glyphNames: groupGlyphNames(ZocialGlyphs), meta: undefined },
-};
+} as const;
 
-export default iconSets;
+export type IconName = keyof typeof iconSets;
+export type IconSet = (typeof iconSets)[IconName];

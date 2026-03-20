@@ -2,18 +2,16 @@ import { useEffect, useState } from 'react';
 import {
   DeviceEventEmitter,
   FlatList,
-  type NativeSyntheticEvent,
   Platform,
   Pressable,
   StyleSheet,
   Text,
   TextInput,
-  type TextInputChangeEventData,
+  type TextInputChangeEvent,
   View,
 } from 'react-native';
 
-import type { IconName, IconSet } from './Home';
-import ICON_SETS from './icon-sets';
+import { iconSets as ICON_SETS, type IconName, type IconSet } from './icon-sets';
 
 const styles = StyleSheet.create({
   container: {
@@ -86,8 +84,7 @@ export const IconList = ({ iconName, iconStyle = undefined }: { iconName: IconNa
     return searchListner.remove;
   }, []);
 
-  const handleSearchChange = (event: NativeSyntheticEvent<TextInputChangeEventData>) =>
-    setFilter(event.nativeEvent.text.toLowerCase());
+  const handleSearchChange = (event: TextInputChangeEvent) => setFilter(event.nativeEvent.text.toLowerCase());
 
   const glyphNames = getFilteredGlyphNames(iconStyle, iconSet, filter);
 

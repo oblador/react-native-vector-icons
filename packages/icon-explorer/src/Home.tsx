@@ -5,7 +5,7 @@ import { FontAwesome } from '@react-native-vector-icons/fontawesome';
 import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
 
 import { createAnimatableComponent } from './animatable';
-import ICON_SETS from './icon-sets';
+import { iconSets as ICON_SETS, type IconName } from './icon-sets';
 
 // @ts-expect-error: We don't care this is wrong for the tests
 const AnimatableIcon = createAnimatableComponent(FontAwesome);
@@ -83,9 +83,9 @@ const ANIMATED = [
     children: (
       <AnimatableIcon
         animation={{
-          0: { scale: 1 },
-          0.5: { scale: 1.3 },
-          1: { scale: 1 },
+          0: { transform: [{ scale: 1 }] },
+          0.5: { transform: [{ scale: 1.3 }] },
+          1: { transform: [{ scale: 1 }] },
         }}
         easing="ease-in-out"
         iterationCount="infinite"
@@ -97,6 +97,60 @@ const ANIMATED = [
     ),
   },
 ];
+
+export const Home = ({
+  navigator,
+  multiNavigator,
+}: {
+  navigator: (iconName: IconName) => void;
+  multiNavigator: (iconName: IconName) => void;
+}) => {
+  const renderIcon = (itemName: IconName) => {
+    const item = ICON_SETS[itemName];
+
+    return (
+      <Pressable testID={itemName} onPress={() => (item.meta ? multiNavigator(itemName) : navigator(itemName))}>
+        <View style={styles.row}>
+          <Text style={styles.text}>{itemName}</Text>
+          <Text style={styles.glyphCount}>{item.glyphNames.length}</Text>
+        </View>
+      </Pressable>
+    );
+  };
+
+  const iconNames = Object.keys(ICON_SETS) as IconName[];
+
+  const sections = [
+    {
+      title: 'ICON SETS',
+      data: iconNames.map((itemName) => renderIcon(itemName)),
+    },
+    { title: 'INLINE', data: INLINE.map((item) => renderRow(item)) },
+    {
+      title: 'SYNCHROUNOUS render to image',
+      data: GETIMAGE.map((item) => renderRow(item)),
+    },
+    { title: 'ANIMATED', data: ANIMATED.map((item) => renderRow(item)) },
+    { title: 'STYLING', data: STYLING.map((item) => renderStyling(item)) },
+  ];
+
+  return (
+    <SectionList
+      renderScrollComponent={(props) => <ScrollView {...props} testID="scrollview" />}
+      sections={sections}
+      renderItem={({ item }) => item}
+      renderSectionHeader={({ section }) => (
+        <View style={styles.sectionHeader}>
+          <Text testID="title" style={styles.sectionHeaderTitle}>
+            {section.title}
+          </Text>
+        </View>
+      )}
+      ItemSeparatorComponent={ItemSeparator}
+      initialNumToRender={15}
+    />
+  );
+};
 
 const styles = StyleSheet.create({
   sectionHeader: {
@@ -134,9 +188,6 @@ const styles = StyleSheet.create({
   buttonText: { color: 'white' },
 });
 
-export type IconName = keyof typeof ICON_SETS;
-export type IconSet = (typeof ICON_SETS)[IconName];
-
 const ItemSeparator = () => <View style={styles.separator} />;
 
 const renderRow = (item: { children: ReactNode }) => <View style={styles.row}>{item.children}</View>;
@@ -148,57 +199,3 @@ const renderStyling = (item: (typeof STYLING)[number]) => (
     </View>
   </View>
 );
-
-export const Home = ({
-  navigator,
-  multiNavigator,
-}: {
-  navigator: (iconName: IconName) => void;
-  multiNavigator: (iconName: IconName) => void;
-}) => {
-  const renderIcon = (itemName: IconName) => {
-    const item = ICON_SETS[itemName];
-
-    return (
-      <Pressable testID={itemName} onPress={() => (item.meta ? multiNavigator(itemName) : navigator(itemName))}>
-        <View style={styles.row}>
-          <Text style={styles.text}>{itemName}</Text>
-          <Text style={styles.glyphCount}>{item.glyphNames.length}</Text>
-        </View>
-      </Pressable>
-    );
-  };
-
-  const iconNames = Object.keys(ICON_SETS) as IconName[];
-
-  const sections = [
-    {
-      title: 'ICON SETS',
-      data: iconNames.map((itemName) => renderIcon(itemName)),
-    },
-    { title: 'INLINE', data: INLINE.map((item) => renderRow(item)) },
-    {
-      title: 'SYNCHROUNOUS',
-      data: GETIMAGE.map((item) => renderRow(item)),
-    },
-    { title: 'ANIMATED', data: ANIMATED.map((item) => renderRow(item)) },
-    { title: 'STYLING', data: STYLING.map((item) => renderStyling(item)) },
-  ];
-
-  return (
-    <SectionList
-      renderScrollComponent={(props) => <ScrollView {...props} testID="scrollview" />}
-      sections={sections}
-      renderItem={({ item }) => item}
-      renderSectionHeader={({ section }) => (
-        <View style={styles.sectionHeader}>
-          <Text testID="title" style={styles.sectionHeaderTitle}>
-            {section.title}
-          </Text>
-        </View>
-      )}
-      ItemSeparatorComponent={ItemSeparator}
-      initialNumToRender={15}
-    />
-  );
-};

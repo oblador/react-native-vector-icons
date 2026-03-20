@@ -3,53 +3,51 @@ import { BackHandler, LogBox, Pressable, StyleSheet, Text, View } from 'react-na
 
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
-import { Home, type IconName } from './Home';
+import { Home } from './Home';
 import { IconList, MultiIconList } from './IconList';
+import type { IconName } from './icon-sets';
 import { TestMode } from './TestMode';
 
 // We don't want ref error that react-native-owl is generating in our screenshots
 LogBox.ignoreAllLogs(true);
 
-type NavType = {
-  view: 'Home' | 'IconSet' | 'MultiIconSet' | 'TestMode';
-  iconName?: IconName;
-  iconStyle?: string;
-};
+type NavType =
+  | { view: 'Home' }
+  | { view: 'IconSet'; iconName: IconName; iconStyle?: string }
+  | { view: 'MultiIconSet'; iconName: IconName }
+  | { view: 'TestMode' };
 
 const App = () => {
   const [state, setState] = useState<NavType>({ view: 'Home' });
 
   const navigateToIconSet = (iconName: IconName) => {
-    setState({ view: 'IconSet', iconName, iconStyle: undefined });
+    setState({ view: 'IconSet', iconName });
   };
 
   const navigateToMultiIconSet = (iconName: IconName) => {
-    setState({ view: 'MultiIconSet', iconName, iconStyle: undefined });
+    setState({ view: 'MultiIconSet', iconName });
   };
 
   const navigateToIconSetWithStyle = (iconStyle: string, iconName: IconName) => {
     setState({ view: 'IconSet', iconName, iconStyle });
   };
 
-  const handleTestMode = () =>
-    setState((prevState) => {
-      const newView = prevState.view === 'Home' ? 'TestMode' : 'Home';
-      return { view: newView };
-    });
+  const toggleTestMode = () =>
+    setState((prevState) => (prevState.view === 'Home' ? { view: 'TestMode' } : { view: 'Home' }));
 
   const handleHome = () => {
-    setState({ view: 'Home', iconName: undefined, iconStyle: undefined });
+    setState({ view: 'Home' });
   };
 
   const handleBackPress = useCallback(() => {
     if (state.view === 'IconSet' && state.iconStyle) {
-      setState({ view: 'MultiIconSet', iconName: state.iconName, iconStyle: undefined });
+      setState({ view: 'MultiIconSet', iconName: state.iconName });
 
       return true;
     }
 
     if (['IconSet', 'MultiIconSet', 'TestMode'].includes(state.view)) {
-      setState({ view: 'Home', iconName: undefined, iconStyle: undefined });
+      setState({ view: 'Home' });
 
       return true;
     }
@@ -67,15 +65,13 @@ const App = () => {
       case 'Home':
         return <Home navigator={navigateToIconSet} multiNavigator={navigateToMultiIconSet} />;
       case 'IconSet':
-        // @ts-expect-error We are doing some strange things
         return <IconList iconName={state.iconName} iconStyle={state.iconStyle} />;
       case 'MultiIconSet':
-        // @ts-expect-error We are doing some strange things
         return <MultiIconList iconName={state.iconName} navigator={navigateToIconSetWithStyle} />;
       case 'TestMode':
         return <TestMode />;
       default:
-        throw new Error('Invalid view');
+        throw new Error(`Invalid view`);
     }
   };
 
@@ -94,7 +90,7 @@ const App = () => {
           <Pressable
             testID="TestMode"
             style={({ pressed }) => [styles.button, pressed && styles.buttonPressed]}
-            onPress={handleTestMode}
+            onPress={toggleTestMode}
           >
             <Text style={styles.buttonText}>Test Mode</Text>
           </Pressable>
