@@ -26,8 +26,6 @@ async function main() {
     process.exit(1);
   }
 
-  console.log('Running codemod in', dir);
-
   let version: string | undefined;
 
   const expoVectorIcons = dependencies['@expo/vector-icons'];
@@ -35,6 +33,7 @@ async function main() {
   if (expoVectorIcons) {
     await runExpoMigration(dir);
   } else {
+    console.log('Running codemod in', dir);
     if (dependencies['react-native-vector-icons']) {
       version = '11.x';
       await import('./11.0');
