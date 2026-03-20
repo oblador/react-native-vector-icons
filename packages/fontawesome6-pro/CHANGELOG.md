@@ -1,3 +1,17 @@
+## 12.4.0 (2026-03-20)
+
+### 🚀 Features
+
+- expose static export for icon families ([#1880](https://github.com/oblador/react-native-vector-icons/pull/1880))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/fontawesome-common to 12.4.0
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.3.3 (2026-03-17)
 
 ### 🧱 Updated Dependencies

@@ -1,3 +1,13 @@
+## 12.5.0 (2026-03-20)
+
+### 🚀 Features
+
+- expose static export for icon families ([#1880](https://github.com/oblador/react-native-vector-icons/pull/1880))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.4.2 (2026-03-10)
 
 ### 🚀 Features

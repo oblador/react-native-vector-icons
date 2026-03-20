@@ -1,3 +1,14 @@
+## 12.3.2 (2026-03-20)
+
+### 🚀 Features
+
+- **codemod:** support static imports ([#1884](https://github.com/oblador/react-native-vector-icons/pull/1884))
+
+### ❤️ Thank You
+
+- John Ferlito @johnf
+- Vojtech Novak @vonovak
+
 ## 12.3.1 (2026-03-10)
 
 ### 🩹 Fixes
