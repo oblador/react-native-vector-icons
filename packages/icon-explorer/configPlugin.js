@@ -26,6 +26,7 @@ module.exports = (config) =>
       'Ionicons.ttf',
       'MaterialDesignIcons.ttf',
       'MaterialIcons.ttf',
+      'MingCute.ttf',
       'Octicons.ttf',
       'SimpleLineIcons.ttf',
       'Zocial.ttf',
