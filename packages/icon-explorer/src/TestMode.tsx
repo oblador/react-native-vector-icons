@@ -65,42 +65,38 @@ export const OurTypeTestIcon = ({
   name: FontAwesome5ProSolidIconName;
 }) => <FontAwesome5Pro name={name} size={size} color={color} iconStyle="solid" />;
 
-export const TestMode = () => {
-  const iconConfig = [
-    { Component: AntDesign, name: 'home', label: 'AntD' },
-    { Component: Entypo, name: 'home', label: 'Entypo' },
-    { Component: EvilIcons, name: 'archive', label: 'EvilIcons' },
-    { Component: Feather, name: 'home', label: 'Feather' },
-    { Component: FontAwesome, name: 'home', label: 'FontAwesome' },
-    { Component: FontAwesome5, name: 'home', label: 'FontAwesome5', iconStyle: 'solid' },
-    { Component: FontAwesome5Pro, name: 'home', label: 'FontAwesome5Pro' },
-    { Component: FontAwesome6, name: 'house', label: 'FontAwesome6', iconStyle: 'solid' },
-    { Component: FontAwesome6Pro, name: 'house', label: 'FontAwesome6Pro' },
-    { Component: Fontello, name: 'home', label: 'Fontello' },
-    { Component: Fontisto, name: 'home', label: 'Fontisto' },
-    { Component: Foundation, name: 'home', label: 'Foundation' },
-    { Component: IcoMoon, name: 'home', label: 'IcoMoon' },
-    { Component: Ionicons, name: 'home', label: 'Ionicons' },
-    { Component: Lucide, name: 'house', label: 'Lucide' },
-    { Component: MaterialDesignIcons, name: 'home', label: 'MaterialDesignIcons' },
-    { Component: MaterialIcons, name: 'home', label: 'MaterialIcons' },
-    { Component: Octicons, name: 'home', label: 'Octicons' },
-    { Component: SimpleLineIcons, name: 'home', label: 'SimpleLineIcons' },
-    { Component: Zocial, name: 'email', label: 'Zocial' },
-  ];
+const icons = [
+  { AntD: <AntDesign name="home" size={24} /> },
+  { Entypo: <Entypo name="home" size={24} /> },
+  { EvilIcons: <EvilIcons name="archive" size={24} /> },
+  { Feather: <Feather name="home" size={24} /> },
+  { FontAwesome: <FontAwesome name="home" size={24} /> },
+  { FontAwesome5: <FontAwesome5 name="home" size={24} iconStyle="solid" /> },
+  { FontAwesome5Pro: <FontAwesome5Pro name="home" size={24} /> },
+  { FontAwesome6: <FontAwesome6 name="house" size={24} iconStyle="solid" /> },
+  { FontAwesome6Pro: <FontAwesome6Pro name="house" size={24} /> },
+  { Fontello: <Fontello name="home" size={24} /> },
+  { Fontisto: <Fontisto name="home" size={24} /> },
+  { Foundation: <Foundation name="home" size={24} /> },
+  { IcoMoon: <IcoMoon name="home" size={24} /> },
+  { Ionicons: <Ionicons name="home" size={24} /> },
+  { Lucide: <Lucide name="house" size={24} /> },
+  { MaterialDesignIcons: <MaterialDesignIcons name="home" size={24} /> },
+  { MaterialIcons: <MaterialIcons name="home" size={24} /> },
+  { Octicons: <Octicons name="home" size={24} /> },
+  { SimpleLineIcons: <SimpleLineIcons name="home" size={24} /> },
+  { Zocial: <Zocial name="email" size={24} /> },
+];
 
-  return (
-    <ScrollView testID="TestScreen" contentContainerStyle={{ padding: 20 }}>
-      {iconConfig.map((config) => {
-        const { Component, name, label, iconStyle } = config;
-
-        return (
-          <IconRow key={label} label={label}>
-            {/* @ts-expect-error ignore */}
-            <Component name={name} size={12} iconStyle={iconStyle} />
-          </IconRow>
-        );
-      })}
-    </ScrollView>
-  );
-};
+export const TestMode = () => (
+  <ScrollView testID="TestScreen" contentContainerStyle={{ padding: 20 }}>
+    {icons.map((entry) => {
+      const [label, node] = Object.entries(entry)[0];
+      return (
+        <IconRow key={label} label={label}>
+          {node}
+        </IconRow>
+      );
+    })}
+  </ScrollView>
+);

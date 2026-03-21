@@ -90,11 +90,15 @@
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
+    "@react-native/assets-registry": "*",
     "@react-native-vector-icons/get-image": "workspace:^",
     "react": "*",
     "react-native": "*"
   },
   "peerDependenciesMeta": {
+    "@react-native/assets-registry": {
+      "optional": true
+    },
     "@react-native-vector-icons/get-image": {
       "optional": true
     }
