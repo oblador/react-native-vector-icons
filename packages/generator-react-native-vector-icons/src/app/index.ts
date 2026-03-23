@@ -157,6 +157,13 @@ export default class extends Generator<Arguments> {
       files.push('README.md');
     }
 
+    if (data.copyCustomFonts) {
+      this.fs.write(
+        this.destinationPath('.gitignore'),
+        "# Custom font files - copied from the app's rnvi-fonts/ at pod install time.\n# Ignored because these are user-provided or commercially licensed fonts.\nfonts/\n",
+      );
+    }
+
     files.forEach((file) => {
       if (typeof file === 'string') {
         this.fs.copyTpl(this.templatePath(file), this.destinationPath(file), data);
@@ -501,6 +508,7 @@ export default class extends Generator<Arguments> {
 
     data.buildSteps ||= {};
     data.customReadme ||= false;
+    data.customSrc ||= false;
     data.customAssets ||= false;
     data.copyCustomFonts ||= false;
     data.commonPackage ||= 'common';

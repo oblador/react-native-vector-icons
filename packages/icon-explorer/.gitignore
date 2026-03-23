@@ -15,6 +15,6 @@ local.properties
 msbuild.binlog
 node_modules/
 
-# Make sure we don't accidentally commit out fontawesomepro test fonts
+# Make sure we don't accidentally commit fontawesomepro test fonts
 rnvi-fonts/fontawesome5-pro
 rnvi-fonts/fontawesome6-pro
