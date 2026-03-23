@@ -68,12 +68,35 @@ task copyFonts(type: Copy) {
 
 preBuild.dependsOn(copyFonts)
 
+// Find the app's project root: walk up to the nearest package.json.
+// Works for both regular apps (app/android/) and monorepos.
+def rnviProjectRoot = rootDir.parentFile
+while (rnviProjectRoot != null && !new File(rnviProjectRoot, 'package.json').exists()) {
+  rnviProjectRoot = rnviProjectRoot.parentFile
+}
+if (rnviProjectRoot == null) {
+  throw new GradleException("(RNVI-fontawesome-pro-sharp-duotone-regular) Could not find package.json in any parent of ${rootDir.parentFile}")
+}
+
+// Read fontDir config from the app's package.json (default: "rnvi-fonts")
+def rnviAppPkg = new groovy.json.JsonSlurper().parse(new File(rnviProjectRoot, 'package.json'))
+def rnviFontDir = rnviAppPkg?.reactNativeVectorIcons?.fontDir ?: 'rnvi-fonts'
+def rnviCustomFontsSrc = new File(rnviProjectRoot, "${rnviFontDir}/fontawesome-pro-sharp-duotone-regular")
+
+if (!rnviCustomFontsSrc.exists()) {
+  throw new GradleException("(RNVI-fontawesome-pro-sharp-duotone-regular) Custom fonts directory not found: ${rnviCustomFontsSrc}")
+}
+
+def rnviFontFiles = rnviCustomFontsSrc.listFiles({ File f -> f.name.endsWith('.ttf') } as FileFilter)
+if (rnviFontFiles == null || rnviFontFiles.length == 0) {
+  throw new GradleException("(RNVI-fontawesome-pro-sharp-duotone-regular) No font files found in ${rnviCustomFontsSrc}")
+}
+
 task copyExtraFonts(type: Copy) {
-  from "${rootDir.parentFile.absolutePath}/rnvi-fonts/fontawesome-pro-sharp-duotone-regular"
+  from rnviCustomFontsSrc
   include "*.ttf"
 
   into "${buildDir}/intermediates/RNVI-fontawesome-pro-sharp-duotone-regular/fonts"
-  eachFile { println "(RNVI:fontawesome-pro-sharp-duotone-regular) Copying custom font: ${it.file}" }
 }
 
 preBuild.dependsOn(copyExtraFonts)
