@@ -197,6 +197,35 @@ pnpm generate
 pnpm generate ant-design
 ```
 
+The generator requires:
+
+- **Docker** — needed for SVG-based fonts (ant-design, entypo, evil-icons, feather) which use `fontcustom` to compile SVGs into `.ttf` files.
+- **FontAwesome Pro npm token** — needed for pro font packages. The token is read from your npm config (`//npm.fontawesome.com/:_authToken`). If not set, the generator will prompt for it.
+
+After changing the generator templates, rebuild the generator before running `pnpm generate`:
+
+```sh
+cd packages/generator-react-native-vector-icons
+pnpm prepare
+```
+
+### Custom font packages
+
+Some packages (`icomoon`, `fontello`, and all `fontawesome-pro-*` variants) have `copyCustomFonts: true` in their `.yo-rc.json`. These packages do not ship font files — users must provide them in a `rnvi-fonts/<package-name>/` directory in their app.
+
+On iOS, the podspec copies fonts from `rnvi-fonts/` into the pod's `fonts/` directory during `pod install`. This is necessary because CocoaPods cannot resolve `s.resources` paths that traverse out of a symlinked pod directory (common in monorepos using pnpm/yarn workspaces).
+
+### Testing pro fonts in the icon-explorer
+
+The icon-explorer app needs FontAwesome Pro font files to test pro icon packages. These cannot be checked into git. To set them up:
+
+```sh
+cd packages/icon-explorer
+pnpm fetch-pro-fonts
+```
+
+This downloads FontAwesome Pro v5 and v6 fonts and places them in `rnvi-fonts/fontawesome5-pro/` and `rnvi-fonts/fontawesome6-pro/`, renamed to match the filenames expected by each package.
+
 ### Font versioning
 
 Font package versions are now independent of upstream font versions, and we track the mapping in the README.md of each font
