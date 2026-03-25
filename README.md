@@ -142,7 +142,7 @@ By combining some of these you can create for example :
 
 Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
 
-You need to install `@react-native-vector-icons/get-image` to use this feature.
+You need to use Expo _or_ install `@react-native-vector-icons/get-image` to use this feature.
 
 ```jsx
 const source = Icon.getImageSourceSync('user', 20, 'red');

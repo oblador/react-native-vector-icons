@@ -4,7 +4,7 @@ const webImpl: Spec = {
   async getImageForFont() {
     throw new Error('getImageForFont is not available for web');
   },
-  getImageForFontSync() {
+  getImageForFontSync(): never {
     throw new Error('getImageForFontSync is not available for web');
   },
 };

@@ -44,8 +44,9 @@ type ExpoFontUtilsModule = {
   renderToImageAsync: (
     glyph: string,
     options: {
-      fontFamily?: string;
+      fontFamily: string;
       size?: number;
+      lineHeight?: number;
       color?: number;
     },
   ) => Promise<RenderToImageResult>;

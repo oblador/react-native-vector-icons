@@ -1,8 +1,10 @@
-import type { ReactNode } from 'react';
-import { Image, Pressable, ScrollView, SectionList, StyleSheet, Text, View, type ViewProps } from 'react-native';
+import { type ReactNode, useEffect, useState } from 'react';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View, type ViewProps } from 'react-native';
 
 import { FontAwesome } from '@react-native-vector-icons/fontawesome';
-import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
+import { getImageForFontSync } from '@react-native-vector-icons/get-image';
+
+type ImageResult = ReturnType<typeof FontAwesome.getImageSourceSync>;
 
 import { createAnimatableComponent } from './animatable';
 import { iconSets as ICON_SETS, type IconName } from './icon-sets';
@@ -10,9 +12,153 @@ import { iconSets as ICON_SETS, type IconName } from './icon-sets';
 // @ts-expect-error: We don't care this is wrong for the tests
 const AnimatableIcon = createAnimatableComponent(FontAwesome);
 
-const STYLING: (Parameters<typeof FontAwesome>[0] & {
-  containerStyle?: ViewProps['style'];
-})[] = [
+const textNoLineHeight = getImageForFontSync('Hello', { fontFamily: 'Arial', size: 30, color: '#333' });
+const textWithLineHeight = getImageForFontSync('Hello', {
+  fontFamily: 'Arial',
+  size: 30,
+  color: '#333',
+  lineHeight: 60,
+});
+
+const SyncRenderToImage = () => {
+  const syncOldSignature = FontAwesome.getImageSourceSync('check', 40, '#e0284f');
+  const syncNewSignature = FontAwesome.getImageSourceSync('check', { size: 40, color: '#1a8cff' });
+  return (
+    <>
+      <Image source={syncOldSignature} />
+      <Image source={syncNewSignature} />
+    </>
+  );
+};
+const AsyncGetImage = () => {
+  const [oldSig, setOldSig] = useState<ImageResult | null>(null);
+  const [newSig, setNewSig] = useState<ImageResult | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    FontAwesome.getImageSource('check', 40, 'rgba(128, 0, 255, 0.8)')
+      .then(setOldSig)
+      .catch((e: Error) => setError(e.message));
+    FontAwesome.getImageSource('check', { size: 40, color: '#ff6347' })
+      .then(setNewSig)
+      .catch((e: Error) => setError(e.message));
+  }, []);
+
+  if (error) {
+    return <Text style={{ color: 'red' }}>Error: {error}</Text>;
+  }
+
+  return (
+    <>
+      {oldSig && <Image source={oldSig} />}
+      {newSig && <Image source={newSig} />}
+    </>
+  );
+};
+
+export const Home = ({
+  navigator,
+  multiNavigator,
+}: {
+  navigator: (iconName: IconName) => void;
+  multiNavigator: (iconName: IconName) => void;
+}) => {
+  const iconNames = Object.keys(ICON_SETS) as IconName[];
+
+  return (
+    <ScrollView testID="scrollview">
+      <Section title="INLINE">
+        <Row>
+          <Text>
+            This text has <FontAwesome name="rocket" /> inline <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
+          </Text>
+        </Row>
+      </Section>
+
+      <Section title="SYNC render to image">
+        <Row>
+          <SyncRenderToImage />
+        </Row>
+      </Section>
+
+      <Section title="ASYNC render to image">
+        <Row>
+          <AsyncGetImage />
+        </Row>
+      </Section>
+
+      <Section title="ANIMATED">
+        <Row>
+          <AnimatableIcon
+            animation={{
+              0: { transform: [{ scale: 1 }] },
+              0.5: { transform: [{ scale: 1.3 }] },
+              1: { transform: [{ scale: 1 }] },
+            }}
+            easing="ease-in-out"
+            iterationCount="infinite"
+            duration={800}
+            name="heart"
+            size={30}
+            color="#e0284f"
+          />
+        </Row>
+      </Section>
+
+      <Section title="STYLING">
+        <View style={[styles.row, { alignItems: 'center' }]}>
+          {STYLING.map((item) => (
+            <View key={item.name} style={[{ marginHorizontal: 8 }, item.containerStyle]}>
+              <FontAwesome {...item} />
+            </View>
+          ))}
+        </View>
+      </Section>
+
+      <Section title="GET-IMAGE: render text as image with lineHeight">
+        <Row>
+          <View style={{ backgroundColor: '#eef', marginHorizontal: 4 }}>
+            <Image source={textNoLineHeight} />
+          </View>
+          <View style={{ backgroundColor: '#eef', marginHorizontal: 4 }}>
+            <Image source={textWithLineHeight} />
+          </View>
+        </Row>
+      </Section>
+
+      <Section title="ICON SETS">
+        {iconNames.map((name, i) => {
+          const item = ICON_SETS[name];
+          return (
+            <Pressable key={name} testID={name} onPress={() => (item.meta ? multiNavigator(name) : navigator(name))}>
+              {i > 0 && <View style={styles.separator} />}
+              <View style={styles.row}>
+                <Text style={styles.text}>{name}</Text>
+                <Text style={styles.glyphCount}>{item.glyphNames.length}</Text>
+              </View>
+            </Pressable>
+          );
+        })}
+      </Section>
+    </ScrollView>
+  );
+};
+
+const Section = ({ title, children }: { title: string; children: ReactNode }) => (
+  <>
+    <View style={styles.sectionHeader}>
+      <Text testID={title} style={styles.sectionHeaderTitle}>
+        {title}
+      </Text>
+    </View>
+    {children}
+  </>
+);
+
+const Row = ({ children }: { children: ReactNode }) => <View style={styles.row}>{children}</View>;
+
+type StylingItem = Parameters<typeof FontAwesome>[0] & { containerStyle?: ViewProps['style'] };
+const STYLING: StylingItem[] = [
   { name: 'github', size: 40, color: '#333' },
   {
     name: 'heart',
@@ -42,115 +188,9 @@ const STYLING: (Parameters<typeof FontAwesome>[0] & {
     name: 'font',
     size: 20,
     color: 'white',
-    containerStyle: {
-      borderRadius: 5,
-      padding: 5,
-      backgroundColor: '#47678e',
-    },
+    containerStyle: { borderRadius: 5, padding: 5, backgroundColor: '#47678e' },
   },
 ];
-
-const INLINE = [
-  {
-    name: 'inline',
-    children: (
-      <Text>
-        This text has <FontAwesome name="rocket" /> inline <FontAwesome name="hand-peace-o"> icons!</FontAwesome>
-      </Text>
-    ),
-  },
-];
-
-const getImageFA = FontAwesome.getImageSourceSync('check', 40, 'green');
-const getImageFA6 = FontAwesome6.getImageSourceSync('solid', 'check', 40, 'green');
-
-const GETIMAGE = [
-  {
-    name: 'get-image',
-    children: (
-      <>
-        <Image source={getImageFA} style={{ width: 40, height: 40 }} />
-
-        <Image source={getImageFA6} style={{ width: 40, height: 40 }} />
-      </>
-    ),
-  },
-];
-
-const ANIMATED = [
-  {
-    name: 'animated',
-    children: (
-      <AnimatableIcon
-        animation={{
-          0: { transform: [{ scale: 1 }] },
-          0.5: { transform: [{ scale: 1.3 }] },
-          1: { transform: [{ scale: 1 }] },
-        }}
-        easing="ease-in-out"
-        iterationCount="infinite"
-        duration={800}
-        name="heart"
-        size={30}
-        color="#e0284f"
-      />
-    ),
-  },
-];
-
-export const Home = ({
-  navigator,
-  multiNavigator,
-}: {
-  navigator: (iconName: IconName) => void;
-  multiNavigator: (iconName: IconName) => void;
-}) => {
-  const renderIcon = (itemName: IconName) => {
-    const item = ICON_SETS[itemName];
-
-    return (
-      <Pressable testID={itemName} onPress={() => (item.meta ? multiNavigator(itemName) : navigator(itemName))}>
-        <View style={styles.row}>
-          <Text style={styles.text}>{itemName}</Text>
-          <Text style={styles.glyphCount}>{item.glyphNames.length}</Text>
-        </View>
-      </Pressable>
-    );
-  };
-
-  const iconNames = Object.keys(ICON_SETS) as IconName[];
-
-  const sections = [
-    {
-      title: 'ICON SETS',
-      data: iconNames.map((itemName) => renderIcon(itemName)),
-    },
-    { title: 'INLINE', data: INLINE.map((item) => renderRow(item)) },
-    {
-      title: 'SYNCHROUNOUS render to image',
-      data: GETIMAGE.map((item) => renderRow(item)),
-    },
-    { title: 'ANIMATED', data: ANIMATED.map((item) => renderRow(item)) },
-    { title: 'STYLING', data: STYLING.map((item) => renderStyling(item)) },
-  ];
-
-  return (
-    <SectionList
-      renderScrollComponent={(props) => <ScrollView {...props} testID="scrollview" />}
-      sections={sections}
-      renderItem={({ item }) => item}
-      renderSectionHeader={({ section }) => (
-        <View style={styles.sectionHeader}>
-          <Text testID="title" style={styles.sectionHeaderTitle}>
-            {section.title}
-          </Text>
-        </View>
-      )}
-      ItemSeparatorComponent={ItemSeparator}
-      initialNumToRender={15}
-    />
-  );
-};
 
 const styles = StyleSheet.create({
   sectionHeader: {
@@ -180,22 +220,4 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     textAlign: 'right',
   },
-  button: {
-    padding: 4,
-    backgroundColor: '#ADA6EA',
-    width: 100,
-  },
-  buttonText: { color: 'white' },
 });
-
-const ItemSeparator = () => <View style={styles.separator} />;
-
-const renderRow = (item: { children: ReactNode }) => <View style={styles.row}>{item.children}</View>;
-
-const renderStyling = (item: (typeof STYLING)[number]) => (
-  <View style={styles.row}>
-    <View style={item.containerStyle}>
-      <FontAwesome {...item} />
-    </View>
-  </View>
-);

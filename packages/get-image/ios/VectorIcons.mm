@@ -1,6 +1,7 @@
 #import "VectorIcons.h"
 
 #import <CoreText/CoreText.h>
+#import <ImageIO/ImageIO.h>
 #import <React/RCTBridge.h>
 #import <React/RCTConvert.h>
 #import <React/RCTFont.h>
@@ -29,51 +30,54 @@ RCT_EXPORT_MODULE()
                   withFontName:(NSString *)fontName
                   withFontSize:(CGFloat)fontSize
                      withColor:(UIColor *)color
-           withExtraIdentifier:(NSString *)identifier {
+                withLineHeight:(CGFloat)lineHeight {
   CGFloat screenScale = RCTScreenScale();
   NSString *hexColor = [self hexStringFromColor:color];
   NSString *fileName =
-      [NSString stringWithFormat:@"%@RNVectorIcons_%@_%@_%@_%.f%@@%.fx.png",
-                                 NSTemporaryDirectory(), identifier, fontName,
-                                 glyph, fontSize, hexColor, screenScale];
+      [NSString stringWithFormat:@"%@RNVectorIcons_%@_%@_%.f%@_lh%.f@%.fx.png",
+                                 NSTemporaryDirectory(), fontName,
+                                 glyph, fontSize, hexColor, lineHeight, screenScale];
 
   return fileName;
 }
 
-- (BOOL)createAndSaveGlyphImage:(NSString *)glyph
-                       withFont:(UIFont *)font
-                   withFilePath:(NSString *)filePath
-                      withColor:(UIColor *)color {
-  if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-    // No cached icon exists, we need to create it and persist to disk
+- (NSDictionary *)createGlyphImageForGlyph:(NSString *)glyph
+                               withOptions:(NSDictionary *)options
+                                 withError:(NSError **)error {
+  NSString *fontName = options[@"fontFamily"];
+  CGFloat fontSize = [options[@"size"] doubleValue];
+  double color = [options[@"color"] doubleValue];
+  NSNumber *lineHeightNum = options[@"lineHeight"];
+  double lineHeight = lineHeightNum ? [lineHeightNum doubleValue] : -1.0;
 
-    NSAttributedString *attributedString =
-        [[NSAttributedString alloc] initWithString:glyph
-                                        attributes:@{
-                                          NSFontAttributeName : font,
-                                          NSForegroundColorAttributeName : color
-                                        }];
+  UIColor *parsedColor = [RCTConvert UIColor:@(color)];
 
-    CGSize iconSize = [attributedString size];
-    UIGraphicsBeginImageContextWithOptions(iconSize, NO, 0.0);
-    [attributedString drawAtPoint:CGPointMake(0, 0)];
+  NSString *filePath = [self generateFilePath:glyph
+                                 withFontName:fontName
+                                 withFontSize:fontSize
+                                    withColor:parsedColor
+                               withLineHeight:lineHeight];
 
-    UIImage *iconImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+  CGFloat screenScale = RCTScreenScale();
 
-    NSData *imageData = UIImagePNGRepresentation(iconImage);
-    return [imageData writeToFile:filePath atomically:YES];
+  if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+    CGImageSourceRef source = CGImageSourceCreateWithURL(
+        (__bridge CFURLRef)[NSURL fileURLWithPath:filePath], NULL);
+    if (source) {
+      NSDictionary *properties = (__bridge_transfer NSDictionary *)
+          CGImageSourceCopyPropertiesAtIndex(source, 0, NULL);
+      CFRelease(source);
+      CGFloat pixelWidth = [properties[(__bridge NSString *)kCGImagePropertyPixelWidth] doubleValue];
+      CGFloat pixelHeight = [properties[(__bridge NSString *)kCGImagePropertyPixelHeight] doubleValue];
+      return @{
+        @"uri" : filePath,
+        @"width" : @(pixelWidth / screenScale),
+        @"height" : @(pixelHeight / screenScale),
+        @"scale" : @(screenScale)
+      };
+    }
   }
 
-  return YES;
-}
-
-- (NSString *)createGlyphImagePathForFont:(NSString *)fontName
-                                withGlyph:(NSString *)glyph
-                             withFontSize:(CGFloat)fontSize
-                                withColor:(double)color
-                                withError:(NSError **)error {
-  UIColor *parsedColor = [RCTConvert UIColor:@(color)];
   UIFont *font = [UIFont fontWithName:fontName size:fontSize];
   if (!font) {
     *error = [NSError
@@ -88,16 +92,36 @@ RCT_EXPORT_MODULE()
                }];
     return nil;
   }
-  NSString *filePath = [self generateFilePath:glyph
-                                 withFontName:fontName
-                                 withFontSize:fontSize
-                                    withColor:parsedColor
-                          withExtraIdentifier:@""];
 
-  BOOL success = [self createAndSaveGlyphImage:glyph
-                                      withFont:font
-                                  withFilePath:filePath
-                                     withColor:parsedColor];
+  NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{
+    NSFontAttributeName : font,
+    NSForegroundColorAttributeName : parsedColor
+  }];
+
+  if (lineHeight > 0) {
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.minimumLineHeight = lineHeight;
+    paragraphStyle.maximumLineHeight = lineHeight;
+    attributes[NSParagraphStyleAttributeName] = paragraphStyle;
+    CGFloat baselineOffset = (lineHeight - font.lineHeight) / 2.0;
+    attributes[NSBaselineOffsetAttributeName] = @(baselineOffset);
+  }
+
+  NSAttributedString *attributedString =
+      [[NSAttributedString alloc] initWithString:glyph
+                                      attributes:attributes];
+
+  CGSize iconSize = [attributedString size];
+
+  UIGraphicsImageRenderer *renderer =
+      [[UIGraphicsImageRenderer alloc] initWithSize:iconSize];
+  UIImage *image =
+      [renderer imageWithActions:^(UIGraphicsImageRendererContext *ctx) {
+        [attributedString drawAtPoint:CGPointZero];
+      }];
+
+  NSData *imageData = UIImagePNGRepresentation(image);
+  BOOL success = [imageData writeToFile:filePath atomically:YES];
 
   if (!success) {
     *error = [NSError errorWithDomain:RNVIErrorDomain
@@ -108,38 +132,40 @@ RCT_EXPORT_MODULE()
                              }];
     return nil;
   }
-  return filePath;
+
+  return @{
+    @"uri" : filePath,
+    @"width" : @(iconSize.width),
+    @"height" : @(iconSize.height),
+    @"scale" : @(screenScale)
+  };
 }
 
-RCT_EXPORT_METHOD(getImageForFont : (NSString *)fontName glyph : (NSString *)
-                      glyph fontSize : (CGFloat)fontSize color : (double)
-                          color resolve : (RCTPromiseResolveBlock)
-                              resolve reject : (RCTPromiseRejectBlock)reject) {
+RCT_EXPORT_METHOD(getImageForFont : (NSString *)glyph
+                          options : (NSDictionary *)options
+                          resolve : (RCTPromiseResolveBlock)resolve
+                           reject : (RCTPromiseRejectBlock)reject) {
   NSError *error = nil;
-  NSString *filePath = [self createGlyphImagePathForFont:fontName
-                                               withGlyph:glyph
-                                            withFontSize:fontSize
-                                               withColor:color
-                                               withError:&error];
+  NSDictionary *result = [self createGlyphImageForGlyph:glyph
+                                            withOptions:options
+                                              withError:&error];
   if (error != nil) {
     reject([NSString stringWithFormat:@"%ld", (long)error.code],
            error.localizedDescription, error);
   } else {
-    resolve(filePath);
+    resolve(result);
   }
 }
 
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(
-    getImageForFontSync : (NSString *)fontName glyph : (NSString *)
-        glyph fontSize : (CGFloat)fontSize color : (double)color) {
+    getImageForFontSync : (NSString *)glyph
+                options : (NSDictionary *)options) {
   NSError *error = nil;
-  NSString *glyphImage = [self createGlyphImagePathForFont:fontName
-                                                 withGlyph:glyph
-                                              withFontSize:fontSize
-                                                 withColor:color
-                                                 withError:&error];
-  if (error == nil && glyphImage != nil) {
-    return glyphImage;
+  NSDictionary *result = [self createGlyphImageForGlyph:glyph
+                                            withOptions:options
+                                              withError:&error];
+  if (error == nil && result != nil) {
+    return result;
   } else {
     NSString *reason =
         error ? error.localizedDescription : @"Failed to create glyph image";
