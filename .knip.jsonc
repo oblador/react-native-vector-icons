@@ -1,57 +1,51 @@
 {
-  "$schema": "https://unpkg.com/knip@5/schema-jsonc.json",
-  "ignore": ["**/*.web.ts"],
+  "$schema": "https://unpkg.com/knip@6/schema-jsonc.json",
+  "ignore": ["**/*.web.{ts,tsx}"],
+  "ignoreWorkspaces": ["packages/generator-react-native-vector-icons"],
   "babel": true,
   "workspaces": {
     ".": {
       "ignoreDependencies": [
         "yo",
-        "eslint-config-airbnb-typescript",
         "generator-react-native-vector-icons",
         "@commitlint/config-conventional",
         "@nx/js",
         "@evilmartians/lefthook"
       ],
-      "ignoreBinaries": ["scripts/generate-fonts.sh"]
-    },
-    "packages/*": {
-      "entry": [
-        "{index,cli,main}.{js,mjs,cjs,jsx,ts,tsx,mts,cts}!",
-        "src/{index,cli,main}.{js,mjs,cjs,jsx,ts,tsx,mts,cts}!"
-      ]
+      "ignoreBinaries": ["scripts/generate-fonts.sh"],
+      "entry": ["scripts/fix-glyphmaps.mjs"]
     },
     "packages/common": {
-      "entry": ["src/index.ts", "src/scripts/{getFonts,updatePlist}.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/scripts/{getFonts,updatePlist}.{ts,tsx}"],
       "ignoreDependencies": ["@react-native/assets-registry", "@react-native-vector-icons/get-image"]
     },
     "packages/get-image": {
-      "entry": ["src/index.ts"],
+      "entry": ["src/index.{ts,tsx}"],
       "ignoreDependencies": ["turbo"],
-      "ignore": ["src/NativeVectorIcons.ts", "react-native.config.js"]
+      "ignore": ["src/NativeVectorIcons.{ts,tsx}", "react-native.config.js"]
     },
     "packages/fontawesome-common": {
       "entry": ["scripts/generate-fontawesome-metadata.js", "scripts/generate-fontawesome-glyphmap.mts"],
-      "ignore": ["generators/app/templates/src/*"],
-      "ignoreDependencies": ["@types/react"]
+      "ignore": ["generators/app/templates/src/*"]
     },
     "packages/codemod": {
-      "entry": ["src/index.ts", "src/{11,12}.0/transform.ts"]
+      "entry": ["src/index.{ts,tsx}", "src/{11,12}.0/transform.{ts,tsx}"]
     },
     "packages/directory": {
       "entry": [
         "src/index.tsx",
         "src/App.test.tsx",
-        "src/reportWebVitals.ts",
+        "src/reportWebVitals.{ts,tsx}",
         "src/setupTests.js",
         "bin/generate-font-styles.mts",
         "bin/generate-glyphmap-index.mts"
       ],
-      "ignoreDependencies": ["@testing-library/user-event"],
       "ignoreBinaries": ["bin/generate-font-styles.mts", "bin/generate-glyphmap-index.mts"]
     },
     "packages/icon-explorer": {
-      "entry": ["index.js", "react-native.config.js", "configPlugin.js", "src/Types.tsx"],
-      "ignore": ["metro.config.js"],
+      "entry": ["index.js", "src/Types.tsx"],
+      "ignore": ["metro.config.js", "configPlugin.js"],
+      "metro": false,
       "ignoreDependencies": [
         "@react-native-vector-icons/get-image",
         "@babel/preset-env",
@@ -59,101 +53,93 @@
         "@rnx-kit/align-deps",
         "react-test-renderer",
         "@types/react-test-renderer",
-        "@react-native-community/cli",
-        "@react-native-community/cli-platform-android",
-        "@react-native-community/cli-platform-ios"
-      ]
-    },
-    "packages/generator-react-native-vector-icons": {
-      "entry": ["src/app/index.ts"],
-      "ignore": ["src/app/templates/**", "generators/app/templates/**"],
-      "ignoreDependencies": ["oslllo-svg-fixer"]
+        "@react-native/metro-config",
+        "@rnx-kit/metro-config"
+      ],
+      "ignoreBinaries": ["tsx"]
     },
     "packages/ant-design": {
-      "ignore": ["src/NativeVectorIconsAntDesign.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@ant-design/icons-svg"]
     },
     "packages/entypo": {
-      "ignore": ["src/NativeVectorIconsEntypo.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@entypo-icons/core"]
     },
     "packages/evil-icons": {
-      "ignore": ["src/NativeVectorIconsEvilIcons.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["evil-icons"]
     },
     "packages/feather": {
-      "ignore": ["src/NativeVectorIconsFeather.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["feather-icons"]
     },
     "packages/fontawesome": {
-      "ignore": ["src/NativeVectorIconsFontAwesome.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["font-awesome"]
     },
     "packages/fontawesome-free-brands": {
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@fortawesome/fontawesome-free"]
     },
     "packages/fontawesome-free-regular": {
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@fortawesome/fontawesome-free"]
     },
     "packages/fontawesome-free-solid": {
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@fortawesome/fontawesome-free"]
     },
     "packages/fontawesome5": {
-      "ignore": ["src/NativeVectorIconsFontAwesome5.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@fortawesome/fontawesome-free"]
     },
     "packages/fontawesome5-pro": {
-      "ignore": ["src/NativeVectorIconsFontAwesome5Pro.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common"]
     },
     "packages/fontawesome6": {
-      "ignore": ["src/NativeVectorIconsFontAwesome6.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@fortawesome/fontawesome-free"]
     },
     "packages/fontawesome6-pro": {
-      "ignore": ["src/NativeVectorIconsFontAwesome6Pro.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common"]
     },
-    "packages/fontello": {
-      "ignore": ["src/NativeVectorIconsFontello.ts"]
-    },
     "packages/fontisto": {
-      "ignore": ["src/NativeVectorIconsFontisto.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["fontisto"]
     },
     "packages/foundation": {
-      "ignore": ["src/NativeVectorIconsFoundation.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["foundation-icons"]
     },
-    "packages/icomoon": {
-      "ignore": ["src/NativeVectorIconsIcomoon.ts"]
-    },
     "packages/ionicons": {
-      "ignore": ["src/NativeVectorIconsIonicons.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["ionicons"]
     },
     "packages/lucide": {
-      "ignore": ["src/NativeVectorIconsLucide.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["lucide-static"]
     },
     "packages/material-design-icons": {
-      "ignore": ["src/NativeVectorIconsMaterialDesignIcons.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@mdi/font"]
     },
-    "packages/material-icons": {
-      "ignore": ["src/NativeVectorIconsMaterialIcons.ts"]
-    },
-    "packages/simple-line-icons": {
-      "ignore": ["src/NativeVectorIconsSimpleLineIcons.ts"],
-      "ignoreDependencies": ["simple-line-icons"]
-    },
     "packages/octicons": {
-      "ignore": ["src/NativeVectorIconsOcticons.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@primer/octicons"]
     },
+    "packages/simple-line-icons": {
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
+      "ignoreDependencies": ["simple-line-icons"]
+    },
     "packages/zocial": {
-      "ignore": ["src/NativeVectorIconsZocial.ts"],
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["css-social-buttons"]
+    },
+    "packages/*": {
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"]
     }
   }
 }
