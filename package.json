@@ -30,7 +30,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.1.0",
     "generator-react-native-vector-icons": "workspace:*",
-    "knip": "^5.66.2",
+    "knip": "^6.0.5",
     "nx": "^22.5.2",
     "typescript": "^5.9.3",
     "yo": "^5.1.0"
