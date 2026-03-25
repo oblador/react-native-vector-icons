@@ -7,9 +7,9 @@ import { EvilIcons } from '@react-native-vector-icons/evil-icons';
 import { Feather } from '@react-native-vector-icons/feather';
 import { FontAwesome } from '@react-native-vector-icons/fontawesome';
 import { FontAwesome5 } from '@react-native-vector-icons/fontawesome5';
-import { FontAwesome5Pro, type FontAwesome5ProSolidIconName } from '@react-native-vector-icons/fontawesome5-pro';
+import { FontAwesome5Pro } from '@react-native-vector-icons/fontawesome5-pro';
 import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
-import { FontAwesome6Pro } from '@react-native-vector-icons/fontawesome6-pro';
+import { FontAwesome6Pro, type FontAwesome6ProSolidIconName } from '@react-native-vector-icons/fontawesome6-pro';
 import createFontelloIconSet from '@react-native-vector-icons/fontello';
 import { Fontisto } from '@react-native-vector-icons/fontisto';
 import { Foundation } from '@react-native-vector-icons/foundation';
@@ -62,8 +62,8 @@ export const OurTypeTestIcon = ({
 }: {
   size: number;
   color: string;
-  name: FontAwesome5ProSolidIconName;
-}) => <FontAwesome5Pro name={name} size={size} color={color} iconStyle="solid" />;
+  name: FontAwesome6ProSolidIconName;
+}) => <FontAwesome6Pro name={name} size={size} color={color} iconStyle="solid" />;
 
 const icons = [
   { AntD: <AntDesign name="home" size={24} /> },

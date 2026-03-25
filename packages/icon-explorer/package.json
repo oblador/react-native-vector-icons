@@ -15,6 +15,7 @@
     "lint": "eslint .",
     "macos": "react-native run-macos --scheme IconExplorer",
     "mkdist": "node -e \"require('node:fs').mkdirSync('dist', { recursive: true, mode: 0o755 })\"",
+    "fetch-pro-fonts": "tsx scripts/fetch-pro-fonts.ts",
     "start": "react-native start --reset-cache",
     "test:android:build": "owl build --platform android",
     "test:android:run": "owl test --platform android",

@@ -38,6 +38,9 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
+      - name: Create pro font stubs
+        run: node scripts/create-pro-font-stubs.mjs
+        working-directory: packages/icon-explorer
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
       - name: Build Android app
@@ -62,6 +65,9 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
+      - name: Create pro font stubs
+        run: node scripts/create-pro-font-stubs.mjs
+        working-directory: packages/icon-explorer
       - name: Cache CocoaPods
         uses: actions/cache@v4
         with:

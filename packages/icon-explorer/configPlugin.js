@@ -34,6 +34,23 @@ module.exports = (config) =>
       'fontello.ttf',
       'icomoon.ttf',
       'Lucide.ttf',
+      // FontAwesome 5 Pro (custom fonts from rnvi-fonts/fontawesome5-pro/)
+      'FontAwesome5_Pro_Brands.ttf',
+      'FontAwesome5_Pro_Duotone.ttf',
+      'FontAwesome5_Pro_Light.ttf',
+      'FontAwesome5_Pro_Regular.ttf',
+      'FontAwesome5_Pro_Solid.ttf',
+      // FontAwesome 6 Pro (custom fonts from rnvi-fonts/fontawesome6-pro/)
+      'FontAwesome6_Pro_Brands.ttf',
+      'FontAwesome6_Pro_Duotone.ttf',
+      'FontAwesome6_Pro_Light.ttf',
+      'FontAwesome6_Pro_Regular.ttf',
+      'FontAwesome6_Pro_Sharp_Light.ttf',
+      'FontAwesome6_Pro_Sharp_Regular.ttf',
+      'FontAwesome6_Pro_Sharp_Solid.ttf',
+      'FontAwesome6_Pro_Sharp_Thin.ttf',
+      'FontAwesome6_Pro_Solid.ttf',
+      'FontAwesome6_Pro_Thin.ttf',
     ];
 
     fonts.forEach((font) => {

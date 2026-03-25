@@ -1,0 +1,3 @@
+# Custom font files - copied from the app's rnvi-fonts/ at pod install time.
+# Ignored because these are user-provided or commercially licensed fonts.
+fonts/

@@ -31,7 +31,8 @@ for package in "${PACKAGES[@]}"; do
 
   CURRENT_VERSION=$([ -f package.json ] && jq -r '.version' package.json || echo "0.0.1")
 
-  rm -rf ./*
+  # Remove everything except node_modules and dotfiles (.yo-rc.json etc)
+  find . -maxdepth 1 ! -name '.' ! -name 'node_modules' ! -name '.*' -exec rm -rf {} +
   git restore CHANGELOG.md &>/dev/null || true
 
   if [ "$(jq -r '."generator-react-native-vector-icons".customReadme' .yo-rc.json)" == "true" ]; then
