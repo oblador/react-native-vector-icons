@@ -1,3 +1,22 @@
+# 13.0.0 (2026-03-26)
+
+### 🚀 Features
+
+- ⚠️  refactor getImageSource implementation ([#1891](https://github.com/oblador/react-native-vector-icons/pull/1891))
+
+### ⚠️  Breaking Changes
+
+- refactor getImageSource implementation  ([#1891](https://github.com/oblador/react-native-vector-icons/pull/1891))
+  changed return value of getImageSource and getImageSourceSync
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/get-image to 13.0.0
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 12.4.2 (2026-03-17)
 
 ### 🩹 Fixes
