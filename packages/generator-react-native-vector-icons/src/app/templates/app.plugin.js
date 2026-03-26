@@ -26,7 +26,7 @@ module.exports = (config) =>
         `See the package README for setup instructions.`
       );
     }
-<% } else if (meta && meta.styles) { -%>
+<% } else if (typeof meta !== 'undefined' && meta && meta.styles) { -%>
     const fonts = [<% Object.values(meta.styles).forEach((style, i) => { %><%= i > 0 ? ', ' : '' %>'<%= style.name %>'<% }); %>];
 <% } else { -%>
     const fonts = ['<%= fontFileName %>.ttf'];

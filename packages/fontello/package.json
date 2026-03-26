@@ -95,7 +95,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "@expo/config-plugins": ">=10.0.0"
   },
   "engines": {
     "node": ">= 18.0.0"
@@ -128,5 +129,10 @@
   "create-react-native-library": {
     "type": "library",
     "version": "0.41.2"
+  },
+  "peerDependenciesMeta": {
+    "@expo/config-plugins": {
+      "optional": true
+    }
   }
 }

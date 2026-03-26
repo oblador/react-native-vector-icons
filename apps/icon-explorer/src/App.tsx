@@ -30,7 +30,7 @@ const App = () => {
   };
 
   const toggleTestMode = () =>
-    setState((prevState) => (prevState.view === 'Home' ? { view: 'TestMode' } : { view: 'Home' }));
+    setState((prevState) => (prevState.view === 'TestMode' ? { view: 'Home' } : { view: 'TestMode' }));
 
   const handleHome = () => {
     setState({ view: 'Home' });

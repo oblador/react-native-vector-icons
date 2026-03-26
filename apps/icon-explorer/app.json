@@ -10,7 +10,28 @@
       "slug": "IconExplorer"
     }
   ],
-  "plugins": ["./configPlugin.js"],
+  "plugins": [
+    "@react-native-vector-icons/ant-design",
+    "@react-native-vector-icons/entypo",
+    "@react-native-vector-icons/evil-icons",
+    "@react-native-vector-icons/feather",
+    "@react-native-vector-icons/fontawesome",
+    "@react-native-vector-icons/fontawesome5",
+    "@react-native-vector-icons/fontawesome5-pro",
+    "@react-native-vector-icons/fontawesome6",
+    "@react-native-vector-icons/fontawesome6-pro",
+    "@react-native-vector-icons/fontello",
+    "@react-native-vector-icons/fontisto",
+    "@react-native-vector-icons/foundation",
+    "@react-native-vector-icons/icomoon",
+    "@react-native-vector-icons/ionicons",
+    "@react-native-vector-icons/lucide",
+    "@react-native-vector-icons/material-design-icons",
+    "@react-native-vector-icons/material-icons",
+    "@react-native-vector-icons/octicons",
+    "@react-native-vector-icons/simple-line-icons",
+    "@react-native-vector-icons/zocial"
+  ],
   "resources": {
     "android": ["dist/res", "dist/main.android.jsbundle"],
     "ios": ["dist/assets", "dist/main.ios.jsbundle"],
