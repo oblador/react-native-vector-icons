@@ -21,12 +21,12 @@ export type ImageResult = {
 };
 
 // TODO use this signature when moving to new-arch only
-// export type NativeImageOptions = {
-//   fontFamily: string;
-//   size: number;
-//   color: number;
-//   lineHeight?: number;
-// };
+export type NativeImageOptions = {
+  fontFamily: string;
+  size: number;
+  color: number;
+  lineHeight: number;
+};
 
 /* eslint-disable @typescript-eslint/no-wrapper-object-types */
 export interface Spec extends TurboModule {

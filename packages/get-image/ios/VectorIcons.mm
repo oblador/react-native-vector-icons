@@ -1,6 +1,5 @@
 #import "VectorIcons.h"
 
-#import <CoreText/CoreText.h>
 #import <ImageIO/ImageIO.h>
 #import <React/RCTBridge.h>
 #import <React/RCTConvert.h>
@@ -15,28 +14,16 @@ enum {
 @implementation VectorIcons
 RCT_EXPORT_MODULE()
 
-- (NSString *)hexStringFromColor:(UIColor *)color {
-  const CGFloat *components = CGColorGetComponents(color.CGColor);
-
-  CGFloat r = components[0];
-  CGFloat g = components[1];
-  CGFloat b = components[2];
-
-  return [NSString stringWithFormat:@"#%02lX%02lX%02lX", lroundf(r * 255),
-                                    lroundf(g * 255), lroundf(b * 255)];
-}
-
 - (NSString *)generateFilePath:(NSString *)glyph
                   withFontName:(NSString *)fontName
                   withFontSize:(CGFloat)fontSize
-                     withColor:(UIColor *)color
-                withLineHeight:(CGFloat)lineHeight {
+                     withColor:(double)color
+                withLineHeight:(double)lineHeight {
   CGFloat screenScale = RCTScreenScale();
-  NSString *hexColor = [self hexStringFromColor:color];
   NSString *fileName =
-      [NSString stringWithFormat:@"%@RNVectorIcons_%@_%@_%.f%@_lh%.f@%.fx.png",
+      [NSString stringWithFormat:@"%@RNVectorIcons_%@_%@_%.f_%.f_lh%.f@%.fx.png",
                                  NSTemporaryDirectory(), fontName,
-                                 glyph, fontSize, hexColor, lineHeight, screenScale];
+                                 glyph, fontSize, color, lineHeight, screenScale];
 
   return fileName;
 }
@@ -47,15 +34,14 @@ RCT_EXPORT_MODULE()
   NSString *fontName = options[@"fontFamily"];
   CGFloat fontSize = [options[@"size"] doubleValue];
   double color = [options[@"color"] doubleValue];
-  NSNumber *lineHeightNum = options[@"lineHeight"];
-  double lineHeight = lineHeightNum ? [lineHeightNum doubleValue] : -1.0;
+  double lineHeight = [options[@"lineHeight"] doubleValue];
 
   UIColor *parsedColor = [RCTConvert UIColor:@(color)];
 
   NSString *filePath = [self generateFilePath:glyph
                                  withFontName:fontName
                                  withFontSize:fontSize
-                                    withColor:parsedColor
+                                    withColor:color
                                withLineHeight:lineHeight];
 
   CGFloat screenScale = RCTScreenScale();

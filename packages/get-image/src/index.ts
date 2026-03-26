@@ -1,6 +1,6 @@
-import { Platform, processColor } from 'react-native';
+import { type ColorValue, Platform, processColor } from 'react-native';
 
-import type { ImageResult } from './NativeVectorIcons';
+import type { ImageResult, NativeImageOptions } from './NativeVectorIcons';
 
 /**
  * Options for rendering a glyph to an image.
@@ -12,7 +12,7 @@ export type ImageOptions = {
   /** Font size in dp. Defaults to 24. */
   size?: number;
   /** CSS color string. Defaults to 'black'. */
-  color?: string;
+  color?: ColorValue;
   /** Line height in dp. When set, the image height will be at least this value and the glyph will be vertically centered. */
   lineHeight?: number;
 };
@@ -40,6 +40,34 @@ const VectorIcons = VectorIconsModule
       },
     );
 
+function resolveArgs(
+  firstArg: string,
+  secondArg: string | ImageOptions,
+  fontSize?: number,
+  color?: number,
+): { glyph: string; nativeOptions: NativeImageOptions } {
+  if (typeof secondArg === 'object') {
+    return {
+      glyph: firstArg,
+      nativeOptions: {
+        fontFamily: secondArg.fontFamily,
+        size: secondArg.size ?? 24,
+        color: processColor(secondArg.color ?? 'black') as number,
+        lineHeight: secondArg.lineHeight ?? -1, // ignored by native
+      },
+    };
+  }
+  return {
+    glyph: secondArg,
+    nativeOptions: {
+      fontFamily: firstArg,
+      size: fontSize ?? 24,
+      color: color ?? 0,
+      lineHeight: -1, // ignored by native
+    },
+  };
+}
+
 /**
  * Render a font glyph to an image file asynchronously.
  *
@@ -56,30 +84,16 @@ export function getImageForFont(
   fontFamilyName: string,
   glyph: string,
   fontSize: number,
-  color: string,
+  color: number,
 ): Promise<ImageResult>;
 export function getImageForFont(
   firstArg: string,
   secondArg: string | ImageOptions,
   fontSize?: number,
-  color?: string,
+  color?: number,
 ): Promise<ImageResult> {
-  if (typeof secondArg === 'object') {
-    const opts = secondArg;
-    const resolvedColor = processColor(opts.color ?? 'black') as number;
-    return VectorIcons.getImageForFont(firstArg, {
-      fontFamily: opts.fontFamily,
-      size: opts.size ?? 24,
-      color: resolvedColor,
-      lineHeight: opts.lineHeight,
-    });
-  }
-  const resolvedColor = processColor(color ?? 'black') as number;
-  return VectorIcons.getImageForFont(secondArg, {
-    fontFamily: firstArg,
-    size: fontSize ?? 24,
-    color: resolvedColor,
-  });
+  const { glyph, nativeOptions } = resolveArgs(firstArg, secondArg, fontSize, color);
+  return VectorIcons.getImageForFont(glyph, nativeOptions);
 }
 
 /**
@@ -106,19 +120,6 @@ export function getImageForFontSync(
   fontSize?: number,
   color?: number,
 ): ImageResult {
-  if (typeof secondArg === 'object') {
-    const opts = secondArg;
-    const resolvedColor = processColor(opts.color ?? 'black') as number;
-    return VectorIcons.getImageForFontSync(firstArg, {
-      fontFamily: opts.fontFamily,
-      size: opts.size ?? 24,
-      color: resolvedColor,
-      lineHeight: opts.lineHeight,
-    });
-  }
-  return VectorIcons.getImageForFontSync(secondArg, {
-    fontFamily: firstArg,
-    size: fontSize ?? 24,
-    color: color ?? 0,
-  });
+  const { glyph, nativeOptions } = resolveArgs(firstArg, secondArg, fontSize, color);
+  return VectorIcons.getImageForFontSync(glyph, nativeOptions);
 }

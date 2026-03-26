@@ -40,7 +40,7 @@ class VectorIconsModule internal constructor(context: ReactApplicationContext) :
     val fontFamilyName = options.getString("fontFamily")!!
     val fontSize = options.getDouble("size")
     val color = options.getDouble("color")
-    val lineHeight = if (options.hasKey("lineHeight") && !options.isNull("lineHeight")) options.getDouble("lineHeight") else -1.0
+    val lineHeight = options.getDouble("lineHeight")
 
     val context = reactApplicationContext
     val cacheFolder = context.cacheDir
