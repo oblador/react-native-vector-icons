@@ -16,7 +16,8 @@
         "types": "./lib/typescript/commonjs/src/index.d.ts",
         "default": "./lib/commonjs/index.js"
       }
-    }
+    },
+    "./app.plugin": "./app.plugin.js"
   },
   "files": [
     "src",
@@ -36,7 +37,8 @@
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
-    "!**/.*"
+    "!**/.*",
+    "app.plugin.js"
   ],
   "scripts": {
     "clean": "del-cli android/build ios/build lib",

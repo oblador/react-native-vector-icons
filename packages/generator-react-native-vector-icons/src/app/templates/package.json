@@ -26,7 +26,8 @@
         "types": "./lib/typescript/commonjs/src/static.d.ts",
         "default": "./lib/commonjs/static.js"
       }
-    }<% } -%><%- extraExports -%>
+    }<% } -%><%- extraExports -%>,
+    "./app.plugin": "./app.plugin.js"
   },
   "files": [
     "src",
@@ -36,6 +37,7 @@
     "android",
     "ios",
     "cpp",
+    "app.plugin.js",
     "*.podspec",
     "!ios/build",
     "!android/build",

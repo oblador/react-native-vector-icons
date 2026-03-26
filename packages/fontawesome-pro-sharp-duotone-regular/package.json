@@ -27,7 +27,8 @@
         "default": "./lib/commonjs/static.js"
       }
     },
-    "./glyphmaps/*.json": "./glyphmaps/*.json"
+    "./glyphmaps/*.json": "./glyphmaps/*.json",
+    "./app.plugin": "./app.plugin.js"
   },
   "files": [
     "src",
@@ -47,7 +48,8 @@
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
-    "!**/.*"
+    "!**/.*",
+    "app.plugin.js"
   ],
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
