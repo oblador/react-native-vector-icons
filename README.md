@@ -140,28 +140,34 @@ By combining some of these you can create for example :
 
 ## Usage as PNG Image/Source Object
 
-Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons. Takes the arguments `name`, `size` and `color` as described above.
+Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons.
 
-You need to use Expo _or_ install `@react-native-vector-icons/get-image` to use this feature.
+You need to use Expo (with `expo-font` installed) _or_ install `@react-native-vector-icons/get-image` to use this feature.
+
+Both methods return an `ImageResult` object (`{ uri, width, height, scale }`) that can be passed directly as an `Image` source.
 
 ```jsx
-const source = Icon.getImageSourceSync('user', 20, 'red');
+const source = Icon.getImageSourceSync('user', { size: 20, color: 'red', lineHeight: 28 });
 
 return <Image source={source} />;
 ```
 
 Alternatively you may use the async method `Icon.getImageSource`.
 
-Keep in mind that `Icon.getImageSourceSync` is blocking and might incur performance penalties. Subsequent calls will use cache however.
+```jsx
+const source = await Icon.getImageSource('user', { size: 20, color: 'red' });
+```
+
+Keep in mind that `Icon.getImageSourceSync` is blocking and might incur performance penalties. Subsequent calls will use cache, however.
 
 ### Static methods
 
 All static methods from `Icon` are supported by multi-styled fonts.
 
-| Prop                     | Description                                                                                                                                                                               |
+| Method                   | Description                                                                                                                                                                               |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`getImageSource`**     | Returns a promise that resolving to the source of a bitmap version of the icon for use with `Image` component et al. Usage: `const source = await Icon.getImageSource(name, size, color)` |
-| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, size, color)`                                                                              |
+| **`getImageSource`**     | Returns a promise resolving to an `ImageResult` of a bitmap version of the icon. Usage: `const source = await Icon.getImageSource(name, { size, color, lineHeight })` |
+| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, { size, color, lineHeight })`                                                              |
 
 ## Custom Fonts
 
