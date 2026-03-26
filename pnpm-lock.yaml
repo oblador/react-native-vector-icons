@@ -71,6 +71,9 @@ importers:
 
   packages/ant-design:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -233,6 +236,9 @@ importers:
 
   packages/entypo:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -264,6 +270,9 @@ importers:
 
   packages/evil-icons:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -295,6 +304,9 @@ importers:
 
   packages/feather:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -326,6 +338,9 @@ importers:
 
   packages/fontawesome:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -366,6 +381,9 @@ importers:
 
   packages/fontawesome-free-brands:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -397,6 +415,9 @@ importers:
 
   packages/fontawesome-free-regular:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -428,6 +449,9 @@ importers:
 
   packages/fontawesome-free-solid:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -459,6 +483,9 @@ importers:
 
   packages/fontawesome-pro-brands:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -487,6 +514,9 @@ importers:
 
   packages/fontawesome-pro-duotone-light:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -515,6 +545,9 @@ importers:
 
   packages/fontawesome-pro-duotone-regular:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -543,6 +576,9 @@ importers:
 
   packages/fontawesome-pro-duotone-solid:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -571,6 +607,9 @@ importers:
 
   packages/fontawesome-pro-duotone-thin:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -599,6 +638,9 @@ importers:
 
   packages/fontawesome-pro-light:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -627,6 +669,9 @@ importers:
 
   packages/fontawesome-pro-regular:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -655,6 +700,9 @@ importers:
 
   packages/fontawesome-pro-sharp-duotone-light:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -683,6 +731,9 @@ importers:
 
   packages/fontawesome-pro-sharp-duotone-regular:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -711,6 +762,9 @@ importers:
 
   packages/fontawesome-pro-sharp-duotone-solid:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -739,6 +793,9 @@ importers:
 
   packages/fontawesome-pro-sharp-duotone-thin:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -767,6 +824,9 @@ importers:
 
   packages/fontawesome-pro-sharp-light:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -795,6 +855,9 @@ importers:
 
   packages/fontawesome-pro-sharp-regular:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -823,6 +886,9 @@ importers:
 
   packages/fontawesome-pro-sharp-solid:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -851,6 +917,9 @@ importers:
 
   packages/fontawesome-pro-sharp-thin:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -879,6 +948,9 @@ importers:
 
   packages/fontawesome-pro-solid:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -907,6 +979,9 @@ importers:
 
   packages/fontawesome-pro-thin:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -935,6 +1010,9 @@ importers:
 
   packages/fontawesome5:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -966,6 +1044,9 @@ importers:
 
   packages/fontawesome5-pro:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -997,6 +1078,9 @@ importers:
 
   packages/fontawesome6:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1028,6 +1112,9 @@ importers:
 
   packages/fontawesome6-pro:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1061,6 +1148,9 @@ importers:
 
   packages/fontello:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1089,6 +1179,9 @@ importers:
 
   packages/fontisto:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1120,6 +1213,9 @@ importers:
 
   packages/foundation:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1224,6 +1320,9 @@ importers:
 
   packages/icomoon:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1415,6 +1514,9 @@ importers:
 
   packages/ionicons:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1446,6 +1548,9 @@ importers:
 
   packages/lucide:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1477,6 +1582,9 @@ importers:
 
   packages/material-design-icons:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1508,6 +1616,9 @@ importers:
 
   packages/material-icons:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1536,6 +1647,9 @@ importers:
 
   packages/octicons:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1567,6 +1681,9 @@ importers:
 
   packages/simple-line-icons:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1598,6 +1715,9 @@ importers:
 
   packages/zocial:
     dependencies:
+      '@expo/config-plugins':
+        specifier: '>=7.0.0'
+        version: 8.0.11
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
