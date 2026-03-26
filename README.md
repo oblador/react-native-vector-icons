@@ -147,6 +147,8 @@ You need to use Expo (with `expo-font` installed) _or_ install `@react-native-ve
 Both methods return an `ImageResult` object (`{ uri, width, height, scale }`) that can be passed directly as an `Image` source.
 
 ```jsx
+const source = Icon.getImageSourceSync('user', 20, 'red');
+// or with an options object:
 const source = Icon.getImageSourceSync('user', { size: 20, color: 'red', lineHeight: 28 });
 
 return <Image source={source} />;
@@ -155,6 +157,8 @@ return <Image source={source} />;
 Alternatively you may use the async method `Icon.getImageSource`.
 
 ```jsx
+const source = await Icon.getImageSource('user', 20, 'red');
+// or with an options object:
 const source = await Icon.getImageSource('user', { size: 20, color: 'red' });
 ```
 
