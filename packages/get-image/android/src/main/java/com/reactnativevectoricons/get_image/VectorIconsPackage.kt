@@ -1,13 +1,13 @@
 package com.reactnativevectoricons.get_image
 
-import com.facebook.react.TurboReactPackage
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.module.model.ReactModuleInfo
 import java.util.HashMap
 
-class VectorIconsPackage : TurboReactPackage() {
+class VectorIconsPackage : BaseReactPackage() {
   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
     return if (name == VectorIconsModule.NAME) {
       VectorIconsModule(reactContext)
@@ -25,7 +25,6 @@ class VectorIconsPackage : TurboReactPackage() {
         VectorIconsModule.NAME, // className
         false,  // canOverrideExistingModule
         false,  // needsEagerInit
-        false, // hasConstants NOTE: This is deprecated but we need it to keep compatability with RN <= 0.72
         false,  // isCxxModule
         isTurboModule // isTurboModule
       )

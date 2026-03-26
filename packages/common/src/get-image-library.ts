@@ -1,7 +1,12 @@
+import { processColor } from 'react-native';
+
 import { getIsRenderToImageSupported } from './dynamicLoading/dynamic-loading-setting';
 
-// eslint-disable-next-line import/no-mutable-exports
 let NativeIconAPI: typeof import('@react-native-vector-icons/get-image') | null = null;
+
+import type { ImageOptions } from '@react-native-vector-icons/get-image';
+
+import type { ImageResult } from './create-icon-source-cache';
 
 try {
   // eslint-disable-next-line global-require,import/no-extraneous-dependencies,@typescript-eslint/no-require-imports
@@ -15,7 +20,12 @@ try {
 const globalRef = globalThis;
 const hasExpoRenderToImage = getIsRenderToImageSupported(globalRef);
 
-export const ensureGetImageAvailable = () => {
+type GetImageAPI = {
+  getImageForFont(glyph: string, options: ImageOptions): Promise<ImageResult>;
+  getImageForFontSync(glyph: string, options: ImageOptions): ImageResult;
+};
+
+export const ensureGetImageAvailable = (): GetImageAPI => {
   if (NativeIconAPI) {
     NativeIconAPI.ensureNativeModuleAvailable();
     return NativeIconAPI;
@@ -23,13 +33,11 @@ export const ensureGetImageAvailable = () => {
   if (hasExpoRenderToImage) {
     const { ExpoFontUtils } = globalRef.expo.modules;
     return {
-      getImageForFont: async (fontReference: string, glyph: string, size: number, color: number) => {
-        const result = await ExpoFontUtils.renderToImageAsync(glyph, {
-          fontFamily: fontReference,
-          size,
-          color,
+      getImageForFont: async (glyph, options) => {
+        return await ExpoFontUtils.renderToImageAsync(glyph, {
+          ...options,
+          color: processColor(options.color ?? 'black') as number,
         });
-        return result.uri;
       },
       getImageForFontSync: () => {
         throw new Error(

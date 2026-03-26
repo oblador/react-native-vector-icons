@@ -1,22 +1,25 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import React, { forwardRef, type Ref, useEffect } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Platform, Text, type TextProps, type TextStyle } from 'react-native';
 
-import { createIconSourceCache } from './create-icon-source-cache';
+import { createIconSourceCache, type ImageResult } from './create-icon-source-cache';
 import { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE } from './defaults';
 import { dynamicLoader } from './dynamicLoading/dynamic-font-loading';
 import { isDynamicLoadingEnabled } from './dynamicLoading/dynamic-loading-setting';
 import type { FontSource } from './dynamicLoading/types';
-import { getImageSource as getImageSourceImpl, getImageSourceSync as getImageSourceSyncImpl } from './get-image-source';
+import {
+  type GetImageSourceOptions,
+  getImageSource as getImageSourceImpl,
+  getImageSourceSync as getImageSourceSyncImpl,
+} from './get-image-source';
 
-type ValueData = { uri: string; scale: number };
-type GetImageSourceSyncIconFunc<GM> = (name: GM, size?: number, color?: TextStyle['color']) => ValueData | undefined;
-type GetImageSourceIconFunc<GM> = (
-  name: GM,
-  size?: number,
-  color?: TextStyle['color'],
-) => Promise<ValueData | undefined>;
+type GetImageSourceSyncIconFunc<GM> = {
+  (name: GM, options: GetImageSourceOptions): ImageResult;
+  (name: GM, size?: number, color?: TextStyle['color']): ImageResult;
+};
+type GetImageSourceIconFunc<GM> = {
+  (name: GM, options: GetImageSourceOptions): Promise<ImageResult>;
+  (name: GM, size?: number, color?: TextStyle['color']): Promise<ImageResult>;
+};
 
 export type IconProps<T> = TextProps & {
   name: T;
@@ -82,6 +85,8 @@ export function createIconSet<GM extends GlyphMap>(
     fontStyle: 'normal',
   };
 
+  const fontSource = typeof postScriptNameOrOptions === 'object' && postScriptNameOrOptions?.fontSource;
+
   const resolveGlyph = (name: keyof GM): string => {
     const glyph = glyphMap[name] || '?';
 
@@ -102,21 +107,19 @@ export function createIconSet<GM extends GlyphMap>(
     innerRef,
     ...props
   }: IconProps<keyof GM>) => {
+    const canUseDynamicLoading = !!fontSource && isDynamicLoadingEnabled();
     const [isFontLoaded, setIsFontLoaded] = React.useState(
-      isDynamicLoadingEnabled() ? dynamicLoader.isLoaded(fontReference) : true,
+      canUseDynamicLoading ? dynamicLoader.isLoaded(fontReference) : true,
     );
     const glyph = isFontLoaded && name ? resolveGlyph(name) : '';
 
+    const shouldLoadFontDynamically = !isFontLoaded && canUseDynamicLoading;
     // biome-ignore lint/correctness/useExhaustiveDependencies: the dependencies never change
     useEffect(() => {
       let isMounted = true;
 
-      if (
-        !isFontLoaded &&
-        typeof postScriptNameOrOptions === 'object' &&
-        typeof postScriptNameOrOptions.fontSource !== 'undefined'
-      ) {
-        dynamicLoader.loadFontAsync(fontReference, postScriptNameOrOptions.fontSource).finally(() => {
+      if (shouldLoadFontDynamically) {
+        dynamicLoader.loadFontAsync(fontReference, fontSource).finally(() => {
           if (isMounted) {
             setIsFontLoaded(true);
           }
@@ -134,7 +137,7 @@ export function createIconSet<GM extends GlyphMap>(
 
     const newProps: TextProps = {
       ...props,
-      style: [styleDefaults, style, styleOverrides, fontStyle || {}],
+      style: [styleDefaults, style, styleOverrides, fontStyle],
       allowFontScaling,
     };
 
@@ -153,15 +156,27 @@ export function createIconSet<GM extends GlyphMap>(
 
   const imageSourceCache = createIconSourceCache();
 
-  const getImageSource: GetImageSourceIconFunc<keyof GM> = async (name, size, color) => {
-    if (typeof postScriptNameOrOptions === 'object' && typeof postScriptNameOrOptions.fontSource !== 'undefined') {
-      await dynamicLoader.loadFontAsync(fontReference, postScriptNameOrOptions.fontSource);
+  const getImageSource: GetImageSourceIconFunc<keyof GM> = async (
+    name: keyof GM,
+    sizeOrOptions?: number | GetImageSourceOptions,
+    color?: TextStyle['color'],
+  ) => {
+    const canUseDynamicLoading = !!fontSource && isDynamicLoadingEnabled();
+    if (canUseDynamicLoading && !dynamicLoader.isLoaded(fontReference)) {
+      await dynamicLoader.loadFontAsync(fontReference, fontSource);
     }
-    return getImageSourceImpl(imageSourceCache, fontReference, resolveGlyph(name), size, color);
+    const options = typeof sizeOrOptions === 'object' ? sizeOrOptions : { size: sizeOrOptions, color };
+    return getImageSourceImpl(imageSourceCache, fontReference, resolveGlyph(name), options);
   };
 
-  const getImageSourceSync: GetImageSourceSyncIconFunc<keyof GM> = (name, size, color) =>
-    getImageSourceSyncImpl(imageSourceCache, fontReference, resolveGlyph(name), size, color);
+  const getImageSourceSync: GetImageSourceSyncIconFunc<keyof GM> = (
+    name: keyof GM,
+    sizeOrOptions?: number | GetImageSourceOptions,
+    color?: TextStyle['color'],
+  ) => {
+    const options = typeof sizeOrOptions === 'object' ? sizeOrOptions : { size: sizeOrOptions, color };
+    return getImageSourceSyncImpl(imageSourceCache, fontReference, resolveGlyph(name), options);
+  };
 
   const IconNamespace = Object.assign(WrappedIcon, {
     getImageSource,
