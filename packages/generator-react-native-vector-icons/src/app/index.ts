@@ -157,6 +157,8 @@ export default class extends Generator<Arguments> {
       files.push('README.md');
     }
 
+    files.push('app.plugin.js');
+
     if (data.copyCustomFonts) {
       this.fs.write(
         this.destinationPath('.gitignore'),
