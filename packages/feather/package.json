@@ -39,6 +39,7 @@
     "android",
     "ios",
     "cpp",
+    "app.plugin.js",
     "*.podspec",
     "!ios/build",
     "!android/build",
@@ -49,8 +50,7 @@
     "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
-    "!**/.*",
-    "app.plugin.js"
+    "!**/.*"
   ],
   "scripts": {
     "clean": "del-cli android/build ios/build lib",
@@ -107,9 +107,14 @@
     "feather-icons": "4.29.2"
   },
   "peerDependencies": {
+    "@expo/config-plugins": ">=10.0.0",
     "react": "*",
-    "react-native": "*",
-    "@expo/config-plugins": ">=10.0.0"
+    "react-native": "*"
+  },
+  "peerDependenciesMeta": {
+    "@expo/config-plugins": {
+      "optional": true
+    }
   },
   "engines": {
     "node": ">= 18.0.0"
@@ -142,10 +147,5 @@
   "create-react-native-library": {
     "type": "library",
     "version": "0.41.2"
-  },
-  "peerDependenciesMeta": {
-    "@expo/config-plugins": {
-      "optional": true
-    }
   }
 }
