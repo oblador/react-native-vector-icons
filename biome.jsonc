@@ -25,7 +25,7 @@
 
       // Templates that have ejs
       "!**/packages/fontawesome-common/generators/app/templates/src",
-      "!**/packages/generator-react-native-vector-icons/src/app/templates/src",
+      "!**/packages/generator-react-native-vector-icons/src/app/templates",
 
       // Upstream files
       "!**/apps/icon-explorer/src/configs/icomoon.config.json",
