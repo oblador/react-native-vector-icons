@@ -72,8 +72,8 @@ importers:
   packages/ant-design:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -237,8 +237,8 @@ importers:
   packages/entypo:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -271,8 +271,8 @@ importers:
   packages/evil-icons:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -305,8 +305,8 @@ importers:
   packages/feather:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -339,8 +339,8 @@ importers:
   packages/fontawesome:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -382,8 +382,8 @@ importers:
   packages/fontawesome-free-brands:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -416,8 +416,8 @@ importers:
   packages/fontawesome-free-regular:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -450,8 +450,8 @@ importers:
   packages/fontawesome-free-solid:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -484,8 +484,8 @@ importers:
   packages/fontawesome-pro-brands:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -515,8 +515,8 @@ importers:
   packages/fontawesome-pro-duotone-light:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -546,8 +546,8 @@ importers:
   packages/fontawesome-pro-duotone-regular:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -577,8 +577,8 @@ importers:
   packages/fontawesome-pro-duotone-solid:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -608,8 +608,8 @@ importers:
   packages/fontawesome-pro-duotone-thin:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -639,8 +639,8 @@ importers:
   packages/fontawesome-pro-light:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -670,8 +670,8 @@ importers:
   packages/fontawesome-pro-regular:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -701,8 +701,8 @@ importers:
   packages/fontawesome-pro-sharp-duotone-light:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -732,8 +732,8 @@ importers:
   packages/fontawesome-pro-sharp-duotone-regular:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -763,8 +763,8 @@ importers:
   packages/fontawesome-pro-sharp-duotone-solid:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -794,8 +794,8 @@ importers:
   packages/fontawesome-pro-sharp-duotone-thin:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -825,8 +825,8 @@ importers:
   packages/fontawesome-pro-sharp-light:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -856,8 +856,8 @@ importers:
   packages/fontawesome-pro-sharp-regular:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -887,8 +887,8 @@ importers:
   packages/fontawesome-pro-sharp-solid:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -918,8 +918,8 @@ importers:
   packages/fontawesome-pro-sharp-thin:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -949,8 +949,8 @@ importers:
   packages/fontawesome-pro-solid:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -980,8 +980,8 @@ importers:
   packages/fontawesome-pro-thin:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1011,8 +1011,8 @@ importers:
   packages/fontawesome5:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1045,8 +1045,8 @@ importers:
   packages/fontawesome5-pro:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1079,8 +1079,8 @@ importers:
   packages/fontawesome6:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1113,8 +1113,8 @@ importers:
   packages/fontawesome6-pro:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1149,8 +1149,8 @@ importers:
   packages/fontello:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1180,8 +1180,8 @@ importers:
   packages/fontisto:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1214,8 +1214,8 @@ importers:
   packages/foundation:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1321,8 +1321,8 @@ importers:
   packages/icomoon:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1515,8 +1515,8 @@ importers:
   packages/ionicons:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1549,8 +1549,8 @@ importers:
   packages/lucide:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1568,8 +1568,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
       lucide-static:
-        specifier: 0.576.0
-        version: 0.576.0
+        specifier: 1.7.0
+        version: 1.7.0
       onchange:
         specifier: ^7.1.0
         version: 7.1.0
@@ -1583,8 +1583,8 @@ importers:
   packages/material-design-icons:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1617,8 +1617,8 @@ importers:
   packages/material-icons:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1648,8 +1648,8 @@ importers:
   packages/octicons:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1661,8 +1661,8 @@ importers:
         version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
     devDependencies:
       '@primer/octicons':
-        specifier: 19.22.0
-        version: 19.22.0
+        specifier: 19.23.1
+        version: 19.23.1
       '@types/react':
         specifier: ^19.1.0
         version: 19.1.8
@@ -1682,8 +1682,8 @@ importers:
   packages/simple-line-icons:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -1716,8 +1716,8 @@ importers:
   packages/zocial:
     dependencies:
       '@expo/config-plugins':
-        specifier: '>=7.0.0'
-        version: 8.0.11
+        specifier: '>=10.0.0'
+        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
@@ -2823,17 +2823,29 @@ packages:
     os: [darwin, linux, win32]
     hasBin: true
 
+  '@expo/config-plugins@55.0.7':
+    resolution: {integrity: sha512-XZUoDWrsHEkH3yasnDSJABM/UxP5a1ixzRwU/M+BToyn/f0nTrSJJe/Ay/FpxkI4JSNz2n0e06I23b2bleXKVA==}
+
   '@expo/config-plugins@8.0.11':
     resolution: {integrity: sha512-oALE1HwnLFthrobAcC9ocnR9KXLzfWEjgIe4CPe+rDsfC6GDs8dGYCXfRFoCEzoLN4TGYs9RdZ8r0KoCcNrm2A==}
 
   '@expo/config-types@51.0.3':
     resolution: {integrity: sha512-hMfuq++b8VySb+m9uNNrlpbvGxYc8OcFCUX9yTmi9tlx6A4k8SDabWFBgmnr4ao3wEArvWrtUQIfQCVtPRdpKA==}
 
+  '@expo/config-types@55.0.5':
+    resolution: {integrity: sha512-sCmSUZG4mZ/ySXvfyyBdhjivz8Q539X1NondwDdYG7s3SBsk+wsgPJzYsqgAG/P9+l0xWjUD2F+kQ1cAJ6NNLg==}
+
+  '@expo/json-file@10.0.12':
+    resolution: {integrity: sha512-inbDycp1rMAelAofg7h/mMzIe+Owx6F7pur3XdQ3EPTy00tme+4P6FWgHKUcjN8dBSrnbRNpSyh5/shzHyVCyQ==}
+
   '@expo/json-file@8.3.3':
     resolution: {integrity: sha512-eZ5dld9AD0PrVRiIWpRkm5aIoWBw3kAyd8VkuWEy92sEthBKDDDHAnK2a0dw0Eil6j7rK7lS/Qaq/Zzngv2h5A==}
 
   '@expo/plist@0.1.3':
     resolution: {integrity: sha512-GW/7hVlAylYg1tUrEASclw1MMk9FP4ZwyFAY/SUTJIhPDQHtfOlXREyWV3hhrHdX/K+pS73GNgdfT6E/e+kBbg==}
+
+  '@expo/plist@0.5.2':
+    resolution: {integrity: sha512-o4xdVdBpe4aTl3sPMZ2u3fJH4iG1I768EIRk1xRZP+GaFI93MaR3JvoFibYqxeTmLQ1p1kNEVqylfUjezxx45g==}
 
   '@expo/sdk-runtime-versions@1.0.0':
     resolution: {integrity: sha512-Doz2bfiPndXYFPMRwPyGa1k5QaKDVpY806UJj570epIiMzWaYyCtobasyfC++qfIXVb5Ocy7r3tP9d62hAQ7IQ==}
@@ -3851,8 +3863,8 @@ packages:
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
 
-  '@primer/octicons@19.22.0':
-    resolution: {integrity: sha512-nWoh9PlE6u7xbiZF3KcUm3ktLpN2rQPt11trwp/t4EsKuYRNVWVbBp1LkCBsvZq7ScckNKUURLigIU0wS1FQdw==}
+  '@primer/octicons@19.23.1':
+    resolution: {integrity: sha512-CzjGmxkmNhyst6EekrS3SJPdtzgIkUMP/LSJch65y99/kmiFXbO1a+q7zoYe3hnI9NaOM0IN+ydDIbOmd8YqcA==}
 
   '@react-native-community/cli-clean@20.1.2':
     resolution: {integrity: sha512-XcNlmFnYOVDjvHQQn0qreI4FPLEUx8p43EdOmKbtzqwqc9T/EdBdzUnUc5wWQPO1CN7BdMfxW8fyvosz8NIlrg==}
@@ -7314,6 +7326,10 @@ packages:
     resolution: {integrity: sha512-7yetJWqbS9sbn0vIfliPsFgoXMKn/YMF+Wuiog97x+urnSRRRZ7xB+uVkwGKzRgq9CDFfMQnE9ruL5DHv9c6Xg==}
     engines: {node: '>=6'}
 
+  getenv@2.0.0:
+    resolution: {integrity: sha512-VilgtJj/ALgGY77fiLam5iD336eSWi96Q15JSAG1zi8NRBysm3LXKdGnHb4m5cuyxvOLQQKWpBZAT6ni4FI2iQ==}
+    engines: {node: '>=6'}
+
   gifwrap@0.10.1:
     resolution: {integrity: sha512-2760b1vpJHNmLzZ/ubTtNnEx5WApN/PYWJvXvgS+tL1egTTthayFYIQQNi136FLEDcN/IyEY2EcGpIITD6eYUw==}
 
@@ -7348,6 +7364,10 @@ packages:
     engines: {node: 20 || >=22}
     deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
+
+  glob@13.0.6:
+    resolution: {integrity: sha512-Wjlyrolmm8uDpm/ogGyXZXb1Z+Ca2B8NbJwqBVg0axK9GbBeoS7yGV6vjXnYdGm6X53iehEuxxbyiKp8QmN4Vw==}
+    engines: {node: 18 || 20 || >=22}
 
   glob@7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
@@ -8878,8 +8898,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-static@0.576.0:
-    resolution: {integrity: sha512-0LPnsw/0/PC8Diu0neT6lSsR/ZaCQRu2B4d15joy5OFlSrhyJi5Jc8p1aYOn2wqb4dUECxQ/fk1s4iSlKYvqqA==}
+  lucide-static@1.7.0:
+    resolution: {integrity: sha512-d2H0iplJoHN67x9mPUvIfsHhtsI3BRvhhzfreccj+0sHHf4TjHvPEaWHNMR5iMKAFq3HKVfzx3kb82L8sPp2rA==}
 
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
@@ -9320,6 +9340,10 @@ packages:
 
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
+    engines: {node: '>=16 || 14 >=14.17'}
+
+  minipass@7.1.3:
+    resolution: {integrity: sha512-tEBHqDnIoM/1rXME1zgka9g6Q2lcoCkxHLuc7ODJ5BxbP5d4c2Z5cGgtXAku59200Cx7diuHTOYfSBD8n6mm8A==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   minizlib@2.1.2:
@@ -9964,6 +9988,10 @@ packages:
   path-scurry@2.0.0:
     resolution: {integrity: sha512-ypGJsmGtdXUOeM5u93TyeIEfEhM6s+ljAhrk5vAvSx8uyY/02OvrZnA0YNGUrPXfpJMgI1ODd3nwz8Npx4O4cg==}
     engines: {node: 20 || >=22}
+
+  path-scurry@2.0.2:
+    resolution: {integrity: sha512-3O/iVVsJAPsOnpwWIeD+d6z/7PmqApyQePUtCndjatj/9I5LylHvt5qluFaBT3I5h3r1ejfR056c+FCv+NnNXg==}
+    engines: {node: 18 || 20 || >=22}
 
   path-to-regexp@0.1.12:
     resolution: {integrity: sha512-RA1GjUVMnvYFxuqovrEqZoxxW5NUZqbwKtYz/Tt7nXerk0LbLblQmrsgdeOxV5SFHf0UDggjS/bSeOZwt1pmEQ==}
@@ -14102,6 +14130,24 @@ snapshots:
 
   '@evilmartians/lefthook@2.0.1': {}
 
+  '@expo/config-plugins@55.0.7':
+    dependencies:
+      '@expo/config-types': 55.0.5
+      '@expo/json-file': 10.0.12
+      '@expo/plist': 0.5.2
+      '@expo/sdk-runtime-versions': 1.0.0
+      chalk: 4.1.2
+      debug: 4.4.3
+      getenv: 2.0.0
+      glob: 13.0.6
+      resolve-from: 5.0.0
+      semver: 7.7.4
+      slugify: 1.6.6
+      xcode: 3.0.1
+      xml2js: 0.6.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@expo/config-plugins@8.0.11':
     dependencies:
       '@expo/config-types': 51.0.3
@@ -14124,6 +14170,13 @@ snapshots:
 
   '@expo/config-types@51.0.3': {}
 
+  '@expo/config-types@55.0.5': {}
+
+  '@expo/json-file@10.0.12':
+    dependencies:
+      '@babel/code-frame': 7.29.0
+      json5: 2.2.3
+
   '@expo/json-file@8.3.3':
     dependencies:
       '@babel/code-frame': 7.10.4
@@ -14135,6 +14188,12 @@ snapshots:
       '@xmldom/xmldom': 0.7.13
       base64-js: 1.5.1
       xmlbuilder: 14.0.0
+
+  '@expo/plist@0.5.2':
+    dependencies:
+      '@xmldom/xmldom': 0.8.10
+      base64-js: 1.5.1
+      xmlbuilder: 15.1.1
 
   '@expo/sdk-runtime-versions@1.0.0': {}
 
@@ -15396,7 +15455,7 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@primer/octicons@19.22.0':
+  '@primer/octicons@19.23.1':
     dependencies:
       object-assign: 4.1.1
 
@@ -19566,6 +19625,8 @@ snapshots:
 
   getenv@1.0.0: {}
 
+  getenv@2.0.0: {}
+
   gifwrap@0.10.1:
     dependencies:
       image-q: 4.0.0
@@ -19608,6 +19669,12 @@ snapshots:
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.0
+
+  glob@13.0.6:
+    dependencies:
+      minimatch: 10.2.3
+      minipass: 7.1.3
+      path-scurry: 2.0.2
 
   glob@7.1.6:
     dependencies:
@@ -21688,7 +21755,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-static@0.576.0: {}
+  lucide-static@1.7.0: {}
 
   lz-string@1.5.0: {}
 
@@ -22490,6 +22557,8 @@ snapshots:
   minipass@5.0.0: {}
 
   minipass@7.1.2: {}
+
+  minipass@7.1.3: {}
 
   minizlib@2.1.2:
     dependencies:
@@ -23297,6 +23366,11 @@ snapshots:
     dependencies:
       lru-cache: 11.0.2
       minipass: 7.1.2
+
+  path-scurry@2.0.2:
+    dependencies:
+      lru-cache: 11.0.2
+      minipass: 7.1.3
 
   path-to-regexp@0.1.12: {}
 
