@@ -1,11 +1,11 @@
 package com.reactnativevectoricons.fontawesome_pro_sharp_light
 
-import com.facebook.react.TurboReactPackage
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
 
-class VectorIconsFontAwesomeProSharpLightPackage : TurboReactPackage() {
+class VectorIconsFontAwesomeProSharpLightPackage : BaseReactPackage() {
     override fun getModule(
         name: String,
         reactContext: ReactApplicationContext,
