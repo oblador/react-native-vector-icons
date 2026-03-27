@@ -1,13 +1,10 @@
-/* eslint-env node */
-const { withInfoPlist } = require('@expo/config-plugins'); // eslint-disable-line import/no-extraneous-dependencies, @typescript-eslint/no-require-imports
+const { withInfoPlist } = require('@expo/config-plugins');
 
 module.exports = (config) =>
   withInfoPlist(config, (c) => {
     const fonts = ['MaterialDesignIcons.ttf'];
 
-    c.ios.infoPlist.UIAppFonts = [
-      ...new Set([...(c.ios.infoPlist.UIAppFonts || []), ...fonts]),
-    ];
+    c.ios.infoPlist.UIAppFonts = [...new Set([...(c.ios.infoPlist.UIAppFonts || []), ...fonts])];
 
     return c;
   });
