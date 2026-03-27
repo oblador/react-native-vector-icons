@@ -16,12 +16,15 @@ module.exports = {
       extends: ['biome'],
     },
     {
-      files: ['.eslintrc.{js,cjs}', '*.config.js', 'react-native.config.js', 'configPlugin.js'],
+      files: ['.eslintrc.{js,cjs}', '*.config.js', 'react-native.config.js', 'app.plugin.js'],
       env: {
         node: true,
       },
       parserOptions: {
         sourceType: 'script',
+      },
+      rules: {
+        '@typescript-eslint/no-require-imports': 'off',
       },
     },
     {
