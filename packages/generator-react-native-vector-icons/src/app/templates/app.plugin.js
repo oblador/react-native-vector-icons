@@ -1,8 +1,7 @@
-/* eslint-env node */
-const { withInfoPlist } = require('@expo/config-plugins'); // eslint-disable-line import/no-extraneous-dependencies, @typescript-eslint/no-require-imports
+const { withInfoPlist } = require('@expo/config-plugins');
 <% if (copyCustomFonts) { -%>
-const fs = require('node:fs'); // eslint-disable-line @typescript-eslint/no-require-imports
-const path = require('node:path'); // eslint-disable-line @typescript-eslint/no-require-imports
+const fs = require('node:fs');
+const path = require('node:path');
 <% } -%>
 
 module.exports = (config) =>
@@ -32,9 +31,7 @@ module.exports = (config) =>
     const fonts = ['<%= fontFileName %>.ttf'];
 <% } -%>
 
-    c.ios.infoPlist.UIAppFonts = [
-      ...new Set([...(c.ios.infoPlist.UIAppFonts || []), ...fonts]),
-    ];
+    c.ios.infoPlist.UIAppFonts = [...new Set([...(c.ios.infoPlist.UIAppFonts || []), ...fonts])];
 
     return c;
   });
