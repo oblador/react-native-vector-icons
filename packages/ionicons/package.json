@@ -28,7 +28,8 @@
       }
     },
     "./glyphmaps/*.json": "./glyphmaps/*.json",
-    "./fonts/*.ttf": "./fonts/*.ttf"
+    "./fonts/*.ttf": "./fonts/*.ttf",
+    "./app.plugin": "./app.plugin.js"
   },
   "files": [
     "src",
@@ -38,6 +39,7 @@
     "android",
     "ios",
     "cpp",
+    "app.plugin.js",
     "*.podspec",
     "!ios/build",
     "!android/build",
@@ -105,8 +107,14 @@
     "ionicons": "8.0.13"
   },
   "peerDependencies": {
+    "@expo/config-plugins": ">=10.0.0",
     "react": "*",
     "react-native": "*"
+  },
+  "peerDependenciesMeta": {
+    "@expo/config-plugins": {
+      "optional": true
+    }
   },
   "engines": {
     "node": ">= 18.0.0"

@@ -44,7 +44,7 @@
     },
     "packages/icon-explorer": {
       "entry": ["index.js", "src/Types.tsx"],
-      "ignore": ["metro.config.js", "configPlugin.js"],
+      "ignore": ["metro.config.js"],
       "metro": false,
       "ignoreDependencies": [
         "@react-native-vector-icons/get-image",
@@ -59,87 +59,88 @@
       "ignoreBinaries": ["tsx"]
     },
     "packages/ant-design": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@ant-design/icons-svg"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@ant-design/icons-svg", "@expo/config-plugins"]
     },
     "packages/entypo": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@entypo-icons/core"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@entypo-icons/core", "@expo/config-plugins"]
     },
     "packages/evil-icons": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["evil-icons"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["evil-icons", "@expo/config-plugins"]
     },
     "packages/feather": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["feather-icons"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["feather-icons", "@expo/config-plugins"]
     },
     "packages/fontawesome": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["font-awesome"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["font-awesome", "@expo/config-plugins"]
     },
     "packages/fontawesome-free-brands": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@fortawesome/fontawesome-free", "@expo/config-plugins"]
     },
     "packages/fontawesome-free-regular": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@fortawesome/fontawesome-free", "@expo/config-plugins"]
     },
     "packages/fontawesome-free-solid": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@fortawesome/fontawesome-free", "@expo/config-plugins"]
     },
     "packages/fontawesome5": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@fortawesome/fontawesome-free", "@expo/config-plugins"]
     },
     "packages/fontawesome5-pro": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common", "@expo/config-plugins"]
     },
     "packages/fontawesome6": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@fortawesome/fontawesome-free"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@fortawesome/fontawesome-free", "@expo/config-plugins"]
     },
     "packages/fontawesome6-pro": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common", "@expo/config-plugins"]
     },
     "packages/fontisto": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["fontisto"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["fontisto", "@expo/config-plugins"]
     },
     "packages/foundation": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["foundation-icons"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["foundation-icons", "@expo/config-plugins"]
     },
     "packages/ionicons": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["ionicons"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["ionicons", "@expo/config-plugins"]
     },
     "packages/lucide": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["lucide-static"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["lucide-static", "@expo/config-plugins"]
     },
     "packages/material-design-icons": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@mdi/font"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@mdi/font", "@expo/config-plugins"]
     },
     "packages/octicons": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["@primer/octicons"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@primer/octicons", "@expo/config-plugins"]
     },
     "packages/simple-line-icons": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["simple-line-icons"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["simple-line-icons", "@expo/config-plugins"]
     },
     "packages/zocial": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
-      "ignoreDependencies": ["css-social-buttons"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["css-social-buttons", "@expo/config-plugins"]
     },
     "packages/*": {
-      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"]
+      "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}", "app.plugin.js"],
+      "ignoreDependencies": ["@expo/config-plugins"]
     }
   }
 }
