@@ -1,0 +1,23 @@
+Webpack 5 handles font files natively via [asset modules](https://webpack.js.org/guides/asset-modules/). Add a rule to your webpack config:
+
+```js
+{
+  test: /\.ttf$/,
+  type: 'asset/resource',
+}
+```
+
+Then import the font file and inject it as a stylesheet:
+
+```js
+import iconFont from '@react-native-vector-icons/lucide/fonts/Lucide.ttf';
+
+const iconFontStyles = `@font-face {
+  src: url(${iconFont});
+  font-family: Lucide;
+}`;
+
+const style = document.createElement('style');
+style.appendChild(document.createTextNode(iconFontStyles));
+document.head.appendChild(style);
+```

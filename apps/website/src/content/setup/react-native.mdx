@@ -1,0 +1,45 @@
+import Callout from '../../components/Callout.astro';
+
+### Android
+
+Rebuild your app. No extra steps are needed for Android.
+
+### iOS
+
+<Callout type="tip">
+You will need to follow these instructions any time you add a new font.
+</Callout>
+
+1. Run the plist update script to register your icon fonts:
+
+    ```sh
+    npx rnvi-update-plist package.json ios/AppName/Info.plist
+    ```
+
+2. Open `ios/Info.plist` and verify that **UIAppFonts** contains the expected entries:
+
+    ```xml
+    <key>UIAppFonts</key>
+    <array>
+      <string>Lucide.ttf</string>
+      <string>Octicons.ttf</string>
+    </array>
+    ```
+
+3. Install CocoaPods and rebuild:
+
+    ```sh
+    cd ios && pod install
+    ```
+
+4. Rebuild your app.
+
+### macOS
+
+macOS support needs more work. See details in [issue #1624](https://github.com/oblador/react-native-vector-icons/issues/1624).
+
+### Windows
+
+1. Copy the needed fonts from `node_modules/@react-native-vector-icons/*/fonts/*.ttf` to `windows/<Project>/Assets/*`.
+2. Open your solution in Visual Studio, right-click on Assets, select Add Assets, then select your fonts, save and quit Visual Studio.
+3. Rebuild your project.

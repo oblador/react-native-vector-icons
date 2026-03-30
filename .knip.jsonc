@@ -31,31 +31,6 @@
     "packages/codemod": {
       "entry": ["src/index.{ts,tsx}", "src/{11,12}.0/transform.{ts,tsx}"]
     },
-    "apps/directory": {
-      "entry": [
-        "src/index.tsx",
-        "src/App.test.tsx",
-        "src/reportWebVitals.{ts,tsx}",
-        "src/setupTests.js",
-        "bin/generate-font-styles.mts",
-        "bin/generate-glyphmap-index.mts"
-      ],
-      "ignoreBinaries": ["bin/generate-font-styles.mts", "bin/generate-glyphmap-index.mts"]
-    },
-    "apps/icon-explorer": {
-      "entry": ["index.js", "src/Types.tsx"],
-      "ignore": ["metro.config.js", "configPlugin.js"],
-      "metro": false,
-      "ignoreDependencies": [
-        "@babel/preset-env",
-        "@rnx-kit/align-deps",
-        "react-test-renderer",
-        "@types/react-test-renderer",
-        "@react-native/metro-config",
-        "@rnx-kit/metro-config"
-      ],
-      "ignoreBinaries": ["tsx"]
-    },
     "packages/ant-design": {
       "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@ant-design/icons-svg"]
@@ -145,6 +120,24 @@
     },
     "packages/*": {
       "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"]
+    },
+    "apps/icon-explorer": {
+      "entry": ["index.js", "src/Types.tsx"],
+      "ignore": ["metro.config.js", "configPlugin.js"],
+      "metro": false,
+      "ignoreDependencies": [
+        "@babel/preset-env",
+        "@rnx-kit/align-deps",
+        "react-test-renderer",
+        "@types/react-test-renderer",
+        "@react-native/metro-config",
+        "@rnx-kit/metro-config"
+      ],
+      "ignoreBinaries": ["tsx"]
+    },
+    "apps/website": {
+      "entry": ["bin/*.mts", "src/layouts/*.astro"],
+      "ignoreBinaries": ["bin/generate-glyphmap-index.mts", "bin/generate-font-styles.mts"]
     }
   }
 }

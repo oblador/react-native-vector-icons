@@ -1,0 +1,11 @@
+# Astro
+dist/
+.astro/
+
+# Node
+node_modules/
+
+# Generated files (rebuilt by `pnpm prepare`)
+src/data/generated/
+src/styles/generated/
+public/fonts/*.ttf

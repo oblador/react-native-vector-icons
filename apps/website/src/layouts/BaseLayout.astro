@@ -1,0 +1,63 @@
+---
+import { Font, fontData } from 'astro:assets';
+import FooterElement from '../components/Footer.astro';
+import NavElement from '../components/Nav.astro';
+
+import '../styles/global.css';
+import '../styles/generated/fonts.css';
+
+// Collect unique font file URLs for preloading
+const fontUrls = new Set<string>();
+for (const variants of Object.values(fontData)) {
+  for (const variant of variants) {
+    for (const src of variant.src) {
+      fontUrls.add(src.url);
+    }
+  }
+}
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'The most complete icon library for React Native' } = Astro.props;
+const pageTitle = title === 'Home' ? 'React Native Vector Icons' : `${title} — React Native Vector Icons`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content={description}>
+    <title>{pageTitle}</title>
+    <Font cssVariable="--astro-font-body" />
+    <Font cssVariable="--astro-font-heading" />
+    <Font cssVariable="--astro-font-mono" />
+    {[...fontUrls].map((url) => (
+      // biome-ignore lint/correctness/useJsxKeyInIterable: This isn't React
+      <link rel="preload" href={url} as="font" type="font/woff2" crossorigin />
+    ))}
+    <script is:inline>
+    // Apply theme before paint to prevent flash
+    // Priority: localStorage > system preference > dark default
+    let t = localStorage.getItem('theme');
+
+    if (!t) {
+      t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+
+    if (t === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+    </script>
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <NavElement />
+
+    <main class="flex-1"><slot /></main>
+
+    <FooterElement />
+  </body>
+</html>

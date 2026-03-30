@@ -5,3 +5,6 @@ allowBuilds:
   "@evilmartians/lefthook": true
   nx: true
   yo: true
+ltDependencies:
+  - esbuild
+  - sharp

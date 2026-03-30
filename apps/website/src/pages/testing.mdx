@@ -1,0 +1,53 @@
+---
+layout: ../layouts/DocsLayout.astro
+title: Testing
+description: Configure Jest to work with React Native Vector Icons
+---
+
+import Callout from '../components/Callout.astro';
+
+# Testing
+
+Configure Jest to mock native font loading and prevent errors in your test suite.
+
+## Jest Configuration
+
+When running tests with `jest`, you need to mock out the native code loading to prevent errors.
+
+### 1. Add moduleNameMapper for TTF files
+
+In your `jest.config.js`, add a module name mapper to intercept `.ttf` imports:
+
+```js
+// jest.config.js
+module.exports = {
+  // ...other config
+  moduleNameMapper: {
+    '\\.(ttf)$': '<rootDir>/__mocks__/file-mock.js',
+  },
+}
+```
+
+### 2. Create the file mock
+
+Create `__mocks__/file-mock.js`:
+
+```js
+// __mocks__/file-mock.js
+module.exports = {};
+```
+
+### 3. Mock the common library
+
+Create `__mocks__/@react-native-vector-icons/common.js` to prevent native module loading errors:
+
+```js
+// __mocks__/@react-native-vector-icons/common.js
+module.exports = {
+  createIconSet: () => "icon",
+};
+```
+
+<Callout type="tip">
+With these three files in place, Jest will be able to run your tests without encountering native font loading errors. The TTF mapper redirects font imports to an empty module, and the common library mock replaces `createIconSet` with a no-op.
+</Callout>

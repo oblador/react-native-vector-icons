@@ -1,0 +1,49 @@
+---
+layout: ../layouts/DocsLayout.astro
+title: Getting Started
+description: Installation and setup guide for React Native Vector Icons
+---
+import Tabs from '../components/Tabs.astro';
+import ExpoSetup from '../content/setup/expo.mdx';
+import ReactNativeSetup from '../content/setup/react-native.mdx';
+import WebSetup from '../content/setup/web.mdx';
+
+# Getting Started
+
+Install and configure React Native Vector Icons for your platform.
+
+## Installation
+
+Install the packages for the icon sets you want to use. Each icon family is published as its own package under the `@react-native-vector-icons` scope.
+
+```sh
+npm install @react-native-vector-icons/lucide @react-native-vector-icons/ionicons
+```
+
+Then follow the setup instructions for your target platform below.
+
+## Platform Setup
+
+<Tabs tabs={["Expo", "React Native", "Web"]}>
+  <div class="tab-panel">
+    <ExpoSetup />
+  </div>
+  <div class="tab-panel">
+    <ReactNativeSetup />
+  </div>
+  <div class="tab-panel">
+    <WebSetup />
+  </div>
+</Tabs>
+
+## Font Location Customisation
+
+For fonts like FontAwesome Pro, Fontello, and Icomoon where you provide the fonts yourself, the default location for font files is `rnvi-fonts` in the same directory as your `package.json`. This can be customised by setting the `fontDir` property:
+
+```json
+{
+  "reactNativeVectorIcons": {
+    "fontDir": "src/rnvi-fonts"
+  }
+}
+```

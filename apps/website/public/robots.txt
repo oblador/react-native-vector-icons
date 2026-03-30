@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://react-native-vector-icons.org/sitemap-index.xml

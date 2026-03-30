@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark theme colour palette (default) */
+  --color-bg: #0a0a0b;
+  --color-bg-subtle: #111113;
+  --color-surface: #18181b;
+  --color-surface-hover: #1f1f23;
+  --color-border: #27272a;
+  --color-border-bright: #3f3f46;
+  --color-text: #fafafa;
+  --color-text-muted: #a1a1aa;
+  --color-text-dim: #71717a;
+  --color-accent-cyan: #06b6d4;
+  --color-accent-violet: #8b5cf6;
+  --color-accent-cyan-dim: #0e7490;
+  --color-accent-violet-dim: #6d28d9;
+  --color-code-bg: #0a0a0b;
+  --color-code-text: #e2e8f0;
+
+  /* Typography — references Astro Font API variables (includes optimised fallbacks) */
+  --font-heading: var(--astro-font-heading);
+  --font-body: var(--astro-font-body);
+  --font-mono: var(--astro-font-mono);
+}
+
+/* Variables not in @theme (dot grid + glow need runtime switching) */
+:root {
+  --color-dot-grid: #ffffff06;
+  --color-glow: rgba(6, 182, 212, 0.15);
+}
+
+/* ── Light theme ───────────────────────────────────────── */
+:root[data-theme="light"] {
+  --color-bg: #f8fafc;
+  --color-bg-subtle: #f1f5f9;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-border-bright: #cbd5e1;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-dim: #94a3b8;
+  --color-accent-cyan: #0891b2;
+  --color-accent-violet: #7c3aed;
+  --color-accent-cyan-dim: #06b6d4;
+  --color-accent-violet-dim: #8b5cf6;
+  --color-code-bg: #f1f5f9;
+  --color-code-text: #334155;
+  --color-dot-grid: #0000000a;
+  --color-glow: rgba(8, 145, 178, 0.12);
+}
+
+/* Base styles */
+body {
+  @apply font-body bg-bg text-text;
+}
+
+/* Dot grid background pattern */
+body::before {
+  @apply fixed inset-0 -z-10 pointer-events-none;
+  content: "";
+  background-image: radial-gradient(circle, var(--color-dot-grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient background utility */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-violet));
+}
+
+/* Card glow on hover */
+.card-glow:hover {
+  @apply border-accent-cyan;
+  box-shadow:
+    0 0 20px var(--color-glow),
+    0 0 40px rgba(6, 182, 212, 0.05);
+}
+
+.astro-code,
+.astro-code span {
+  /* biome-ignore lint/complexity/noImportantStyles: required to override Shiki's inline styles for dual-theme switching */
+  color: var(--shiki-dark) !important;
+  /* biome-ignore lint/complexity/noImportantStyles: required to override Shiki's inline styles for dual-theme switching */
+  background-color: var(--shiki-dark-bg) !important;
+  /* biome-ignore lint/complexity/noImportantStyles: required to override Shiki's inline styles for dual-theme switching */
+  font-style: var(--shiki-dark-font-style) !important;
+  /* biome-ignore lint/complexity/noImportantStyles: required to override Shiki's inline styles for dual-theme switching */
+  font-weight: var(--shiki-dark-font-weight) !important;
+}
+
+:root[data-theme="light"] .astro-code,
+:root[data-theme="light"] .astro-code span {
+  /* biome-ignore lint/complexity/noImportantStyles: required to override Shiki's inline styles for dual-theme switching */
+  color: var(--shiki-light) !important;
+  /* biome-ignore lint/complexity/noImportantStyles: required to override Shiki's inline styles for dual-theme switching */
+  background-color: var(--shiki-light-bg) !important;
+  /* biome-ignore lint/complexity/noImportantStyles: required to override Shiki's inline styles for dual-theme switching */
+  font-style: var(--shiki-light-font-style) !important;
+  /* biome-ignore lint/complexity/noImportantStyles: required to override Shiki's inline styles for dual-theme switching */
+  font-weight: var(--shiki-light-font-weight) !important;
+}
+
+.astro-code {
+  @apply border border-border rounded-lg p-4 text-sm mb-6;
+  line-height: 1.7;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-bright);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-dim);
+}

@@ -1,0 +1,12 @@
+Vite handles font file imports automatically — no extra configuration needed. Import the TTF file and inject it as a `@font-face` declaration:
+
+```js
+import iconFont from '@react-native-vector-icons/lucide/fonts/Lucide.ttf';
+
+const style = document.createElement('style');
+style.textContent = `@font-face {
+  src: url(${iconFont});
+  font-family: Lucide;
+}`;
+document.head.appendChild(style);
+```

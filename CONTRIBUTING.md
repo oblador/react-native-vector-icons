@@ -19,7 +19,8 @@ If you wish to submit a pull request for a new feature or issue, you should star
 This project is a monorepo managed using [pnpm workspaces](https://pnpm.io/workspaces). It contains the following packages:
 
 - The library packages in `packages/common` and `packages/get-image`
-- Example apps in `packages/icon-explorer` and `packages/directory`
+- Example app in `packages/icon-explorer`
+- Website in `apps/website/`
 - Fonts in `packages/fontname` e.g. `packages/fontawesome6`
 
 To get started with the project, run `pnpm install` in the root directory to install the required dependencies for each package:

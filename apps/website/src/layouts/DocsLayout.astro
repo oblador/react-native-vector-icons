@@ -1,0 +1,73 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { title, description } = Astro.props.frontmatter ?? Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="docs mx-auto max-w-4xl px-4 py-12 sm:px-6"><slot /></article>
+</BaseLayout>
+
+<style is:global>
+@reference "../styles/global.css";
+
+.docs h1 {
+  @apply font-heading text-4xl font-bold mb-4;
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.docs h2 {
+  @apply font-heading text-2xl font-bold text-text mt-12 mb-4 pb-2 border-b border-b-border;
+}
+.docs h3 {
+  @apply font-heading text-lg font-semibold text-accent-cyan mt-8 mb-3;
+}
+.docs h4 {
+  @apply font-heading text-base font-semibold text-text-muted mt-6 mb-2;
+}
+.docs p {
+  @apply text-text-muted leading-relaxed mb-4;
+}
+.docs a {
+  @apply text-accent-cyan underline-offset-2;
+}
+.docs a:hover {
+  @apply underline;
+}
+.docs strong {
+  @apply text-text font-semibold;
+}
+.docs :not(pre) > code {
+  @apply bg-surface text-accent-cyan font-mono rounded py-0.5 px-1.5;
+  font-size: 0.875em;
+}
+.docs ul {
+  @apply text-text-muted list-disc pl-6 mb-4;
+}
+.docs ol {
+  @apply text-text-muted list-decimal pl-6 mb-4;
+}
+.docs li {
+  @apply leading-relaxed mb-1;
+}
+.docs table {
+  @apply w-full border-collapse mb-6 text-sm;
+}
+.docs th {
+  @apply bg-surface text-text font-heading font-semibold text-left px-4 py-3 border border-border;
+}
+.docs td {
+  @apply text-text-muted px-4 py-3 border border-border;
+}
+.docs blockquote {
+  @apply bg-surface border-l-4 border-l-accent-cyan rounded-lg p-4 mb-4;
+}
+.docs blockquote p {
+  @apply text-text-muted mb-0;
+}
+.docs hr {
+  @apply border-border my-8;
+}
+</style>
