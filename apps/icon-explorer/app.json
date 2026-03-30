@@ -1,42 +1,78 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/react-native-test-app/trunk/schema.json",
-  "name": "IconExplorer",
-  "displayName": "IconExplorer",
-  "singleApp": "IconExplorer",
-  "components": [
-    {
-      "appKey": "IconExplorer",
-      "displayName": "IconExplorer",
-      "slug": "IconExplorer"
+  "expo": {
+    "name": "RNVI",
+    "slug": "rnvi",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "iconexplorer",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "node_modules/@expo-google-fonts/jetbrains-mono/500Medium/JetBrainsMono_500Medium.ttf",
+            "node_modules/@expo-google-fonts/jetbrains-mono/700Bold/JetBrainsMono_700Bold.ttf",
+            "node_modules/@expo-google-fonts/inter/400Regular/Inter_400Regular.ttf",
+            "node_modules/@expo-google-fonts/inter/500Medium/Inter_500Medium.ttf",
+            "node_modules/@expo-google-fonts/inter/600SemiBold/Inter_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/inter/700Bold/Inter_700Bold.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      "@react-native-vector-icons/ant-design",
+      "@react-native-vector-icons/entypo",
+      "@react-native-vector-icons/evil-icons",
+      "@react-native-vector-icons/feather",
+      "@react-native-vector-icons/fontawesome",
+      "@react-native-vector-icons/fontawesome5",
+      "@react-native-vector-icons/fontawesome5-pro",
+      "@react-native-vector-icons/fontawesome6",
+      "@react-native-vector-icons/fontawesome6-pro",
+      "@react-native-vector-icons/fontello",
+      "@react-native-vector-icons/fontisto",
+      "@react-native-vector-icons/foundation",
+      "@react-native-vector-icons/icomoon",
+      "@react-native-vector-icons/ionicons",
+      "@react-native-vector-icons/lucide",
+      "@react-native-vector-icons/material-design-icons",
+      "@react-native-vector-icons/material-icons",
+      "@react-native-vector-icons/octicons",
+      "@react-native-vector-icons/simple-line-icons",
+      "@react-native-vector-icons/zocial"
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
-  ],
-  "plugins": [
-    "@react-native-vector-icons/ant-design",
-    "@react-native-vector-icons/entypo",
-    "@react-native-vector-icons/evil-icons",
-    "@react-native-vector-icons/feather",
-    "@react-native-vector-icons/fontawesome",
-    "@react-native-vector-icons/fontawesome5",
-    "@react-native-vector-icons/fontawesome5-pro",
-    "@react-native-vector-icons/fontawesome6",
-    "@react-native-vector-icons/fontawesome6-pro",
-    "@react-native-vector-icons/fontello",
-    "@react-native-vector-icons/fontisto",
-    "@react-native-vector-icons/foundation",
-    "@react-native-vector-icons/icomoon",
-    "@react-native-vector-icons/ionicons",
-    "@react-native-vector-icons/lucide",
-    "@react-native-vector-icons/material-design-icons",
-    "@react-native-vector-icons/material-icons",
-    "@react-native-vector-icons/octicons",
-    "@react-native-vector-icons/simple-line-icons",
-    "@react-native-vector-icons/zocial"
-  ],
-  "resources": {
-    "android": ["dist/res", "dist/main.android.jsbundle"],
-    "ios": ["dist/assets", "dist/main.ios.jsbundle"],
-    "macos": ["dist/assets", "dist/main.macos.jsbundle"],
-    "visionos": ["dist/assets", "dist/main.visionos.jsbundle"],
-    "windows": ["dist/assets", "dist/main.windows.bundle"]
   }
 }

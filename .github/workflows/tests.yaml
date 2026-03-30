@@ -19,41 +19,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  android:
-    name: Android
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "17"
-      - uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-          cache: pnpm
-      - name: Install dependencies
-        run: pnpm install
-      - name: Create pro font stubs
-        run: node scripts/create-pro-font-stubs.mjs
-        working-directory: apps/icon-explorer
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-      - name: Build Android app
-        run: ./gradlew app:assembleDebug
-        working-directory: apps/icon-explorer/android
-      - name: Bundle JS
-        run: pnpm run build:android
-        working-directory: apps/icon-explorer
-
-  ios:
-    name: iOS
-    runs-on: macos-15
-    timeout-minutes: 30
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
@@ -65,20 +34,9 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
-      - name: Create pro font stubs
-        run: node scripts/create-pro-font-stubs.mjs
-        working-directory: apps/icon-explorer
-      - name: Install pods
-        run: pod install
-        working-directory: apps/icon-explorer/ios
-        env:
-          RCT_USE_PREBUILT_RNCORE: 1
-          RCT_USE_RN_DEP: 1
-          LANG: en_US.UTF-8
-          LC_ALL: en_US.UTF-8
-      - name: Build iOS app
-        run: xcodebuild -scheme IconExplorer -workspace IconExplorer.xcworkspace ONLY_ACTIVE_ARCH=YES -sdk iphonesimulator -configuration Debug
-        working-directory: apps/icon-explorer/ios
-      - name: Bundle JS
-        run: pnpm run build:ios
-        working-directory: apps/icon-explorer
+      - name: Biome
+        run: pnpm run lint:biome
+      - name: Knip
+        run: pnpm run lint:knip
+      - name: Types
+        run: pnpm run lint:types

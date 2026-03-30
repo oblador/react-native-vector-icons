@@ -18,10 +18,10 @@
     "@commitlint/config-conventional": "^20.5.0",
     "@evilmartians/lefthook": "^2.1.4",
     "@nx/js": "^22.6.4",
-    "@types/node": "^24.12.0",
+    "@types/node": "^24.12.2",
     "commitlint": "^20.5.0",
     "generator-react-native-vector-icons": "workspace:*",
-    "knip": "^6.2.0",
+    "knip": "^6.3.0",
     "nx": "^22.6.4",
     "typescript": "^5.9.3",
     "yo": "^7.0.0"

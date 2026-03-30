@@ -1,13 +1,9 @@
-const path = require('node:path');
+const { getDefaultConfig } = require('expo/metro-config');
+const { withUniwindConfig } = require('uniwind/metro');
 
-const { makeMetroConfig } = require('@rnx-kit/metro-config');
+const config = getDefaultConfig(__dirname);
 
-const projectRoot = __dirname;
-const monorepoRoot = path.resolve(projectRoot, '../..');
-
-module.exports = makeMetroConfig({
-  watchFolders: [monorepoRoot],
-  resolver: {
-    nodeModulesPaths: [path.resolve(projectRoot, 'node_modules'), path.resolve(monorepoRoot, 'node_modules')],
-  },
+module.exports = withUniwindConfig(config, {
+  cssEntryFile: './src/global.css',
+  dtsFile: './src/uniwind-types.d.ts',
 });
