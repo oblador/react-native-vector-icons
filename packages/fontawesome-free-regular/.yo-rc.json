@@ -7,16 +7,16 @@
     "fontFileName": "fa-regular-400",
     "buildSteps": {
       "glyphmap": {
-        "location": "../../node_modules/@fortawesome/fontawesome-free/css/all.css",
+        "location": "node_modules/@fortawesome/fontawesome-free/css/all.css",
         "mode": "css",
         "prefix": ".fa-"
       },
       "copyFont": {
-        "location": "../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2",
+        "location": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2",
         "cleanup": true
       },
       "postScript": {
-        "script": "../fontawesome-common/scripts/generate-fontawesome-glyphmap.mts FontAwesomeFreeRegular.json ../../node_modules/@fortawesome/fontawesome-free/svgs/regular"
+        "script": "../fontawesome-common/scripts/generate-fontawesome-glyphmap.mts FontAwesomeFreeRegular.json node_modules/@fortawesome/fontawesome-free/svgs/regular"
       }
     },
     "versions": [

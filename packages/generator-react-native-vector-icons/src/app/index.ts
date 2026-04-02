@@ -113,7 +113,8 @@ export default class extends Generator<Arguments> {
         'run',
         '--rm',
         `--volume=${process.cwd()}:/usr/src/app`,
-        `--volume=${process.cwd()}/../../node_modules:/usr/src/app/node_modules`,
+        `--volume=${process.cwd()}/node_modules:/usr/src/app/node_modules`,
+        `--volume=${process.cwd()}/../../node_modules:/usr/node_modules`,
         `--user=${uid}:${gid}`,
         '--env=SOURCE_DATE_EPOCH=1702622477', // TODO: Should we use something more sensible as the date for the fonts
         ...options,
@@ -328,8 +329,11 @@ export default class extends Generator<Arguments> {
 
     const location = fixSVGPaths.cleanup ? 'renamedSVGs' : fixSVGPaths.location;
 
+    console.log('🪚 ⭐');
+    console.log(process.cwd(), location);
+
     const { exitCode } = this.spawnSync(
-      '../../node_modules/.bin/oslllo-svg-fixer',
+      '../generator-react-native-vector-icons/node_modules/.bin/oslllo-svg-fixer',
       ['-s', location, '-d', 'fixedSvg'],
       { stdio: 'inherit' },
     );
