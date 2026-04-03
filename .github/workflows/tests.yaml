@@ -8,13 +8,11 @@ on:
     paths:
       - ".github/workflows/tests.yaml"
       - "packages/**"
-      - "!apps/directory/**"
       - "!packages/codemod/**"
   pull_request:
     paths:
       - ".github/workflows/tests.yaml"
       - "packages/**"
-      - "!apps/directory/**"
       - "!packages/codemod/**"
   workflow_dispatch:
 

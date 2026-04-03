@@ -1,0 +1,33 @@
+import Callout from '../../components/Callout.astro';
+import Tabs from '../../components/Tabs.astro';
+import WebpackSetup from './web/webpack.mdx';
+import ViteSetup from './web/vite.mdx';
+
+To use icons on the web with `react-native-web`, make the icon fonts available via `@font-face` declarations. Add the font families you use to your CSS:
+
+```css
+@font-face {
+  src: url(path/to/fonts/Lucide.ttf);
+  font-family: "Lucide";
+}
+
+@font-face {
+  src: url(path/to/fonts/Ionicons.ttf);
+  font-family: "Ionicons";
+}
+```
+
+<Callout type="tip">
+You can debug missing font families by checking the developer console in your browser.
+</Callout>
+
+### Bundler Configuration
+
+<Tabs tabs={["Vite", "Webpack 5"]}>
+  <div class="tab-panel">
+    <ViteSetup />
+  </div>
+  <div class="tab-panel">
+    <WebpackSetup />
+  </div>
+</Tabs>

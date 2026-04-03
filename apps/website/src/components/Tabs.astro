@@ -1,0 +1,62 @@
+---
+interface Props {
+  tabs: string[];
+}
+
+const { tabs } = Astro.props;
+const id = `tabs-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<div class="tabs-container my-6" data-tabs-id={id}>
+  <div class="flex gap-2 mb-6 flex-wrap">
+    {tabs.map((tab) => (
+      // biome-ignore lint/correctness/useJsxKeyInIterable: This isn't React
+      <button
+        type="button"
+        class="tab-btn"
+        data-tabs-owner={id}
+      >
+        {tab}
+      </button>
+    ))}
+  </div>
+  <slot />
+</div>
+
+<style>
+@reference "../styles/global.css";
+
+.tab-btn {
+  @apply font-heading text-sm font-medium px-4 py-2 rounded-lg border border-border bg-surface text-text-muted cursor-pointer transition-all duration-150;
+}
+.tab-btn:hover {
+  @apply bg-surface-hover text-text;
+}
+.tab-btn[data-active="true"] {
+  @apply bg-accent-cyan text-bg border-accent-cyan;
+}
+</style>
+
+<script>
+document.querySelectorAll<HTMLElement>('.tabs-container').forEach((container) => {
+  const buttons = container.querySelectorAll<HTMLElement>(`.tab-btn[data-tabs-owner="${container.dataset.tabsId}"]`);
+  const panels = container.querySelectorAll<HTMLElement>(':scope > .tab-panel');
+
+  buttons.forEach((btn, btnIdx) => {
+    btn.dataset.active = btnIdx === 0 ? 'true' : 'false';
+    btn.addEventListener('click', () => {
+      buttons.forEach((b) => {
+        b.dataset.active = 'false';
+      });
+      btn.dataset.active = 'true';
+      panels.forEach((p, i) => {
+        p.style.display = i === btnIdx ? '' : 'none';
+      });
+    });
+  });
+
+  panels.forEach((p, i) => {
+    if (i > 0) p.style.display = 'none';
+  });
+});
+</script>

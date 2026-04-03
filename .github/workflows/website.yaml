@@ -1,0 +1,72 @@
+name: Deploy Website
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      # Remove once setup-node supports corepack https://github.com/actions/setup-node/pull/901 lands
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+          pnpm prepare
+          cd apps/website
+          pnpm run build
+          pnpm prepare
+
+      - name: Upload website build artifacts
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: apps/website/dist
+
+      # - name: Install, build, and upload website
+      #   uses: withastro/action@v5
+      #   with:
+      #     path: apps/website
+      #     package-manager: pnpm@latest
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

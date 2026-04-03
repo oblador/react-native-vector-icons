@@ -1,0 +1,65 @@
+---
+layout: ../layouts/DocsLayout.astro
+title: Migration
+description: Migration guide for React Native Vector Icons between major versions
+---
+
+import Callout from '../components/Callout.astro';
+import Tabs from '../components/Tabs.astro';
+import ExpoSteps from '../content/migration/expo.mdx';
+import ReactNativeCLISteps from '../content/migration/react-native-cli.mdx';
+
+# Migration Guide
+
+## 1. Run the Codemod
+
+The recommended approach is to use the codemod, which automates most of the migration from `react-native-vector-icons` to the package-per-icon-set approach.
+
+<Callout type="warning">
+Make sure your code is committed to git or backed up before running the codemod. Review all changes before committing.
+</Callout>
+
+```sh
+npx @react-native-vector-icons/codemod
+```
+
+The codemod handles import rewrites, dependency updates, and FontAwesome prop changes. Review the manual steps below to verify everything was covered.
+
+## 2. Verify Manual Steps
+
+Some steps may not be fully handled by the codemod. Check the manual steps for your setup:
+
+<Tabs tabs={["Expo", "React Native CLI"]}>
+  <div class="tab-panel">
+    <ExpoSteps />
+  </div>
+  <div class="tab-panel">
+    <ReactNativeCLISteps />
+  </div>
+</Tabs>
+
+## 3. iOS Cleanup
+
+These steps apply to **all iOS projects** (Expo and React Native CLI) and are not handled by the codemod.
+
+Update your `Info.plist` to include only the fonts you have installed. See the [Getting Started](./getting-started) guide for instructions on using the included plist update script.
+
+Then remove any leftover artefacts from the old setup:
+
+1. If you are not using any other custom fonts, remove the **Fonts** folder and any fonts you have added.
+2. Select your project in the navigator, choose your app's target, go to the **Build Phases** tab, and under **Copy Bundle Resources**, remove any old icon fonts.
+3. Remove any entries in `react-native.config.js`:
+
+```js
+// react-native.config.js
+module.exports = {
+  dependencies: {
+    // Remove entries like this:
+    "react-native-vector-icons": {
+      platforms: {
+        ios: null,
+      },
+    },
+  },
+};
+```

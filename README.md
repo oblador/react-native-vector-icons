@@ -2,6 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/@react-native-vector-icons/common.svg)](https://npmjs.com/package/@react-native-vector-icons/common) [![npm](https://img.shields.io/npm/dm/@react-native-vector-icons/common.svg)](https://npmjs.com/package/@react-native-vector-icons/common)
 
+> **AI/LLM users:** Complete documentation is available at [`llms-full.txt`](https://react-native-vector-icons.org/llms-full.txt). See [`llms.txt`](https://react-native-vector-icons.org/llms.txt) for a structured index.
+
 # React Native Vector Icons
 
 Elevate your React Native applications with the power of customizable vector
@@ -9,37 +11,12 @@ icons. Ideal for embellishing buttons, logos, and navigation or tab bars, these
 icons seamlessly integrate into your projects. Their versatility makes
 extension and styling effortless.
 
-For the integration of `.svg` files natively, you can explore [`react-native-vector-image`](https://github.com/oblador/react-native-vector-image).
+**[Browse all icons](https://react-native-vector-icons.org/directory) · [Full documentation](https://react-native-vector-icons.org)**
 
 > [!TIP]
-> If you are still using the old single package `react-native-vector-icons` visit <https://github.com/oblador/react-native-vector-icons/tree/10.x>. To migrate to the package-per-icon-set approach, see [MIGRATION.md](MIGRATION.md).
-
-## Table of Contents
-
-- [Sponsorship](#sponsorship)
-- [Available Icon Sets](#available-icon-sets)
-- [Installation](#installation)
-- [Setup](#setup)
-- [Icon Component](#icon-component)
-- [Usage as PNG Image/Source Object](#usage-as-png-imagesource-object)
-- [Multi-Style Fonts](#multi-style-fonts)
-- [Custom Fonts](#custom-fonts)
-- [Animation](#animation)
-- [Dynamic icon font loading](#dynamic-icon-font-loading)
-- [Usage Examples](#usage-examples)
-- [Changelog](https://github.com/react-native-vector-icons/react-native-vector-icons/releases)
-- [License](#license)
-
-## Sponsorship
-
-Should you find this library beneficial, kindly contemplate the option of
-[sponsoring](https://github.com/sponsors/oblador).
+> If you are still using the old single package `react-native-vector-icons` visit <https://github.com/oblador/react-native-vector-icons/tree/10.x>. To migrate to the package-per-icon-set approach, see the [Migration Guide](https://react-native-vector-icons.org/migration).
 
 ## Available Icon Sets
-
-[Explore all icons](https://oblador.github.io/react-native-vector-icons/).
-
-RNVI comes with the following supported icons. You can [search NPM](https://www.npmjs.com/search?q=keywords%3Areact-native-vector-icons-icon) for third party icons.
 
 ### Actively maintained
 
@@ -49,241 +26,44 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 - [`Foundation`](http://zurb.com/playground/foundation-icon-fonts-3) by ZURB, Inc. (v3.0 with _283_ icons)
 - [`Ionicons`](https://ionic.io/ionicons) crafted by Ionic (v8.0.9 containing _1,357_ icons)
 - [`MaterialDesignIcons`](https://pictogrammers.com/library/mdi/) from MaterialDesignIcons.com (v7.4.47 including _7448_ icons)
-- [`Octicons`](https://primer.style/foundations/icons) designed by GitHub, Inc. (v19.22.0 with _339_ icons)
-- [`Lucide`](https://lucide.dev/) designed by Lucide, (v0.576.0 with _1,639_ icons)
+- [`Octicons`](https://primer.style/foundations/icons) designed by GitHub, Inc. (v19.22.0 with _369_ icons)
+- [`Lucide`](https://lucide.dev/) designed by Lucide, (v0.576.0 with _1,950_ icons)
 
 ### No longer maintained upstream
 
-- [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 with _411_ icons)
-- [`EvilIcons`](http://evil-icons.io) designed by Alexander Madyankin & Roman Shamin (v1.10.1 with _70_ icons)
-- [`FontAwesome 4`](https://fontawesome.com/v4/icons) by Fonticons, Inc. (v4.7.0 containing _785_ icons)
-- [`FontAwesome 5`](https://fontawesome.com/v5/search) from Fonticons, Inc. (v5.15.4 offering _1611_ free and _7869_ pro icons)
-- [`FontAwesome 6`](https://fontawesome.com/search) designed by Fonticons, Inc. (v6.7.2 featuring _2060_ free and _52663_ pro icons)
-- [`Fontisto`](https://github.com/kenangundogan/fontisto) created by Kenan Gündoğan (v3.0.4 featuring _617_ icons)
-- [`MaterialIcons`](https://fonts.google.com/icons?icon.set=Material+Icons) by Google, Inc. (v4.0.0 featuring _2234_ icons)
-- [`SimpleLineIcons`](https://simplelineicons.github.io/) crafted by Sabbir & Contributors (v2.5.5 with _189_ icons)
-- [`Zocial`](https://smcllns.github.io/css-social-buttons) by Sam Collins (v1.1.1 with _100_ icons)
+- [`Entypo`](http://entypo.com) · [`EvilIcons`](http://evil-icons.io) · [`FontAwesome 4`](https://fontawesome.com/v4/icons) · [`FontAwesome 5`](https://fontawesome.com/v5/search) · [`FontAwesome 6`](https://fontawesome.com/search) · [`Fontisto`](https://github.com/kenangundogan/fontisto) · [`MaterialIcons`](https://fonts.google.com/icons?icon.set=Material+Icons) · [`SimpleLineIcons`](https://simplelineicons.github.io/) · [`Zocial`](https://smcllns.github.io/css-social-buttons)
 
-## Migration
+You can also [search NPM](https://www.npmjs.com/search?q=keywords%3Areact-native-vector-icons-icon) for third-party icons.
 
-See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-icons` to the package-per-icon-set approach or between major versions.
-
-## Installation
-
-1. Install the packages for the icons you want to use
+## Quick Start
 
 ```sh
-npm install @react-native-vector-icons/fontawesome-free-solid @react-native-vector-icons/evil-icons
+npm install @react-native-vector-icons/feather
 ```
-
-2. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
-3. If you are using one of the following fonts, refer to their guides for further instructions
-
-- [Fontello](packages/fontello/README.md)
-- [Icomoon](packages/icomoon/README.md)
-
-## Setup
-
-Refer to the guide for [Expo](./docs/SETUP-EXPO.md), [React Native](./docs/SETUP-REACT-NATIVE.md) or [Web](./docs/SETUP-WEB.md) for further instructions.
-
-### Font location customisation
-
-For fonts like the FontAwesome Pro as well as Fontello and Icomoon where you provide the fonts, the default location for the font files is `rnvi-fonts` in the same directory as your package.json. This can be customized by setting the `fontDir` property in your `package.json` file.
-
-```json
-{
-  "reactNativeVectorIcons": {
-    "fontDir": "src/rnvi-fonts"
-  }
-}
-```
-
-## `Icon` Component
-
-You can either use one of the bundled icons above or roll your own custom font.
-
-```js
-import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid";
-// or use the static version if you don't need [dynamic font loading](#dynamic-icon-font-loading) to get a slightly smaller bundle size
-import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid/static";
-
-<FontAwesomeFreeSolid name="rocket" size={30} color="#900" />;
-```
-
-### Props
-
-Any [Text props](https://reactnative.dev/docs/text.html#props) and the following:
-
-| Prop        | Description                                                             | Default     |
-| ----------- | ----------------------------------------------------------------------- | ----------- |
-| **`size`**  | Size of the icon, can also be passed as `fontSize` in the style object. | `12`        |
-| **`name`**  | What icon to show, see Icon Explorer app or one of the links above.     | _None_      |
-| **`color`** | Color of the icon.                                                      | _Inherited_ |
-
-### Styling
-
-Since `Icon` builds on top of the `Text` component, most [style properties](https://reactnative.dev/docs/style.html) will work as expected, you might find it useful to play around with these:
-
-- `backgroundColor`
-- `borderWidth`
-- `borderColor`
-- `borderRadius`
-- `padding`
-- `margin`
-- `color`
-- `fontSize`
-
-By combining some of these you can create for example :
-
-![type](https://cloud.githubusercontent.com/assets/378279/7667570/33817554-fc0d-11e4-9ad7-4eb60139cfb7.png)
-![star](https://cloud.githubusercontent.com/assets/378279/7667569/3010dd7e-fc0d-11e4-9696-cb721fe8e98d.png)
-
-## Usage as PNG Image/Source Object
-
-Convenient way to plug this in into other components that rely on bitmap images rather than scalable vector icons.
-
-You need to use Expo (with `expo-font` installed) _or_ install `@react-native-vector-icons/get-image` to use this feature.
-
-Both methods return an `ImageResult` object (`{ uri, width, height, scale }`) that can be passed directly as an `Image` source.
 
 ```jsx
-const source = Icon.getImageSourceSync('user', 20, 'red');
-// or with an options object:
-const source = Icon.getImageSourceSync('user', { size: 20, color: 'red', lineHeight: 28 });
+import { Feather } from "@react-native-vector-icons/feather/static";
 
-return <Image source={source} />;
+<Feather name="heart" size={24} color="#06b6d4" />;
 ```
 
-Alternatively you may use the async method `Icon.getImageSource`.
+For detailed setup instructions, see the [Getting Started](https://react-native-vector-icons.org/getting-started) guide.
 
-```jsx
-const source = await Icon.getImageSource('user', 20, 'red');
-// or with an options object:
-const source = await Icon.getImageSource('user', { size: 20, color: 'red' });
-```
+## Documentation
 
-Keep in mind that `Icon.getImageSourceSync` is blocking and might incur performance penalties. Subsequent calls will use cache, however.
+Visit **[react-native-vector-icons.org](https://react-native-vector-icons.org)** for the full documentation:
 
-### Static methods
+- [Getting Started](https://react-native-vector-icons.org/getting-started) — Installation and platform-specific setup
+- [Usage](https://react-native-vector-icons.org/usage) — Icon component, props, styling, PNG images
+- [Icon Directory](https://react-native-vector-icons.org/directory) — Browse and search all icons
+- [Advanced](https://react-native-vector-icons.org/advanced) — Custom fonts, animation, dynamic loading
+- [Testing](https://react-native-vector-icons.org/testing) — Jest configuration and mocking
+- [Migration](https://react-native-vector-icons.org/migration) — Upgrading from older versions
 
-All static methods from `Icon` are supported by multi-styled fonts.
+## Sponsorship
 
-| Method                   | Description                                                                                                                                                                               |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`getImageSource`**     | Returns a promise resolving to an `ImageResult` of a bitmap version of the icon. Usage: `const source = await Icon.getImageSource(name, { size, color, lineHeight })` |
-| **`getImageSourceSync`** | Same as `getImageSource` but synchronous. Usage: `const source = Icon.getImageSourceSync(name, { size, color, lineHeight })`                                                              |
-
-## Custom Fonts
-
-The best approach is to use our icon generator to create your own icon package.
-
-See [CREATE_FONT_PACKAGE.md](./docs/CREATE_FONT_PACKAGE.md) to learn how to create your own font packages.
-
-You can also use `createIconSet()` directly in your project. This
-returns your own custom font based on the `glyphMap` where the key is the icon
-name and the value is either a UTF-8 character or its character code.
-`postScriptName` is the name of the postscript font. Open the font in <https://fontdrop.info/>,
-Font Book.app or similar to learn the name. Also pass the `fontFileName` argument for Android support.
-
-```js
-import { createIconSet } from "@react-native-vector-icons/common";
-const glyphMap = { "icon-name": 1234, test: "∆" };
-
-// use createIconSet() with object parameter
-// or use positional parameters for compatibility with version <= 10: `createIconSet(glyphMap, fontFamily[, fontFile])`
-const Icon = createIconSet(glyphMap, {
-  postScriptName: "FontName",
-  fontFileName: "font-name.ttf",
-  fontSource: require("../fonts/font-name.ttf"), // optional, for dynamic loading. Can also be a local file uri.
-});
-```
-
-If you aren't using dynamic font loading you need to make sure your font is copied into your bundle.
-
-## Animation
-
-React Native comes with an amazing animation library called
-[`Animated`](https://reactnative.dev/docs/animated.html). To use it with an
-icon, simply create an animated component with this line: `const AnimatedIcon =
-Animated.createAnimatedComponent(Icon)`. You can also use the higher level
-animation library
-[react-native-animatable](https://github.com/oblador/react-native-animatable).
-
-## Dynamic icon font loading
-
-> Dynamic loading is supported on all platforms if you use Expo ([Expo Go](https://expo.dev/go) or a [development build](https://docs.expo.dev/develop/development-builds/introduction/)). In the future, it should become available for all React Native projects via React Native core.
-
-Fonts can be available in an app statically (since build time) or loaded dynamically at runtime. The latter can be useful e.g. for apps that use over-the-air updates and want to [load](https://docs.expo.dev/versions/latest/sdk/font/#loadasyncfontfamilyorfontmap-source) new fonts with an update, or when you need to use a font from a remote location. If you don't use dynamic loading, use the `/static` imports (e.g. `"@react-native-vector-icons/ionicons/static"`).
-
-Dynamic loading in `@react-native-vector-icons` is currently limited to those fonts that are bundled within the provided packages: it doesn't support Pro fonts (such as FontAwesome Pro). However, loading of custom fonts is not difficult to implement: use `createIconSet` as seen in [custom fonts](#custom-fonts) paragraph to obtain a icon font family with dynamic font loading enabled. See any of the free font packages for reference.
-
-By default, dynamic loading is enabled if you run Expo SDK >= 52. It doesn't change the way you work with the package: If rendering an icon requires a font that is not known to the app, it will be loaded automatically and icon will render as expected.
-
-`@react-native-vector-icons/common` exports several functions which you can use to control dynamic loading:
-
-- `isDynamicLoadingEnabled`: Returns whether dynamic loading is enabled.
-- `isDynamicLoadingSupported`: Returns whether dynamic loading is supported by your runtime (checks that necessary Expo features are present).
-- `setDynamicLoadingEnabled`: Enables or disables dynamic loading.
-- `setDynamicLoadingErrorCallback`: Sets a callback that is called (in the unlikely case) when an error occurs during dynamic loading. An example of when an error might happen is loading a misconfigured OTA update which doesn't include a necessary font file.
-
-## Usage Examples
-
-### Icon Explorer
-
-Try the `IconExplorer` project in `Examples/IconExplorer` folder, there you can also search for any icon.
-
-![Screenshot of IconExplorer](https://cloud.githubusercontent.com/assets/378279/8903470/a9fe6b46-3458-11e5-901f-98b7b676d0d3.png)
-
-### Basic Example
-
-```js
-import { IonIcons } from "@react-native-vector-icons/ionicons/static";
-
-const ExampleView = () => (
-  <IonIcons name="ios-person" size={30} color="#4F8EF7" />
-);
-```
-
-### Inline Icons
-
-```js
-import { Text } from "react-native";
-import { IonIcons } from "@react-native-vector-icons/ionicons/static";
-
-const ExampleView = (props) => (
-  <Text>
-    Lorem <IonIcons name="ios-book" color="#4F8EF7" /> Ipsum
-  </Text>
-);
-```
-
-## Testing
-
-When running tests with `jest` you will need to mock out the native code loading to prevent errors.
-
-In `jest.config.js` add
-
-```js
-// Mock out font loading
-moduleNameMapper: {
-  '\\.(ttf)$': '<rootDir>/__mocks__/file-mock.js',
-}
-```
-
-Create `__mocks__/file-mock.js`:
-
-```js
-module.exports = {};
-```
-
-Create `__mocks__/@react-native-vector-icons/common.js`:
-
-```js
-// Mock the entire common library so there are no native module loading errors
-module.exports = {
-  createIconSet: () => "icon",
-};
-```
+Should you find this library beneficial, kindly contemplate the option of
+[sponsoring](https://github.com/sponsors/oblador).
 
 ## [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
 

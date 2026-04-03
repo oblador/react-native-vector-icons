@@ -1,0 +1,13 @@
+If you use `createIconSetFromIcoMoon` or `createIconSetFromFontello`, the codemod may not fully handle the API changes. Update manually:
+
+```diff
+- import createIconSetFromFontello from '@expo/vector-icons/createIconSetFromFontello';
++ import createIconSetFromFontello from '@react-native-vector-icons/fontello';
+
+- createIconSetFromFontello(fontelloConfig, 'fontello', require('path/to/fontello.ttf'));
++ createIconSetFromFontello(fontelloConfig, {
++     fontSource: require('path/to/fontello.ttf')
++ });
+```
+
+No other manual steps are required for Expo projects — the codemod handles everything else.

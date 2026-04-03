@@ -1,0 +1,29 @@
+---
+interface Props {
+  type?: 'tip' | 'warning';
+  title?: string;
+}
+
+const { type = 'tip', title } = Astro.props;
+const label = title ?? (type === 'warning' ? 'Warning' : 'Tip');
+---
+
+<div
+  data-callout
+  data-callout-type={type}
+  class:list={[
+    "rounded-lg border-l-4 bg-surface p-4 my-6",
+    type === 'warning' ? "border-l-[#f59e0b]" : "border-l-accent-cyan",
+  ]}
+>
+  <p
+    data-callout-title
+    class:list={[
+      "text-sm font-medium font-heading mb-1",
+      type === 'warning' ? "text-[#f59e0b]" : "text-accent-cyan",
+    ]}
+  >
+    {label}
+  </p>
+  <div data-callout-content class="text-sm leading-relaxed text-text-muted"><slot /></div>
+</div>

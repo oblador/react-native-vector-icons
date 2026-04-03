@@ -1,0 +1,32 @@
+{
+  "name": "@react-native-vector-icons/website",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm run prepare && astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "generate-glyphmap-index": "mkdir -p src/data/generated && bin/generate-glyphmap-index.mts > src/data/generated/glyphmapIndex.json",
+    "generate-font-styles": "mkdir -p src/styles/generated && mkdir -p public/fonts && cp ../../packages/*/fonts/*.ttf public/fonts/ && bin/generate-font-styles.mts > src/styles/generated/fonts.css",
+    "prepare": "pnpm run generate-glyphmap-index && pnpm run generate-font-styles"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^5.0.3",
+    "@astrojs/react": "^5.0.2",
+    "@astrojs/sitemap": "^3.7.2",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.3",
+    "glob": "^11.0.0",
+    "linkedom": "^0.18.9",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.2",
+    "turndown": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.1.0",
+    "@types/turndown": "^5.0.5"
+  }
+}

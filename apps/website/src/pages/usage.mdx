@@ -1,0 +1,99 @@
+---
+layout: ../layouts/DocsLayout.astro
+title: Usage
+description: How to use React Native Vector Icons components, props, and image sources
+---
+
+import Callout from '../components/Callout.astro';
+
+# Usage
+
+Learn how to use icon components, customise their appearance, and generate bitmap images.
+
+## Icon Component
+
+You can use one of the bundled icon sets or roll your own custom font. Import the icon family you need:
+
+### Bundled Import (with dynamic loading)
+
+```jsx
+import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid";
+
+<FontAwesomeFreeSolid name="rocket" size={30} color="#900" />
+```
+
+### Static Import (smaller bundle)
+
+If you do not need [dynamic font loading](./advanced#dynamic-font-loading), use the `/static` import for a slightly smaller bundle size:
+
+```js
+import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid/static";
+```
+
+### Inline Example
+
+```jsx
+import { Text } from "react-native";
+import { Ionicons } from "@react-native-vector-icons/ionicons/static";
+
+const ExampleView = (props) => (
+  <Text>
+    Lorem <Ionicons name="book" color="#4F8EF7" /> Ipsum
+  </Text>
+);
+```
+
+## Props
+
+Icon components accept any [Text prop](https://reactnative.dev/docs/text.html#props) plus the following:
+
+| Prop | Description | Default |
+| --- | --- | --- |
+| `size` | Size of the icon. Can also be passed as `fontSize` in the style object. | `12` |
+| `name` | Which icon to show. See the [Icon Directory](./directory) to browse available icons. | None |
+| `color` | Colour of the icon. | Inherited |
+
+## Styling
+
+Since `Icon` builds on top of the `Text` component, most [style properties](https://reactnative.dev/docs/style.html) work as expected. Useful properties include:
+
+`backgroundColor`, `borderWidth`, `borderColor`, `borderRadius`, `padding`, `margin`, `color`, `fontSize`
+
+By combining these you can create rounded icon buttons, bordered icon badges, and more.
+
+## Usage as PNG Image / Source Object
+
+A convenient way to use icons in components that rely on bitmap images rather than scalable vector icons. You need to use Expo (with `expo-font` installed) _or_ install `@react-native-vector-icons/get-image`.
+
+Both methods return an `ImageResult` object (`{ uri, width, height, scale }`) that can be passed directly as an `Image` source.
+
+### Synchronous
+
+```jsx
+const source = Icon.getImageSourceSync('user', 20, 'red');
+// or with an options object:
+const source = Icon.getImageSourceSync('user', { size: 20, color: 'red', lineHeight: 28 });
+
+return <Image source={source} />;
+```
+
+<Callout type="warning">
+  `getImageSourceSync` is blocking and might incur performance penalties. Subsequent calls use a cache.
+</Callout>
+
+### Asynchronous
+
+```js
+const source = await Icon.getImageSource('user', 20, 'red');
+// or with an options object:
+const source = await Icon.getImageSource('user', { size: 20, color: 'red' });
+```
+
+## Static Methods
+
+All static methods from `Icon` are supported by multi-styled fonts.
+
+| Method | Description |
+| --- | --- |
+| `getImageSource` | Returns a promise resolving to an `ImageResult` of a bitmap version of the icon. `const source = await Icon.getImageSource(name, { size, color, lineHeight })` |
+| `getImageSourceSync` | Same as `getImageSource` but synchronous. `const source = Icon.getImageSourceSync(name, { size, color, lineHeight })` |

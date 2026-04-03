@@ -1,0 +1,74 @@
+---
+layout: ../layouts/DocsLayout.astro
+title: Advanced
+description: Custom fonts, animation, and dynamic font loading for React Native Vector Icons
+---
+
+import Callout from '../components/Callout.astro';
+
+# Advanced Usage
+
+Custom icon fonts, animation, and dynamic font loading.
+
+## Custom Fonts
+
+The best approach is to use the icon generator to create your own icon package. See the [Creating a Font Package](./custom-fonts) guide to learn how.
+
+You can also use `createIconSet()` directly in your project. This returns a custom icon component based on a `glyphMap` where the key is the icon name and the value is either a UTF-8 character or its character code.
+
+`postScriptName` is the name of the PostScript font. Open the font in [fontdrop.info](https://fontdrop.info/), Font Book.app, or similar to learn the name. Also pass the `fontFileName` argument for Android support.
+
+```js
+import { createIconSet } from "@react-native-vector-icons/common";
+
+const glyphMap = { "icon-name": 1234, test: "\u2206" };
+
+const Icon = createIconSet(glyphMap, {
+  postScriptName: "FontName",
+  fontFileName: "font-name.ttf",
+  fontSource: require("../fonts/font-name.ttf"), // optional, for dynamic loading
+});
+```
+
+<Callout type="tip">
+If you are not using dynamic font loading, make sure your font is copied into your app bundle.
+</Callout>
+
+## Animation
+
+React Native ships with [Animated](https://reactnative.dev/docs/animated.html), a powerful animation library. To animate an icon, create an animated component:
+
+```js
+const AnimatedIcon = Animated.createAnimatedComponent(Icon);
+```
+
+You can also use the higher-level animation library [react-native-animatable](https://github.com/oblador/react-native-animatable).
+
+## Dynamic Font Loading
+
+Fonts can be available in an app **statically** (since build time) or loaded **dynamically** at runtime. Dynamic loading is useful for apps that use over-the-air updates and want to load new fonts with an update, or when you need to use a font from a remote location.
+
+<Callout type="tip">
+**Platform Support** — Dynamic loading is supported on all platforms if you use Expo ([Expo Go](https://expo.dev/go) or a [development build](https://docs.expo.dev/develop/development-builds/introduction/)). In future, it should become available for all React Native projects via React Native core.
+</Callout>
+
+### Static vs Dynamic Imports
+
+If you do not need dynamic loading, use the `/static` imports (e.g. `@react-native-vector-icons/ionicons/static`) for a smaller bundle.
+
+By default, dynamic loading is enabled if you run Expo SDK ≥ 52. It does not change the way you work with the package: if rendering an icon requires a font that is not known to the app, it will be loaded automatically and the icon will render as expected.
+
+<Callout type="warning">
+**Limitation** — Dynamic loading in `@react-native-vector-icons` is currently limited to fonts bundled within the provided packages. It does not support Pro fonts (such as FontAwesome Pro). However, you can use `createIconSet` with a `fontSource` to enable dynamic loading for custom fonts.
+</Callout>
+
+### API Functions
+
+`@react-native-vector-icons/common` exports several functions to control dynamic loading:
+
+| Function | Description |
+| --- | --- |
+| `isDynamicLoadingEnabled` | Returns whether dynamic loading is enabled. |
+| `isDynamicLoadingSupported` | Returns whether dynamic loading is supported by your runtime (checks that the necessary Expo features are present). |
+| `setDynamicLoadingEnabled` | Enables or disables dynamic loading. |
+| `setDynamicLoadingErrorCallback` | Sets a callback invoked when an error occurs during dynamic loading (e.g. a misconfigured OTA update missing a font file). |

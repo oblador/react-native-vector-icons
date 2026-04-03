@@ -1,0 +1,161 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const currentPath = Astro.url.pathname;
+
+const icons = {
+  github: '\uF17A',
+  package: '\uF1B0',
+  sun: '\uF1E7',
+  moon: '\uF1A7',
+  menu: '\uF19C',
+};
+
+const links = [
+  { href: `${base}/`, label: 'Home' },
+  { href: `${base}/getting-started`, label: 'Getting Started' },
+  { href: `${base}/usage`, label: 'Usage' },
+  { href: `${base}/icon-sets`, label: 'Icon Sets' },
+  { href: `${base}/directory`, label: 'Directory' },
+  { href: `${base}/advanced`, label: 'Advanced' },
+  { href: `${base}/testing`, label: 'Testing' },
+  { href: `${base}/migration`, label: 'Migration' },
+];
+
+function isActive(href: string): boolean {
+  if (href === `${base}/`) return currentPath === `${base}/`;
+  return currentPath.startsWith(href);
+}
+---
+
+<nav class="sticky top-0 z-50 border-b border-border bg-bg/95 backdrop-blur-sm">
+  <div class="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3 sm:px-6">
+    <a href={`${base}/`} class="flex items-center gap-2 shrink-0">
+      <span class="font-heading text-lg font-bold gradient-text"> RNVI </span>
+    </a>
+
+    <div class="hidden items-center gap-1 md:flex">
+      {links.map((link) => (
+        // biome-ignore lint/correctness/useJsxKeyInIterable: This isn't React
+        <a
+          href={link.href}
+          class:list={[
+            "rounded-md px-3 py-1.5 text-sm font-medium transition-colors duration-150",
+            isActive(link.href)
+              ? "text-accent-cyan bg-accent-cyan/10"
+              : "text-text-muted hover:text-text hover:bg-surface",
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <div class="ml-auto flex items-center gap-2">
+      <a
+        href="https://github.com/oblador/react-native-vector-icons"
+        class="nav-icon"
+        style="font-family: 'Feather';"
+        aria-label="GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{icons.github}</a
+      >
+
+      <a
+        href="https://www.npmjs.com/search?q=%40react-native-vector-icons"
+        class="nav-icon"
+        style="font-family: 'Feather';"
+        aria-label="npm"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{icons.package}</a
+      >
+
+      <button
+        type="button"
+        id="theme-toggle"
+        class="nav-icon"
+        style="font-family: 'Feather';"
+        aria-label="Toggle theme"
+      >
+        <span id="icon-sun">{icons.sun}</span>
+        <span id="icon-moon" class="hidden">{icons.moon}</span>
+      </button>
+
+      <button
+        type="button"
+        id="mobile-menu-btn"
+        class="nav-icon md:hidden! hover:text-text"
+        style="font-family: 'Feather';"
+        aria-label="Toggle menu"
+      >
+        {icons.menu}
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden border-t border-border px-4 pb-3 md:hidden">
+    {links.map((link) => (
+      // biome-ignore lint/correctness/useJsxKeyInIterable: This isn't React
+      <a
+        href={link.href}
+        class:list={[
+          "block rounded-md px-3 py-2 text-sm font-medium transition-colors duration-150",
+          isActive(link.href)
+            ? "text-accent-cyan bg-accent-cyan/10"
+            : "text-text-muted hover:text-text",
+        ]}
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
+</nav>
+
+<style>
+@reference "../styles/global.css";
+
+.nav-icon {
+  @apply flex items-center justify-center p-2 rounded-md text-xl leading-none text-text-muted transition-colors duration-150;
+}
+</style>
+
+<script>
+// Mobile menu
+const btn = document.getElementById('mobile-menu-btn');
+const menu = document.getElementById('mobile-menu');
+btn?.addEventListener('click', () => {
+  menu?.classList.toggle('hidden');
+});
+
+// Theme toggle
+function setTheme(theme: string) {
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+  }
+  localStorage.setItem('theme', theme);
+
+  const sun = document.getElementById('icon-sun');
+  const moon = document.getElementById('icon-moon');
+  if (sun && moon) {
+    sun.classList.toggle('hidden', theme === 'light');
+    moon.classList.toggle('hidden', theme === 'dark');
+  }
+}
+
+// Resolve initial theme: localStorage > system preference > dark
+function getTheme(): string {
+  const saved = localStorage.getItem('theme');
+  if (saved) return saved;
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
+
+setTheme(getTheme());
+
+document.getElementById('theme-toggle')?.addEventListener('click', () => {
+  setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+});
+</script>

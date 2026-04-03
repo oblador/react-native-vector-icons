@@ -1,0 +1,57 @@
+import Callout from '../../components/Callout.astro';
+
+The codemod handles most steps automatically. Verify each of the following has been completed.
+
+### Remove @react-native-vector-icons/common
+
+Unless you use `createIconSet` directly with your own font, the common package is no longer needed:
+
+```sh
+npm uninstall @react-native-vector-icons/common
+```
+
+### Move FontAwesome Pro, Icomoon and Fontello Fonts
+
+These fonts should be in `rnvi-fonts` (or a folder you defined in `package.json`). They need to be moved to a subfolder named after the font package:
+
+- `rnvi-fonts/fontawesome5-pro/`
+- `rnvi-fonts/fontawesome6-pro/`
+- `rnvi-fonts/fontello/`
+- `rnvi-fonts/icomoon/`
+
+<Callout type="warning">
+Only FontAwesome Pro fonts are supported by the codemod. Fontello and Icomoon fonts must be moved manually.
+</Callout>
+
+### Update Dependencies
+
+Replace the monolithic package with individual font packages:
+
+```sh
+npm uninstall react-native-vector-icons
+npm install @react-native-vector-icons/fontisto
+```
+
+### Update Imports
+
+```diff
+// Old
+- import Fontisto from "react-native-vector-icons";
+
+// New
++ import { Fontisto } from "@react-native-vector-icons/fontisto";
+```
+
+### FontAwesome 5 & 6 Prop Changes
+
+The `solid`/`regular`/`brand` boolean props are replaced by `iconType`:
+
+```diff
+// Old
+- <FontAwesome5 name="house" solid />
+
+// New
++ <FontAwesome5 name="house" iconType="solid" />
+```
+
+The codemod assumes the component is named `FontAwesome5` or `Icon`. If you use a different name, update manually.

@@ -1,0 +1,48 @@
+---
+import { Code } from 'astro:components';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="Home">
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+    <div class="max-w-3xl">
+      <h1 class="font-heading text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+        <span class="gradient-text">React Native</span><br>
+        <span class="text-text">Vector Icons</span>
+      </h1>
+      <p class="mt-6 text-lg text-text-muted sm:text-xl max-w-xl">
+        The most complete icon library for React Native. Thousands of icons across 34 font families, with per-family
+        packages and static imports.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a
+          href={`${base}/directory`}
+          class="gradient-bg inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-white transition-opacity duration-150 hover:opacity-90"
+        >
+          Browse Icons
+        </a>
+        <a
+          href={`${base}/getting-started`}
+          class="inline-flex items-center rounded-lg border border-border px-6 py-3 text-sm font-semibold text-text-muted transition-colors duration-150 hover:border-border-bright hover:text-text"
+        >
+          Get Started
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 w-fit">
+      <Code
+        code={`
+          import { Feather } from '@react-native-vector-icons/feather/static';
+
+          <Feather name=heart size={24} color=#06b6d4 />
+        `.trim().replaceAll(/^[ \t]+/mg, '')}
+        themes={{ light: 'github-light', dark: 'github-dark' }}
+        defaultColor={false}
+        lang="tsx"
+      />
+    </div>
+  </section>
+</BaseLayout>
