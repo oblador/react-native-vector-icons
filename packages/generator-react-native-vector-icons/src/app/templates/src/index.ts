@@ -17,7 +17,7 @@ export const <%= className %> = createIconSet(glyphMap, {
   postScriptName: '<%= postScriptName %>',
   fontFileName: '<%= fontFileName %>.ttf',
 <% if (!copyCustomFonts) { -%>
-  fontSource: require('../fonts/<%= fontFileName %>.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/<%= fontFileName %>.ttf'),
 <% } -%>
 });
 

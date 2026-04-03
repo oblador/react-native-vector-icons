@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/SimpleLineIcons.json';
 export const SimpleLineIcons = createIconSet(glyphMap, {
   postScriptName: 'simple-line-icons',
   fontFileName: 'SimpleLineIcons.ttf',
-  fontSource: require('../fonts/SimpleLineIcons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/SimpleLineIcons.ttf'),
 });
 
 export type SimpleLineIconsIconName = keyof typeof glyphMap;

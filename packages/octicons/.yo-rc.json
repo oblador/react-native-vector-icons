@@ -4,7 +4,7 @@
     "upstreamFont": "@primer/octicons",
     "buildSteps": {
       "renameSVGs": {
-        "location": "../../node_modules/@primer/octicons/build/svg",
+        "location": "node_modules/@primer/octicons/build/svg",
         "keepPostfix": "-16"
       },
       "fontCustom": {

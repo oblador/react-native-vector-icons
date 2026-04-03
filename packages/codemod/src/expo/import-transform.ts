@@ -49,7 +49,7 @@ export default function transform(fileInfo: FileInfo, api: API, options: Options
         const newImports = specifiers
           .map((spec) => {
             if (spec.type === 'ImportSpecifier') {
-              const fontName = spec.imported.name;
+              const fontName = String(spec.imported.name);
 
               // Find the correct mapping for this font
               const oldName = `@expo/vector-icons/${fontName}`;

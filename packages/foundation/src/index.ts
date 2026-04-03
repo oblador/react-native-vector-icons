@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/Foundation.json';
 export const Foundation = createIconSet(glyphMap, {
   postScriptName: 'fontcustom',
   fontFileName: 'Foundation.ttf',
-  fontSource: require('../fonts/Foundation.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/Foundation.ttf'),
 });
 
 export type FoundationIconName = keyof typeof glyphMap;

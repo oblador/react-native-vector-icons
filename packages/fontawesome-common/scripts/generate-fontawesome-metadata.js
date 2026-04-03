@@ -2,10 +2,10 @@
 
 // TODO: Rewrite this script in TypeScript
 
-const fs = require('node:fs'); // eslint-disable-line @typescript-eslint/no-require-imports
-const yargs = require('yargs'); // eslint-disable-line @typescript-eslint/no-require-imports,import/no-extraneous-dependencies
+const fs = require('node:fs');
+const yargs = require('yargs');
 
-const { argv } = yargs
+const { argv } = yargs(process.argv.slice(2))
   .usage('')
   .option('path', {
     alias: 'p',

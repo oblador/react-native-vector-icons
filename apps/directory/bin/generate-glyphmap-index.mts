@@ -29,7 +29,6 @@ const fontAwesome6Meta = (
 ).default;
 
 const pickGlyps = (glyps: string[], glyphmap: Record<string, string[]>) =>
-  // eslint-disable-next-line implicit-arrow-linebreak
   glyps.reduce((acc, glyp) => {
     acc[glyp] = glyphmap[glyp];
     return acc;
@@ -42,10 +41,8 @@ const index: Record<string, unknown> = {
   FontAwesome6Brands: pickGlyps(fontAwesome6Meta.brand, fontAwesome6Glyphmap),
 };
 
-// eslint-disable-next-line no-restricted-syntax
 for (const file of glyphMapFiles) {
   const name = path.basename(file, '.json');
-  // eslint-disable-next-line no-await-in-loop
   const jsonModule = await import(path.join(import.meta.dirname, '..', file), {
     with: { type: 'json' },
   });

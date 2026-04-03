@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable no-restricted-syntax, no-continue */
 
 // builder-bob doesn't support including something from the top level, so we need to fix the paths
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';

@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/MaterialIcons.json';
 export const MaterialIcons = createIconSet(glyphMap, {
   postScriptName: 'MaterialIcons-Regular',
   fontFileName: 'MaterialIcons.ttf',
-  fontSource: require('../fonts/MaterialIcons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/MaterialIcons.ttf'),
 });
 
 export type MaterialIconsIconName = keyof typeof glyphMap;

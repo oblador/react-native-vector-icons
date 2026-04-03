@@ -61,7 +61,6 @@ declare global {
     };
   }
 
-  // eslint-disable-next-line vars-on-top
   var expo: ExpoGlobal | undefined;
 }
 
@@ -125,7 +124,7 @@ export const setDynamicLoadingEnabled = (value: boolean): boolean => {
       const message = hasNecessaryExpoModules
         ? 'Expo is installed, but does not support dynamic font loading. Make sure to use Expo SDK 54 or newer.'
         : 'Necessary Expo modules not found. Dynamic font loading is not available when necessary Expo modules are not present.';
-      console.error(message); // eslint-disable-line no-console
+      console.error(message);
     }
     return false;
   }

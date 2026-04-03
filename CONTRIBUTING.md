@@ -150,9 +150,7 @@ Our pre-commit hooks verify that your commit message matches this format when co
 
 ### Linting and tests
 
-[ESLint](https://eslint.org/), [Prettier](https://prettier.io/), [TypeScript](https://www.typescriptlang.org/)
-
-We use [TypeScript](https://www.typescriptlang.org/) for type checking, [ESLint](https://eslint.org/) with [Prettier](https://prettier.io/) for linting and formatting the code, and [Jest](https://jestjs.io/) for testing.
+We use TypeScript for type checking, Biome for linting and formatting the code, and [Jest](https://jestjs.io/) for testing.
 
 Our pre-commit hooks verify that the linter and tests pass when committing.
 
@@ -168,8 +166,8 @@ The `package.json` file contains various scripts for common tasks:
 
 - `pnpm i`: setup project by installing dependencies.
 - `pnpm run lint:typecheck`: type-check files with TypeScript.
-- `pnpm run lint:eslint`: lint files with ESLint.
 - `pnpm run lint:biome`: lint files with Biome.
+- `pnpm run lint:knip`: lint files with knip.
 
 ### Sending a pull request
 

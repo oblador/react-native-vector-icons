@@ -4,7 +4,7 @@
     "upstreamFont": "@ant-design/icons-svg",
     "buildSteps": {
       "fixSVGPaths": {
-        "location": "../../node_modules/@ant-design/icons-svg/inline-namespaced-svg/outlined"
+        "location": "node_modules/@ant-design/icons-svg/inline-namespaced-svg/outlined"
       },
       "fontCustom": {
         "location": "fixedSvg",

@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/AntDesign.json';
 export const AntDesign = createIconSet(glyphMap, {
   postScriptName: 'AntDesign',
   fontFileName: 'AntDesign.ttf',
-  fontSource: require('../fonts/AntDesign.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/AntDesign.ttf'),
 });
 
 export type AntDesignIconName = keyof typeof glyphMap;

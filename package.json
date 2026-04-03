@@ -6,7 +6,6 @@
     "clean": "nx run-many -t clean",
     "prepare": "nx run-many -t prepare",
     "test": "nx run-many -t test",
-    "lint:eslint": "eslint .",
     "lint:biome": "biome check .",
     "lint:knip": "knip",
     "lint:types": "bash -c 'for i in packages/*; do if [ -f $i/tsconfig.json ]; then tsc --noEmit -p $i/tsconfig.json; fi; done'",
@@ -14,29 +13,20 @@
     "release": "nx release"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.0",
-    "@commitlint/config-conventional": "^20.0.0",
-    "@evilmartians/lefthook": "^2.0.1",
-    "@nx/js": "^22.5.2",
-    "@types/eslint": "^8.56.12",
-    "@types/node": "^20.19.23",
-    "@typescript-eslint/eslint-plugin": "^8.46.2",
-    "@typescript-eslint/parser": "^8.46.2",
-    "commitlint": "^20.1.0",
-    "eslint": "^8.57.1",
-    "eslint-config-biome": "^1.9.4",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.1.0",
+    "@biomejs/biome": "^2.4.10",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@evilmartians/lefthook": "^2.1.4",
+    "@nx/js": "^22.6.4",
+    "@types/node": "^24.12.0",
+    "commitlint": "^20.5.0",
     "generator-react-native-vector-icons": "workspace:*",
-    "knip": "^6.0.5",
-    "nx": "^22.5.2",
+    "knip": "^6.2.0",
+    "nx": "^22.6.4",
     "typescript": "^5.9.3",
-    "yo": "^5.1.0"
+    "yo": "^7.0.0"
   },
   "engines": {
-    "node": ">= 18.0.0"
+    "node": ">= 22.0.0"
   },
   "commitlint": {
     "extends": [
@@ -47,5 +37,5 @@
     "url": "https://github.com/oblador/react-native-vector-icons",
     "type": "git"
   },
-  "packageManager": "pnpm@10.7.0+sha512.6b865ad4b62a1d9842b61d674a393903b871d9244954f652b8842c2b553c72176b278f64c463e52d40fff8aba385c235c8c9ecf5cc7de4fd78b8bb6d49633ab6"
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
 }

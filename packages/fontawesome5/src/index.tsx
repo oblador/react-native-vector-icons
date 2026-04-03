@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-pascal-case, no-console */
-
 /**
  * This is a generated file. If you modify it manually, your changes will be lost!
  * Instead, modify the template in `fontawesome-common/generator`.
@@ -8,6 +6,7 @@
  * Usage: <FontAwesome5 name="icon-name" size={20} color="#4F8EF7" />
  */
 
+// biome-ignore assist/source/organizeImports: organized by generator
 import type { ComponentProps } from 'react';
 import { Platform, type TextStyle } from 'react-native';
 
@@ -33,7 +32,7 @@ const fontStyle = (fontWeight: TextStyle['fontWeight']) =>
 const RegularIcon = createIconSet(regularGM, {
   postScriptName: 'FontAwesome5Free-Regular',
   fontFileName: 'FontAwesome5_Regular.ttf',
-  fontSource: require('../fonts/FontAwesome5_Regular.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/FontAwesome5_Regular.ttf'),
   fontStyle: fontStyle('400')
 });
 export type FontAwesome5RegularIconName = keyof typeof regularGM;
@@ -41,7 +40,7 @@ export type FontAwesome5RegularIconName = keyof typeof regularGM;
 const SolidIcon = createIconSet(solidGM, {
   postScriptName: 'FontAwesome5Free-Solid',
   fontFileName: 'FontAwesome5_Solid.ttf',
-  fontSource: require('../fonts/FontAwesome5_Solid.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/FontAwesome5_Solid.ttf'),
   fontStyle: fontStyle('900')
 });
 export type FontAwesome5SolidIconName = keyof typeof solidGM;
@@ -49,7 +48,7 @@ export type FontAwesome5SolidIconName = keyof typeof solidGM;
 const BrandIcon = createIconSet(brandGM, {
   postScriptName: 'FontAwesome5Brands-Regular',
   fontFileName: 'FontAwesome5_Brands.ttf',
-  fontSource: require('../fonts/FontAwesome5_Brands.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/FontAwesome5_Brands.ttf'),
   fontStyle: fontStyle('400')
 });
 export type FontAwesome5BrandIconName = keyof typeof brandGM;

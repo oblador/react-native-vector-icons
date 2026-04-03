@@ -1,4 +1,4 @@
-const { withInfoPlist } = require('@expo/config-plugins'); // eslint-disable-line import/no-extraneous-dependencies, @typescript-eslint/no-require-imports
+const { withInfoPlist } = require('@expo/config-plugins');
 
 // Add all our fonts to the plist
 // installing the library makes sure that the font resource is copied into the app bundle

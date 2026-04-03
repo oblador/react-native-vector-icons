@@ -5,12 +5,12 @@
     "upstreamFont": "css-social-buttons",
     "buildSteps": {
       "glyphmap": {
-        "location": "../../node_modules/css-social-buttons/css/zocial.css",
+        "location": "node_modules/css-social-buttons/css/zocial.css",
         "mode": "css",
         "prefix": ".zocial."
       },
       "copyFont": {
-        "location": "../../node_modules/css-social-buttons/css/zocial.ttf"
+        "location": "node_modules/css-social-buttons/css/zocial.ttf"
       }
     },
     "versions": [

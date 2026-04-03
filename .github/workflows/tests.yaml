@@ -8,13 +8,13 @@ on:
     paths:
       - ".github/workflows/tests.yaml"
       - "packages/**"
-      - "!packages/directory/**"
+      - "!apps/directory/**"
       - "!packages/codemod/**"
   pull_request:
     paths:
       - ".github/workflows/tests.yaml"
       - "packages/**"
-      - "!packages/directory/**"
+      - "!apps/directory/**"
       - "!packages/codemod/**"
   workflow_dispatch:
 
@@ -40,15 +40,15 @@ jobs:
         run: pnpm install
       - name: Create pro font stubs
         run: node scripts/create-pro-font-stubs.mjs
-        working-directory: packages/icon-explorer
+        working-directory: apps/icon-explorer
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
       - name: Build Android app
         run: ./gradlew app:assembleDebug
-        working-directory: packages/icon-explorer/android
+        working-directory: apps/icon-explorer/android
       - name: Bundle JS
         run: pnpm run build:android
-        working-directory: packages/icon-explorer
+        working-directory: apps/icon-explorer
 
   ios:
     name: iOS
@@ -67,23 +67,23 @@ jobs:
         run: pnpm install
       - name: Create pro font stubs
         run: node scripts/create-pro-font-stubs.mjs
-        working-directory: packages/icon-explorer
+        working-directory: apps/icon-explorer
       - name: Cache CocoaPods
         uses: actions/cache@v4
         with:
           path: |
-            packages/icon-explorer/ios/Pods
+            apps/icon-explorer/ios/Pods
             ~/Library/Caches/CocoaPods
-          key: ${{ runner.os }}-pods-${{ hashFiles('packages/icon-explorer/ios/Podfile.lock') }}
+          key: ${{ runner.os }}-pods-${{ hashFiles('apps/icon-explorer/ios/Podfile.lock') }}
       - name: Install pods
         run: pod install || pod install
-        working-directory: packages/icon-explorer/ios
+        working-directory: apps/icon-explorer/ios
         env:
           RCT_USE_PREBUILT_RNCORE: 1
           RCT_USE_RN_DEP: 1
       - name: Build iOS app
         run: xcodebuild -scheme IconExplorer -workspace IconExplorer.xcworkspace ONLY_ACTIVE_ARCH=YES -sdk iphonesimulator -configuration Debug
-        working-directory: packages/icon-explorer/ios
+        working-directory: apps/icon-explorer/ios
       - name: Bundle JS
         run: pnpm run build:ios
-        working-directory: packages/icon-explorer
+        working-directory: apps/icon-explorer

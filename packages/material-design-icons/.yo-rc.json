@@ -4,12 +4,12 @@
     "upstreamFont": "@mdi/font",
     "buildSteps": {
       "glyphmap": {
-        "location": "../../node_modules/@mdi/font/css/materialdesignicons.css",
+        "location": "node_modules/@mdi/font/css/materialdesignicons.css",
         "mode": "css",
         "prefix": ".mdi-"
       },
       "copyFont": {
-        "location": "../../node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf"
+        "location": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf"
       }
     },
     "versions": [

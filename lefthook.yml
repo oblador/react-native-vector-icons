@@ -1,8 +1,8 @@
 pre-commit:
   parallel: true
   commands:
-    eslint:
-      run: pnpm run lint:eslint
+    knip:
+      run: pnpm run lint:knip
     biome:
       run: pnpm run lint:biome
     # NOTE: Disabled because it is too slow

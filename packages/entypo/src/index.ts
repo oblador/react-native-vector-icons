@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/Entypo.json';
 export const Entypo = createIconSet(glyphMap, {
   postScriptName: 'Entypo',
   fontFileName: 'Entypo.ttf',
-  fontSource: require('../fonts/Entypo.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/Entypo.ttf'),
 });
 
 export type EntypoIconName = keyof typeof glyphMap;

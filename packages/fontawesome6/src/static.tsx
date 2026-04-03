@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-pascal-case, no-console */
-
 /**
  * This is a generated file. If you modify it manually, your changes will be lost!
  * Instead, modify the template in `fontawesome-common/generator`.
@@ -8,6 +6,7 @@
  * Usage: <FontAwesome6 name="icon-name" size={20} color="#4F8EF7" />
  */
 
+// biome-ignore assist/source/organizeImports: organized by generator
 import type { ComponentProps } from 'react';
 import { Platform, type TextStyle } from 'react-native';
 

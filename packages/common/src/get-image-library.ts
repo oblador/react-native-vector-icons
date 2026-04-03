@@ -9,7 +9,6 @@ import type { ImageOptions } from '@react-native-vector-icons/get-image';
 import type { ImageResult } from './create-icon-source-cache';
 
 try {
-  // eslint-disable-next-line global-require,import/no-extraneous-dependencies,@typescript-eslint/no-require-imports
   NativeIconAPI = require('@react-native-vector-icons/get-image');
 } catch {
   // if this fails, it's likely due to:

@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-/* eslint-disable no-console */
-
 import path from 'node:path';
 
 import semver from 'semver';

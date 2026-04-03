@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/Octicons.json';
 export const Octicons = createIconSet(glyphMap, {
   postScriptName: 'Octicons',
   fontFileName: 'Octicons.ttf',
-  fontSource: require('../fonts/Octicons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/Octicons.ttf'),
 });
 
 export type OcticonsIconName = keyof typeof glyphMap;

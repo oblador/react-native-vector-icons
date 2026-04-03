@@ -10,7 +10,7 @@ import {
 } from 'react';
 import './App.css';
 
-import IconFamilies from './generated/glyphmapIndex.json'; // eslint-disable-line import/no-unresolved
+import IconFamilies from './generated/glyphmapIndex.json';
 
 const WAITING_INTERVAL = 300;
 
@@ -90,7 +90,6 @@ const SearchBar = ({ onSubmit }: { onSubmit: (text?: string) => void }) => {
       <div className="Search-Content">
         <form className="Search-Form" onSubmit={handleSubmit}>
           {/* Clicking the Label focuses the cursor onto the form input */}
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="Search-Input" className="Search-Label">
             <Icon family="FontAwesome" name="search" className="Search-Icon" />
           </label>

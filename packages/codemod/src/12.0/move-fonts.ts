@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import fs, { mkdirSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 
