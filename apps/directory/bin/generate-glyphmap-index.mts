@@ -7,23 +7,23 @@ import { globSync } from 'glob';
 const glyphMapFiles = globSync('../*/glyphmaps/*.json', { ignore: '../fontawesome[56]*/**' });
 
 const fontAwesome5Glyphmap = (
-  await import(path.join(import.meta.dirname, '../../fontawesome5/glyphmaps/', 'FontAwesome5.json'), {
+  await import(path.join(import.meta.dirname, '../../../packages/fontawesome5/glyphmaps/', 'FontAwesome5.json'), {
     with: { type: 'json' },
   })
 ).default;
 const fontAwesome5Meta = (
-  await import(path.join(import.meta.dirname, '../../fontawesome5/glyphmaps/', 'FontAwesome5_meta.json'), {
+  await import(path.join(import.meta.dirname, '../../../packages/fontawesome5/glyphmaps/', 'FontAwesome5_meta.json'), {
     with: { type: 'json' },
   })
 ).default;
 
 const fontAwesome6Glyphmap = (
-  await import(path.join(import.meta.dirname, '../../fontawesome6/glyphmaps/', 'FontAwesome6.json'), {
+  await import(path.join(import.meta.dirname, '../../../packages/fontawesome6/glyphmaps/', 'FontAwesome6.json'), {
     with: { type: 'json' },
   })
 ).default;
 const fontAwesome6Meta = (
-  await import(path.join(import.meta.dirname, '../../fontawesome6/glyphmaps/', 'FontAwesome6_meta.json'), {
+  await import(path.join(import.meta.dirname, '../../../packages/fontawesome6/glyphmaps/', 'FontAwesome6_meta.json'), {
     with: { type: 'json' },
   })
 ).default;
