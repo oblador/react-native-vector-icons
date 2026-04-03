@@ -31,7 +31,7 @@
     "packages/codemod": {
       "entry": ["src/index.{ts,tsx}", "src/{11,12}.0/transform.{ts,tsx}"]
     },
-    "packages/directory": {
+    "apps/directory": {
       "entry": [
         "src/index.tsx",
         "src/App.test.tsx",
@@ -42,7 +42,7 @@
       ],
       "ignoreBinaries": ["bin/generate-font-styles.mts", "bin/generate-glyphmap-index.mts"]
     },
-    "packages/icon-explorer": {
+    "apps/icon-explorer": {
       "entry": ["index.js", "src/Types.tsx"],
       "ignore": ["metro.config.js", "configPlugin.js"],
       "metro": false,

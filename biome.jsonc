@@ -19,8 +19,8 @@
       "!**/packages/generator-react-native-vector-icons/generators",
       "!**/packages/**/*/.fontcustom-manifest.json",
       "!**/packages/**/*/android/build",
-      "!**/packages/directory/src/generated",
-      "!**/packages/directory/build",
+      "!**/apps/directory/src/generated",
+      "!**/apps/directory/build",
       "!**/.nx",
 
       // Templates that have ejs
@@ -28,11 +28,11 @@
       "!**/packages/generator-react-native-vector-icons/src/app/templates/src",
 
       // Upstream files
-      "!**/packages/icon-explorer/src/configs/icomoon.config.json",
+      "!**/apps/icon-explorer/src/configs/icomoon.config.json",
 
       // native files
-      "!**/packages/icon-explorer/ios",
-      "!**/packages/icon-explorer/android",
+      "!**/apps/icon-explorer/ios",
+      "!**/apps/icon-explorer/android",
       "!**/packages/common/android",
       "!**/packages/common/ios"
     ]

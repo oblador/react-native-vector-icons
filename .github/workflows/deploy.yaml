@@ -158,10 +158,10 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-        working-directory: packages/directory
+        working-directory: apps/directory
 
       - name: Build directory
-        working-directory: packages/directory
+        working-directory: apps/directory
         run: |
           pnpm prepare
           pnpm run build
@@ -170,4 +170,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: packages/directory/build
+          folder: apps/directory/build

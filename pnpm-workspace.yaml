@@ -1,6 +1,7 @@
 packages:
   - packages/*
+  - apps/*
 allowBuilds:
-  '@evilmartians/lefthook': true
+  "@evilmartians/lefthook": true
   nx: true
   yo: true
