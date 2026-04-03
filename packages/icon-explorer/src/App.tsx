@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { BackHandler, LogBox, Pressable, StyleSheet, Text, View } from 'react-native';
+import { BackHandler, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
@@ -7,9 +7,6 @@ import { Home } from './Home';
 import { IconList, MultiIconList } from './IconList';
 import type { IconName } from './icon-sets';
 import { TestMode } from './TestMode';
-
-// We don't want ref error that react-native-owl is generating in our screenshots
-LogBox.ignoreAllLogs(true);
 
 type NavType =
   | { view: 'Home' }

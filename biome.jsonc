@@ -21,7 +21,6 @@
       "!**/packages/**/*/android/build",
       "!**/packages/directory/src/generated",
       "!**/packages/directory/build",
-      "!**/packages/icon-explorer/.owl",
       "!**/.nx",
 
       // Templates that have ejs
