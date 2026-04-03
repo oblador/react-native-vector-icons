@@ -71,7 +71,7 @@ type Arguments = BaseOptions & {
   currentVersion: string;
 };
 
-export default class extends Generator<Arguments> {
+export default class extends Generator<Data, Arguments> {
   data: Data;
 
   constructor(args: string | string[], opts: Arguments) {

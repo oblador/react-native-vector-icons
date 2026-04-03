@@ -5,7 +5,7 @@
 const fs = require('node:fs');
 const yargs = require('yargs');
 
-const { argv } = yargs
+const { argv } = yargs(process.argv.slice(2))
   .usage('')
   .option('path', {
     alias: 'p',

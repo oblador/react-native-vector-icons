@@ -14,19 +14,19 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.10",
-    "@commitlint/config-conventional": "^20.0.0",
-    "@evilmartians/lefthook": "^2.0.1",
-    "@nx/js": "^22.5.2",
-    "@types/node": "^20.19.23",
-    "commitlint": "^20.1.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@evilmartians/lefthook": "^2.1.4",
+    "@nx/js": "^22.6.4",
+    "@types/node": "^24.12.0",
+    "commitlint": "^20.5.0",
     "generator-react-native-vector-icons": "workspace:*",
-    "knip": "^6.0.5",
-    "nx": "^22.5.2",
+    "knip": "^6.2.0",
+    "nx": "^22.6.4",
     "typescript": "^5.9.3",
-    "yo": "^5.1.0"
+    "yo": "^7.0.0"
   },
   "engines": {
-    "node": ">= 18.0.0"
+    "node": ">= 22.0.0"
   },
   "commitlint": {
     "extends": [

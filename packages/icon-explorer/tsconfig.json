@@ -1,3 +1,6 @@
 {
-  "extends": "@react-native/typescript-config"
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "types": ["node"]
+  },
 }

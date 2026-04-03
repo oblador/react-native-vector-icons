@@ -77,21 +77,21 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "find-up": "^7.0.0",
+    "find-up": "^8.0.0",
     "picocolors": "^1.1.1",
     "plist": "^3.1.0"
   },
   "devDependencies": {
     "@types/plist": "^3.0.5",
     "@types/react": "^19.0.12",
-    "del-cli": "^6.0.0",
+    "del-cli": "^7.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
-    "@react-native/assets-registry": "*",
     "@react-native-vector-icons/get-image": "workspace:^",
+    "@react-native/assets-registry": "*",
     "react": "*",
     "react-native": "*"
   },
