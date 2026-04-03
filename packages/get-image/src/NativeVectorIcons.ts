@@ -28,7 +28,6 @@ export type NativeImageOptions = {
   lineHeight: number;
 };
 
-/* eslint-disable @typescript-eslint/no-wrapper-object-types */
 export interface Spec extends TurboModule {
   // biome-ignore lint/complexity/noBannedTypes: using Object to be compatible with old architecture
   getImageForFont(glyph: string, options: Object): Promise<ImageResult>;
@@ -36,6 +35,5 @@ export interface Spec extends TurboModule {
   // biome-ignore lint/complexity/noBannedTypes: using Object to be compatible with old architecture
   getImageForFontSync(glyph: string, options: Object): ImageResult;
 }
-/* eslint-enable @typescript-eslint/no-wrapper-object-types */
 
 export default TurboModuleRegistry.getEnforcing<Spec>('VectorIcons');

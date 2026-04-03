@@ -40,7 +40,7 @@ const loadFontAsync = async (fontFamily: string, fontSource: FontSource): Promis
       });
       await expoModules.ExpoFontLoader.loadAsync(fontFamily, asset);
     } catch (error) {
-      console.error(`Failed to load font ${fontFamily}`, error); // eslint-disable-line no-console
+      console.error(`Failed to load font ${fontFamily}`, error);
 
       getErrorCallback()?.({
         error: error as Error,

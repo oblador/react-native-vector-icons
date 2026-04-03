@@ -20,39 +20,12 @@ importers:
       '@nx/js':
         specifier: ^22.5.2
         version: 22.5.2(@babel/traverse@7.29.0)(nx@22.5.2)
-      '@types/eslint':
-        specifier: ^8.56.12
-        version: 8.56.12
       '@types/node':
         specifier: ^20.19.23
         version: 20.19.23
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.46.2
-        version: 8.46.2(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
-      '@typescript-eslint/parser':
-        specifier: ^8.46.2
-        version: 8.46.2(eslint@8.57.1)(typescript@5.9.3)
       commitlint:
         specifier: ^20.1.0
         version: 20.1.0(@types/node@20.19.23)(typescript@5.9.3)
-      eslint:
-        specifier: ^8.57.1
-        version: 8.57.1
-      eslint-config-biome:
-        specifier: ^1.9.4
-        version: 1.9.4
-      eslint-plugin-import:
-        specifier: ^2.32.0
-        version: 2.32.0(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)
-      eslint-plugin-jsx-a11y:
-        specifier: ^6.10.2
-        version: 6.10.2(eslint@8.57.1)
-      eslint-plugin-react:
-        specifier: ^7.37.5
-        version: 7.37.5(eslint@8.57.1)
-      eslint-plugin-react-hooks:
-        specifier: ^5.1.0
-        version: 5.2.0(eslint@8.57.1)
       generator-react-native-vector-icons:
         specifier: workspace:*
         version: link:packages/generator-react-native-vector-icons
@@ -76,17 +49,17 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@ant-design/icons-svg':
         specifier: 4.4.2
         version: 4.4.2
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -113,7 +86,7 @@ importers:
         version: 5.0.0
       semver:
         specifier: ^7.7.1
-        version: 7.7.3
+        version: 7.7.4
     devDependencies:
       '@types/jest':
         specifier: ^30.0.0
@@ -165,17 +138,17 @@ importers:
         version: 3.1.0
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/plist':
         specifier: ^3.0.5
         version: 3.0.5
       '@types/react':
         specifier: ^19.0.12
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -199,7 +172,7 @@ importers:
         version: 6.6.3
       '@testing-library/react':
         specifier: ^16.3.0
-        version: 16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@19.1.6(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.1.0(react@19.2.3))(react@19.2.3)
       '@types/jest':
         specifier: ^27.5.2
         version: 27.5.2
@@ -208,22 +181,22 @@ importers:
         version: 20.19.23
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       '@types/react-dom':
         specifier: ^19.1.0
-        version: 19.1.6(@types/react@19.1.8)
+        version: 19.1.6(@types/react@19.2.14)
       glob:
         specifier: ^11.0.0
         version: 11.0.1
       react:
         specifier: ^19.1.0
-        version: 19.1.0
+        version: 19.2.3
       react-dom:
         specifier: ^19.1.0
-        version: 19.1.0(react@19.1.0)
+        version: 19.1.0(react@19.2.3)
       react-scripts:
         specifier: 5.0.1
-        version: 5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@19.1.0)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3))(type-fest@4.37.0)(typescript@5.9.3)
+        version: 5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@19.2.3)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3))(type-fest@4.37.0)(typescript@5.9.3)
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
@@ -238,17 +211,17 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@entypo-icons/core':
         specifier: 1.0.1
         version: 1.0.1
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -269,14 +242,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -300,14 +273,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -331,14 +304,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -371,17 +344,17 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@fortawesome/fontawesome-free':
         specifier: 7.2.0
         version: 7.2.0
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -402,17 +375,17 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@fortawesome/fontawesome-free':
         specifier: 7.2.0
         version: 7.2.0
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -433,17 +406,17 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@fortawesome/fontawesome-free':
         specifier: 7.2.0
         version: 7.2.0
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -464,14 +437,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -492,14 +465,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -520,14 +493,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -548,14 +521,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -576,14 +549,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -604,14 +577,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -632,14 +605,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -660,14 +633,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -688,14 +661,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -716,14 +689,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -744,14 +717,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -772,14 +745,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -800,14 +773,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -828,14 +801,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -856,14 +829,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -884,14 +857,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -912,14 +885,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -940,17 +913,17 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@fortawesome/fontawesome-free':
         specifier: 5.15.4
         version: 5.15.4
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -974,14 +947,14 @@ importers:
         version: link:../fontawesome-common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1002,17 +975,17 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@fortawesome/fontawesome-free':
         specifier: 6.7.2
         version: 6.7.2
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1036,14 +1009,14 @@ importers:
         version: link:../fontawesome-common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1066,14 +1039,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1094,14 +1067,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1125,14 +1098,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1171,10 +1144,10 @@ importers:
         version: 5.1.0
       semver:
         specifier: ^7.6.3
-        version: 7.7.3
+        version: 7.7.4
       yeoman-generator:
         specifier: ^7.4.0
-        version: 7.5.0(@types/node@24.9.1)(@yeoman/types@1.5.0(@types/node@24.9.1)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2))(mem-fs@4.1.2)
+        version: 7.5.0(@types/node@20.19.23)(@yeoman/types@1.5.0(@types/node@20.19.23)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2))(mem-fs@4.1.2)
     devDependencies:
       '@types/npm-registry-fetch':
         specifier: ^8.0.7
@@ -1184,7 +1157,7 @@ importers:
         version: 7.5.8
       '@yeoman/types':
         specifier: ^1.5.0
-        version: 1.5.0(@types/node@24.9.1)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2)
+        version: 1.5.0(@types/node@20.19.23)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2)
       copyfiles:
         specifier: ^2.4.1
         version: 2.4.1
@@ -1199,7 +1172,7 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1211,7 +1184,7 @@ importers:
         version: 19.1.0
       react-native:
         specifier: 0.80.0
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.2.14)(react@19.1.0)
       react-native-builder-bob:
         specifier: ^0.35.2
         version: 0.35.3(typescript@5.9.3)
@@ -1229,14 +1202,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1358,9 +1331,6 @@ importers:
       '@react-native/babel-preset':
         specifier: 0.84.1
         version: 0.84.1(@babel/core@7.28.5)
-      '@react-native/eslint-config':
-        specifier: 0.84.1
-        version: 0.84.1(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.23)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3)))(prettier@3.5.3)(typescript@5.9.3)
       '@react-native/metro-config':
         specifier: 0.84.1
         version: 0.84.1(@babel/core@7.28.5)
@@ -1391,9 +1361,6 @@ importers:
       babel-jest:
         specifier: ^29.7.0
         version: 29.7.0(@babel/core@7.28.5)
-      eslint:
-        specifier: ^8.57.1
-        version: 8.57.1
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@20.19.23)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3))
@@ -1402,7 +1369,7 @@ importers:
         version: 16.0.0
       react-native-test-app:
         specifier: ^5.1.0
-        version: 5.1.0(@expo/config-plugins@8.0.11)(react-native@0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3))(react@19.2.3)
+        version: 5.1.0(@expo/config-plugins@8.0.11)(metro@0.83.5)(react-native@0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3))(react@19.2.3)
       react-test-renderer:
         specifier: 19.2.3
         version: 19.2.3(react@19.2.3)
@@ -1420,14 +1387,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1451,14 +1418,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1482,17 +1449,17 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@mdi/font':
         specifier: 7.4.47
         version: 7.4.47
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1513,14 +1480,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1541,17 +1508,17 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@primer/octicons':
         specifier: 19.22.0
         version: 19.22.0
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1572,14 +1539,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       del-cli:
         specifier: ^6.0.0
         version: 6.0.0
@@ -1603,14 +1570,14 @@ importers:
         version: link:../common
       react:
         specifier: '*'
-        version: 19.1.0
+        version: 19.2.3
       react-native:
         specifier: '*'
-        version: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+        version: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
     devDependencies:
       '@types/react':
         specifier: ^19.1.0
-        version: 19.1.8
+        version: 19.2.14
       css-social-buttons:
         specifier: 1.1.1
         version: 1.1.1
@@ -1648,10 +1615,6 @@ packages:
   '@babel/code-frame@7.10.4':
     resolution: {integrity: sha512-vG6SvB6oYEhvgisZNFRmRCUkLz11c7rp+tbNTynGqc6mS1d5ATd/sGyV6W0KZZnXRKMTzZDRgQT3Ou9jhpAfUg==}
 
-  '@babel/code-frame@7.27.1':
-    resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/code-frame@7.29.0':
     resolution: {integrity: sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==}
     engines: {node: '>=6.9.0'}
@@ -1670,10 +1633,6 @@ packages:
     peerDependencies:
       '@babel/core': ^7.11.0
       eslint: ^7.5.0 || ^8.0.0 || ^9.0.0
-
-  '@babel/generator@7.28.5':
-    resolution: {integrity: sha512-3EwLFhZ38J4VyIP6WNtt2kUdW9dokXA9Cr4IVIFHuCpZ3H8/YFOl5JjZHisrn1fATPBmKKqXzDFvh9fUwHz6CQ==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/generator@7.29.1':
     resolution: {integrity: sha512-qsaF+9Qcm2Qv8SRIMMscAvG4O3lJ0F1GuMo5HR/Bp02LopNgnZBC/EkbevHFeGs4ls/oPz9v+Bsmzbkbe+0dUw==}
@@ -1769,11 +1728,6 @@ packages:
   '@babel/highlight@7.25.9':
     resolution: {integrity: sha512-llL88JShoCsth8fF8R4SJnIn+WLvR6ccFxu1H3FlMhDontdcmZWf2HgIZ7AIqV3Xcck1idlohrN4EUBQz6klbw==}
     engines: {node: '>=6.9.0'}
-
-  '@babel/parser@7.28.5':
-    resolution: {integrity: sha512-KKBU1VGYR7ORr3At5HAtUQ+TV3SzRCXmA/8OdDZiLDBIZxVyzXuztPjfLd3BV1PRAQGCMWWSHYhL0F8d5uHBDQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
 
   '@babel/parser@7.29.0':
     resolution: {integrity: sha512-IyDgFV5GeDUVX4YdF/3CPULtVGSXXMLh1xVIgdCgxApktqnQV0r7/8Nqthg+8YLGaAtdyIlo2qIdZrbCv4+7ww==}
@@ -2407,24 +2361,12 @@ packages:
     resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/template@7.27.2':
-    resolution: {integrity: sha512-LPDZ85aEJyYSd18/DkjNh4/y1ntkE5KwUHWTiqgRxruuZL2F1yuHligVHLvcHY2vMHXttKFpJn6LwfI7cw7ODw==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/template@7.28.6':
     resolution: {integrity: sha512-YA6Ma2KsCdGb+WC6UpBVFJGXL58MDA6oyONbjyF/+5sBgxY/dwkhLogbMT2GXXyU84/IhRw/2D1Os1B/giz+BQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/traverse@7.28.5':
-    resolution: {integrity: sha512-TCCj4t55U90khlYkVV/0TfkJkAkUg3jZFA3Neb7unZT8CPok7iiRfaX0F+WnqWqt7OxhOn0uBKXCw4lbL8W0aQ==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/traverse@7.29.0':
     resolution: {integrity: sha512-4HPiQr0X7+waHfyXPZpWPfWL/J7dcN1mx9gL6WdQVMbPnF3+ZhSMs8tCxN7oHddJE9fhNE7+lxdnlyemKfJRuA==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/types@7.28.5':
-    resolution: {integrity: sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.29.0':
@@ -2663,20 +2605,11 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^6.0.10
 
-  '@emnapi/core@1.6.0':
-    resolution: {integrity: sha512-zq/ay+9fNIJJtJiZxdTnXS20PllcYMX3OE23ESc4HK/bdYu3cOWYVhsOhVnXALfU/uqJIxn5NBPd9z4v+SfoSg==}
-
   '@emnapi/core@1.9.1':
     resolution: {integrity: sha512-mukuNALVsoix/w1BJwFzwXBN/dHeejQtuVzcDsfOEsdpCumXb/E9j8w11h5S54tT1xhifGfbbSm/ICrObRb3KA==}
 
-  '@emnapi/runtime@1.6.0':
-    resolution: {integrity: sha512-obtUmAHTMjll499P+D9A3axeJFlhdjOWdKUNs/U6QIGT7V5RjcUW1xToAzjvmgTSQhDbYn/NwfTRoJcQ2rNBxA==}
-
   '@emnapi/runtime@1.9.1':
     resolution: {integrity: sha512-VYi5+ZVLhpgK4hQ0TAjiQiZ6ol0oe4mBx7mVv7IflsiEp0OWoVsp/+f9Vc1hOhE0TtkORVrI1GvzyreqpgWtkA==}
-
-  '@emnapi/wasi-threads@1.1.0':
-    resolution: {integrity: sha512-WI0DdZ8xFSbgMjR1sFsKABJ/C5OnRrjT06JXbZKexJGrDuPTzZdDYfFlsgcCXCyf+suG5QU2e/y1Wo2V/OapLQ==}
 
   '@emnapi/wasi-threads@1.2.0':
     resolution: {integrity: sha512-N10dEJNSsUx41Z6pZsXU8FjPjpBEplgH24sfkmITrBED1/U2Esum9F3lfLrMjKHHjmi557zQn7kR9R+XWXu5Rg==}
@@ -2822,10 +2755,6 @@ packages:
   '@jest/create-cache-key-function@29.7.0':
     resolution: {integrity: sha512-4QqS3LY5PBmTRHj9sAg1HLoPzqAI0uOX6wI/TRqHIcOxlFidy6YEmCQJk6FSZjNLGCeubDMfmkWL+qaLKhSGQA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-
-  '@jest/diff-sequences@30.0.1':
-    resolution: {integrity: sha512-n5H8QLDJ47QqbCNn5SuFjCRDrOLEZ0h8vAHCK5RL9Ls7Xa8AQLa/YxAc9UjFqoEDM48muwtBGjtMY5cr0PLDCw==}
-    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
 
   '@jest/diff-sequences@30.3.0':
     resolution: {integrity: sha512-cG51MVnLq1ecVUaQ3fr6YuuAOitHK1S4WUJHnsPFE/quQr33ADUx1FfrTCpMCRxvy0Yr9BThKpDjSlcTi91tMA==}
@@ -3875,17 +3804,6 @@ packages:
     resolution: {integrity: sha512-Z83ra+Gk6ElAhH3XRrv3vwbwCPTb04sPPlNpotxcFZb5LtRQZwT91ZQEXw3GOJCVIFp9EQ/gj8AQbVvtHKOUlQ==}
     engines: {node: '>= 20.19.4'}
 
-  '@react-native/eslint-config@0.84.1':
-    resolution: {integrity: sha512-Z8j0uahXvPgvBAslxwIWwFliRQO0bL7nLpNiFroVnT1ojYCQHwFAbObDcAIs+Yva2FTat2A5m2rbi98MHVC+cg==}
-    engines: {node: '>= 20.19.4'}
-    peerDependencies:
-      eslint: ^8.0.0 || ^9.0.0
-      prettier: '>=2'
-
-  '@react-native/eslint-plugin@0.84.1':
-    resolution: {integrity: sha512-mKhsn3+CmN03vyW7/YQ6/LvLQppWT+eYqlCvmOvVoGlnh+XrJHJgwNr891zsyxGNELTwu/x2+T83ogwCmRHMEw==}
-    engines: {node: '>= 20.19.4'}
-
   '@react-native/gradle-plugin@0.80.0':
     resolution: {integrity: sha512-drmS68rabSMOuDD+YsAY2luNT8br82ycodSDORDqAg7yWQcieHMp4ZUOcdOi5iW+JCqobablT/b6qxcrBg+RaA==}
     engines: {node: '>=18'}
@@ -4070,16 +3988,8 @@ packages:
       memfs:
         optional: true
 
-  '@rnx-kit/tools-node@3.0.2':
-    resolution: {integrity: sha512-nz0kq7FxJ89Vh5NLHZjmexl3sdGeoPaPZMSWQhW6g9JzryGVdU+CyLQtQbajtwaDMQB2qH/IqpmOzAxNFr5pgg==}
-    engines: {node: '>=16.17'}
-
   '@rnx-kit/tools-node@3.0.4':
     resolution: {integrity: sha512-jkBrQC71S1rjuWH3y+YPtT/1rgjF69z0EhzY7znUzQJGajKHtb4jjGjS85G41ZB0Bnt45N3NjliiVqUo4O1dzA==}
-    engines: {node: '>=16.17'}
-
-  '@rnx-kit/tools-react-native@2.1.0':
-    resolution: {integrity: sha512-F18Pn28Ligw3RyNKzXtSRZudWQ5R3JFywyWwqcUY+UFmjBjhekdIceHM/SXNZOJgkj21RRgXaIJy1gpaJtT0Jw==}
     engines: {node: '>=16.17'}
 
   '@rnx-kit/tools-react-native@2.3.5':
@@ -4534,9 +4444,6 @@ packages:
   '@types/node@20.19.23':
     resolution: {integrity: sha512-yIdlVVVHXpmqRhtyovZAcSy0MiPcYWGkoO4CGe/+jpP0hmNuihm4XhHbADpK++MsiLHP5MVlv+bcgdF99kSiFQ==}
 
-  '@types/node@24.9.1':
-    resolution: {integrity: sha512-QoiaXANRkSXK6p0Duvt56W208du4P9Uye9hWLWgGMDTEoKPhuenzNcC4vGUmrNkiOKTlIrBoyNQYNpSwfEZXSg==}
-
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
 
@@ -4574,9 +4481,6 @@ packages:
 
   '@types/react-test-renderer@19.1.0':
     resolution: {integrity: sha512-XD0WZrHqjNrxA/MaR9O22w/RNidWR9YZmBdRGI7wcnWGrv/3dA8wKCJ8m63Sn+tLJhcjmuhOi629N66W6kgWzQ==}
-
-  '@types/react@19.1.8':
-    resolution: {integrity: sha512-AwAfQ2Wa5bCx9WP8nZL2uMZWod7J7/JSplxbTmBQ5ms6QpqNYm672H0Vu9ZVKVngQ+ii4R/byguVEUZQyeg44g==}
 
   '@types/react@19.2.14':
     resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
@@ -4643,14 +4547,6 @@ packages:
       typescript:
         optional: true
 
-  '@typescript-eslint/eslint-plugin@8.46.2':
-    resolution: {integrity: sha512-ZGBMToy857/NIPaaCucIUQgqueOiq7HeAKkhlvqVV4lm089zUFW6ikRySx2v+cAhKeUCPuWVHeimyk6Dw1iY3w==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      '@typescript-eslint/parser': ^8.46.2
-      eslint: ^8.57.0 || ^9.0.0
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/experimental-utils@5.62.0':
     resolution: {integrity: sha512-RTXpeB3eMkpoclG3ZHft6vG/Z30azNHuqY6wKPBHlVMZFuEvrtlEDe8gMqDb+SO+9hjC/pLekeSCryf9vMZlCw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -4667,32 +4563,9 @@ packages:
       typescript:
         optional: true
 
-  '@typescript-eslint/parser@8.46.2':
-    resolution: {integrity: sha512-BnOroVl1SgrPLywqxyqdJ4l3S2MsKVLDVxZvjI1Eoe8ev2r3kGDo+PcMihNmDE+6/KjkTubSJnmqGZZjQSBq/g==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      eslint: ^8.57.0 || ^9.0.0
-      typescript: '>=4.8.4 <6.0.0'
-
-  '@typescript-eslint/project-service@8.46.2':
-    resolution: {integrity: sha512-PULOLZ9iqwI7hXcmL4fVfIsBi6AN9YxRc0frbvmg8f+4hQAjQ5GYNKK0DIArNo+rOKmR/iBYwkpBmnIwin4wBg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/scope-manager@5.62.0':
     resolution: {integrity: sha512-VXuvVvZeQCQb5Zgf4HAxc04q5j+WrNAtNh9OwCsCgpKqESMTu3tF/jhZ3xG6T4NZwWl65Bg8KuS2uEvhSfLl0w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
-  '@typescript-eslint/scope-manager@8.46.2':
-    resolution: {integrity: sha512-LF4b/NmGvdWEHD2H4MsHD8ny6JpiVNDzrSZr3CsckEgCbAGZbYM4Cqxvi9L+WqDMT+51Ozy7lt2M+d0JLEuBqA==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@typescript-eslint/tsconfig-utils@8.46.2':
-    resolution: {integrity: sha512-a7QH6fw4S57+F5y2FIxxSDyi5M4UfGF+Jl1bCGd7+L4KsaUY80GsiF/t0UoRFDHAguKlBaACWJRmdrc6Xfkkag==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
 
   '@typescript-eslint/type-utils@5.62.0':
     resolution: {integrity: sha512-xsSQreu+VnfbqQpW5vnCJdq1Z3Q0U31qiWmRhr98ONQmcp/yhiPJFPq8MXiJVLiksmOKSjIldZzkebzHuCGzew==}
@@ -4704,20 +4577,9 @@ packages:
       typescript:
         optional: true
 
-  '@typescript-eslint/type-utils@8.46.2':
-    resolution: {integrity: sha512-HbPM4LbaAAt/DjxXaG9yiS9brOOz6fabal4uvUmaUYe6l3K1phQDMQKBRUrr06BQkxkvIZVVHttqiybM9nJsLA==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      eslint: ^8.57.0 || ^9.0.0
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/types@5.62.0':
     resolution: {integrity: sha512-87NVngcbVXUahrRTqIK27gD2t5Cu1yuCXxbLcFtCzZGlfyVWWh8mLHkoxzjsB6DDNnvdL+fW8MiwPEJyGJQDgQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
-  '@typescript-eslint/types@8.46.2':
-    resolution: {integrity: sha512-lNCWCbq7rpg7qDsQrd3D6NyWYu+gkTENkG5IKYhUIcxSb59SQC/hEQ+MrG4sTgBVghTonNWq42bA/d4yYumldQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/typescript-estree@5.62.0':
     resolution: {integrity: sha512-CmcQ6uY7b9y694lKdRB8FEel7JbU/40iSAPomu++SjLMntB+2Leay2LO6i8VnJk58MtE9/nQSFIH6jpyRWyYzA==}
@@ -4728,32 +4590,15 @@ packages:
       typescript:
         optional: true
 
-  '@typescript-eslint/typescript-estree@8.46.2':
-    resolution: {integrity: sha512-f7rW7LJ2b7Uh2EiQ+7sza6RDZnajbNbemn54Ob6fRwQbgcIn+GWfyuHDHRYgRoZu1P4AayVScrRW+YfbTvPQoQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/utils@5.62.0':
     resolution: {integrity: sha512-n8oxjeb5aIbPFEtmQxQYOLI0i9n5ySBEY/ZEHHZqKQSFnxio1rv6dthascc9dLuwrL0RC5mPCxB7vnAVGAYWAQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  '@typescript-eslint/utils@8.46.2':
-    resolution: {integrity: sha512-sExxzucx0Tud5tE0XqR0lT0psBQvEpnpiul9XbGUB1QwpWJJAps1O/Z7hJxLGiZLBKMCutjTzDgmd1muEhBnVg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      eslint: ^8.57.0 || ^9.0.0
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/visitor-keys@5.62.0':
     resolution: {integrity: sha512-07ny+LHRzQXepkGg6w0mFY41fVUNBrL2Roj/++7V1txKugfjm/Ci/qSND03r2RhlJhJYMcTn9AhhSSqQp0Ysyw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
-  '@typescript-eslint/visitor-keys@8.46.2':
-    resolution: {integrity: sha512-tUFMXI4gxzzMXt4xpGJEsBsTox0XbNQ1y94EwlD/CuZwFcQP79xfQqMhau9HsRc/J0cAPA/HZt1dZPtGn9V/7w==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
@@ -4809,11 +4654,12 @@ packages:
   '@xmldom/xmldom@0.7.13':
     resolution: {integrity: sha512-lm2GW5PkosIzccsaZIz7tp8cPADSIlIHWDFTR1N0SzfinhhYgeIQjFMz4rYzanCScr3DqQLeomUDArp6MWKm+g==}
     engines: {node: '>=10.0.0'}
-    deprecated: this version is no longer supported, please update to at least 0.8.*
+    deprecated: this version has critical issues, please update to the latest version
 
   '@xmldom/xmldom@0.8.10':
     resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
     engines: {node: '>=10.0.0'}
+    deprecated: this version has critical issues, please update to the latest version
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -4908,11 +4754,6 @@ packages:
 
   acorn@7.4.1:
     resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
-
-  acorn@8.15.0:
-    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -6077,9 +5918,6 @@ packages:
     resolution: {integrity: sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==}
     engines: {node: '>=8'}
 
-  csstype@3.1.3:
-    resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
-
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
@@ -6565,15 +6403,6 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
 
-  eslint-config-biome@1.9.4:
-    resolution: {integrity: sha512-4HX+rfUk1R2rPwN3hcxPxq5sLDLGb/xtu48AggTtxCVoRoD18kjwOwHA1c7gYsbRrEQso+9mlRSS9+G7OfDqFg==}
-
-  eslint-config-prettier@8.10.0:
-    resolution: {integrity: sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
-
   eslint-config-react-app@7.0.1:
     resolution: {integrity: sha512-K6rNzvkIeHaTd8m/QEh1Zko0KI7BACWkkneSs6s9cKZC/J27X3eZR6Upt1jkmZ/4FK+XUOPPxMEN7+lbUXfSlA==}
     engines: {node: '>=14.0.0'}
@@ -6608,25 +6437,12 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-plugin-eslint-comments@3.2.0:
-    resolution: {integrity: sha512-0jkOl0hfojIHHmEHgmNdqv4fmh7300NdpA9FFpF7zaoLvB/QeXOGNLIo86oAveJFrfB1p05kC8hpEMHM8DwWVQ==}
-    engines: {node: '>=6.5.0'}
-    peerDependencies:
-      eslint: '>=4.19.1'
-
   eslint-plugin-flowtype@8.0.3:
     resolution: {integrity: sha512-dX8l6qUL6O+fYPtpNRideCFSpmWOUVx5QcaGLVqe/vlDiBSe4vYljDWDETwnyFzpl7By/WVIu6rcrniCgH9BqQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       '@babel/plugin-syntax-flow': ^7.14.5
       '@babel/plugin-transform-react-jsx': ^7.14.9
-      eslint: ^8.1.0
-
-  eslint-plugin-ft-flow@2.0.3:
-    resolution: {integrity: sha512-Vbsd/b+LYA99jUbsL6viEUWShFaYQt2YQs3QN3f+aeszOhh2sgdcU0mjzDyD4yyBvMc8qy2uwvBBWfMzEX06tg==}
-    engines: {node: '>=12.22.0'}
-    peerDependencies:
-      '@babel/eslint-parser': ^7.12.0
       eslint: ^8.1.0
 
   eslint-plugin-import@2.32.0:
@@ -6652,22 +6468,6 @@ packages:
       jest:
         optional: true
 
-  eslint-plugin-jest@29.15.0:
-    resolution: {integrity: sha512-ZCGr7vTH2WSo2hrK5oM2RULFmMruQ7W3cX7YfwoTiPfzTGTFBMmrVIz45jZHd++cGKj/kWf02li/RhTGcANJSA==}
-    engines: {node: ^20.12.0 || ^22.0.0 || >=24.0.0}
-    peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^8.0.0
-      eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
-      jest: '*'
-      typescript: '>=4.8.4 <6.0.0'
-    peerDependenciesMeta:
-      '@typescript-eslint/eslint-plugin':
-        optional: true
-      jest:
-        optional: true
-      typescript:
-        optional: true
-
   eslint-plugin-jsx-a11y@6.10.2:
     resolution: {integrity: sha512-scB3nz4WmG75pV8+3eRUQOHZlNSUhFNq37xnpgRkCCELU3XMvXAxLk1eqWWyE22Ki4Q01Fnsw9BA3cJHDPgn2Q==}
     engines: {node: '>=4.0'}
@@ -6679,26 +6479,6 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
-
-  eslint-plugin-react-hooks@5.2.0:
-    resolution: {integrity: sha512-+f15FfK64YQwZdJNELETdn5ibXEUQmW1DZL6KXhNnc2heoy/sg9VJJeT7n8TlMWouzWqSWavFkIhHyIbIAEapg==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
-
-  eslint-plugin-react-hooks@7.0.1:
-    resolution: {integrity: sha512-O0d0m04evaNzEPoSW+59Mezf8Qt0InfgGIBJnpC0h3NH/WjUAR7BIKUfysC6todmtiZ/A0oUVS8Gce0WhBrHsA==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
-
-  eslint-plugin-react-native-globals@0.1.2:
-    resolution: {integrity: sha512-9aEPf1JEpiTjcFAmmyw8eiIXmcNZOqaZyHO77wgm0/dWfT/oxC1SrIq8ET38pMxHYrcB6Uew+TzUVsBeczF88g==}
-
-  eslint-plugin-react-native@5.0.0:
-    resolution: {integrity: sha512-VyWlyCC/7FC/aONibOwLkzmyKg4j9oI8fzrk9WYNs4I8/m436JuOTAFwLvEn1CVvc7La4cPfbCyspP4OYpP52Q==}
-    peerDependencies:
-      eslint: ^3.17.0 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
 
   eslint-plugin-react@7.37.5:
     resolution: {integrity: sha512-Qteup0SqU15kdocexFNAJMvCJEfa2xUKNV4CC1xsVMrIIqEy3SQ/rqyxCWNzfrd3/ldy6HMlD2e0JDVpDg2qIA==}
@@ -6727,10 +6507,6 @@ packages:
   eslint-visitor-keys@3.4.3:
     resolution: {integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
-  eslint-visitor-keys@4.2.1:
-    resolution: {integrity: sha512-Uhdk5sfqcee/9H/rCOJikYz67o0a2Tw2hGRPOG2Y1R2dg7brRe1uG0yaNQDHu+TO/uQPF/5eCapvYSmHUjt7JQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   eslint-webpack-plugin@3.2.0:
     resolution: {integrity: sha512-avrKcGncpPbPSUHX6B3stNGzkKFto3eL+DKM4+VyMrVnhPc3vRczVlCq3uhuFOdRvDHTVXuzwk1ZKUrqDQHQ9w==}
@@ -7434,9 +7210,6 @@ packages:
   hermes-estree@0.23.1:
     resolution: {integrity: sha512-eT5MU3f5aVhTqsfIReZ6n41X5sYn4IdQL0nvz6yO+MMlPxw49aSARHLg/MSehQftyjnrE8X6bYregzSumqc6cg==}
 
-  hermes-estree@0.25.1:
-    resolution: {integrity: sha512-0wUoCcLp+5Ev5pDW2OriHC2MJCbwLwuRx+gAqMTOkGKJJiBCLjtrvy4PWUGn6MIVefecRpzoOZ/UV6iGdOr+Cw==}
-
   hermes-estree@0.28.1:
     resolution: {integrity: sha512-w3nxl/RGM7LBae0v8LH2o36+8VqwOZGv9rX1wyoWT6YaKZLqpJZ0YQ5P0LVr3tuRpf7vCx0iIG4i/VmBJejxTQ==}
 
@@ -7451,9 +7224,6 @@ packages:
 
   hermes-parser@0.23.1:
     resolution: {integrity: sha512-oxl5h2DkFW83hT4DAUJorpah8ou4yvmweUzLJmmr6YV2cezduCdlil1AvU/a/xSsAFo4WUcNA4GoV5Bvq6JffA==}
-
-  hermes-parser@0.25.1:
-    resolution: {integrity: sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA==}
 
   hermes-parser@0.28.1:
     resolution: {integrity: sha512-nf8o+hE8g7UJWParnccljHumE9Vlq8F7MqIdeahl+4x0tvCUJYRrT0L7h0MMg/X9YJmkNwsfbaNNrzPtFXOscg==}
@@ -8177,10 +7947,6 @@ packages:
   jest-diff@29.7.0:
     resolution: {integrity: sha512-LMIgiIrhigmPrs03JHpxUh2yISK3vLFPkAodPeo0+BuF7wA2FoQbkEg1u8gBYBThncu7e1oEDUfIXVuTqLRUjw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-
-  jest-diff@30.2.0:
-    resolution: {integrity: sha512-dQHFo3Pt4/NLlG5z4PxZ/3yZTZ1C7s9hveiOj+GCN+uT109NC2QgsoVZsVOAvbJ3RgKkvyLGXZV9+piDpWbm6A==}
-    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
 
   jest-diff@30.3.0:
     resolution: {integrity: sha512-n3q4PDQjS4LrKxfWB3Z5KNk1XjXtZTBwQp71OP0Jo03Z6V60x++K5L8k6ZrW8MY8pOFylZvHM0zsjS1RqlHJZQ==}
@@ -9100,10 +8866,6 @@ packages:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
 
-  mime-db@1.53.0:
-    resolution: {integrity: sha512-oHlN/w+3MQ3rba9rqFr6V/ypF10LSkdwUysQL7GkXoTgIWeV+tcXGA852TBxH+gsh8UWoyhR1hKcoMJTuWflpg==}
-    engines: {node: '>= 0.6'}
-
   mime-db@1.54.0:
     resolution: {integrity: sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==}
     engines: {node: '>= 0.6'}
@@ -9162,10 +8924,6 @@ packages:
   minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
 
-  minimatch@10.0.1:
-    resolution: {integrity: sha512-ethXTt3SGGR+95gudmqJ1eNhRO7eGEGIgYA9vnPatK4/etz2MEVDno5GMCibdMTuBMyElzIlgxMna3K94XDIDQ==}
-    engines: {node: 20 || >=22}
-
   minimatch@10.1.1:
     resolution: {integrity: sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==}
     engines: {node: 20 || >=22}
@@ -9176,9 +8934,6 @@ packages:
 
   minimatch@3.0.8:
     resolution: {integrity: sha512-6FsRAQsxQ61mw+qP1ZzbL9Bc78x2p5OqNgNpnoAFLTrX8n5Kxph0CsnhmKKNXTWjXqU5L0pGPR7hYk+XWZr60Q==}
-
-  minimatch@3.1.2:
-    resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
   minimatch@3.1.4:
     resolution: {integrity: sha512-twmL+S8+7yIsE9wsqgzU3E8/LumN3M3QELrBZ20OdmQ9jB2JvW5oZtBEmft84k/Gs5CG9mqtWc6Y9vW+JEzGxw==}
@@ -10443,11 +10198,6 @@ packages:
     resolution: {integrity: sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==}
     engines: {node: '>=4'}
 
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
-    engines: {node: '>=14'}
-    hasBin: true
-
   pretty-bytes@5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
     engines: {node: '>=6'}
@@ -10470,10 +10220,6 @@ packages:
   pretty-format@29.7.0:
     resolution: {integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-
-  pretty-format@30.2.0:
-    resolution: {integrity: sha512-9uBdv/B4EefsuAL+pWqueZyZS2Ba+LxfFeQ9DN14HU4bN8bhaxKdkpjpB6fs9+pSjIBu+FXQHImEg8j/Lw0+vA==}
-    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
 
   pretty-format@30.3.0:
     resolution: {integrity: sha512-oG4T3wCbfeuvljnyAzhBvpN45E8iOTXCU/TD3zXW80HA3dQ4ahdqMkWGiPWZvjpQwlbyHrPTWUAqUzGzv4l1JQ==}
@@ -10624,9 +10370,6 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
-
-  react-devtools-core@6.1.1:
-    resolution: {integrity: sha512-TFo1MEnkqE6hzAbaztnyR5uLTMoz6wnEWwWBsCUzNt+sVXJycuRJdDqvL078M4/h65BI/YO5XWTaxZDWVsW0fw==}
 
   react-devtools-core@6.1.5:
     resolution: {integrity: sha512-ePrwPfxAnB+7hgnEr8vpKxL9cmnp7F322t8oqcPshbIQQhDKgFDW4tjhF2wjVbdXF9O/nyuy3sQWd9JGpiLPvA==}
@@ -11137,11 +10880,6 @@ packages:
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
-    hasBin: true
-
-  semver@7.7.3:
-    resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
-    engines: {node: '>=10'}
     hasBin: true
 
   semver@7.7.4:
@@ -11843,12 +11581,6 @@ packages:
   tryer@1.0.1:
     resolution: {integrity: sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==}
 
-  ts-api-utils@2.1.0:
-    resolution: {integrity: sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ==}
-    engines: {node: '>=18.12'}
-    peerDependencies:
-      typescript: '>=4.8.4'
-
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
@@ -12061,9 +11793,6 @@ packages:
 
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
-
-  undici-types@7.16.0:
-    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
   unicode-canonical-property-names-ecmascript@2.0.1:
     resolution: {integrity: sha512-dA8WbNeb2a6oQzAQ55YlT5vQAWGV9WXOsi3SskE3bcCdM0P4SDd+24zS/OCacdRq5BkdsRj9q3Pg6YyQoxIGqg==}
@@ -12618,11 +12347,6 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
 
-  yaml@2.8.1:
-    resolution: {integrity: sha512-lcYcMxX2PO9XMGvAJkJ3OsNMw+/7FKes7/hgerGUYWIoWu5j/+YQqcZr5JnPZWzOsEBgMbSbiSTn/dv/69Mkpw==}
-    engines: {node: '>= 14.6'}
-    hasBin: true
-
   yaml@2.8.3:
     resolution: {integrity: sha512-AvbaCLOO2Otw/lW5bmh9d/WEdcDFdQp2Z2ZUH3pX9U2ihyUY0nvLv7J6TrWowklRGPYbB/IuIMfYgxaCPg5Bpg==}
     engines: {node: '>= 14.6'}
@@ -12714,12 +12438,6 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  zod-validation-error@4.0.2:
-    resolution: {integrity: sha512-Q6/nZLe6jxuU80qb/4uJ4t5v2VEZ44lzQjPDhYJNztRQ4wyWc6VF3D3Kb/fAuPetZQnhS3hnajCf9CsWesghLQ==}
-    engines: {node: '>=18.0.0'}
-    peerDependencies:
-      zod: ^3.25.0 || ^4.0.0
-
   zod@4.1.12:
     resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
 
@@ -12742,12 +12460,6 @@ snapshots:
     dependencies:
       '@babel/highlight': 7.25.9
 
-  '@babel/code-frame@7.27.1':
-    dependencies:
-      '@babel/helper-validator-identifier': 7.28.5
-      js-tokens: 4.0.0
-      picocolors: 1.1.1
-
   '@babel/code-frame@7.29.0':
     dependencies:
       '@babel/helper-validator-identifier': 7.28.5
@@ -12758,15 +12470,15 @@ snapshots:
 
   '@babel/core@7.28.5':
     dependencies:
-      '@babel/code-frame': 7.27.1
-      '@babel/generator': 7.28.5
+      '@babel/code-frame': 7.29.0
+      '@babel/generator': 7.29.1
       '@babel/helper-compilation-targets': 7.27.2
       '@babel/helper-module-transforms': 7.28.3(@babel/core@7.28.5)
       '@babel/helpers': 7.28.4
-      '@babel/parser': 7.28.5
-      '@babel/template': 7.27.2
-      '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/parser': 7.29.0
+      '@babel/template': 7.28.6
+      '@babel/traverse': 7.29.0
+      '@babel/types': 7.29.0
       '@jridgewell/remapping': 2.3.5
       convert-source-map: 2.0.0
       debug: 4.4.3
@@ -12784,14 +12496,6 @@ snapshots:
       eslint-visitor-keys: 2.1.0
       semver: 6.3.1
 
-  '@babel/generator@7.28.5':
-    dependencies:
-      '@babel/parser': 7.28.5
-      '@babel/types': 7.28.5
-      '@jridgewell/gen-mapping': 0.3.13
-      '@jridgewell/trace-mapping': 0.3.31
-      jsesc: 3.1.0
-
   '@babel/generator@7.29.1':
     dependencies:
       '@babel/parser': 7.29.0
@@ -12802,7 +12506,7 @@ snapshots:
 
   '@babel/helper-annotate-as-pure@7.27.3':
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   '@babel/helper-compilation-targets@7.27.2':
     dependencies:
@@ -12820,7 +12524,7 @@ snapshots:
       '@babel/helper-optimise-call-expression': 7.27.1
       '@babel/helper-replace-supers': 7.27.1(@babel/core@7.28.5)
       '@babel/helper-skip-transparent-expression-wrappers': 7.27.1
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -12848,14 +12552,14 @@ snapshots:
   '@babel/helper-member-expression-to-functions@7.28.5':
     dependencies:
       '@babel/traverse': 7.29.0
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-module-imports@7.27.1':
     dependencies:
-      '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/traverse': 7.29.0
+      '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -12864,13 +12568,13 @@ snapshots:
       '@babel/core': 7.28.5
       '@babel/helper-module-imports': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-optimise-call-expression@7.27.1':
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   '@babel/helper-plugin-utils@7.27.1': {}
 
@@ -12879,7 +12583,7 @@ snapshots:
       '@babel/core': 7.28.5
       '@babel/helper-annotate-as-pure': 7.27.3
       '@babel/helper-wrap-function': 7.28.3
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -12888,14 +12592,14 @@ snapshots:
       '@babel/core': 7.28.5
       '@babel/helper-member-expression-to-functions': 7.28.5
       '@babel/helper-optimise-call-expression': 7.27.1
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-skip-transparent-expression-wrappers@7.27.1':
     dependencies:
-      '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/traverse': 7.29.0
+      '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -12908,15 +12612,15 @@ snapshots:
   '@babel/helper-wrap-function@7.28.3':
     dependencies:
       '@babel/template': 7.28.6
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
       '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helpers@7.28.4':
     dependencies:
-      '@babel/template': 7.27.2
-      '@babel/types': 7.28.5
+      '@babel/template': 7.28.6
+      '@babel/types': 7.29.0
 
   '@babel/highlight@7.25.9':
     dependencies:
@@ -12924,10 +12628,6 @@ snapshots:
       chalk: 2.4.2
       js-tokens: 4.0.0
       picocolors: 1.1.1
-
-  '@babel/parser@7.28.5':
-    dependencies:
-      '@babel/types': 7.28.5
 
   '@babel/parser@7.29.0':
     dependencies:
@@ -12937,7 +12637,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.5
       '@babel/helper-plugin-utils': 7.27.1
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -12964,7 +12664,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.5
       '@babel/helper-plugin-utils': 7.27.1
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -13159,7 +12859,7 @@ snapshots:
       '@babel/core': 7.28.5
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/helper-remap-async-to-generator': 7.27.1(@babel/core@7.28.5)
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -13214,7 +12914,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.5
       '@babel/helper-plugin-utils': 7.27.1
-      '@babel/template': 7.27.2
+      '@babel/template': 7.28.6
 
   '@babel/plugin-transform-destructuring@7.28.5(@babel/core@7.28.5)':
     dependencies:
@@ -13283,7 +12983,7 @@ snapshots:
       '@babel/core': 7.28.5
       '@babel/helper-compilation-targets': 7.27.2
       '@babel/helper-plugin-utils': 7.27.1
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -13329,7 +13029,7 @@ snapshots:
       '@babel/helper-module-transforms': 7.28.3(@babel/core@7.28.5)
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -13369,7 +13069,7 @@ snapshots:
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/plugin-transform-destructuring': 7.28.5(@babel/core@7.28.5)
       '@babel/plugin-transform-parameters': 7.27.7(@babel/core@7.28.5)
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -13647,7 +13347,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.5
       '@babel/helper-plugin-utils': 7.27.1
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
       esutils: 2.0.3
 
   '@babel/preset-react@7.26.3(@babel/core@7.28.5)':
@@ -13684,29 +13384,11 @@ snapshots:
 
   '@babel/runtime@7.28.4': {}
 
-  '@babel/template@7.27.2':
-    dependencies:
-      '@babel/code-frame': 7.27.1
-      '@babel/parser': 7.28.5
-      '@babel/types': 7.28.5
-
   '@babel/template@7.28.6':
     dependencies:
       '@babel/code-frame': 7.29.0
       '@babel/parser': 7.29.0
       '@babel/types': 7.29.0
-
-  '@babel/traverse@7.28.5':
-    dependencies:
-      '@babel/code-frame': 7.27.1
-      '@babel/generator': 7.28.5
-      '@babel/helper-globals': 7.28.0
-      '@babel/parser': 7.28.5
-      '@babel/template': 7.27.2
-      '@babel/types': 7.28.5
-      debug: 4.4.3
-    transitivePeerDependencies:
-      - supports-color
 
   '@babel/traverse@7.29.0':
     dependencies:
@@ -13719,11 +13401,6 @@ snapshots:
       debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/types@7.28.5':
-    dependencies:
-      '@babel/helper-string-parser': 7.27.1
-      '@babel/helper-validator-identifier': 7.28.5
 
   '@babel/types@7.29.0':
     dependencies:
@@ -13966,34 +13643,18 @@ snapshots:
     dependencies:
       postcss-selector-parser: 6.1.2
 
-  '@emnapi/core@1.6.0':
-    dependencies:
-      '@emnapi/wasi-threads': 1.1.0
-      tslib: 2.8.1
-
   '@emnapi/core@1.9.1':
     dependencies:
       '@emnapi/wasi-threads': 1.2.0
       tslib: 2.8.1
-    optional: true
-
-  '@emnapi/runtime@1.6.0':
-    dependencies:
-      tslib: 2.8.1
 
   '@emnapi/runtime@1.9.1':
-    dependencies:
-      tslib: 2.8.1
-    optional: true
-
-  '@emnapi/wasi-threads@1.1.0':
     dependencies:
       tslib: 2.8.1
 
   '@emnapi/wasi-threads@1.2.0':
     dependencies:
       tslib: 2.8.1
-    optional: true
 
   '@entypo-icons/core@1.0.1': {}
 
@@ -14013,7 +13674,7 @@ snapshots:
       ignore: 5.3.2
       import-fresh: 3.3.1
       js-yaml: 4.1.0
-      minimatch: 3.1.2
+      minimatch: 3.1.4
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
@@ -14034,7 +13695,7 @@ snapshots:
       getenv: 1.0.0
       glob: 7.1.6
       resolve-from: 5.0.0
-      semver: 7.7.3
+      semver: 7.7.4
       slash: 3.0.0
       slugify: 1.6.6
       xcode: 3.0.1
@@ -14074,7 +13735,7 @@ snapshots:
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
       debug: 4.4.3
-      minimatch: 3.1.2
+      minimatch: 3.1.4
     transitivePeerDependencies:
       - supports-color
 
@@ -14219,8 +13880,6 @@ snapshots:
   '@jest/create-cache-key-function@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
-
-  '@jest/diff-sequences@30.0.1': {}
 
   '@jest/diff-sequences@30.3.0': {}
 
@@ -14832,8 +14491,8 @@ snapshots:
 
   '@napi-rs/wasm-runtime@0.2.4':
     dependencies:
-      '@emnapi/core': 1.6.0
-      '@emnapi/runtime': 1.6.0
+      '@emnapi/core': 1.9.1
+      '@emnapi/runtime': 1.9.1
       '@tybys/wasm-util': 0.9.0
 
   '@napi-rs/wasm-runtime@1.1.1':
@@ -15012,7 +14671,7 @@ snapshots:
       enquirer: 2.3.6
       minimatch: 10.1.1
       nx: 22.5.2
-      semver: 7.7.3
+      semver: 7.7.4
       tslib: 2.8.1
       yargs-parser: 21.1.1
 
@@ -15040,7 +14699,7 @@ snapshots:
       npm-run-path: 4.0.1
       picocolors: 1.1.1
       picomatch: 4.0.2
-      semver: 7.7.3
+      semver: 7.7.4
       source-map-support: 0.5.19
       tinyglobby: 0.2.15
       tslib: 2.8.1
@@ -15090,7 +14749,7 @@ snapshots:
       enquirer: 2.3.6
       nx: 22.5.2
       picomatch: 4.0.2
-      semver: 7.7.3
+      semver: 7.7.4
       tslib: 2.8.1
       yargs-parser: 21.1.1
     transitivePeerDependencies:
@@ -15368,7 +15027,7 @@ snapshots:
       picocolors: 1.1.1
       semver: 7.7.4
       wcwidth: 1.0.1
-      yaml: 2.8.1
+      yaml: 2.8.3
     transitivePeerDependencies:
       - typescript
 
@@ -15528,7 +15187,7 @@ snapshots:
       metro: 0.82.5
       metro-config: 0.82.5
       metro-core: 0.82.5
-      semver: 7.7.3
+      semver: 7.7.4
     optionalDependencies:
       '@react-native-community/cli': 20.1.2(typescript@5.9.3)
     transitivePeerDependencies:
@@ -15602,29 +15261,6 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@react-native/eslint-config@0.84.1(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.23)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3)))(prettier@3.5.3)(typescript@5.9.3)':
-    dependencies:
-      '@babel/core': 7.28.5
-      '@babel/eslint-parser': 7.26.8(@babel/core@7.28.5)(eslint@8.57.1)
-      '@react-native/eslint-plugin': 0.84.1
-      '@typescript-eslint/eslint-plugin': 8.46.2(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
-      '@typescript-eslint/parser': 8.46.2(eslint@8.57.1)(typescript@5.9.3)
-      eslint: 8.57.1
-      eslint-config-prettier: 8.10.0(eslint@8.57.1)
-      eslint-plugin-eslint-comments: 3.2.0(eslint@8.57.1)
-      eslint-plugin-ft-flow: 2.0.3(@babel/eslint-parser@7.26.8(@babel/core@7.28.5)(eslint@8.57.1))(eslint@8.57.1)
-      eslint-plugin-jest: 29.15.0(@typescript-eslint/eslint-plugin@8.46.2(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.23)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3)))(typescript@5.9.3)
-      eslint-plugin-react: 7.37.5(eslint@8.57.1)
-      eslint-plugin-react-hooks: 7.0.1(eslint@8.57.1)
-      eslint-plugin-react-native: 5.0.0(eslint@8.57.1)
-      prettier: 3.5.3
-    transitivePeerDependencies:
-      - jest
-      - supports-color
-      - typescript
-
-  '@react-native/eslint-plugin@0.84.1': {}
-
   '@react-native/gradle-plugin@0.80.0': {}
 
   '@react-native/gradle-plugin@0.84.1': {}
@@ -15660,14 +15296,14 @@ snapshots:
 
   '@react-native/typescript-config@0.84.1': {}
 
-  '@react-native/virtualized-lists@0.80.0(@types/react@19.1.8)(react-native@0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)':
+  '@react-native/virtualized-lists@0.80.0(@types/react@19.2.14)(react-native@0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.2.14)(react@19.1.0))(react@19.1.0)':
     dependencies:
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 19.1.0
-      react-native: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0)
+      react-native: 0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.2.14)(react@19.1.0)
     optionalDependencies:
-      '@types/react': 19.1.8
+      '@types/react': 19.2.14
 
   '@react-native/virtualized-lists@0.84.1(@types/react@19.2.14)(react-native@0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3))(react@19.2.3)':
     dependencies:
@@ -15752,7 +15388,7 @@ snapshots:
 
   '@rnx-kit/metro-config@2.2.4(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(metro@0.83.5)(react-native@0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3))(react@19.2.3)':
     dependencies:
-      '@rnx-kit/tools-node': 3.0.2
+      '@rnx-kit/tools-node': 3.0.4(metro@0.83.5)
       '@rnx-kit/tools-react-native': 2.3.5(metro@0.83.5)
       '@rnx-kit/tools-workspaces': 0.2.2
       react: 19.2.3
@@ -15769,17 +15405,11 @@ snapshots:
 
   '@rnx-kit/tools-filesystem@0.2.0': {}
 
-  '@rnx-kit/tools-node@3.0.2': {}
-
   '@rnx-kit/tools-node@3.0.4(metro@0.83.5)':
     dependencies:
       '@rnx-kit/types-node': 1.0.0(metro@0.83.5)
     transitivePeerDependencies:
       - metro
-
-  '@rnx-kit/tools-react-native@2.1.0':
-    dependencies:
-      '@rnx-kit/tools-node': 3.0.2
 
   '@rnx-kit/tools-react-native@2.3.5(metro@0.83.5)':
     dependencies:
@@ -16052,7 +15682,7 @@ snapshots:
 
   '@testing-library/dom@10.4.0':
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       '@babel/runtime': 7.28.4
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
@@ -16071,15 +15701,15 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
 
-  '@testing-library/react@16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@testing-library/react@16.3.0(@testing-library/dom@10.4.0)(@types/react-dom@19.1.6(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.1.0(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@babel/runtime': 7.28.4
       '@testing-library/dom': 10.4.0
-      react: 19.1.0
-      react-dom: 19.1.0(react@19.1.0)
+      react: 19.2.3
+      react-dom: 19.1.0(react@19.2.3)
     optionalDependencies:
-      '@types/react': 19.1.8
-      '@types/react-dom': 19.1.6(@types/react@19.1.8)
+      '@types/react': 19.2.14
+      '@types/react-dom': 19.1.6(@types/react@19.2.14)
 
   '@tokenizer/token@0.3.0': {}
 
@@ -16119,24 +15749,24 @@ snapshots:
 
   '@types/babel__core@7.20.5':
     dependencies:
-      '@babel/parser': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/parser': 7.29.0
+      '@babel/types': 7.29.0
       '@types/babel__generator': 7.6.8
       '@types/babel__template': 7.4.4
       '@types/babel__traverse': 7.20.6
 
   '@types/babel__generator@7.6.8':
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   '@types/babel__template@7.4.4':
     dependencies:
-      '@babel/parser': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/parser': 7.29.0
+      '@babel/types': 7.29.0
 
   '@types/babel__traverse@7.20.6':
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   '@types/body-parser@1.19.5':
     dependencies:
@@ -16255,7 +15885,7 @@ snapshots:
   '@types/jest@30.0.0':
     dependencies:
       expect: 30.3.0
-      pretty-format: 30.2.0
+      pretty-format: 30.3.0
 
   '@types/jscodeshift@0.12.0':
     dependencies:
@@ -16294,10 +15924,6 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@24.9.1':
-    dependencies:
-      undici-types: 7.16.0
-
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/npm-package-arg@6.1.4': {}
@@ -16329,17 +15955,13 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@19.1.6(@types/react@19.1.8)':
+  '@types/react-dom@19.1.6(@types/react@19.2.14)':
     dependencies:
-      '@types/react': 19.1.8
+      '@types/react': 19.2.14
 
   '@types/react-test-renderer@19.1.0':
     dependencies:
       '@types/react': 19.2.14
-
-  '@types/react@19.1.8':
-    dependencies:
-      csstype: 3.1.3
 
   '@types/react@19.2.14':
     dependencies:
@@ -16426,23 +16048,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/eslint-plugin@8.46.2(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)':
-    dependencies:
-      '@eslint-community/regexpp': 4.12.1
-      '@typescript-eslint/parser': 8.46.2(eslint@8.57.1)(typescript@5.9.3)
-      '@typescript-eslint/scope-manager': 8.46.2
-      '@typescript-eslint/type-utils': 8.46.2(eslint@8.57.1)(typescript@5.9.3)
-      '@typescript-eslint/utils': 8.46.2(eslint@8.57.1)(typescript@5.9.3)
-      '@typescript-eslint/visitor-keys': 8.46.2
-      eslint: 8.57.1
-      graphemer: 1.4.0
-      ignore: 7.0.5
-      natural-compare: 1.4.0
-      ts-api-utils: 2.1.0(typescript@5.9.3)
-      typescript: 5.9.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/experimental-utils@5.62.0(eslint@8.57.1)(typescript@5.9.3)':
     dependencies:
       '@typescript-eslint/utils': 5.62.0(eslint@8.57.1)(typescript@5.9.3)
@@ -16463,40 +16068,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3)':
-    dependencies:
-      '@typescript-eslint/scope-manager': 8.46.2
-      '@typescript-eslint/types': 8.46.2
-      '@typescript-eslint/typescript-estree': 8.46.2(typescript@5.9.3)
-      '@typescript-eslint/visitor-keys': 8.46.2
-      debug: 4.4.3
-      eslint: 8.57.1
-      typescript: 5.9.3
-    transitivePeerDependencies:
-      - supports-color
-
-  '@typescript-eslint/project-service@8.46.2(typescript@5.9.3)':
-    dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.46.2(typescript@5.9.3)
-      '@typescript-eslint/types': 8.46.2
-      debug: 4.4.3
-      typescript: 5.9.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/scope-manager@5.62.0':
     dependencies:
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/visitor-keys': 5.62.0
-
-  '@typescript-eslint/scope-manager@8.46.2':
-    dependencies:
-      '@typescript-eslint/types': 8.46.2
-      '@typescript-eslint/visitor-keys': 8.46.2
-
-  '@typescript-eslint/tsconfig-utils@8.46.2(typescript@5.9.3)':
-    dependencies:
-      typescript: 5.9.3
 
   '@typescript-eslint/type-utils@5.62.0(eslint@8.57.1)(typescript@5.9.3)':
     dependencies:
@@ -16510,21 +16085,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/type-utils@8.46.2(eslint@8.57.1)(typescript@5.9.3)':
-    dependencies:
-      '@typescript-eslint/types': 8.46.2
-      '@typescript-eslint/typescript-estree': 8.46.2(typescript@5.9.3)
-      '@typescript-eslint/utils': 8.46.2(eslint@8.57.1)(typescript@5.9.3)
-      debug: 4.4.3
-      eslint: 8.57.1
-      ts-api-utils: 2.1.0(typescript@5.9.3)
-      typescript: 5.9.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/types@5.62.0': {}
-
-  '@typescript-eslint/types@8.46.2': {}
 
   '@typescript-eslint/typescript-estree@5.62.0(typescript@5.9.3)':
     dependencies:
@@ -16536,22 +16097,6 @@ snapshots:
       semver: 7.7.4
       tsutils: 3.21.0(typescript@5.9.3)
     optionalDependencies:
-      typescript: 5.9.3
-    transitivePeerDependencies:
-      - supports-color
-
-  '@typescript-eslint/typescript-estree@8.46.2(typescript@5.9.3)':
-    dependencies:
-      '@typescript-eslint/project-service': 8.46.2(typescript@5.9.3)
-      '@typescript-eslint/tsconfig-utils': 8.46.2(typescript@5.9.3)
-      '@typescript-eslint/types': 8.46.2
-      '@typescript-eslint/visitor-keys': 8.46.2
-      debug: 4.4.3
-      fast-glob: 3.3.3
-      is-glob: 4.0.3
-      minimatch: 9.0.7
-      semver: 7.7.4
-      ts-api-utils: 2.1.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -16571,26 +16116,10 @@ snapshots:
       - supports-color
       - typescript
 
-  '@typescript-eslint/utils@8.46.2(eslint@8.57.1)(typescript@5.9.3)':
-    dependencies:
-      '@eslint-community/eslint-utils': 4.9.0(eslint@8.57.1)
-      '@typescript-eslint/scope-manager': 8.46.2
-      '@typescript-eslint/types': 8.46.2
-      '@typescript-eslint/typescript-estree': 8.46.2(typescript@5.9.3)
-      eslint: 8.57.1
-      typescript: 5.9.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/visitor-keys@5.62.0':
     dependencies:
       '@typescript-eslint/types': 5.62.0
       eslint-visitor-keys: 3.4.3
-
-  '@typescript-eslint/visitor-keys@8.46.2':
-    dependencies:
-      '@typescript-eslint/types': 8.46.2
-      eslint-visitor-keys: 4.2.1
 
   '@ungap/structured-clone@1.3.0': {}
 
@@ -16730,13 +16259,6 @@ snapshots:
     optionalDependencies:
       mem-fs: 4.1.2
 
-  '@yeoman/types@1.5.0(@types/node@24.9.1)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2)':
-    dependencies:
-      '@types/node': 24.9.1
-      '@yeoman/adapter': 1.6.0
-    optionalDependencies:
-      mem-fs: 4.1.2
-
   '@zkochan/js-yaml@0.0.7':
     dependencies:
       argparse: 2.0.1
@@ -16769,9 +16291,9 @@ snapshots:
       acorn: 7.4.1
       acorn-walk: 7.2.0
 
-  acorn-jsx@5.3.2(acorn@8.15.0):
+  acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:
-      acorn: 8.15.0
+      acorn: 8.16.0
 
   acorn-walk@7.2.0: {}
 
@@ -16782,10 +16304,7 @@ snapshots:
 
   acorn@7.4.1: {}
 
-  acorn@8.15.0: {}
-
-  acorn@8.16.0:
-    optional: true
+  acorn@8.16.0: {}
 
   address@1.2.2: {}
 
@@ -17111,7 +16630,7 @@ snapshots:
       '@babel/core': 7.28.5
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/plugin-syntax-typescript': 7.27.1(@babel/core@7.28.5)
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -17134,8 +16653,8 @@ snapshots:
 
   babel-plugin-jest-hoist@29.6.3:
     dependencies:
-      '@babel/template': 7.27.2
-      '@babel/types': 7.28.5
+      '@babel/template': 7.28.6
+      '@babel/types': 7.29.0
       '@types/babel__core': 7.20.5
       '@types/babel__traverse': 7.20.6
 
@@ -17340,7 +16859,7 @@ snapshots:
       bytes: 3.1.2
       content-type: 1.0.5
       debug: 4.4.3
-      http-errors: 2.0.0
+      http-errors: 2.0.1
       iconv-lite: 0.7.2
       on-finished: 2.4.1
       qs: 6.15.0
@@ -17792,7 +17311,7 @@ snapshots:
 
   compressible@2.0.18:
     dependencies:
-      mime-db: 1.53.0
+      mime-db: 1.54.0
 
   compression@1.8.0:
     dependencies:
@@ -17878,7 +17397,7 @@ snapshots:
   copyfiles@2.4.1:
     dependencies:
       glob: 7.2.3
-      minimatch: 3.1.2
+      minimatch: 3.1.4
       mkdirp: 1.0.4
       noms: 0.0.0
       through2: 2.0.5
@@ -17995,7 +17514,7 @@ snapshots:
       postcss-modules-scope: 3.2.1(postcss@8.5.3)
       postcss-modules-values: 4.0.0(postcss@8.5.3)
       postcss-value-parser: 4.2.0
-      semver: 7.7.3
+      semver: 7.7.4
     optionalDependencies:
       webpack: 5.98.0
 
@@ -18107,8 +17626,6 @@ snapshots:
   cssstyle@2.3.0:
     dependencies:
       cssom: 0.3.8
-
-  csstype@3.1.3: {}
 
   csstype@3.2.3: {}
 
@@ -18603,12 +18120,6 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-config-biome@1.9.4: {}
-
-  eslint-config-prettier@8.10.0(eslint@8.57.1):
-    dependencies:
-      eslint: 8.57.1
-
   eslint-config-react-app@7.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(eslint@8.57.1)(jest@27.5.1(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3)))(typescript@5.9.3):
     dependencies:
       '@babel/core': 7.28.5
@@ -18654,33 +18165,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@8.57.1):
-    dependencies:
-      debug: 3.2.7
-    optionalDependencies:
-      '@typescript-eslint/parser': 8.46.2(eslint@8.57.1)(typescript@5.9.3)
-      eslint: 8.57.1
-      eslint-import-resolver-node: 0.3.9
-    transitivePeerDependencies:
-      - supports-color
-
-  eslint-plugin-eslint-comments@3.2.0(eslint@8.57.1):
-    dependencies:
-      escape-string-regexp: 1.0.5
-      eslint: 8.57.1
-      ignore: 5.3.2
-
   eslint-plugin-flowtype@8.0.3(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(eslint@8.57.1):
     dependencies:
       '@babel/plugin-syntax-flow': 7.26.0(@babel/core@7.28.5)
       '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.28.5)
-      eslint: 8.57.1
-      lodash: 4.17.21
-      string-natural-compare: 3.0.1
-
-  eslint-plugin-ft-flow@2.0.3(@babel/eslint-parser@7.26.8(@babel/core@7.28.5)(eslint@8.57.1))(eslint@8.57.1):
-    dependencies:
-      '@babel/eslint-parser': 7.26.8(@babel/core@7.28.5)(eslint@8.57.1)
       eslint: 8.57.1
       lodash: 4.17.21
       string-natural-compare: 3.0.1
@@ -18700,7 +18188,7 @@ snapshots:
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
-      minimatch: 3.1.2
+      minimatch: 3.1.4
       object.fromentries: 2.0.8
       object.groupby: 1.0.3
       object.values: 1.2.1
@@ -18709,35 +18197,6 @@ snapshots:
       tsconfig-paths: 3.15.0
     optionalDependencies:
       '@typescript-eslint/parser': 5.62.0(eslint@8.57.1)(typescript@5.9.3)
-    transitivePeerDependencies:
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
-      - supports-color
-
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1):
-    dependencies:
-      '@rtsao/scc': 1.1.0
-      array-includes: 3.1.9
-      array.prototype.findlastindex: 1.2.6
-      array.prototype.flat: 1.3.3
-      array.prototype.flatmap: 1.3.3
-      debug: 3.2.7
-      doctrine: 2.1.0
-      eslint: 8.57.1
-      eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@8.57.1)
-      hasown: 2.0.2
-      is-core-module: 2.16.1
-      is-glob: 4.0.3
-      minimatch: 3.1.2
-      object.fromentries: 2.0.8
-      object.groupby: 1.0.3
-      object.values: 1.2.1
-      semver: 6.3.1
-      string.prototype.trimend: 1.0.9
-      tsconfig-paths: 3.15.0
-    optionalDependencies:
-      '@typescript-eslint/parser': 8.46.2(eslint@8.57.1)(typescript@5.9.3)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -18754,17 +18213,6 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-jest@29.15.0(@typescript-eslint/eslint-plugin@8.46.2(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(jest@29.7.0(@types/node@20.19.23)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3)))(typescript@5.9.3):
-    dependencies:
-      '@typescript-eslint/utils': 8.46.2(eslint@8.57.1)(typescript@5.9.3)
-      eslint: 8.57.1
-    optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 8.46.2(@typescript-eslint/parser@8.46.2(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
-      jest: 29.7.0(@types/node@20.19.23)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3))
-      typescript: 5.9.3
-    transitivePeerDependencies:
-      - supports-color
-
   eslint-plugin-jsx-a11y@6.10.2(eslint@8.57.1):
     dependencies:
       aria-query: 5.3.2
@@ -18779,7 +18227,7 @@ snapshots:
       hasown: 2.0.2
       jsx-ast-utils: 3.3.5
       language-tags: 1.0.9
-      minimatch: 3.1.2
+      minimatch: 3.1.4
       object.fromentries: 2.0.8
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
@@ -18787,28 +18235,6 @@ snapshots:
   eslint-plugin-react-hooks@4.6.2(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
-
-  eslint-plugin-react-hooks@5.2.0(eslint@8.57.1):
-    dependencies:
-      eslint: 8.57.1
-
-  eslint-plugin-react-hooks@7.0.1(eslint@8.57.1):
-    dependencies:
-      '@babel/core': 7.28.5
-      '@babel/parser': 7.29.0
-      eslint: 8.57.1
-      hermes-parser: 0.25.1
-      zod: 4.1.12
-      zod-validation-error: 4.0.2(zod@4.1.12)
-    transitivePeerDependencies:
-      - supports-color
-
-  eslint-plugin-react-native-globals@0.1.2: {}
-
-  eslint-plugin-react-native@5.0.0(eslint@8.57.1):
-    dependencies:
-      eslint: 8.57.1
-      eslint-plugin-react-native-globals: 0.1.2
 
   eslint-plugin-react@7.37.5(eslint@8.57.1):
     dependencies:
@@ -18822,7 +18248,7 @@ snapshots:
       estraverse: 5.3.0
       hasown: 2.0.2
       jsx-ast-utils: 3.3.5
-      minimatch: 3.1.2
+      minimatch: 3.1.4
       object.entries: 1.1.9
       object.fromentries: 2.0.8
       object.values: 1.2.1
@@ -18853,8 +18279,6 @@ snapshots:
   eslint-visitor-keys@2.1.0: {}
 
   eslint-visitor-keys@3.4.3: {}
-
-  eslint-visitor-keys@4.2.1: {}
 
   eslint-webpack-plugin@3.2.0(eslint@8.57.1)(webpack@5.98.0):
     dependencies:
@@ -18901,7 +18325,7 @@ snapshots:
       json-stable-stringify-without-jsonify: 1.0.1
       levn: 0.4.1
       lodash.merge: 4.6.2
-      minimatch: 3.1.2
+      minimatch: 3.1.4
       natural-compare: 1.4.0
       optionator: 0.9.4
       strip-ansi: 6.0.1
@@ -18911,8 +18335,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.15.0
-      acorn-jsx: 5.3.2(acorn@8.15.0)
+      acorn: 8.16.0
+      acorn-jsx: 5.3.2(acorn@8.16.0)
       eslint-visitor-keys: 3.4.3
 
   esprima@1.2.2: {}
@@ -19310,7 +18734,7 @@ snapshots:
 
   fork-ts-checker-webpack-plugin@6.5.3(eslint@8.57.1)(typescript@5.9.3)(webpack@5.98.0):
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       '@types/json-schema': 7.0.15
       chalk: 4.1.2
       chokidar: 3.6.0
@@ -19524,7 +18948,7 @@ snapshots:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 4.1.0
-      minimatch: 10.0.1
+      minimatch: 10.2.3
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
       path-scurry: 2.0.0
@@ -19543,7 +18967,7 @@ snapshots:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.1.2
+      minimatch: 3.1.4
       once: 1.4.0
       path-is-absolute: 1.0.1
 
@@ -19578,7 +19002,7 @@ snapshots:
       es6-error: 4.1.1
       matcher: 3.0.0
       roarr: 2.15.4
-      semver: 7.7.3
+      semver: 7.7.4
       serialize-error: 7.0.1
 
   global-directory@4.0.1:
@@ -19751,8 +19175,6 @@ snapshots:
 
   hermes-estree@0.23.1: {}
 
-  hermes-estree@0.25.1: {}
-
   hermes-estree@0.28.1: {}
 
   hermes-estree@0.29.1: {}
@@ -19764,10 +19186,6 @@ snapshots:
   hermes-parser@0.23.1:
     dependencies:
       hermes-estree: 0.23.1
-
-  hermes-parser@0.25.1:
-    dependencies:
-      hermes-estree: 0.25.1
 
   hermes-parser@0.28.1:
     dependencies:
@@ -20365,7 +19783,7 @@ snapshots:
   istanbul-lib-instrument@5.2.1:
     dependencies:
       '@babel/core': 7.28.5
-      '@babel/parser': 7.28.5
+      '@babel/parser': 7.29.0
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.2
       semver: 6.3.1
@@ -20606,13 +20024,6 @@ snapshots:
       diff-sequences: 29.6.3
       jest-get-type: 29.6.3
       pretty-format: 29.7.0
-
-  jest-diff@30.2.0:
-    dependencies:
-      '@jest/diff-sequences': 30.0.1
-      '@jest/get-type': 30.1.0
-      chalk: 4.1.2
-      pretty-format: 30.2.0
 
   jest-diff@30.3.0:
     dependencies:
@@ -21250,7 +20661,7 @@ snapshots:
   jscodeshift@17.1.2(@babel/preset-env@7.28.5(@babel/core@7.28.5)):
     dependencies:
       '@babel/core': 7.28.5
-      '@babel/parser': 7.28.5
+      '@babel/parser': 7.29.0
       '@babel/plugin-transform-class-properties': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-modules-commonjs': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-nullish-coalescing-operator': 7.27.1(@babel/core@7.28.5)
@@ -21275,7 +20686,7 @@ snapshots:
   jsdom@16.7.0:
     dependencies:
       abab: 2.0.6
-      acorn: 8.15.0
+      acorn: 8.16.0
       acorn-globals: 6.0.0
       cssom: 0.4.4
       cssstyle: 2.3.0
@@ -21854,7 +21265,7 @@ snapshots:
       metro-cache: 0.83.5
       metro-core: 0.83.5
       metro-runtime: 0.83.5
-      yaml: 2.8.1
+      yaml: 2.8.3
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -21982,9 +21393,9 @@ snapshots:
 
   metro-source-map@0.82.5:
     dependencies:
-      '@babel/traverse': 7.28.5
+      '@babel/traverse': 7.29.0
       '@babel/traverse--for-generate-function-map': '@babel/traverse@7.29.0'
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
       flow-enums-runtime: 0.0.6
       invariant: 2.2.4
       metro-symbolicate: 0.82.5
@@ -22138,13 +21549,13 @@ snapshots:
 
   metro@0.80.12:
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       '@babel/core': 7.28.5
-      '@babel/generator': 7.28.5
-      '@babel/parser': 7.28.5
-      '@babel/template': 7.27.2
-      '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/generator': 7.29.1
+      '@babel/parser': 7.29.0
+      '@babel/template': 7.28.6
+      '@babel/traverse': 7.29.0
+      '@babel/types': 7.29.0
       accepts: 1.3.8
       chalk: 4.1.2
       ci-info: 2.0.0
@@ -22187,13 +21598,13 @@ snapshots:
 
   metro@0.82.5:
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       '@babel/core': 7.28.5
-      '@babel/generator': 7.28.5
-      '@babel/parser': 7.28.5
-      '@babel/template': 7.27.2
-      '@babel/traverse': 7.28.5
-      '@babel/types': 7.28.5
+      '@babel/generator': 7.29.1
+      '@babel/parser': 7.29.0
+      '@babel/template': 7.28.6
+      '@babel/traverse': 7.29.0
+      '@babel/types': 7.29.0
       accepts: 1.3.8
       chalk: 4.1.2
       ci-info: 2.0.0
@@ -22286,8 +21697,6 @@ snapshots:
 
   mime-db@1.52.0: {}
 
-  mime-db@1.53.0: {}
-
   mime-db@1.54.0: {}
 
   mime-types@2.1.35:
@@ -22326,10 +21735,6 @@ snapshots:
 
   minimalistic-assert@1.0.1: {}
 
-  minimatch@10.0.1:
-    dependencies:
-      brace-expansion: 2.0.2
-
   minimatch@10.1.1:
     dependencies:
       '@isaacs/brace-expansion': 5.0.1
@@ -22339,10 +21744,6 @@ snapshots:
       brace-expansion: 5.0.3
 
   minimatch@3.0.8:
-    dependencies:
-      brace-expansion: 1.1.12
-
-  minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.12
 
@@ -22674,7 +22075,7 @@ snapshots:
       flat: 5.0.2
       front-matter: 4.0.2
       ignore: 7.0.5
-      jest-diff: 30.2.0
+      jest-diff: 30.3.0
       jsonc-parser: 3.2.0
       lines-and-columns: 2.0.3
       minimatch: 10.1.1
@@ -22684,14 +22085,14 @@ snapshots:
       ora: 5.3.0
       picocolors: 1.1.1
       resolve.exports: 2.0.3
-      semver: 7.7.3
+      semver: 7.7.4
       string-width: 4.2.3
       tar-stream: 2.2.0
       tmp: 0.2.5
       tree-kill: 1.2.2
       tsconfig-paths: 4.2.0
       tslib: 2.8.1
-      yaml: 2.8.1
+      yaml: 2.8.3
       yargs: 17.7.2
       yargs-parser: 21.1.1
     optionalDependencies:
@@ -23100,7 +22501,7 @@ snapshots:
       got: 11.8.6
       registry-auth-token: 4.2.2
       registry-url: 5.1.0
-      semver: 7.7.3
+      semver: 7.7.4
 
   pacote@18.0.6:
     dependencies:
@@ -23166,7 +22567,7 @@ snapshots:
 
   parse-json@5.2.0:
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
@@ -23449,7 +22850,7 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.5.3)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3)):
     dependencies:
       lilconfig: 3.1.3
-      yaml: 2.8.1
+      yaml: 2.8.3
     optionalDependencies:
       postcss: 8.5.3
       ts-node: 10.9.1(@types/node@20.19.23)(typescript@5.9.3)
@@ -23459,7 +22860,7 @@ snapshots:
       cosmiconfig: 7.1.0
       klona: 2.0.6
       postcss: 8.5.3
-      semver: 7.7.3
+      semver: 7.7.4
       webpack: 5.98.0
 
   postcss-logical@5.0.4(postcss@8.5.3):
@@ -23738,8 +23139,6 @@ snapshots:
 
   prepend-http@2.0.0: {}
 
-  prettier@3.5.3: {}
-
   pretty-bytes@5.6.0: {}
 
   pretty-bytes@6.1.1: {}
@@ -23765,12 +23164,6 @@ snapshots:
   pretty-format@29.7.0:
     dependencies:
       '@jest/schemas': 29.6.3
-      ansi-styles: 5.2.0
-      react-is: 18.3.1
-
-  pretty-format@30.2.0:
-    dependencies:
-      '@jest/schemas': 30.0.5
       ansi-styles: 5.2.0
       react-is: 18.3.1
 
@@ -23909,7 +23302,7 @@ snapshots:
 
   react-dev-utils@12.0.1(eslint@8.57.1)(typescript@5.9.3)(webpack@5.98.0):
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       address: 1.2.2
       browserslist: 4.27.0
       chalk: 4.1.2
@@ -23941,14 +23334,6 @@ snapshots:
       - supports-color
       - vue-template-compiler
 
-  react-devtools-core@6.1.1:
-    dependencies:
-      shell-quote: 1.8.2
-      ws: 7.5.10
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
   react-devtools-core@6.1.5:
     dependencies:
       shell-quote: 1.8.2
@@ -23957,9 +23342,9 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  react-dom@19.1.0(react@19.1.0):
+  react-dom@19.1.0(react@19.2.3):
     dependencies:
-      react: 19.1.0
+      react: 19.2.3
       scheduler: 0.26.0
 
   react-error-overlay@6.1.0: {}
@@ -24011,10 +23396,10 @@ snapshots:
       react: 19.2.3
       react-native: 0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3)
 
-  react-native-test-app@5.1.0(@expo/config-plugins@8.0.11)(react-native@0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3))(react@19.2.3):
+  react-native-test-app@5.1.0(@expo/config-plugins@8.0.11)(metro@0.83.5)(react-native@0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3))(react@19.2.3):
     dependencies:
       '@rnx-kit/react-native-host': 0.5.16(react-native@0.84.1(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.28.5))(@types/react@19.2.14)(react@19.2.3))
-      '@rnx-kit/tools-react-native': 2.1.0
+      '@rnx-kit/tools-react-native': 2.3.5(metro@0.83.5)
       ajv: 8.17.1
       cliui: 8.0.1
       fast-xml-parser: 5.5.7
@@ -24025,8 +23410,11 @@ snapshots:
       uuid: 11.1.0
     optionalDependencies:
       '@expo/config-plugins': 8.0.11
+    transitivePeerDependencies:
+      - memfs
+      - metro
 
-  react-native@0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0):
+  react-native@0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.2.14)(react@19.1.0):
     dependencies:
       '@jest/create-cache-key-function': 29.7.0
       '@react-native/assets-registry': 0.80.0
@@ -24035,7 +23423,7 @@ snapshots:
       '@react-native/gradle-plugin': 0.80.0
       '@react-native/js-polyfills': 0.80.0
       '@react-native/normalize-colors': 0.80.0
-      '@react-native/virtualized-lists': 0.80.0(@types/react@19.1.8)(react-native@0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.1.8)(react@19.1.0))(react@19.1.0)
+      '@react-native/virtualized-lists': 0.80.0(@types/react@19.2.14)(react-native@0.80.0(@babel/core@7.28.5)(@react-native-community/cli@20.1.2(typescript@5.9.3))(@types/react@19.2.14)(react@19.1.0))(react@19.1.0)
       abort-controller: 3.0.0
       anser: 1.4.10
       ansi-regex: 5.0.1
@@ -24055,17 +23443,17 @@ snapshots:
       pretty-format: 29.7.0
       promise: 8.3.0
       react: 19.1.0
-      react-devtools-core: 6.1.1
+      react-devtools-core: 6.1.5
       react-refresh: 0.14.2
       regenerator-runtime: 0.13.11
       scheduler: 0.26.0
-      semver: 7.7.3
+      semver: 7.7.4
       stacktrace-parser: 0.1.11
       whatwg-fetch: 3.6.20
       ws: 6.2.3
       yargs: 17.7.2
     optionalDependencies:
-      '@types/react': 19.1.8
+      '@types/react': 19.2.14
     transitivePeerDependencies:
       - '@babel/core'
       - '@react-native-community/cli'
@@ -24125,7 +23513,7 @@ snapshots:
 
   react-refresh@0.14.2: {}
 
-  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@19.1.0)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3))(type-fest@4.37.0)(typescript@5.9.3):
+  react-scripts@5.0.1(@babel/plugin-syntax-flow@7.26.0(@babel/core@7.28.5))(@babel/plugin-transform-react-jsx@7.25.9(@babel/core@7.28.5))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@19.2.3)(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3))(type-fest@4.37.0)(typescript@5.9.3):
     dependencies:
       '@babel/core': 7.28.5
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.11.0)(type-fest@4.37.0)(webpack-dev-server@4.15.2(webpack@5.98.0))(webpack@5.98.0)
@@ -24159,14 +23547,14 @@ snapshots:
       postcss-normalize: 10.0.1(browserslist@4.27.0)(postcss@8.5.3)
       postcss-preset-env: 7.8.3(postcss@8.5.3)
       prompts: 2.4.2
-      react: 19.1.0
+      react: 19.2.3
       react-app-polyfill: 3.0.0
       react-dev-utils: 12.0.1(eslint@8.57.1)(typescript@5.9.3)(webpack@5.98.0)
       react-refresh: 0.11.0
       resolve: 1.22.11
       resolve-url-loader: 4.0.0
       sass-loader: 12.6.0(webpack@5.98.0)
-      semver: 7.7.3
+      semver: 7.7.4
       source-map-loader: 3.0.2(webpack@5.98.0)
       style-loader: 3.3.4(webpack@5.98.0)
       tailwindcss: 3.4.17(ts-node@10.9.1(@types/node@20.19.23)(typescript@5.9.3))
@@ -24645,8 +24033,6 @@ snapshots:
   semver@5.7.2: {}
 
   semver@6.3.1: {}
-
-  semver@7.7.3: {}
 
   semver@7.7.4: {}
 
@@ -25341,7 +24727,7 @@ snapshots:
   terser@5.39.0:
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.15.0
+      acorn: 8.16.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
@@ -25450,10 +24836,6 @@ snapshots:
   trim-newlines@2.0.0: {}
 
   tryer@1.0.1: {}
-
-  ts-api-utils@2.1.0(typescript@5.9.3):
-    dependencies:
-      typescript: 5.9.3
 
   ts-interface-checker@0.1.13: {}
 
@@ -25659,8 +25041,6 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  undici-types@7.16.0: {}
-
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 
   unicode-match-property-ecmascript@2.0.0:
@@ -25735,7 +25115,7 @@ snapshots:
       is-yarn-global: 0.3.0
       latest-version: 5.1.0
       pupa: 2.1.1
-      semver: 7.7.3
+      semver: 7.7.4
       semver-diff: 3.1.1
       xdg-basedir: 4.0.0
 
@@ -25949,7 +25329,7 @@ snapshots:
       '@webassemblyjs/ast': 1.14.1
       '@webassemblyjs/wasm-edit': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
-      acorn: 8.15.0
+      acorn: 8.16.0
       browserslist: 4.27.0
       chrome-trace-event: 1.0.4
       enhanced-resolve: 5.18.1
@@ -26309,8 +25689,6 @@ snapshots:
 
   yaml@1.10.2: {}
 
-  yaml@2.8.1: {}
-
   yaml@2.8.3: {}
 
   yargs-parser@10.1.0:
@@ -26395,7 +25773,7 @@ snapshots:
       lodash-es: 4.17.21
       mem-fs: 4.1.2
       mem-fs-editor: 11.1.4(mem-fs@4.1.2)
-      semver: 7.7.3
+      semver: 7.7.4
       slash: 5.1.0
       untildify: 5.0.0
       which-package-manager: 0.0.1
@@ -26404,11 +25782,11 @@ snapshots:
       - bluebird
       - supports-color
 
-  yeoman-generator@7.5.0(@types/node@24.9.1)(@yeoman/types@1.5.0(@types/node@24.9.1)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2))(mem-fs@4.1.2):
+  yeoman-generator@7.5.0(@types/node@20.19.23)(@yeoman/types@1.5.0(@types/node@20.19.23)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2))(mem-fs@4.1.2):
     dependencies:
       '@types/lodash-es': 4.17.12
       '@yeoman/namespace': 1.0.1
-      '@yeoman/types': 1.5.0(@types/node@24.9.1)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2)
+      '@yeoman/types': 1.5.0(@types/node@20.19.23)(@yeoman/adapter@1.6.0)(mem-fs@4.1.2)
       chalk: 5.6.2
       debug: 4.4.3
       execa: 8.0.1
@@ -26420,12 +25798,12 @@ snapshots:
       mem-fs-editor: 11.1.4(mem-fs@4.1.2)
       minimist: 1.2.8
       read-package-up: 11.0.0
-      semver: 7.7.3
+      semver: 7.7.4
       simple-git: 3.27.0
       sort-keys: 5.1.0
       text-table: 0.2.0
     optionalDependencies:
-      '@types/node': 24.9.1
+      '@types/node': 20.19.23
     transitivePeerDependencies:
       - supports-color
 
@@ -26489,9 +25867,5 @@ snapshots:
       strip-ansi: 3.0.1
       taketalk: 1.0.0
       wrap-ansi: 2.1.0
-
-  zod-validation-error@4.0.2(zod@4.1.12):
-    dependencies:
-      zod: 4.1.12
 
   zod@4.1.12: {}

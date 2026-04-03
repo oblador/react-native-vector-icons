@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/Zocial.json';
 export const Zocial = createIconSet(glyphMap, {
   postScriptName: 'zocial',
   fontFileName: 'Zocial.ttf',
-  fontSource: require('../fonts/Zocial.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/Zocial.ttf'),
 });
 
 export type ZocialIconName = keyof typeof glyphMap;

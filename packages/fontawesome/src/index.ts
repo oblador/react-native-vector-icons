@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/FontAwesome.json';
 export const FontAwesome = createIconSet(glyphMap, {
   postScriptName: 'FontAwesome',
   fontFileName: 'FontAwesome.ttf',
-  fontSource: require('../fonts/FontAwesome.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/FontAwesome.ttf'),
 });
 
 export type FontAwesomeIconName = keyof typeof glyphMap;

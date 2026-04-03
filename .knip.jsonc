@@ -49,7 +49,6 @@
       "ignoreDependencies": [
         "@react-native-vector-icons/get-image",
         "@babel/preset-env",
-        "@react-native/eslint-config",
         "@rnx-kit/align-deps",
         "react-test-renderer",
         "@types/react-test-renderer",

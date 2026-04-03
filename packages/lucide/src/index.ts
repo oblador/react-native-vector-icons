@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/Lucide.json';
 export const Lucide = createIconSet(glyphMap, {
   postScriptName: 'Lucide',
   fontFileName: 'Lucide.ttf',
-  fontSource: require('../fonts/Lucide.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/Lucide.ttf'),
 });
 
 export type LucideIconName = keyof typeof glyphMap;

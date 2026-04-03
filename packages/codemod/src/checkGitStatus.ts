@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { execSync } from 'node:child_process';
 
 export function checkGitStatus(dir: string): void {

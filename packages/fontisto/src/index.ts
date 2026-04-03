@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/Fontisto.json';
 export const Fontisto = createIconSet(glyphMap, {
   postScriptName: 'fontisto',
   fontFileName: 'Fontisto.ttf',
-  fontSource: require('../fonts/Fontisto.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/Fontisto.ttf'),
 });
 
 export type FontistoIconName = keyof typeof glyphMap;

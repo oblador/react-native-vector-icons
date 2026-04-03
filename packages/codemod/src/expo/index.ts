@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import { run as jscodeshift } from 'jscodeshift/src/Runner';
 import resolveFrom from 'resolve-from';
 

@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/Ionicons.json';
 export const Ionicons = createIconSet(glyphMap, {
   postScriptName: 'Ionicons',
   fontFileName: 'Ionicons.ttf',
-  fontSource: require('../fonts/Ionicons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/Ionicons.ttf'),
 });
 
 export type IoniconsIconName = keyof typeof glyphMap;

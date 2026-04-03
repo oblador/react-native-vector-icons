@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-pascal-case, no-console */
-
 /**
  * This is a generated file. If you modify it manually, your changes will be lost!
  * Instead, modify the template in `fontawesome-common/generator`.

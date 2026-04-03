@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-pascal-case, no-console */
-
 /**
  * This is a generated file. If you modify it manually, your changes will be lost!
  * Instead, modify the template in `fontawesome-common/generator`.
@@ -38,7 +36,7 @@ const <%= upperStyleName %>Icon = createIconSet(<%= styleName %>GM, {
   postScriptName: '<%= family %>',
   fontFileName: '<%= name %>',
 <% if (!locals.isStatic && !packageName.endsWith('-pro')) { -%>
-  fontSource: require('../fonts/<%= name %>'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/<%= name %>'),
 <% } -%>
   fontStyle: fontStyle('<%= weight %>')
 });

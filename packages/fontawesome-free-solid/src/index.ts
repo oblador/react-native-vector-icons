@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/FontAwesomeFreeSolid.json';
 export const FontAwesomeFreeSolid = createIconSet(glyphMap, {
   postScriptName: 'FontAwesome7Free-Solid',
   fontFileName: 'fa-solid-900.ttf',
-  fontSource: require('../fonts/fa-solid-900.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/fa-solid-900.ttf'),
 });
 
 export type FontAwesomeFreeSolidIconName = keyof typeof glyphMap;

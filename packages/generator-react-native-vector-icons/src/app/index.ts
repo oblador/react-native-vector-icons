@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle,import/no-unresolved */
-
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';

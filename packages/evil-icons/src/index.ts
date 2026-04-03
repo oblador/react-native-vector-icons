@@ -16,7 +16,7 @@ import glyphMap from '../glyphmaps/EvilIcons.json';
 export const EvilIcons = createIconSet(glyphMap, {
   postScriptName: 'EvilIcons',
   fontFileName: 'EvilIcons.ttf',
-  fontSource: require('../fonts/EvilIcons.ttf'), // eslint-disable-line @typescript-eslint/no-require-imports, global-require
+  fontSource: require('../fonts/EvilIcons.ttf'),
 });
 
 export type EvilIconsIconName = keyof typeof glyphMap;
