@@ -47,7 +47,6 @@
       "ignore": ["metro.config.js", "configPlugin.js"],
       "metro": false,
       "ignoreDependencies": [
-        "@react-native-vector-icons/get-image",
         "@babel/preset-env",
         "@rnx-kit/align-deps",
         "react-test-renderer",
@@ -105,6 +104,10 @@
       "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["@react-native-vector-icons/fontawesome-common"]
     },
+    "packages/fontcustom-docker": {},
+    "packages/fontello": {
+      "entry": ["src/index.{ts,tsx}"]
+    },
     "packages/fontisto": {
       "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["fontisto"]
@@ -112,6 +115,9 @@
     "packages/foundation": {
       "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
       "ignoreDependencies": ["foundation-icons"]
+    },
+    "packages/icomoon": {
+      "entry": ["src/index.{ts,tsx}"]
     },
     "packages/ionicons": {
       "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"],
