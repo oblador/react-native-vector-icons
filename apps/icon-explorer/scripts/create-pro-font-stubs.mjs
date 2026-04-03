@@ -11,13 +11,15 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../../packages');
+const currentDir = dirname(fileURLToPath(import.meta.url));
+const packagesDir = resolve(currentDir, '../../../packages');
+const explorerDir = resolve(currentDir, '..');
 
 for (const dir of ['fontawesome5-pro', 'fontawesome6-pro']) {
-  const destDir = join(root, 'rnvi-fonts', dir);
+  const destDir = join(explorerDir, 'rnvi-fonts', dir);
   mkdirSync(destDir, { recursive: true });
 
-  const yorc = join(root, dir, '.yo-rc.json');
+  const yorc = join(packagesDir, dir, '.yo-rc.json');
   const yo = JSON.parse(readFileSync(yorc, 'utf8'));
   const styles = yo['generator-react-native-vector-icons'].meta.styles;
 
