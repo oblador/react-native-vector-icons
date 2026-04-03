@@ -327,9 +327,6 @@ export default class extends Generator<Data, Arguments> {
 
     const location = fixSVGPaths.cleanup ? 'renamedSVGs' : fixSVGPaths.location;
 
-    console.log('🪚 ⭐');
-    console.log(process.cwd(), location);
-
     const { exitCode } = this.spawnSync(
       '../generator-react-native-vector-icons/node_modules/.bin/oslllo-svg-fixer',
       ['-s', location, '-d', 'fixedSvg'],
@@ -341,7 +338,7 @@ export default class extends Generator<Data, Arguments> {
     }
 
     if (fixSVGPaths.cleanup) {
-      fs.rmSync('renamedSVgs', { recursive: true });
+      fs.rmSync('renamedSVGs', { recursive: true });
     }
   }
 
