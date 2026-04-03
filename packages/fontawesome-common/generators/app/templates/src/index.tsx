@@ -8,6 +8,7 @@
  * Usage: <<%= className %> name="icon-name" size={20} color="#4F8EF7" />
  */
 
+// biome-ignore assist/source/organizeImports: organized by generator
 import type { ComponentProps } from 'react';
 import { Platform, type TextStyle } from 'react-native';
 

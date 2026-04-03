@@ -1,11 +1,11 @@
+// @ts-expect-error missing types
+import { getAssetByID } from '@react-native/assets-registry/registry';
+
 /*
  * The following imports are always present when react native is installed
  * in the future, more explicit apis will be exposed by the core, including typings
  * */
 import { Image, Platform } from 'react-native';
-
-// @ts-expect-error missing types
-import { getAssetByID } from '@react-native/assets-registry/registry';
 
 import { assertExpoModulesPresent, getErrorCallback, type LoadAsyncAsset } from './dynamic-loading-setting';
 import type { DynamicLoader, FontSource } from './types';

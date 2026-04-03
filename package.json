@@ -14,7 +14,7 @@
     "release": "nx release"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.0",
+    "@biomejs/biome": "^2.4.10",
     "@commitlint/config-conventional": "^20.0.0",
     "@evilmartians/lefthook": "^2.0.1",
     "@nx/js": "^22.5.2",

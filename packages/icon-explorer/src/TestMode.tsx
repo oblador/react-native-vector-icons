@@ -1,6 +1,3 @@
-import type { ReactNode } from 'react';
-import { ScrollView, Text, View } from 'react-native';
-
 import { AntDesign } from '@react-native-vector-icons/ant-design';
 import { Entypo } from '@react-native-vector-icons/entypo';
 import { EvilIcons } from '@react-native-vector-icons/evil-icons';
@@ -21,6 +18,8 @@ import { MaterialIcons } from '@react-native-vector-icons/material-icons';
 import { Octicons } from '@react-native-vector-icons/octicons';
 import { SimpleLineIcons } from '@react-native-vector-icons/simple-line-icons';
 import { Zocial } from '@react-native-vector-icons/zocial';
+import type { ReactNode } from 'react';
+import { ScrollView, Text, View } from 'react-native';
 
 import FontelloConfig from './configs/fontello.config.json';
 import IcoMoonConfig from './configs/icomoon.config.json';

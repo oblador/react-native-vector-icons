@@ -1,8 +1,7 @@
-import { type ReactNode, useEffect, useState } from 'react';
-import { Image, Pressable, ScrollView, StyleSheet, Text, View, type ViewProps } from 'react-native';
-
 import { FontAwesome } from '@react-native-vector-icons/fontawesome';
 import { getImageForFontSync } from '@react-native-vector-icons/get-image';
+import { type ReactNode, useEffect, useState } from 'react';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View, type ViewProps } from 'react-native';
 
 type ImageResult = ReturnType<typeof FontAwesome.getImageSourceSync>;
 
