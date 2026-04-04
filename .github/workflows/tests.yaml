@@ -8,14 +8,14 @@ on:
     paths:
       - ".github/workflows/tests.yaml"
       - "packages/**"
-      - "!apps/directory/**"
       - "!packages/codemod/**"
+      - "apps/icon-explorer"
   pull_request:
     paths:
       - ".github/workflows/tests.yaml"
       - "packages/**"
-      - "!apps/directory/**"
       - "!packages/codemod/**"
+      - "apps/icon-explorer"
   workflow_dispatch:
 
 jobs:
