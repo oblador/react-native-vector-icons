@@ -2,13 +2,13 @@
 
 > If you use React Native without Expo, please follow [this guide](./SETUP-REACT-NATIVE.md) instead. This guide applies to Expo apps only.
 
-> [!INFO]
+> [!NOTE]
 > TL;DR: Font files are always shipped with the app — the difference is **where** they live and **how** they get registered with the OS. With the default (dynamic) import, Metro bundles the font as a JS asset and `expo-font` registers it at runtime. With the `/static` import, the font is embedded into the native binary and available immediately at launch.
 
 ## Dynamic import (default, works with Expo Go)
 
 ```js
-import MaterialIcons from "@react-native-vector-icons/material-icons";
+import { MaterialIcons } from "@react-native-vector-icons/material-icons";
 ```
 
 Metro bundles the font alongside your JS code. When the icon first renders, `expo-font` registers the font with the native text system automatically. No native configuration or config plugins needed. Works with Expo Go and OTA updates.
@@ -16,7 +16,7 @@ Metro bundles the font alongside your JS code. When the icon first renders, `exp
 ## Static import (recommended for Development Builds)
 
 ```js
-import MaterialIcons from "@react-native-vector-icons/material-icons/static";
+import { MaterialIcons } from "@react-native-vector-icons/material-icons/static";
 ```
 
 With the `/static` import, Metro does not bundle the font. Instead, we rely on it being embedded into the native binary at build time, and each icon package ships an Expo config plugin that handles registering the font with iOS (it adds the font to `UIAppFonts` in `Info.plist`). Add the icon packages you use to the `plugins` array in your `app.json` or `app.config.js`:
@@ -34,7 +34,7 @@ With the `/static` import, Metro does not bundle the font. Instead, we rely on i
 
 Then run `npx expo prebuild` to regenerate the native project.
 
-> [!INFO]
+> [!NOTE]
 > Static import doesn't work with Expo Go because there is no native build step. A font embedded this way also cannot be updated by OTA — it is part of the native binary.
 
 > [!WARNING]

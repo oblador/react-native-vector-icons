@@ -53,10 +53,6 @@ FontAwesome6.getImageSource("solid", "comments", 30, "#000").then((source) =>
 );
 ```
 
-# Upgrading to Pro
-
-Use the `@react-native-vector-icons/fontawesome6-pro` package instead.
-
 ### Expo Config Plugin
 
 This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to the `plugins` array in your `app.json` or `app.config.js` if you use static imports:
@@ -68,3 +64,7 @@ This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to 
   }
 }
 ```
+
+# Upgrading to Pro
+
+Use the `@react-native-vector-icons/fontawesome6-pro` package instead.
