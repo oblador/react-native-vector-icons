@@ -38,7 +38,7 @@ import { FontAwesomeProSharpThin } from '@react-native-vector-icons/fontawesome-
 
 ### Expo Config Plugin
 
-This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to the `plugins` array in your `app.json` or `app.config.js` if you use static imports:
+This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md) to register the font with iOS. Add it to the `plugins` array in your `app.json` or `app.config.js`:
 
 ```json
 {
