@@ -14,13 +14,7 @@ npm install @react-native-vector-icons/icomoon
 
 1. Add the config.json somewhere in your project to be imported
 1. Add the ttf file into `rnvi-fonts/icomoon`. You can customise this location as described in [react-native-vector-icons](../../README.md#custom-fonts)
-1. Add this package to your project
-
-```sh
-npm install @react-native-vector-icons/icomoon
-```
-
-4. Create the component in your project and use it
+1. Create the component in your project and use it
 
 ```js
 import createIconSet from '@react-native-vector-icons/icomoon';

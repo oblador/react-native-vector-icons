@@ -14,13 +14,7 @@ npm install @react-native-vector-icons/fontello
 
 1. Add the config.json somewhere in your project to be imported
 2. Add the ttf file into `rnvi-fonts/fontello`. You can customise this location as described in [react-native-vector-icons](../../README.md#custom-fonts)
-3. Add this package to your project
-
-```sh
-pnpm install @react-native-vector-icons/fontello
-```
-
-4. Create the component in your project and use it
+3. Create the component in your project and use it
 
 ```js
 import createIconSet from '@react-native-vector-icons/fontello';
