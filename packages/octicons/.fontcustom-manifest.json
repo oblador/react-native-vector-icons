@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "fd9a60b515041398881b0181628154702913f13d8e3ef4646e83a01b8bc4af1b",
-    "current": "fd9a60b515041398881b0181628154702913f13d8e3ef4646e83a01b8bc4af1b"
+    "previous": "7964f0d24b2643bd5ac8e27d1fc994ee68b3001293f6ba8b086d42a51baefea0",
+    "current": "7964f0d24b2643bd5ac8e27d1fc994ee68b3001293f6ba8b086d42a51baefea0"
   },
   "fonts": [
     "Octicons/Octicons.ttf",
@@ -826,6 +826,10 @@
     "lock": {
       "codepoint": 61874,
       "source": "renamedSVGs/lock.svg"
+    },
+    "lockup-github": {
+      "codepoint": 62065,
+      "source": "renamedSVGs/lockup-github.svg"
     },
     "log": {
       "codepoint": 61875,

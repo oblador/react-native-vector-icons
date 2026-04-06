@@ -102,7 +102,7 @@
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
     "typescript": "^5.7.2",
-    "@primer/octicons": "19.22.0"
+    "@primer/octicons": "19.23.1"
   },
   "peerDependencies": {
     "react": "*",
