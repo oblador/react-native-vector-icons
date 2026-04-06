@@ -3,5 +3,10 @@ packages:
   - apps/*
 allowBuilds:
   "@evilmartians/lefthook": true
+  core-js-pure: true
   nx: true
+  unrs-resolver: true
   yo: true
+blockExoticSubdeps: true
+minimumReleaseAge: 1440
+trustPolicy: no-downgrade
