@@ -29,7 +29,7 @@ module.exports = (config) =>
     const fonts = ['<%= fontFileName %>.ttf'];
 <% } -%>
 
-    c.ios.infoPlist.UIAppFonts = [...new Set([...(c.ios.infoPlist.UIAppFonts || []), ...fonts])];
+    c.modResults.UIAppFonts = [...new Set([...(c.modResults.UIAppFonts || []), ...fonts])];
 
     return c;
   });

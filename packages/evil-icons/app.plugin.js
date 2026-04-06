@@ -4,7 +4,7 @@ module.exports = (config) =>
   withInfoPlist(config, (c) => {
     const fonts = ['EvilIcons.ttf'];
 
-    c.ios.infoPlist.UIAppFonts = [...new Set([...(c.ios.infoPlist.UIAppFonts || []), ...fonts])];
+    c.modResults.UIAppFonts = [...new Set([...(c.modResults.UIAppFonts || []), ...fonts])];
 
     return c;
   });

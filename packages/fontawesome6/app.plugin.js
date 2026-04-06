@@ -4,7 +4,7 @@ module.exports = (config) =>
   withInfoPlist(config, (c) => {
     const fonts = ['FontAwesome6_Regular.ttf', 'FontAwesome6_Solid.ttf', 'FontAwesome6_Brands.ttf'];
 
-    c.ios.infoPlist.UIAppFonts = [...new Set([...(c.ios.infoPlist.UIAppFonts || []), ...fonts])];
+    c.modResults.UIAppFonts = [...new Set([...(c.modResults.UIAppFonts || []), ...fonts])];
 
     return c;
   });

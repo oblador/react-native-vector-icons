@@ -19,7 +19,7 @@ module.exports = (config) =>
       throw new Error(`No .ttf fonts found in ${fontsDir}. See the package README for setup instructions.`);
     }
 
-    c.ios.infoPlist.UIAppFonts = [...new Set([...(c.ios.infoPlist.UIAppFonts || []), ...fonts])];
+    c.modResults.UIAppFonts = [...new Set([...(c.modResults.UIAppFonts || []), ...fonts])];
 
     return c;
   });
