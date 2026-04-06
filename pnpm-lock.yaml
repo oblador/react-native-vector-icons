@@ -1424,8 +1424,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       lucide-static:
-        specifier: 0.576.0
-        version: 0.576.0
+        specifier: 1.7.0
+        version: 1.7.0
       onchange:
         specifier: ^7.1.0
         version: 7.1.0
@@ -8469,8 +8469,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-static@0.576.0:
-    resolution: {integrity: sha512-0LPnsw/0/PC8Diu0neT6lSsR/ZaCQRu2B4d15joy5OFlSrhyJi5Jc8p1aYOn2wqb4dUECxQ/fk1s4iSlKYvqqA==}
+  lucide-static@1.7.0:
+    resolution: {integrity: sha512-d2H0iplJoHN67x9mPUvIfsHhtsI3BRvhhzfreccj+0sHHf4TjHvPEaWHNMR5iMKAFq3HKVfzx3kb82L8sPp2rA==}
 
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
@@ -20308,7 +20308,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-static@0.576.0: {}
+  lucide-static@1.7.0: {}
 
   lz-string@1.5.0: {}
 
