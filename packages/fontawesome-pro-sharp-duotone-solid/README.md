@@ -35,6 +35,19 @@ import { FontAwesomeProSharpDuotoneSolid } from '@react-native-vector-icons/font
 <FontAwesomeProSharpDuotoneSolid name="house" color="#ff0000" size={20} />
 ```
 
+
+### Expo Config Plugin
+
+This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to the `plugins` array in your `app.json` or `app.config.js` if you use static imports:
+
+```json
+{
+  "expo": {
+    "plugins": ["@react-native-vector-icons/fontawesome-pro-sharp-duotone-solid"]
+  }
+}
+```
+
 ## Versions
 
 Prior to version 12, the version of this font package tracked the upstream version.

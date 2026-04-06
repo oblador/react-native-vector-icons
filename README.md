@@ -104,7 +104,7 @@ You can either use one of the bundled icons above or roll your own custom font.
 
 ```js
 import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid";
-// or use the static version if you don't need [dynamic font loading](#dynamic-icon-font-loading) to get a slightly smaller bundle size
+// or use the static version to embed the font at build time instead of loading it at runtime
 import { FontAwesomeFreeSolid } from "@react-native-vector-icons/fontawesome-free-solid/static";
 
 <FontAwesomeFreeSolid name="rocket" size={30} color="#900" />;
@@ -211,20 +211,11 @@ animation library
 
 ## Dynamic icon font loading
 
-> Dynamic loading is supported on all platforms if you use Expo ([Expo Go](https://expo.dev/go) or a [development build](https://docs.expo.dev/develop/development-builds/introduction/)). In the future, it should become available for all React Native projects via React Native core.
+TL;DR we recommend you use the `/static` import if you use [Development builds](https://docs.expo.dev/develop/development-builds/introduction/) and the root import when using [Expo Go](https://docs.expo.dev/develop/development-builds/introduction/#difference-between-expo-go-and-development-builds).
 
-Fonts can be available in an app statically (since build time) or loaded dynamically at runtime. The latter can be useful e.g. for apps that use over-the-air updates and want to [load](https://docs.expo.dev/versions/latest/sdk/font/#loadasyncfontfamilyorfontmap-source) new fonts with an update, or when you need to use a font from a remote location. If you don't use dynamic loading, use the `/static` imports (e.g. `"@react-native-vector-icons/ionicons/static"`).
+Icon fonts can be made available statically at build time or loaded dynamically at runtime. The root (non-`/static`) import uses dynamic loading. If you don't need dynamic loading, use the `/static` imports (e.g. `"@react-native-vector-icons/ionicons/static"`).
 
-Dynamic loading in `@react-native-vector-icons` is currently limited to those fonts that are bundled within the provided packages: it doesn't support Pro fonts (such as FontAwesome Pro). However, loading of custom fonts is not difficult to implement: use `createIconSet` as seen in [custom fonts](#custom-fonts) paragraph to obtain a icon font family with dynamic font loading enabled. See any of the free font packages for reference.
-
-By default, dynamic loading is enabled if you run Expo SDK >= 52. It doesn't change the way you work with the package: If rendering an icon requires a font that is not known to the app, it will be loaded automatically and icon will render as expected.
-
-`@react-native-vector-icons/common` exports several functions which you can use to control dynamic loading:
-
-- `isDynamicLoadingEnabled`: Returns whether dynamic loading is enabled.
-- `isDynamicLoadingSupported`: Returns whether dynamic loading is supported by your runtime (checks that necessary Expo features are present).
-- `setDynamicLoadingEnabled`: Enables or disables dynamic loading.
-- `setDynamicLoadingErrorCallback`: Sets a callback that is called (in the unlikely case) when an error occurs during dynamic loading. An example of when an error might happen is loading a misconfigured OTA update which doesn't include a necessary font file.
+See the [Expo setup guide](./docs/SETUP-EXPO.md) for more details, config plugins, and the dynamic loading API.
 
 ## Usage Examples
 

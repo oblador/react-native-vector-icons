@@ -38,6 +38,18 @@ import icoMoonConfig from "./IcoMoon-Free.json";
 const Icon = createIconSet(icoMoonConfig, "Font Family", "FontFamily.ttf");
 ```
 
+### Expo Config Plugin
+
+This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to the `plugins` array in your `app.json` or `app.config.js` if you use static imports:
+
+```json
+{
+  "expo": {
+    "plugins": ["@react-native-vector-icons/icomoon"]
+  }
+}
+```
+
 ## Contributing
 
 See the [contributing guide](../../CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.

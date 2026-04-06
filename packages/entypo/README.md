@@ -13,11 +13,26 @@ npm install @react-native-vector-icons/entypo
 ## Usage
 
 ```jsx
+import { Entypo } from '@react-native-vector-icons/entypo/static';
+// or with dynamic font loading (see the Expo setup guide for details)
 import { Entypo } from '@react-native-vector-icons/entypo';
 
 // ...
 
 <Entypo name="house" color="#ff0000" size={20} />
+```
+
+
+### Expo Config Plugin
+
+This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to the `plugins` array in your `app.json` or `app.config.js` if you use static imports:
+
+```json
+{
+  "expo": {
+    "plugins": ["@react-native-vector-icons/entypo"]
+  }
+}
 ```
 
 ## Versions

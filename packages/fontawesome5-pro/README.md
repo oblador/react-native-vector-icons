@@ -62,3 +62,15 @@ FontAwesome5Pro.getImageSource("solid", "comments", 30, "#000").then((source) =>
   this.setState({ image: source }),
 );
 ```
+
+### Expo Config Plugin
+
+This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to the `plugins` array in your `app.json` or `app.config.js` if you use static imports:
+
+```json
+{
+  "expo": {
+    "plugins": ["@react-native-vector-icons/fontawesome5-pro"]
+  }
+}
+```

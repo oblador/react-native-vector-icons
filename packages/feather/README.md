@@ -13,11 +13,26 @@ npm install @react-native-vector-icons/feather
 ## Usage
 
 ```jsx
+import { Feather } from '@react-native-vector-icons/feather/static';
+// or with dynamic font loading (see the Expo setup guide for details)
 import { Feather } from '@react-native-vector-icons/feather';
 
 // ...
 
 <Feather name="house" color="#ff0000" size={20} />
+```
+
+
+### Expo Config Plugin
+
+This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to the `plugins` array in your `app.json` or `app.config.js` if you use static imports:
+
+```json
+{
+  "expo": {
+    "plugins": ["@react-native-vector-icons/feather"]
+  }
+}
 ```
 
 ## Versions

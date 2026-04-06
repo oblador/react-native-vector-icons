@@ -13,11 +13,26 @@ npm install @react-native-vector-icons/fontawesome-free-regular
 ## Usage
 
 ```jsx
+import { FontAwesomeFreeRegular } from '@react-native-vector-icons/fontawesome-free-regular/static';
+// or with dynamic font loading (see the Expo setup guide for details)
 import { FontAwesomeFreeRegular } from '@react-native-vector-icons/fontawesome-free-regular';
 
 // ...
 
 <FontAwesomeFreeRegular name="house" color="#ff0000" size={20} />
+```
+
+
+### Expo Config Plugin
+
+This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md). Add it to the `plugins` array in your `app.json` or `app.config.js` if you use static imports:
+
+```json
+{
+  "expo": {
+    "plugins": ["@react-native-vector-icons/fontawesome-free-regular"]
+  }
+}
 ```
 
 ## Versions
