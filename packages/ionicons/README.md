@@ -30,6 +30,7 @@ The table below tracks which font version is included in each package version.
 | ------------ | ---------------- |
 | &gt; 12.0.0 | 7.4.0 |
 | &gt; 12.0.1 | 8.0.8 |
+| &gt; 12.4.1 | 8.0.13 |
 
 ## Contributing
 
