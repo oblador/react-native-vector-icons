@@ -2022,7 +2022,7 @@ DEPENDENCIES:
   - ReactCodegen (from `build/generated/ios/ReactCodegen`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeDependencies (from `../node_modules/react-native/third-party-podspecs/ReactNativeDependencies.podspec`)
-  - "ReactNativeHost (from `../../../node_modules/.pnpm/react-native-test-app@5.1.0_@expo+config-plugins@8.0.11_react-native@0.84.1_@babel+core_567d2c365e590e1cdebbc241ed15712a/node_modules/@rnx-kit/react-native-host`)"
+  - "ReactNativeHost (from `../../../node_modules/.pnpm/react-native-test-app@5.1.0_@expo+config-plugins@8.0.11_metro@0.83.5_react-native@0.84._f1518e6680f5274ae740c25487dc1cde/node_modules/@rnx-kit/react-native-host`)"
   - ReactTestApp-DevSupport (from `../node_modules/react-native-test-app`)
   - ReactTestApp-Resources (from `..`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -2218,7 +2218,7 @@ EXTERNAL SOURCES:
   ReactNativeDependencies:
     :podspec: "../node_modules/react-native/third-party-podspecs/ReactNativeDependencies.podspec"
   ReactNativeHost:
-    :path: "../../../node_modules/.pnpm/react-native-test-app@5.1.0_@expo+config-plugins@8.0.11_react-native@0.84.1_@babel+core_567d2c365e590e1cdebbc241ed15712a/node_modules/@rnx-kit/react-native-host"
+    :path: "../../../node_modules/.pnpm/react-native-test-app@5.1.0_@expo+config-plugins@8.0.11_metro@0.83.5_react-native@0.84._f1518e6680f5274ae740c25487dc1cde/node_modules/@rnx-kit/react-native-host"
   ReactTestApp-DevSupport:
     :path: "../node_modules/react-native-test-app"
   ReactTestApp-Resources:
@@ -2237,7 +2237,7 @@ SPEC CHECKSUMS:
   React: 1ba7d364ade7d883a1ec055bfc3606f35fdee17b
   React-callinvoker: bc2a26f8d84fb01f003fc6de6c9337b64715f95b
   React-Core: 7840d3a80b43a95c5e80ef75146bd70925ebab0f
-  React-Core-prebuilt: 76feabcd2a757e23003a09cc2e7ac0c86218eee5
+  React-Core-prebuilt: df194cd10fd60f4adc15a357daa435725695288c
   React-CoreModules: 2eb010400b63b89e53a324ffb3c112e4c7c3ce42
   React-cxxreact: a558e92199d26f145afa9e62c4233cf8e7950efe
   React-debug: 755200a6e7f5e6e0a40ff8d215493d43cce285fc
@@ -2318,9 +2318,9 @@ SPEC CHECKSUMS:
   React-utils: 8d888b379f0808bfabaea03d85f9e8dd9b8548da
   React-webperformancenativemodule: c10016db7f1bb1153060d4aa9f7dbde2c88c845d
   ReactAppDependencyProvider: e96e93b493d8d86eeaee3e590ba0be53f6abe46f
-  ReactCodegen: 7de6421cae7178337fd6a4ce2c44d3494c042b77
+  ReactCodegen: 5136f8f17d1da27458c5851ea56b0172f5a4c1e0
   ReactCommon: 07572bf9e687c8a52fbe4a3641e9e3a1a477c78e
-  ReactNativeDependencies: c93987c695ce6ec330eaf9642c6cf84268397962
+  ReactNativeDependencies: a13abc2daa7f678756faa0cb1b5139fcc625ff28
   ReactNativeHost: 147a222a7c577801639023140b694160987738ef
   ReactTestApp-DevSupport: 0e7676c00b33b0545e72d89ea09f990d737db6d3
   ReactTestApp-Resources: 1bd9ff10e4c24f2ad87101a32023721ae923bccf

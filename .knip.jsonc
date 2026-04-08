@@ -10,7 +10,8 @@
         "generator-react-native-vector-icons",
         "@commitlint/config-conventional",
         "@nx/js",
-        "@evilmartians/lefthook"
+        "@evilmartians/lefthook",
+        "@expo/config-plugins"
       ],
       "ignoreBinaries": ["scripts/generate-fonts.sh"],
       "entry": ["scripts/fix-glyphmaps.mjs"]
