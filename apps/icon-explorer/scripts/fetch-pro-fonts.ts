@@ -13,7 +13,7 @@ import { join } from 'node:path';
 import { createInterface } from 'node:readline';
 
 const root = join(__dirname, '..');
-const packagesDir = join(root, '..');
+const packagesDir = join(root, '..', '..', 'packages');
 
 function ensureAuthToken(): Promise<void> {
   const config = execSync('npm config get', { encoding: 'utf8' });
