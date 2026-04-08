@@ -68,19 +68,14 @@ jobs:
       - name: Create pro font stubs
         run: node scripts/create-pro-font-stubs.mjs
         working-directory: apps/icon-explorer
-      - name: Cache CocoaPods
-        uses: actions/cache@v4
-        with:
-          path: |
-            apps/icon-explorer/ios/Pods
-            ~/Library/Caches/CocoaPods
-          key: ${{ runner.os }}-pods-${{ hashFiles('apps/icon-explorer/ios/Podfile.lock') }}
       - name: Install pods
-        run: pod install || pod install
+        run: pod install
         working-directory: apps/icon-explorer/ios
         env:
           RCT_USE_PREBUILT_RNCORE: 1
           RCT_USE_RN_DEP: 1
+          LANG: en_US.UTF-8
+          LC_ALL: en_US.UTF-8
       - name: Build iOS app
         run: xcodebuild -scheme IconExplorer -workspace IconExplorer.xcworkspace ONLY_ACTIVE_ARCH=YES -sdk iphonesimulator -configuration Debug
         working-directory: apps/icon-explorer/ios
