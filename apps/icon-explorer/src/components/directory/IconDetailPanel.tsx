@@ -1,7 +1,7 @@
 import { Feather } from '@react-native-vector-icons/feather';
 import * as Clipboard from 'expo-clipboard';
 import { useRef, useState } from 'react';
-import { Platform, Pressable, TextInput, View } from 'react-native';
+import { Platform, Pressable, View } from 'react-native';
 import { Text } from '@/components/StyledText';
 import { iconRegistry } from '@/data/generated/icon-registry.generated';
 import { useTheme } from '@/theme/ThemeContext';
@@ -25,14 +25,31 @@ const COLOUR_SWATCHES = [
   { name: 'Violet', value: '#8b5cf6' },
 ] as const;
 
-function CopyBox({ label, code }: { label: string; code: string }) {
+function useCopyToClipboard(text: string) {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = async () => {
-    await Clipboard.setStringAsync(code);
+  const copy = async () => {
+    await Clipboard.setStringAsync(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  return { copied, copy };
+}
+
+function CopyIconButton({ text, colour }: { text: string; colour: string }) {
+  const { colours } = useTheme();
+  const { copied, copy } = useCopyToClipboard(text);
+
+  return (
+    <Pressable onPress={copy} className="rounded p-0.5">
+      <Feather name={copied ? 'check' : 'copy'} size={14} color={copied ? colours.accentCyan : colour} />
+    </Pressable>
+  );
+}
+
+function CopyBox({ label, code }: { label: string; code: string }) {
+  const { copied, copy } = useCopyToClipboard(code);
 
   return (
     <View>
@@ -41,7 +58,7 @@ function CopyBox({ label, code }: { label: string; code: string }) {
           {label}
         </Text>
         <Pressable
-          onPress={handleCopy}
+          onPress={copy}
           className={`rounded border px-2 py-0.5 ${
             copied ? 'border-accent-cyan bg-accent-cyan' : 'border-border bg-bg'
           }`}
@@ -102,7 +119,10 @@ export function IconDetailPanel({ icon, onClose }: Props) {
       {/* Header */}
       <View className="flex-row items-start justify-between">
         <View className="flex-1">
-          <Text className="font-heading text-sm font-semibold text-text">{icon.name}</Text>
+          <View className="flex-row items-center gap-1.5">
+            <Text className="font-heading text-sm font-semibold text-text">{icon.name}</Text>
+            <CopyIconButton text={icon.name} colour={colours.textDim} />
+          </View>
           <Text className="text-xs text-text-dim">{icon.meta.displayName}</Text>
         </View>
         <Pressable onPress={onClose} className="rounded p-1">
@@ -112,7 +132,7 @@ export function IconDetailPanel({ icon, onClose }: Props) {
 
       {/* Preview */}
       <View
-        className="items-center justify-center rounded-lg border border-border p-6"
+        className="h-24 w-24 items-center justify-center self-center rounded-lg border border-border"
         style={{ backgroundColor: bgLight ? PREVIEW_BG_LIGHT : PREVIEW_BG_DARK }}
       >
         {IconComponent && <IconComponent name={icon.name} size={size} color={colour} />}
@@ -158,22 +178,12 @@ export function IconDetailPanel({ icon, onClose }: Props) {
                 height: 24,
                 borderRadius: 12,
                 backgroundColor: swatch.value,
-                borderWidth: colour === swatch.value ? 2 : 0,
-                borderColor: colours.accentCyan,
+                borderWidth: colour === swatch.value ? 2 : 1,
+                borderColor: colour === swatch.value ? colours.accentCyan : colours.border,
               }}
               accessibilityLabel={swatch.name}
             />
           ))}
-          {Platform.OS === 'web' && (
-            <TextInput
-              value={colour}
-              onChangeText={handleColourChange}
-              className="rounded border border-border bg-bg px-2 py-0.5 text-xs text-text-muted"
-              style={{ width: 80, outlineStyle: 'none' } as any}
-              placeholder="#hex"
-              placeholderTextColor={colours.textDim}
-            />
-          )}
         </View>
       </View>
 

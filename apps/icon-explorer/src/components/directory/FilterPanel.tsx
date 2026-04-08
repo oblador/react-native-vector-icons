@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { FlatList, Modal, Platform, Pressable, ScrollView, View } from 'react-native';
+import { useEffect, useRef, useState } from 'react';
+import { FlatList, Modal, Platform, Pressable, ScrollView, TextInput, View } from 'react-native';
 import { Text } from '@/components/StyledText';
 import type { IconFamily } from '@/data/icon-families';
 import { useTheme } from '@/theme/ThemeContext';
@@ -26,7 +26,7 @@ function Chip({ label, active, onPress }: { label: string; active: boolean; onPr
   );
 }
 
-function FamilyDropdown({
+function FamilyCombobox({
   value,
   families,
   onChange,
@@ -36,35 +36,90 @@ function FamilyDropdown({
   onChange: (val: string) => void;
 }) {
   const { colours } = useTheme();
+  const [query, setQuery] = useState('');
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<View>(null);
+  const selectedLabel = value ? (families.find(([k]) => k === value)?.[1]?.displayName ?? value) : '';
+
+  const filtered = query
+    ? families.filter(([, meta]) => meta.displayName.toLowerCase().includes(query.toLowerCase()))
+    : families;
+
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => {
+      const node = containerRef.current as unknown as HTMLElement | null;
+      if (node && !node.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, [open]);
+
+  const handleSelect = (key: string) => {
+    onChange(key);
+    setQuery('');
+    setOpen(false);
+  };
+
+  return (
+    <View ref={containerRef} className="relative z-10">
+      <TextInput
+        value={open ? query : selectedLabel}
+        onChangeText={(text) => {
+          setQuery(text);
+          if (!open) setOpen(true);
+        }}
+        onFocus={() => setOpen(true)}
+        placeholder="All families"
+        placeholderTextColor={colours.textDim}
+        className="rounded-lg border border-border bg-surface px-2 py-1 text-xs text-text-muted"
+        style={{ outlineStyle: 'none' } as any}
+      />
+      {open && (
+        <View className="absolute top-full left-0 right-0 z-20 max-h-60 overflow-hidden rounded-lg border border-border bg-surface">
+          <ScrollView className="max-h-60">
+            <Pressable onPress={() => handleSelect('')} className={`px-3 py-2 ${!value ? 'bg-accent-cyan/10' : ''}`}>
+              <Text className={!value ? 'text-accent-cyan text-xs' : 'text-text-muted text-xs'}>All families</Text>
+            </Pressable>
+            {filtered.map(([key, meta]) => (
+              <Pressable
+                key={key}
+                onPress={() => handleSelect(key)}
+                className={`px-3 py-2 ${key === value ? 'bg-accent-cyan/10' : ''}`}
+              >
+                <Text className={key === value ? 'text-accent-cyan text-xs' : 'text-text-muted text-xs'}>
+                  {meta.displayName}
+                </Text>
+              </Pressable>
+            ))}
+            {filtered.length === 0 && (
+              <View className="px-3 py-2">
+                <Text className="text-xs text-text-dim">No matches</Text>
+              </View>
+            )}
+          </ScrollView>
+        </View>
+      )}
+    </View>
+  );
+}
+
+function FamilyDropdown({
+  value,
+  families,
+  onChange,
+}: {
+  value: string;
+  families: [string, IconFamily][];
+  onChange: (val: string) => void;
+}) {
   const [open, setOpen] = useState(false);
   const selectedLabel = value ? (families.find(([k]) => k === value)?.[1]?.displayName ?? value) : 'All families';
 
   if (Platform.OS === 'web') {
-    const WebSelect = 'select' as unknown as React.ComponentType<any>;
-    const WebOption = 'option' as unknown as React.ComponentType<any>;
-    return (
-      <WebSelect
-        value={value}
-        onChange={(e: any) => onChange(e.target.value)}
-        style={{
-          backgroundColor: colours.surface,
-          color: colours.textMuted,
-          border: `1px solid ${colours.border}`,
-          borderRadius: 8,
-          padding: '4px 24px 4px 8px',
-          fontSize: 12,
-          outline: 'none',
-          appearance: 'auto',
-        }}
-      >
-        <WebOption value="">All families</WebOption>
-        {families.map(([key, meta]) => (
-          <WebOption key={key} value={key}>
-            {meta.displayName}
-          </WebOption>
-        ))}
-      </WebSelect>
-    );
+    return <FamilyCombobox value={value} families={families} onChange={onChange} />;
   }
 
   return (

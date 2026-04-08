@@ -1,5 +1,5 @@
 import { Feather } from '@react-native-vector-icons/feather';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Modal, Pressable, ScrollView, useWindowDimensions, View } from 'react-native';
 import { FilterPanel } from '@/components/directory/FilterPanel';
 import { IconDetailPanel } from '@/components/directory/IconDetailPanel';
@@ -27,6 +27,14 @@ export default function DirectoryScreen() {
   const [selectedIcon, setSelectedIcon] = useState<IconEntry | null>(null);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const isMobile = width < 768;
+  const detailPanelRef = useRef<View>(null);
+
+  useEffect(() => {
+    if (selectedIcon && isWide) {
+      const node = detailPanelRef.current as unknown as HTMLElement | null;
+      node?.focus();
+    }
+  }, [selectedIcon, isWide]);
 
   const allIcons = useMemo(() => {
     const icons: (IconEntry & { nameLower: string; familyLower: string })[] = [];
@@ -62,13 +70,23 @@ export default function DirectoryScreen() {
   );
 
   const filtered = useMemo(() => {
-    const q = filters.query.toLowerCase();
+    const q = filters.query.toLowerCase().trim();
+    // Build a regex where spaces match hyphens, spaces, or camelCase boundaries (zero-width)
+    const queryRegex = q
+      ? new RegExp(
+          q
+            .split(/\s+/)
+            .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+            .join('[-\\s]?'),
+          'i',
+        )
+      : null;
     return allIcons.filter((icon) => {
       if (filters.families.length > 0 && !filters.families.includes(icon.family)) return false;
       if (filters.status !== 'all' && icon.meta.status !== filters.status) return false;
       if (filters.licence !== 'all' && icon.meta.licence !== filters.licence) return false;
       if (filters.styles.length > 0 && (!icon.meta.style || !filters.styles.includes(icon.meta.style))) return false;
-      if (q && !icon.nameLower.includes(q) && !icon.familyLower.includes(q)) return false;
+      if (queryRegex && !queryRegex.test(icon.name) && !queryRegex.test(icon.family)) return false;
       return true;
     });
   }, [allIcons, filters]);
@@ -79,7 +97,7 @@ export default function DirectoryScreen() {
 
   return (
     <View className="flex-1 bg-bg">
-      <View className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
+      <View className="z-10 mx-auto w-full max-w-7xl px-4 py-8 sm:px-6">
         {/* Header */}
         <GradientText className="font-heading text-3xl font-bold sm:text-4xl" standalone>
           Icon Directory
@@ -105,7 +123,7 @@ export default function DirectoryScreen() {
 
         {/* Desktop filters — inline */}
         {!isMobile && (
-          <View className="mt-4">
+          <View className="z-10 mt-4">
             <FilterPanel
               filters={filters}
               onChange={handleFilterChange}
@@ -148,11 +166,28 @@ export default function DirectoryScreen() {
         </View>
 
         {/* Desktop detail panel */}
-        {isWide && selectedIcon && (
-          <View style={{ width: 320, maxWidth: 320, marginLeft: 24, flexShrink: 0 }}>
-            <ScrollView contentContainerStyle={{ paddingBottom: 24 }}>
-              <IconDetailPanel icon={selectedIcon} onClose={() => setSelectedIcon(null)} />
-            </ScrollView>
+        {isWide && (
+          <View
+            ref={detailPanelRef}
+            className="ml-6 w-80 max-w-80 shrink-0"
+            {...({
+              tabIndex: -1,
+              style: { outline: 'none' },
+              onKeyDown: (e: any) => {
+                if (e.key === 'Escape') setSelectedIcon(null);
+              },
+            } as any)}
+          >
+            {selectedIcon ? (
+              <View className="pb-6 pr-2">
+                <IconDetailPanel icon={selectedIcon} onClose={() => setSelectedIcon(null)} />
+              </View>
+            ) : (
+              <View className="items-center justify-center rounded-lg border border-border bg-bg-subtle p-8">
+                <Feather name="grid" size={32} color={colours.textDim} />
+                <Text className="mt-3 text-center text-sm text-text-dim">Select an icon to preview</Text>
+              </View>
+            )}
           </View>
         )}
       </View>
