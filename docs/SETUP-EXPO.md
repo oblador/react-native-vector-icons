@@ -13,7 +13,7 @@ import { MaterialIcons } from "@react-native-vector-icons/material-icons";
 
 Metro bundles the font alongside your JS code. When the icon first renders, `expo-font` registers the font with the native text system automatically. No native configuration or config plugins needed. Works with Expo Go and OTA updates.
 
-## Static import (recommended for Development Builds)
+## Static import (recommended for [Development Builds](https://docs.expo.dev/develop/development-builds/introduction/))
 
 ```js
 import { MaterialIcons } from "@react-native-vector-icons/material-icons/static";
