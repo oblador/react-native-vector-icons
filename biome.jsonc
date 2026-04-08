@@ -29,6 +29,8 @@
       "!**/packages/generator-react-native-vector-icons/src/app/templates",
 
       // Expo app generated files
+      "!**/apps/icon-explorer/.expo",
+      "!**/apps/icon-explorer/expo-env.d.ts",
       "!**/apps/icon-explorer/src/data/generated",
       "!**/apps/icon-explorer/src/uniwind-types.d.ts",
       "!**/apps/icon-explorer/dist",

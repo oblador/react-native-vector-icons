@@ -1,6 +1,6 @@
 import { Feather } from '@react-native-vector-icons/feather';
 import * as Clipboard from 'expo-clipboard';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Platform, Pressable, TextInput, View } from 'react-native';
 import { Text } from '@/components/StyledText';
 import { iconRegistry } from '@/data/generated/icon-registry.generated';
@@ -8,9 +8,14 @@ import { useTheme } from '@/theme/ThemeContext';
 import type { IconEntry } from './types';
 
 const SIZES = [16, 24, 32, 48, 64] as const;
+const PREVIEW_BG_DARK = '#0a0a0b';
+const PREVIEW_BG_LIGHT = '#ffffff';
+const ICON_COLOUR_DARK = '#000000';
+const ICON_COLOUR_LIGHT = '#ffffff';
 
 const COLOUR_SWATCHES = [
-  { name: 'White', value: '#ffffff' },
+  { name: 'Black', value: ICON_COLOUR_DARK },
+  { name: 'White', value: ICON_COLOUR_LIGHT },
   { name: 'Grey', value: '#a1a1aa' },
   { name: 'Red', value: '#ef4444' },
   { name: 'Blue', value: '#3b82f6' },
@@ -69,10 +74,23 @@ type Props = {
 };
 
 export function IconDetailPanel({ icon, onClose }: Props) {
-  const { colours } = useTheme();
+  const { colours, resolvedTheme } = useTheme();
   const [size, setSize] = useState<number>(48);
-  const [colour, setColour] = useState('#ffffff');
-  const [bgLight, setBgLight] = useState(false);
+  const [colour, setColour] = useState(() => (resolvedTheme === 'light' ? ICON_COLOUR_DARK : ICON_COLOUR_LIGHT));
+  const [bgLight, setBgLight] = useState(() => resolvedTheme === 'light');
+  const hasCustomColour = useRef(false);
+
+  const handleBgToggle = (light: boolean) => {
+    setBgLight(light);
+    if (!hasCustomColour.current) {
+      setColour(light ? ICON_COLOUR_DARK : ICON_COLOUR_LIGHT);
+    }
+  };
+
+  const handleColourChange = (value: string) => {
+    hasCustomColour.current = true;
+    setColour(value);
+  };
 
   const IconComponent = iconRegistry[icon.family];
   const codepoint = `U+${icon.codepoint.toString(16).toUpperCase().padStart(4, '0')}`;
@@ -94,7 +112,8 @@ export function IconDetailPanel({ icon, onClose }: Props) {
 
       {/* Preview */}
       <View
-        className={`items-center justify-center rounded-lg border border-border p-6 ${bgLight ? 'bg-white' : 'bg-bg'}`}
+        className="items-center justify-center rounded-lg border border-border p-6"
+        style={{ backgroundColor: bgLight ? PREVIEW_BG_LIGHT : PREVIEW_BG_DARK }}
       >
         {IconComponent && <IconComponent name={icon.name} size={size} color={colour} />}
       </View>
@@ -133,7 +152,7 @@ export function IconDetailPanel({ icon, onClose }: Props) {
           {COLOUR_SWATCHES.map((swatch) => (
             <Pressable
               key={swatch.value}
-              onPress={() => setColour(swatch.value)}
+              onPress={() => handleColourChange(swatch.value)}
               style={{
                 width: 24,
                 height: 24,
@@ -148,7 +167,7 @@ export function IconDetailPanel({ icon, onClose }: Props) {
           {Platform.OS === 'web' && (
             <TextInput
               value={colour}
-              onChangeText={setColour}
+              onChangeText={handleColourChange}
               className="rounded border border-border bg-bg px-2 py-0.5 text-xs text-text-muted"
               style={{ width: 80, outlineStyle: 'none' } as any}
               placeholder="#hex"
@@ -164,7 +183,7 @@ export function IconDetailPanel({ icon, onClose }: Props) {
           Background:
         </Text>
         <Pressable
-          onPress={() => setBgLight(false)}
+          onPress={() => handleBgToggle(false)}
           className={`rounded border px-2 py-0.5 ${
             !bgLight ? 'border-accent-cyan bg-accent-cyan' : 'border-border bg-bg'
           }`}
@@ -174,7 +193,7 @@ export function IconDetailPanel({ icon, onClose }: Props) {
           </Text>
         </Pressable>
         <Pressable
-          onPress={() => setBgLight(true)}
+          onPress={() => handleBgToggle(true)}
           className={`rounded border px-2 py-0.5 ${
             bgLight ? 'border-accent-cyan bg-accent-cyan' : 'border-border bg-bg'
           }`}
