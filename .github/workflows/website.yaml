@@ -33,8 +33,17 @@ jobs:
           node-version: lts/*
           cache: pnpm
 
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y woff2
+
       - name: Install dependencies
         run: pnpm install
+
+      - name: Fetch FontAwesome Pro fonts
+        run: bash scripts/fetch-pro.sh
+        working-directory: apps/icon-explorer
+        env:
+          FONTAWESOME_PACKAGE_TOKEN: ${{ secrets.FONTAWESOME_PACKAGE_TOKEN }}
 
       - name: Build website
         run: pnpm run build:web

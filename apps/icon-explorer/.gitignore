@@ -44,3 +44,4 @@ app-example
 
 # generated data (rebuilt on prepare)
 src/data/generated/
+rnvi-fonts/
