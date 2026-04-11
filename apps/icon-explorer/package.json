@@ -5,7 +5,8 @@
   "scripts": {
     "generate-registry": "node --experimental-strip-types scripts/generate-icon-registry.mts",
     "generate-glyphmap-index": "node --experimental-strip-types scripts/generate-glyphmap-index.mts",
-    "prepare": "pnpm run generate-registry && pnpm run generate-glyphmap-index",
+    "generate-pro-fonts": "node --experimental-strip-types scripts/generate-pro-fonts.mts",
+    "prepare": "pnpm run generate-registry && pnpm run generate-glyphmap-index && pnpm run generate-pro-fonts",
     "start": "pnpm run prepare && expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",

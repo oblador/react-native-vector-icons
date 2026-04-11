@@ -15,10 +15,12 @@ import { View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
+import { proFonts } from '@/data/generated/pro-fonts.generated';
 import { ThemeProvider, useTheme } from '@/theme/ThemeContext';
 
 // Load typography and icon fonts so they're available on web via @font-face
 const iconFonts: Record<string, any> = {
+  ...proFonts,
   JetBrainsMono: JetBrainsMono_700Bold,
   JetBrainsMono_500Medium,
   Inter: Inter_400Regular,
