@@ -6,7 +6,7 @@ import { Image, Pressable, ScrollView, StyleSheet, Text, View, type ViewProps } 
 type ImageResult = ReturnType<typeof FontAwesome.getImageSourceSync>;
 
 import { createAnimatableComponent } from './animatable';
-import { iconSets as ICON_SETS, type IconName } from './icon-sets';
+import { iconSets as ICON_SETS, type IconName } from './IconSets';
 
 // @ts-expect-error: We don't care this is wrong for the tests
 const AnimatableIcon = createAnimatableComponent(FontAwesome);

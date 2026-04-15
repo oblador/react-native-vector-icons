@@ -20,12 +20,10 @@ import FontAwesome6Meta from '@react-native-vector-icons/fontawesome6/glyphmaps/
 import { FontAwesome6Pro } from '@react-native-vector-icons/fontawesome6-pro';
 import FontAwesome6ProGlyphs from '@react-native-vector-icons/fontawesome6-pro/glyphmaps/FontAwesome6Pro.json';
 import FontAwesome6ProMeta from '@react-native-vector-icons/fontawesome6-pro/glyphmaps/FontAwesome6Pro_meta.json';
-import createFontelloIconSet from '@react-native-vector-icons/fontello';
 import { Fontisto } from '@react-native-vector-icons/fontisto';
 import FontistoGlyphs from '@react-native-vector-icons/fontisto/glyphmaps/Fontisto.json';
 import { Foundation } from '@react-native-vector-icons/foundation';
 import FoundationGlyphs from '@react-native-vector-icons/foundation/glyphmaps/Foundation.json';
-import createIcoMoonIconSet from '@react-native-vector-icons/icomoon';
 import { Ionicons } from '@react-native-vector-icons/ionicons';
 import IoniconsGlyphs from '@react-native-vector-icons/ionicons/glyphmaps/Ionicons.json';
 import { Lucide } from '@react-native-vector-icons/lucide';
@@ -40,23 +38,7 @@ import { SimpleLineIcons } from '@react-native-vector-icons/simple-line-icons';
 import SimpleLineIconsGlyphs from '@react-native-vector-icons/simple-line-icons/glyphmaps/SimpleLineIcons.json';
 import { Zocial } from '@react-native-vector-icons/zocial';
 import ZocialGlyphs from '@react-native-vector-icons/zocial/glyphmaps/Zocial.json';
-
-import FontelloConfig from './configs/fontello.config.json';
-import IcoMoonConfig from './configs/icomoon.config.json';
-
-const Fontello = createFontelloIconSet(FontelloConfig);
-const FontelloGlyphs: Record<string, number> = {};
-FontelloConfig.glyphs.forEach((glyph) => {
-  FontelloGlyphs[glyph.css] = glyph.code;
-});
-
-const IcoMoon = createIcoMoonIconSet(IcoMoonConfig);
-const IcoMoonGlyphs: Record<string, number> = {};
-IcoMoonConfig.icons.forEach((icon) => {
-  icon.properties.name.split(/\s*,\s*/g).forEach((name) => {
-    IcoMoonGlyphs[name] = icon.properties.code;
-  });
-});
+import { Fontello, FontelloGlyphs, IcoMoon, IcoMoonGlyphs } from './CustomFonts.ts';
 
 const groupGlyphNames = (glyphMap: Record<string, number>) => {
   const result: Record<number, string[]> = {};

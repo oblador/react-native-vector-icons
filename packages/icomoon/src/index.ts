@@ -11,16 +11,35 @@ type IcoMoonIcon = {
     code: number;
   };
 };
-type IcoMoonConfig = {
-  icons: IcoMoonIcon[];
-  preferences: {
-    fontPref: {
-      metadata: {
-        fontFamily: string;
-      };
-    };
+type IcoMoonGlyph = {
+  extras: {
+    name: string;
+    codePoint: number;
   };
 };
+type IcoMoonConfig =
+  | {
+      // Old IcoMoon app (https://icomoon.io/app)
+      icons: IcoMoonIcon[];
+      preferences?: {
+        fontPref?: {
+          metadata?: {
+            fontFamily?: string;
+          };
+        };
+      };
+    }
+  | {
+      // New IcoMoon app (https://icomoon.io/new-app)
+      glyphs: IcoMoonGlyph[];
+      preferences?: {
+        fontPref?: {
+          metadata?: {
+            fontFamily?: string;
+          };
+        };
+      };
+    };
 
 type IcoMoonComponent = IconComponent<Record<string, number>>;
 
@@ -47,13 +66,25 @@ export default function createIconSetFromIcoMoon(
         };
 
   const glyphMap: Record<string, number> = {};
-  config.icons.forEach((icon) => {
-    icon.properties.name.split(/\s*,\s*/g).forEach((name) => {
-      glyphMap[name] = icon.properties.code;
+  if ('icons' in config) {
+    // Old IcoMoon app
+    config.icons.forEach((icon) => {
+      icon.properties.name.split(/\s*,\s*/g).forEach((name) => {
+        glyphMap[name] = icon.properties.code;
+      });
     });
-  });
+  } else if ('glyphs' in config) {
+    // New IcoMoon app
+    config.glyphs.forEach((glyph) => {
+      glyph.extras.name.split(/\s*,\s*/g).forEach((name) => {
+        glyphMap[name] = glyph.extras.codePoint;
+      });
+    });
+  } else {
+    throw new Error('Invalid IcoMoon config: expected "icons" (old format) or "glyphs" (new format)');
+  }
 
-  const fontFamily = postScriptName || config.preferences.fontPref.metadata.fontFamily;
+  const fontFamily = postScriptName || (config.preferences?.fontPref?.metadata?.fontFamily ?? 'icomoon');
 
   return createIconSet(glyphMap, {
     postScriptName: fontFamily,

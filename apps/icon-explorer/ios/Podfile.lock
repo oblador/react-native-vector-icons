@@ -1491,26 +1491,26 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-vector-icons-ant-design (13.0.0)
-  - react-native-vector-icons-entypo (13.0.0)
-  - react-native-vector-icons-evil-icons (13.0.0)
-  - react-native-vector-icons-feather (13.0.0)
-  - react-native-vector-icons-fontawesome (13.0.0)
-  - react-native-vector-icons-fontawesome5 (13.0.0)
-  - react-native-vector-icons-fontawesome5-pro (13.0.0)
-  - react-native-vector-icons-fontawesome6 (13.0.0)
-  - react-native-vector-icons-fontawesome6-pro (13.0.0)
-  - react-native-vector-icons-fontello (13.0.0)
-  - react-native-vector-icons-fontisto (13.0.0)
-  - react-native-vector-icons-foundation (13.0.0)
-  - react-native-vector-icons-icomoon (13.0.0)
-  - react-native-vector-icons-ionicons (13.0.0)
-  - react-native-vector-icons-lucide (13.0.0)
-  - react-native-vector-icons-material-design-icons (13.0.0)
-  - react-native-vector-icons-material-icons (13.0.0)
-  - react-native-vector-icons-octicons (21.0.0)
-  - react-native-vector-icons-simple-line-icons (13.0.0)
-  - react-native-vector-icons-zocial (13.0.0)
+  - react-native-vector-icons-ant-design (13.1.0)
+  - react-native-vector-icons-entypo (13.1.0)
+  - react-native-vector-icons-evil-icons (13.1.0)
+  - react-native-vector-icons-feather (13.1.0)
+  - react-native-vector-icons-fontawesome (13.1.0)
+  - react-native-vector-icons-fontawesome5 (13.1.0)
+  - react-native-vector-icons-fontawesome5-pro (13.1.0)
+  - react-native-vector-icons-fontawesome6 (13.1.0)
+  - react-native-vector-icons-fontawesome6-pro (13.1.0)
+  - react-native-vector-icons-fontello (13.1.0)
+  - react-native-vector-icons-fontisto (13.1.0)
+  - react-native-vector-icons-foundation (13.1.0)
+  - react-native-vector-icons-icomoon (13.1.0)
+  - react-native-vector-icons-ionicons (13.1.0)
+  - react-native-vector-icons-lucide (13.1.0)
+  - react-native-vector-icons-material-design-icons (13.1.0)
+  - react-native-vector-icons-material-icons (13.1.0)
+  - react-native-vector-icons-octicons (21.1.0)
+  - react-native-vector-icons-simple-line-icons (13.1.0)
+  - react-native-vector-icons-zocial (13.1.0)
   - React-NativeModulesApple (0.84.1):
     - hermes-engine
     - React-callinvoker
@@ -2267,26 +2267,26 @@ SPEC CHECKSUMS:
   React-microtasksnativemodule: d1956f0eec54c619b63a379520fb4c618a55ccb9
   react-native-safe-area-context: ae7587b95fb580d1800c5b0b2a7bd48c2868e67a
   react-native-vector-icons: 8fbb924e17fc3aed8ac5ad88f779e4c1f9defb66
-  react-native-vector-icons-ant-design: 61814534c87986cdf683ff5801605e00a46b593b
-  react-native-vector-icons-entypo: 9da6305812362779f61a5d337d78beab5d31a470
-  react-native-vector-icons-evil-icons: 6d951d7c1da72a026562ffa0a79e98f596018587
-  react-native-vector-icons-feather: 834cf7691d3d64d20a2f25f2422fd6ff33357f5b
-  react-native-vector-icons-fontawesome: 53835cb7f1bebc941d5b55a632bc7fbc8105cac8
-  react-native-vector-icons-fontawesome5: 567628d631178227751bf60be120b1a2cccd3927
-  react-native-vector-icons-fontawesome5-pro: da4146bdf8e691a7a20662ee2fdf633960dfe36c
-  react-native-vector-icons-fontawesome6: a8c495398688c2968b088689a72add570b4f6fa1
-  react-native-vector-icons-fontawesome6-pro: 5cb9831897fbf838910171ea48ef856bebfaee76
-  react-native-vector-icons-fontello: ad6a9a994fd1c06bcac392ab4f56e3445ff86d17
-  react-native-vector-icons-fontisto: b7ca8f8f5bc8442723ac901a4b7fd580db444054
-  react-native-vector-icons-foundation: 866b69f0d70903176124b019d3ce32109e4adc3d
-  react-native-vector-icons-icomoon: f45f1738f5227e95bd03f5f6a6287ad88b8d0c36
-  react-native-vector-icons-ionicons: 334801ca0211bf1f5673e3c791330639d47dc0e7
-  react-native-vector-icons-lucide: df2f0f11fc1db6d5cf0a08cfbb266ccc69503735
-  react-native-vector-icons-material-design-icons: 1955bd08457a8310e6a2d3c87c7f1ebaca159098
-  react-native-vector-icons-material-icons: e81230f19be5c8ada2ef4d9c2958c0fe74848177
-  react-native-vector-icons-octicons: 6aa0923b15ed5cb0511ebfafe644285956bfed8d
-  react-native-vector-icons-simple-line-icons: 685c9f518feb373c229f8aa765c74175aa292f03
-  react-native-vector-icons-zocial: 06b44e99f304364654d2902334f840dcdabfd118
+  react-native-vector-icons-ant-design: 4fedd672bcfa41f2bd2cb6f04b74a81ddcb9a583
+  react-native-vector-icons-entypo: 7e92008dc00814c7aa895ddd40e808e2e358a831
+  react-native-vector-icons-evil-icons: e2c631ea7171ea80fba058cd80138b8463fc50dd
+  react-native-vector-icons-feather: 1fbb59649729339f015448d52ff981e3d3fe4abf
+  react-native-vector-icons-fontawesome: 781b62ef022d94f19ea1eb32797f133744527f33
+  react-native-vector-icons-fontawesome5: 5a22699eef980e42b3868bc4fbab24a99554959e
+  react-native-vector-icons-fontawesome5-pro: 820dbe181783d0d41fe21754234a0f094000434c
+  react-native-vector-icons-fontawesome6: 5ecbdf9262cc0bb61e62a140bfc7118aab28518e
+  react-native-vector-icons-fontawesome6-pro: e8ac05ad0c38381e9ee070b2509408391daa99d4
+  react-native-vector-icons-fontello: ac563d670f81c85a1459e482f5d80b56284d52d3
+  react-native-vector-icons-fontisto: 86b262e67e6bdec360d82053fd2fc6b976960180
+  react-native-vector-icons-foundation: 126e3b2d32719442910aaeb536ec844926029749
+  react-native-vector-icons-icomoon: 9150616a2917d6067aa303872694532d7e0860d3
+  react-native-vector-icons-ionicons: 040a326f94703859486b26b05a1173f2fe3821c1
+  react-native-vector-icons-lucide: e46b0ebcc3b72975962f8c496f970ee18f6d2408
+  react-native-vector-icons-material-design-icons: d281715d786e8668a211c021ba2f3b9368af2f4f
+  react-native-vector-icons-material-icons: 006024ba0ec8efb278a642325434cace1b25131e
+  react-native-vector-icons-octicons: 92f3169b361bd42ab076b76de9e32c920d9cbb94
+  react-native-vector-icons-simple-line-icons: 810c082559e608aa3f95ca2d8fc884f6a2843572
+  react-native-vector-icons-zocial: b75580008154e8159ee804c03e5866a1f816398a
   React-NativeModulesApple: 5ba0903927f6b8d335a091700e9fda143980f819
   React-networking: 3a4b7f9ed2b2d1c0441beacb79674323a24bcca6
   React-oscompat: ff26abf0ae3e3fdbe47b44224571e3fc7226a573

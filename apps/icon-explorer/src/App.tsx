@@ -5,7 +5,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 import { Home } from './Home';
 import { IconList, MultiIconList } from './IconList';
-import type { IconName } from './icon-sets';
+import type { IconName } from './IconSets';
 import { TestMode } from './TestMode';
 
 type NavType =

@@ -5,6 +5,7 @@
 .DS_Store
 .gradle/
 .idea/
+.kotlin/
 .vs/
 .xcode.env
 Pods/

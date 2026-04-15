@@ -7,10 +7,8 @@ import { FontAwesome5 } from '@react-native-vector-icons/fontawesome5';
 import { FontAwesome5Pro } from '@react-native-vector-icons/fontawesome5-pro';
 import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
 import { FontAwesome6Pro, type FontAwesome6ProSolidIconName } from '@react-native-vector-icons/fontawesome6-pro';
-import createFontelloIconSet from '@react-native-vector-icons/fontello';
 import { Fontisto } from '@react-native-vector-icons/fontisto';
 import { Foundation } from '@react-native-vector-icons/foundation';
-import createIcoMoonIconSet from '@react-native-vector-icons/icomoon';
 import { Ionicons } from '@react-native-vector-icons/ionicons';
 import { Lucide } from '@react-native-vector-icons/lucide';
 import { MaterialDesignIcons } from '@react-native-vector-icons/material-design-icons';
@@ -20,23 +18,7 @@ import { SimpleLineIcons } from '@react-native-vector-icons/simple-line-icons';
 import { Zocial } from '@react-native-vector-icons/zocial';
 import type { ReactNode } from 'react';
 import { ScrollView, Text, View } from 'react-native';
-
-import FontelloConfig from './configs/fontello.config.json';
-import IcoMoonConfig from './configs/icomoon.config.json';
-
-const Fontello = createFontelloIconSet(FontelloConfig);
-const FontelloGlyphs: Record<string, number> = {};
-FontelloConfig.glyphs.forEach((glyph) => {
-  FontelloGlyphs[glyph.css] = glyph.code;
-});
-
-const IcoMoon = createIcoMoonIconSet(IcoMoonConfig);
-const IcoMoonGlyphs: Record<string, number> = {};
-IcoMoonConfig.icons.forEach((icon) => {
-  icon.properties.name.split(/\s*,\s*/g).forEach((name) => {
-    IcoMoonGlyphs[name] = icon.properties.code;
-  });
-});
+import { Fontello, IcoMoon } from './CustomFonts.ts';
 
 interface IconRowProps {
   label: string;
@@ -77,7 +59,7 @@ const icons = [
   { Fontello: <Fontello name="home" size={24} /> },
   { Fontisto: <Fontisto name="home" size={24} /> },
   { Foundation: <Foundation name="home" size={24} /> },
-  { IcoMoon: <IcoMoon name="home" size={24} /> },
+  { IcoMoon: <IcoMoon name="house" size={24} /> },
   { Ionicons: <Ionicons name="home" size={24} /> },
   { Lucide: <Lucide name="house" size={24} /> },
   { MaterialDesignIcons: <MaterialDesignIcons name="home" size={24} /> },

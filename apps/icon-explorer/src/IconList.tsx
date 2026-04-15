@@ -11,7 +11,7 @@ import {
   View,
 } from 'react-native';
 
-import { iconSets as ICON_SETS, type IconName, type IconSet } from './icon-sets';
+import { iconSets as ICON_SETS, type IconName, type IconSet } from './IconSets';
 
 const styles = StyleSheet.create({
   container: {
