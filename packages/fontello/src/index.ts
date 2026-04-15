@@ -20,22 +20,23 @@ type FontelloConfig = {
   }>;
 };
 
-type FontelloComponent = IconComponent<Record<string, number>>;
-
 // entries are optional because they can be derived from the config
 type Options = Partial<CreateIconSetOptions>;
 
-export default function createIconSetFromFontello(
+export default function createIconSetFromFontello<Names extends string = string>(
   config: FontelloConfig,
   postScriptName?: string,
   fontFileName?: string,
-): FontelloComponent;
-export default function createIconSetFromFontello(config: FontelloConfig, options: Options): FontelloComponent;
-export default function createIconSetFromFontello(
+): IconComponent<Record<Names, number>>;
+export default function createIconSetFromFontello<Names extends string = string>(
+  config: FontelloConfig,
+  options: Options,
+): IconComponent<Record<Names, number>>;
+export default function createIconSetFromFontello<Names extends string = string>(
   config: FontelloConfig,
   postScriptNameOrOptions?: string | Options,
   fontFileNameParam?: string,
-): FontelloComponent {
+): IconComponent<Record<Names, number>> {
   const { postScriptName, fontFileName, fontSource, fontStyle } =
     typeof postScriptNameOrOptions === 'object'
       ? postScriptNameOrOptions
@@ -51,7 +52,7 @@ export default function createIconSetFromFontello(
 
   const fontFamily = postScriptName || config.name || 'fontello';
 
-  return createIconSet(glyphMap, {
+  return createIconSet<Record<Names, number>>(glyphMap as Record<Names, number>, {
     postScriptName: fontFamily,
     fontFileName: fontFileName || `${fontFamily}.ttf`,
     fontSource,

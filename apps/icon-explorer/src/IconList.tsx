@@ -79,9 +79,9 @@ export const IconList = ({ iconName, iconStyle = undefined }: { iconName: IconNa
       return undefined;
     }
 
-    const searchListner = DeviceEventEmitter.addListener('onSearchIcons', (e) => setFilter(e.query.toLowerCase()));
+    const searchListener = DeviceEventEmitter.addListener('onSearchIcons', (e) => setFilter(e.query.toLowerCase()));
 
-    return searchListner.remove;
+    return searchListener.remove;
   }, []);
 
   const handleSearchChange = (event: TextInputChangeEvent) => setFilter(event.nativeEvent.text.toLowerCase());

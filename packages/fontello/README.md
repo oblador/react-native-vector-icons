@@ -32,6 +32,19 @@ import fontelloConfig from "./config.json";
 const Icon = createIconSet(fontelloConfig, "Font Family", "FontFamily.ttf");
 ```
 
+### Type-checked icon names
+
+You can pass a union of icon names as a generic parameter to get type-checking and autocomplete on the `name` prop:
+
+```tsx
+import createIconSet from '@react-native-vector-icons/fontello';
+import fontelloConfig from './config.json';
+const Icon = createIconSet<'home' | 'settings' | 'user'>(fontelloConfig);
+
+<Icon name="home" />     // ok
+<Icon name="invalid" />  // type error
+```
+
 ### Expo Config Plugin
 
 This package ships an [Expo config plugin](../../docs/SETUP-EXPO.md) to register the font with iOS. Add it to the `plugins` array in your `app.json` or `app.config.js`:

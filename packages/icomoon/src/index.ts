@@ -41,22 +41,23 @@ type IcoMoonConfig =
       };
     };
 
-type IcoMoonComponent = IconComponent<Record<string, number>>;
-
 // entries are optional because they can be derived from the config
 type Options = Partial<CreateIconSetOptions>;
 
-export default function createIconSetFromIcoMoon(
+export default function createIconSetFromIcoMoon<Names extends string = string>(
   config: IcoMoonConfig,
   postScriptName?: string,
   fontFileName?: string,
-): IcoMoonComponent;
-export default function createIconSetFromIcoMoon(config: IcoMoonConfig, options: Options): IcoMoonComponent;
-export default function createIconSetFromIcoMoon(
+): IconComponent<Record<Names, number>>;
+export default function createIconSetFromIcoMoon<Names extends string = string>(
+  config: IcoMoonConfig,
+  options: Options,
+): IconComponent<Record<Names, number>>;
+export default function createIconSetFromIcoMoon<Names extends string = string>(
   config: IcoMoonConfig,
   postScriptNameOrOptions?: string | Options,
   fontFileNameParam?: string,
-): IcoMoonComponent {
+): IconComponent<Record<Names, number>> {
   const { postScriptName, fontFileName, fontSource, fontStyle } =
     typeof postScriptNameOrOptions === 'object'
       ? postScriptNameOrOptions
@@ -86,7 +87,7 @@ export default function createIconSetFromIcoMoon(
 
   const fontFamily = postScriptName || (config.preferences?.fontPref?.metadata?.fontFamily ?? 'icomoon');
 
-  return createIconSet(glyphMap, {
+  return createIconSet<Record<Names, number>>(glyphMap as Record<Names, number>, {
     postScriptName: fontFamily,
     fontFileName: fontFileName || `${fontFamily}.ttf`,
     fontSource,
