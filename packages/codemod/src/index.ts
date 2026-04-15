@@ -51,7 +51,7 @@ async function main() {
 
     if (!version) {
       console.error(
-        `Have not found anything to migrate. Do you have "react-native-vector-icons" or "@expo/vector-icons" at ${path.join(dir, 'package.json')}?`,
+        `Have not found anything to migrate. Do you have "react-native-vector-icons" or "@expo/vector-icons" in ${path.join(dir, 'package.json')}?`,
       );
       process.exit(1);
     }

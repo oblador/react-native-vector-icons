@@ -17,8 +17,6 @@ export function checkGitStatus(dir: string): void {
       console.error(status);
       process.exit(1);
     }
-
-    console.log('✅ Git repository is clean');
   } catch {
     // If git rev-parse fails, the directory is not a git repository
     console.log('!  Directory is not a git repository. Proceeding without git status check.');
