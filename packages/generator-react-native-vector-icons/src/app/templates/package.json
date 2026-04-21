@@ -27,7 +27,7 @@
         "default": "./lib/commonjs/static.js"
       }
     }<% } -%><%- extraExports -%>,
-    "./app.plugin": "./app.plugin.js"
+    "./app.plugin.js": "./app.plugin.js"
   },
   "files": [
     "src",

@@ -17,7 +17,7 @@
         "default": "./lib/commonjs/index.js"
       }
     },
-    "./app.plugin": "./app.plugin.js"
+    "./app.plugin.js": "./app.plugin.js"
   },
   "files": [
     "src",

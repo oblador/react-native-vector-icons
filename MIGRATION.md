@@ -9,7 +9,7 @@ We provide a `codemod` to help migrate your code and settings between major vers
 npx @react-native-vector-icons/codemod
 ```
 
-## Expo
+## Expo projects
 
 To migrate from `@expo/vector-icons`, run the codemod in your Expo project. If you use `createIconSetFromIcoMoon` or `createIconSetFromFontello`, there may be some manual steps required after running the codemod:
 

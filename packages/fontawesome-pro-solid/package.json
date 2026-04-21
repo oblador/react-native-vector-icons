@@ -28,7 +28,7 @@
       }
     },
     "./glyphmaps/*.json": "./glyphmaps/*.json",
-    "./app.plugin": "./app.plugin.js"
+    "./app.plugin.js": "./app.plugin.js"
   },
   "files": [
     "src",

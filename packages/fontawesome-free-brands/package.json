@@ -29,7 +29,7 @@
     },
     "./glyphmaps/*.json": "./glyphmaps/*.json",
     "./fonts/*.ttf": "./fonts/*.ttf",
-    "./app.plugin": "./app.plugin.js"
+    "./app.plugin.js": "./app.plugin.js"
   },
   "files": [
     "src",
