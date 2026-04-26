@@ -123,9 +123,13 @@
       "entry": ["src/index.{ts,tsx}", "src/static.{ts,tsx}"]
     },
     "apps/icon-explorer": {
-      "entry": ["src/app/**/*.tsx", "scripts/*.mts"],
-      "ignoreDependencies": ["@react-native-vector-icons/*", "expo-updates"],
-      "ignore": ["src/data/generated/**"]
+      "entry": [
+        "src/app/**/*.tsx",
+        "scripts/*.mts",
+        "src/data/generated/icon-registry.generated.tsx",
+        "src/CustomFonts.ts"
+      ],
+      "ignoreDependencies": ["@react-native-vector-icons/*", "expo-updates"]
     }
   }
 }
