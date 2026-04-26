@@ -1,13 +1,12 @@
-const path = require('node:path');
+const { getDefaultConfig } = require('expo/metro-config');
+const { withUniwindConfig } = require('uniwind/metro');
 
-const { makeMetroConfig } = require('@rnx-kit/metro-config');
-
-const projectRoot = __dirname;
-const monorepoRoot = path.resolve(projectRoot, '../..');
-
-module.exports = makeMetroConfig({
-  watchFolders: [monorepoRoot],
-  resolver: {
-    nodeModulesPaths: [path.resolve(projectRoot, 'node_modules'), path.resolve(monorepoRoot, 'node_modules')],
-  },
+const config = withUniwindConfig(getDefaultConfig(__dirname), {
+  cssEntryFile: './src/global.css',
+  dtsFile: './src/uniwind-types.d.ts',
 });
+
+config.transformer.babelTransformerPath = require.resolve('./metro/markdown-transformer.js');
+config.resolver.sourceExts = [...config.resolver.sourceExts, 'md'];
+
+module.exports = config;

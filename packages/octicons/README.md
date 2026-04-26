@@ -47,6 +47,7 @@ The table below tracks which font version is included in each package version.
 | &gt; 12.0.1 | 19.15.3 |
 | &gt; 20.4.1 | 19.22.0 |
 | &gt; 21.0.0 | 19.23.1 |
+| &gt; 21.1.1 | 19.25.0 |
 
 ## Contributing
 

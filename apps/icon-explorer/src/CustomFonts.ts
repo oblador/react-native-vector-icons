@@ -1,3 +1,4 @@
+// NOTE: Ths file only exists to test that the tyes work for custom fonts
 import createFontelloIconSet from '@react-native-vector-icons/fontello';
 import createIcoMoonIconSet from '@react-native-vector-icons/icomoon';
 import FontelloConfig from '../rnvi-fonts/fontello/fontello.config.json';

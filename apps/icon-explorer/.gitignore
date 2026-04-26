@@ -1,21 +1,47 @@
-*.binlog
-*.hprof
-*.xcworkspace/
-*.zip
-.DS_Store
-.gradle/
-.idea/
-.kotlin/
-.vs/
-.xcode.env
-Pods/
-build/
-dist/*
-!dist/.gitignore
-local.properties
-msbuild.binlog
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
 node_modules/
 
-# Make sure we don't accidentally commit fontawesomepro test fonts
-rnvi-fonts/fontawesome5-pro
-rnvi-fonts/fontawesome6-pro
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+app-example
+
+# generated native folders
+/ios
+/android
+
+# generated data (rebuilt on prepare)
+src/data/generated/
+rnvi-fonts/

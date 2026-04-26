@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "7964f0d24b2643bd5ac8e27d1fc994ee68b3001293f6ba8b086d42a51baefea0",
-    "current": "7964f0d24b2643bd5ac8e27d1fc994ee68b3001293f6ba8b086d42a51baefea0"
+    "previous": "e7ba0fc9f062bd1b3ae02fa49d2f3b1dc76729f789f1a730178c83959b6d58b8",
+    "current": "e7ba0fc9f062bd1b3ae02fa49d2f3b1dc76729f789f1a730178c83959b6d58b8"
   },
   "fonts": [
     "Octicons/Octicons.ttf",
@@ -1131,6 +1131,10 @@
       "codepoint": 61942,
       "source": "renamedSVGs/ruby.svg"
     },
+    "sandbox": {
+      "codepoint": 62066,
+      "source": "renamedSVGs/sandbox.svg"
+    },
     "screen-full": {
       "codepoint": 61943,
       "source": "renamedSVGs/screen-full.svg"
@@ -1290,6 +1294,14 @@
     "stack": {
       "codepoint": 61970,
       "source": "renamedSVGs/stack.svg"
+    },
+    "stack-check": {
+      "codepoint": 62067,
+      "source": "renamedSVGs/stack-check.svg"
+    },
+    "stack-remove": {
+      "codepoint": 62068,
+      "source": "renamedSVGs/stack-remove.svg"
     },
     "star": {
       "codepoint": 61971,

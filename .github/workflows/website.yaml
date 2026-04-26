@@ -1,0 +1,76 @@
+name: Deploy Website
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y woff2
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Fetch FontAwesome Pro fonts
+        run: bash scripts/fetch-pro.sh
+        working-directory: apps/icon-explorer
+        env:
+          FONTAWESOME_PACKAGE_TOKEN: ${{ secrets.FONTAWESOME_PACKAGE_TOKEN }}
+
+      - name: Build website
+        run: pnpm run build:web
+        working-directory: apps/icon-explorer
+
+      - name: Upload website build artifacts
+        uses: actions/upload-pages-artifact@0ca16172ca884f0a37117fed41734f29784cc980
+        with:
+          path: apps/icon-explorer/dist
+          # fonts are in a .pnpm directory, so we need to include hidden files
+          include-hidden-files: true
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

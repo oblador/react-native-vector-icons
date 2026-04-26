@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "uniwind";
+
+@theme {
+  --font-heading: "JetBrainsMono", monospace;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrainsMono", monospace;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-bright);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-dim);
+}
+
+@layer theme {
+  :root {
+    /* ── Dark theme (default) ────────────────────────────── */
+    @variant dark {
+      --color-bg: #0a0a0b;
+      --color-bg-subtle: #111113;
+      --color-surface: #18181b;
+      --color-surface-hover: #1f1f23;
+      --color-border: #27272a;
+      --color-border-bright: #3f3f46;
+      --color-text: #fafafa;
+      --color-text-muted: #a1a1aa;
+      --color-text-dim: #71717a;
+      --color-accent-cyan: #06b6d4;
+      --color-accent-violet: #8b5cf6;
+      --color-accent-cyan-dim: #0e7490;
+      --color-accent-violet-dim: #6d28d9;
+      --color-code-bg: #0a0a0b;
+      --color-code-text: #e2e8f0;
+    }
+
+    /* ── Light theme ─────────────────────────────────────── */
+    @variant light {
+      --color-bg: #f8fafc;
+      --color-bg-subtle: #f1f5f9;
+      --color-surface: #ffffff;
+      --color-surface-hover: #f1f5f9;
+      --color-border: #e2e8f0;
+      --color-border-bright: #cbd5e1;
+      --color-text: #0f172a;
+      --color-text-muted: #475569;
+      --color-text-dim: #94a3b8;
+      --color-accent-cyan: #0891b2;
+      --color-accent-violet: #7c3aed;
+      --color-accent-cyan-dim: #06b6d4;
+      --color-accent-violet-dim: #8b5cf6;
+      --color-code-bg: #f1f5f9;
+      --color-code-text: #334155;
+    }
+  }
+}
