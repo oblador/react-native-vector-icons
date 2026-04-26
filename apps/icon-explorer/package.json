@@ -6,8 +6,7 @@
     "generate-registry": "node --experimental-strip-types scripts/generate-icon-registry.mts",
     "generate-glyphmap-index": "node --experimental-strip-types scripts/generate-glyphmap-index.mts",
     "generate-pro-fonts": "node --experimental-strip-types scripts/generate-pro-fonts.mts",
-    "compile-docs": "node --experimental-strip-types scripts/compile-docs.mts",
-    "prepare": "pnpm run generate-registry && pnpm run generate-glyphmap-index && pnpm run generate-pro-fonts && pnpm run compile-docs",
+    "prepare": "pnpm run generate-registry && pnpm run generate-glyphmap-index && pnpm run generate-pro-fonts",
     "start": "pnpm run prepare && expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -94,6 +93,7 @@
     "uniwind": "^1.6.2"
   },
   "devDependencies": {
+    "@expo/metro-config": "~55.0.14",
     "@types/markdown-it": "^14.1.2",
     "@types/markdown-it-container": "^4.0.0",
     "@types/react": "~19.2.14",

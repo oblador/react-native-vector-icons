@@ -125,7 +125,7 @@
     "apps/icon-explorer": {
       "entry": ["src/app/**/*.tsx", "scripts/*.mts"],
       "ignoreDependencies": ["@react-native-vector-icons/*", "expo-updates"],
-      "ignore": ["src/data/generated/**", "src/content/docs/generated/**"]
+      "ignore": ["src/data/generated/**"]
     }
   }
 }
