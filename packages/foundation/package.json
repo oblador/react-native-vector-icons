@@ -99,12 +99,12 @@
     "@react-native-vector-icons/common": "workspace:^"
   },
   "devDependencies": {
-    "@types/react": "^19.2.14",
+    "@types/react": "^19.1.0",
     "del-cli": "^7.0.0",
-    "foundation-icons": "2.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "foundation-icons": "2.0.0"
   },
   "peerDependencies": {
     "@expo/config-plugins": ">=10.0.0",

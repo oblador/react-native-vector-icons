@@ -308,7 +308,7 @@ importers:
         specifier: 4.4.2
         version: 4.4.2
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -431,7 +431,7 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -462,7 +462,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -496,7 +496,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -530,7 +530,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -576,7 +576,7 @@ importers:
         specifier: 7.2.0
         version: 7.2.0
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -610,7 +610,7 @@ importers:
         specifier: 7.2.0
         version: 7.2.0
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -644,7 +644,7 @@ importers:
         specifier: 7.2.0
         version: 7.2.0
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -675,7 +675,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -706,7 +706,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -737,7 +737,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -768,7 +768,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -799,7 +799,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -830,7 +830,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -861,7 +861,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -892,7 +892,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -923,7 +923,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -954,7 +954,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -985,7 +985,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1016,7 +1016,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1047,7 +1047,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1078,7 +1078,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1109,7 +1109,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1140,7 +1140,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1171,7 +1171,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1205,7 +1205,7 @@ importers:
         specifier: 5.15.4
         version: 5.15.4
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1239,7 +1239,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1273,7 +1273,7 @@ importers:
         specifier: 6.7.2
         version: 6.7.2
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1307,7 +1307,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1340,7 +1340,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1371,7 +1371,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1405,7 +1405,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1512,7 +1512,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1543,7 +1543,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1577,7 +1577,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1614,7 +1614,7 @@ importers:
         specifier: 7.4.47
         version: 7.4.47
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1645,7 +1645,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1679,7 +1679,7 @@ importers:
         specifier: 19.23.1
         version: 19.23.1
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1710,7 +1710,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       del-cli:
         specifier: ^7.0.0
@@ -1744,7 +1744,7 @@ importers:
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@5.9.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.14
+        specifier: ^19.1.0
         version: 19.2.14
       css-social-buttons:
         specifier: 1.1.1
@@ -13576,7 +13576,9 @@ snapshots:
       metro-runtime: 0.83.6
     transitivePeerDependencies:
       - '@babel/core'
+      - bufferutil
       - supports-color
+      - utf-8-validate
     optional: true
 
   '@react-native/normalize-colors@0.74.89': {}
