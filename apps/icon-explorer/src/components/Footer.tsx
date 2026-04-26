@@ -27,7 +27,7 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <View className="border-t border-border mt-16">
+    <View className="border-t border-border">
       <View className="mx-auto w-full max-w-7xl px-4 sm:px-6 py-8 flex-row flex-wrap items-center justify-between gap-4">
         <Text className="text-sm text-text-dim">© {year} React Native Vector Icons. MIT Licence.</Text>
         <View className="flex-row items-center gap-3">
