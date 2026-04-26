@@ -1,16 +1,11 @@
 import { DocScreen } from '@/components/DocScreen';
-import { Markdown } from '@/components/Markdown';
-import { PlatformTabs } from '@/components/PlatformTabs';
-import * as content from '@/content/docs/getting-started';
+import { Markdown } from '@/components/markdown';
+import * as content from '@/content/docs/generated/getting-started';
 
-export default function GettingStartedScreen() {
+export default function Screen() {
   return (
     <DocScreen title={content.title}>
-      <Markdown content={content.body} />
-      {Object.entries(content.tabs).map(([groupName, sections]) => (
-        <PlatformTabs key={groupName} title={groupName} sections={sections} />
-      ))}
-      <Markdown content={content.afterTabs} />
+      <Markdown source={content.body} />
     </DocScreen>
   );
 }

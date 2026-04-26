@@ -26,7 +26,7 @@ export function GradientText({ className = '', children, standalone = false }: P
         className={className}
         style={
           {
-            background: `linear-gradient(135deg, ${colours.accentCyan}, ${colours.accentViolet})`,
+            backgroundImage: `linear-gradient(135deg, ${colours.accentCyan}, ${colours.accentViolet})`,
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',

@@ -1,7 +1,8 @@
-export const title = 'Creating a Font Package';
-export const description = 'How to create your own custom icon font package for React Native Vector Icons';
+---
+title: Creating a Font Package
+description: How to create your own custom icon font package for React Native Vector Icons
+---
 
-export const body = `
 You can create a new font package either via a PR to this repository or by publishing your own font package on NPM.
 
 We use a yeoman generator to fully automate the generation of the fonts from a configuration file.
@@ -16,106 +17,106 @@ Below we describe how to create a font in this monorepo, the process for creatin
 ## Quick Start
 
 1. **Set up development environment** (see [CONTRIBUTING.md](https://github.com/oblador/react-native-vector-icons/blob/master/CONTRIBUTING.md#development-workflow)):
-   \`\`\`sh
+   ```sh
    pnpm install
-   \`\`\`
+   ```
 
 2. **Create font package directory and config**:
-   \`\`\`sh
+   ```sh
    mkdir packages/my-font
    vi packages/my-font/.yo-rc.json
    git add packages/my-font/.yo-rc.json
-   \`\`\`
+   ```
 
 3. **Generate the font package**:
-   \`\`\`sh
+   ```sh
    # Generate single font
    pnpm generate my-font
 
    # Or generate all fonts
    pnpm generate
-   \`\`\`
+   ```
 
 ## Configuration Reference
 
-The \`.yo-rc.json\` file contains all configuration for the font package generation. Here's the complete structure:
+The `.yo-rc.json` file contains all configuration for the font package generation. Here's the complete structure:
 
 For most fonts you should be able to set the packageName and most other variables will be derived from them, but you can adjust with the optional properties when necessary.
 
 ### Required Properties
 
 #### packageName
-- **Type**: \`string\`
+- **Type**: `string`
 - **Description**: The name of the node package and directory name
-- **Example**: \`"material-symbols"\`
-- **Note**: Currently assumes package will live in \`@react-native-vector-icons\` namespace
+- **Example**: `"material-symbols"`
+- **Note**: Currently assumes package will live in `@react-native-vector-icons` namespace
 
 ### Optional Properties
 
 #### name
-- **Type**: \`string\`
+- **Type**: `string`
 - **Description**: The name in capitalised sentence form
 - **Default**: Title Case of packageName
-- **Example**: \`"Material Symbols"\` (from \`material-symbols\`)
+- **Example**: `"Material Symbols"` (from `material-symbols`)
 
 #### className
-- **Type**: \`string\`
+- **Type**: `string`
 - **Description**: Class name for generated components
 - **Default**: PascalCase of packageName
-- **Example**: \`"MaterialSymbols"\` (from \`material-symbols\`)
+- **Example**: `"MaterialSymbols"` (from `material-symbols`)
 
 #### postScriptName
-- **Type**: \`string\`
+- **Type**: `string`
 - **Description**: PostScript name for the font
 - **Default**: Same as className
-- **Example**: \`"MaterialSymbols"\`
+- **Example**: `"MaterialSymbols"`
 
 #### fontFileName
-- **Type**: \`string\`
+- **Type**: `string`
 - **Description**: Base filename for generated fonts
 - **Default**: Same as className
-- **Example**: \`"MaterialSymbols"\`
+- **Example**: `"MaterialSymbols"`
 
 #### upstreamFont
-- **Type**: \`string | object\`
+- **Type**: `string | object`
 - **Description**: The upstream font package dependency where the font comes from a node module
-- **String format**: \`"package-name"\` - fetches latest version from npm
+- **String format**: `"package-name"` - fetches latest version from npm
 - **Object format**:
-  \`\`\`json
+  ```json
   {
     "packageName": "@fortawesome/fontawesome-free",
     "versionRange": "^6",
     "registry": "https://registry.npmjs.org",
     "versionOnly": false
   }
-  \`\`\`
+  ```
 
 #### customSrc
-- **Type**: \`string | boolean\`
-- **Description**: Path to custom source template or \`true\` to skip generation
-- **Example**: \`"../../../../fontawesome-common/generators/app/templates/src/index.tsx"\`
+- **Type**: `string | boolean`
+- **Description**: Path to custom source template or `true` to skip generation
+- **Example**: `"../../../../fontawesome-common/generators/app/templates/src/index.tsx"`
 
 #### customReadme
-- **Type**: \`boolean\`
+- **Type**: `boolean`
 - **Description**: Skip README.md generation
-- **Default**: \`false\`
+- **Default**: `false`
 
 #### copyCustomFonts
-- **Type**: \`boolean\`
+- **Type**: `boolean`
 - **Description**: Copy custom font files instead of generating
-- **Default**: \`false\`
+- **Default**: `false`
 
 #### commonPackage
-- **Type**: \`string\`
+- **Type**: `string`
 - **Description**: Path to common package for shared functionality
-- **Default**: \`"common"\`
-- **Example**: \`"fontawesome-common/fontawesome6"\`
+- **Default**: `"common"`
+- **Example**: `"fontawesome-common/fontawesome6"`
 
 #### meta
-- **Type**: \`object\`
+- **Type**: `object`
 - **Description**: Metadata for multi-style fonts
 - **Example**:
-  \`\`\`json
+  ```json
   {
     "defaultStyleName": "regular",
     "styleNames": ["regular", "solid", "brand"],
@@ -127,86 +128,86 @@ For most fonts you should be able to set the packageName and most other variable
       }
     }
   }
-  \`\`\`
+  ```
 
 #### versions
-- **Type**: \`array\`
+- **Type**: `array`
 - **Description**: Version history tracking. Updated when a new upstream font version is released.
 - **Example**:
-  \`\`\`json
+  ```json
   [
     { "rnvi": "12.0.0", "upstream": "4.29.2" },
     { "rnvi": "12.0.1", "upstream": "4.30.0" }
   ]
-  \`\`\`
+  ```
 
 ### Build Steps
 
-The \`buildSteps\` object defines the font generation pipeline. Steps are executed in this order:
+The `buildSteps` object defines the font generation pipeline. Steps are executed in this order:
 
 #### preScript
 Execute shell commands before font generation
-\`\`\`json
+```json
 {
   "preScript": {
-    "script": "mkdir -p fonts\\ncurl https://example.com/font.ttf > fonts/font.ttf"
+    "script": "mkdir -p fonts\ncurl https://example.com/font.ttf > fonts/font.ttf"
   }
 }
-\`\`\`
+```
 
 #### renameSVGs
 Rename and filter SVG files
-\`\`\`json
+```json
 {
   "renameSVGs": {
     "location": "../../node_modules/@primer/octicons/build/svg",
     "keepPostfix": "-16"
   }
 }
-\`\`\`
+```
 - **location**: Source directory containing SVGs
 - **keepPostfix**: Only keep files ending with this postfix, remove it from output
 
 #### fixSVGPaths
 Fix SVG path issues using oslllo-svg-fixer
-\`\`\`json
+```json
 {
   "fixSVGPaths": {
     "location": "../../node_modules/ionicons/dist/svg",
     "cleanup": true
   }
 }
-\`\`\`
-- **location**: Source directory or \`"renamedSVGs"\` if after renameSVGs
+```
+- **location**: Source directory or `"renamedSVGs"` if after renameSVGs
 - **cleanup**: Remove source directory after processing
 
 #### fontCustom
 Generate font TTF from SVGs using FontCustom
-\`\`\`json
+```json
 {
   "fontCustom": {
     "location": "fixedSvg",
     "cleanup": true
   }
 }
-\`\`\`
+```
 - **location**: Directory containing SVG files
 - **cleanup**: Remove source directory after processing
 
 #### fontforgeScript
 Run FontForge script for font post-processing
-\`\`\`json
+```json
 {
   "fontforgeScript": {
     "script": "correct-direction.py"
   }
 }
-\`\`\`
+```
 - **script**: Script name in the generator's fontforge directory
 
 #### glyphmap
 Generate icon mapping files
-\`\`\`json
+```json
 {
   "glyphmap": {
     "mode": "css",
@@ -215,37 +216,37 @@ Generate icon mapping files
     "cleanup": true
   }
 }
-\`\`\`
-- **mode**: \`"css"\` or \`"codepoints"\`
-- **location**: Source file or array of \`[source, output]\` pairs
+```
+- **mode**: `"css"` or `"codepoints"`
+- **location**: Source file or array of `[source, output]` pairs
 - **prefix**: CSS class prefix (css mode only)
 - **cleanup**: Remove source files after processing
 
 #### copyFont
 Copy existing font files
-\`\`\`json
+```json
 {
   "copyFont": {
     "location": "../../node_modules/font-awesome/fonts/fontawesome-webfont.ttf"
   }
 }
-\`\`\`
-- **location**: Source file path or array of \`[source, output]\` pairs
+```
+- **location**: Source file path or array of `[source, output]` pairs
 
 #### postScript
 Execute shell commands after font generation
-\`\`\`json
+```json
 {
   "postScript": {
     "script": "node ../scripts/generate-metadata.js"
   }
 }
-\`\`\`
+```
 
 ## Configuration Examples
 
 ### SVG to Font Generation (Feather Icons)
-\`\`\`json
+```json
 {
   "generator-react-native-vector-icons": {
     "packageName": "feather",
@@ -262,10 +263,10 @@ Execute shell commands after font generation
     "versions": [{ "rnvi": "12.0.0", "upstream": "4.29.2" }]
   }
 }
-\`\`\`
+```
 
 ### CSS-based Font (FontAwesome)
-\`\`\`json
+```json
 {
   "generator-react-native-vector-icons": {
     "packageName": "fontawesome",
@@ -286,17 +287,17 @@ Execute shell commands after font generation
     "versions": [{ "rnvi": "12.0.0", "upstream": "4.7.0" }]
   }
 }
-\`\`\`
+```
 
 ### Codepoints-based Font (Material Icons)
-\`\`\`json
+```json
 {
   "generator-react-native-vector-icons": {
     "packageName": "material-icons",
     "postScriptName": "MaterialIcons-Regular",
     "buildSteps": {
       "preScript": {
-        "script": "mkdir -p fonts\\nREF='f7bd4f25f3764883717c09a1fd867f560c9a9581'\\ncurl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIcons-Regular.codepoints -Ls > MaterialIcons-Regular.codepoints\\ncurl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIcons-Regular.ttf -Ls > fonts/MaterialIcons.ttf"
+        "script": "mkdir -p fonts\nREF='f7bd4f25f3764883717c09a1fd867f560c9a9581'\ncurl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIcons-Regular.codepoints -Ls > MaterialIcons-Regular.codepoints\ncurl https://raw.githubusercontent.com/google/material-design-icons/$REF/font/MaterialIcons-Regular.ttf -Ls > fonts/MaterialIcons.ttf"
       },
       "glyphmap": {
         "location": "MaterialIcons-Regular.codepoints",
@@ -308,10 +309,10 @@ Execute shell commands after font generation
     "versions": [{ "rnvi": "12.0.0", "upstream": "0.0.1" }]
   }
 }
-\`\`\`
+```
 
 ### Multi-style Font (FontAwesome 6)
-\`\`\`json
+```json
 {
   "generator-react-native-vector-icons": {
     "packageName": "fontawesome6",
@@ -364,10 +365,10 @@ Execute shell commands after font generation
     "versions": [{ "rnvi": "12.0.0", "upstream": "6.7.2" }]
   }
 }
-\`\`\`
+```
 
 ### SVG Processing with Fixes (Ionicons)
-\`\`\`json
+```json
 {
   "generator-react-native-vector-icons": {
     "packageName": "ionicons",
@@ -391,10 +392,10 @@ Execute shell commands after font generation
     "versions": [{ "rnvi": "12.0.0", "upstream": "7.4.0" }, { "rnvi": "12.0.1", "upstream": "8.0.8" }]
   }
 }
-\`\`\`
+```
 
 ### Custom Font Package (Fontello)
-\`\`\`json
+```json
 {
   "generator-react-native-vector-icons": {
     "packageName": "fontello",
@@ -403,7 +404,7 @@ Execute shell commands after font generation
     "copyCustomFonts": true
   }
 }
-\`\`\`
+```
 
 ## Build Process
 
@@ -417,27 +418,27 @@ Execute shell commands after font generation
 
 After generating your font package, test it in the example app:
 
-\`\`\`sh
+```sh
 # Start the example app (see CONTRIBUTING.md for details)
 pnpm run example start
 pnpm run example android  # or ios
-\`\`\`
+```
 
 ## Development Workflow
 
 For ongoing development and testing:
 
-1. **Make template changes** to \`packages/generator-react-native-vector-icons/src/app/templates/\`
+1. **Make template changes** to `packages/generator-react-native-vector-icons/src/app/templates/`
 2. **Regenerate fonts**:
-   \`\`\`sh
+   ```sh
    pnpm generate my-font
-   \`\`\`
+   ```
 3. **Test changes** in the IconExplorer app
 4. **Run linting and tests** (see [CONTRIBUTING.md](https://github.com/oblador/react-native-vector-icons/blob/master/CONTRIBUTING.md#linting-and-tests)):
-   \`\`\`sh
+   ```sh
    pnpm run lint
    pnpm run test
-   \`\`\`
+   ```
 
 ## Submitting Your Font Package
 
@@ -456,11 +457,10 @@ Font package versions are independent of upstream font versions. We track the ma
 
 If needed, you can run the generator manually:
 
-\`\`\`sh
+```sh
 cd packages/my-font
 npx yo react-native-vector-icons --current-version=1.0.0
-\`\`\`
+```
 
 > [!TIP]
-> The \`pnpm generate\` command is the preferred method as it handles version management automatically.
-`.trim();
+> The `pnpm generate` command is the preferred method as it handles version management automatically.

@@ -7,6 +7,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import matter from 'gray-matter';
 
 const contentDir = path.resolve(import.meta.dirname, '../src/content/docs');
 const distDir = path.resolve(import.meta.dirname, '../dist');
@@ -27,30 +28,18 @@ async function main() {
   const pages: DocPage[] = [];
 
   for (const slug of PAGE_ORDER) {
-    const modulePath = path.join(contentDir, `${slug}.ts`);
-    if (!fs.existsSync(modulePath)) {
+    const filePath = path.join(contentDir, `${slug}.md`);
+    if (!fs.existsSync(filePath)) {
       console.warn(`Skipping ${slug}: file not found`);
       continue;
     }
 
-    const mod = await import(modulePath);
-    let markdown = mod.body || '';
-
-    // Append tab content if present
-    if (mod.tabs) {
-      for (const [groupName, sections] of Object.entries(mod.tabs)) {
-        markdown += `\n\n## ${groupName}\n`;
-        for (const section of sections as Array<{ label: string; content: string }>) {
-          markdown += `\n### ${section.label}\n\n${section.content}\n`;
-        }
-      }
-    }
-
+    const { data, content } = matter(fs.readFileSync(filePath, 'utf-8'));
     pages.push({
       slug,
-      title: mod.title || slug,
-      description: mod.description || '',
-      markdown,
+      title: String(data.title ?? slug),
+      description: String(data.description ?? ''),
+      markdown: content.trim(),
     });
   }
 

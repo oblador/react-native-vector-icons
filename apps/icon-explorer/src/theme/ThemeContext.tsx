@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { useColorScheme as useSystemColorScheme } from 'react-native';
 import { Uniwind } from 'uniwind';
 import { darkColours, lightColours, type ThemeColours } from './tokens';
@@ -47,13 +47,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const colours = resolvedTheme === 'dark' ? darkColours : lightColours;
 
+  const value = useMemo(
+    () => ({ mode, resolvedTheme, colours, setMode, toggleTheme }),
+    [mode, resolvedTheme, setMode, toggleTheme],
+  );
+
   if (!loaded) return null;
 
-  return (
-    <ThemeContext.Provider value={{ mode, resolvedTheme, colours, setMode, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {

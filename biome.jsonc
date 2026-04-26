@@ -32,6 +32,7 @@
       "!**/apps/icon-explorer/.expo",
       "!**/apps/icon-explorer/expo-env.d.ts",
       "!**/apps/icon-explorer/src/data/generated",
+      "!**/apps/icon-explorer/src/content/docs/generated",
       "!**/apps/icon-explorer/src/uniwind-types.d.ts",
       "!**/apps/icon-explorer/dist",
 
@@ -109,6 +110,14 @@
           },
           "complexity": {
             "noUselessFragments": "off"
+          },
+          "style": {
+            // Stack-based markdown renderer relies on parser invariants for matching open/close tokens
+            "noNonNullAssertion": "off"
+          },
+          "correctness": {
+            // colours is derived from resolvedTheme; including in deps is redundant
+            "useExhaustiveDependencies": "off"
           }
         }
       }

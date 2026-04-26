@@ -6,7 +6,8 @@
     "generate-registry": "node --experimental-strip-types scripts/generate-icon-registry.mts",
     "generate-glyphmap-index": "node --experimental-strip-types scripts/generate-glyphmap-index.mts",
     "generate-pro-fonts": "node --experimental-strip-types scripts/generate-pro-fonts.mts",
-    "prepare": "pnpm run generate-registry && pnpm run generate-glyphmap-index && pnpm run generate-pro-fonts",
+    "compile-docs": "node --experimental-strip-types scripts/compile-docs.mts",
+    "prepare": "pnpm run generate-registry && pnpm run generate-glyphmap-index && pnpm run generate-pro-fonts && pnpm run compile-docs",
     "start": "pnpm run prepare && expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -74,6 +75,11 @@
     "expo-status-bar": "~55.0.5",
     "expo-system-ui": "~55.0.14",
     "expo-updates": "~55.0.19",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.1",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-container": "^4.0.0",
+    "markdown-it-github-alerts": "^1.0.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-native": "0.83.4",
@@ -88,6 +94,8 @@
     "uniwind": "^1.6.2"
   },
   "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/markdown-it-container": "^4.0.0",
     "@types/react": "~19.2.14",
     "@types/react-syntax-highlighter": "^15.5.13",
     "typescript": "~5.9.2"

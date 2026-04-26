@@ -1,7 +1,8 @@
-export const title = 'Icon Sets';
-export const description = 'Available icon sets in React Native Vector Icons';
+---
+title: Icon Sets
+description: Available icon sets in React Native Vector Icons
+---
 
-export const body = `
 RNVI ships with a wide range of icon families. You can also
 [search NPM](https://www.npmjs.com/search?q=keywords%3Areact-native-vector-icons-icon)
 for third-party icon packages.
@@ -41,4 +42,3 @@ These icon sets are still available but are no longer actively maintained by the
 | [MaterialIcons](./directory?family=MaterialIcons) | [Google, Inc.](https://fonts.google.com/icons?icon.set=Material+Icons) | 4.0.0 | 2,234 |
 | [SimpleLineIcons](./directory?family=SimpleLineIcons) | [Sabbir & Contributors](https://simplelineicons.github.io/) | 2.5.5 | 189 |
 | [Zocial](./directory?family=Zocial) | [Sam Collins](https://smcllns.github.io/css-social-buttons) | 1.1.1 | 100 |
-`.trim();

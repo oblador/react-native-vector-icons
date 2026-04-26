@@ -1,5 +1,5 @@
 import { Feather } from '@react-native-vector-icons/feather';
-import { Link, usePathname } from 'expo-router';
+import { Link, usePathname, useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Linking, Pressable, View } from 'react-native';
 import { GradientText } from '@/components/GradientText';
@@ -28,9 +28,16 @@ function NavLink({
   isActive: boolean;
   onPress?: () => void;
 }) {
+  const router = useRouter();
   return (
-    <Link href={href as '/'} onPress={onPress} asChild>
-      <Pressable className={isActive ? 'rounded-md px-3 py-1.5 bg-accent-cyan/10' : 'rounded-md px-3 py-1.5'}>
+    <Link href={href as '/'} asChild>
+      <Pressable
+        onPress={() => {
+          onPress?.();
+          router.push(href as '/');
+        }}
+        className={isActive ? 'rounded-md px-3 py-1.5 bg-accent-cyan/10' : 'rounded-md px-3 py-1.5'}
+      >
         <Text className={isActive ? 'text-sm font-medium text-accent-cyan' : 'text-sm font-medium text-text-muted'}>
           {label}
         </Text>

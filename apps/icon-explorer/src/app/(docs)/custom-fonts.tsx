@@ -1,11 +1,11 @@
 import { DocScreen } from '@/components/DocScreen';
-import { Markdown } from '@/components/Markdown';
-import * as content from '@/content/docs/custom-fonts';
+import { Markdown } from '@/components/markdown';
+import * as content from '@/content/docs/generated/custom-fonts';
 
 export default function Screen() {
   return (
     <DocScreen title={content.title}>
-      <Markdown content={content.body} />
+      <Markdown source={content.body} />
     </DocScreen>
   );
 }
