@@ -1,7 +1,7 @@
 import { Linking, Platform, Pressable, View } from 'react-native';
 import { Text } from '@/components/StyledText';
 
-function FooterLink({ href, children }: { href: string; children: string }) {
+const FooterLink = ({ href, children }: { href: string; children: string }) => {
   if (Platform.OS === 'web') {
     const WebA = 'a' as unknown as React.ComponentType<any>;
     return (
@@ -21,9 +21,9 @@ function FooterLink({ href, children }: { href: string; children: string }) {
       <Text className="text-sm text-text-dim">{children}</Text>
     </Pressable>
   );
-}
+};
 
-export function Footer() {
+export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
@@ -40,4 +40,4 @@ export function Footer() {
       </View>
     </View>
   );
-}
+};

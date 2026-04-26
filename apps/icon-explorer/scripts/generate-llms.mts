@@ -24,7 +24,7 @@ interface DocPage {
   markdown: string;
 }
 
-async function main() {
+const main = async (): Promise<void> => {
   const pages: DocPage[] = [];
 
   for (const slug of PAGE_ORDER) {
@@ -77,7 +77,7 @@ async function main() {
   }
 
   console.log(`Generated llms.txt, llms-full.txt, and ${pages.length} .md files in dist/`);
-}
+};
 
 main().catch((err) => {
   console.error('Error generating llms files:', err);

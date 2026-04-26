@@ -12,7 +12,7 @@ import glyphmapIndex from '@/data/generated/glyphmapIndex.json';
 import { iconFamilies } from '@/data/icon-families';
 import { useTheme } from '@/theme/ThemeContext';
 
-export default function DirectoryScreen() {
+const DirectoryScreen = () => {
   const { width } = useWindowDimensions();
   const { colours } = useTheme();
   const isWide = width >= 1024;
@@ -205,4 +205,6 @@ export default function DirectoryScreen() {
       )}
     </View>
   );
-}
+};
+
+export default DirectoryScreen;

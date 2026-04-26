@@ -2,7 +2,7 @@ import { Link } from 'expo-router';
 import { View } from 'react-native';
 import { Text } from '@/components/StyledText';
 
-export default function NotFoundScreen() {
+const NotFoundScreen = () => {
   return (
     <View className="flex-1 items-center justify-center bg-bg p-8">
       <Text className="text-6xl font-bold text-accent-cyan">404</Text>
@@ -12,4 +12,6 @@ export default function NotFoundScreen() {
       </Link>
     </View>
   );
-}
+};
+
+export default NotFoundScreen;

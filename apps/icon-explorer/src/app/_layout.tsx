@@ -45,7 +45,7 @@ const iconFonts: Record<string, any> = {
 
 SplashScreen.preventAutoHideAsync();
 
-function AppShell() {
+const AppShell = () => {
   const { resolvedTheme, colours } = useTheme();
   const [fontsLoaded] = useFonts(iconFonts);
 
@@ -69,9 +69,9 @@ function AppShell() {
       </View>
     </SafeAreaView>
   );
-}
+};
 
-export default function RootLayout() {
+const RootLayout = () => {
   return (
     <SafeAreaProvider>
       <ThemeProvider>
@@ -79,4 +79,6 @@ export default function RootLayout() {
       </ThemeProvider>
     </SafeAreaProvider>
   );
-}
+};
+
+export default RootLayout;

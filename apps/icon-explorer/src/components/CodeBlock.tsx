@@ -18,7 +18,7 @@ type Props = {
   language?: string;
 };
 
-export function CodeBlock({ children, language = 'text' }: Props) {
+export const CodeBlock = ({ children, language = 'text' }: Props) => {
   const resolvedLanguage = LANGUAGE_MAP[language] ?? language;
   const { resolvedTheme } = useTheme();
 
@@ -40,4 +40,4 @@ export function CodeBlock({ children, language = 'text' }: Props) {
       </CodeHighlighter>
     </View>
   );
-}
+};

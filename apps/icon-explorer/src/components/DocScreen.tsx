@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export function DocScreen({ title, children }: Props) {
+export const DocScreen = ({ title, children }: Props) => {
   return (
     <View>
       <GradientText className="font-heading text-4xl font-bold mb-4" standalone>
@@ -15,4 +15,4 @@ export function DocScreen({ title, children }: Props) {
       <View className="mt-6">{children}</View>
     </View>
   );
-}
+};

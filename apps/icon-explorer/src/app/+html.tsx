@@ -6,7 +6,7 @@ import type { PropsWithChildren } from 'react';
  * Sets dark background immediately to prevent flash of white before React hydrates.
  * The inline script is a static string (no user input), safe from XSS.
  */
-export default function Root({ children }: PropsWithChildren) {
+const Root = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en">
       <head>
@@ -31,4 +31,6 @@ export default function Root({ children }: PropsWithChildren) {
       <body style={{ backgroundColor: '#0a0a0b' }}>{children}</body>
     </html>
   );
-}
+};
+
+export default Root;

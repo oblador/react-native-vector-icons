@@ -51,15 +51,17 @@ export type IconComponentProps = {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type IconComponent = ComponentType<any>;
 
-function createStubIcon(familyName: string): IconComponent {
-  return function StubIcon({ size = 24, color = '#666' }: IconComponentProps) {
+const createStubIcon = (familyName: string): IconComponent => {
+  const StubIcon = ({ size = 24, color = '#666' }: IconComponentProps) => {
     return (
       <View style={{ width: size, height: size, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(139, 92, 246, 0.1)', borderRadius: 4 }}>
         <Text style={{ fontSize: size * 0.25, color, fontWeight: '600' }}>PRO</Text>
       </View>
     );
   };
-}
+  StubIcon.displayName = 'StubIcon';
+  return StubIcon;
+};
 
 export const iconRegistry: Record<string, IconComponent> = {
 ${registryEntries.join('\n')}

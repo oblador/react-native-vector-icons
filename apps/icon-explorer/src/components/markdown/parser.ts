@@ -10,7 +10,7 @@ import githubAlerts from 'markdown-it-github-alerts';
  * each pair's colon count by nesting depth so outer fences are always longer
  * than any inner ones — letting authors keep using plain `:::`.
  */
-function normaliseTabContainerFences(src: string): string {
+const normaliseTabContainerFences = (src: string): string => {
   const lines = src.split('\n');
   type Pair = { openLine: number; closeLine: number; depth: number };
   const pairs: Pair[] = [];
@@ -40,7 +40,7 @@ function normaliseTabContainerFences(src: string): string {
     out[p.closeLine] = lines[p.closeLine].replace(/^(\s*):+\s*$/, `$1${colons}`);
   }
   return out.join('\n');
-}
+};
 
 const md: MarkdownIt = new MarkdownIt({
   html: false,
@@ -66,14 +66,14 @@ md.use(container, 'tab', {
 });
 
 /** Extract a tab label from a `container_tab_open` token's info string ("tab Expo" → "Expo"). */
-export function tabLabelFromInfo(info: string): string {
+export const tabLabelFromInfo = (info: string): string => {
   return info
     .trim()
     .replace(/^tab\s*/, '')
     .replace(/^"|"$/g, '');
-}
+};
 
 /** Parse markdown, applying our tab-fence normalisation pass first. */
-export function parseMarkdown(src: string) {
+export const parseMarkdown = (src: string) => {
   return md.parse(normaliseTabContainerFences(src), {});
-}
+};

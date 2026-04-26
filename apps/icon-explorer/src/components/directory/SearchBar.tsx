@@ -8,7 +8,7 @@ type Props = {
   onChange: (query: string) => void;
 };
 
-export function SearchBar({ query, onChange }: Props) {
+export const SearchBar = ({ query, onChange }: Props) => {
   const { colours } = useTheme();
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -42,4 +42,4 @@ export function SearchBar({ query, onChange }: Props) {
       />
     </View>
   );
-}
+};

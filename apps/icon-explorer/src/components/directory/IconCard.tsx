@@ -12,7 +12,7 @@ type Props = {
   IconComponent: IconComponent;
 };
 
-export const IconCard = memo(function IconCard({ icon, isSelected, onSelect, IconComponent }: Props) {
+const IconCardImpl = ({ icon, isSelected, onSelect, IconComponent }: Props) => {
   const { colours } = useTheme();
 
   return (
@@ -33,4 +33,7 @@ export const IconCard = memo(function IconCard({ icon, isSelected, onSelect, Ico
       </Text>
     </Pressable>
   );
-});
+};
+IconCardImpl.displayName = 'IconCard';
+
+export const IconCard = memo(IconCardImpl);

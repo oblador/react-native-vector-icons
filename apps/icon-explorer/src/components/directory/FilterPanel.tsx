@@ -13,7 +13,7 @@ type Props = {
   vertical?: boolean;
 };
 
-function Chip({ label, active, onPress }: { label: string; active: boolean; onPress: () => void }) {
+const Chip = ({ label, active, onPress }: { label: string; active: boolean; onPress: () => void }) => {
   return (
     <Pressable
       onPress={onPress}
@@ -24,9 +24,9 @@ function Chip({ label, active, onPress }: { label: string; active: boolean; onPr
       <Text className={`text-xs font-medium ${active ? 'text-black' : 'text-text-muted'}`}>{label}</Text>
     </Pressable>
   );
-}
+};
 
-function FamilyCombobox({
+const FamilyCombobox = ({
   value,
   families,
   onChange,
@@ -34,7 +34,7 @@ function FamilyCombobox({
   value: string;
   families: [string, IconFamily][];
   onChange: (val: string) => void;
-}) {
+}) => {
   const { colours } = useTheme();
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
@@ -104,9 +104,9 @@ function FamilyCombobox({
       )}
     </View>
   );
-}
+};
 
-function FamilyDropdown({
+const FamilyDropdown = ({
   value,
   families,
   onChange,
@@ -114,7 +114,7 @@ function FamilyDropdown({
   value: string;
   families: [string, IconFamily][];
   onChange: (val: string) => void;
-}) {
+}) => {
   const [open, setOpen] = useState(false);
   const selectedLabel = value ? (families.find(([k]) => k === value)?.[1]?.displayName ?? value) : 'All families';
 
@@ -160,9 +160,9 @@ function FamilyDropdown({
       )}
     </>
   );
-}
+};
 
-export function FilterPanel({ filters, onChange, availableStyles, availableFamilies, vertical }: Props) {
+export const FilterPanel = ({ filters, onChange, availableStyles, availableFamilies, vertical }: Props) => {
   if (vertical) {
     return (
       <View className="gap-6">
@@ -280,4 +280,4 @@ export function FilterPanel({ filters, onChange, availableStyles, availableFamil
       </View>
     </View>
   );
-}
+};

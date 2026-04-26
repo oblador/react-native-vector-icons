@@ -17,7 +17,7 @@ const NAV_LINKS = [
   { href: '/migration', label: 'Migration' },
 ] as const;
 
-function NavLink({
+const NavLink = ({
   href,
   label,
   isActive,
@@ -27,7 +27,7 @@ function NavLink({
   label: string;
   isActive: boolean;
   onPress?: () => void;
-}) {
+}) => {
   const router = useRouter();
   return (
     <Link href={href as '/'} asChild>
@@ -44,17 +44,17 @@ function NavLink({
       </Pressable>
     </Link>
   );
-}
+};
 
-export function Header() {
+export const Header = () => {
   const pathname = usePathname();
   const { toggleTheme, resolvedTheme, colours } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  function isActive(href: string) {
+  const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
-  }
+  };
 
   return (
     <View className="border-b border-border bg-bg z-50">
@@ -125,4 +125,4 @@ export function Header() {
       )}
     </View>
   );
-}
+};

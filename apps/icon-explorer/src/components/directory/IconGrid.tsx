@@ -12,7 +12,7 @@ type Props = {
   onSelect: (icon: IconEntry) => void;
 };
 
-export function IconGrid({ icons, selectedIcon, onSelect }: Props) {
+export const IconGrid = ({ icons, selectedIcon, onSelect }: Props) => {
   const { width } = useWindowDimensions();
 
   // Responsive columns: 3 on mobile, up to 7 on wide screens
@@ -53,4 +53,4 @@ export function IconGrid({ icons, selectedIcon, onSelect }: Props) {
       contentContainerStyle={{ padding: 4 }}
     />
   );
-}
+};

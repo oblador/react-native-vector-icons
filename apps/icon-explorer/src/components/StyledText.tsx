@@ -8,7 +8,7 @@ const TextAncestorContext = createContext(false);
  * Only injects font-body on top-level Text — nested Text (e.g. inside
  * a font-heading parent) is left alone so font inheritance works.
  */
-export function Text({ className, ...props }: TextProps & { className?: string }) {
+export const Text = ({ className, ...props }: TextProps & { className?: string }) => {
   const isNested = useContext(TextAncestorContext);
   const hasFontFamily = className?.includes('font-heading') || className?.includes('font-mono');
   const classes = !isNested && !hasFontFamily ? `font-body ${className ?? ''}`.trim() : className;
@@ -18,4 +18,4 @@ export function Text({ className, ...props }: TextProps & { className?: string }
       <RNText className={classes} {...props} />
     </TextAncestorContext.Provider>
   );
-}
+};

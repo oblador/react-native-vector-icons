@@ -18,7 +18,7 @@ const STORAGE_KEY = 'rnvi-theme-mode';
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const systemScheme = useSystemColorScheme();
   const [mode, setModeState] = useState<ThemeMode>('system');
   const [loaded, setLoaded] = useState(false);
@@ -55,10 +55,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   if (!loaded) return null;
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
-}
+};
 
-export function useTheme() {
+export const useTheme = () => {
   const ctx = useContext(ThemeContext);
   if (!ctx) throw new Error('useTheme must be used within ThemeProvider');
   return ctx;
-}
+};

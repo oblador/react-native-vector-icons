@@ -5,7 +5,7 @@ import { CodeBlock } from '@/components/CodeBlock';
 import { GradientText } from '@/components/GradientText';
 import { Text } from '@/components/StyledText';
 
-function GradientButton({ href, children }: { href: string; children: string }) {
+const GradientButton = ({ href, children }: { href: string; children: string }) => {
   return (
     <Link href={href as '/'} asChild>
       <Pressable>
@@ -20,9 +20,9 @@ function GradientButton({ href, children }: { href: string; children: string }) 
       </Pressable>
     </Link>
   );
-}
+};
 
-function OutlineButton({ href, children }: { href: string; children: string }) {
+const OutlineButton = ({ href, children }: { href: string; children: string }) => {
   return (
     <Link href={href as '/'} asChild>
       <Pressable className="rounded-lg border border-border px-6 py-3">
@@ -30,9 +30,9 @@ function OutlineButton({ href, children }: { href: string; children: string }) {
       </Pressable>
     </Link>
   );
-}
+};
 
-export default function HomeScreen() {
+const HomeScreen = () => {
   return (
     <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 48 }}>
       <View className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
@@ -68,4 +68,6 @@ export default function HomeScreen() {
       </View>
     </ScrollView>
   );
-}
+};
+
+export default HomeScreen;

@@ -17,7 +17,7 @@ type Props = {
  * Native standalone: MaskedView + LinearGradient.
  * Native inline (nested in Text): solid cyan fallback.
  */
-export function GradientText({ className = '', children, standalone = false }: Props) {
+export const GradientText = ({ className = '', children, standalone = false }: Props) => {
   const { colours } = useTheme();
 
   if (Platform.OS === 'web') {
@@ -51,4 +51,4 @@ export function GradientText({ className = '', children, standalone = false }: P
   }
 
   return <Text className={`text-accent-cyan ${className}`}>{children}</Text>;
-}
+};

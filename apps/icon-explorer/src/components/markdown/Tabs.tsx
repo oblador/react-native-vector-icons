@@ -7,7 +7,7 @@ export type TabPanel = {
   content: React.ReactNode;
 };
 
-export function Tabs({ panels }: { panels: TabPanel[] }) {
+export const Tabs = ({ panels }: { panels: TabPanel[] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   if (panels.length === 0) return null;
@@ -34,4 +34,4 @@ export function Tabs({ panels }: { panels: TabPanel[] }) {
       <View className="mt-4">{active.content}</View>
     </View>
   );
-}
+};

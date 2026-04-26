@@ -25,7 +25,7 @@ const COLOUR_SWATCHES = [
   { name: 'Violet', value: '#8b5cf6' },
 ] as const;
 
-function useCopyToClipboard(text: string) {
+const useCopyToClipboard = (text: string) => {
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -35,9 +35,9 @@ function useCopyToClipboard(text: string) {
   };
 
   return { copied, copy };
-}
+};
 
-function CopyIconButton({ text, colour }: { text: string; colour: string }) {
+const CopyIconButton = ({ text, colour }: { text: string; colour: string }) => {
   const { colours } = useTheme();
   const { copied, copy } = useCopyToClipboard(text);
 
@@ -46,9 +46,9 @@ function CopyIconButton({ text, colour }: { text: string; colour: string }) {
       <Feather name={copied ? 'check' : 'copy'} size={14} color={copied ? colours.accentCyan : colour} />
     </Pressable>
   );
-}
+};
 
-function CopyBox({ label, code }: { label: string; code: string }) {
+const CopyBox = ({ label, code }: { label: string; code: string }) => {
   const { copied, copy } = useCopyToClipboard(code);
 
   return (
@@ -83,14 +83,14 @@ function CopyBox({ label, code }: { label: string; code: string }) {
       </View>
     </View>
   );
-}
+};
 
 type Props = {
   icon: IconEntry;
   onClose: () => void;
 };
 
-export function IconDetailPanel({ icon, onClose }: Props) {
+export const IconDetailPanel = ({ icon, onClose }: Props) => {
   const { colours, resolvedTheme } = useTheme();
   const [size, setSize] = useState<number>(48);
   const [colour, setColour] = useState(() => (resolvedTheme === 'light' ? ICON_COLOUR_DARK : ICON_COLOUR_LIGHT));
@@ -264,4 +264,4 @@ export function IconDetailPanel({ icon, onClose }: Props) {
       </View>
     </View>
   );
-}
+};

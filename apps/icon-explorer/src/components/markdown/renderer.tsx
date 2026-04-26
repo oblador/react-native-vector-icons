@@ -35,7 +35,7 @@ const HEADING_LEVEL: Record<string, HeadingLevel> = {
   h6: 4,
 };
 
-function renderInline(tokens: Token[]): ReactNode[] {
+const renderInline = (tokens: Token[]): ReactNode[] => {
   const stack: Frame[] = [{ type: 'root', children: [] }];
   const top = () => stack[stack.length - 1];
 
@@ -100,9 +100,9 @@ function renderInline(tokens: Token[]): ReactNode[] {
   });
 
   return stack[0].children;
-}
+};
 
-export function renderMarkdown(tokens: Token[]): ReactNode[] {
+export const renderMarkdown = (tokens: Token[]): ReactNode[] => {
   const stack: Frame[] = [{ type: 'root', children: [] }];
   const top = () => stack[stack.length - 1];
 
@@ -337,4 +337,4 @@ export function renderMarkdown(tokens: Token[]): ReactNode[] {
   }
 
   return stack[0].children;
-}
+};
