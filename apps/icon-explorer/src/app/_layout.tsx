@@ -27,20 +27,6 @@ const iconFonts: Record<string, any> = {
   Inter_500Medium,
   Inter_600SemiBold,
   Inter_700Bold,
-  AntDesign: require('@react-native-vector-icons/ant-design/fonts/AntDesign.ttf'),
-  Entypo: require('@react-native-vector-icons/entypo/fonts/Entypo.ttf'),
-  EvilIcons: require('@react-native-vector-icons/evil-icons/fonts/EvilIcons.ttf'),
-  Feather: require('@react-native-vector-icons/feather/fonts/Feather.ttf'),
-  FontAwesome: require('@react-native-vector-icons/fontawesome/fonts/FontAwesome.ttf'),
-  Fontisto: require('@react-native-vector-icons/fontisto/fonts/Fontisto.ttf'),
-  Foundation: require('@react-native-vector-icons/foundation/fonts/Foundation.ttf'),
-  Ionicons: require('@react-native-vector-icons/ionicons/fonts/Ionicons.ttf'),
-  Lucide: require('@react-native-vector-icons/lucide/fonts/Lucide.ttf'),
-  MaterialDesignIcons: require('@react-native-vector-icons/material-design-icons/fonts/MaterialDesignIcons.ttf'),
-  MaterialIcons: require('@react-native-vector-icons/material-icons/fonts/MaterialIcons.ttf'),
-  Octicons: require('@react-native-vector-icons/octicons/fonts/Octicons.ttf'),
-  SimpleLineIcons: require('@react-native-vector-icons/simple-line-icons/fonts/SimpleLineIcons.ttf'),
-  Zocial: require('@react-native-vector-icons/zocial/fonts/Zocial.ttf'),
 };
 
 SplashScreen.preventAutoHideAsync();
