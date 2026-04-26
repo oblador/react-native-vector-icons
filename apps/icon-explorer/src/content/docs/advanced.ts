@@ -27,6 +27,22 @@ const Icon = createIconSet(glyphMap, {
 > [!TIP]
 > If you are not using dynamic font loading, make sure your font is copied into your app bundle.
 
+### Type-checked Icon Names
+
+Pass a union of icon names as a generic parameter to \`createIconSet\` to get type-checking and autocomplete on the \`name\` prop. This is most useful when you supply your own glyphmap (Fontello, IcoMoon, or a custom font) — the bundled icon packages already export typed components.
+
+\`\`\`tsx
+import { createIconSet } from "@react-native-vector-icons/common";
+
+const Icon = createIconSet<"home" | "settings" | "user">(glyphMap, {
+  postScriptName: "FontName",
+  fontFileName: "font-name.ttf",
+});
+
+<Icon name="home" />     // ok
+<Icon name="invalid" />  // type error
+\`\`\`
+
 ## Animation
 
 React Native ships with [Animated](https://reactnative.dev/docs/animated.html), a powerful animation library. To animate an icon, create an animated component:

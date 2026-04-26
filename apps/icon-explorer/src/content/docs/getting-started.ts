@@ -30,10 +30,50 @@ For fonts like FontAwesome Pro, Fontello, and Icomoon where you provide the font
 `.trim();
 
 const expoSetup = `
-Icon packages from \`@react-native-vector-icons\` work out of the box with Expo, across all platforms. No additional configuration is required.
+> [!NOTE]
+> **TL;DR:** Font files are always shipped with the app — the difference is **where** they live and **how** they get registered with the OS. With the default (dynamic) import, Metro bundles the font as a JS asset and \`expo-font\` registers it at runtime. With the \`/static\` import, the font is embedded into the native binary and available immediately at launch.
+
+### Dynamic Import (default, works with Expo Go)
+
+\`\`\`js
+import { MaterialIcons } from "@react-native-vector-icons/material-icons";
+\`\`\`
+
+Metro bundles the font alongside your JS code. When the icon first renders, \`expo-font\` registers the font with the native text system automatically. No native configuration or config plugins are needed. Works with Expo Go and OTA updates.
+
+### Static Import (recommended for [Development Builds](https://docs.expo.dev/develop/development-builds/introduction/))
+
+\`\`\`js
+import { MaterialIcons } from "@react-native-vector-icons/material-icons/static";
+\`\`\`
+
+With the \`/static\` import, Metro does not bundle the font. Instead, the font is embedded into the native binary at build time, and each icon package ships an Expo config plugin that registers the font with iOS (it adds the font to \`UIAppFonts\` in \`Info.plist\`). Add the icon packages you use to the \`plugins\` array in your \`app.json\` or \`app.config.js\`:
+
+\`\`\`json
+{
+  "expo": {
+    "plugins": [
+      "@react-native-vector-icons/material-icons",
+      "@react-native-vector-icons/ionicons"
+    ]
+  }
+}
+\`\`\`
+
+Then run \`npx expo prebuild\` to regenerate the native project.
+
+> [!NOTE]
+> Static imports do not work with Expo Go because there is no native build step. A font embedded this way also cannot be updated via OTA — it is part of the native binary.
+
+> [!WARNING]
+> **Don't ship the font twice:** if you use a development build, the font is already embedded in the native binary. Using the dynamic import in this case means Metro **also** bundles the font as a JS asset, so it ships twice — once in the native binary and once in the JS bundle. To avoid this, either:
+> - Switch to the \`/static\` import and keep the config plugin, or
+> - Remove the config plugin and [exclude the package from autolinking](https://docs.expo.dev/modules/autolinking/#exclude) so only Metro bundles the font.
 
 > [!WARNING]
 > **Avoid manual font duplication:** do not add fonts from \`node_modules/@react-native-vector-icons/some-font\` to the \`expo-font\` plugin configuration unless you have a specific advanced use case.
+
+Dynamic loading is supported on Expo SDK ≥ 52. See [Advanced › Dynamic Font Loading](./advanced#dynamic-font-loading) for the API to enable, disable, or handle errors at runtime.
 `.trim();
 
 const reactNativeSetup = `
