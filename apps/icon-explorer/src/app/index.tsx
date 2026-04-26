@@ -35,7 +35,7 @@ const OutlineButton = ({ href, children }: { href: string; children: string }) =
 const HomeScreen = () => {
   return (
     <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 48 }}>
-      <View className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+      <View className="mx-auto w-full max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
         <View className="max-w-3xl">
           {/* Hero heading */}
           <GradientText className="font-heading text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl" standalone>
