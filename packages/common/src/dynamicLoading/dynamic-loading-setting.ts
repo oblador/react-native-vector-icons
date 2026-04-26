@@ -118,7 +118,7 @@ export const isDynamicLoadingSupported = () => getIsDynamicLoadingSupported(glob
  * */
 export const setDynamicLoadingEnabled = (value: boolean): boolean => {
   if (!getIsDynamicLoadingSupported(globalThis)) {
-    if (process.env.NODE_ENV !== 'production' && !!value) {
+    if (process.env.NODE_ENV !== 'production' && value) {
       const hasNecessaryExpoModules =
         (Platform.OS === 'web' || !!globalThis.expo?.modules?.ExpoAsset) && !!globalThis.expo?.modules?.ExpoFontLoader;
       const message = hasNecessaryExpoModules

@@ -13,18 +13,17 @@
     "release": "nx release"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.10",
-    "@expo/config-plugins": "^8.0.11",
+    "@biomejs/biome": "^2.4.13",
     "@commitlint/config-conventional": "^20.5.0",
-    "@evilmartians/lefthook": "^2.1.4",
-    "@nx/js": "^22.6.4",
+    "@evilmartians/lefthook": "^2.1.6",
+    "@nx/js": "^22.7.0",
     "@types/node": "^24.12.2",
-    "commitlint": "^20.5.0",
+    "commitlint": "^20.5.2",
     "generator-react-native-vector-icons": "workspace:*",
-    "knip": "^6.3.0",
-    "nx": "^22.6.4",
+    "knip": "^6.7.0",
+    "nx": "^22.7.0",
     "typescript": "^5.9.3",
-    "yo": "^7.0.0"
+    "yo": "^7.0.1"
   },
   "engines": {
     "node": ">= 22.0.0"

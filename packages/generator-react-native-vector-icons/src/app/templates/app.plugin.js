@@ -17,15 +17,13 @@ module.exports = (config) =>
     const fontsDir = path.join(projectRoot, fontDirName, '<%= packageName %>');
     if (!fs.existsSync(fontsDir)) {
       throw new Error(
-        `Custom fonts directory not found at ${fontsDir}. See the package README for setup instructions.`
+        `Custom fonts directory not found at ${fontsDir}. See the package README for setup instructions.`,
       );
     }
 
     const fonts = fs.readdirSync(fontsDir).filter((f) => f.endsWith('.ttf'));
     if (fonts.length === 0) {
-      throw new Error(
-        `No .ttf fonts found in ${fontsDir}. See the package README for setup instructions.`
-      );
+      throw new Error(`No .ttf fonts found in ${fontsDir}. See the package README for setup instructions.`);
     }
 <% } else if (typeof meta !== 'undefined' && meta && meta.styles) { -%>
     const fonts = [<% Object.values(meta.styles).forEach((style, i) => { %><%= i > 0 ? ', ' : '' %>'<%= style.name %>'<% }); %>];

@@ -124,7 +124,7 @@
     },
     "apps/icon-explorer": {
       "entry": ["src/CustomFonts.ts", "src/components/PreviewStubIcon.tsx"],
-      "ignoreDependencies": ["react-native-worklets"]
+      "ignoreDependencies": ["@expo/metro-config"]
     }
   }
 }
