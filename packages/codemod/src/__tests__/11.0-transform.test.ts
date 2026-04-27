@@ -126,4 +126,35 @@ const App = () => (
     // deps reported
     expect(reported).toHaveLength(2);
   });
+
+  it('transforms createIconSetFromFontello import and call signature', () => {
+    const input = [
+      `import createIconSetFromFontello from 'react-native-vector-icons/createIconSetFromFontello';`,
+      `const Icon = createIconSetFromFontello(config, 'fontello', require('./font.ttf'));`,
+    ].join('\n');
+    const { output, reported } = applyTransform(input);
+    expect(output).toContain('from "@react-native-vector-icons/fontello"');
+    expect(output).toContain("createIconSetFromFontello(config, {\n  fontSource: require('./font.ttf')\n})");
+    expect(reported).toContain('DEP_FOUND: @react-native-vector-icons/fontello');
+  });
+
+  it('transforms createIconSetFromIcoMoon import and call signature', () => {
+    const input = [
+      `import createIconSetFromIcoMoon from 'react-native-vector-icons/createIconSetFromIcoMoon';`,
+      `const Icon = createIconSetFromIcoMoon(config, 'icomoon', require('./font.ttf'));`,
+    ].join('\n');
+    const { output, reported } = applyTransform(input);
+    expect(output).toContain('from "@react-native-vector-icons/icomoon"');
+    expect(output).toContain("createIconSetFromIcoMoon(config, {\n  fontSource: require('./font.ttf')\n})");
+    expect(reported).toContain('DEP_FOUND: @react-native-vector-icons/icomoon');
+  });
+
+  it('does not transform createIconSet calls with 2 arguments', () => {
+    const input = [
+      `import createIconSetFromFontello from 'react-native-vector-icons/createIconSetFromFontello';`,
+      `const Icon = createIconSetFromFontello(config, { fontSource: require('./font.ttf') });`,
+    ].join('\n');
+    const { output } = applyTransform(input);
+    expect(output).not.toContain('fontSource: {\n');
+  });
 });

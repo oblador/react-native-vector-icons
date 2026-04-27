@@ -1,5 +1,6 @@
 import type { API, FileInfo, Options } from 'jscodeshift';
 
+import iconStyleTransform from '../11.0/icon-style-transform';
 import { addNewFontImport } from './newFontImports';
 
 const importsMap: Record<string, string> = {
@@ -32,9 +33,15 @@ export default function transform(fileInfo: FileInfo, api: API, options: Options
   const useStatic = options.useStatic === true;
 
   const newFontImports = new Set<string>();
+  const createIconSetLocalNames = new Set<string>();
+
+  const noStaticPackages = new Set(['@react-native-vector-icons/icomoon', '@react-native-vector-icons/fontello']);
 
   const resolveImportPath = (basePath: string): string => {
-    return useStatic ? `${basePath}/static` : basePath;
+    if (useStatic && !noStaticPackages.has(basePath)) {
+      return `${basePath}/static`;
+    }
+    return basePath;
   };
 
   // Transform import statements from @expo/vector-icons
@@ -49,10 +56,11 @@ export default function transform(fileInfo: FileInfo, api: API, options: Options
         const newImports = specifiers
           .map((spec) => {
             if (spec.type === 'ImportSpecifier') {
-              const fontName = String(spec.imported.name);
+              const importedName = String(spec.imported.name);
+              const localName = String(spec.local?.name ?? importedName);
 
               // Find the correct mapping for this font
-              const oldName = `@expo/vector-icons/${fontName}`;
+              const oldName = `@expo/vector-icons/${importedName}`;
               const newFontPath = importsMap[oldName];
               if (!newFontPath) {
                 throw new Error(`No mapping found for ${oldName}. Migrate this import manually.`);
@@ -60,8 +68,12 @@ export default function transform(fileInfo: FileInfo, api: API, options: Options
 
               newFontImports.add(newFontPath);
 
+              if (oldName.includes('createIconSet')) {
+                createIconSetLocalNames.add(localName);
+              }
+
               return j.importDeclaration(
-                [j.importDefaultSpecifier(j.identifier(fontName))],
+                [j.importDefaultSpecifier(j.identifier(localName))],
                 j.literal(resolveImportPath(newFontPath)),
               );
             }
@@ -90,8 +102,37 @@ export default function transform(fileInfo: FileInfo, api: API, options: Options
       }
       newFontImports.add(newFontPath);
 
+      if (importPath.includes('createIconSet')) {
+        const localName = path.value.specifiers?.[0]?.local?.name;
+        if (localName) {
+          createIconSetLocalNames.add(String(localName));
+        }
+      }
+
       // Replace with new import
       source.value = resolveImportPath(newFontPath);
+    }
+  });
+
+  // Transform FontAwesome boolean style props to iconStyle="..."
+  iconStyleTransform(j, root);
+
+  // Transform createIconSetFromFontello/IcoMoon call signatures:
+  // (config, fontName, fontSource) → (config, { fontSource })
+  root.find(j.CallExpression).forEach((callPath) => {
+    if (
+      callPath.node.callee.type === 'Identifier' &&
+      createIconSetLocalNames.has(callPath.node.callee.name) &&
+      callPath.node.arguments.length === 3
+    ) {
+      const config = callPath.node.arguments[0];
+      const fontSource = callPath.node.arguments[2];
+      callPath.node.arguments = [
+        // biome-ignore lint/style/noNonNullAssertion: length === 3 is checked above
+        config!,
+        // biome-ignore lint/suspicious/noExplicitAny: jscodeshift property builder types are too loose
+        j.objectExpression([j.property('init', j.identifier('fontSource'), fontSource as any)]),
+      ];
     }
   });
 

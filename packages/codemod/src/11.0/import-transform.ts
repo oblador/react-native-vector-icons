@@ -18,6 +18,8 @@ const imports: [string, string][] = [
   ['react-native-vector-icons/Octicons', '@react-native-vector-icons/octicons/static'],
   ['react-native-vector-icons/SimpleLineIcons', '@react-native-vector-icons/SimpleLineIcons/static'],
   ['react-native-vector-icons/Zocial', '@react-native-vector-icons/zocial/static'],
+  ['react-native-vector-icons/createIconSetFromIcoMoon', '@react-native-vector-icons/icomoon'],
+  ['react-native-vector-icons/createIconSetFromFontello', '@react-native-vector-icons/fontello'],
 ];
 
 export default (j: JSCodeshift, root: Collection, r: (msg: string) => void) => {

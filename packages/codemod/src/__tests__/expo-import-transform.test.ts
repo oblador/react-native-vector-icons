@@ -71,6 +71,81 @@ describe('expo import-transform', () => {
       const output = applyTransform(input);
       expect(output).toBe('import createIconSetFromFontello from "@react-native-vector-icons/fontello";');
     });
+
+    it('does not append /static to fontello even with useStatic', () => {
+      const input = `import createIconSetFromFontello from '@expo/vector-icons/createIconSetFromFontello';`;
+      const output = applyTransform(input, { useStatic: true });
+      expect(output).toBe('import createIconSetFromFontello from "@react-native-vector-icons/fontello";');
+    });
+
+    it('does not append /static to icomoon even with useStatic', () => {
+      const input = `import createIconSetFromIcoMoon from '@expo/vector-icons/createIconSetFromIcoMoon';`;
+      const output = applyTransform(input, { useStatic: true });
+      expect(output).toBe('import createIconSetFromIcoMoon from "@react-native-vector-icons/icomoon";');
+    });
+  });
+
+  describe('FontAwesome style prop transforms', () => {
+    it('converts boolean style props to iconStyle on FontAwesome5', () => {
+      const input = [
+        `import FontAwesome5 from '@expo/vector-icons/FontAwesome5';`,
+        `const App = () => <FontAwesome5 name="heart" solid />;`,
+      ].join('\n');
+      const output = applyTransform(input);
+      expect(output).toContain('iconStyle="solid"');
+      expect(output).not.toContain(' solid />');
+    });
+
+    it('converts brand prop on FontAwesome6', () => {
+      const input = [
+        `import FontAwesome6 from '@expo/vector-icons/FontAwesome6';`,
+        `const App = () => <FontAwesome6 name="github" brand />;`,
+      ].join('\n');
+      const output = applyTransform(input);
+      expect(output).toContain('iconStyle="brand"');
+    });
+
+    it('does not convert style props on non-FontAwesome components', () => {
+      const input = [
+        `import Ionicons from '@expo/vector-icons/Ionicons';`,
+        `const App = () => <Ionicons name="heart" solid />;`,
+      ].join('\n');
+      const output = applyTransform(input);
+      expect(output).toContain('solid');
+      expect(output).not.toContain('iconStyle');
+    });
+  });
+
+  describe('createIconSet call signature transform', () => {
+    it('transforms createIconSetFromFontello(config, name, source) to (config, { fontSource })', () => {
+      const input = [
+        `import createIconSetFromFontello from '@expo/vector-icons/createIconSetFromFontello';`,
+        `const Icon = createIconSetFromFontello(config, 'fontello', require('./font.ttf'));`,
+      ].join('\n');
+      const output = applyTransform(input);
+      expect(output).toContain('from "@react-native-vector-icons/fontello"');
+      expect(output).toContain("createIconSetFromFontello(config, {\n  fontSource: require('./font.ttf')\n})");
+    });
+
+    it('transforms createIconSetFromIcoMoon call signature', () => {
+      const input = [
+        `import createIconSetFromIcoMoon from '@expo/vector-icons/createIconSetFromIcoMoon';`,
+        `const Icon = createIconSetFromIcoMoon(config, 'icomoon', require('./font.ttf'));`,
+      ].join('\n');
+      const output = applyTransform(input);
+      expect(output).toContain('from "@react-native-vector-icons/icomoon"');
+      expect(output).toContain("createIconSetFromIcoMoon(config, {\n  fontSource: require('./font.ttf')\n})");
+    });
+
+    it('does not transform calls with 2 arguments (already migrated)', () => {
+      const input = [
+        `import createIconSetFromFontello from '@expo/vector-icons/createIconSetFromFontello';`,
+        `const Icon = createIconSetFromFontello(config, { fontSource: require('./font.ttf') });`,
+      ].join('\n');
+      const output = applyTransform(input);
+      expect(output).toContain('fontSource: require');
+      expect(output).not.toContain('fontSource: {\n');
+    });
   });
 
   describe('edge cases', () => {
@@ -82,6 +157,12 @@ describe('expo import-transform', () => {
 
     it('preserves the local import name for default imports', () => {
       const input = `import MyIcons from '@expo/vector-icons/Entypo';`;
+      const output = applyTransform(input);
+      expect(output).toBe('import MyIcons from "@react-native-vector-icons/entypo";');
+    });
+
+    it('preserves aliases in barrel imports', () => {
+      const input = `import { Entypo as MyIcons } from '@expo/vector-icons';`;
       const output = applyTransform(input);
       expect(output).toBe('import MyIcons from "@react-native-vector-icons/entypo";');
     });
