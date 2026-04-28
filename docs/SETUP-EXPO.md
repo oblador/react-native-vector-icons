@@ -3,23 +3,25 @@
 > If you use React Native without Expo, please follow [this guide](./SETUP-REACT-NATIVE.md) instead. This guide applies to Expo apps only.
 
 > [!NOTE]
-> TL;DR: Font files are always shipped with the app — the difference is **where** they live and **how** they get registered with the OS. With the default (dynamic) import, Metro bundles the font as a JS asset and `expo-font` registers it at runtime. With the `/static` import, the font is embedded into the native binary and available immediately at launch.
+> TL;DR: The default import bundles the `.ttf` into your JS bundle and registers it at runtime — works everywhere, including Expo Go. In a development build, the same `.ttf` is also copied into the native binary by autolinking, so it ends up shipping twice. The `/static` import is an optimization that skips the JS-bundle copy.
 
-## Dynamic import (default, works with Expo Go)
+## Dynamic import (default)
 
 ```js
 import { MaterialIcons } from "@react-native-vector-icons/material-icons";
 ```
 
-Metro bundles the font alongside your JS code. When the icon first renders, `expo-font` registers the font with the native text system automatically. No native configuration or config plugins needed. Works with Expo Go and OTA updates.
+The default entry imports the `.ttf`, so Metro bundles it as a JS asset. When the icon first renders, `expo-font` registers it with the native text system at runtime. No native configuration or config plugin needed — this is the only option that works with Expo Go, and it lets the font be updated via OTA.
 
-## Static import (recommended for [Development Builds](https://docs.expo.dev/develop/development-builds/introduction/))
+## Static import (optimization for [Development Builds](https://docs.expo.dev/develop/development-builds/introduction/))
 
 ```js
 import { MaterialIcons } from "@react-native-vector-icons/material-icons/static";
 ```
 
-With the `/static` import, Metro does not bundle the font. Instead, we rely on it being embedded into the native binary at build time, and each icon package ships an Expo config plugin that handles registering the font with iOS (it adds the font to `UIAppFonts` in `Info.plist`). Add the icon packages you use to the `plugins` array in your `app.json` or `app.config.js`:
+In a development build, autolinking picks up each package's `build.gradle` / `.podspec` and copies the `.ttf` into the native binary. Using the dynamic import on top of that means the same font also ships as a JS asset — so it's bundled twice.
+
+The `/static` entry skips the `.ttf` import on the JS side, so Metro doesn't bundle it. The font reaches the device through the native build only, and the package's Expo config plugin registers it with iOS by adding it to `UIAppFonts` in `Info.plist`. Add the icon packages you use to the `plugins` array in your `app.json` or `app.config.js`:
 
 ```json
 {
@@ -32,20 +34,17 @@ With the `/static` import, Metro does not bundle the font. Instead, we rely on i
 }
 ```
 
-Then run `npx expo prebuild` to regenerate the native project.
+Then run `npx expo prebuild` to regenerate the native project. Because this approach relies on the native build, it does not work with Expo Go, and the embedded font cannot be swapped via OTA updates.
 
-> [!NOTE]
-> Static import doesn't work with Expo Go because there is no native build step. A font embedded this way also cannot be updated by OTA — it is part of the native binary.
-
-> [!WARNING]
-> If you use a development build, the font is already embedded in the native binary. Using the dynamic import in this case means Metro **also** bundles the font as a JS asset, so it ships twice — once in the native binary and once in the JS bundle. To avoid this, either:
-> - Switch to the [`/static` import](#static-import-recommended-for-development-builds) and keep config plugins, or
-> - Remove the config plugins and [exclude the package from autolinking](https://docs.expo.dev/modules/autolinking/#exclude) so only Metro bundles the font.
+> [!TIP]
+> If you want to keep the dynamic import in a development build but avoid the `.ttf` duplication, you can [exclude the package from autolinking](https://docs.expo.dev/modules/autolinking/#exclude) instead. That skips the `build.gradle` / `.podspec` so only the JS-bundled copy ships.
 
 > [!WARNING]
 > Avoid manual font config duplication: do not add fonts from `node_modules/@react-native-vector-icons/some-font` to `expo-font` config plugin configuration.
 
-## More info on dynamic loading
+## About dynamic loading
+
+Dynamic loading is the runtime mechanism behind the default (dynamic) import — `expo-font` registers the JS-bundled `.ttf` with the native text system the first time an icon renders, so no native build step or config plugin is needed.
 
 Dynamic loading is supported on Expo SDK >= 52.
 
