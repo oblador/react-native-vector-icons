@@ -23,10 +23,17 @@ For example, an icon called `"arrow-right"` in one version may become `"arrow-fo
 
 The codemod rewrites all `@expo/vector-icons` imports to their `@react-native-vector-icons/*` equivalents and updates `package.json`.
 
-It auto-detects whether you're using a development build (has `expo-dev-client`, or `android`/`ios` directories) and chooses the appropriate import style:
+It auto-detects whether you're using a development build (has `expo-dev-client`, or `android`/`ios` directories) and picks an import style:
 
-- **Development builds**: uses `/static` imports (fonts bundled at build time)
+- **Development builds**: prompts you to confirm `/static` imports (fonts shipped via the native build, excluded from JS bundle — see [Setup guide for Expo Apps](./docs/SETUP-EXPO.md)). Decline to keep default imports.
 - **Expo Go**: uses default imports (fonts loaded at runtime)
+
+To skip the prompt, pass `--static` or `--dynamic`:
+
+```sh
+npx @react-native-vector-icons/codemod . --static
+npx @react-native-vector-icons/codemod . --dynamic
+```
 
 ### Import transforms
 
