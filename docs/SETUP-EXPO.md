@@ -19,9 +19,9 @@ The default entry imports the `.ttf`, so Metro bundles it as a JS asset. When th
 import { MaterialIcons } from "@react-native-vector-icons/material-icons/static";
 ```
 
-In a development build, autolinking picks up each package's `build.gradle` / `.podspec` and copies the `.ttf` into the native binary. Using the dynamic import on top of that means the same font also ships as a JS asset — so it's bundled twice.
+In a development build, autolinking picks up each package's `build.gradle` / `.podspec` and copies the `.ttf` into the native binary at build time. Using the dynamic import on top of that means the same font also ships as a JS asset — so it's bundled twice.
 
-The `/static` entry skips the `.ttf` import on the JS side, so Metro doesn't bundle it. The font reaches the device through the native build only, and the package's Expo config plugin registers it with iOS by adding it to `UIAppFonts` in `Info.plist`. Add the icon packages you use to the `plugins` array in your `app.json` or `app.config.js`:
+The `/static` entry skips the `.ttf` import on the JS side, so Metro doesn't bundle it. The font reaches the device through the native build only, and the package's Expo config plugin registers it with iOS by adding it to `UIAppFonts` in `Info.plist`. To do that, add the icon packages you use to the `plugins` array in your `app.json` or `app.config.js`. For example:
 
 ```json
 {

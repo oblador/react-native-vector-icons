@@ -27,7 +27,7 @@ For the integration of `.svg` files natively, you can explore [`react-native-vec
 - [Animation](#animation)
 - [Dynamic icon font loading](#dynamic-icon-font-loading)
 - [Usage Examples](#usage-examples)
-- [Changelog](https://github.com/react-native-vector-icons/react-native-vector-icons/releases)
+- [Changelog](https://github.com/oblador/react-native-vector-icons/releases)
 - [License](#license)
 
 ## Sponsorship

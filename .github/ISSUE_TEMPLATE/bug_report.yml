@@ -8,7 +8,7 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
         Before filing a bug report:
-        - Review the documentation: https://github.com/react-native-vector-icons/react-native-vector-icons
+        - Review the documentation: https://github.com/oblador/react-native-vector-icons
         - Search for existing issues (including closed issues): https://github.com/oblador/react-native-vector-icons/issues?q=is%3Aissue+
 
   - type: dropdown
