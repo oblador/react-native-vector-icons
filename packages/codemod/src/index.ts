@@ -8,7 +8,7 @@ import { checkGitStatus } from './checkGitStatus';
 import { runExpoMigration } from './expo';
 import { readPackageDeps } from './readPackageDeps';
 
-function parseArgs(argv: string[]): { dir: string | undefined; useStatic: boolean | undefined } {
+function parseArgs(argv: string[]): { dir: string; useStatic: boolean | undefined } {
   let useStatic: boolean | undefined;
   const positionals: string[] = [];
   for (const arg of argv) {
@@ -19,15 +19,11 @@ function parseArgs(argv: string[]): { dir: string | undefined; useStatic: boolea
       process.exit(1);
     } else positionals.push(arg);
   }
-  return { dir: positionals[0], useStatic };
+  return { dir: positionals[0] ?? process.cwd(), useStatic };
 }
 
 async function main() {
   const { dir, useStatic } = parseArgs(process.argv.slice(2));
-  if (!dir) {
-    console.error('Specify a directory in which to run the codemod');
-    process.exit(1);
-  }
 
   checkGitStatus(dir);
 
