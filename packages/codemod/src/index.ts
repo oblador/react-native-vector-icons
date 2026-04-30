@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import fs from 'node:fs';
 import path from 'node:path';
 
 import semver from 'semver';
@@ -23,7 +24,15 @@ function parseArgs(argv: string[]): { dir: string; useStatic: boolean | undefine
 }
 
 async function main() {
-  const { dir, useStatic } = parseArgs(process.argv.slice(2));
+  const { dir: dirArg, useStatic } = parseArgs(process.argv.slice(2));
+  const dir = path.resolve(dirArg);
+
+  if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory()) {
+    console.error(`Directory does not exist: ${dir}`);
+    process.exit(1);
+  }
+
+  process.chdir(dir);
 
   checkGitStatus(dir);
 

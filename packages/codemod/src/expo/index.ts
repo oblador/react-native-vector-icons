@@ -42,8 +42,7 @@ type RunOptions = {
 export async function runExpoMigration(dir: string, { useStatic: useStaticOverride }: RunOptions = {}) {
   const transformPath = require.resolve('./import-transform');
 
-  process.chdir(dir);
-  console.log(`🚀 Running Expo codemod in directory: ${path.resolve(dir)}`);
+  console.log(`🚀 Running Expo codemod in directory: ${dir}`);
 
   let useStatic: boolean;
   if (useStaticOverride !== undefined) {

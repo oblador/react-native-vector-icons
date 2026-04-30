@@ -6,8 +6,10 @@ We provide a codemod to migrate from `@expo/vector-icons` or the legacy `react-n
 > Make sure your code is committed to git before running the codemod. Review all codemod changes before committing them.
 
 ```sh
-npx @react-native-vector-icons/codemod .
+npx @react-native-vector-icons/codemod
 ```
+
+By default the codemod runs in the current directory; pass a path to target a different one (e.g. `npx @react-native-vector-icons/codemod ./apps/mobile`).
 
 The codemod auto-detects which migration to run based on the dependencies in your `package.json`.
 
@@ -31,8 +33,8 @@ It auto-detects whether you're using a development build (has `expo-dev-client`,
 To skip the prompt, pass `--static` or `--dynamic`:
 
 ```sh
-npx @react-native-vector-icons/codemod . --static
-npx @react-native-vector-icons/codemod . --dynamic
+npx @react-native-vector-icons/codemod --static
+npx @react-native-vector-icons/codemod --dynamic
 ```
 
 ### Import transforms
