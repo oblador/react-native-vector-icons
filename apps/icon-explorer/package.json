@@ -68,7 +68,7 @@
     "react-native-test-app": "^5.1.0",
     "react-test-renderer": "19.2.4",
     "ts-jest": "^29.4.9",
-    "typescript": "^5.7.2"
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": ">=18"

@@ -103,7 +103,7 @@
     "del-cli": "^7.0.0",
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
-    "typescript": "^5.7.2",
+    "typescript": "^6.0.3",
     "@ant-design/icons-svg": "4.4.2"
   },
   "peerDependencies": {
