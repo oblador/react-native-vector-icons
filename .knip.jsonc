@@ -18,7 +18,7 @@
     },
     "packages/common": {
       "entry": ["src/index.{ts,tsx}", "src/scripts/{getFonts,updatePlist}.{ts,tsx}"],
-      "ignoreDependencies": ["@react-native/assets-registry", "@react-native-vector-icons/get-image"]
+      "ignoreDependencies": ["@react-native/assets-registry", "@react-native-vector-icons/get-image", "expo-font"]
     },
     "packages/get-image": {
       "entry": ["src/index.{ts,tsx}"],

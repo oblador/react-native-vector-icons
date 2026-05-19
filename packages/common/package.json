@@ -92,6 +92,7 @@
   "peerDependencies": {
     "@react-native-vector-icons/get-image": "workspace:^",
     "@react-native/assets-registry": "*",
+    "expo-font": "*",
     "react": "*",
     "react-native": "*"
   },
@@ -100,6 +101,9 @@
       "optional": true
     },
     "@react-native-vector-icons/get-image": {
+      "optional": true
+    },
+    "expo-font": {
       "optional": true
     }
   },
