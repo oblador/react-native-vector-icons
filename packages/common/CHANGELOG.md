@@ -1,3 +1,13 @@
+## 13.0.1 (2026-05-24)
+
+### 🩹 Fixes
+
+- icons did not render on expo web ([#1916](https://github.com/oblador/react-native-vector-icons/pull/1916))
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 # 13.0.0 (2026-03-26)
 
 ### 🚀 Features
