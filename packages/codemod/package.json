@@ -90,7 +90,7 @@
     "onchange": "^7.1.0",
     "react-native-builder-bob": "^0.35.2",
     "ts-jest": "^29.4.9",
-    "typescript": "^5.7.2"
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": ">= 18.0.0"

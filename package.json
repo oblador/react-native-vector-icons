@@ -23,7 +23,7 @@
     "generator-react-native-vector-icons": "workspace:*",
     "knip": "^6.2.0",
     "nx": "^22.6.4",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "yo": "^7.0.0"
   },
   "engines": {

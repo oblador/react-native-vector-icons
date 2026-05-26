@@ -27,7 +27,7 @@
     "@yeoman/types": "^1.10.3",
     "copyfiles": "^2.4.1",
     "onchange": "^7.1.0",
-    "typescript": "^5.7.2"
+    "typescript": "^6.0.3"
   },
   "scripts": {
     "prepare": "npm run clean && tsc && npm run copydeps",
