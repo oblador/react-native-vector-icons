@@ -27,7 +27,8 @@
         "default": "./lib/commonjs/static.js"
       }
     }<% } -%><%- extraExports -%>,
-    "./app.plugin.js": "./app.plugin.js"
+    "./app.plugin.js": "./app.plugin.js",
+    "./package.json": "./package.json"
   },
   "files": [
     "src",
@@ -100,7 +101,7 @@
     "@types/react": "^19.1.0",
     "del-cli": "^7.0.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.35.2",
+    "react-native-builder-bob": "^0.43.0",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
@@ -135,8 +136,7 @@
       [
         "typescript",
         {
-          "project": "tsconfig.build.json",
-          "esm": true
+          "project": "tsconfig.build.json"
         }
       ]
     ]
