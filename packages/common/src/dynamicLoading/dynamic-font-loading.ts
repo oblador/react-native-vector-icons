@@ -1,12 +1,6 @@
-// @ts-expect-error missing types
-import { getAssetByID } from '@react-native/assets-registry/registry';
-
-/*
- * The following imports are always present when react native is installed
- * in the future, more explicit apis will be exposed by the core, including typings
- * */
 import { Image, Platform } from 'react-native';
 
+import { getAssetByID } from './asset-registry';
 import { assertExpoModulesPresent, getErrorCallback, type LoadAsyncAsset } from './dynamic-loading-setting';
 import type { DynamicLoader, FontSource } from './types';
 
@@ -55,15 +49,8 @@ const loadFontAsync = async (fontFamily: string, fontSource: FontSource): Promis
   return loadPromises[fontFamily];
 };
 
-type AssetRegistryEntry = {
-  name: string;
-  httpServerLocation: string;
-  hash: string;
-  type: string; // file extension
-};
-
 const getLocalFontUrl = (fontModuleId: number, fontFamily: string) => {
-  const assetMeta: AssetRegistryEntry = getAssetByID(fontModuleId);
+  const assetMeta = getAssetByID(fontModuleId);
   if (!assetMeta) {
     throw new Error(`no asset found for font family "${fontFamily}", moduleId: ${String(fontModuleId)}`);
   }
