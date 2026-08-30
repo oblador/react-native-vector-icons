@@ -55,7 +55,7 @@ RNVI comes with the following supported icons. You can [search NPM](https://www.
 ### No longer maintained upstream
 
 - [`Entypo`](http://entypo.com) by Daniel Bruce (v1.0.1 with _411_ icons)
-- [`EvilIcons`](http://evil-icons.io) designed by Alexander Madyankin & Roman Shamin (v1.10.1 with _70_ icons)
+- `EvilIcons` designed by Alexander Madyankin & Roman Shamin (v1.10.1 with _70_ icons)
 - [`FontAwesome 4`](https://fontawesome.com/v4/icons) by Fonticons, Inc. (v4.7.0 containing _785_ icons)
 - [`FontAwesome 5`](https://fontawesome.com/v5/search) from Fonticons, Inc. (v5.15.4 offering _1611_ free and _7869_ pro icons)
 - [`FontAwesome 6`](https://fontawesome.com/search) designed by Fonticons, Inc. (v6.7.2 featuring _2060_ free and _52663_ pro icons)
@@ -73,7 +73,7 @@ See [MIGRATION.md](MIGRATION.md) if you are migrating from `react-native-vector-
 1. Install the packages for the icons you want to use
 
 ```sh
-npm install @react-native-vector-icons/fontawesome-free-solid @react-native-vector-icons/evil-icons
+npm install @react-native-vector-icons/fontawesome-free-solid @react-native-vector-icons/lucide
 ```
 
 2. Depending on the platform you're targeting (iOS/Android/Windows), follow the appropriate setup instructions below.
