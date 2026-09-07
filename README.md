@@ -190,11 +190,10 @@ import { createIconSet } from "@react-native-vector-icons/common";
 const glyphMap = { "icon-name": 1234, test: "∆" };
 
 // use createIconSet() with object parameter
-// or use positional parameters for compatibility with version <= 10: `createIconSet(glyphMap, fontFamily[, fontFile])`
 const Icon = createIconSet(glyphMap, {
   postScriptName: "FontName",
   fontFileName: "font-name.ttf",
-  fontSource: require("../fonts/font-name.ttf"), // optional, for dynamic loading. Can also be a local file uri.
+  fontSource: require("../fonts/font-name.ttf"), // optional, required for dynamic loading. Can also be a local file uri.
 });
 ```
 
