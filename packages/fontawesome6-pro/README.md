@@ -15,6 +15,24 @@ setting it when executing the command: `npx fa-upgrade6 [destination]` and setti
 If the shell script does not work you can install the Pro version manually.
 All you really need to do is adding the Pro fonts to the `rnvi-fonts/fontawesome6-pro` directory.
 
+The font files must use the names expected by this package. This is especially
+important on Android, where fonts are resolved by filename. The `fa-upgrade6`
+script performs this rename automatically. If you copy the fonts manually, use
+these filenames:
+
+| FontAwesome file | RNVI filename |
+| ---------------- | ------------- |
+| `fa-brands-400.ttf` | `FontAwesome6_Pro_Brands.ttf` |
+| `fa-duotone-900.ttf` | `FontAwesome6_Pro_Duotone.ttf` |
+| `fa-light-300.ttf` | `FontAwesome6_Pro_Light.ttf` |
+| `fa-regular-400.ttf` | `FontAwesome6_Pro_Regular.ttf` |
+| `fa-sharp-light-300.ttf` | `FontAwesome6_Pro_Sharp_Light.ttf` |
+| `fa-sharp-regular-400.ttf` | `FontAwesome6_Pro_Sharp_Regular.ttf` |
+| `fa-sharp-solid-900.ttf` | `FontAwesome6_Pro_Sharp_Solid.ttf` |
+| `fa-sharp-thin-100.ttf` | `FontAwesome6_Pro_Sharp_Thin.ttf` |
+| `fa-solid-900.ttf` | `FontAwesome6_Pro_Solid.ttf` |
+| `fa-thin-100.ttf` | `FontAwesome6_Pro_Thin.ttf` |
+
 ## Usage
 
 Using the standard icons works just like the standard icons in this library.
