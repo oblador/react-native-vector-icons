@@ -1,0 +1,23 @@
+{
+  "generator-react-native-vector-icons": {
+    "packageName": "phosphor",
+    "upstreamFont": "@phosphor-icons/web",
+    "buildSteps": {
+      "glyphmap": {
+        "location": "node_modules/@phosphor-icons/web/src/regular/style.css",
+        "mode": "css",
+        "prefix": ".ph.ph-"
+      },
+      "copyFont": {
+        "location": "node_modules/@phosphor-icons/web/src/regular/Phosphor.ttf",
+        "cleanup": true
+      }
+    },
+    "versions": [
+      {
+        "rnvi": "1.0.0",
+        "upstream": "2.1.2"
+      }
+    ]
+  }
+}
