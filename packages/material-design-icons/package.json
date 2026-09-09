@@ -3,33 +3,22 @@
   "version": "13.1.4",
   "description": "Material Design Icons font for react native vector icons",
   "source": "./src/index.ts",
-  "main": "./lib/commonjs/index.js",
+  "main": "./lib/module/index.js",
   "module": "./lib/module/index.js",
-  "types": "./lib/typescript/commonjs/src/index.d.ts",
+  "types": "./lib/typescript/src/index.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "types": "./lib/typescript/module/src/index.d.ts",
-        "default": "./lib/module/index.js"
-      },
-      "require": {
-        "types": "./lib/typescript/commonjs/src/index.d.ts",
-        "default": "./lib/commonjs/index.js"
-      }
+      "types": "./lib/typescript/src/index.d.ts",
+      "default": "./lib/module/index.js"
     },
     "./static": {
-      "import": {
-        "types": "./lib/typescript/module/src/static.d.ts",
-        "default": "./lib/module/static.js"
-      },
-      "require": {
-        "types": "./lib/typescript/commonjs/src/static.d.ts",
-        "default": "./lib/commonjs/static.js"
-      }
+      "types": "./lib/typescript/src/static.d.ts",
+      "default": "./lib/module/static.js"
     },
     "./glyphmaps/*.json": "./glyphmaps/*.json",
     "./fonts/*.ttf": "./fonts/*.ttf",
-    "./app.plugin.js": "./app.plugin.js"
+    "./app.plugin.js": "./app.plugin.js",
+    "./package.json": "./package.json"
   },
   "files": [
     "src",
@@ -102,7 +91,7 @@
     "@types/react": "^19.1.0",
     "del-cli": "^7.0.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.35.2",
+    "react-native-builder-bob": "^0.43.0",
     "typescript": "^6.0.3",
     "@mdi/font": "7.4.47"
   },
@@ -124,12 +113,6 @@
     "output": "lib",
     "targets": [
       [
-        "commonjs",
-        {
-          "esm": true
-        }
-      ],
-      [
         "module",
         {
           "esm": true
@@ -138,8 +121,7 @@
       [
         "typescript",
         {
-          "project": "tsconfig.build.json",
-          "esm": true
+          "project": "tsconfig.build.json"
         }
       ]
     ]
