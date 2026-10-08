@@ -107,12 +107,12 @@
     "@fortawesome/fontawesome-free": "7.2.0"
   },
   "peerDependencies": {
-    "@expo/config-plugins": ">=10.0.0",
+    "expo": "*",
     "react": "*",
     "react-native": "*"
   },
   "peerDependenciesMeta": {
-    "@expo/config-plugins": {
+    "expo": {
       "optional": true
     }
   },
