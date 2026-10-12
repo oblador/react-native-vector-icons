@@ -13,7 +13,26 @@ setting it when executing the command: `npx fa-upgrade6 [destination]` and setti
 ### Manually
 
 If the shell script does not work you can install the Pro version manually.
-All you really need to do is adding the Pro fonts to the `rnvi-fonts/fontawesome6-pro` directory.
+Copy the Pro fonts into `rnvi-fonts/fontawesome6-pro` and rename them exactly as
+shown below. Android loads these fonts by filename, so keeping the original
+Font Awesome npm filenames causes the icons to render incorrectly.
+
+| Font Awesome npm filename  | Required filename                    |
+| -------------------------- | ------------------------------------ |
+| `fa-brands-400.ttf`        | `FontAwesome6_Pro_Brands.ttf`        |
+| `fa-duotone-900.ttf`       | `FontAwesome6_Pro_Duotone.ttf`       |
+| `fa-light-300.ttf`         | `FontAwesome6_Pro_Light.ttf`         |
+| `fa-regular-400.ttf`       | `FontAwesome6_Pro_Regular.ttf`       |
+| `fa-sharp-light-300.ttf`   | `FontAwesome6_Pro_Sharp_Light.ttf`   |
+| `fa-sharp-regular-400.ttf` | `FontAwesome6_Pro_Sharp_Regular.ttf` |
+| `fa-sharp-solid-900.ttf`   | `FontAwesome6_Pro_Sharp_Solid.ttf`   |
+| `fa-sharp-thin-100.ttf`    | `FontAwesome6_Pro_Sharp_Thin.ttf`    |
+| `fa-solid-900.ttf`         | `FontAwesome6_Pro_Solid.ttf`         |
+| `fa-thin-100.ttf`          | `FontAwesome6_Pro_Thin.ttf`          |
+
+The newer single-style `@react-native-vector-icons/fontawesome-pro-*` packages
+use the upstream filenames shown in each package's README, so they do not need
+the legacy renaming in this table.
 
 ## Usage
 
