@@ -250,16 +250,23 @@ const ExampleView = (props) => (
 
 ## Testing
 
-When running tests with `jest` you will need to mock out the native code loading to prevent errors.
+The icon packages publish ES modules. In a React Native app using Babel with Jest (including Jest 30), allow Jest to transform `@react-native-vector-icons` packages and mock font and native code loading.
 
-In `jest.config.js` add
+For an app using the `react-native` preset, configure `jest.config.js` as follows:
 
 ```js
-// Mock out font loading
-moduleNameMapper: {
-  '\\.(ttf)$': '<rootDir>/__mocks__/file-mock.js',
-}
+module.exports = {
+  preset: 'react-native',
+  transformIgnorePatterns: [
+    'node_modules/(?!(\\.pnpm/|((jest-)?react-native|@react-native(-community)?|@react-native-vector-icons)/))',
+  ],
+  moduleNameMapper: {
+    '\\.(ttf)$': '<rootDir>/__mocks__/file-mock.js',
+  },
+};
 ```
+
+Keep your app's existing Babel preset. If you already customize `transformIgnorePatterns`, merge `@react-native-vector-icons` into the existing allowlist; another ignore pattern can still prevent these packages from being transformed. The `.pnpm/` exception supports pnpm's directory layout. See [Jest's transformation configuration](https://jestjs.io/docs/configuration#transformignorepatterns-arraystring).
 
 Create `__mocks__/file-mock.js`:
 
