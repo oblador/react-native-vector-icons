@@ -263,8 +263,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -306,8 +306,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.35.2
-        version: 0.35.3(typescript@6.0.3)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       ts-jest:
         specifier: ^29.4.9
         version: 29.4.9(@babel/core@7.29.0)(@jest/transform@30.3.0)(@jest/types@30.3.0)(babel-jest@30.3.0(@babel/core@7.29.0))(jest-util@30.3.0)(jest@30.3.0(@types/node@24.12.0)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@types/node@24.12.0)(typescript@6.0.3)))(typescript@6.0.3)
@@ -355,8 +355,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.35.2
-        version: 0.35.3(typescript@6.0.3)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -389,8 +389,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -423,8 +423,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -457,8 +457,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -491,8 +491,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -534,8 +534,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -568,8 +568,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -602,8 +602,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -633,8 +633,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -664,8 +664,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -695,8 +695,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -726,8 +726,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -757,8 +757,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -788,8 +788,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -819,8 +819,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -850,8 +850,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -881,8 +881,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -912,8 +912,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -943,8 +943,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -974,8 +974,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1005,8 +1005,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1036,8 +1036,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1067,8 +1067,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1098,8 +1098,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1129,8 +1129,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1163,8 +1163,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1197,8 +1197,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1231,8 +1231,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1265,8 +1265,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1298,8 +1298,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1332,8 +1332,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1366,8 +1366,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1436,8 +1436,8 @@ importers:
         specifier: 0.84.1
         version: 0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4)
       react-native-builder-bob:
-        specifier: ^0.35.2
-        version: 0.35.3(typescript@6.0.3)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       turbo:
         specifier: ^1.13.4
         version: 1.13.4
@@ -1470,8 +1470,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1504,8 +1504,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1538,8 +1538,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1572,8 +1572,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1603,8 +1603,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1637,8 +1637,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1668,8 +1668,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       simple-line-icons:
         specifier: 2.5.5
         version: 2.5.5
@@ -1705,8 +1705,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       react-native-builder-bob:
-        specifier: ^0.43.0
-        version: 0.43.0(babel-plugin-macros@3.1.0)
+        specifier: ^0.43.1
+        version: 0.43.1(babel-plugin-macros@3.1.0)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -2476,12 +2476,6 @@ packages:
 
   '@babel/plugin-transform-sticky-regex@7.27.1':
     resolution: {integrity: sha512-lhInBO5bi/Kowe2/aLdBAawijx+q1pQzicSgnkB6dUPc1+RC8QmJHKf2OjvU+NZWitguJHEaEmbV6VWEouT58g==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/plugin-transform-strict-mode@7.25.9':
-    resolution: {integrity: sha512-DplEwkN9xt6XCz/4oC9l8FJGn7LnOGPU7v08plq+OclMT55zAR9lkX7QIbQ9XscvvJNYpLUfYO4IYz/7JGkbXQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -5320,10 +5314,6 @@ packages:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
 
-  aggregate-error@3.1.0:
-    resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
-    engines: {node: '>=8'}
-
   aggregate-error@4.0.1:
     resolution: {integrity: sha512-0poP0T7el6Vq3rstR8Mn4V/IQrpBLO6POkUSrN7RhyY+GF/InCFShQzsQ39T25gkHhLgSLByyAz+Kjb+c2L98w==}
     engines: {node: '>=12'}
@@ -5621,9 +5611,6 @@ packages:
     resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
     engines: {node: '>=10', npm: '>=6'}
 
-  babel-plugin-module-resolver@5.0.2:
-    resolution: {integrity: sha512-9KtaCazHee2xc0ibfqsDeamwDps6FZNo5S0Q81dUqEuFzVwPhcT4J5jOqIVvgCA3Q/wO9hKYxN/Ds3tIsp5ygg==}
-
   babel-plugin-named-asset-import@0.3.8:
     resolution: {integrity: sha512-WXiAc++qo7XcJ1ZnTYGtLxmBCVbddAml3CEXgWaBzNzLNoxtQ8AiGEFDMOhot9XjTCQbvP5E77Fj9Gk924f00Q==}
     peerDependencies:
@@ -5893,18 +5880,6 @@ packages:
     resolution: {integrity: sha512-+ys997U96po4Kx/ABpBCqhA9EuxJaQWDQg7295H4hBphv3IZg0boBKuwYpt4YXp6MZ5AmZQnU/tyMTlRpaSejg==}
     engines: {node: '>= 0.4'}
 
-  caller-callsite@2.0.0:
-    resolution: {integrity: sha512-JuG3qI4QOftFsZyOn1qq87fq5grLIyk1JYd5lJmdA+fG7aQ9pA/i3JIJGcO3q0MrRcHlOt1U+ZeHW8Dq9axALQ==}
-    engines: {node: '>=4'}
-
-  caller-path@2.0.0:
-    resolution: {integrity: sha512-MCL3sf6nCSXOwCTzvPKhN18TU7AHTvdtam8DAogxcrJ8Rjfbbg7Lgng64H9Iy+vUV6VGFClN/TyxBkAebLRR4A==}
-    engines: {node: '>=4'}
-
-  callsites@2.0.0:
-    resolution: {integrity: sha512-ksWePWBloaWPxJYQ8TL0JHvtci6G5QTKwQ95RcWAa/lzoAKuAOflGdAK92hpHXjkwb8zLxoLNUoNYZgVsaJzvQ==}
-    engines: {node: '>=4'}
-
   callsites@3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
@@ -6010,10 +5985,6 @@ packages:
   clean-css@5.3.3:
     resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==}
     engines: {node: '>= 10.0'}
-
-  clean-stack@2.2.0:
-    resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
-    engines: {node: '>=6'}
 
   clean-stack@4.2.0:
     resolution: {integrity: sha512-LYv6XPxoyODi36Dp976riBtSY27VmFo+MKqEU9QCCWyTrdEPDog+RWA7xQWHi6Vbp61j5c4cdzzX1NidnwtUWg==}
@@ -6288,10 +6259,6 @@ packages:
       '@types/node': '*'
       cosmiconfig: '>=9'
       typescript: '>=5'
-
-  cosmiconfig@5.2.1:
-    resolution: {integrity: sha512-H65gsXo1SKjf8zmrJ67eJk8aIRKV5ff2D4uKZIBZShbhGSpEmsQOPW/SKMKYhSTrqR7ufy6RP69rPogdaPh/kA==}
-    engines: {node: '>=4'}
 
   cosmiconfig@6.0.0:
     resolution: {integrity: sha512-xb3ZL6+L8b9JLLCx3ZdoZy4+2ECphCMo2PwqgP1tlfVq6M6YReyzBJtvWWtbDSpNr9hn96pkCiZqUcFEc+54Qg==}
@@ -6581,10 +6548,6 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  del@6.1.1:
-    resolution: {integrity: sha512-ua8BhapfP0JUJKC/zV9yHHDW/rDoDxP4Zhn3AkA6/xT6gY7jYXJiaeyBZznYVujhZZET+UgcbZiQ7sN3WqcImg==}
-    engines: {node: '>=10'}
-
   del@8.0.1:
     resolution: {integrity: sha512-gPqh0mKTPvaUZGAuHbrBUYKZWBNAeHG7TU3QH5EhVwPMyKvmfJaNXhcD2jTcXsJRRcffuho4vaYweu80dRrMGA==}
     engines: {node: '>=18'}
@@ -6592,9 +6555,6 @@ packages:
   delayed-stream@1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
-
-  denodeify@1.2.1:
-    resolution: {integrity: sha512-KNTihKNmQENUZeKu5fzfpzRqR5S2VMp4gl9RFHiWzj9DfvYQPMJ6XHKNaQxaGCXwPk6y9yme3aUoaiAe+KX+vg==}
 
   depd@1.1.2:
     resolution: {integrity: sha512-7emPTl6Dpo6JRXOXjLRxck+FlLRX5847cLKEn00PLAgc3g2hTZZgr+e4c2v6QpSmLeFP3n5yUo7ft6avBK/5jQ==}
@@ -7110,10 +7070,6 @@ packages:
   evil-icons@1.10.1:
     resolution: {integrity: sha512-gIBzN6rpvG5om/WAu1rEiE9SgT9mQ00cmYvRb6Cr4ngVaz9Ae8JGeEByMOvrfKvrMhsZzLCNmUJLBJZwjri4bw==}
 
-  execa@4.1.0:
-    resolution: {integrity: sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==}
-    engines: {node: '>=10'}
-
   execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
@@ -7348,9 +7304,6 @@ packages:
     resolution: {integrity: sha512-6BN9trH7bp3qvnrRyzsBz+g3lZxTNZTbVO2EV1CS0WIcDbawYVdYvGflME/9QP0h0pYlCDBCTjYa9nZzMDpyxQ==}
     engines: {node: '>= 0.8'}
 
-  find-babel-config@2.1.2:
-    resolution: {integrity: sha512-ZfZp1rQyp4gyuxqt1ZqjFGVeVBvmpURMqdIWXbPRfB97Bf6BzdK/xSIbylEINzQ0kB5tlDQfn9HkNXXWsqTqLg==}
-
   find-cache-dir@2.1.0:
     resolution: {integrity: sha512-Tq6PixE0w/VMFfCgbONnkiQIVol/JJL7nRMi20fqzA4NRs9AfeqMGeRdPi3wIhYkxjeBaWh2rxwapn5Tu3IqOQ==}
     engines: {node: '>=6'}
@@ -7570,10 +7523,6 @@ packages:
     resolution: {integrity: sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==}
     engines: {node: '>= 0.4'}
 
-  get-stream@5.2.0:
-    resolution: {integrity: sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==}
-    engines: {node: '>=8'}
-
   get-stream@6.0.1:
     resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
     engines: {node: '>=10'}
@@ -7635,16 +7584,6 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
-
-  glob@8.1.0:
-    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
-    engines: {node: '>=12'}
-    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
-
-  glob@9.3.5:
-    resolution: {integrity: sha512-e1LleDykUz2Iu+MTYdkSsuWX8lvAjAcs0Xef0lNIu0S2wOAzuTxCJtcd9S3cijlwYF18EsU3rzb8jPVobxDh9Q==}
-    engines: {node: '>=16 || 14 >=14.17'}
     deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-agent@3.0.0:
@@ -7756,9 +7695,6 @@ packages:
   hermes-compiler@250829098.0.9:
     resolution: {integrity: sha512-hZ5O7PDz1vQ99TS7HD3FJ9zVynfU1y+VWId6U1Pldvd8hmAYrNec/XLPYJKD3dLOW6NXak6aAQAuMuSo3ji0tQ==}
 
-  hermes-estree@0.23.1:
-    resolution: {integrity: sha512-eT5MU3f5aVhTqsfIReZ6n41X5sYn4IdQL0nvz6yO+MMlPxw49aSARHLg/MSehQftyjnrE8X6bYregzSumqc6cg==}
-
   hermes-estree@0.32.0:
     resolution: {integrity: sha512-KWn3BqnlDOl97Xe1Yviur6NbgIZ+IP+UVSpshlZWkq+EtoHg6/cwiDj/osP9PCEgFE15KBm1O55JRwbMEm5ejQ==}
 
@@ -7770,9 +7706,6 @@ packages:
 
   hermes-estree@0.35.0:
     resolution: {integrity: sha512-xVx5Opwy8Oo1I5yGpVRhCvWL/iV3M+ylksSKVNlxxD90cpDpR/AR1jLYqK8HWihm065a6UI3HeyAmYzwS8NOOg==}
-
-  hermes-parser@0.23.1:
-    resolution: {integrity: sha512-oxl5h2DkFW83hT4DAUJorpah8ou4yvmweUzLJmmr6YV2cezduCdlil1AvU/a/xSsAFo4WUcNA4GoV5Bvq6JffA==}
 
   hermes-parser@0.32.0:
     resolution: {integrity: sha512-g4nBOWFpuiTqjR3LZdRxKUkij9iyveWeuks7INEsMX741f3r9xxrOe8TeQfUxtda0eXmiIFiMQzoeSQEno33Hw==}
@@ -7881,10 +7814,6 @@ packages:
     resolution: {integrity: sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==}
     engines: {node: '>= 14'}
 
-  human-signals@1.1.1:
-    resolution: {integrity: sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==}
-    engines: {node: '>=8.12.0'}
-
   human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
@@ -7956,10 +7885,6 @@ packages:
 
   immer@9.0.21:
     resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
-
-  import-fresh@2.0.0:
-    resolution: {integrity: sha512-eZ5H8rcgYazHbKC3PG4ClHNykCSxtAhxSSEM+2mb+7evD2CKF5V7c0dNum7AdpDh0ZdICwZY9sRSn8f+KH96sg==}
-    engines: {node: '>=4'}
 
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
@@ -8045,10 +7970,6 @@ packages:
     resolution: {integrity: sha512-Ag3wB2o37wslZS19hZqorUnrnzSkpOVy+IiiDEiTqNubEYpYuHWIf6K4psgN2ZWKExS4xhVCrRVfb/wfW8fWJA==}
     engines: {node: '>= 10'}
 
-  is-absolute@1.0.0:
-    resolution: {integrity: sha512-dOWoqflvcydARa360Gvv18DZ/gRuHKi2NU/wU5X1ZFzdYfH29nkiNZsF3mp4OJ3H4yo9Mx8A/uAGNzpzPN3yBA==}
-    engines: {node: '>=0.10.0'}
-
   is-array-buffer@3.0.5:
     resolution: {integrity: sha512-DDfANUiiG2wC1qawP66qlTugJeL5HyzMpfr8lLK+jMQirGzNod0B12cFB/9q838Ru27sBwfw78/rdoU7RERz6A==}
     engines: {node: '>= 0.4'}
@@ -8088,10 +8009,6 @@ packages:
     resolution: {integrity: sha512-PwwhEakHVKTdRNVOw+/Gyh0+MzlCl4R6qKvkhuvLtPMggI1WAHt9sOwZxQLSGpUaDnrdyDsomoRgNnCfKNSXXg==}
     engines: {node: '>= 0.4'}
 
-  is-directory@0.3.1:
-    resolution: {integrity: sha512-yVChGzahRFvbkscn2MlwGismPO12i9+znNruC5gVEntG3qu0xQMzsGg/JFbrsqDOHtHFPci+V5aP5T9I+yeKqw==}
-    engines: {node: '>=0.10.0'}
-
   is-docker@2.2.1:
     resolution: {integrity: sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==}
     engines: {node: '>=8'}
@@ -8128,13 +8045,6 @@ packages:
   is-generator-function@1.1.0:
     resolution: {integrity: sha512-nPUB5km40q9e8UfN/Zc24eLlzdSf9OfKByBw9CIdw4H1giPMeA0OIJvbchsCu4npfI2QcMVBsGEBHKZ7wLTWmQ==}
     engines: {node: '>= 0.4'}
-
-  is-git-dirty@2.0.2:
-    resolution: {integrity: sha512-U3YCo+GKR/rDsY7r0v/LBICbQwsx859tDQnAT+v0E/zCDeWbQ1TUt1FtyExeyik7VIJlYOLHCIifLdz71HDalg==}
-    engines: {node: '>=10'}
-
-  is-git-repository@2.0.0:
-    resolution: {integrity: sha512-HDO50CG5suIAcmqG4F1buqVXEZRPn+RaXIn9pFKq/947FBo2bCRwK7ZluEVZOy99a4IQyqsjbKEpAiOXCccOHQ==}
 
   is-glob@4.0.3:
     resolution: {integrity: sha512-xelSayHH36ZgE7ZWhli7pW34hNbNl8Ojv5KVmkJD4hBdD3th8Tfk9vYasLM+mXWOZhFkgZfxhLSnrwRr4elSSg==}
@@ -8197,10 +8107,6 @@ packages:
     resolution: {integrity: sha512-drqDG3cbczxxEJRoOXcOjtdp1J/lyp1mNn0xaznRs8+muBhgQcrnbspox5X5fOw0HnMnbfDzvnEMEtqDEJEo8w==}
     engines: {node: '>=8'}
 
-  is-path-cwd@2.2.0:
-    resolution: {integrity: sha512-w942bTcih8fdJPJmQHFzkS76NEP8Kzzvmw92cXsazb8intwLqPibPPdXf4ANdKV3rYMuuQYGIWtvz9JilB3NFQ==}
-    engines: {node: '>=6'}
-
   is-path-cwd@3.0.0:
     resolution: {integrity: sha512-kyiNFFLU0Ampr6SDZitD/DwUo4Zs1nSdnygUBqsu3LooL00Qvb5j+UnvApUn/TTj1J3OuE6BTdQ5rudKmU2ZaA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -8239,10 +8145,6 @@ packages:
   is-regexp@3.1.0:
     resolution: {integrity: sha512-rbku49cWloU5bSMI+zaRaXdQHXnthP6DZ/vLnfdSKyL4zUzuWnomtOEiZZOd+ioQ+avFo/qau3KPTc7Fjy1uPA==}
     engines: {node: '>=12'}
-
-  is-relative@1.0.0:
-    resolution: {integrity: sha512-Kw/ReK0iqwKeu0MITLFuj0jbPAmEiOsIwyIXvvbfa6QfmN9pkD1M+8pdk7Rl/dTKbH34/XBFMbgD4iMJhLQbGA==}
-    engines: {node: '>=0.10.0'}
 
   is-root@2.1.0:
     resolution: {integrity: sha512-AGOriNp96vNBd3HtU+RzFEc75FfR5ymiYv8E553I71SCeXBiMsVDUtdio1OEFvrPyLIQ9tVR5RxXIFe5PUFjMg==}
@@ -8291,10 +8193,6 @@ packages:
   is-typedarray@1.0.0:
     resolution: {integrity: sha512-cyA56iCMHAh5CdzjJIa4aohJyeO1YbwLi3Jc35MmRU6poroFjIGZzUzupGiRPOjgHg9TLu43xbpwXk523fMxKA==}
 
-  is-unc-path@1.0.0:
-    resolution: {integrity: sha512-mrGpVd0fs7WWLfVsStvgF6iEJnbjDFZh9/emhRDcGWTduTfNHd9CHeUwH3gYIjdbwo4On6hunkztwOaAw0yllQ==}
-    engines: {node: '>=0.10.0'}
-
   is-unicode-supported@0.1.0:
     resolution: {integrity: sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==}
     engines: {node: '>=10'}
@@ -8320,10 +8218,6 @@ packages:
 
   is-what@3.14.1:
     resolution: {integrity: sha512-sNxgpk9793nzSs7bA6JQJGeIuRBQhAaNGG77kzYQgMkrID+lS6SlK07K5LaptscDlSaIgH+GPFzf+d75FVxozA==}
-
-  is-windows@1.0.2:
-    resolution: {integrity: sha512-eXK1UInq2bPmjyX6e3VHIzMLobc4J94i4AWn+Hpq3OU5KkrRC96OAcR3PRJ/pGu6m8TRnBHP9dkXQVsT/COVIA==}
-    engines: {node: '>=0.10.0'}
 
   is-wsl@1.1.0:
     resolution: {integrity: sha512-gfygJYZ2gLTDlmbWMI0CE2MwnFzSN/2SZfkMlItC4K/JBlsWVDB0bO6XhqcY13YXE7iMcAJnzTCJjPiTeJJ0Mw==}
@@ -8788,9 +8682,6 @@ packages:
   json-buffer@3.0.1:
     resolution: {integrity: sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==}
 
-  json-parse-better-errors@1.0.2:
-    resolution: {integrity: sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==}
-
   json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
 
@@ -9240,10 +9131,6 @@ packages:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
     engines: {node: '>= 0.6'}
 
-  metro-babel-transformer@0.80.12:
-    resolution: {integrity: sha512-YZziRs0MgA3pzCkkvOoQRXjIoVjvrpi/yRlJnObyIvMP6lFdtyG4nUGIwGY9VXnBvxmXD6mPY2e+NSw6JAyiRg==}
-    engines: {node: '>=18'}
-
   metro-babel-transformer@0.83.5:
     resolution: {integrity: sha512-d9FfmgUEVejTiSb7bkQeLRGl6aeno2UpuPm3bo3rCYwxewj03ymvOn8s8vnS4fBqAPQ+cE9iQM40wh7nGXR+eA==}
     engines: {node: '>=20.19.4'}
@@ -9251,10 +9138,6 @@ packages:
   metro-babel-transformer@0.83.7:
     resolution: {integrity: sha512-sBqBkt6kNut/88bv+Ucvm4yqdPetbvAEsHzi3MAgJEifOSYYzX5Z5Kgw3TFOrwf/mHJTOBG2ONlaMHoyfP15TA==}
     engines: {node: '>=20.19.4'}
-
-  metro-cache-key@0.80.12:
-    resolution: {integrity: sha512-o4BspKnugg/pE45ei0LGHVuBJXwRgruW7oSFAeSZvBKA/sGr0UhOGY3uycOgWInnS3v5yTTfiBA9lHlNRhsvGA==}
-    engines: {node: '>=18'}
 
   metro-cache-key@0.83.5:
     resolution: {integrity: sha512-Ycl8PBajB7bhbAI7Rt0xEyiF8oJ0RWX8EKkolV1KfCUlC++V/GStMSGpPLwnnBZXZWkCC5edBPzv1Hz1Yi0Euw==}
@@ -9264,10 +9147,6 @@ packages:
     resolution: {integrity: sha512-W1c2Nmx8MiJTJt+eWhMO08z9VKi3kZOaz99IYGdqeqDgY9j+yZjXl62rUav4Di0heZfh4/n2s722PqRL1OODeg==}
     engines: {node: '>=20.19.4'}
 
-  metro-cache@0.80.12:
-    resolution: {integrity: sha512-p5kNHh2KJ0pbQI/H7ZBPCEwkyNcSz7OUkslzsiIWBMPQGFJ/xArMwkV7I+GJcWh+b4m6zbLxE5fk6fqbVK1xGA==}
-    engines: {node: '>=18'}
-
   metro-cache@0.83.5:
     resolution: {integrity: sha512-oH+s4U+IfZyg8J42bne2Skc90rcuESIYf86dYittcdWQtPfcaFXWpByPyTuWk3rR1Zz3Eh5HOrcVImfEhhJLng==}
     engines: {node: '>=20.19.4'}
@@ -9275,10 +9154,6 @@ packages:
   metro-cache@0.83.7:
     resolution: {integrity: sha512-E9SRePXQ1Zvlj79VcOk57q7VC7rMHMFQ+jhmPHBiq+dJ0bJB5BL87lWZF6oh5X76Cci5tpDuQNaDwwuSCToEeg==}
     engines: {node: '>=20.19.4'}
-
-  metro-config@0.80.12:
-    resolution: {integrity: sha512-4rwOWwrhm62LjB12ytiuR5NgK1ZBNr24/He8mqCsC+HXZ+ATbrewLNztzbAZHtFsrxP4D4GLTGgh96pCpYLSAQ==}
-    engines: {node: '>=18'}
 
   metro-config@0.83.5:
     resolution: {integrity: sha512-JQ/PAASXH7yczgV6OCUSRhZYME+NU8NYjI2RcaG5ga4QfQ3T/XdiLzpSb3awWZYlDCcQb36l4Vl7i0Zw7/Tf9w==}
@@ -9288,10 +9163,6 @@ packages:
     resolution: {integrity: sha512-83mjWFbFOt2GeJ6pFIum5mSnc1uTsZJAtD8o4ej0s4NVsYsA7fB+pHvTfHhFrpeMONaobu2riKavkPei05Er/Q==}
     engines: {node: '>=20.19.4'}
 
-  metro-core@0.80.12:
-    resolution: {integrity: sha512-QqdJ/yAK+IpPs2HU/h5v2pKEdANBagSsc6DRSjnwSyJsCoHlmyJKCaCJ7KhWGx+N4OHxh37hoA8fc2CuZbx0Fw==}
-    engines: {node: '>=18'}
-
   metro-core@0.83.5:
     resolution: {integrity: sha512-YcVcLCrf0ed4mdLa82Qob0VxYqfhmlRxUS8+TO4gosZo/gLwSvtdeOjc/Vt0pe/lvMNrBap9LlmvZM8FIsMgJQ==}
     engines: {node: '>=20.19.4'}
@@ -9299,10 +9170,6 @@ packages:
   metro-core@0.83.7:
     resolution: {integrity: sha512-6yn3w1wnltT6RQl7p7YES2l95ArC+mWrOssEiH8p5/DDrJS65/szf9LsC9JrBv8c5DdvSY3V3f0GRYg0Ox7hCg==}
     engines: {node: '>=20.19.4'}
-
-  metro-file-map@0.80.12:
-    resolution: {integrity: sha512-sYdemWSlk66bWzW2wp79kcPMzwuG32x1ZF3otI0QZTmrnTaaTiGyhE66P1z6KR4n2Eu5QXiABa6EWbAQv0r8bw==}
-    engines: {node: '>=18'}
 
   metro-file-map@0.83.5:
     resolution: {integrity: sha512-ZEt8s3a1cnYbn40nyCD+CsZdYSlwtFh2kFym4lo+uvfM+UMMH+r/BsrC6rbNClSrt+B7rU9T+Te/sh/NL8ZZKQ==}
@@ -9312,10 +9179,6 @@ packages:
     resolution: {integrity: sha512-+j0F1m+FQYVAQ6syf+mwhIPV5GoFQrkInX8bppuc50IzNsZbMrp8R5H/Sx/K2daQ3YEa9F/XwkeZT8gzJfgeCw==}
     engines: {node: '>=20.19.4'}
 
-  metro-minify-terser@0.80.12:
-    resolution: {integrity: sha512-muWzUw3y5k+9083ZoX9VaJLWEV2Jcgi+Oan0Mmb/fBNMPqP9xVDuy4pOMn/HOiGndgfh/MK7s4bsjkyLJKMnXQ==}
-    engines: {node: '>=18'}
-
   metro-minify-terser@0.83.5:
     resolution: {integrity: sha512-Toe4Md1wS1PBqbvB0cFxBzKEVyyuYTUb0sgifAZh/mSvLH84qA1NAWik9sISWatzvfWf3rOGoUoO5E3f193a3Q==}
     engines: {node: '>=20.19.4'}
@@ -9323,10 +9186,6 @@ packages:
   metro-minify-terser@0.83.7:
     resolution: {integrity: sha512-MfJar2IS4tBRuLb9svwb0Gu5l9BsH+pcRm8eGcEi/wy8MzZinfinh5dFLt2nWkocnulIgtGB5NkFDdbXqMXKhQ==}
     engines: {node: '>=20.19.4'}
-
-  metro-resolver@0.80.12:
-    resolution: {integrity: sha512-PR24gYRZnYHM3xT9pg6BdbrGbM/Cu1TcyIFBVlAk7qDAuHkUNQ1nMzWumWs+kwSvtd9eZGzHoucGJpTUEeLZAw==}
-    engines: {node: '>=18'}
 
   metro-resolver@0.83.5:
     resolution: {integrity: sha512-7p3GtzVUpbAweJeCcUJihJeOQl1bDuimO5ueo1K0BUpUtR41q5EilbQ3klt16UTPPMpA+tISWBtsrqU556mY1A==}
@@ -9336,10 +9195,6 @@ packages:
     resolution: {integrity: sha512-WSJIENlMcoSsuz66IfBHOkgfp3KJt2UW2TnEHPf1b8pIG2eEXNOVmo2+03A0H17WY2XGXWgxL0CG7FAopqgB1A==}
     engines: {node: '>=20.19.4'}
 
-  metro-runtime@0.80.12:
-    resolution: {integrity: sha512-LIx7+92p5rpI0i6iB4S4GBvvLxStNt6fF0oPMaUd1Weku7jZdfkCZzmrtDD9CSQ6EPb0T9NUZoyXIxlBa3wOCw==}
-    engines: {node: '>=18'}
-
   metro-runtime@0.83.5:
     resolution: {integrity: sha512-f+b3ue9AWTVlZe2Xrki6TAoFtKIqw30jwfk7GQ1rDUBQaE0ZQ+NkiMEtb9uwH7uAjJ87U7Tdx1Jg1OJqUfEVlA==}
     engines: {node: '>=20.19.4'}
@@ -9348,10 +9203,6 @@ packages:
     resolution: {integrity: sha512-9GKkJURaB2iyYoEExKnedzAHzxmKtSi+k0tsZUvMoU27tBZJElchYt7JH/Ai/XzYAI9lCAaV7u5HZSI8J5Z+wQ==}
     engines: {node: '>=20.19.4'}
 
-  metro-source-map@0.80.12:
-    resolution: {integrity: sha512-o+AXmE7hpvM8r8MKsx7TI21/eerYYy2DCDkWfoBkv+jNkl61khvDHlQn0cXZa6lrcNZiZkl9oHSMcwLLIrFmpw==}
-    engines: {node: '>=18'}
-
   metro-source-map@0.83.5:
     resolution: {integrity: sha512-VT9bb2KO2/4tWY9Z2yeZqTUao7CicKAOps9LUg2aQzsz+04QyuXL3qgf1cLUVRjA/D6G5u1RJAlN1w9VNHtODQ==}
     engines: {node: '>=20.19.4'}
@@ -9359,11 +9210,6 @@ packages:
   metro-source-map@0.83.7:
     resolution: {integrity: sha512-JgA1h7oc1a1jydBe1GhVFsUoMYo3wLPk7oRA32rjlDsq+sP2JLt9x2p2lWbNSxTm/u8NV4VRid3hvEJgcX8tKw==}
     engines: {node: '>=20.19.4'}
-
-  metro-symbolicate@0.80.12:
-    resolution: {integrity: sha512-/dIpNdHksXkGHZXARZpL7doUzHqSNxgQ8+kQGxwpJuHnDhGkENxB5PS2QBaTDdEcmyTMjS53CN1rl9n1gR6fmw==}
-    engines: {node: '>=18'}
-    hasBin: true
 
   metro-symbolicate@0.83.5:
     resolution: {integrity: sha512-EMIkrjNRz/hF+p0RDdxoE60+dkaTLPN3vaaGkFmX5lvFdO6HPfHA/Ywznzkev+za0VhPQ5KSdz49/MALBRteHA==}
@@ -9375,10 +9221,6 @@ packages:
     engines: {node: '>=20.19.4'}
     hasBin: true
 
-  metro-transform-plugins@0.80.12:
-    resolution: {integrity: sha512-WQWp00AcZvXuQdbjQbx1LzFR31IInlkCDYJNRs6gtEtAyhwpMMlL2KcHmdY+wjDO9RPcliZ+Xl1riOuBecVlPA==}
-    engines: {node: '>=18'}
-
   metro-transform-plugins@0.83.5:
     resolution: {integrity: sha512-KxYKzZL+lt3Os5H2nx7YkbkWVduLZL5kPrE/Yq+Prm/DE1VLhpfnO6HtPs8vimYFKOa58ncl60GpoX0h7Wm0Vw==}
     engines: {node: '>=20.19.4'}
@@ -9387,10 +9229,6 @@ packages:
     resolution: {integrity: sha512-Ss0FpBiZDjX2kwhukMDl5sNdYK8T/06IPqxNE4H6PTlRlfs9q11cef13c/xESY/Pm4VCkp1yJUZO3kXzvMxQFA==}
     engines: {node: '>=20.19.4'}
 
-  metro-transform-worker@0.80.12:
-    resolution: {integrity: sha512-KAPFN1y3eVqEbKLx1I8WOarHPqDMUa8WelWxaJCNKO/yHCP26zELeqTJvhsQup+8uwB6EYi/sp0b6TGoh6lOEA==}
-    engines: {node: '>=18'}
-
   metro-transform-worker@0.83.5:
     resolution: {integrity: sha512-8N4pjkNXc6ytlP9oAM6MwqkvUepNSW39LKYl9NjUMpRDazBQ7oBpQDc8Sz4aI8jnH6AGhF7s1m/ayxkN1t04yA==}
     engines: {node: '>=20.19.4'}
@@ -9398,11 +9236,6 @@ packages:
   metro-transform-worker@0.83.7:
     resolution: {integrity: sha512-UegCo7ygB2fT64mRK2nbAjQVJ1zSwIIHy8d96jJv2nKZFDaViYBiughEdu5HM/Ceq0WN3LZrZk3zhl9aoiLYFw==}
     engines: {node: '>=20.19.4'}
-
-  metro@0.80.12:
-    resolution: {integrity: sha512-1UsH5FzJd9quUsD1qY+zUG4JY3jo3YEMxbMYH9jT6NK3j4iORhlwTK8fYTfAUBhDKjgLfKjAh7aoazNE23oIRA==}
-    engines: {node: '>=18'}
-    hasBin: true
 
   metro@0.83.5:
     resolution: {integrity: sha512-BgsXevY1MBac/3ZYv/RfNFf/4iuW9X7f4H8ZNkiH+r667HD9sVujxcmu4jvEzGCAm4/WyKdZCuyhAcyhTHOucQ==}
@@ -9490,14 +9323,6 @@ packages:
   minimatch@3.1.5:
     resolution: {integrity: sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==}
 
-  minimatch@5.1.6:
-    resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
-    engines: {node: '>=10'}
-
-  minimatch@8.0.7:
-    resolution: {integrity: sha512-V+1uQNdzybxa14e/p00HZnQNNcTjnRJjDxg2V8wtkjFctq4M7hXFws4oekyTP0Jebeq7QYtpFyOeBAjc88zvYg==}
-    engines: {node: '>=16 || 14 >=14.17'}
-
   minimatch@9.0.9:
     resolution: {integrity: sha512-OBwBN9AL4dqmETlpS2zasx+vTeWclWzkblfZk7KTA5j3jeOONz/tRCnZomUyvNg83wL5Zv9Ss6HMJXAgL8R2Yg==}
     engines: {node: '>=16 || 14 >=14.17'}
@@ -9527,10 +9352,6 @@ packages:
 
   minipass@3.3.6:
     resolution: {integrity: sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==}
-    engines: {node: '>=8'}
-
-  minipass@4.2.8:
-    resolution: {integrity: sha512-fNzuVyifolSLFL4NzpF+wEF4qrgqaaKX0haXPQEdQ7NKAN+WecoKMHV09YcuL/DHxrUsYQOK3MiuDf7Ip2OXfQ==}
     engines: {node: '>=8'}
 
   minipass@7.1.3:
@@ -9614,9 +9435,6 @@ packages:
   nocache@3.0.4:
     resolution: {integrity: sha512-WDD0bdg9mbq6F4mRxEYcPWwfA1vxd0mrvKOyxI7Xj/atfRHVeutzuWByG//jfm4uPzp0y4Kj051EORCBSQMycw==}
     engines: {node: '>=12.0.0'}
-
-  node-abort-controller@3.1.1:
-    resolution: {integrity: sha512-AGK2yQKIjRuqnc6VkX2Xj5d+QW8xZ87pa1UK6yA6ouUyuxfHuMP6umE5QK7UmTeOAymo+Zx1Fxiuw9rVx8taHQ==}
 
   node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
@@ -9754,10 +9572,6 @@ packages:
         optional: true
       '@swc/core':
         optional: true
-
-  ob1@0.80.12:
-    resolution: {integrity: sha512-VMArClVT6LkhUGpnuEoBuyjG9rzUyEzg4PDkav6wK1cLhOK02gPCYFxoiB4mqVnrMhDpIzJcrGNAMVi9P+hXrw==}
-    engines: {node: '>=18'}
 
   ob1@0.83.5:
     resolution: {integrity: sha512-vNKPYC8L5ycVANANpF/S+WZHpfnRWKx/F3AYP4QMn6ZJTh+l2HOrId0clNkEmua58NB9vmI9Qh7YOoV/4folYg==}
@@ -9962,10 +9776,6 @@ packages:
     resolution: {integrity: sha512-wPrq66Llhl7/4AGC6I+cqxT07LhXvWL08LNXz1fENOw0Ap4sRZZ/gZpTTJ5jpurzzzfS2W/Ge9BY3LgLjCShcw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  p-map@4.0.0:
-    resolution: {integrity: sha512-/bjOqmgETBYB5BoEeGVea8dmvHb2m9GLy1E9W43yeyfP6QQCZGFNa+XRceJEuDB6zqr+gKpIAmlLebMpykw/MQ==}
-    engines: {node: '>=10'}
-
   p-map@7.0.4:
     resolution: {integrity: sha512-tkAQEw8ysMzmkhgw8k+1U/iPhWNhykKnSk4Rd5zLoPJCuJaGRPo6YposrZgaxHKzDHdDWWZvE/Sk7hsL2X/CpQ==}
     engines: {node: '>=18'}
@@ -10046,10 +9856,6 @@ packages:
   parse-help@2.0.0:
     resolution: {integrity: sha512-bb93UtyO4Pd9apV2ZQ2i///wIiW6eR1ZC+CraKHKMJX8dTayipqxwlOBmzjaoYQzfd3vzE00U9vND9K34LBgDQ==}
     engines: {node: '>=12'}
-
-  parse-json@4.0.0:
-    resolution: {integrity: sha512-aOIos8bujGN93/8Ox/jPLh7RwVnPEysynVFE+fQZyg6jKELEHwzgKdLRFHUgXJL6kylijVSBC4BvN9OmsB48Rw==}
-    engines: {node: '>=4'}
 
   parse-json@5.2.0:
     resolution: {integrity: sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==}
@@ -10740,9 +10546,6 @@ packages:
   psl@1.15.0:
     resolution: {integrity: sha512-JZd3gMVBAVQkSs6HdNZo9Sdo0LNcQeMNP3CozBJb3JYC/QUYZTnKxP+f8oWRX4rHP5EurWxqAHTSwUCjlNKa1w==}
 
-  pump@3.0.2:
-    resolution: {integrity: sha512-tUPXtzlGM8FE3P0ZL6DVs/3P58k9nk8/jZeQCurTJylQA8qFYzHFfhBJkuqyE0FifOsQ0uKWekiZ5g8wtr28cw==}
-
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -10840,13 +10643,8 @@ packages:
   react-native-animatable@1.4.0:
     resolution: {integrity: sha512-DZwaDVWm2NBvBxf7I0wXKXLKb/TxDnkV53sWhCvei1pRyTX3MVFpkvdYBknNBqPrxYuAIlPxEp7gJOidIauUkw==}
 
-  react-native-builder-bob@0.35.3:
-    resolution: {integrity: sha512-GtlRXJ9SL2oQw2KiHDCaHlk3mYkbDjYxMMoYVnj0+EIs0nuGFxG58NO6T1Mn2c6xYoVmSIg2RXFIFexsjHPRBQ==}
-    engines: {node: '>= 18.0.0'}
-    hasBin: true
-
-  react-native-builder-bob@0.43.0:
-    resolution: {integrity: sha512-suE1OYf0umMQvzzQ+4Ba+5xMc8jLu60ILQi85x8SCBaBtVUSJfcaGvlv6+34xxXgy+a2PuyNzoOXr9STEweLrQ==}
+  react-native-builder-bob@0.43.1:
+    resolution: {integrity: sha512-TRGDmaAI72gMyRXFbNhWVODLe9YOydJ9HV+SCdLp+BjHnUJLeAImFCnZUmlO/2pUQUC1+yS+S4EMlRZ4rGCwBg==}
     engines: {node: ^20.19.0 || ^22.12.0 || >= 23.4.0}
     hasBin: true
 
@@ -11042,16 +10840,9 @@ packages:
   requires-port@1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
 
-  reselect@4.1.8:
-    resolution: {integrity: sha512-ab9EmR80F/zQTMNeneUr4cv+jSwPJgIlvEmVwLerwrWVbpLlBuls9XHzIeTFy4cegU2NHBp3va0LKOzU5qFEYQ==}
-
   resolve-cwd@3.0.0:
     resolution: {integrity: sha512-OrZaX2Mb+rJCpH/6CpSqt9xFVpN++x01XnN2ie9g6P5/3xelLAkXWVADpdz1IHD/KFfEXyE6V0U01OQ3UO2rEg==}
     engines: {node: '>=8'}
-
-  resolve-from@3.0.0:
-    resolution: {integrity: sha512-GnlH6vxLymXJNMBo7XP1fJIzBFbdYt49CuTwmB/6N53t+kMPRMFKz783LlQ4tv28XoQfMWinAJX6WCGf2IlaIw==}
-    engines: {node: '>=4'}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -12111,10 +11902,6 @@ packages:
   unbox-primitive@1.1.0:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
     engines: {node: '>= 0.4'}
-
-  unc-path-regex@0.1.2:
-    resolution: {integrity: sha512-eXL4nmJT7oCpkZsHZUOJo8hcX3GbsiDOa0Qu9F646fi8dT3XuSVopVqAcEiVzSKKH7UoDti23wNX3qGFxcW5Qg==}
-    engines: {node: '>=0.10.0'}
 
   underscore@1.12.1:
     resolution: {integrity: sha512-hEQt0+ZLDVUMhebKxL4x1BTtDY7bavVofhZ9KZ4aI26X9SRaE+Y3m83XUL1UP2jn8ynjndwCCpEHdUG+9pP1Tw==}
@@ -13610,11 +13397,6 @@ snapshots:
       - supports-color
 
   '@babel/plugin-transform-sticky-regex@7.27.1(@babel/core@7.29.0)':
-    dependencies:
-      '@babel/core': 7.29.0
-      '@babel/helper-plugin-utils': 7.28.6
-
-  '@babel/plugin-transform-strict-mode@7.25.9(@babel/core@7.29.0)':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/helper-plugin-utils': 7.28.6
@@ -17229,11 +17011,6 @@ snapshots:
 
   agent-base@7.1.4: {}
 
-  aggregate-error@3.1.0:
-    dependencies:
-      clean-stack: 2.2.0
-      indent-string: 4.0.0
-
   aggregate-error@4.0.1:
     dependencies:
       clean-stack: 4.2.0
@@ -17585,14 +17362,6 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.2
       cosmiconfig: 7.1.0
-      resolve: 1.22.11
-
-  babel-plugin-module-resolver@5.0.2:
-    dependencies:
-      find-babel-config: 2.1.2
-      glob: 9.3.5
-      pkg-up: 3.1.0
-      reselect: 4.1.8
       resolve: 1.22.11
 
   babel-plugin-named-asset-import@0.3.8(@babel/core@7.29.0):
@@ -17967,16 +17736,6 @@ snapshots:
       call-bind-apply-helpers: 1.0.2
       get-intrinsic: 1.3.0
 
-  caller-callsite@2.0.0:
-    dependencies:
-      callsites: 2.0.0
-
-  caller-path@2.0.0:
-    dependencies:
-      caller-callsite: 2.0.0
-
-  callsites@2.0.0: {}
-
   callsites@3.1.0: {}
 
   camel-case@4.1.2:
@@ -18081,8 +17840,6 @@ snapshots:
   clean-css@5.3.3:
     dependencies:
       source-map: 0.6.1
-
-  clean-stack@2.2.0: {}
 
   clean-stack@4.2.0:
     dependencies:
@@ -18346,13 +18103,6 @@ snapshots:
       cosmiconfig: 9.0.1(typescript@6.0.3)
       jiti: 2.6.1
       typescript: 6.0.3
-
-  cosmiconfig@5.2.1:
-    dependencies:
-      import-fresh: 2.0.0
-      is-directory: 0.3.1
-      js-yaml: 3.14.1
-      parse-json: 4.0.0
 
   cosmiconfig@6.0.0:
     dependencies:
@@ -18629,17 +18379,6 @@ snapshots:
       meow: 14.1.0
       presentable-error: 0.0.1
 
-  del@6.1.1:
-    dependencies:
-      globby: 11.1.0
-      graceful-fs: 4.2.11
-      is-glob: 4.0.3
-      is-path-cwd: 2.2.0
-      is-path-inside: 3.0.3
-      p-map: 4.0.0
-      rimraf: 3.0.2
-      slash: 3.0.0
-
   del@8.0.1:
     dependencies:
       globby: 14.1.0
@@ -18651,8 +18390,6 @@ snapshots:
       slash: 5.1.0
 
   delayed-stream@1.0.0: {}
-
-  denodeify@1.2.1: {}
 
   depd@1.1.2: {}
 
@@ -19272,18 +19009,6 @@ snapshots:
 
   evil-icons@1.10.1: {}
 
-  execa@4.1.0:
-    dependencies:
-      cross-spawn: 7.0.6
-      get-stream: 5.2.0
-      human-signals: 1.1.1
-      is-stream: 2.0.1
-      merge-stream: 2.0.0
-      npm-run-path: 4.0.1
-      onetime: 5.1.2
-      signal-exit: 3.0.7
-      strip-final-newline: 2.0.0
-
   execa@5.1.1:
     dependencies:
       cross-spawn: 7.0.6
@@ -19621,10 +19346,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  find-babel-config@2.1.2:
-    dependencies:
-      json5: 2.2.3
-
   find-cache-dir@2.1.0:
     dependencies:
       commondir: 1.0.1
@@ -19859,10 +19580,6 @@ snapshots:
       dunder-proto: 1.0.1
       es-object-atoms: 1.1.1
 
-  get-stream@5.2.0:
-    dependencies:
-      pump: 3.0.2
-
   get-stream@6.0.1: {}
 
   get-stream@8.0.1: {}
@@ -19941,21 +19658,6 @@ snapshots:
       minimatch: 3.1.5
       once: 1.4.0
       path-is-absolute: 1.0.1
-
-  glob@8.1.0:
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 5.1.6
-      once: 1.4.0
-
-  glob@9.3.5:
-    dependencies:
-      fs.realpath: 1.0.0
-      minimatch: 8.0.7
-      minipass: 4.2.8
-      path-scurry: 1.11.1
 
   global-agent@3.0.0:
     dependencies:
@@ -20076,8 +19778,6 @@ snapshots:
 
   hermes-compiler@250829098.0.9: {}
 
-  hermes-estree@0.23.1: {}
-
   hermes-estree@0.32.0: {}
 
   hermes-estree@0.33.3: {}
@@ -20085,10 +19785,6 @@ snapshots:
   hermes-estree@0.34.0: {}
 
   hermes-estree@0.35.0: {}
-
-  hermes-parser@0.23.1:
-    dependencies:
-      hermes-estree: 0.23.1
 
   hermes-parser@0.32.0:
     dependencies:
@@ -20236,8 +19932,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  human-signals@1.1.1: {}
-
   human-signals@2.1.0: {}
 
   human-signals@5.0.0: {}
@@ -20292,11 +19986,6 @@ snapshots:
       queue: 6.0.2
 
   immer@9.0.21: {}
-
-  import-fresh@2.0.0:
-    dependencies:
-      caller-path: 2.0.0
-      resolve-from: 3.0.0
 
   import-fresh@3.3.1:
     dependencies:
@@ -20367,11 +20056,6 @@ snapshots:
 
   ipaddr.js@2.2.0: {}
 
-  is-absolute@1.0.0:
-    dependencies:
-      is-relative: 1.0.0
-      is-windows: 1.0.2
-
   is-array-buffer@3.0.5:
     dependencies:
       call-bind: 1.0.8
@@ -20418,8 +20102,6 @@ snapshots:
       call-bound: 1.0.4
       has-tostringtag: 1.0.2
 
-  is-directory@0.3.1: {}
-
   is-docker@2.2.1: {}
 
   is-docker@3.0.0: {}
@@ -20444,16 +20126,6 @@ snapshots:
       get-proto: 1.0.1
       has-tostringtag: 1.0.2
       safe-regex-test: 1.1.0
-
-  is-git-dirty@2.0.2:
-    dependencies:
-      execa: 4.1.0
-      is-git-repository: 2.0.0
-
-  is-git-repository@2.0.0:
-    dependencies:
-      execa: 4.1.0
-      is-absolute: 1.0.0
 
   is-glob@4.0.3:
     dependencies:
@@ -20495,8 +20167,6 @@ snapshots:
 
   is-obj@2.0.0: {}
 
-  is-path-cwd@2.2.0: {}
-
   is-path-cwd@3.0.0: {}
 
   is-path-inside@3.0.3: {}
@@ -20523,10 +20193,6 @@ snapshots:
   is-regexp@1.0.0: {}
 
   is-regexp@3.1.0: {}
-
-  is-relative@1.0.0:
-    dependencies:
-      is-unc-path: 1.0.0
 
   is-root@2.1.0: {}
 
@@ -20563,10 +20229,6 @@ snapshots:
 
   is-typedarray@1.0.0: {}
 
-  is-unc-path@1.0.0:
-    dependencies:
-      unc-path-regex: 0.1.2
-
   is-unicode-supported@0.1.0: {}
 
   is-unicode-supported@2.1.0: {}
@@ -20585,8 +20247,6 @@ snapshots:
       get-intrinsic: 1.3.0
 
   is-what@3.14.1: {}
-
-  is-windows@1.0.2: {}
 
   is-wsl@1.1.0: {}
 
@@ -21590,8 +21250,6 @@ snapshots:
 
   json-buffer@3.0.1: {}
 
-  json-parse-better-errors@1.0.2: {}
-
   json-parse-even-better-errors@2.3.1: {}
 
   json-parse-even-better-errors@5.0.0: {}
@@ -22028,15 +21686,6 @@ snapshots:
 
   methods@1.1.2: {}
 
-  metro-babel-transformer@0.80.12:
-    dependencies:
-      '@babel/core': 7.29.0
-      flow-enums-runtime: 0.0.6
-      hermes-parser: 0.23.1
-      nullthrows: 1.1.1
-    transitivePeerDependencies:
-      - supports-color
-
   metro-babel-transformer@0.83.5:
     dependencies:
       '@babel/core': 7.29.0
@@ -22056,10 +21705,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  metro-cache-key@0.80.12:
-    dependencies:
-      flow-enums-runtime: 0.0.6
-
   metro-cache-key@0.83.5:
     dependencies:
       flow-enums-runtime: 0.0.6
@@ -22067,12 +21712,6 @@ snapshots:
   metro-cache-key@0.83.7:
     dependencies:
       flow-enums-runtime: 0.0.6
-
-  metro-cache@0.80.12:
-    dependencies:
-      exponential-backoff: 3.1.3
-      flow-enums-runtime: 0.0.6
-      metro-core: 0.80.12
 
   metro-cache@0.83.5:
     dependencies:
@@ -22091,21 +21730,6 @@ snapshots:
       metro-core: 0.83.7
     transitivePeerDependencies:
       - supports-color
-
-  metro-config@0.80.12:
-    dependencies:
-      connect: 3.7.0
-      cosmiconfig: 5.2.1
-      flow-enums-runtime: 0.0.6
-      jest-validate: 29.7.0
-      metro: 0.80.12
-      metro-cache: 0.80.12
-      metro-core: 0.80.12
-      metro-runtime: 0.80.12
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
 
   metro-config@0.83.5:
     dependencies:
@@ -22137,12 +21761,6 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  metro-core@0.80.12:
-    dependencies:
-      flow-enums-runtime: 0.0.6
-      lodash.throttle: 4.1.1
-      metro-resolver: 0.80.12
-
   metro-core@0.83.5:
     dependencies:
       flow-enums-runtime: 0.0.6
@@ -22154,24 +21772,6 @@ snapshots:
       flow-enums-runtime: 0.0.6
       lodash.throttle: 4.1.1
       metro-resolver: 0.83.7
-
-  metro-file-map@0.80.12:
-    dependencies:
-      anymatch: 3.1.3
-      debug: 2.6.9
-      fb-watchman: 2.0.2
-      flow-enums-runtime: 0.0.6
-      graceful-fs: 4.2.11
-      invariant: 2.2.4
-      jest-worker: 29.7.0
-      micromatch: 4.0.8
-      node-abort-controller: 3.1.1
-      nullthrows: 1.1.1
-      walker: 1.0.8
-    optionalDependencies:
-      fsevents: 2.3.3
-    transitivePeerDependencies:
-      - supports-color
 
   metro-file-map@0.83.5:
     dependencies:
@@ -22201,11 +21801,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  metro-minify-terser@0.80.12:
-    dependencies:
-      flow-enums-runtime: 0.0.6
-      terser: 5.39.0
-
   metro-minify-terser@0.83.5:
     dependencies:
       flow-enums-runtime: 0.0.6
@@ -22216,21 +21811,12 @@ snapshots:
       flow-enums-runtime: 0.0.6
       terser: 5.39.0
 
-  metro-resolver@0.80.12:
-    dependencies:
-      flow-enums-runtime: 0.0.6
-
   metro-resolver@0.83.5:
     dependencies:
       flow-enums-runtime: 0.0.6
 
   metro-resolver@0.83.7:
     dependencies:
-      flow-enums-runtime: 0.0.6
-
-  metro-runtime@0.80.12:
-    dependencies:
-      '@babel/runtime': 7.29.2
       flow-enums-runtime: 0.0.6
 
   metro-runtime@0.83.5:
@@ -22242,20 +21828,6 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.2
       flow-enums-runtime: 0.0.6
-
-  metro-source-map@0.80.12:
-    dependencies:
-      '@babel/traverse': 7.29.0
-      '@babel/types': 7.29.0
-      flow-enums-runtime: 0.0.6
-      invariant: 2.2.4
-      metro-symbolicate: 0.80.12
-      nullthrows: 1.1.1
-      ob1: 0.80.12
-      source-map: 0.5.7
-      vlq: 1.0.1
-    transitivePeerDependencies:
-      - supports-color
 
   metro-source-map@0.83.5:
     dependencies:
@@ -22285,18 +21857,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  metro-symbolicate@0.80.12:
-    dependencies:
-      flow-enums-runtime: 0.0.6
-      invariant: 2.2.4
-      metro-source-map: 0.80.12
-      nullthrows: 1.1.1
-      source-map: 0.5.7
-      through2: 2.0.5
-      vlq: 1.0.1
-    transitivePeerDependencies:
-      - supports-color
-
   metro-symbolicate@0.83.5:
     dependencies:
       flow-enums-runtime: 0.0.6
@@ -22316,17 +21876,6 @@ snapshots:
       nullthrows: 1.1.1
       source-map: 0.5.7
       vlq: 1.0.1
-    transitivePeerDependencies:
-      - supports-color
-
-  metro-transform-plugins@0.80.12:
-    dependencies:
-      '@babel/core': 7.29.0
-      '@babel/generator': 7.29.1
-      '@babel/template': 7.28.6
-      '@babel/traverse': 7.29.0
-      flow-enums-runtime: 0.0.6
-      nullthrows: 1.1.1
     transitivePeerDependencies:
       - supports-color
 
@@ -22351,26 +21900,6 @@ snapshots:
       nullthrows: 1.1.1
     transitivePeerDependencies:
       - supports-color
-
-  metro-transform-worker@0.80.12:
-    dependencies:
-      '@babel/core': 7.29.0
-      '@babel/generator': 7.29.1
-      '@babel/parser': 7.29.2
-      '@babel/types': 7.29.0
-      flow-enums-runtime: 0.0.6
-      metro: 0.80.12
-      metro-babel-transformer: 0.80.12
-      metro-cache: 0.80.12
-      metro-cache-key: 0.80.12
-      metro-minify-terser: 0.80.12
-      metro-source-map: 0.80.12
-      metro-transform-plugins: 0.80.12
-      nullthrows: 1.1.1
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
 
   metro-transform-worker@0.83.5:
     dependencies:
@@ -22407,55 +21936,6 @@ snapshots:
       metro-source-map: 0.83.7
       metro-transform-plugins: 0.83.7
       nullthrows: 1.1.1
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
-  metro@0.80.12:
-    dependencies:
-      '@babel/code-frame': 7.29.0
-      '@babel/core': 7.29.0
-      '@babel/generator': 7.29.1
-      '@babel/parser': 7.29.2
-      '@babel/template': 7.28.6
-      '@babel/traverse': 7.29.0
-      '@babel/types': 7.29.0
-      accepts: 1.3.8
-      chalk: 4.1.2
-      ci-info: 2.0.0
-      connect: 3.7.0
-      debug: 2.6.9
-      denodeify: 1.2.1
-      error-stack-parser: 2.1.4
-      flow-enums-runtime: 0.0.6
-      graceful-fs: 4.2.11
-      hermes-parser: 0.23.1
-      image-size: 1.2.0
-      invariant: 2.2.4
-      jest-worker: 29.7.0
-      jsc-safe-url: 0.2.4
-      lodash.throttle: 4.1.1
-      metro-babel-transformer: 0.80.12
-      metro-cache: 0.80.12
-      metro-cache-key: 0.80.12
-      metro-config: 0.80.12
-      metro-core: 0.80.12
-      metro-file-map: 0.80.12
-      metro-resolver: 0.80.12
-      metro-runtime: 0.80.12
-      metro-source-map: 0.80.12
-      metro-symbolicate: 0.80.12
-      metro-transform-plugins: 0.80.12
-      metro-transform-worker: 0.80.12
-      mime-types: 2.1.35
-      nullthrows: 1.1.1
-      serialize-error: 2.1.0
-      source-map: 0.5.7
-      strip-ansi: 6.0.1
-      throat: 5.0.0
-      ws: 7.5.10
-      yargs: 17.7.2
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -22613,14 +22093,6 @@ snapshots:
     dependencies:
       brace-expansion: 1.1.13
 
-  minimatch@5.1.6:
-    dependencies:
-      brace-expansion: 2.0.3
-
-  minimatch@8.0.7:
-    dependencies:
-      brace-expansion: 2.0.3
-
   minimatch@9.0.9:
     dependencies:
       brace-expansion: 2.0.3
@@ -22654,8 +22126,6 @@ snapshots:
   minipass@3.3.6:
     dependencies:
       yallist: 4.0.0
-
-  minipass@4.2.8: {}
 
   minipass@7.1.3: {}
 
@@ -22719,8 +22189,6 @@ snapshots:
       tslib: 2.8.1
 
   nocache@3.0.4: {}
-
-  node-abort-controller@3.1.1: {}
 
   node-domexception@1.0.0: {}
 
@@ -22912,10 +22380,6 @@ snapshots:
       '@nx/nx-win32-x64-msvc': 22.6.4
     transitivePeerDependencies:
       - debug
-
-  ob1@0.80.12:
-    dependencies:
-      flow-enums-runtime: 0.0.6
 
   ob1@0.83.5:
     dependencies:
@@ -23247,10 +22711,6 @@ snapshots:
     dependencies:
       p-limit: 4.0.0
 
-  p-map@4.0.0:
-    dependencies:
-      aggregate-error: 3.1.0
-
   p-map@7.0.4: {}
 
   p-queue@8.1.1:
@@ -23348,11 +22808,6 @@ snapshots:
   parse-help@2.0.0:
     dependencies:
       execall: 3.0.0
-
-  parse-json@4.0.0:
-    dependencies:
-      error-ex: 1.3.2
-      json-parse-better-errors: 1.0.2
 
   parse-json@5.2.0:
     dependencies:
@@ -24003,11 +23458,6 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  pump@3.0.2:
-    dependencies:
-      end-of-stream: 1.4.5
-      once: 1.4.0
-
   punycode@2.3.1: {}
 
   pupa@3.3.0:
@@ -24135,37 +23585,7 @@ snapshots:
     dependencies:
       prop-types: 15.8.1
 
-  react-native-builder-bob@0.35.3(typescript@6.0.3):
-    dependencies:
-      '@babel/core': 7.29.0
-      '@babel/plugin-transform-strict-mode': 7.25.9(@babel/core@7.29.0)
-      '@babel/preset-env': 7.29.2(@babel/core@7.29.0)
-      '@babel/preset-flow': 7.25.9(@babel/core@7.29.0)
-      '@babel/preset-react': 7.26.3(@babel/core@7.29.0)
-      '@babel/preset-typescript': 7.28.5(@babel/core@7.29.0)
-      babel-plugin-module-resolver: 5.0.2
-      browserslist: 4.28.2
-      cosmiconfig: 9.0.1(typescript@6.0.3)
-      cross-spawn: 7.0.6
-      dedent: 0.7.0
-      del: 6.1.1
-      escape-string-regexp: 4.0.0
-      fs-extra: 10.1.0
-      glob: 8.1.0
-      is-git-dirty: 2.0.2
-      json5: 2.2.3
-      kleur: 4.1.5
-      metro-config: 0.80.12
-      prompts: 2.4.2
-      which: 2.0.2
-      yargs: 17.7.2
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - typescript
-      - utf-8-validate
-
-  react-native-builder-bob@0.43.0(babel-plugin-macros@3.1.0):
+  react-native-builder-bob@0.43.1(babel-plugin-macros@3.1.0):
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-flow-strip-types': 7.29.7(@babel/core@7.29.0)
@@ -24524,13 +23944,9 @@ snapshots:
 
   requires-port@1.0.0: {}
 
-  reselect@4.1.8: {}
-
   resolve-cwd@3.0.0:
     dependencies:
       resolve-from: 5.0.0
-
-  resolve-from@3.0.0: {}
 
   resolve-from@4.0.0: {}
 
@@ -25698,8 +25114,6 @@ snapshots:
       has-bigints: 1.1.0
       has-symbols: 1.1.0
       which-boxed-primitive: 1.1.1
-
-  unc-path-regex@0.1.2: {}
 
   underscore@1.12.1: {}
 

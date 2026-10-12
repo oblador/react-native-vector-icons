@@ -26,6 +26,9 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ],
     "transform": {
       "^.+\\.tsx?$": [
         "ts-jest",
@@ -88,7 +91,7 @@
     "del-cli": "^7.0.0",
     "jest": "^30.3.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.35.2",
+    "react-native-builder-bob": "^0.43.1",
     "ts-jest": "^29.4.9",
     "typescript": "^6.0.3"
   },

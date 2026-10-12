@@ -91,7 +91,7 @@
     "@types/react": "^19.1.0",
     "del-cli": "^7.0.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.43.0",
+    "react-native-builder-bob": "^0.43.1",
     "typescript": "^6.0.3",
     "@ant-design/icons-svg": "4.4.2"
   },
