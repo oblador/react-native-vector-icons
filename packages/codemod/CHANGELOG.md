@@ -1,3 +1,7 @@
+## 13.2.2 (2026-10-12)
+
+This was a version bump only for @react-native-vector-icons/codemod to align it with other projects, there were no code changes.
+
 ## 13.2.1 (2026-05-01)
 
 ### 🩹 Fixes

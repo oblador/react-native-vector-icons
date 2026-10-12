@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontello",
-  "version": "13.2.4",
+  "version": "13.2.5",
   "description": "Fontello font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",

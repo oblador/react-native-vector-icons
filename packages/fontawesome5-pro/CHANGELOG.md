@@ -1,3 +1,18 @@
+## 13.1.5 (2026-10-12)
+
+### 🩹 Fixes
+
+- use optional Expo peer for config plugins ([#1930](https://github.com/oblador/react-native-vector-icons/pull/1930))
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/fontawesome-common to 13.0.4
+- Updated @react-native-vector-icons/common to 13.0.4
+
+### ❤️ Thank You
+
+- Vojtech Novak @vonovak
+
 ## 13.1.4 (2026-09-07)
 
 ### 🩹 Fixes
