@@ -17,9 +17,6 @@ importers:
       '@evilmartians/lefthook':
         specifier: ^2.1.4
         version: 2.1.4
-      '@expo/config-plugins':
-        specifier: ^8.0.11
-        version: 8.0.11
       '@nx/js':
         specifier: ^22.6.4
         version: 22.6.4(@babel/traverse@7.29.0)(nx@22.6.4)
@@ -240,12 +237,12 @@ importers:
 
   packages/ant-design:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -366,12 +363,12 @@ importers:
 
   packages/entypo:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -400,12 +397,12 @@ importers:
 
   packages/evil-icons:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -434,12 +431,12 @@ importers:
 
   packages/feather:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -468,12 +465,12 @@ importers:
 
   packages/fontawesome:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -511,12 +508,12 @@ importers:
 
   packages/fontawesome-free-brands:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -545,12 +542,12 @@ importers:
 
   packages/fontawesome-free-regular:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -579,12 +576,12 @@ importers:
 
   packages/fontawesome-free-solid:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -613,12 +610,12 @@ importers:
 
   packages/fontawesome-pro-brands:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -644,12 +641,12 @@ importers:
 
   packages/fontawesome-pro-duotone-light:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -675,12 +672,12 @@ importers:
 
   packages/fontawesome-pro-duotone-regular:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -706,12 +703,12 @@ importers:
 
   packages/fontawesome-pro-duotone-solid:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -737,12 +734,12 @@ importers:
 
   packages/fontawesome-pro-duotone-thin:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -768,12 +765,12 @@ importers:
 
   packages/fontawesome-pro-light:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -799,12 +796,12 @@ importers:
 
   packages/fontawesome-pro-regular:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -830,12 +827,12 @@ importers:
 
   packages/fontawesome-pro-sharp-duotone-light:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -861,12 +858,12 @@ importers:
 
   packages/fontawesome-pro-sharp-duotone-regular:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -892,12 +889,12 @@ importers:
 
   packages/fontawesome-pro-sharp-duotone-solid:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -923,12 +920,12 @@ importers:
 
   packages/fontawesome-pro-sharp-duotone-thin:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -954,12 +951,12 @@ importers:
 
   packages/fontawesome-pro-sharp-light:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -985,12 +982,12 @@ importers:
 
   packages/fontawesome-pro-sharp-regular:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1016,12 +1013,12 @@ importers:
 
   packages/fontawesome-pro-sharp-solid:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1047,12 +1044,12 @@ importers:
 
   packages/fontawesome-pro-sharp-thin:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1078,12 +1075,12 @@ importers:
 
   packages/fontawesome-pro-solid:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1109,12 +1106,12 @@ importers:
 
   packages/fontawesome-pro-thin:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1140,12 +1137,12 @@ importers:
 
   packages/fontawesome5:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1174,15 +1171,15 @@ importers:
 
   packages/fontawesome5-pro:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
       '@react-native-vector-icons/fontawesome-common':
         specifier: workspace:^
         version: link:../fontawesome-common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1208,12 +1205,12 @@ importers:
 
   packages/fontawesome6:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1242,15 +1239,15 @@ importers:
 
   packages/fontawesome6-pro:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
       '@react-native-vector-icons/fontawesome-common':
         specifier: workspace:^
         version: link:../fontawesome-common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1278,12 +1275,12 @@ importers:
 
   packages/fontello:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1309,12 +1306,12 @@ importers:
 
   packages/fontisto:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1343,12 +1340,12 @@ importers:
 
   packages/foundation:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1450,12 +1447,12 @@ importers:
 
   packages/icomoon:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1481,12 +1478,12 @@ importers:
 
   packages/ionicons:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1515,12 +1512,12 @@ importers:
 
   packages/lucide:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1549,12 +1546,12 @@ importers:
 
   packages/material-design-icons:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1583,12 +1580,12 @@ importers:
 
   packages/material-icons:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1614,12 +1611,12 @@ importers:
 
   packages/octicons:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1648,12 +1645,12 @@ importers:
 
   packages/simple-line-icons:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -1682,12 +1679,12 @@ importers:
 
   packages/zocial:
     dependencies:
-      '@expo/config-plugins':
-        specifier: '>=10.0.0'
-        version: 55.0.7
       '@react-native-vector-icons/common':
         specifier: workspace:^
         version: link:../common
+      expo:
+        specifier: '*'
+        version: 55.0.24(@babel/core@7.29.0)(@expo/dom-webview@55.0.6)(react-dom@19.2.4(react@19.2.4))(react-native@0.84.1(@babel/core@7.29.0)(@react-native-community/cli@20.1.3(typescript@6.0.3))(@react-native/metro-config@0.84.1(@babel/core@7.29.0))(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
       react:
         specifier: '*'
         version: 19.2.4
@@ -2789,9 +2786,6 @@ packages:
   '@expo/code-signing-certificates@0.0.6':
     resolution: {integrity: sha512-iNe0puxwBNEcuua9gmTGzq+SuMDa0iATai1FlFTMHJ/vUmKvN/V//drXoLJkVb5i5H3iE/n/qIJxyoBnXouD0w==}
 
-  '@expo/config-plugins@55.0.7':
-    resolution: {integrity: sha512-XZUoDWrsHEkH3yasnDSJABM/UxP5a1ixzRwU/M+BToyn/f0nTrSJJe/Ay/FpxkI4JSNz2n0e06I23b2bleXKVA==}
-
   '@expo/config-plugins@55.0.9':
     resolution: {integrity: sha512-jLfpxru8dTo7eU0cqeTWuQav7byyjb37eF/mbXl1/3eTBHBvFU1VGxpeKxanUdTQAAjqzH8KGgWb0fWcce+z1w==}
 
@@ -2839,9 +2833,6 @@ packages:
   '@expo/image-utils@0.8.14':
     resolution: {integrity: sha512-5Sn+jG4Cw+shC2wDMXoqSAJnvERbiwzHn05FpWtD5IBflfTIs5gUmjzwiGVyjOdlMSQhgRrw/AymPbmO9h9mpQ==}
 
-  '@expo/json-file@10.0.13':
-    resolution: {integrity: sha512-pX/XjQn7tgNw6zuuV2ikmegmwe/S7uiwhrs2wXrANMkq7ozrA+JcZwgW9Q/8WZgciBzfAhNp5hnackHcrmapQA==}
-
   '@expo/json-file@10.0.14':
     resolution: {integrity: sha512-yWwBFywFv+SxkJp/pIzzA416JVYflNUh7pqQzgaA6nXDqRyK7KfrqVzk8PdUfDnqbBcaZZxpzNssfQZzp5KHrA==}
 
@@ -2879,9 +2870,6 @@ packages:
 
   '@expo/plist@0.1.3':
     resolution: {integrity: sha512-GW/7hVlAylYg1tUrEASclw1MMk9FP4ZwyFAY/SUTJIhPDQHtfOlXREyWV3hhrHdX/K+pS73GNgdfT6E/e+kBbg==}
-
-  '@expo/plist@0.5.2':
-    resolution: {integrity: sha512-o4xdVdBpe4aTl3sPMZ2u3fJH4iG1I768EIRk1xRZP+GaFI93MaR3JvoFibYqxeTmLQ1p1kNEVqylfUjezxx45g==}
 
   '@expo/plist@0.5.3':
     resolution: {integrity: sha512-jz5oPcPDd3fygwVxwSwmO6wodTwm0Qa14NUyPy0ka7H8sFmCtNZUI2+DzVe/EXjOhq1FbEjrwl89gdlWYOnVjQ==}
@@ -13962,24 +13950,6 @@ snapshots:
     dependencies:
       node-forge: 1.4.0
 
-  '@expo/config-plugins@55.0.7':
-    dependencies:
-      '@expo/config-types': 55.0.5
-      '@expo/json-file': 10.0.13
-      '@expo/plist': 0.5.2
-      '@expo/sdk-runtime-versions': 1.0.0
-      chalk: 4.1.2
-      debug: 4.4.3
-      getenv: 2.0.0
-      glob: 13.0.6
-      resolve-from: 5.0.0
-      semver: 7.7.4
-      slugify: 1.6.6
-      xcode: 3.0.1
-      xml2js: 0.6.0
-    transitivePeerDependencies:
-      - supports-color
-
   '@expo/config-plugins@55.0.9':
     dependencies:
       '@expo/config-types': 55.0.5
@@ -14095,11 +14065,6 @@ snapshots:
       - supports-color
       - typescript
 
-  '@expo/json-file@10.0.13':
-    dependencies:
-      '@babel/code-frame': 7.29.0
-      json5: 2.2.3
-
   '@expo/json-file@10.0.14':
     dependencies:
       '@babel/code-frame': 7.29.0
@@ -14196,12 +14161,6 @@ snapshots:
       '@xmldom/xmldom': 0.7.13
       base64-js: 1.5.1
       xmlbuilder: 14.0.0
-
-  '@expo/plist@0.5.2':
-    dependencies:
-      '@xmldom/xmldom': 0.8.10
-      base64-js: 1.5.1
-      xmlbuilder: 15.1.1
 
   '@expo/plist@0.5.3':
     dependencies:

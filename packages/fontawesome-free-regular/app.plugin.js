@@ -3,7 +3,7 @@
  * Make your changes in `generator-react-native-vector-icons` package instead.
  */
 
-const { withInfoPlist } = require('@expo/config-plugins');
+const { withInfoPlist } = require('expo/config-plugins');
 
 module.exports = (config) =>
   withInfoPlist(config, (c) => {
