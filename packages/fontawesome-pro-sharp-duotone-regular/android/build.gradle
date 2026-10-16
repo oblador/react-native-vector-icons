@@ -22,36 +22,18 @@ if (isNewArchitectureEnabled()) {
   apply plugin: "com.facebook.react"
 }
 
-def supportsNamespace() {
-  def parsed = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')
-  def major = parsed[0].toInteger()
-  def minor = parsed[1].toInteger()
-
-  // Namespace support was added in 7.3.0
-  return (major == 7 && minor >= 3) || major >= 8
-}
-
 android {
-  if (supportsNamespace()) {
-    namespace "com.reactnativevectoricons.fontawesome_pro_sharp_duotone_regular"
+  namespace "com.reactnativevectoricons.fontawesome_pro_sharp_duotone_regular"
 
-    sourceSets {
-      main {
-        manifest.srcFile "src/main/AndroidManifestNew.xml"
-      }
-    }
-  }
-
-  compileSdkVersion safeExtGet('compileSdkVersion', 31)
+  compileSdk safeExtGet('compileSdkVersion', 34)
 
   defaultConfig {
-    targetSdkVersion safeExtGet('targetSdkVersion', 31)
-    minSdkVersion safeExtGet('minSdkVersion', 24)
+    minSdk safeExtGet('minSdkVersion', 24)
   }
 }
 
 dependencies {
-  implementation "com.facebook.react:react-native:+"
+  implementation "com.facebook.react:react-android"
 }
 
 if (isNewArchitectureEnabled()) {
@@ -62,13 +44,13 @@ if (isNewArchitectureEnabled()) {
   }
 }
 
-android.sourceSets.main.assets.srcDirs += file("$buildDir/intermediates/RNVI-fontawesome-pro-sharp-duotone-regular")
+android.sourceSets.main.assets.srcDirs += layout.buildDirectory.dir("intermediates/RNVI-fontawesome-pro-sharp-duotone-regular").get().asFile
 
-task copyFonts(type: Copy) {
+def copyFonts = tasks.register("copyFonts", Copy) {
   from "../fonts"
   include "*.ttf"
 
-  into "${buildDir}/intermediates/RNVI-fontawesome-pro-sharp-duotone-regular/fonts"
+  into layout.buildDirectory.dir("intermediates/RNVI-fontawesome-pro-sharp-duotone-regular/fonts")
   eachFile { println "(RNVI:fontawesome-pro-sharp-duotone-regular) Copying font ${it.file}" }
 }
 

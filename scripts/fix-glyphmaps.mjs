@@ -4,10 +4,8 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 
 const files = [
-  ['lib/commonjs', 'js', '../..'],
   ['lib/module', 'js', '../..'],
-  ['lib/typescript/commonjs/src', 'd.ts', '../../../..'],
-  ['lib/typescript/module/src', 'd.ts', '../../../..'],
+  ['lib/typescript/src', 'd.ts', '../../..'],
 ];
 
 for (const name of ['index', 'static']) {

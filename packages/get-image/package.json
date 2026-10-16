@@ -89,7 +89,7 @@
     "onchange": "^7.1.0",
     "react": "19.2.4",
     "react-native": "0.84.1",
-    "react-native-builder-bob": "^0.35.2",
+    "react-native-builder-bob": "^0.43.1",
     "turbo": "^1.13.4",
     "typescript": "^6.0.3"
   },
@@ -116,8 +116,7 @@
       [
         "typescript",
         {
-          "project": "tsconfig.build.json",
-          "esm": true
+          "project": "tsconfig.build.json"
         }
       ]
     ]

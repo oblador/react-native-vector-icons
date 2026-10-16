@@ -86,7 +86,7 @@
     "@types/react": "^19.0.12",
     "del-cli": "^7.0.0",
     "onchange": "^7.1.0",
-    "react-native-builder-bob": "^0.35.2",
+    "react-native-builder-bob": "^0.43.1",
     "typescript": "^6.0.3"
   },
   "peerDependencies": {
@@ -136,8 +136,7 @@
       [
         "typescript",
         {
-          "project": "tsconfig.build.json",
-          "esm": true
+          "project": "tsconfig.build.json"
         }
       ]
     ]
