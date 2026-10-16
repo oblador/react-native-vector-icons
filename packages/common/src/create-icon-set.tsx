@@ -49,6 +49,9 @@ export type CreateIconSetOptions = {
   fontStyle?: TextProps['style'];
 };
 
+/**
+ * @deprecated: instead, use the (glyphMap: GM, options: CreateIconSetOptions) function signature
+ * */
 export function createIconSet<GM extends GlyphMap>(
   glyphMap: GM,
   postScriptName: string,
