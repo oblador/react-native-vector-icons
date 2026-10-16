@@ -4,6 +4,7 @@ import {
   type HTMLProps,
   memo,
   useCallback,
+  useEffect,
   useLayoutEffect,
   useRef,
   useState,
@@ -13,8 +14,10 @@ import './App.css';
 import IconFamilies from './generated/glyphmapIndex.json';
 
 const WAITING_INTERVAL = 300;
+const COPIED_FEEDBACK_DURATION = 1800;
 
 type Match = { family: string; names: string[] };
+type CopiedIcon = { family: string; name: string } | null;
 
 const Icon = memo(function Icon({
   family,
@@ -107,20 +110,61 @@ const SearchBar = ({ onSubmit }: { onSubmit: (text?: string) => void }) => {
   );
 };
 
-const renderIcon = (family: string, name: string) => (
-  <div className="Result-Icon-Container" key={name}>
-    <Icon family={family} name={name} className="Result-Icon" />
-    <h4 className="Result-Icon-Name">{name}</h4>
-  </div>
-);
+const IconCard = memo(function IconCard({
+  copied,
+  family,
+  name,
+  onCopy,
+}: {
+  copied: boolean;
+  family: string;
+  name: string;
+  onCopy: (family: string, name: string) => Promise<void>;
+}) {
+  return (
+    <button
+      type="button"
+      className="Result-Icon-Container"
+      aria-label={`Copy ${name} icon name`}
+      title={copied ? `${name} copied` : `Copy ${name}`}
+      onClick={() => void onCopy(family, name)}
+    >
+      <Icon family={family} name={name} className="Result-Icon" />
+      <span className="Result-Icon-Name">{name}</span>
+      <span className={`Result-Icon-Feedback${copied ? ' is-copied' : ''}`} aria-hidden={copied ? undefined : true}>
+        {copied ? (
+          <span role="status" aria-live="polite">
+            Copied!
+          </span>
+        ) : (
+          'Click to copy'
+        )}
+      </span>
+    </button>
+  );
+});
 
-const renderMatch = ({ family, names }: Match) => (
+const renderMatch = (
+  { family, names }: Match,
+  copiedIcon: CopiedIcon,
+  onCopy: (family: string, name: string) => Promise<void>,
+) => (
   <div className="Result-Row" key={family}>
     <h2 className="Result-Title" id={family}>
       {family}
     </h2>
 
-    <div className="Result-List">{names.map((name) => renderIcon(family, name))}</div>
+    <div className="Result-List">
+      {names.map((name) => (
+        <IconCard
+          key={name}
+          copied={copiedIcon?.family === family && copiedIcon.name === name}
+          family={family}
+          name={name}
+          onCopy={onCopy}
+        />
+      ))}
+    </div>
   </div>
 );
 
@@ -143,9 +187,40 @@ const getMatches = (query: string) =>
 
 const App = () => {
   const [matches, setMatches] = useState<Match[]>([]);
+  const [copiedIcon, setCopiedIcon] = useState<CopiedIcon>(null);
+  const copiedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const handleSubmit = useCallback((text = '') => {
     setMatches(getMatches(text));
   }, []);
+  const handleCopy = useCallback(async (family: string, name: string) => {
+    if (!navigator.clipboard) {
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(name);
+    } catch {
+      return;
+    }
+
+    setCopiedIcon({ family, name });
+    if (copiedTimerRef.current) {
+      clearTimeout(copiedTimerRef.current);
+    }
+    copiedTimerRef.current = setTimeout(() => {
+      setCopiedIcon(null);
+      copiedTimerRef.current = null;
+    }, COPIED_FEEDBACK_DURATION);
+  }, []);
+
+  useEffect(
+    () => () => {
+      if (copiedTimerRef.current) {
+        clearTimeout(copiedTimerRef.current);
+      }
+    },
+    [],
+  );
   useLayoutEffect(() => handleSubmit(''), [handleSubmit]);
 
   return (
@@ -153,7 +228,9 @@ const App = () => {
       <HeaderBar />
       <SearchBar onSubmit={handleSubmit} />
       <FamiliesLinks matches={matches} />
-      <div className="Container">{matches.length === 0 ? renderNotFound() : matches.map(renderMatch)}</div>
+      <div className="Container">
+        {matches.length === 0 ? renderNotFound() : matches.map((match) => renderMatch(match, copiedIcon, handleCopy))}
+      </div>
     </div>
   );
 };
