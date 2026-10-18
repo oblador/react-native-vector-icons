@@ -4,6 +4,15 @@ ws_dir = ws_dir.parent until
   ws_dir.expand_path.to_s == '/'
 require "#{ws_dir}/node_modules/react-native-test-app/test_app.rb"
 
+# Resolve pnpm symlinks before CocoaPods calls realdirpath, which can return null bytes.
+# https://github.com/CocoaPods/CocoaPods/issues/12798
+module CocoaPodsRealpathWorkaround
+  def group_for_path_in_group(absolute_pathname, group, reflect_file_system_structure, base_path = nil)
+    super(absolute_pathname, group, reflect_file_system_structure, base_path&.realpath)
+  end
+end
+Pod::Project.prepend(CocoaPodsRealpathWorkaround)
+
 workspace 'IconExplorer.xcworkspace'
 
 use_test_app! :hermes_enabled => true, :fabric_enabled => true, :bridgeless_enabled => true
