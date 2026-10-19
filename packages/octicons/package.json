@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/octicons",
-  "version": "21.1.5",
+  "version": "22.0.0",
   "description": "Octicons font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/module/index.js",

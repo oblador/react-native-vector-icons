@@ -1,6 +1,6 @@
 {
   "name": "@react-native-vector-icons/fontawesome-pro-sharp-thin",
-  "version": "1.1.5",
+  "version": "2.0.0",
   "description": "Fontawesome Pro Sharp Thin font for react native vector icons",
   "source": "./src/index.ts",
   "main": "./lib/module/index.js",

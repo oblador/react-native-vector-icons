@@ -1,3 +1,7 @@
+# 14.0.0 (2026-10-19)
+
+This was a version bump only for @react-native-vector-icons/get-image to align it with other projects, there were no code changes.
+
 ## 13.0.2 (2026-10-12)
 
 This was a version bump only for @react-native-vector-icons/get-image to align it with other projects, there were no code changes.

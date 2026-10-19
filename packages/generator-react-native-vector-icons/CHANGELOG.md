@@ -1,3 +1,7 @@
+# 14.0.0 (2026-10-19)
+
+This was a version bump only for generator-react-native-vector-icons to align it with other projects, there were no code changes.
+
 ## 13.1.2 (2026-10-12)
 
 ### 🩹 Fixes

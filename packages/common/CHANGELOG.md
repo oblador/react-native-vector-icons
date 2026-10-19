@@ -1,3 +1,9 @@
+# 14.0.0 (2026-10-19)
+
+### 🧱 Updated Dependencies
+
+- Updated @react-native-vector-icons/get-image to 14.0.0
+
 ## 13.0.4 (2026-10-12)
 
 ### 🧱 Updated Dependencies
