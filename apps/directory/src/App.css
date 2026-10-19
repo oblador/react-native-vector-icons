@@ -100,11 +100,25 @@ body {
 }
 
 .Result-Icon-Container {
+  appearance: none;
   width: 50%;
+  border: 0;
   padding: 20px;
   text-align: center;
   outline: 1px solid #eee;
   background-color: #fff;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.Result-Icon-Container:hover,
+.Result-Icon-Container:focus-visible {
+  background-color: #f7f9fb;
+}
+
+.Result-Icon-Container:focus-visible {
+  box-shadow: inset 0 0 0 2px #23527c;
 }
 
 @media (min-width: 480px) {
@@ -136,10 +150,26 @@ body {
 }
 
 .Result-Icon-Name {
+  display: block;
   font-size: 14px;
   font-weight: normal;
   opacity: 0.8;
   margin: 10px 0 0 0;
+}
+
+.Result-Icon-Feedback {
+  display: block;
+  min-height: 1em;
+  margin-top: 4px;
+  color: #23527c;
+  font-size: 12px;
+  opacity: 0;
+}
+
+.Result-Icon-Container:hover .Result-Icon-Feedback,
+.Result-Icon-Container:focus-visible .Result-Icon-Feedback,
+.Result-Icon-Feedback.is-copied {
+  opacity: 1;
 }
 
 .Family-Links-Container {
